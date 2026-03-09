@@ -62,18 +62,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center gap-3">
-                    <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                        <div class="p-2 bg-gradient-to-br from-red-500 to-red-600 rounded-lg">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                            </svg>
-                        </div>
-                        <span class="text-xl font-bold bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">股海雷达</span>
-                    </a>
+                    <div class="p-2 bg-gradient-to-br from-red-500 to-red-600 rounded-lg">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">股海雷达</span>
                 </div>
 
                 <div class="flex items-center gap-1">
-                    <a href="momentum_real.html" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+                    <a href="momentum.html" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
@@ -339,8 +337,7 @@
     </div>
 
     <script>
-        // 读取本地 JSON 数据文件
-        const API_BASE = '';
+        const API_BASE = 'http://localhost:8000';
         let currentData = null;
         let currentDate = null;
         let currentStockFilter = 'all';
@@ -376,13 +373,15 @@
             return dateStr;
         }
 
-        // 获取可用日期列表
+        // 从API获取可用日期列表（只包含有数据的日期）
         async function fetchAvailableDates() {
             try {
-                const response = await fetch('data/dates.json');
+                const response = await fetch(`${API_BASE}/api/newhigh/dates`);
                 if (response.ok) {
                     const result = await response.json();
+                    // 后端返回的日期列表应该只包含有数据的交易日
                     availableDates = result.dates || [];
+                    // 确保日期按降序排列（最新的在前）
                     availableDates.sort((a, b) => b.localeCompare(a));
                     return availableDates;
                 }
@@ -462,10 +461,15 @@
             
             try {
                 const url = targetDate 
-                    ? `data/${targetDate}/newhigh.json`
-                    : 'data/newhigh_latest.json';
+                    ? `${API_BASE}/api/newhigh/${targetDate}`
+                    : `${API_BASE}/api/newhigh/latest`;
                     
-                const response = await fetch(url);
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                    }
+                });
                 
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
@@ -596,11 +600,20 @@
             // 应用筛选
             let filteredStocks = stocks;
             if (currentStockFilter === 'main') {
-                filteredStocks = stocks.filter(s => !s.code.startsWith('3') && !s.code.startsWith('688') && !s.code.startsWith('8') && !s.code.startsWith('4'));
+                filteredStocks = stocks.filter(s => {
+                    const code = s.ts_code || s.code || '';
+                    return !code.startsWith('3') && !code.startsWith('688') && !code.startsWith('8') && !code.startsWith('4');
+                });
             } else if (currentStockFilter === 'cyb') {
-                filteredStocks = stocks.filter(s => s.code.startsWith('3'));
+                filteredStocks = stocks.filter(s => {
+                    const code = s.ts_code || s.code || '';
+                    return code.startsWith('3');
+                });
             } else if (currentStockFilter === 'kcb') {
-                filteredStocks = stocks.filter(s => s.code.startsWith('688'));
+                filteredStocks = stocks.filter(s => {
+                    const code = s.ts_code || s.code || '';
+                    return code.startsWith('688');
+                });
             }
             
             tbody.innerHTML = filteredStocks.slice(0, 50).map(stock => {
@@ -615,7 +628,7 @@
                 
                 return `
                     <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-mono text-gray-600">${stock.code}</td>
+                        <td class="px-6 py-4 font-mono text-gray-600">${stock.ts_code || stock.code || '-'}</td>
                         <td class="px-6 py-4 font-medium text-gray-900">${stock.name}</td>
                         <td class="px-6 py-4">${sector}</td>
                         <td class="px-6 py-4 font-medium">¥${typeof price === 'number' ? price.toFixed(2) : price}</td>
@@ -699,8 +712,8 @@
                 const high250 = s.high_250 || s.high_250d || price;
                 
                 return `
-                    <tr class="hover:bg-red-50 cursor-pointer" onclick="showStockDetail('${s.code}')">
-                        <td class="px-4 py-3 font-mono text-gray-600">${s.code}</td>
+                    <tr class="hover:bg-red-50 cursor-pointer" onclick="showStockDetail('${s.ts_code || s.code || ''}')">
+                        <td class="px-4 py-3 font-mono text-gray-600">${s.ts_code || s.code || '-'}</td>
                         <td class="px-4 py-3 font-medium">${s.name}</td>
                         <td class="px-4 py-3 text-right">¥${typeof price === 'number' ? price.toFixed(2) : price}</td>
                         <td class="px-4 py-3 text-right font-bold ${change >= 0 ? 'text-stock-up' : 'text-stock-down'}">${change >= 0 ? '+' : ''}${typeof change === 'number' ? change.toFixed(2) : change}%</td>

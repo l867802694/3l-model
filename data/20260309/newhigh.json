@@ -1,2020 +1,509 @@
 {
   "trade_date": "20260309",
-  "date": "20260309",
-  "data_source": "本地文件",
+  "data_source": "Tushare Pro (真实数据)",
+  "market_strength": 0.4,
+  "total_stocks": 21,
+  "total_sectors": 10,
   "sectors": [
     {
       "sector_name": "电气设备",
-      "name": "电气设备",
-      "new_high_count": 24,
-      "stock_count": 24,
+      "new_high_count": 6,
+      "stock_count": 6,
+      "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "ts_code": "000533.SZ",
+          "code": "000533",
           "name": "顺钠股份",
-          "industry": "电气设备",
           "close": 16.37,
+          "price": 16.37,
           "high_250": 16.37,
+          "high_250d": 16.37,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
           "change_pct": 10.01,
+          "change": 10.01,
           "break_through": 0.0,
-          "amount": 863385.64
+          "break_pct": 0.0,
+          "circ_mv": 112.12,
+          "amount": 863.39,
+          "turnover": 863.39,
+          "institution_score": 3.68,
+          "sector": "电气设备",
+          "industry": "电气设备"
         },
         {
-          "ts_code": "001208.SZ",
-          "name": "华菱线缆",
-          "industry": "电气设备",
-          "close": 22.97,
-          "high_250": 22.99,
-          "change_pct": 2.5,
-          "break_through": -0.09,
-          "amount": 805473.085
-        },
-        {
-          "ts_code": "001388.SZ",
-          "name": "信通电子",
-          "industry": "电气设备",
-          "close": 45.55,
-          "high_250": 45.55,
-          "change_pct": 1.74,
-          "break_through": 0.0,
-          "amount": 112467.045
-        },
-        {
-          "ts_code": "002112.SZ",
-          "name": "三变科技",
-          "industry": "电气设备",
-          "close": 27.63,
-          "high_250": 27.63,
-          "change_pct": 9.99,
-          "break_through": 0.0,
-          "amount": 1708480.139
-        },
-        {
-          "ts_code": "002300.SZ",
-          "name": "太阳电缆",
-          "industry": "电气设备",
-          "close": 11.57,
-          "high_250": 11.57,
-          "change_pct": 9.98,
-          "break_through": 0.0,
-          "amount": 769035.148
-        },
-        {
-          "ts_code": "002309.SZ",
-          "name": "中利集团",
-          "industry": "电气设备",
-          "close": 3.5,
-          "high_250": 3.5,
-          "change_pct": 0.57,
-          "break_through": 0.0,
-          "amount": 437634.21
-        },
-        {
-          "ts_code": "002441.SZ",
-          "name": "众业达",
-          "industry": "电气设备",
-          "close": 11.31,
-          "high_250": 11.32,
-          "change_pct": 1.34,
-          "break_through": -0.09,
-          "amount": 243880.234
-        },
-        {
-          "ts_code": "002451.SZ",
-          "name": "摩恩电气",
-          "industry": "电气设备",
-          "close": 11.57,
-          "high_250": 11.58,
-          "change_pct": 4.8,
-          "break_through": -0.09,
-          "amount": 728630.643
-        },
-        {
-          "ts_code": "002452.SZ",
-          "name": "长高电新",
-          "industry": "电气设备",
-          "close": 11.81,
-          "high_250": 11.82,
-          "change_pct": -2.24,
-          "break_through": -0.08,
-          "amount": 942300.498
-        },
-        {
-          "ts_code": "300035.SZ",
-          "name": "中科电气",
-          "industry": "电气设备",
-          "close": 20.02,
-          "high_250": 20.04,
-          "change_pct": 0.3,
-          "break_through": -0.1,
-          "amount": 414883.069
-        },
-        {
-          "ts_code": "300283.SZ",
-          "name": "温州宏丰",
-          "industry": "电气设备",
-          "close": 8.42,
-          "high_250": 8.42,
-          "change_pct": 1.08,
-          "break_through": 0.0,
-          "amount": 236572.142
-        },
-        {
-          "ts_code": "300919.SZ",
-          "name": "中伟新材",
-          "industry": "电气设备",
-          "close": 52.2,
-          "high_250": 52.24,
-          "change_pct": 1.3,
-          "break_through": -0.08,
-          "amount": 817479.258
-        },
-        {
-          "ts_code": "301012.SZ",
-          "name": "扬电科技",
-          "industry": "电气设备",
-          "close": 33.66,
-          "high_250": 33.66,
-          "change_pct": 13.72,
-          "break_through": 0.0,
-          "amount": 1164951.993
-        },
-        {
-          "ts_code": "301155.SZ",
-          "name": "海力风电",
-          "industry": "电气设备",
-          "close": 77.78,
-          "high_250": 77.85,
-          "change_pct": 1.46,
-          "break_through": -0.09,
-          "amount": 180071.645
-        },
-        {
-          "ts_code": "301163.SZ",
-          "name": "宏德股份",
-          "industry": "电气设备",
-          "close": 31.19,
-          "high_250": 31.19,
-          "change_pct": -0.03,
-          "break_through": 0.0,
-          "amount": 63516.031
-        },
-        {
-          "ts_code": "301226.SZ",
-          "name": "祥明智能",
-          "industry": "电气设备",
-          "close": 38.52,
-          "high_250": 38.53,
-          "change_pct": -3.12,
-          "break_through": -0.03,
-          "amount": 264873.552
-        },
-        {
-          "ts_code": "301266.SZ",
-          "name": "宇邦新材",
-          "industry": "电气设备",
-          "close": 50.25,
-          "high_250": 50.25,
-          "change_pct": 2.72,
-          "break_through": 0.0,
-          "amount": 295533.283
-        },
-        {
-          "ts_code": "301358.SZ",
-          "name": "湖南裕能",
-          "industry": "电气设备",
-          "close": 67.45,
-          "high_250": 67.47,
-          "change_pct": 4.14,
-          "break_through": -0.03,
-          "amount": 1726300.975
-        },
-        {
-          "ts_code": "600268.SH",
+          "code": "600268",
           "name": "国电南自",
-          "industry": "电气设备",
           "close": 16.34,
+          "price": 16.34,
           "high_250": 16.34,
+          "high_250d": 16.34,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
           "change_pct": 10.03,
+          "change": 10.03,
           "break_through": 0.0,
-          "amount": 1342265.372
+          "break_pct": 0.0,
+          "circ_mv": 165.17,
+          "amount": 1342.27,
+          "turnover": 1342.27,
+          "institution_score": 5.64,
+          "sector": "电气设备",
+          "industry": "电气设备"
         },
         {
-          "ts_code": "601218.SH",
-          "name": "吉鑫科技",
-          "industry": "电气设备",
-          "close": 5.82,
-          "high_250": 5.82,
-          "change_pct": 0.87,
-          "break_through": 0.0,
-          "amount": 239583.479
-        },
-        {
-          "ts_code": "601567.SH",
-          "name": "三星医疗",
-          "industry": "电气设备",
-          "close": 32.35,
-          "high_250": 32.35,
-          "change_pct": 10.0,
-          "break_through": 0.0,
-          "amount": 2450986.628
-        },
-        {
-          "ts_code": "601877.SH",
-          "name": "正泰电器",
-          "industry": "电气设备",
-          "close": 39.05,
-          "high_250": 39.05,
-          "change_pct": 10.0,
-          "break_through": 0.0,
-          "amount": 3491436.647
-        },
-        {
-          "ts_code": "603618.SH",
-          "name": "杭电股份",
-          "industry": "电气设备",
-          "close": 20.0,
-          "high_250": 20.0,
-          "change_pct": 4.33,
-          "break_through": 0.0,
-          "amount": 2210752.425
-        },
-        {
-          "ts_code": "688599.SH",
-          "name": "天合光能",
-          "industry": "电气设备",
-          "close": 18.72,
-          "high_250": 18.73,
-          "change_pct": 4.06,
-          "break_through": -0.05,
-          "amount": 1276074.859
-        }
-      ]
-    },
-    {
-      "sector_name": "软件服务",
-      "name": "软件服务",
-      "new_high_count": 13,
-      "stock_count": 13,
-      "stocks": [
-        {
-          "ts_code": "000503.SZ",
-          "name": "国新健康",
-          "industry": "软件服务",
-          "close": 8.74,
-          "high_250": 8.74,
-          "change_pct": -0.46,
-          "break_through": 0.0,
-          "amount": 90047.864
-        },
-        {
-          "ts_code": "002261.SZ",
-          "name": "拓维信息",
-          "industry": "软件服务",
-          "close": 42.96,
-          "high_250": 42.96,
-          "change_pct": 10.01,
-          "break_through": 0.0,
-          "amount": 13798037.421
-        },
-        {
-          "ts_code": "300448.SZ",
-          "name": "浩云科技",
-          "industry": "软件服务",
-          "close": 11.46,
-          "high_250": 11.46,
-          "change_pct": 3.71,
-          "break_through": 0.0,
-          "amount": 456298.595
-        },
-        {
-          "ts_code": "300605.SZ",
-          "name": "恒锋信息",
-          "industry": "软件服务",
-          "close": 15.82,
-          "high_250": 15.82,
-          "change_pct": 2.13,
-          "break_through": 0.0,
-          "amount": 52174.394
-        },
-        {
-          "ts_code": "300996.SZ",
-          "name": "普联软件",
-          "industry": "软件服务",
-          "close": 16.94,
-          "high_250": 16.94,
-          "change_pct": 1.74,
-          "break_through": 0.0,
-          "amount": 87540.999
-        },
-        {
-          "ts_code": "301179.SZ",
-          "name": "泽宇智能",
-          "industry": "软件服务",
-          "close": 24.07,
-          "high_250": 24.07,
-          "change_pct": 19.99,
-          "break_through": 0.0,
-          "amount": 776211.191
-        },
-        {
-          "ts_code": "301396.SZ",
-          "name": "宏景科技",
-          "industry": "软件服务",
-          "close": 114.29,
-          "high_250": 114.29,
-          "change_pct": 20.0,
-          "break_through": 0.0,
-          "amount": 2468802.594
-        },
-        {
-          "ts_code": "600602.SH",
-          "name": "云赛智联",
-          "industry": "软件服务",
-          "close": 22.26,
-          "high_250": 22.26,
-          "change_pct": 9.98,
-          "break_through": 0.0,
-          "amount": 2670300.334
-        },
-        {
-          "ts_code": "603138.SH",
-          "name": "海量数据",
-          "industry": "软件服务",
-          "close": 23.29,
-          "high_250": 23.29,
-          "change_pct": 10.01,
-          "break_through": 0.0,
-          "amount": 999854.656
-        },
-        {
-          "ts_code": "688158.SH",
-          "name": "优刻得-W",
-          "industry": "软件服务",
-          "close": 45.38,
-          "high_250": 45.38,
-          "change_pct": 19.99,
-          "break_through": 0.0,
-          "amount": 3107646.576
-        },
-        {
-          "ts_code": "688229.SH",
-          "name": "博睿数据",
-          "industry": "软件服务",
-          "close": 103.14,
-          "high_250": 103.14,
-          "change_pct": 20.0,
-          "break_through": 0.0,
-          "amount": 316399.355
-        },
-        {
-          "ts_code": "688316.SH",
-          "name": "青云科技-U",
-          "industry": "软件服务",
-          "close": 89.52,
-          "high_250": 89.52,
-          "change_pct": 20.0,
-          "break_through": 0.0,
-          "amount": 1008085.744
-        },
-        {
-          "ts_code": "920670.BJ",
-          "name": "数字人",
-          "industry": "软件服务",
-          "close": 19.47,
-          "high_250": 19.47,
-          "change_pct": 4.96,
-          "break_through": 0.0,
-          "amount": 107482.295
-        }
-      ]
-    },
-    {
-      "sector_name": "广告包装",
-      "name": "广告包装",
-      "new_high_count": 8,
-      "stock_count": 8,
-      "stocks": [
-        {
-          "ts_code": "000607.SZ",
-          "name": "华媒控股",
-          "industry": "广告包装",
-          "close": 4.35,
-          "high_250": 4.35,
-          "change_pct": 0.23,
-          "break_through": 0.0,
-          "amount": 74045.378
-        },
-        {
-          "ts_code": "000917.SZ",
-          "name": "电广传媒",
-          "industry": "广告包装",
-          "close": 10.2,
-          "high_250": 10.2,
-          "change_pct": -0.78,
-          "break_through": 0.0,
-          "amount": 519057.65
-        },
-        {
-          "ts_code": "002229.SZ",
-          "name": "鸿博股份",
-          "industry": "广告包装",
-          "close": 17.9,
-          "high_250": 17.9,
-          "change_pct": 10.02,
-          "break_through": 0.0,
-          "amount": 1157451.367
-        },
-        {
-          "ts_code": "002291.SZ",
-          "name": "遥望科技",
-          "industry": "广告包装",
-          "close": 7.05,
-          "high_250": 7.05,
-          "change_pct": 0.86,
-          "break_through": 0.0,
-          "amount": 230008.604
-        },
-        {
-          "ts_code": "002599.SZ",
-          "name": "盛通股份",
-          "industry": "广告包装",
-          "close": 7.68,
-          "high_250": 7.68,
-          "change_pct": 0.13,
-          "break_through": 0.0,
-          "amount": 83732.887
-        },
-        {
-          "ts_code": "300501.SZ",
-          "name": "海顺新材",
-          "industry": "广告包装",
-          "close": 15.37,
-          "high_250": 15.38,
-          "change_pct": -0.71,
-          "break_through": -0.07,
-          "amount": 42544.162
-        },
-        {
-          "ts_code": "301102.SZ",
-          "name": "兆讯传媒",
-          "industry": "广告包装",
-          "close": 11.52,
-          "high_250": 11.53,
-          "change_pct": 0.35,
-          "break_through": -0.09,
-          "amount": 50280.848
-        },
-        {
-          "ts_code": "600880.SH",
-          "name": "博瑞传播",
-          "industry": "广告包装",
-          "close": 5.32,
-          "high_250": 5.32,
-          "change_pct": 0.57,
-          "break_through": 0.0,
-          "amount": 114737.347
-        }
-      ]
-    },
-    {
-      "sector_name": "汽车配件",
-      "name": "汽车配件",
-      "new_high_count": 8,
-      "stock_count": 8,
-      "stocks": [
-        {
-          "ts_code": "002510.SZ",
-          "name": "天汽模",
-          "industry": "汽车配件",
-          "close": 8.08,
-          "high_250": 8.08,
-          "change_pct": 1.51,
-          "break_through": 0.0,
-          "amount": 398331.419
-        },
-        {
-          "ts_code": "301656.SZ",
-          "name": "联合动力",
-          "industry": "汽车配件",
-          "close": 24.96,
-          "high_250": 24.98,
-          "change_pct": -0.72,
-          "break_through": -0.08,
-          "amount": 101864.936
-        },
-        {
-          "ts_code": "603121.SH",
-          "name": "华培动力",
-          "industry": "汽车配件",
-          "close": 23.13,
-          "high_250": 23.13,
-          "change_pct": -10.0,
-          "break_through": 0.0,
-          "amount": 17030.619
-        },
-        {
-          "ts_code": "603286.SH",
-          "name": "日盈电子",
-          "industry": "汽车配件",
-          "close": 61.58,
-          "high_250": 61.62,
-          "change_pct": 1.65,
-          "break_through": -0.06,
-          "amount": 193489.565
-        },
-        {
-          "ts_code": "603352.SH",
-          "name": "至信股份",
-          "industry": "汽车配件",
-          "close": 39.55,
-          "high_250": 39.56,
-          "change_pct": -1.03,
-          "break_through": -0.03,
-          "amount": 69730.571
-        },
-        {
-          "ts_code": "603418.SH",
-          "name": "友升股份",
-          "industry": "汽车配件",
-          "close": 53.85,
-          "high_250": 53.9,
-          "change_pct": -0.99,
-          "break_through": -0.09,
-          "amount": 44565.361
-        },
-        {
-          "ts_code": "605319.SH",
-          "name": "无锡振华",
-          "industry": "汽车配件",
-          "close": 23.99,
-          "high_250": 23.99,
-          "change_pct": 1.52,
-          "break_through": 0.0,
-          "amount": 117660.903
-        },
-        {
-          "ts_code": "920195.BJ",
-          "name": "三祥科技",
-          "industry": "汽车配件",
-          "close": 21.8,
-          "high_250": 21.8,
-          "change_pct": 1.63,
-          "break_through": 0.0,
-          "amount": 23763.757
-        }
-      ]
-    },
-    {
-      "sector_name": "IT设备",
-      "name": "IT设备",
-      "new_high_count": 5,
-      "stock_count": 5,
-      "stocks": [
-        {
-          "ts_code": "000066.SZ",
-          "name": "中国长城",
-          "industry": "IT设备",
-          "close": 17.26,
-          "high_250": 17.26,
-          "change_pct": 10.01,
-          "break_through": 0.0,
-          "amount": 3710296.236
-        },
-        {
-          "ts_code": "000977.SZ",
-          "name": "浪潮信息",
-          "industry": "IT设备",
-          "close": 61.77,
-          "high_250": 61.8,
-          "change_pct": 3.94,
-          "break_through": -0.05,
-          "amount": 3501729.97
-        },
-        {
-          "ts_code": "001339.SZ",
-          "name": "智微智能",
-          "industry": "IT设备",
-          "close": 72.96,
-          "high_250": 72.96,
-          "change_pct": 10.0,
-          "break_through": 0.0,
-          "amount": 1462266.422
-        },
-        {
-          "ts_code": "002415.SZ",
-          "name": "海康威视",
-          "industry": "IT设备",
-          "close": 31.16,
-          "high_250": 31.19,
-          "change_pct": 0.29,
-          "break_through": -0.1,
-          "amount": 1273101.78
-        },
-        {
-          "ts_code": "300042.SZ",
-          "name": "朗科科技",
-          "industry": "IT设备",
-          "close": 38.75,
-          "high_250": 38.76,
-          "change_pct": 0.36,
-          "break_through": -0.03,
-          "amount": 899838.016
-        }
-      ]
-    },
-    {
-      "sector_name": "通信设备",
-      "name": "通信设备",
-      "new_high_count": 5,
-      "stock_count": 5,
-      "stocks": [
-        {
-          "ts_code": "000815.SZ",
-          "name": "美利云",
-          "industry": "通信设备",
-          "close": 17.94,
-          "high_250": 17.94,
+          "code": "002112",
+          "name": "三变科技",
+          "close": 27.63,
+          "price": 27.63,
+          "high_250": 27.63,
+          "high_250d": 27.63,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
           "change_pct": 9.99,
+          "change": 9.99,
           "break_through": 0.0,
-          "amount": 3849463.24
+          "break_pct": 0.0,
+          "circ_mv": 72.41,
+          "amount": 1708.48,
+          "turnover": 1708.48,
+          "institution_score": 5.61,
+          "sector": "电气设备",
+          "industry": "电气设备"
         },
         {
-          "ts_code": "300597.SZ",
-          "name": "吉大通信",
-          "industry": "通信设备",
-          "close": 9.94,
-          "high_250": 9.94,
-          "change_pct": 0.2,
+          "code": "601877",
+          "name": "正泰电器",
+          "close": 39.05,
+          "price": 39.05,
+          "high_250": 39.05,
+          "high_250d": 39.05,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
           "break_through": 0.0,
-          "amount": 66633.081
+          "break_pct": 0.0,
+          "circ_mv": 839.17,
+          "amount": 3491.44,
+          "turnover": 3491.44,
+          "institution_score": 10.0,
+          "sector": "电气设备",
+          "industry": "电气设备"
         },
         {
-          "ts_code": "600775.SH",
-          "name": "南京熊猫",
-          "industry": "通信设备",
-          "close": 15.2,
-          "high_250": 15.2,
-          "change_pct": 2.36,
+          "code": "601567",
+          "name": "三星医疗",
+          "close": 32.35,
+          "price": 32.35,
+          "high_250": 32.35,
+          "high_250d": 32.35,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
           "break_through": 0.0,
-          "amount": 1244327.837
+          "break_pct": 0.0,
+          "circ_mv": 454.59,
+          "amount": 2450.99,
+          "turnover": 2450.99,
+          "institution_score": 8.83,
+          "sector": "电气设备",
+          "industry": "电气设备"
         },
         {
-          "ts_code": "601869.SH",
-          "name": "长飞光纤",
-          "industry": "通信设备",
-          "close": 211.91,
-          "high_250": 211.91,
-          "change_pct": -0.61,
+          "code": "301012",
+          "name": "扬电科技",
+          "close": 33.66,
+          "price": 33.66,
+          "high_250": 33.66,
+          "high_250d": 33.66,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 13.72,
+          "change": 13.72,
           "break_through": 0.0,
-          "amount": 2776506.907
-        },
-        {
-          "ts_code": "603206.SH",
-          "name": "嘉环科技",
-          "industry": "通信设备",
-          "close": 16.06,
-          "high_250": 16.07,
-          "change_pct": 1.01,
-          "break_through": -0.06,
-          "amount": 46194.075
+          "break_pct": 0.0,
+          "circ_mv": 66.3,
+          "amount": 1164.95,
+          "turnover": 1164.95,
+          "institution_score": 4.25,
+          "sector": "电气设备",
+          "industry": "电气设备"
         }
       ]
     },
     {
       "sector_name": "新型电力",
-      "name": "新型电力",
       "new_high_count": 5,
       "stock_count": 5,
+      "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "ts_code": "000862.SZ",
+          "code": "000862",
           "name": "银星能源",
-          "industry": "新型电力",
           "close": 8.36,
+          "price": 8.36,
           "high_250": 8.36,
+          "high_250d": 8.36,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
           "change_pct": 10.0,
+          "change": 10.0,
           "break_through": 0.0,
-          "amount": 855346.195
+          "break_pct": 0.0,
+          "circ_mv": 52.5,
+          "amount": 855.35,
+          "turnover": 855.35,
+          "institution_score": 3.15,
+          "sector": "新型电力",
+          "industry": "新型电力"
         },
         {
-          "ts_code": "001258.SZ",
-          "name": "立新能源",
-          "industry": "新型电力",
-          "close": 9.36,
-          "high_250": 9.36,
-          "change_pct": 9.99,
-          "break_through": 0.0,
-          "amount": 357215.129
-        },
-        {
-          "ts_code": "002015.SZ",
-          "name": "协鑫能科",
-          "industry": "新型电力",
-          "close": 17.18,
-          "high_250": 17.18,
-          "change_pct": 9.99,
-          "break_through": 0.0,
-          "amount": 1961535.36
-        },
-        {
-          "ts_code": "003035.SZ",
-          "name": "南网能源",
-          "industry": "新型电力",
-          "close": 9.58,
-          "high_250": 9.58,
-          "change_pct": 9.99,
-          "break_through": 0.0,
-          "amount": 2163796.085
-        },
-        {
-          "ts_code": "600821.SH",
+          "code": "600821",
           "name": "金开新能",
-          "industry": "新型电力",
           "close": 9.46,
+          "price": 9.46,
           "high_250": 9.46,
+          "high_250d": 9.46,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
           "change_pct": 10.0,
+          "change": 10.0,
           "break_through": 0.0,
-          "amount": 760310.417
+          "break_pct": 0.0,
+          "circ_mv": 188.94,
+          "amount": 760.31,
+          "turnover": 760.31,
+          "institution_score": 4.0,
+          "sector": "新型电力",
+          "industry": "新型电力"
+        },
+        {
+          "code": "002015",
+          "name": "协鑫能科",
+          "close": 17.18,
+          "price": 17.18,
+          "high_250": 17.18,
+          "high_250d": 17.18,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 278.89,
+          "amount": 1961.54,
+          "turnover": 1961.54,
+          "institution_score": 7.35,
+          "sector": "新型电力",
+          "industry": "新型电力"
+        },
+        {
+          "code": "003035",
+          "name": "南网能源",
+          "close": 9.58,
+          "price": 9.58,
+          "high_250": 9.58,
+          "high_250d": 9.58,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 362.88,
+          "amount": 2163.8,
+          "turnover": 2163.8,
+          "institution_score": 8.06,
+          "sector": "新型电力",
+          "industry": "新型电力"
+        },
+        {
+          "code": "001258",
+          "name": "立新能源",
+          "close": 9.36,
+          "price": 9.36,
+          "high_250": 9.36,
+          "high_250d": 9.36,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 87.36,
+          "amount": 357.22,
+          "turnover": 357.22,
+          "institution_score": 1.87,
+          "sector": "新型电力",
+          "industry": "新型电力"
         }
       ]
     },
     {
-      "sector_name": "元器件",
-      "name": "元器件",
-      "new_high_count": 5,
-      "stock_count": 5,
+      "sector_name": "软件服务",
+      "new_high_count": 3,
+      "stock_count": 3,
+      "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "ts_code": "001314.SZ",
-          "name": "亿道信息",
-          "industry": "元器件",
-          "close": 51.14,
-          "high_250": 51.14,
-          "change_pct": 6.63,
+          "code": "300448",
+          "name": "浩云科技",
+          "close": 11.46,
+          "price": 11.46,
+          "high_250": 11.46,
+          "high_250d": 11.46,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 3.71,
+          "change": 3.71,
           "break_through": 0.0,
-          "amount": 598287.956
+          "break_pct": 0.0,
+          "circ_mv": 53.24,
+          "amount": 456.3,
+          "turnover": 456.3,
+          "institution_score": 1.89,
+          "sector": "软件服务",
+          "industry": "软件服务"
         },
         {
-          "ts_code": "301563.SZ",
-          "name": "云汉芯城",
-          "industry": "元器件",
-          "close": 146.68,
-          "high_250": 146.81,
-          "change_pct": -1.42,
-          "break_through": -0.09,
-          "amount": 132341.981
-        },
-        {
-          "ts_code": "301606.SZ",
-          "name": "绿联科技",
-          "industry": "元器件",
-          "close": 80.88,
-          "high_250": 80.88,
+          "code": "688229",
+          "name": "博睿数据",
+          "close": 103.14,
+          "price": 103.14,
+          "high_250": 103.14,
+          "high_250d": 103.14,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
           "change_pct": 20.0,
+          "change": 20.0,
           "break_through": 0.0,
-          "amount": 1064302.634
+          "break_pct": 0.0,
+          "circ_mv": 45.79,
+          "amount": 316.4,
+          "turnover": 316.4,
+          "institution_score": 1.39,
+          "sector": "软件服务",
+          "industry": "软件服务"
         },
         {
-          "ts_code": "688103.SH",
-          "name": "国力电子",
-          "industry": "元器件",
-          "close": 60.88,
-          "high_250": 60.93,
-          "change_pct": -0.72,
-          "break_through": -0.08,
-          "amount": 86819.041
-        },
-        {
-          "ts_code": "920876.BJ",
-          "name": "慧为智能",
-          "industry": "元器件",
-          "close": 32.49,
-          "high_250": 32.5,
-          "change_pct": 19.32,
-          "break_through": -0.03,
-          "amount": 222433.232
-        }
-      ]
-    },
-    {
-      "sector_name": "建筑工程",
-      "name": "建筑工程",
-      "new_high_count": 5,
-      "stock_count": 5,
-      "stocks": [
-        {
-          "ts_code": "002051.SZ",
-          "name": "中工国际",
-          "industry": "建筑工程",
-          "close": 9.2,
-          "high_250": 9.2,
-          "change_pct": 1.21,
+          "code": "301179",
+          "name": "泽宇智能",
+          "close": 24.07,
+          "price": 24.07,
+          "high_250": 24.07,
+          "high_250d": 24.07,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 19.99,
+          "change": 19.99,
           "break_through": 0.0,
-          "amount": 282353.781
-        },
-        {
-          "ts_code": "300500.SZ",
-          "name": "启迪设计",
-          "industry": "建筑工程",
-          "close": 12.55,
-          "high_250": 12.55,
-          "change_pct": 0.8,
-          "break_through": 0.0,
-          "amount": 42778.689
-        },
-        {
-          "ts_code": "301046.SZ",
-          "name": "能辉科技",
-          "industry": "建筑工程",
-          "close": 27.03,
-          "high_250": 27.04,
-          "change_pct": 1.46,
-          "break_through": -0.04,
-          "amount": 212143.824
-        },
-        {
-          "ts_code": "301365.SZ",
-          "name": "矩阵股份",
-          "industry": "建筑工程",
-          "close": 25.67,
-          "high_250": 25.67,
-          "change_pct": 1.26,
-          "break_through": 0.0,
-          "amount": 65548.473
-        },
-        {
-          "ts_code": "601789.SH",
-          "name": "宁波建工",
-          "industry": "建筑工程",
-          "close": 6.04,
-          "high_250": 6.04,
-          "change_pct": 10.02,
-          "break_through": 0.0,
-          "amount": 279733.353
-        }
-      ]
-    },
-    {
-      "sector_name": "文教休闲",
-      "name": "文教休闲",
-      "new_high_count": 5,
-      "stock_count": 5,
-      "stocks": [
-        {
-          "ts_code": "002575.SZ",
-          "name": "群兴玩具",
-          "industry": "文教休闲",
-          "close": 8.02,
-          "high_250": 8.02,
-          "change_pct": 10.01,
-          "break_through": 0.0,
-          "amount": 755830.608
-        },
-        {
-          "ts_code": "301011.SZ",
-          "name": "华立科技",
-          "industry": "文教休闲",
-          "close": 23.52,
-          "high_250": 23.53,
-          "change_pct": -0.97,
-          "break_through": -0.04,
-          "amount": 47251.447
-        },
-        {
-          "ts_code": "301313.SZ",
-          "name": "凡拓数创",
-          "industry": "文教休闲",
-          "close": 32.93,
-          "high_250": 32.94,
-          "change_pct": 4.54,
-          "break_through": -0.03,
-          "amount": 126526.486
-        },
-        {
-          "ts_code": "603466.SH",
-          "name": "风语筑",
-          "industry": "文教休闲",
-          "close": 10.79,
-          "high_250": 10.8,
-          "change_pct": -0.46,
-          "break_through": -0.09,
-          "amount": 480059.024
-        },
-        {
-          "ts_code": "605080.SH",
-          "name": "浙江自然",
-          "industry": "文教休闲",
-          "close": 24.45,
-          "high_250": 24.45,
-          "change_pct": -0.57,
-          "break_through": 0.0,
-          "amount": 28636.0
-        }
-      ]
-    },
-    {
-      "sector_name": "化学制药",
-      "name": "化学制药",
-      "new_high_count": 4,
-      "stock_count": 4,
-      "stocks": [
-        {
-          "ts_code": "000756.SZ",
-          "name": "新华制药",
-          "industry": "化学制药",
-          "close": 15.4,
-          "high_250": 15.4,
-          "change_pct": 0.13,
-          "break_through": 0.0,
-          "amount": 85781.493
-        },
-        {
-          "ts_code": "000766.SZ",
-          "name": "通化金马",
-          "industry": "化学制药",
-          "close": 21.27,
-          "high_250": 21.29,
-          "change_pct": 0.14,
-          "break_through": -0.09,
-          "amount": 313490.125
-        },
-        {
-          "ts_code": "600851.SH",
-          "name": "海欣股份",
-          "industry": "化学制药",
-          "close": 8.78,
-          "high_250": 8.78,
-          "change_pct": 10.03,
-          "break_through": 0.0,
-          "amount": 245639.298
-        },
-        {
-          "ts_code": "688566.SH",
-          "name": "吉贝尔",
-          "industry": "化学制药",
-          "close": 29.86,
-          "high_250": 29.87,
-          "change_pct": 1.98,
-          "break_through": -0.03,
-          "amount": 97673.232
-        }
-      ]
-    },
-    {
-      "sector_name": "医疗保健",
-      "name": "医疗保健",
-      "new_high_count": 4,
-      "stock_count": 4,
-      "stocks": [
-        {
-          "ts_code": "002030.SZ",
-          "name": "达安基因",
-          "industry": "医疗保健",
-          "close": 6.13,
-          "high_250": 6.13,
-          "change_pct": -0.33,
-          "break_through": 0.0,
-          "amount": 97909.658
-        },
-        {
-          "ts_code": "300412.SZ",
-          "name": "迦南科技",
-          "industry": "医疗保健",
-          "close": 5.79,
-          "high_250": 5.79,
-          "change_pct": 0.35,
-          "break_through": 0.0,
-          "amount": 89734.526
-        },
-        {
-          "ts_code": "688289.SH",
-          "name": "圣湘生物",
-          "industry": "医疗保健",
-          "close": 18.41,
-          "high_250": 18.42,
-          "change_pct": 0.38,
-          "break_through": -0.05,
-          "amount": 80150.678
-        },
-        {
-          "ts_code": "920166.BJ",
-          "name": "海圣医疗",
-          "industry": "医疗保健",
-          "close": 31.0,
-          "high_250": 31.0,
-          "change_pct": 3.4,
-          "break_through": 0.0,
-          "amount": 56831.848
-        }
-      ]
-    },
-    {
-      "sector_name": "家用电器",
-      "name": "家用电器",
-      "new_high_count": 4,
-      "stock_count": 4,
-      "stocks": [
-        {
-          "ts_code": "002677.SZ",
-          "name": "浙江美大",
-          "industry": "家用电器",
-          "close": 8.91,
-          "high_250": 8.91,
-          "change_pct": 0.79,
-          "break_through": 0.0,
-          "amount": 64825.663
-        },
-        {
-          "ts_code": "002860.SZ",
-          "name": "星帅尔",
-          "industry": "家用电器",
-          "close": 13.45,
-          "high_250": 13.45,
-          "change_pct": 0.9,
-          "break_through": 0.0,
-          "amount": 123181.032
-        },
-        {
-          "ts_code": "002959.SZ",
-          "name": "小熊电器",
-          "industry": "家用电器",
-          "close": 41.94,
-          "high_250": 41.95,
-          "change_pct": -0.55,
-          "break_through": -0.02,
-          "amount": 32885.839
-        },
-        {
-          "ts_code": "300342.SZ",
-          "name": "天银机电",
-          "industry": "家用电器",
-          "close": 42.66,
-          "high_250": 42.69,
-          "change_pct": 0.09,
-          "break_through": -0.07,
-          "amount": 899579.332
+          "break_pct": 0.0,
+          "circ_mv": 57.17,
+          "amount": 776.21,
+          "turnover": 776.21,
+          "institution_score": 2.94,
+          "sector": "软件服务",
+          "industry": "软件服务"
         }
       ]
     },
     {
       "sector_name": "生物制药",
-      "name": "生物制药",
-      "new_high_count": 3,
-      "stock_count": 3,
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "ts_code": "000534.SZ",
+          "code": "000534",
           "name": "万泽股份",
-          "industry": "生物制药",
           "close": 45.36,
+          "price": 45.36,
           "high_250": 45.36,
+          "high_250d": 45.36,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
           "change_pct": 9.99,
+          "change": 9.99,
           "break_through": 0.0,
-          "amount": 1872865.14
-        },
-        {
-          "ts_code": "301201.SZ",
-          "name": "诚达药业",
-          "industry": "生物制药",
-          "close": 42.61,
-          "high_250": 42.63,
-          "change_pct": -0.33,
-          "break_through": -0.05,
-          "amount": 81442.395
-        },
-        {
-          "ts_code": "301207.SZ",
-          "name": "华兰疫苗",
-          "industry": "生物制药",
-          "close": 19.42,
-          "high_250": 19.43,
-          "change_pct": 0.0,
-          "break_through": -0.05,
-          "amount": 105425.628
-        }
-      ]
-    },
-    {
-      "sector_name": "塑料",
-      "name": "塑料",
-      "new_high_count": 3,
-      "stock_count": 3,
-      "stocks": [
-        {
-          "ts_code": "000973.SZ",
-          "name": "佛塑科技",
-          "industry": "塑料",
-          "close": 14.5,
-          "high_250": 14.5,
-          "change_pct": 10.02,
-          "break_through": 0.0,
-          "amount": 1147168.689
-        },
-        {
-          "ts_code": "600135.SH",
-          "name": "乐凯胶片",
-          "industry": "塑料",
-          "close": 10.05,
-          "high_250": 10.05,
-          "change_pct": 9.96,
-          "break_through": 0.0,
-          "amount": 235641.125
-        },
-        {
-          "ts_code": "920163.BJ",
-          "name": "方大新材",
-          "industry": "塑料",
-          "close": 15.95,
-          "high_250": 15.95,
-          "change_pct": 0.19,
-          "break_through": 0.0,
-          "amount": 16071.171
-        }
-      ]
-    },
-    {
-      "sector_name": "化工原料",
-      "name": "化工原料",
-      "new_high_count": 3,
-      "stock_count": 3,
-      "stocks": [
-        {
-          "ts_code": "001335.SZ",
-          "name": "信凯科技",
-          "industry": "化工原料",
-          "close": 44.48,
-          "high_250": 44.5,
-          "change_pct": 1.53,
-          "break_through": -0.04,
-          "amount": 89201.25
-        },
-        {
-          "ts_code": "002068.SZ",
-          "name": "黑猫股份",
-          "industry": "化工原料",
-          "close": 9.52,
-          "high_250": 9.52,
-          "change_pct": 10.06,
-          "break_through": 0.0,
-          "amount": 445282.218
-        },
-        {
-          "ts_code": "603931.SH",
-          "name": "格林达",
-          "industry": "化工原料",
-          "close": 30.59,
-          "high_250": 30.59,
-          "change_pct": -0.94,
-          "break_through": 0.0,
-          "amount": 82272.423
-        }
-      ]
-    },
-    {
-      "sector_name": "中成药",
-      "name": "中成药",
-      "new_high_count": 3,
-      "stock_count": 3,
-      "stocks": [
-        {
-          "ts_code": "002082.SZ",
-          "name": "万邦德",
-          "industry": "中成药",
-          "close": 18.66,
-          "high_250": 18.66,
-          "change_pct": 10.02,
-          "break_through": 0.0,
-          "amount": 486121.745
-        },
-        {
-          "ts_code": "002644.SZ",
-          "name": "佛慈制药",
-          "industry": "中成药",
-          "close": 8.91,
-          "high_250": 8.91,
-          "change_pct": 1.37,
-          "break_through": 0.0,
-          "amount": 73745.184
-        },
-        {
-          "ts_code": "002907.SZ",
-          "name": "华森制药",
-          "industry": "中成药",
-          "close": 14.14,
-          "high_250": 14.15,
-          "change_pct": 0.14,
-          "break_through": -0.07,
-          "amount": 18237.228
-        }
-      ]
-    },
-    {
-      "sector_name": "互联网",
-      "name": "互联网",
-      "new_high_count": 3,
-      "stock_count": 3,
-      "stocks": [
-        {
-          "ts_code": "002115.SZ",
-          "name": "三维通信",
-          "industry": "互联网",
-          "close": 13.65,
-          "high_250": 13.65,
-          "change_pct": 0.37,
-          "break_through": 0.0,
-          "amount": 703496.853
-        },
-        {
-          "ts_code": "300113.SZ",
-          "name": "顺网科技",
-          "industry": "互联网",
-          "close": 29.36,
-          "high_250": 29.36,
-          "change_pct": 19.98,
-          "break_through": 0.0,
-          "amount": 3267717.759
-        },
-        {
-          "ts_code": "300494.SZ",
-          "name": "盛天网络",
-          "industry": "互联网",
-          "close": 12.68,
-          "high_250": 12.68,
-          "change_pct": 3.01,
-          "break_through": 0.0,
-          "amount": 208751.409
-        }
-      ]
-    },
-    {
-      "sector_name": "专用机械",
-      "name": "专用机械",
-      "new_high_count": 3,
-      "stock_count": 3,
-      "stocks": [
-        {
-          "ts_code": "002730.SZ",
-          "name": "电光科技",
-          "industry": "专用机械",
-          "close": 19.17,
-          "high_250": 19.17,
-          "change_pct": 9.98,
-          "break_through": 0.0,
-          "amount": 553214.164
-        },
-        {
-          "ts_code": "301128.SZ",
-          "name": "强瑞技术",
-          "industry": "专用机械",
-          "close": 102.4,
-          "high_250": 102.5,
-          "change_pct": -0.19,
-          "break_through": -0.1,
-          "amount": 345672.774
-        },
-        {
-          "ts_code": "688092.SH",
-          "name": "爱科科技",
-          "industry": "专用机械",
-          "close": 31.59,
-          "high_250": 31.59,
-          "change_pct": 0.22,
-          "break_through": 0.0,
-          "amount": 44633.281
-        }
-      ]
-    },
-    {
-      "sector_name": "机械基件",
-      "name": "机械基件",
-      "new_high_count": 3,
-      "stock_count": 3,
-      "stocks": [
-        {
-          "ts_code": "300988.SZ",
-          "name": "津荣天宇",
-          "industry": "机械基件",
-          "close": 28.48,
-          "high_250": 28.48,
-          "change_pct": 0.74,
-          "break_through": 0.0,
-          "amount": 166743.697
-        },
-        {
-          "ts_code": "601369.SH",
-          "name": "陕鼓动力",
-          "industry": "机械基件",
-          "close": 12.1,
-          "high_250": 12.1,
-          "change_pct": 1.34,
-          "break_through": 0.0,
-          "amount": 350648.626
-        },
-        {
-          "ts_code": "688308.SH",
-          "name": "欧科亿",
-          "industry": "机械基件",
-          "close": 85.0,
-          "high_250": 85.0,
-          "change_pct": 10.68,
-          "break_through": 0.0,
-          "amount": 1102319.143
-        }
-      ]
-    },
-    {
-      "sector_name": "电器仪表",
-      "name": "电器仪表",
-      "new_high_count": 3,
-      "stock_count": 3,
-      "stocks": [
-        {
-          "ts_code": "301129.SZ",
-          "name": "瑞纳智能",
-          "industry": "电器仪表",
-          "close": 29.92,
-          "high_250": 29.93,
-          "change_pct": 3.28,
-          "break_through": -0.03,
-          "amount": 309691.655
-        },
-        {
-          "ts_code": "301413.SZ",
-          "name": "安培龙",
-          "industry": "电器仪表",
-          "close": 126.89,
-          "high_250": 126.89,
-          "change_pct": -1.53,
-          "break_through": 0.0,
-          "amount": 329468.049
-        },
-        {
-          "ts_code": "603416.SH",
-          "name": "信捷电气",
-          "industry": "电器仪表",
-          "close": 51.88,
-          "high_250": 51.9,
-          "change_pct": -1.24,
-          "break_through": -0.04,
-          "amount": 108929.129
-        }
-      ]
-    },
-    {
-      "sector_name": "造纸",
-      "name": "造纸",
-      "new_high_count": 3,
-      "stock_count": 3,
-      "stocks": [
-        {
-          "ts_code": "603165.SH",
-          "name": "荣晟环保",
-          "industry": "造纸",
-          "close": 14.95,
-          "high_250": 14.95,
-          "change_pct": 10.01,
-          "break_through": 0.0,
-          "amount": 231957.03
-        },
-        {
-          "ts_code": "603284.SH",
-          "name": "林平发展",
-          "industry": "造纸",
-          "close": 48.24,
-          "high_250": 48.24,
-          "change_pct": -0.17,
-          "break_through": 0.0,
-          "amount": 75283.751
-        },
-        {
-          "ts_code": "605500.SH",
-          "name": "森林包装",
-          "industry": "造纸",
-          "close": 9.09,
-          "high_250": 9.09,
-          "change_pct": 0.55,
-          "break_through": 0.0,
-          "amount": 32612.216
-        }
-      ]
-    },
-    {
-      "sector_name": "白酒",
-      "name": "白酒",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "stocks": [
-        {
-          "ts_code": "000860.SZ",
-          "name": "顺鑫农业",
-          "industry": "白酒",
-          "close": 14.05,
-          "high_250": 14.06,
-          "change_pct": -0.28,
-          "break_through": -0.07,
-          "amount": 81569.674
-        },
-        {
-          "ts_code": "600197.SH",
-          "name": "伊力特",
-          "industry": "白酒",
-          "close": 12.83,
-          "high_250": 12.84,
-          "change_pct": -0.47,
-          "break_through": -0.08,
-          "amount": 37423.379
-        }
-      ]
-    },
-    {
-      "sector_name": "半导体",
-      "name": "半导体",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "stocks": [
-        {
-          "ts_code": "001309.SZ",
-          "name": "德明利",
-          "industry": "半导体",
-          "close": 280.0,
-          "high_250": 280.0,
-          "change_pct": 3.28,
-          "break_through": 0.0,
-          "amount": 5026224.916
-        },
-        {
-          "ts_code": "301308.SZ",
-          "name": "江波龙",
-          "industry": "半导体",
-          "close": 330.12,
-          "high_250": 330.25,
-          "change_pct": 7.88,
-          "break_through": -0.04,
-          "amount": 7810744.669
-        }
-      ]
-    },
-    {
-      "sector_name": "玻璃",
-      "name": "玻璃",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "stocks": [
-        {
-          "ts_code": "002201.SZ",
-          "name": "九鼎新材",
-          "industry": "玻璃",
-          "close": 12.32,
-          "high_250": 12.32,
-          "change_pct": -0.4,
-          "break_through": 0.0,
-          "amount": 311194.07
-        },
-        {
-          "ts_code": "605006.SH",
-          "name": "山东玻纤",
-          "industry": "玻璃",
-          "close": 9.17,
-          "high_250": 9.17,
-          "change_pct": -1.71,
-          "break_through": 0.0,
-          "amount": 214250.504
-        }
-      ]
-    },
-    {
-      "sector_name": "影视音像",
-      "name": "影视音像",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "stocks": [
-        {
-          "ts_code": "002238.SZ",
-          "name": "天威视讯",
-          "industry": "影视音像",
-          "close": 7.97,
-          "high_250": 7.97,
-          "change_pct": 1.14,
-          "break_through": 0.0,
-          "amount": 91303.176
-        },
-        {
-          "ts_code": "603103.SH",
-          "name": "横店影视",
-          "industry": "影视音像",
-          "close": 24.98,
-          "high_250": 24.99,
-          "change_pct": 0.44,
-          "break_through": -0.04,
-          "amount": 296778.795
-        }
-      ]
-    },
-    {
-      "sector_name": "钢加工",
-      "name": "钢加工",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "stocks": [
-        {
-          "ts_code": "002445.SZ",
-          "name": "中南文化",
-          "industry": "钢加工",
-          "close": 3.06,
-          "high_250": 3.06,
-          "change_pct": 10.07,
-          "break_through": 0.0,
-          "amount": 53546.481
-        },
-        {
-          "ts_code": "600477.SH",
-          "name": "杭萧钢构",
-          "industry": "钢加工",
-          "close": 3.54,
-          "high_250": 3.54,
-          "change_pct": -0.28,
-          "break_through": 0.0,
-          "amount": 229497.428
-        }
-      ]
-    },
-    {
-      "sector_name": "小金属",
-      "name": "小金属",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "stocks": [
-        {
-          "ts_code": "002460.SZ",
-          "name": "赣锋锂业",
-          "industry": "小金属",
-          "close": 67.76,
-          "high_250": 67.8,
-          "change_pct": 2.84,
-          "break_through": -0.06,
-          "amount": 3183997.641
-        },
-        {
-          "ts_code": "600459.SH",
-          "name": "贵研铂业",
-          "industry": "小金属",
-          "close": 22.98,
-          "high_250": 23.0,
-          "change_pct": -0.69,
-          "break_through": -0.09,
-          "amount": 665137.812
-        }
-      ]
-    },
-    {
-      "sector_name": "家居用品",
-      "name": "家居用品",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "stocks": [
-        {
-          "ts_code": "002631.SZ",
-          "name": "德尔未来",
-          "industry": "家居用品",
-          "close": 6.61,
-          "high_250": 6.61,
-          "change_pct": 3.12,
-          "break_through": 0.0,
-          "amount": 196772.659
-        },
-        {
-          "ts_code": "605268.SH",
-          "name": "王力安防",
-          "industry": "家居用品",
-          "close": 15.33,
-          "high_250": 15.33,
-          "change_pct": 9.97,
-          "break_through": 0.0,
-          "amount": 76535.025
-        }
-      ]
-    },
-    {
-      "sector_name": "纺织",
-      "name": "纺织",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "stocks": [
-        {
-          "ts_code": "002674.SZ",
-          "name": "兴业科技",
-          "industry": "纺织",
-          "close": 14.19,
-          "high_250": 14.2,
-          "change_pct": 0.64,
-          "break_through": -0.07,
-          "amount": 76954.118
-        },
-        {
-          "ts_code": "300952.SZ",
-          "name": "恒辉安防",
-          "industry": "纺织",
-          "close": 39.68,
-          "high_250": 39.68,
-          "change_pct": -1.05,
-          "break_through": 0.0,
-          "amount": 205672.176
-        }
-      ]
-    },
-    {
-      "sector_name": "环境保护",
-      "name": "环境保护",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "stocks": [
-        {
-          "ts_code": "688101.SH",
-          "name": "三达膜",
-          "industry": "环境保护",
-          "close": 17.38,
-          "high_250": 17.38,
-          "change_pct": 0.29,
-          "break_through": 0.0,
-          "amount": 45706.535
-        },
-        {
-          "ts_code": "688309.SH",
-          "name": "恒誉环保",
-          "industry": "环境保护",
-          "close": 51.98,
-          "high_250": 51.98,
-          "change_pct": 6.34,
-          "break_through": 0.0,
-          "amount": 208252.539
+          "break_pct": 0.0,
+          "circ_mv": 226.79,
+          "amount": 1872.87,
+          "turnover": 1872.87,
+          "institution_score": 6.91,
+          "sector": "生物制药",
+          "industry": "生物制药"
         }
       ]
     },
     {
       "sector_name": "水力发电",
-      "name": "水力发电",
       "new_high_count": 1,
       "stock_count": 1,
+      "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "ts_code": "000601.SZ",
+          "code": "000601",
           "name": "韶能股份",
-          "industry": "水力发电",
           "close": 6.75,
+          "price": 6.75,
           "high_250": 6.75,
+          "high_250d": 6.75,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
           "change_pct": 9.93,
+          "change": 9.93,
           "break_through": 0.0,
-          "amount": 1453721.278
+          "break_pct": 0.0,
+          "circ_mv": 70.84,
+          "amount": 1453.72,
+          "turnover": 1453.72,
+          "institution_score": 5.2,
+          "sector": "水力发电",
+          "industry": "水力发电"
         }
       ]
     },
     {
-      "sector_name": "综合类",
-      "name": "综合类",
+      "sector_name": "通信设备",
       "new_high_count": 1,
       "stock_count": 1,
+      "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "ts_code": "000839.SZ",
-          "name": "国安股份",
-          "industry": "综合类",
-          "close": 3.29,
-          "high_250": 3.29,
-          "change_pct": -0.6,
+          "code": "000815",
+          "name": "美利云",
+          "close": 17.94,
+          "price": 17.94,
+          "high_250": 17.94,
+          "high_250d": 17.94,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
           "break_through": 0.0,
-          "amount": 372749.211
-        }
-      ]
-    },
-    {
-      "sector_name": "软饮料",
-      "name": "软饮料",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "stocks": [
-        {
-          "ts_code": "000848.SZ",
-          "name": "承德露露",
-          "industry": "软饮料",
-          "close": 8.28,
-          "high_250": 8.28,
-          "change_pct": 0.24,
-          "break_through": 0.0,
-          "amount": 51213.152
-        }
-      ]
-    },
-    {
-      "sector_name": "红黄酒",
-      "name": "红黄酒",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "stocks": [
-        {
-          "ts_code": "000869.SZ",
-          "name": "张裕Ａ",
-          "industry": "红黄酒",
-          "close": 19.68,
-          "high_250": 19.69,
-          "change_pct": -0.3,
-          "break_through": -0.05,
-          "amount": 23078.874
-        }
-      ]
-    },
-    {
-      "sector_name": "服饰",
-      "name": "服饰",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "stocks": [
-        {
-          "ts_code": "001234.SZ",
-          "name": "泰慕士",
-          "industry": "服饰",
-          "close": 29.93,
-          "high_250": 29.94,
-          "change_pct": 0.91,
-          "break_through": -0.03,
-          "amount": 72178.286
-        }
-      ]
-    },
-    {
-      "sector_name": "橡胶",
-      "name": "橡胶",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "stocks": [
-        {
-          "ts_code": "001325.SZ",
-          "name": "元创股份",
-          "industry": "橡胶",
-          "close": 53.88,
-          "high_250": 53.89,
-          "change_pct": 2.34,
-          "break_through": -0.02,
-          "amount": 184164.053
-        }
-      ]
-    },
-    {
-      "sector_name": "区域地产",
-      "name": "区域地产",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "stocks": [
-        {
-          "ts_code": "002314.SZ",
-          "name": "南山控股",
-          "industry": "区域地产",
-          "close": 2.65,
-          "high_250": 2.65,
-          "change_pct": 1.15,
-          "break_through": 0.0,
-          "amount": 80517.835
-        }
-      ]
-    },
-    {
-      "sector_name": "装修装饰",
-      "name": "装修装饰",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "stocks": [
-        {
-          "ts_code": "002830.SZ",
-          "name": "名雕股份",
-          "industry": "装修装饰",
-          "close": 23.0,
-          "high_250": 23.02,
-          "change_pct": 0.66,
-          "break_through": -0.09,
-          "amount": 90145.986
-        }
-      ]
-    },
-    {
-      "sector_name": "机床制造",
-      "name": "机床制造",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "stocks": [
-        {
-          "ts_code": "002903.SZ",
-          "name": "宇环数控",
-          "industry": "机床制造",
-          "close": 27.61,
-          "high_250": 27.61,
-          "change_pct": 10.0,
-          "break_through": 0.0,
-          "amount": 334485.601
-        }
-      ]
-    },
-    {
-      "sector_name": "仓储物流",
-      "name": "仓储物流",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "stocks": [
-        {
-          "ts_code": "002930.SZ",
-          "name": "宏川智慧",
-          "industry": "仓储物流",
-          "close": 14.67,
-          "high_250": 14.67,
-          "change_pct": 9.97,
-          "break_through": 0.0,
-          "amount": 315248.398
-        }
-      ]
-    },
-    {
-      "sector_name": "食品",
-      "name": "食品",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "stocks": [
-        {
-          "ts_code": "300146.SZ",
-          "name": "汤臣倍健",
-          "industry": "食品",
-          "close": 11.57,
-          "high_250": 11.58,
-          "change_pct": 0.43,
-          "break_through": -0.09,
-          "amount": 177796.768
-        }
-      ]
-    },
-    {
-      "sector_name": "特种钢",
-      "name": "特种钢",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "stocks": [
-        {
-          "ts_code": "600117.SH",
-          "name": "西宁特钢",
-          "industry": "特种钢",
-          "close": 2.93,
-          "high_250": 2.93,
-          "change_pct": -0.34,
-          "break_through": 0.0,
-          "amount": 68729.952
-        }
-      ]
-    },
-    {
-      "sector_name": "空运",
-      "name": "空运",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "stocks": [
-        {
-          "ts_code": "600221.SH",
-          "name": "海航控股",
-          "industry": "空运",
-          "close": 1.53,
-          "high_250": 1.53,
-          "change_pct": -2.55,
-          "break_through": 0.0,
-          "amount": 761684.875
+          "break_pct": 0.0,
+          "circ_mv": 124.73,
+          "amount": 3849.46,
+          "turnover": 3849.46,
+          "institution_score": 6.05,
+          "sector": "通信设备",
+          "industry": "通信设备"
         }
       ]
     },
     {
       "sector_name": "农药化肥",
-      "name": "农药化肥",
       "new_high_count": 1,
       "stock_count": 1,
+      "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "ts_code": "600227.SH",
+          "code": "600227",
           "name": "赤天化",
-          "industry": "农药化肥",
           "close": 3.62,
+          "price": 3.62,
           "high_250": 3.62,
+          "high_250d": 3.62,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
           "change_pct": 10.03,
+          "change": 10.03,
           "break_through": 0.0,
-          "amount": 896108.882
+          "break_pct": 0.0,
+          "circ_mv": 46.25,
+          "amount": 896.11,
+          "turnover": 896.11,
+          "institution_score": 3.23,
+          "sector": "农药化肥",
+          "industry": "农药化肥"
         }
       ]
     },
     {
-      "sector_name": "超市连锁",
-      "name": "超市连锁",
+      "sector_name": "仓储物流",
       "new_high_count": 1,
       "stock_count": 1,
+      "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "ts_code": "600827.SH",
-          "name": "百联股份",
-          "industry": "超市连锁",
-          "close": 8.65,
-          "high_250": 8.65,
-          "change_pct": 0.0,
+          "code": "002930",
+          "name": "宏川智慧",
+          "close": 14.67,
+          "price": 14.67,
+          "high_250": 14.67,
+          "high_250d": 14.67,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.97,
+          "change": 9.97,
           "break_through": 0.0,
-          "amount": 69878.803
+          "break_pct": 0.0,
+          "circ_mv": 63.48,
+          "amount": 315.25,
+          "turnover": 315.25,
+          "institution_score": 1.53,
+          "sector": "仓储物流",
+          "industry": "仓储物流"
         }
       ]
     },
     {
-      "sector_name": "百货",
-      "name": "百货",
+      "sector_name": "环境保护",
       "new_high_count": 1,
       "stock_count": 1,
+      "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "ts_code": "601010.SH",
-          "name": "文峰股份",
-          "industry": "百货",
-          "close": 2.42,
-          "high_250": 2.42,
-          "change_pct": -0.41,
+          "code": "688309",
+          "name": "恒誉环保",
+          "close": 51.98,
+          "price": 51.98,
+          "high_250": 51.98,
+          "high_250d": 51.98,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 6.34,
+          "change": 6.34,
           "break_through": 0.0,
-          "amount": 55016.747
+          "break_pct": 0.0,
+          "circ_mv": 41.27,
+          "amount": 208.25,
+          "turnover": 208.25,
+          "institution_score": 1.01,
+          "sector": "环境保护",
+          "industry": "环境保护"
         }
       ]
     },
     {
-      "sector_name": "普钢",
-      "name": "普钢",
+      "sector_name": "机械基件",
       "new_high_count": 1,
       "stock_count": 1,
+      "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "ts_code": "601969.SH",
-          "name": "海南矿业",
-          "industry": "普钢",
-          "close": 13.52,
-          "high_250": 13.52,
-          "change_pct": 10.01,
+          "code": "688308",
+          "name": "欧科亿",
+          "close": 85.0,
+          "price": 85.0,
+          "high_250": 85.0,
+          "high_250d": 85.0,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.68,
+          "change": 10.68,
           "break_through": 0.0,
-          "amount": 1192452.558
-        }
-      ]
-    },
-    {
-      "sector_name": "农用机械",
-      "name": "农用机械",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "stocks": [
-        {
-          "ts_code": "603029.SH",
-          "name": "天鹅股份",
-          "industry": "农用机械",
-          "close": 20.24,
-          "high_250": 20.24,
-          "change_pct": 0.3,
-          "break_through": 0.0,
-          "amount": 52014.222
-        }
-      ]
-    },
-    {
-      "sector_name": "染料涂料",
-      "name": "染料涂料",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "stocks": [
-        {
-          "ts_code": "603110.SH",
-          "name": "东方材料",
-          "industry": "染料涂料",
-          "close": 17.31,
-          "high_250": 17.31,
-          "change_pct": -0.52,
-          "break_through": 0.0,
-          "amount": 142664.242
-        }
-      ]
-    },
-    {
-      "sector_name": "运输设备",
-      "name": "运输设备",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "stocks": [
-        {
-          "ts_code": "688015.SH",
-          "name": "交控科技",
-          "industry": "运输设备",
-          "close": 24.77,
-          "high_250": 24.79,
-          "change_pct": -0.72,
-          "break_through": -0.08,
-          "amount": 44212.265
+          "break_pct": 0.0,
+          "circ_mv": 134.96,
+          "amount": 1102.32,
+          "turnover": 1102.32,
+          "institution_score": 4.63,
+          "sector": "机械基件",
+          "industry": "机械基件"
         }
       ]
     }
-  ],
-  "market_stats": {
-    "new_high_count": 160,
-    "market_status": "强势",
-    "strength_score": 80
-  }
+  ]
 }

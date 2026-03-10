@@ -338,7 +338,9 @@
 
     <script>
         // GitHub Pages 使用静态 JSON 文件，本地使用 API
-        const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+        const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const isFileProtocol = window.location.protocol === 'file:';
+        const API_BASE = (isLocalhost && !isFileProtocol)
             ? 'http://localhost:8000' 
             : './data';
         

@@ -1,168 +1,298 @@
-# A股股票分析工具
+---
+name: 3l-model
+description: |
+  A股3L模型分析系统 v1.0.6 - 修复动量页面日期选择器路径问题。
+  
+  版本: v1.0.6 (2026-03-10) - 稳定版本
+  
+  v1.0.6修复：
+  - 修复动量页面日期选择器路径问题
+  - 支持GitHub Pages子目录部署
+  
+  v1.0.5修复：
+  - 一年新高筛选逻辑：移除0.999容差，只有收盘价>=250日最高价才算新高
+  - 日期选择器：支持静态文件模式和API模式
+  
+  v1.0.4修复：
+  - 一年新高涨跌幅计算：使用 change/pre_close 正确计算 pct_change
+  - 突破幅度计算：修复突破幅度的计算逻辑
+  - GitHub Pages兼容性：前端自动检测环境，静态托管使用 JSON 文件
+  - 前端字段兼容性：支持 ts_code 和 code 字段
 
-基于动量模型和一年新高的A股股票分析工具，支持板块轮动分析和强势股追踪。
+  v1.0.3修复：
+  - 一年新高数据格式：修复为前端期望的 sectors 数组格式
+  - 前端API端口：修复为 8000 端口
+  - 依赖问题：添加 uvicorn、fastapi 到 requirements
 
-## 🌟 功能特性
+  v1.0.2优化：
+  - 排名变动颜色：上升=红色，下降=绿色
+  - 排名逻辑：使用Tushare真实交易日历(pretrade_date)
 
-### 📊 动量模型
-- 计算20日涨幅前700只股票
-- 剔除次新股（上市<20日）
-- 机构资金过滤（基金≥2% 或 北向≥0.5%）
-- 按东财二级行业分类统计
-- 动量分值 = 板块上榜数量 × 上榜占比
+  使用场景：
+  - 分析A股板块动量排名和热点
+  - 查看突破250日新高的强势股
+  - 生成股票分析报告
+  - 获取一年新高个股和板块分布
 
-### 📈 一年新高
-- 统计突破250日最高价的个股
-- 市场强度评分
-- 板块分布统计
-- 连新高天数追踪
+  触发词：3L模型、3l模型、板块动量、一年新高、股票分析、动量排名、
+          新高个股、板块热点、A股分析、股票报告
 
-## 🛠️ 技术栈
+  支持自动运行：每天下午5点自动更新数据并推送到GitHub Pages
 
-- **前端**: HTML + Tailwind CSS + JavaScript
-- **后端**: Python + FastAPI
-- **数据源**: Tushare Pro
-- **数据库**: PostgreSQL (可选)
-- **容器化**: Docker + Docker Compose
+  在线访问：https://l867802694.github.io/3l-model/
+---
 
-## 🚀 快速开始
+# 3L 模型 v1.0.6 - A股股票分析系统
 
-### 方式一：Docker 一键部署（推荐）
+## 版本信息
 
-```bash
-# 1. 克隆项目
-git clone https://github.com/yourusername/stock-analyzer.git
-cd stock-analyzer
+- **版本**: v1.0.6
+- **发布日期**: 2026-03-10
+- **状态**: 稳定版本 ✅
 
-# 2. 配置环境变量
-cp backend/.env.example backend/.env
-# 编辑 .env 文件，填入你的 Tushare Token
+## 在线访问
 
-# 3. 启动服务
-docker-compose up -d
+- **首页**: https://l867802694.github.io/3l-model/
+- **动量股池**: https://l867802694.github.io/3l-model/momentum.html
+- **一年新高**: https://l867802694.github.io/3l-model/newhigh.html
 
-# 4. 访问
-# 前端: http://localhost
-# API文档: http://localhost/api/docs
+## 概述
+
+3L模型是一个A股股票分析工具，包含两个核心模型：
+
+1. **动量模型**：基于20日涨幅筛选强势股，按东财二级行业分类统计板块动量
+2. **一年新高模型**：统计突破250日最高价的个股，分析板块分布
+
+## 更新日志
+
+### v1.0.3 (2026-03-09) - 封板版本
+
+- 🔧 修复一年新高数据格式（改为前端期望的 sectors 数组格式）
+- 🔧 修复前端 API 端口配置（8001 → 8000）
+- 🔧 添加缺失依赖（uvicorn、fastapi）
+- ✅ 封板：此版本功能已完善，如需修改请开 v1.0.4+
+
+### v1.0.2 (2026-03-08)
+
+- 🎨 优化排名变动颜色（上升=红色，下降=绿色）
+- 📅 优化排名逻辑（使用Tushare真实交易日历）
+
+### v1.0.1 (2026-03-08)
+
+- ✉️ 添加邮件通知功能
+
+### v1.0.0 (2026-03-08)
+
+- 🎉 初始版本发布
+
+## 快速开始
+
+### 查看网站
+
+直接访问：
+```
+https://l867802694.github.io/3l-model/
 ```
 
-### 方式二：本地开发
+### 本地运行
 
 ```bash
-# 1. 克隆项目
-git clone https://github.com/yourusername/stock-analyzer.git
-cd stock-analyzer
+# 启动后端API
+cd ~/.openclaw/skills/3l-model/assets/backend
+source .venv/bin/activate
+uvicorn api_server:app --host 0.0.0.0 --port 8000
 
-# 2. 安装后端依赖
-cd backend
-pip install -r requirements.txt
+# 启动前端（新开终端）
+cd ~/.openclaw/skills/3l-model/assets
+python -m http.server 8080
+```
 
-# 3. 配置环境变量
-cp .env.example .env
-# 编辑 .env 文件
+访问：
+- 动量股池：http://localhost:8080/momentum_real.html
+- 一年新高：http://localhost:8080/newhigh_final.html
 
-# 4. 获取数据
+### 手动更新数据
+
+```bash
+# 更新今天数据
+~/.openclaw/skills/3l-model/scripts/auto-update-and-push.sh
+
+# 或分步执行
+cd ~/.openclaw/skills/3l-model/assets/backend
+source .venv/bin/activate
 python update_data.py
-
-# 5. 启动后端
-python api_server.py
-
-# 6. 前端直接用浏览器打开 momentum_real.html
 ```
 
-## ⚙️ 配置说明
-
-### Tushare Token 配置
-
-1. 注册 Tushare Pro: https://tushare.pro
-2. 获取 Token
-3. 在 `backend/.env` 中配置：
-
-```env
-TUSHARE_TOKEN=your_token_here
-TUSHARE_API_URL=http://api.tushare.pro
-```
-
-### 定时任务（可选）
-
-每天自动更新数据：
+### 设置定时任务
 
 ```bash
-# macOS
-launchctl load ~/Library/LaunchAgents/com.stockanalyzer.updatedata.plist
-
-# Linux (cron)
-0 17 * * * cd /path/to/stock-analyzer/backend && python update_data.py
+~/.openclaw/skills/3l-model/scripts/setup-cron.sh
 ```
 
-## 📁 项目结构
-
-```
-stock-analyzer/
-├── backend/              # 后端代码
-│   ├── api_server.py     # FastAPI 主应用
-│   ├── update_data.py    # 数据更新脚本
-│   ├── requirements.txt  # Python 依赖
-│   └── data/             # 数据文件（自动创建）
-├── docker/               # Docker 配置
-├── docs/                 # 文档
-├── momentum_real.html    # 动量股池页面
-├── newhigh_final.html    # 一年新高页面
-├── docker-compose.yml    # Docker Compose 配置
-└── README.md             # 本文件
-```
-
-## 🌐 API 接口
-
-### 获取可用日期
-```
-GET /api/dates
-```
+## 模型逻辑
 
 ### 动量模型
+
+1. 获取全市场股票列表
+2. 剔除次新股（上市<20天）和ST股票
+3. 计算20日涨幅，取TOP 700
+4. 机构资金过滤（市值+成交额代理指标）
+5. 按东财二级行业分类统计
+6. 计算动量分值 = 上榜数量 × 上榜占比
+
+### 一年新高模型
+
+1. 获取全市场股票
+2. 过滤ST股和次新股
+3. 计算250日最高价
+4. 筛选收盘价突破250日最高的个股
+5. 机构关注度过滤
+6. 按行业统计板块分布
+
+## 数据字段说明
+
+### 动量模型
+
+| 字段 | 说明 |
+|------|------|
+| momentum_score | 动量分值 |
+| listed_count | 板块上榜股票数 |
+| listed_ratio | 上榜占比 |
+| avg_return_20d | 平均20日涨幅 |
+| rank_change | 排名变动（较前一天）|
+
+### 一年新高模型
+
+| 字段 | 说明 |
+|------|------|
+| high_250 | 250日最高价 |
+| close | 当日收盘价 |
+| change_pct | 当日涨跌幅 |
+| break_through | 突破幅度 |
+| consecutive_days | 连新高天数 |
+
+## 自动更新流程
+
 ```
-GET /api/momentum/latest          # 最新数据
-GET /api/momentum/{date}          # 指定日期
-GET /api/momentum/dates           # 可用日期列表
-GET /api/momentum/sectors/{name}  # 板块详情
+每天 17:00 (下午5点)
+    ↓
+1. 从Tushare获取最新A股数据
+    ↓
+2. 计算板块动量排名
+    ↓
+3. 计算一年新高个股
+    ↓
+4. 推送到GitHub
+    ↓
+5. GitHub Pages自动部署
+    ↓
+朋友们看到最新数据！
 ```
 
-### 一年新高
+## 文件结构
+
 ```
-GET /api/newhigh/latest           # 最新数据
-GET /api/newhigh/{date}           # 指定日期
-GET /api/newhigh/dates            # 可用日期列表
-GET /api/newhigh/sectors/{name}   # 板块详情
+3l-model/
+├── SKILL.md              # 本文件
+├── skill.json            # 版本信息
+├── 3l-model.sh           # 主入口脚本
+├── scripts/              # 实用脚本
+│   ├── setup-cron.sh
+│   ├── start-server.sh
+│   ├── update-data.sh
+│   ├── auto-update-and-push.sh
+│   └── deploy-to-github.sh
+└── assets/               # 项目代码
+    ├── backend/          # 后端代码
+    │   ├── api_server.py
+    │   ├── update_data.py
+    │   └── data/         # 数据文件
+    ├── momentum_real.html
+    ├── newhigh_final.html
+    └── index.html
 ```
 
-## 📝 数据说明
+## 依赖
 
-- **数据来源**: Tushare Pro（5000积分档）
-- **更新频率**: 每天下午5点（收盘后）
-- **数据保留**: 永久保存历史数据
-- **过滤规则**: 
-  - 剔除ST/*ST/退市股票
-  - 剔除上市不足20日的次新股
-  - 只保留交易日数据（自动过滤周末和节假日）
+- Python 3.10+
+- FastAPI
+- Tushare Pro API
+- Git
+- crontab (macOS/Linux)
 
-## 🤝 贡献指南
+## 配置
 
-1. Fork 本仓库
-2. 创建特性分支：`git checkout -b feature/xxx`
-3. 提交更改：`git commit -am 'Add xxx'`
-4. 推送分支：`git push origin feature/xxx`
-5. 提交 Pull Request
+### Tushare Token
 
-## 📄 许可证
+在 `assets/backend/update_data.py` 中配置：
+
+```python
+TUSHARE_TOKEN = "your-token-here"
+TUSHARE_API_URL = "http://tushare.nlink.vip"
+```
+
+## 注意事项
+
+1. **数据保留策略**：永久保存所有历史数据
+2. **自动跳过周末和法定节假日**
+3. **机构关注度使用市值+成交额作为代理指标**
+4. **所有数据均为真实行情数据，非模拟生成**
+5. **GitHub仓库只包含静态文件，核心代码和Token只在本地**
+
+## 更新日志
+
+### v1.0.6 (2026-03-10)
+
+- 🔧 修复动量页面日期选择器路径问题
+- 🔧 支持 GitHub Pages 子目录部署
+- 🔧 统一前后端路径检测逻辑
+
+### v1.0.5 (2026-03-10)
+
+- 🔧 修复一年新高筛选逻辑：移除 `0.999` 容差，只有收盘价 >= 250日最高价才算新高
+- 🔧 修复日期选择器：支持静态文件模式（GitHub Pages）和 API 模式（本地开发）
+- 🔧 修复动量页面：支持 GitHub Pages 静态文件部署
+- ✅ 数据已重新生成，现在只包含真正的新高股票
+
+### v1.0.4 (2026-03-09) - 稳定版本
+
+- 🔧 修复一年新高涨跌幅计算（使用 change/pre_close 正确计算）
+- 🔧 修复突破幅度计算逻辑
+- 🔧 修复 GitHub Pages 兼容性（静态托管自动使用 JSON 文件）
+- 🔧 修复前端字段兼容性（支持 ts_code 和 code）
+- ✅ 系统已稳定，明天自动更新将正常工作
+
+### v1.0.3 (2026-03-09)
+
+- 🔧 修复一年新高数据格式（改为前端期望的 sectors 数组格式）
+- 🔧 修复前端 API 端口配置（8001 → 8000）
+- 🔧 添加缺失依赖（uvicorn、fastapi）
+
+### v1.0.2 (2026-03-08)
+
+- 🎨 优化排名变动颜色（上升=红色，下降=绿色）
+- 📅 优化排名逻辑（使用Tushare真实交易日历）
+
+### v1.0.1 (2026-03-08)
+
+- ✉️ 添加邮件通知功能
+
+### v1.0.0 (2026-03-08)
+
+- 🎉 初始版本发布
+- ✅ 板块动量模型
+- ✅ 一年新高模型
+- ✅ 自动更新和部署
+- ✅ GitHub Pages集成
+
+## 许可证
 
 MIT License
 
-## 🙏 致谢
+## 作者
 
-- [Tushare](https://tushare.pro) - 提供股票数据
-- [FastAPI](https://fastapi.tiangolo.com) - 后端框架
-- [Tailwind CSS](https://tailwindcss.com) - 前端样式
+ClawX
 
 ---
 
-⚠️ **免责声明**: 本项目仅供学习研究使用，不构成任何投资建议。股市有风险，投资需谨慎。
+**3L 模型 v1.0.6 - 让股票分析更简单！** 📈

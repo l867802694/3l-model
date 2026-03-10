@@ -1,0 +1,58 @@
+{
+  "name": "3l-model",
+  "version": "1.0.6",
+  "description": "A股3L模型分析系统 v1.0.6 - 修复动量页面日期选择器路径问题",
+  "author": "ClawX",
+  "license": "MIT",
+  "commands": {
+    "start": "启动Web服务",
+    "update": "更新今天数据并推送",
+    "update-date": "更新指定日期数据",
+    "setup-cron": "设置每天17:00自动更新",
+    "status": "查看系统状态",
+    "version": "显示版本信息"
+  },
+  "entry": "3l-model.sh",
+  "triggers": [
+    "3L模型",
+    "3l模型",
+    "板块动量",
+    "一年新高",
+    "股票分析"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/l867802694/3l-model"
+  },
+  "homepage": "https://l867802694.github.io/3l-model/",
+  "changelog": {
+    "v1.0.0": {
+      "date": "2026-03-08",
+      "description": "初始版本发布"
+    },
+    "v1.0.1": {
+      "date": "2026-03-08",
+      "description": "添加邮件通知功能"
+    },
+    "v1.0.2": {
+      "date": "2026-03-08",
+      "description": "优化排名逻辑和排名变动颜色"
+    },
+    "v1.0.3": {
+      "date": "2026-03-09",
+      "description": "修复一年新高数据格式、前端API端口配置、添加缺失依赖（封板）"
+    },
+    "v1.0.4": {
+      "date": "2026-03-09",
+      "description": "修复一年新高涨跌幅/突破幅度计算，GitHub Pages静态JSON兼容性，前端字段兼容性"
+    },
+    "v1.0.5": {
+      "date": "2026-03-10",
+      "description": "修复一年新高筛选逻辑（移除0.999容差），修复日期选择器支持静态文件模式"
+    },
+    "v1.0.6": {
+      "date": "2026-03-10",
+      "description": "修复动量页面日期选择器路径问题，支持GitHub Pages子目录部署"
+    }
+  }
+}

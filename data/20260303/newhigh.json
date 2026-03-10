@@ -1,8 +1,8 @@
 {
   "trade_date": "20260303",
   "data_source": "Tushare Pro (真实数据)",
-  "market_strength": 0.87,
-  "total_stocks": 46,
+  "market_strength": 0.85,
+  "total_stocks": 45,
   "total_sectors": 14,
   "sectors": [
     {
@@ -503,8 +503,8 @@
     },
     {
       "sector_name": "水运",
-      "new_high_count": 5,
-      "stock_count": 5,
+      "new_high_count": 4,
+      "stock_count": 4,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
@@ -543,26 +543,6 @@
           "circ_mv": 1586.65,
           "amount": 7281.22,
           "turnover": 7281.22,
-          "institution_score": 10.0,
-          "sector": "水运",
-          "industry": "水运"
-        },
-        {
-          "code": "601919",
-          "name": "中远海控",
-          "close": 16.97,
-          "price": 16.97,
-          "high_250": 16.98,
-          "high_250d": 16.98,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.91,
-          "change": 9.91,
-          "break_through": -0.06,
-          "break_pct": -0.06,
-          "circ_mv": 2130.78,
-          "amount": 9229.01,
-          "turnover": 9229.01,
           "institution_score": 10.0,
           "sector": "水运",
           "industry": "水运"

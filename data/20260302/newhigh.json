@@ -1,9 +1,9 @@
 {
   "trade_date": "20260302",
   "data_source": "Tushare Pro (真实数据)",
-  "market_strength": 1.15,
-  "total_stocks": 61,
-  "total_sectors": 23,
+  "market_strength": 1.13,
+  "total_stocks": 60,
+  "total_sectors": 22,
   "sectors": [
     {
       "sector_name": "石油开采",
@@ -1266,34 +1266,6 @@
           "institution_score": 4.3,
           "sector": "煤炭开采",
           "industry": "煤炭开采"
-        }
-      ]
-    },
-    {
-      "sector_name": "化工机械",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "002353",
-          "name": "杰瑞股份",
-          "close": 124.99,
-          "price": 124.99,
-          "high_250": 125.0,
-          "high_250d": 125.0,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 6.58,
-          "change": 6.58,
-          "break_through": -0.01,
-          "break_pct": -0.01,
-          "circ_mv": 866.49,
-          "amount": 3928.98,
-          "turnover": 3928.98,
-          "institution_score": 10.0,
-          "sector": "化工机械",
-          "industry": "化工机械"
         }
       ]
     },

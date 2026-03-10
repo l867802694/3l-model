@@ -1,9 +1,9 @@
 {
   "trade_date": "20260306",
   "data_source": "Tushare Pro (真实数据)",
-  "market_strength": 0.51,
-  "total_stocks": 27,
-  "total_sectors": 18,
+  "market_strength": 0.47,
+  "total_stocks": 25,
+  "total_sectors": 16,
   "sectors": [
     {
       "sector_name": "电气设备",
@@ -326,34 +326,6 @@
       ]
     },
     {
-      "sector_name": "综合类",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "000833",
-          "name": "粤桂股份",
-          "close": 26.32,
-          "price": 26.32,
-          "high_250": 26.33,
-          "high_250d": 26.33,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.99,
-          "change": 9.99,
-          "break_through": -0.04,
-          "break_pct": -0.04,
-          "circ_mv": 119.41,
-          "amount": 1619.72,
-          "turnover": 1619.72,
-          "institution_score": 6.0,
-          "sector": "综合类",
-          "industry": "综合类"
-        }
-      ]
-    },
-    {
       "sector_name": "火力发电",
       "new_high_count": 1,
       "stock_count": 1,
@@ -546,34 +518,6 @@
           "institution_score": 3.93,
           "sector": "小金属",
           "industry": "小金属"
-        }
-      ]
-    },
-    {
-      "sector_name": "专用机械",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "300461",
-          "name": "田中精机",
-          "close": 61.25,
-          "price": 61.25,
-          "high_250": 61.27,
-          "high_250d": 61.27,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.47,
-          "change": 9.47,
-          "break_through": -0.03,
-          "break_pct": -0.03,
-          "circ_mv": 88.02,
-          "amount": 463.47,
-          "turnover": 463.47,
-          "institution_score": 2.45,
-          "sector": "专用机械",
-          "industry": "专用机械"
         }
       ]
     },

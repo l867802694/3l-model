@@ -265,9 +265,26 @@
         // GitHub Pages 使用静态 JSON 文件，本地使用 API
         const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
         const isFileProtocol = window.location.protocol === 'file:';
-        const API_BASE = (isLocalhost && !isFileProtocol)
-            ? 'http://localhost:8000' 
-            : './data';
+        const isGitHubPages = window.location.hostname.includes('github.io');
+        
+        // 计算数据基础路径
+        let DATA_BASE;
+        if (isLocalhost && !isFileProtocol) {
+            DATA_BASE = 'http://localhost:8000';
+        } else if (isGitHubPages) {
+            // GitHub Pages: 使用基于当前路径的绝对路径
+            const pathParts = window.location.pathname.split('/');
+            // 移除最后一个部分（如果是HTML文件）
+            if (pathParts[pathParts.length - 1].endsWith('.html')) {
+                pathParts.pop();
+            }
+            const basePath = pathParts.join('/');
+            DATA_BASE = basePath + (basePath.endsWith('/') ? 'data' : '/data');
+        } else {
+            // 本地文件或其他情况
+            DATA_BASE = './data';
+        }
+        
         let momentumData = [];
         let currentFilter = 'all';
         let currentDate = null;  // 当前选中的日期
@@ -293,9 +310,9 @@
         // 从API或静态文件获取可用日期列表
         async function fetchAvailableDates() {
             try {
-                // GitHub Pages 使用静态文件
-                if (API_BASE === './data') {
-                    const response = await fetch('./dates.json');
+                if (isLocalhost && !isFileProtocol) {
+                    // 本地使用 API
+                    const response = await fetch(`${DATA_BASE}/api/momentum/dates`);
                     if (response.ok) {
                         const result = await response.json();
                         availableDates = result.dates || [];
@@ -303,8 +320,9 @@
                         return availableDates;
                     }
                 } else {
-                    // 本地使用 API
-                    const response = await fetch(`${API_BASE}/api/momentum/dates`);
+                    // 静态文件模式（GitHub Pages 或本地文件）
+                    const datesUrl = isGitHubPages ? `${DATA_BASE}/dates.json` : './data/dates.json';
+                    const response = await fetch(datesUrl);
                     if (response.ok) {
                         const result = await response.json();
                         availableDates = result.dates || [];
@@ -379,16 +397,22 @@
             
             try {
                 let url;
-                if (API_BASE === './data') {
-                    // GitHub Pages 使用静态文件路径
-                    url = targetDate 
-                        ? `${API_BASE}/${targetDate}/momentum.json`
-                        : `${API_BASE}/momentum_latest.json`;
-                } else {
+                if (isLocalhost && !isFileProtocol) {
                     // 本地使用 API
                     url = targetDate 
-                        ? `${API_BASE}/api/momentum/${targetDate}`
-                        : `${API_BASE}/api/momentum/latest`;
+                        ? `${DATA_BASE}/api/momentum/${targetDate}`
+                        : `${DATA_BASE}/api/momentum/latest`;
+                } else {
+                    // 静态文件模式（GitHub Pages 或本地文件）
+                    if (isGitHubPages) {
+                        url = targetDate 
+                            ? `${DATA_BASE}/${targetDate}/momentum.json`
+                            : `${DATA_BASE}/momentum_latest.json`;
+                    } else {
+                        url = targetDate 
+                            ? `./data/${targetDate}/momentum.json`
+                            : `./data/momentum_latest.json`;
+                    }
                 }
                 
                 const response = await fetch(url);
@@ -507,16 +531,16 @@
             // 加载个股数据
             try {
                 let stocks = [];
-                if (API_BASE === './data') {
-                    // 静态文件模式：数据已在 sector.stocks 中
-                    stocks = sector.stocks || [];
-                } else {
+                if (isLocalhost && !isFileProtocol) {
                     // API 模式：从后端获取
-                    const response = await fetch(`${API_BASE}/api/momentum/sectors/${encodeURIComponent(sectorName)}`);
+                    const response = await fetch(`${DATA_BASE}/api/momentum/sectors/${encodeURIComponent(sectorName)}`);
                     if (response.ok) {
                         const result = await response.json();
                         stocks = result.stocks || [];
                     }
+                } else {
+                    // 静态文件模式：数据已在 sector.stocks 中
+                    stocks = sector.stocks || [];
                 }
                 renderModalStocks(stocks);
             } catch (error) {

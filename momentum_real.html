@@ -310,9 +310,11 @@
         // 从API或静态文件获取可用日期列表
         async function fetchAvailableDates() {
             try {
+                // 添加时间戳防止缓存
+                const cacheBuster = `?_=${Date.now()}`;
                 if (isLocalhost && !isFileProtocol) {
                     // 本地使用 API
-                    const response = await fetch(`${DATA_BASE}/api/momentum/dates`);
+                    const response = await fetch(`${DATA_BASE}/api/momentum/dates${cacheBuster}`);
                     if (response.ok) {
                         const result = await response.json();
                         availableDates = result.dates || [];
@@ -321,7 +323,7 @@
                     }
                 } else {
                     // 静态文件模式（GitHub Pages 或本地文件）
-                    const datesUrl = isGitHubPages ? `${DATA_BASE}/dates.json` : './data/dates.json';
+                    const datesUrl = isGitHubPages ? `${DATA_BASE}/dates.json${cacheBuster}` : `./data/dates.json${cacheBuster}`;
                     const response = await fetch(datesUrl);
                     if (response.ok) {
                         const result = await response.json();
@@ -396,22 +398,24 @@
             const targetDate = date || getSelectedDate();
             
             try {
+                // 添加时间戳防止缓存
+                const cacheBuster = `?_=${Date.now()}`;
                 let url;
                 if (isLocalhost && !isFileProtocol) {
                     // 本地使用 API
                     url = targetDate 
-                        ? `${DATA_BASE}/api/momentum/${targetDate}`
-                        : `${DATA_BASE}/api/momentum/latest`;
+                        ? `${DATA_BASE}/api/momentum/${targetDate}${cacheBuster}`
+                        : `${DATA_BASE}/api/momentum/latest${cacheBuster}`;
                 } else {
                     // 静态文件模式（GitHub Pages 或本地文件）
                     if (isGitHubPages) {
                         url = targetDate 
-                            ? `${DATA_BASE}/${targetDate}/momentum.json`
-                            : `${DATA_BASE}/momentum_latest.json`;
+                            ? `${DATA_BASE}/${targetDate}/momentum.json${cacheBuster}`
+                            : `${DATA_BASE}/momentum_latest.json${cacheBuster}`;
                     } else {
                         url = targetDate 
-                            ? `./data/${targetDate}/momentum.json`
-                            : `./data/momentum_latest.json`;
+                            ? `./data/${targetDate}/momentum.json${cacheBuster}`
+                            : `./data/momentum_latest.json${cacheBuster}`;
                     }
                 }
                 

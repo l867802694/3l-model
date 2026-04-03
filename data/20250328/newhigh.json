@@ -2,9 +2,9 @@
   "trade_date": "20250328",
   "data_source": "Tushare Pro (真实数据)",
   "classification": "申万2021二级行业",
-  "market_strength": 0.13,
-  "total_stocks": 7,
-  "total_sectors": 7,
+  "market_strength": 0.12,
+  "total_stocks": 6,
+  "total_sectors": 6,
   "sectors": [
     {
       "sector_name": "通用设备",
@@ -143,34 +143,6 @@
           "institution_score": 2.31,
           "sector": "化学制药",
           "industry": "化学制药"
-        }
-      ]
-    },
-    {
-      "sector_name": "其他",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603579",
-          "name": "荣泰健康",
-          "close": 24.71,
-          "price": 24.71,
-          "high_250": 24.71,
-          "high_250d": 24.71,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.02,
-          "change": 10.02,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 43.83,
-          "amount": 216.59,
-          "turnover": 216.59,
-          "institution_score": 1.55,
-          "sector": "其他",
-          "industry": "其他"
         }
       ]
     },

@@ -1,0 +1,490 @@
+{
+  "trade_date": "20250317",
+  "data_source": "Tushare Pro (真实数据)",
+  "classification": "申万2021二级行业",
+  "market_strength": 0.35,
+  "total_stocks": 18,
+  "total_sectors": 15,
+  "sectors": [
+    {
+      "sector_name": "其他",
+      "new_high_count": 3,
+      "stock_count": 3,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "920145",
+          "name": "恒合股份",
+          "close": 23.63,
+          "price": 23.63,
+          "high_250": 23.63,
+          "high_250d": 23.63,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 29.98,
+          "change": 29.98,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 10.59,
+          "amount": 250.05,
+          "turnover": 250.05,
+          "institution_score": 1.01,
+          "sector": "其他",
+          "industry": "其他"
+        },
+        {
+          "code": "920821",
+          "name": "则成电子",
+          "close": 50.98,
+          "price": 50.98,
+          "high_250": 50.98,
+          "high_250d": 50.98,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 6.52,
+          "change": 6.52,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 25.94,
+          "amount": 370.04,
+          "turnover": 370.04,
+          "institution_score": 1.6,
+          "sector": "其他",
+          "industry": "其他"
+        },
+        {
+          "code": "920810",
+          "name": "春光智能",
+          "close": 29.1,
+          "price": 29.1,
+          "high_250": 29.1,
+          "high_250d": 29.1,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 29.97,
+          "change": 29.97,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 12.97,
+          "amount": 265.13,
+          "turnover": 265.13,
+          "institution_score": 1.09,
+          "sector": "其他",
+          "industry": "其他"
+        }
+      ]
+    },
+    {
+      "sector_name": "环境治理",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002034",
+          "name": "旺能环境",
+          "close": 19.32,
+          "price": 19.32,
+          "high_250": 19.32,
+          "high_250d": 19.32,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 81.93,
+          "amount": 334.1,
+          "turnover": 334.1,
+          "institution_score": 2.07,
+          "sector": "环境治理",
+          "industry": "环境治理"
+        },
+        {
+          "code": "301109",
+          "name": "军信股份",
+          "close": 22.52,
+          "price": 22.52,
+          "high_250": 22.52,
+          "high_250d": 22.52,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 19.98,
+          "change": 19.98,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 22.22,
+          "amount": 550.26,
+          "turnover": 550.26,
+          "institution_score": 2.21,
+          "sector": "环境治理",
+          "industry": "环境治理"
+        }
+      ]
+    },
+    {
+      "sector_name": "IT服务Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000815",
+          "name": "美利云",
+          "close": 15.88,
+          "price": 15.88,
+          "high_250": 15.88,
+          "high_250d": 15.88,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.97,
+          "change": 9.97,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 110.41,
+          "amount": 2228.08,
+          "turnover": 2228.08,
+          "institution_score": 6.16,
+          "sector": "IT服务Ⅱ",
+          "industry": "IT服务Ⅱ"
+        }
+      ]
+    },
+    {
+      "sector_name": "消费电子",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600363",
+          "name": "联创光电",
+          "close": 66.36,
+          "price": 66.36,
+          "high_250": 66.36,
+          "high_250d": 66.36,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 300.95,
+          "amount": 1822.49,
+          "turnover": 1822.49,
+          "institution_score": 8.17,
+          "sector": "消费电子",
+          "industry": "消费电子"
+        }
+      ]
+    },
+    {
+      "sector_name": "纺织制造",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002042",
+          "name": "华孚时尚",
+          "close": 7.3,
+          "price": 7.3,
+          "high_250": 7.3,
+          "high_250d": 7.3,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.94,
+          "change": 9.94,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 124.15,
+          "amount": 765.05,
+          "turnover": 765.05,
+          "institution_score": 4.06,
+          "sector": "纺织制造",
+          "industry": "纺织制造"
+        }
+      ]
+    },
+    {
+      "sector_name": "通用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002164",
+          "name": "宁波东力",
+          "close": 8.43,
+          "price": 8.43,
+          "high_250": 8.43,
+          "high_250d": 8.43,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.05,
+          "change": 10.05,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 40.45,
+          "amount": 435.18,
+          "turnover": 435.18,
+          "institution_score": 1.99,
+          "sector": "通用设备",
+          "industry": "通用设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "家居用品",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002162",
+          "name": "悦心健康",
+          "close": 5.59,
+          "price": 5.59,
+          "high_250": 5.59,
+          "high_250d": 5.59,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.04,
+          "change": 10.04,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 51.47,
+          "amount": 381.23,
+          "turnover": 381.23,
+          "institution_score": 1.91,
+          "sector": "家居用品",
+          "industry": "家居用品"
+        }
+      ]
+    },
+    {
+      "sector_name": "专用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002278",
+          "name": "神开股份",
+          "close": 7.71,
+          "price": 7.71,
+          "high_250": 7.71,
+          "high_250d": 7.71,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 25.77,
+          "amount": 314.87,
+          "turnover": 314.87,
+          "institution_score": 1.4,
+          "sector": "专用设备",
+          "industry": "专用设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "通信设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300353",
+          "name": "东土科技",
+          "close": 19.98,
+          "price": 19.98,
+          "high_250": 19.98,
+          "high_250d": 19.98,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 104.34,
+          "amount": 2259.55,
+          "turnover": 2259.55,
+          "institution_score": 6.1,
+          "sector": "通信设备",
+          "industry": "通信设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "油服工程",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300191",
+          "name": "潜能恒信",
+          "close": 19.06,
+          "price": 19.06,
+          "high_250": 19.06,
+          "high_250d": 19.06,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.03,
+          "change": 20.03,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 42.16,
+          "amount": 687.24,
+          "turnover": 687.24,
+          "institution_score": 2.92,
+          "sector": "油服工程",
+          "industry": "油服工程"
+        }
+      ]
+    },
+    {
+      "sector_name": "饰品",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002574",
+          "name": "明牌珠宝",
+          "close": 7.88,
+          "price": 7.88,
+          "high_250": 7.88,
+          "high_250d": 7.88,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.06,
+          "change": 10.06,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 41.61,
+          "amount": 1104.07,
+          "turnover": 1104.07,
+          "institution_score": 4.41,
+          "sector": "饰品",
+          "industry": "饰品"
+        }
+      ]
+    },
+    {
+      "sector_name": "影视院线",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002905",
+          "name": "金逸影视",
+          "close": 10.84,
+          "price": 10.84,
+          "high_250": 10.84,
+          "high_250d": 10.84,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.05,
+          "change": 10.05,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 37.88,
+          "amount": 672.78,
+          "turnover": 672.78,
+          "institution_score": 2.82,
+          "sector": "影视院线",
+          "industry": "影视院线"
+        }
+      ]
+    },
+    {
+      "sector_name": "汽车零部件",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603788",
+          "name": "宁波高发",
+          "close": 21.6,
+          "price": 21.6,
+          "high_250": 21.6,
+          "high_250d": 21.6,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.98,
+          "change": 9.98,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 48.18,
+          "amount": 441.9,
+          "turnover": 441.9,
+          "institution_score": 2.1,
+          "sector": "汽车零部件",
+          "industry": "汽车零部件"
+        }
+      ]
+    },
+    {
+      "sector_name": "工业金属",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002988",
+          "name": "豪美新材",
+          "close": 25.52,
+          "price": 25.52,
+          "high_250": 25.52,
+          "high_250d": 25.52,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 63.25,
+          "amount": 300.51,
+          "turnover": 300.51,
+          "institution_score": 1.75,
+          "sector": "工业金属",
+          "industry": "工业金属"
+        }
+      ]
+    },
+    {
+      "sector_name": "计算机设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002990",
+          "name": "盛视科技",
+          "close": 34.41,
+          "price": 34.41,
+          "high_250": 34.41,
+          "high_250d": 34.41,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 46.14,
+          "amount": 389.83,
+          "turnover": 389.83,
+          "institution_score": 1.89,
+          "sector": "计算机设备",
+          "industry": "计算机设备"
+        }
+      ]
+    }
+  ]
+}

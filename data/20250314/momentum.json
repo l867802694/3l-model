@@ -1,0 +1,6402 @@
+{
+  "trade_date": "20250314",
+  "data_source": "Tushare Pro (真实数据)",
+  "classification": "申万2021二级行业",
+  "total_sectors": 85,
+  "total_stocks": 473,
+  "data": [
+    {
+      "rank": 1,
+      "sector_name": "汽车零部件",
+      "momentum_score": 11.36,
+      "listed_count": 50,
+      "total_count": 220,
+      "listed_ratio": 22.7,
+      "avg_return_20d": 32.38,
+      "rank_change": 0,
+      "is_main_line": true,
+      "is_warning": true,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300611",
+          "name": "美力科技",
+          "return_20d": 129.66,
+          "close_price": 28.96,
+          "rank_in_market": 4,
+          "circ_mv": 42.95,
+          "amount": 1275.77,
+          "institution_score": 4.91
+        },
+        {
+          "rank": 2,
+          "code": "000678",
+          "name": "襄阳轴承",
+          "return_20d": 89.57,
+          "close_price": 12.91,
+          "rank_in_market": 13,
+          "circ_mv": 59.34,
+          "amount": 1962.06,
+          "institution_score": 5.63
+        },
+        {
+          "rank": 3,
+          "code": "301225",
+          "name": "恒勃股份",
+          "return_20d": 75.63,
+          "close_price": 49.14,
+          "rank_in_market": 22,
+          "circ_mv": 14.83,
+          "amount": 483.97,
+          "institution_score": 1.85
+        },
+        {
+          "rank": 4,
+          "code": "300695",
+          "name": "兆丰股份",
+          "return_20d": 55.68,
+          "close_price": 81.0,
+          "rank_in_market": 53,
+          "circ_mv": 57.45,
+          "amount": 565.73,
+          "institution_score": 2.59
+        },
+        {
+          "rank": 5,
+          "code": "000880",
+          "name": "潍柴重机",
+          "return_20d": 55.16,
+          "close_price": 38.2,
+          "rank_in_market": 56,
+          "circ_mv": 61.95,
+          "amount": 1714.01,
+          "institution_score": 5.66
+        },
+        {
+          "rank": 6,
+          "code": "002283",
+          "name": "天润工业",
+          "return_20d": 40.57,
+          "close_price": 7.9,
+          "rank_in_market": 112,
+          "circ_mv": 79.28,
+          "amount": 837.76,
+          "institution_score": 3.77
+        },
+        {
+          "rank": 7,
+          "code": "603121",
+          "name": "华培动力",
+          "return_20d": 39.53,
+          "close_price": 18.99,
+          "rank_in_market": 119,
+          "circ_mv": 64.29,
+          "amount": 270.22,
+          "institution_score": 1.63
+        },
+        {
+          "rank": 8,
+          "code": "300652",
+          "name": "雷迪克",
+          "return_20d": 38.33,
+          "close_price": 52.37,
+          "rank_in_market": 128,
+          "circ_mv": 48.23,
+          "amount": 415.65,
+          "institution_score": 1.96
+        },
+        {
+          "rank": 9,
+          "code": "600841",
+          "name": "动力新科",
+          "return_20d": 37.77,
+          "close_price": 6.93,
+          "rank_in_market": 132,
+          "circ_mv": 72.28,
+          "amount": 460.53,
+          "institution_score": 2.38
+        },
+        {
+          "rank": 10,
+          "code": "300100",
+          "name": "双林股份",
+          "return_20d": 37.37,
+          "close_price": 50.99,
+          "rank_in_market": 133,
+          "circ_mv": 197.36,
+          "amount": 2488.66,
+          "institution_score": 7.09
+        },
+        {
+          "rank": 11,
+          "code": "605088",
+          "name": "冠盛股份",
+          "return_20d": 33.58,
+          "close_price": 40.26,
+          "rank_in_market": 171,
+          "circ_mv": 71.22,
+          "amount": 335.87,
+          "institution_score": 1.93
+        },
+        {
+          "rank": 12,
+          "code": "300507",
+          "name": "苏奥传感",
+          "return_20d": 33.38,
+          "close_price": 9.71,
+          "rank_in_market": 178,
+          "circ_mv": 75.01,
+          "amount": 1826.42,
+          "institution_score": 5.79
+        },
+        {
+          "rank": 13,
+          "code": "000887",
+          "name": "中鼎股份",
+          "return_20d": 32.66,
+          "close_price": 22.3,
+          "rank_in_market": 186,
+          "circ_mv": 293.1,
+          "amount": 2797.8,
+          "institution_score": 8.11
+        },
+        {
+          "rank": 14,
+          "code": "603788",
+          "name": "宁波高发",
+          "return_20d": 32.52,
+          "close_price": 19.64,
+          "rank_in_market": 192,
+          "circ_mv": 43.81,
+          "amount": 405.26,
+          "institution_score": 1.88
+        },
+        {
+          "rank": 15,
+          "code": "301020",
+          "name": "密封科技",
+          "return_20d": 32.09,
+          "close_price": 25.4,
+          "rank_in_market": 199,
+          "circ_mv": 37.19,
+          "amount": 341.66,
+          "institution_score": 1.59
+        },
+        {
+          "rank": 16,
+          "code": "300258",
+          "name": "精锻科技",
+          "return_20d": 31.08,
+          "close_price": 14.76,
+          "rank_in_market": 215,
+          "circ_mv": 68.87,
+          "amount": 961.23,
+          "institution_score": 4.09
+        },
+        {
+          "rank": 17,
+          "code": "002048",
+          "name": "宁波华翔",
+          "return_20d": 30.85,
+          "close_price": 16.54,
+          "rank_in_market": 221,
+          "circ_mv": 117.4,
+          "amount": 618.48,
+          "institution_score": 3.41
+        },
+        {
+          "rank": 18,
+          "code": "603767",
+          "name": "中马传动",
+          "return_20d": 30.59,
+          "close_price": 15.71,
+          "rank_in_market": 224,
+          "circ_mv": 48.49,
+          "amount": 410.73,
+          "institution_score": 1.95
+        },
+        {
+          "rank": 19,
+          "code": "300473",
+          "name": "德尔股份",
+          "return_20d": 30.4,
+          "close_price": 30.97,
+          "rank_in_market": 230,
+          "circ_mv": 46.47,
+          "amount": 391.02,
+          "institution_score": 1.86
+        },
+        {
+          "rank": 20,
+          "code": "605319",
+          "name": "无锡振华",
+          "return_20d": 30.08,
+          "close_price": 33.9,
+          "rank_in_market": 237,
+          "circ_mv": 72.44,
+          "amount": 217.31,
+          "institution_score": 1.53
+        },
+        {
+          "rank": 21,
+          "code": "301005",
+          "name": "超捷股份",
+          "return_20d": 29.65,
+          "close_price": 38.44,
+          "rank_in_market": 246,
+          "circ_mv": 50.88,
+          "amount": 755.12,
+          "institution_score": 3.18
+        },
+        {
+          "rank": 22,
+          "code": "002488",
+          "name": "金固股份",
+          "return_20d": 29.49,
+          "close_price": 13.83,
+          "rank_in_market": 251,
+          "circ_mv": 126.29,
+          "amount": 331.73,
+          "institution_score": 2.5
+        },
+        {
+          "rank": 23,
+          "code": "000581",
+          "name": "威孚高科",
+          "return_20d": 29.19,
+          "close_price": 23.28,
+          "rank_in_market": 255,
+          "circ_mv": 191.78,
+          "amount": 1941.75,
+          "institution_score": 7.03
+        },
+        {
+          "rank": 24,
+          "code": "002765",
+          "name": "蓝黛科技",
+          "return_20d": 28.69,
+          "close_price": 13.68,
+          "rank_in_market": 264,
+          "circ_mv": 81.52,
+          "amount": 977.79,
+          "institution_score": 4.28
+        },
+        {
+          "rank": 25,
+          "code": "300745",
+          "name": "欣锐科技",
+          "return_20d": 28.31,
+          "close_price": 23.07,
+          "rank_in_market": 271,
+          "circ_mv": 32.6,
+          "amount": 342.09,
+          "institution_score": 1.54
+        },
+        {
+          "rank": 26,
+          "code": "300680",
+          "name": "隆盛科技",
+          "return_20d": 28.06,
+          "close_price": 43.67,
+          "rank_in_market": 275,
+          "circ_mv": 75.35,
+          "amount": 1373.31,
+          "institution_score": 5.6
+        },
+        {
+          "rank": 27,
+          "code": "603166",
+          "name": "福达股份",
+          "return_20d": 26.47,
+          "close_price": 12.9,
+          "rank_in_market": 307,
+          "circ_mv": 82.43,
+          "amount": 679.16,
+          "institution_score": 3.25
+        },
+        {
+          "rank": 28,
+          "code": "600698",
+          "name": "湖南天雁",
+          "return_20d": 26.43,
+          "close_price": 7.27,
+          "rank_in_market": 309,
+          "circ_mv": 60.37,
+          "amount": 847.64,
+          "institution_score": 3.6
+        },
+        {
+          "rank": 29,
+          "code": "002126",
+          "name": "银轮股份",
+          "return_20d": 26.17,
+          "close_price": 29.94,
+          "rank_in_market": 316,
+          "circ_mv": 234.74,
+          "amount": 1952.37,
+          "institution_score": 7.49
+        },
+        {
+          "rank": 30,
+          "code": "000700",
+          "name": "模塑科技",
+          "return_20d": 25.33,
+          "close_price": 8.61,
+          "rank_in_market": 337,
+          "circ_mv": 79.04,
+          "amount": 939.08,
+          "institution_score": 4.12
+        },
+        {
+          "rank": 31,
+          "code": "603758",
+          "name": "秦安股份",
+          "return_20d": 25.14,
+          "close_price": 13.59,
+          "rank_in_market": 340,
+          "circ_mv": 59.63,
+          "amount": 258.66,
+          "institution_score": 1.54
+        },
+        {
+          "rank": 32,
+          "code": "603286",
+          "name": "日盈电子",
+          "return_20d": 25.07,
+          "close_price": 33.58,
+          "rank_in_market": 343,
+          "circ_mv": 38.38,
+          "amount": 370.37,
+          "institution_score": 1.7
+        },
+        {
+          "rank": 33,
+          "code": "605228",
+          "name": "神通科技",
+          "return_20d": 24.98,
+          "close_price": 13.11,
+          "rank_in_market": 346,
+          "circ_mv": 55.46,
+          "amount": 304.42,
+          "institution_score": 1.65
+        },
+        {
+          "rank": 34,
+          "code": "688612",
+          "name": "威迈斯",
+          "return_20d": 24.88,
+          "close_price": 31.12,
+          "rank_in_market": 348,
+          "circ_mv": 79.02,
+          "amount": 147.48,
+          "institution_score": 1.35
+        },
+        {
+          "rank": 35,
+          "code": "603319",
+          "name": "美湖股份",
+          "return_20d": 24.85,
+          "close_price": 39.69,
+          "rank_in_market": 349,
+          "circ_mv": 91.46,
+          "amount": 951.28,
+          "institution_score": 4.29
+        },
+        {
+          "rank": 36,
+          "code": "002434",
+          "name": "万里扬",
+          "return_20d": 23.66,
+          "close_price": 8.1,
+          "rank_in_market": 387,
+          "circ_mv": 106.22,
+          "amount": 460.08,
+          "institution_score": 2.73
+        },
+        {
+          "rank": 37,
+          "code": "001282",
+          "name": "三联锻造",
+          "return_20d": 21.92,
+          "close_price": 30.15,
+          "rank_in_market": 439,
+          "circ_mv": 16.83,
+          "amount": 271.64,
+          "institution_score": 1.13
+        },
+        {
+          "rank": 38,
+          "code": "002101",
+          "name": "广东鸿图",
+          "return_20d": 21.8,
+          "close_price": 14.58,
+          "rank_in_market": 444,
+          "circ_mv": 96.55,
+          "amount": 326.26,
+          "institution_score": 2.16
+        },
+        {
+          "rank": 39,
+          "code": "000570",
+          "name": "苏常柴Ａ",
+          "return_20d": 21.55,
+          "close_price": 6.43,
+          "rank_in_market": 453,
+          "circ_mv": 35.73,
+          "amount": 652.65,
+          "institution_score": 2.66
+        },
+        {
+          "rank": 40,
+          "code": "002937",
+          "name": "兴瑞科技",
+          "return_20d": 21.06,
+          "close_price": 22.19,
+          "rank_in_market": 475,
+          "circ_mv": 65.86,
+          "amount": 157.43,
+          "institution_score": 1.25
+        },
+        {
+          "rank": 41,
+          "code": "002921",
+          "name": "联诚精密",
+          "return_20d": 20.9,
+          "close_price": 15.27,
+          "rank_in_market": 484,
+          "circ_mv": 16.86,
+          "amount": 514.04,
+          "institution_score": 1.98
+        },
+        {
+          "rank": 42,
+          "code": "600218",
+          "name": "全柴动力",
+          "return_20d": 20.15,
+          "close_price": 9.84,
+          "rank_in_market": 524,
+          "circ_mv": 42.86,
+          "amount": 482.73,
+          "institution_score": 2.14
+        },
+        {
+          "rank": 43,
+          "code": "603950",
+          "name": "长源东谷",
+          "return_20d": 19.86,
+          "close_price": 26.13,
+          "rank_in_market": 531,
+          "circ_mv": 84.7,
+          "amount": 270.74,
+          "institution_score": 1.84
+        },
+        {
+          "rank": 44,
+          "code": "300428",
+          "name": "立中集团",
+          "return_20d": 19.46,
+          "close_price": 20.01,
+          "rank_in_market": 554,
+          "circ_mv": 110.34,
+          "amount": 265.89,
+          "institution_score": 2.1
+        },
+        {
+          "rank": 45,
+          "code": "300926",
+          "name": "博俊科技",
+          "return_20d": 19.19,
+          "close_price": 29.25,
+          "rank_in_market": 566,
+          "circ_mv": 82.8,
+          "amount": 162.63,
+          "institution_score": 1.45
+        },
+        {
+          "rank": 46,
+          "code": "605133",
+          "name": "嵘泰股份",
+          "return_20d": 18.83,
+          "close_price": 33.58,
+          "rank_in_market": 582,
+          "circ_mv": 62.1,
+          "amount": 284.8,
+          "institution_score": 1.65
+        },
+        {
+          "rank": 47,
+          "code": "301007",
+          "name": "德迈仕",
+          "return_20d": 18.81,
+          "close_price": 24.95,
+          "rank_in_market": 584,
+          "circ_mv": 37.5,
+          "amount": 422.01,
+          "institution_score": 1.87
+        },
+        {
+          "rank": 48,
+          "code": "300580",
+          "name": "贝斯特",
+          "return_20d": 17.66,
+          "close_price": 32.92,
+          "rank_in_market": 635,
+          "circ_mv": 154.99,
+          "amount": 718.58,
+          "institution_score": 4.15
+        },
+        {
+          "rank": 49,
+          "code": "002536",
+          "name": "飞龙股份",
+          "return_20d": 17.51,
+          "close_price": 16.98,
+          "rank_in_market": 641,
+          "circ_mv": 91.1,
+          "amount": 366.61,
+          "institution_score": 2.25
+        },
+        {
+          "rank": 50,
+          "code": "301550",
+          "name": "斯菱智驱",
+          "return_20d": 17.24,
+          "close_price": 127.01,
+          "rank_in_market": 656,
+          "circ_mv": 69.77,
+          "amount": 806.51,
+          "institution_score": 3.56
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "sector_name": "其他",
+      "momentum_score": 9.22,
+      "listed_count": 51,
+      "total_count": 282,
+      "listed_ratio": 18.1,
+      "avg_return_20d": 46.26,
+      "rank_change": 1,
+      "is_main_line": true,
+      "is_warning": true,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "920002",
+          "name": "万达轴承",
+          "return_20d": 171.1,
+          "close_price": 237.08,
+          "rank_in_market": 1,
+          "circ_mv": 13.63,
+          "amount": 482.56,
+          "institution_score": 1.83
+        },
+        {
+          "rank": 2,
+          "code": "920833",
+          "name": "美心翼申",
+          "return_20d": 133.08,
+          "close_price": 31.0,
+          "rank_in_market": 2,
+          "circ_mv": 9.84,
+          "amount": 636.19,
+          "institution_score": 2.33
+        },
+        {
+          "rank": 3,
+          "code": "920116",
+          "name": "星图测控",
+          "return_20d": 97.53,
+          "close_price": 114.59,
+          "rank_in_market": 9,
+          "circ_mv": 29.94,
+          "amount": 1110.06,
+          "institution_score": 4.2
+        },
+        {
+          "rank": 4,
+          "code": "920130",
+          "name": "立方控股",
+          "return_20d": 92.79,
+          "close_price": 42.49,
+          "rank_in_market": 11,
+          "circ_mv": 23.77,
+          "amount": 637.77,
+          "institution_score": 2.48
+        },
+        {
+          "rank": 5,
+          "code": "920010",
+          "name": "凯添燃气",
+          "return_20d": 87.18,
+          "close_price": 17.37,
+          "rank_in_market": 14,
+          "circ_mv": 30.17,
+          "amount": 489.55,
+          "institution_score": 2.03
+        },
+        {
+          "rank": 6,
+          "code": "920634",
+          "name": "新威凌",
+          "return_20d": 81.5,
+          "close_price": 34.43,
+          "rank_in_market": 16,
+          "circ_mv": 11.29,
+          "amount": 419.43,
+          "institution_score": 1.59
+        },
+        {
+          "rank": 7,
+          "code": "920689",
+          "name": "克莱特",
+          "return_20d": 77.15,
+          "close_price": 44.96,
+          "rank_in_market": 20,
+          "circ_mv": 16.73,
+          "amount": 645.04,
+          "institution_score": 2.43
+        },
+        {
+          "rank": 8,
+          "code": "920570",
+          "name": "坤博精工",
+          "return_20d": 73.08,
+          "close_price": 58.9,
+          "rank_in_market": 23,
+          "circ_mv": 13.19,
+          "amount": 608.94,
+          "institution_score": 2.27
+        },
+        {
+          "rank": 9,
+          "code": "920837",
+          "name": "华原股份",
+          "return_20d": 71.91,
+          "close_price": 21.11,
+          "rank_in_market": 25,
+          "circ_mv": 28.88,
+          "amount": 417.14,
+          "institution_score": 1.76
+        },
+        {
+          "rank": 10,
+          "code": "920553",
+          "name": "凯腾精工",
+          "return_20d": 70.88,
+          "close_price": 14.2,
+          "rank_in_market": 26,
+          "circ_mv": 13.04,
+          "amount": 444.78,
+          "institution_score": 1.69
+        },
+        {
+          "rank": 11,
+          "code": "920579",
+          "name": "机科股份",
+          "return_20d": 67.86,
+          "close_price": 37.4,
+          "rank_in_market": 32,
+          "circ_mv": 16.67,
+          "amount": 535.65,
+          "institution_score": 2.05
+        },
+        {
+          "rank": 12,
+          "code": "920082",
+          "name": "方正阀门",
+          "return_20d": 59.93,
+          "close_price": 21.91,
+          "rank_in_market": 38,
+          "circ_mv": 7.11,
+          "amount": 388.58,
+          "institution_score": 1.43
+        },
+        {
+          "rank": 13,
+          "code": "300344",
+          "name": "立方退",
+          "return_20d": 59.37,
+          "close_price": 14.28,
+          "rank_in_market": 40,
+          "circ_mv": 91.28,
+          "amount": 2583.53,
+          "institution_score": 5.97
+        },
+        {
+          "rank": 14,
+          "code": "920008",
+          "name": "成电光信",
+          "return_20d": 55.97,
+          "close_price": 50.19,
+          "rank_in_market": 51,
+          "circ_mv": 15.57,
+          "amount": 433.69,
+          "institution_score": 1.68
+        },
+        {
+          "rank": 15,
+          "code": "920284",
+          "name": "灵鸽科技",
+          "return_20d": 55.06,
+          "close_price": 25.74,
+          "rank_in_market": 58,
+          "circ_mv": 16.99,
+          "amount": 291.18,
+          "institution_score": 1.2
+        },
+        {
+          "rank": 16,
+          "code": "920418",
+          "name": "苏轴股份",
+          "return_20d": 52.63,
+          "close_price": 42.05,
+          "rank_in_market": 69,
+          "circ_mv": 54.66,
+          "amount": 279.28,
+          "institution_score": 1.56
+        },
+        {
+          "rank": 17,
+          "code": "920108",
+          "name": "宏海科技",
+          "return_20d": 51.03,
+          "close_price": 28.5,
+          "rank_in_market": 73,
+          "circ_mv": 6.64,
+          "amount": 283.86,
+          "institution_score": 1.06
+        },
+        {
+          "rank": 18,
+          "code": "920171",
+          "name": "志晟信息",
+          "return_20d": 50.19,
+          "close_price": 38.87,
+          "rank_in_market": 78,
+          "circ_mv": 25.63,
+          "amount": 881.87,
+          "institution_score": 3.35
+        },
+        {
+          "rank": 19,
+          "code": "920576",
+          "name": "天力复合",
+          "return_20d": 45.34,
+          "close_price": 33.5,
+          "rank_in_market": 94,
+          "circ_mv": 35.89,
+          "amount": 353.28,
+          "institution_score": 1.61
+        },
+        {
+          "rank": 20,
+          "code": "920786",
+          "name": "骑士乳业",
+          "return_20d": 45.06,
+          "close_price": 10.72,
+          "rank_in_market": 96,
+          "circ_mv": 11.74,
+          "amount": 386.3,
+          "institution_score": 1.47
+        },
+        {
+          "rank": 21,
+          "code": "920992",
+          "name": "中科美菱",
+          "return_20d": 44.43,
+          "close_price": 23.34,
+          "rank_in_market": 99,
+          "circ_mv": 6.51,
+          "amount": 294.9,
+          "institution_score": 1.1
+        },
+        {
+          "rank": 22,
+          "code": "920204",
+          "name": "沪江材料",
+          "return_20d": 39.66,
+          "close_price": 28.31,
+          "rank_in_market": 118,
+          "circ_mv": 14.12,
+          "amount": 260.71,
+          "institution_score": 1.06
+        },
+        {
+          "rank": 23,
+          "code": "920436",
+          "name": "大地电气",
+          "return_20d": 39.48,
+          "close_price": 27.17,
+          "rank_in_market": 120,
+          "circ_mv": 24.15,
+          "amount": 281.63,
+          "institution_score": 1.24
+        },
+        {
+          "rank": 24,
+          "code": "920000",
+          "name": "安徽凤凰",
+          "return_20d": 37.81,
+          "close_price": 29.63,
+          "rank_in_market": 131,
+          "circ_mv": 14.31,
+          "amount": 369.49,
+          "institution_score": 1.44
+        },
+        {
+          "rank": 25,
+          "code": "920026",
+          "name": "卓兆点胶",
+          "return_20d": 36.69,
+          "close_price": 33.68,
+          "rank_in_market": 139,
+          "circ_mv": 7.83,
+          "amount": 269.5,
+          "institution_score": 1.02
+        },
+        {
+          "rank": 26,
+          "code": "920239",
+          "name": "长虹能源",
+          "return_20d": 36.38,
+          "close_price": 48.17,
+          "rank_in_market": 143,
+          "circ_mv": 23.95,
+          "amount": 251.63,
+          "institution_score": 1.13
+        },
+        {
+          "rank": 27,
+          "code": "920006",
+          "name": "晟楠科技",
+          "return_20d": 35.26,
+          "close_price": 32.26,
+          "rank_in_market": 155,
+          "circ_mv": 11.06,
+          "amount": 300.99,
+          "institution_score": 1.17
+        },
+        {
+          "rank": 28,
+          "code": "920599",
+          "name": "同力股份",
+          "return_20d": 34.86,
+          "close_price": 18.57,
+          "rank_in_market": 159,
+          "circ_mv": 63.25,
+          "amount": 194.22,
+          "institution_score": 1.35
+        },
+        {
+          "rank": 29,
+          "code": "920826",
+          "name": "盖世食品",
+          "return_20d": 33.79,
+          "close_price": 14.61,
+          "rank_in_market": 169,
+          "circ_mv": 9.11,
+          "amount": 388.06,
+          "institution_score": 1.45
+        },
+        {
+          "rank": 30,
+          "code": "920564",
+          "name": "天润科技",
+          "return_20d": 33.58,
+          "close_price": 30.23,
+          "rank_in_market": 172,
+          "circ_mv": 10.21,
+          "amount": 321.39,
+          "institution_score": 1.23
+        },
+        {
+          "rank": 31,
+          "code": "920429",
+          "name": "康比特",
+          "return_20d": 33.11,
+          "close_price": 21.55,
+          "rank_in_market": 181,
+          "circ_mv": 24.41,
+          "amount": 241.85,
+          "institution_score": 1.1
+        },
+        {
+          "rank": 32,
+          "code": "920405",
+          "name": "海希通讯",
+          "return_20d": 32.44,
+          "close_price": 22.7,
+          "rank_in_market": 193,
+          "circ_mv": 24.99,
+          "amount": 219.06,
+          "institution_score": 1.03
+        },
+        {
+          "rank": 33,
+          "code": "920111",
+          "name": "聚星科技",
+          "return_20d": 32.41,
+          "close_price": 34.93,
+          "rank_in_market": 194,
+          "circ_mv": 12.89,
+          "amount": 336.34,
+          "institution_score": 1.31
+        },
+        {
+          "rank": 34,
+          "code": "920876",
+          "name": "慧为智能",
+          "return_20d": 32.11,
+          "close_price": 36.45,
+          "rank_in_market": 198,
+          "circ_mv": 13.96,
+          "amount": 249.62,
+          "institution_score": 1.02
+        },
+        {
+          "rank": 35,
+          "code": "920207",
+          "name": "众诚科技",
+          "return_20d": 25.09,
+          "close_price": 33.15,
+          "rank_in_market": 342,
+          "circ_mv": 18.67,
+          "amount": 267.25,
+          "institution_score": 1.13
+        },
+        {
+          "rank": 36,
+          "code": "920019",
+          "name": "铜冠矿建",
+          "return_20d": 23.3,
+          "close_price": 25.56,
+          "rank_in_market": 395,
+          "circ_mv": 11.01,
+          "amount": 266.07,
+          "institution_score": 1.05
+        },
+        {
+          "rank": 37,
+          "code": "920821",
+          "name": "则成电子",
+          "return_20d": 23.16,
+          "close_price": 47.86,
+          "rank_in_market": 400,
+          "circ_mv": 24.35,
+          "amount": 398.19,
+          "institution_score": 1.65
+        },
+        {
+          "rank": 38,
+          "code": "920726",
+          "name": "朱老六",
+          "return_20d": 22.75,
+          "close_price": 26.98,
+          "rank_in_market": 415,
+          "circ_mv": 15.09,
+          "amount": 421.42,
+          "institution_score": 1.63
+        },
+        {
+          "rank": 39,
+          "code": "920961",
+          "name": "创远信科",
+          "return_20d": 22.32,
+          "close_price": 22.63,
+          "rank_in_market": 431,
+          "circ_mv": 23.86,
+          "amount": 292.83,
+          "institution_score": 1.28
+        },
+        {
+          "rank": 40,
+          "code": "920522",
+          "name": "纳科诺尔",
+          "return_20d": 21.92,
+          "close_price": 65.9,
+          "rank_in_market": 440,
+          "circ_mv": 60.38,
+          "amount": 421.4,
+          "institution_score": 2.11
+        },
+        {
+          "rank": 41,
+          "code": "920971",
+          "name": "天马新材",
+          "return_20d": 21.67,
+          "close_price": 36.38,
+          "rank_in_market": 447,
+          "circ_mv": 30.81,
+          "amount": 239.04,
+          "institution_score": 1.16
+        },
+        {
+          "rank": 42,
+          "code": "920438",
+          "name": "戈碧迦",
+          "return_20d": 21.65,
+          "close_price": 22.7,
+          "rank_in_market": 450,
+          "circ_mv": 18.03,
+          "amount": 311.63,
+          "institution_score": 1.28
+        },
+        {
+          "rank": 43,
+          "code": "603579",
+          "name": "荣泰健康",
+          "return_20d": 21.21,
+          "close_price": 19.2,
+          "rank_in_market": 469,
+          "circ_mv": 34.06,
+          "amount": 278.36,
+          "institution_score": 1.33
+        },
+        {
+          "rank": 44,
+          "code": "920571",
+          "name": "国航远洋",
+          "return_20d": 20.81,
+          "close_price": 7.49,
+          "rank_in_market": 490,
+          "circ_mv": 21.49,
+          "amount": 445.66,
+          "institution_score": 1.79
+        },
+        {
+          "rank": 45,
+          "code": "920023",
+          "name": "田野股份",
+          "return_20d": 20.39,
+          "close_price": 6.14,
+          "rank_in_market": 511,
+          "circ_mv": 16.5,
+          "amount": 287.79,
+          "institution_score": 1.18
+        },
+        {
+          "rank": 46,
+          "code": "920593",
+          "name": "鼎智科技",
+          "return_20d": 20.28,
+          "close_price": 57.64,
+          "rank_in_market": 517,
+          "circ_mv": 66.54,
+          "amount": 379.92,
+          "institution_score": 2.03
+        },
+        {
+          "rank": 47,
+          "code": "920640",
+          "name": "富士达",
+          "return_20d": 19.74,
+          "close_price": 30.75,
+          "rank_in_market": 535,
+          "circ_mv": 55.53,
+          "amount": 258.7,
+          "institution_score": 1.49
+        },
+        {
+          "rank": 48,
+          "code": "920060",
+          "name": "万源通",
+          "return_20d": 19.19,
+          "close_price": 40.06,
+          "rank_in_market": 567,
+          "circ_mv": 24.38,
+          "amount": 397.22,
+          "institution_score": 1.65
+        },
+        {
+          "rank": 49,
+          "code": "920496",
+          "name": "许昌智能",
+          "return_20d": 19.09,
+          "close_price": 14.41,
+          "rank_in_market": 573,
+          "circ_mv": 20.91,
+          "amount": 243.95,
+          "institution_score": 1.07
+        },
+        {
+          "rank": 50,
+          "code": "920245",
+          "name": "威博液压",
+          "return_20d": 18.22,
+          "close_price": 45.61,
+          "rank_in_market": 614,
+          "circ_mv": 11.11,
+          "amount": 355.4,
+          "institution_score": 1.36
+        },
+        {
+          "rank": 51,
+          "code": "920533",
+          "name": "骏创科技",
+          "return_20d": 18.03,
+          "close_price": 59.77,
+          "rank_in_market": 621,
+          "circ_mv": 22.69,
+          "amount": 516.46,
+          "institution_score": 2.05
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "sector_name": "通用设备",
+      "momentum_score": 6.2,
+      "listed_count": 36,
+      "total_count": 209,
+      "listed_ratio": 17.2,
+      "avg_return_20d": 34.52,
+      "rank_change": -1,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "605100",
+          "name": "华丰股份",
+          "return_20d": 101.19,
+          "close_price": 28.63,
+          "rank_in_market": 8,
+          "circ_mv": 48.65,
+          "amount": 1160.11,
+          "institution_score": 4.57
+        },
+        {
+          "rank": 2,
+          "code": "301261",
+          "name": "恒工精密",
+          "return_20d": 76.36,
+          "close_price": 104.51,
+          "rank_in_market": 21,
+          "circ_mv": 39.6,
+          "amount": 809.31,
+          "institution_score": 3.25
+        },
+        {
+          "rank": 3,
+          "code": "301032",
+          "name": "新柴股份",
+          "return_20d": 69.02,
+          "close_price": 16.75,
+          "rank_in_market": 31,
+          "circ_mv": 26.57,
+          "amount": 823.96,
+          "institution_score": 3.16
+        },
+        {
+          "rank": 4,
+          "code": "688333",
+          "name": "铂力特",
+          "return_20d": 57.5,
+          "close_price": 81.6,
+          "rank_in_market": 45,
+          "circ_mv": 221.76,
+          "amount": 545.13,
+          "institution_score": 4.26
+        },
+        {
+          "rank": 5,
+          "code": "300553",
+          "name": "集智股份",
+          "return_20d": 51.38,
+          "close_price": 49.32,
+          "rank_in_market": 72,
+          "circ_mv": 27.66,
+          "amount": 592.3,
+          "institution_score": 2.36
+        },
+        {
+          "rank": 6,
+          "code": "688059",
+          "name": "华锐精密",
+          "return_20d": 47.13,
+          "close_price": 70.61,
+          "rank_in_market": 87,
+          "circ_mv": 43.96,
+          "amount": 201.03,
+          "institution_score": 1.17
+        },
+        {
+          "rank": 7,
+          "code": "600592",
+          "name": "龙溪股份",
+          "return_20d": 46.06,
+          "close_price": 17.6,
+          "rank_in_market": 91,
+          "circ_mv": 70.32,
+          "amount": 1048.26,
+          "institution_score": 4.41
+        },
+        {
+          "rank": 8,
+          "code": "001306",
+          "name": "夏厦精密",
+          "return_20d": 43.37,
+          "close_price": 96.46,
+          "rank_in_market": 102,
+          "circ_mv": 14.95,
+          "amount": 320.09,
+          "institution_score": 1.28
+        },
+        {
+          "rank": 9,
+          "code": "601177",
+          "name": "杭齿前进",
+          "return_20d": 41.34,
+          "close_price": 19.18,
+          "rank_in_market": 110,
+          "circ_mv": 76.73,
+          "amount": 1080.63,
+          "institution_score": 4.59
+        },
+        {
+          "rank": 10,
+          "code": "688433",
+          "name": "华曙高科",
+          "return_20d": 40.47,
+          "close_price": 44.95,
+          "rank_in_market": 113,
+          "circ_mv": 90.1,
+          "amount": 222.36,
+          "institution_score": 1.73
+        },
+        {
+          "rank": 11,
+          "code": "002896",
+          "name": "中大力德",
+          "return_20d": 38.85,
+          "close_price": 98.6,
+          "rank_in_market": 124,
+          "circ_mv": 149.05,
+          "amount": 1590.96,
+          "institution_score": 6.58
+        },
+        {
+          "rank": 12,
+          "code": "300488",
+          "name": "恒锋工具",
+          "return_20d": 38.73,
+          "close_price": 43.45,
+          "rank_in_market": 125,
+          "circ_mv": 62.41,
+          "amount": 250.33,
+          "institution_score": 1.54
+        },
+        {
+          "rank": 13,
+          "code": "300817",
+          "name": "双飞集团",
+          "return_20d": 38.44,
+          "close_price": 23.12,
+          "rank_in_market": 126,
+          "circ_mv": 28.72,
+          "amount": 289.68,
+          "institution_score": 1.32
+        },
+        {
+          "rank": 14,
+          "code": "300402",
+          "name": "宝色股份",
+          "return_20d": 37.04,
+          "close_price": 19.98,
+          "rank_in_market": 135,
+          "circ_mv": 48.67,
+          "amount": 919.89,
+          "institution_score": 3.73
+        },
+        {
+          "rank": 15,
+          "code": "300007",
+          "name": "汉威科技",
+          "return_20d": 32.52,
+          "close_price": 43.73,
+          "rank_in_market": 191,
+          "circ_mv": 123.74,
+          "amount": 1670.27,
+          "institution_score": 6.31
+        },
+        {
+          "rank": 16,
+          "code": "301368",
+          "name": "丰立智能",
+          "return_20d": 30.23,
+          "close_price": 85.9,
+          "rank_in_market": 232,
+          "circ_mv": 55.08,
+          "amount": 951.34,
+          "institution_score": 3.91
+        },
+        {
+          "rank": 17,
+          "code": "002760",
+          "name": "凤形股份",
+          "return_20d": 30.19,
+          "close_price": 21.56,
+          "rank_in_market": 233,
+          "circ_mv": 23.28,
+          "amount": 440.44,
+          "institution_score": 1.79
+        },
+        {
+          "rank": 18,
+          "code": "301525",
+          "name": "儒竞科技",
+          "return_20d": 30.02,
+          "close_price": 84.28,
+          "rank_in_market": 239,
+          "circ_mv": 41.64,
+          "amount": 207.87,
+          "institution_score": 1.17
+        },
+        {
+          "rank": 19,
+          "code": "600860",
+          "name": "京城股份",
+          "return_20d": 27.89,
+          "close_price": 14.03,
+          "rank_in_market": 277,
+          "circ_mv": 61.06,
+          "amount": 666.68,
+          "institution_score": 2.98
+        },
+        {
+          "rank": 20,
+          "code": "002164",
+          "name": "宁波东力",
+          "return_20d": 27.45,
+          "close_price": 7.66,
+          "rank_in_market": 282,
+          "circ_mv": 36.75,
+          "amount": 564.66,
+          "institution_score": 2.36
+        },
+        {
+          "rank": 21,
+          "code": "688622",
+          "name": "禾信仪器",
+          "return_20d": 26.46,
+          "close_price": 91.95,
+          "rank_in_market": 308,
+          "circ_mv": 64.36,
+          "amount": 139.1,
+          "institution_score": 1.17
+        },
+        {
+          "rank": 22,
+          "code": "301268",
+          "name": "铭利达",
+          "return_20d": 26.08,
+          "close_price": 20.5,
+          "rank_in_market": 320,
+          "circ_mv": 36.9,
+          "amount": 194.0,
+          "institution_score": 1.07
+        },
+        {
+          "rank": 23,
+          "code": "002342",
+          "name": "巨力索具",
+          "return_20d": 24.54,
+          "close_price": 4.06,
+          "rank_in_market": 354,
+          "circ_mv": 38.76,
+          "amount": 222.47,
+          "institution_score": 1.19
+        },
+        {
+          "rank": 24,
+          "code": "301603",
+          "name": "乔锋智能",
+          "return_20d": 24.36,
+          "close_price": 55.28,
+          "rank_in_market": 364,
+          "circ_mv": 13.35,
+          "amount": 293.38,
+          "institution_score": 1.17
+        },
+        {
+          "rank": 25,
+          "code": "002046",
+          "name": "国机精工",
+          "return_20d": 24.21,
+          "close_price": 16.88,
+          "rank_in_market": 368,
+          "circ_mv": 88.77,
+          "amount": 426.62,
+          "institution_score": 2.43
+        },
+        {
+          "rank": 26,
+          "code": "300718",
+          "name": "长盛轴承",
+          "return_20d": 22.5,
+          "close_price": 95.06,
+          "rank_in_market": 426,
+          "circ_mv": 184.29,
+          "amount": 2605.53,
+          "institution_score": 6.95
+        },
+        {
+          "rank": 27,
+          "code": "002795",
+          "name": "永和智控",
+          "return_20d": 22.22,
+          "close_price": 6.05,
+          "rank_in_market": 433,
+          "circ_mv": 26.3,
+          "amount": 207.83,
+          "institution_score": 1.01
+        },
+        {
+          "rank": 28,
+          "code": "300354",
+          "name": "东华测试",
+          "return_20d": 20.69,
+          "close_price": 48.65,
+          "rank_in_market": 500,
+          "circ_mv": 39.5,
+          "amount": 351.16,
+          "institution_score": 1.65
+        },
+        {
+          "rank": 29,
+          "code": "300503",
+          "name": "昊志机电",
+          "return_20d": 19.58,
+          "close_price": 27.61,
+          "rank_in_market": 543,
+          "circ_mv": 66.01,
+          "amount": 653.53,
+          "institution_score": 2.98
+        },
+        {
+          "rank": 30,
+          "code": "300441",
+          "name": "鲍斯股份",
+          "return_20d": 19.48,
+          "close_price": 11.47,
+          "rank_in_market": 550,
+          "circ_mv": 71.91,
+          "amount": 899.81,
+          "institution_score": 3.91
+        },
+        {
+          "rank": 31,
+          "code": "003025",
+          "name": "思进智能",
+          "return_20d": 18.96,
+          "close_price": 17.82,
+          "rank_in_market": 577,
+          "circ_mv": 35.42,
+          "amount": 318.2,
+          "institution_score": 1.49
+        },
+        {
+          "rank": 32,
+          "code": "301377",
+          "name": "鼎泰高科",
+          "return_20d": 18.51,
+          "close_price": 28.55,
+          "rank_in_market": 599,
+          "circ_mv": 20.28,
+          "amount": 252.5,
+          "institution_score": 1.1
+        },
+        {
+          "rank": 33,
+          "code": "603915",
+          "name": "国茂股份",
+          "return_20d": 18.38,
+          "close_price": 17.65,
+          "rank_in_market": 604,
+          "circ_mv": 115.9,
+          "amount": 350.6,
+          "institution_score": 2.45
+        },
+        {
+          "rank": 34,
+          "code": "300466",
+          "name": "赛摩智能",
+          "return_20d": 17.29,
+          "close_price": 9.43,
+          "rank_in_market": 653,
+          "circ_mv": 39.6,
+          "amount": 373.43,
+          "institution_score": 1.72
+        },
+        {
+          "rank": 35,
+          "code": "301413",
+          "name": "安培龙",
+          "return_20d": 17.21,
+          "close_price": 107.75,
+          "rank_in_market": 658,
+          "circ_mv": 61.98,
+          "amount": 391.23,
+          "institution_score": 2.02
+        },
+        {
+          "rank": 36,
+          "code": "000837",
+          "name": "秦川机床",
+          "return_20d": 16.89,
+          "close_price": 12.39,
+          "rank_in_market": 683,
+          "circ_mv": 124.82,
+          "amount": 664.84,
+          "institution_score": 3.65
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "sector_name": "军工电子Ⅱ",
+      "momentum_score": 4.49,
+      "listed_count": 16,
+      "total_count": 57,
+      "listed_ratio": 28.1,
+      "avg_return_20d": 34.84,
+      "rank_change": 0,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600590",
+          "name": "泰豪科技",
+          "return_20d": 93.49,
+          "close_price": 11.88,
+          "rank_in_market": 10,
+          "circ_mv": 100.22,
+          "amount": 1781.38,
+          "institution_score": 6.06
+        },
+        {
+          "rank": 2,
+          "code": "603678",
+          "name": "火炬电子",
+          "return_20d": 53.07,
+          "close_price": 39.2,
+          "rank_in_market": 66,
+          "circ_mv": 179.67,
+          "amount": 750.3,
+          "institution_score": 4.53
+        },
+        {
+          "rank": 3,
+          "code": "688788",
+          "name": "科思科技",
+          "return_20d": 52.09,
+          "close_price": 72.99,
+          "rank_in_market": 70,
+          "circ_mv": 77.19,
+          "amount": 291.04,
+          "institution_score": 1.84
+        },
+        {
+          "rank": 4,
+          "code": "603267",
+          "name": "鸿远电子",
+          "return_20d": 49.32,
+          "close_price": 53.74,
+          "rank_in_market": 81,
+          "circ_mv": 124.18,
+          "amount": 701.56,
+          "institution_score": 3.77
+        },
+        {
+          "rank": 5,
+          "code": "688636",
+          "name": "智明达",
+          "return_20d": 39.39,
+          "close_price": 39.03,
+          "rank_in_market": 122,
+          "circ_mv": 43.91,
+          "amount": 166.57,
+          "institution_score": 1.05
+        },
+        {
+          "rank": 6,
+          "code": "688439",
+          "name": "振华风光",
+          "return_20d": 31.52,
+          "close_price": 66.05,
+          "rank_in_market": 208,
+          "circ_mv": 75.24,
+          "amount": 321.82,
+          "institution_score": 1.92
+        },
+        {
+          "rank": 7,
+          "code": "000733",
+          "name": "振华科技",
+          "return_20d": 30.99,
+          "close_price": 54.95,
+          "rank_in_market": 217,
+          "circ_mv": 304.3,
+          "amount": 1355.06,
+          "institution_score": 7.96
+        },
+        {
+          "rank": 8,
+          "code": "002025",
+          "name": "航天电器",
+          "return_20d": 30.51,
+          "close_price": 57.88,
+          "rank_in_market": 225,
+          "circ_mv": 261.94,
+          "amount": 630.29,
+          "institution_score": 4.98
+        },
+        {
+          "rank": 9,
+          "code": "300726",
+          "name": "宏达电子",
+          "return_20d": 29.81,
+          "close_price": 38.93,
+          "rank_in_market": 244,
+          "circ_mv": 83.14,
+          "amount": 528.03,
+          "institution_score": 2.73
+        },
+        {
+          "rank": 10,
+          "code": "688311",
+          "name": "盟升电子",
+          "return_20d": 26.64,
+          "close_price": 40.98,
+          "rank_in_market": 302,
+          "circ_mv": 68.81,
+          "amount": 193.97,
+          "institution_score": 1.41
+        },
+        {
+          "rank": 11,
+          "code": "688629",
+          "name": "华丰科技",
+          "return_20d": 25.19,
+          "close_price": 62.42,
+          "rank_in_market": 339,
+          "circ_mv": 111.31,
+          "amount": 1243.61,
+          "institution_score": 5.53
+        },
+        {
+          "rank": 12,
+          "code": "688776",
+          "name": "国光电气",
+          "return_20d": 21.38,
+          "close_price": 63.46,
+          "rank_in_market": 459,
+          "circ_mv": 68.78,
+          "amount": 83.65,
+          "institution_score": 1.02
+        },
+        {
+          "rank": 13,
+          "code": "688002",
+          "name": "睿创微纳",
+          "return_20d": 19.73,
+          "close_price": 63.79,
+          "rank_in_market": 536,
+          "circ_mv": 290.2,
+          "amount": 430.05,
+          "institution_score": 4.58
+        },
+        {
+          "rank": 14,
+          "code": "603712",
+          "name": "七一二",
+          "return_20d": 19.31,
+          "close_price": 20.95,
+          "rank_in_market": 562,
+          "circ_mv": 161.73,
+          "amount": 458.56,
+          "institution_score": 3.32
+        },
+        {
+          "rank": 15,
+          "code": "002414",
+          "name": "高德红外",
+          "return_20d": 18.29,
+          "close_price": 8.6,
+          "rank_in_market": 611,
+          "circ_mv": 292.28,
+          "amount": 394.03,
+          "institution_score": 4.47
+        },
+        {
+          "rank": 16,
+          "code": "688375",
+          "name": "国博电子",
+          "return_20d": 16.76,
+          "close_price": 57.62,
+          "rank_in_market": 694,
+          "circ_mv": 152.97,
+          "amount": 104.0,
+          "institution_score": 1.98
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "sector_name": "电池",
+      "momentum_score": 3.97,
+      "listed_count": 19,
+      "total_count": 91,
+      "listed_ratio": 20.9,
+      "avg_return_20d": 25.43,
+      "rank_change": 6,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002580",
+          "name": "圣阳股份",
+          "return_20d": 58.01,
+          "close_price": 15.28,
+          "rank_in_market": 43,
+          "circ_mv": 69.12,
+          "amount": 1146.88,
+          "institution_score": 4.74
+        },
+        {
+          "rank": 2,
+          "code": "301210",
+          "name": "金杨精密",
+          "return_20d": 56.68,
+          "close_price": 65.93,
+          "rank_in_market": 49,
+          "circ_mv": 20.62,
+          "amount": 573.32,
+          "institution_score": 2.22
+        },
+        {
+          "rank": 3,
+          "code": "600478",
+          "name": "科力远",
+          "return_20d": 35.88,
+          "close_price": 5.87,
+          "rank_in_market": 149,
+          "circ_mv": 97.77,
+          "amount": 1278.78,
+          "institution_score": 5.51
+        },
+        {
+          "rank": 4,
+          "code": "300432",
+          "name": "富临精工",
+          "return_20d": 34.64,
+          "close_price": 23.01,
+          "rank_in_market": 161,
+          "circ_mv": 277.34,
+          "amount": 2321.99,
+          "institution_score": 7.94
+        },
+        {
+          "rank": 5,
+          "code": "300128",
+          "name": "锦富技术",
+          "return_20d": 30.1,
+          "close_price": 6.7,
+          "rank_in_market": 236,
+          "circ_mv": 87.04,
+          "amount": 720.38,
+          "institution_score": 3.44
+        },
+        {
+          "rank": 6,
+          "code": "688388",
+          "name": "嘉元科技",
+          "return_20d": 28.08,
+          "close_price": 20.48,
+          "rank_in_market": 274,
+          "circ_mv": 87.29,
+          "amount": 410.65,
+          "institution_score": 2.36
+        },
+        {
+          "rank": 7,
+          "code": "300068",
+          "name": "南都电源",
+          "return_20d": 22.57,
+          "close_price": 19.06,
+          "rank_in_market": 425,
+          "circ_mv": 163.0,
+          "amount": 1922.54,
+          "institution_score": 6.73
+        },
+        {
+          "rank": 8,
+          "code": "300953",
+          "name": "震裕科技",
+          "return_20d": 22.06,
+          "close_price": 169.58,
+          "rank_in_market": 436,
+          "circ_mv": 143.09,
+          "amount": 2391.5,
+          "institution_score": 6.52
+        },
+        {
+          "rank": 9,
+          "code": "600884",
+          "name": "杉杉股份",
+          "return_20d": 20.3,
+          "close_price": 7.94,
+          "rank_in_market": 516,
+          "circ_mv": 139.52,
+          "amount": 518.54,
+          "institution_score": 3.29
+        },
+        {
+          "rank": 10,
+          "code": "688567",
+          "name": "孚能科技",
+          "return_20d": 19.06,
+          "close_price": 14.62,
+          "rank_in_market": 575,
+          "circ_mv": 178.67,
+          "amount": 246.25,
+          "institution_score": 2.75
+        },
+        {
+          "rank": 11,
+          "code": "688499",
+          "name": "利元亨",
+          "return_20d": 18.36,
+          "close_price": 28.69,
+          "rank_in_market": 606,
+          "circ_mv": 48.41,
+          "amount": 210.66,
+          "institution_score": 1.25
+        },
+        {
+          "rank": 12,
+          "code": "002245",
+          "name": "蔚蓝锂芯",
+          "return_20d": 18.25,
+          "close_price": 15.16,
+          "rank_in_market": 613,
+          "circ_mv": 164.83,
+          "amount": 1345.68,
+          "institution_score": 6.45
+        },
+        {
+          "rank": 13,
+          "code": "688116",
+          "name": "天奈科技",
+          "return_20d": 17.54,
+          "close_price": 49.19,
+          "rank_in_market": 638,
+          "circ_mv": 169.58,
+          "amount": 717.31,
+          "institution_score": 4.3
+        },
+        {
+          "rank": 14,
+          "code": "300035",
+          "name": "中科电气",
+          "return_20d": 17.1,
+          "close_price": 17.05,
+          "rank_in_market": 667,
+          "circ_mv": 99.46,
+          "amount": 570.02,
+          "institution_score": 3.05
+        },
+        {
+          "rank": 15,
+          "code": "002733",
+          "name": "雄韬股份",
+          "return_20d": 17.05,
+          "close_price": 19.43,
+          "rank_in_market": 674,
+          "circ_mv": 71.67,
+          "amount": 687.73,
+          "institution_score": 3.16
+        },
+        {
+          "rank": 16,
+          "code": "688155",
+          "name": "先惠技术",
+          "return_20d": 17.01,
+          "close_price": 48.02,
+          "rank_in_market": 677,
+          "circ_mv": 60.05,
+          "amount": 155.91,
+          "institution_score": 1.18
+        },
+        {
+          "rank": 17,
+          "code": "300409",
+          "name": "道氏技术",
+          "return_20d": 16.95,
+          "close_price": 17.25,
+          "rank_in_market": 679,
+          "circ_mv": 102.51,
+          "amount": 729.96,
+          "institution_score": 3.64
+        },
+        {
+          "rank": 18,
+          "code": "603906",
+          "name": "龙蟠科技",
+          "return_20d": 16.78,
+          "close_price": 11.83,
+          "rank_in_market": 688,
+          "circ_mv": 66.85,
+          "amount": 193.77,
+          "institution_score": 1.39
+        },
+        {
+          "rank": 19,
+          "code": "605378",
+          "name": "野马电池",
+          "return_20d": 16.68,
+          "close_price": 25.46,
+          "rank_in_market": 699,
+          "circ_mv": 47.53,
+          "amount": 203.53,
+          "institution_score": 1.21
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "sector_name": "电机Ⅱ",
+      "momentum_score": 2.67,
+      "listed_count": 8,
+      "total_count": 24,
+      "listed_ratio": 33.3,
+      "avg_return_20d": 31.54,
+      "rank_change": -1,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002196",
+          "name": "方正电机",
+          "return_20d": 78.71,
+          "close_price": 10.83,
+          "rank_in_market": 19,
+          "circ_mv": 52.89,
+          "amount": 1996.75,
+          "institution_score": 5.56
+        },
+        {
+          "rank": 2,
+          "code": "300907",
+          "name": "康平科技",
+          "return_20d": 33.0,
+          "close_price": 29.54,
+          "rank_in_market": 182,
+          "circ_mv": 28.36,
+          "amount": 369.66,
+          "institution_score": 1.59
+        },
+        {
+          "rank": 3,
+          "code": "603489",
+          "name": "八方股份",
+          "return_20d": 30.77,
+          "close_price": 30.05,
+          "rank_in_market": 222,
+          "circ_mv": 70.62,
+          "amount": 258.0,
+          "institution_score": 1.65
+        },
+        {
+          "rank": 4,
+          "code": "603819",
+          "name": "神力股份",
+          "return_20d": 23.79,
+          "close_price": 15.82,
+          "rank_in_market": 381,
+          "circ_mv": 34.44,
+          "amount": 568.12,
+          "institution_score": 2.35
+        },
+        {
+          "rank": 5,
+          "code": "300660",
+          "name": "江苏雷利",
+          "return_20d": 23.47,
+          "close_price": 61.33,
+          "rank_in_market": 392,
+          "circ_mv": 195.73,
+          "amount": 910.27,
+          "institution_score": 5.26
+        },
+        {
+          "rank": 6,
+          "code": "002249",
+          "name": "大洋电机",
+          "return_20d": 22.76,
+          "close_price": 7.12,
+          "rank_in_market": 414,
+          "circ_mv": 129.71,
+          "amount": 858.76,
+          "institution_score": 4.38
+        },
+        {
+          "rank": 7,
+          "code": "003021",
+          "name": "兆威机电",
+          "return_20d": 22.72,
+          "close_price": 147.66,
+          "rank_in_market": 421,
+          "circ_mv": 304.47,
+          "amount": 1623.89,
+          "institution_score": 8.23
+        },
+        {
+          "rank": 8,
+          "code": "600416",
+          "name": "湘电股份",
+          "return_20d": 17.14,
+          "close_price": 12.3,
+          "rank_in_market": 663,
+          "circ_mv": 163.02,
+          "amount": 436.03,
+          "institution_score": 3.25
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "sector_name": "地面兵装Ⅱ",
+      "momentum_score": 2.27,
+      "listed_count": 5,
+      "total_count": 11,
+      "listed_ratio": 45.5,
+      "avg_return_20d": 20.43,
+      "rank_change": -1,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600184",
+          "name": "光电股份",
+          "return_20d": 23.29,
+          "close_price": 14.03,
+          "rank_in_market": 396,
+          "circ_mv": 71.38,
+          "amount": 186.95,
+          "institution_score": 1.41
+        },
+        {
+          "rank": 2,
+          "code": "300922",
+          "name": "天秦装备",
+          "return_20d": 23.07,
+          "close_price": 17.71,
+          "rank_in_market": 404,
+          "circ_mv": 20.38,
+          "amount": 433.94,
+          "institution_score": 1.73
+        },
+        {
+          "rank": 3,
+          "code": "600967",
+          "name": "内蒙一机",
+          "return_20d": 20.73,
+          "close_price": 11.88,
+          "rank_in_market": 498,
+          "circ_mv": 201.83,
+          "amount": 1796.84,
+          "institution_score": 7.14
+        },
+        {
+          "rank": 4,
+          "code": "000519",
+          "name": "中兵红箭",
+          "return_20d": 18.36,
+          "close_price": 17.6,
+          "rank_in_market": 605,
+          "circ_mv": 245.09,
+          "amount": 869.76,
+          "institution_score": 5.64
+        },
+        {
+          "rank": 5,
+          "code": "688543",
+          "name": "国科军工",
+          "return_20d": 16.7,
+          "close_price": 57.3,
+          "rank_in_market": 697,
+          "circ_mv": 50.57,
+          "amount": 250.04,
+          "institution_score": 1.41
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "sector_name": "小金属",
+      "momentum_score": 2.13,
+      "listed_count": 7,
+      "total_count": 23,
+      "listed_ratio": 30.4,
+      "avg_return_20d": 28.11,
+      "rank_change": 23,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600301",
+          "name": "华锡有色",
+          "return_20d": 54.71,
+          "close_price": 26.75,
+          "rank_in_market": 60,
+          "circ_mv": 73.65,
+          "amount": 1124.68,
+          "institution_score": 4.71
+        },
+        {
+          "rank": 2,
+          "code": "002149",
+          "name": "西部材料",
+          "return_20d": 33.41,
+          "close_price": 23.6,
+          "rank_in_market": 177,
+          "circ_mv": 115.2,
+          "amount": 994.85,
+          "institution_score": 4.7
+        },
+        {
+          "rank": 3,
+          "code": "002167",
+          "name": "东方锆业",
+          "return_20d": 26.26,
+          "close_price": 10.24,
+          "rank_in_market": 314,
+          "circ_mv": 77.69,
+          "amount": 1551.23,
+          "institution_score": 5.82
+        },
+        {
+          "rank": 4,
+          "code": "600456",
+          "name": "宝钛股份",
+          "return_20d": 25.52,
+          "close_price": 36.15,
+          "rank_in_market": 330,
+          "circ_mv": 172.72,
+          "amount": 2866.54,
+          "institution_score": 6.83
+        },
+        {
+          "rank": 5,
+          "code": "688750",
+          "name": "金天钛业",
+          "return_20d": 21.33,
+          "close_price": 24.74,
+          "rank_in_market": 462,
+          "circ_mv": 19.15,
+          "amount": 629.38,
+          "institution_score": 2.4
+        },
+        {
+          "rank": 6,
+          "code": "002842",
+          "name": "翔鹭钨业",
+          "return_20d": 17.78,
+          "close_price": 7.95,
+          "rank_in_market": 630,
+          "circ_mv": 17.48,
+          "amount": 352.41,
+          "institution_score": 1.42
+        },
+        {
+          "rank": 7,
+          "code": "000962",
+          "name": "东方钽业",
+          "return_20d": 17.74,
+          "close_price": 17.12,
+          "rank_in_market": 632,
+          "circ_mv": 84.86,
+          "amount": 1242.92,
+          "institution_score": 5.24
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "sector_name": "能源金属",
+      "momentum_score": 1.92,
+      "listed_count": 5,
+      "total_count": 13,
+      "listed_ratio": 38.5,
+      "avg_return_20d": 27.28,
+      "rank_change": 16,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "605376",
+          "name": "博迁新材",
+          "return_20d": 37.26,
+          "close_price": 43.58,
+          "rank_in_market": 134,
+          "circ_mv": 114.01,
+          "amount": 547.96,
+          "institution_score": 3.12
+        },
+        {
+          "rank": 2,
+          "code": "301219",
+          "name": "腾远钴业",
+          "return_20d": 33.5,
+          "close_price": 60.45,
+          "rank_in_market": 173,
+          "circ_mv": 101.48,
+          "amount": 917.5,
+          "institution_score": 4.28
+        },
+        {
+          "rank": 3,
+          "code": "603799",
+          "name": "华友钴业",
+          "return_20d": 28.68,
+          "close_price": 39.12,
+          "rank_in_market": 265,
+          "circ_mv": 659.7,
+          "amount": 2914.71,
+          "institution_score": 10.0
+        },
+        {
+          "rank": 4,
+          "code": "600711",
+          "name": "盛屯矿业",
+          "return_20d": 20.12,
+          "close_price": 5.85,
+          "rank_in_market": 525,
+          "circ_mv": 180.8,
+          "amount": 691.46,
+          "institution_score": 4.33
+        },
+        {
+          "rank": 5,
+          "code": "300618",
+          "name": "寒锐钴业",
+          "return_20d": 16.84,
+          "close_price": 40.46,
+          "rank_in_market": 685,
+          "circ_mv": 109.78,
+          "amount": 763.77,
+          "institution_score": 3.83
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "sector_name": "其他电源设备Ⅱ",
+      "momentum_score": 1.81,
+      "listed_count": 7,
+      "total_count": 27,
+      "listed_ratio": 25.9,
+      "avg_return_20d": 40.77,
+      "rank_change": -1,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300153",
+          "name": "科泰电源",
+          "return_20d": 89.79,
+          "close_price": 45.0,
+          "rank_in_market": 12,
+          "circ_mv": 143.25,
+          "amount": 2541.64,
+          "institution_score": 6.52
+        },
+        {
+          "rank": 2,
+          "code": "300593",
+          "name": "新雷能",
+          "return_20d": 48.98,
+          "close_price": 16.0,
+          "rank_in_market": 83,
+          "circ_mv": 72.04,
+          "amount": 418.27,
+          "institution_score": 2.23
+        },
+        {
+          "rank": 3,
+          "code": "002335",
+          "name": "科华数据",
+          "return_20d": 38.24,
+          "close_price": 58.02,
+          "rank_in_market": 130,
+          "circ_mv": 232.56,
+          "amount": 3571.64,
+          "institution_score": 7.46
+        },
+        {
+          "rank": 4,
+          "code": "688411",
+          "name": "海博思创",
+          "return_20d": 30.49,
+          "close_price": 83.85,
+          "rank_in_market": 226,
+          "circ_mv": 29.89,
+          "amount": 244.51,
+          "institution_score": 1.17
+        },
+        {
+          "rank": 5,
+          "code": "300693",
+          "name": "盛弘股份",
+          "return_20d": 29.94,
+          "close_price": 40.02,
+          "rank_in_market": 240,
+          "circ_mv": 106.53,
+          "amount": 624.98,
+          "institution_score": 3.31
+        },
+        {
+          "rank": 6,
+          "code": "600212",
+          "name": "绿能慧充",
+          "return_20d": 24.48,
+          "close_price": 9.61,
+          "rank_in_market": 358,
+          "circ_mv": 49.47,
+          "amount": 479.77,
+          "institution_score": 2.2
+        },
+        {
+          "rank": 7,
+          "code": "300870",
+          "name": "欧陆通",
+          "return_20d": 23.48,
+          "close_price": 157.69,
+          "rank_in_market": 391,
+          "circ_mv": 161.67,
+          "amount": 800.99,
+          "institution_score": 4.51
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "sector_name": "自动化设备",
+      "momentum_score": 1.57,
+      "listed_count": 11,
+      "total_count": 77,
+      "listed_ratio": 14.3,
+      "avg_return_20d": 28.52,
+      "rank_change": -1,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300083",
+          "name": "创世纪",
+          "return_20d": 47.7,
+          "close_price": 9.94,
+          "rank_in_market": 84,
+          "circ_mv": 148.41,
+          "amount": 2071.24,
+          "institution_score": 6.57
+        },
+        {
+          "rank": 2,
+          "code": "688160",
+          "name": "步科股份",
+          "return_20d": 39.46,
+          "close_price": 115.47,
+          "rank_in_market": 121,
+          "circ_mv": 96.99,
+          "amount": 378.78,
+          "institution_score": 2.35
+        },
+        {
+          "rank": 3,
+          "code": "603583",
+          "name": "捷昌驱动",
+          "return_20d": 38.32,
+          "close_price": 47.29,
+          "rank_in_market": 129,
+          "circ_mv": 180.76,
+          "amount": 1353.7,
+          "institution_score": 6.65
+        },
+        {
+          "rank": 4,
+          "code": "688003",
+          "name": "天准科技",
+          "return_20d": 31.6,
+          "close_price": 58.55,
+          "rank_in_market": 205,
+          "circ_mv": 113.35,
+          "amount": 389.3,
+          "institution_score": 2.56
+        },
+        {
+          "rank": 5,
+          "code": "300276",
+          "name": "三丰智能",
+          "return_20d": 28.12,
+          "close_price": 13.76,
+          "rank_in_market": 272,
+          "circ_mv": 140.46,
+          "amount": 1269.1,
+          "institution_score": 5.92
+        },
+        {
+          "rank": 6,
+          "code": "688306",
+          "name": "均普智能",
+          "return_20d": 26.83,
+          "close_price": 12.15,
+          "rank_in_market": 298,
+          "circ_mv": 56.88,
+          "amount": 585.14,
+          "institution_score": 2.65
+        },
+        {
+          "rank": 7,
+          "code": "688097",
+          "name": "博众精工",
+          "return_20d": 26.23,
+          "close_price": 33.21,
+          "rank_in_market": 315,
+          "circ_mv": 147.33,
+          "amount": 483.68,
+          "institution_score": 3.25
+        },
+        {
+          "rank": 8,
+          "code": "688290",
+          "name": "景业智能",
+          "return_20d": 20.76,
+          "close_price": 61.95,
+          "rank_in_market": 495,
+          "circ_mv": 37.68,
+          "amount": 246.21,
+          "institution_score": 1.26
+        },
+        {
+          "rank": 9,
+          "code": "603416",
+          "name": "信捷电气",
+          "return_20d": 20.06,
+          "close_price": 56.8,
+          "rank_in_market": 528,
+          "circ_mv": 79.24,
+          "amount": 188.54,
+          "institution_score": 1.5
+        },
+        {
+          "rank": 10,
+          "code": "002979",
+          "name": "雷赛智能",
+          "return_20d": 17.76,
+          "close_price": 49.59,
+          "rank_in_market": 631,
+          "circ_mv": 107.49,
+          "amount": 1336.81,
+          "institution_score": 5.81
+        },
+        {
+          "rank": 11,
+          "code": "301021",
+          "name": "英诺激光",
+          "return_20d": 16.9,
+          "close_price": 33.14,
+          "rank_in_market": 682,
+          "circ_mv": 50.41,
+          "amount": 306.17,
+          "institution_score": 1.6
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "sector_name": "电网设备",
+      "momentum_score": 1.44,
+      "listed_count": 13,
+      "total_count": 117,
+      "listed_ratio": 11.1,
+      "avg_return_20d": 29.57,
+      "rank_change": -4,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002276",
+          "name": "万马股份",
+          "return_20d": 80.61,
+          "close_price": 16.49,
+          "rank_in_market": 17,
+          "circ_mv": 165.74,
+          "amount": 3494.87,
+          "institution_score": 6.76
+        },
+        {
+          "rank": 2,
+          "code": "603618",
+          "name": "杭电股份",
+          "return_20d": 34.59,
+          "close_price": 8.56,
+          "rank_in_market": 165,
+          "circ_mv": 59.18,
+          "amount": 1022.97,
+          "institution_score": 4.2
+        },
+        {
+          "rank": 3,
+          "code": "002706",
+          "name": "良信股份",
+          "return_20d": 32.58,
+          "close_price": 9.4,
+          "rank_in_market": 189,
+          "circ_mv": 85.98,
+          "amount": 688.89,
+          "institution_score": 3.32
+        },
+        {
+          "rank": 4,
+          "code": "300853",
+          "name": "申昊科技",
+          "return_20d": 28.02,
+          "close_price": 31.02,
+          "rank_in_market": 276,
+          "circ_mv": 34.2,
+          "amount": 626.99,
+          "institution_score": 2.55
+        },
+        {
+          "rank": 5,
+          "code": "605066",
+          "name": "天正电气",
+          "return_20d": 27.05,
+          "close_price": 8.22,
+          "rank_in_market": 290,
+          "circ_mv": 41.3,
+          "amount": 406.23,
+          "institution_score": 1.86
+        },
+        {
+          "rank": 6,
+          "code": "301361",
+          "name": "众智科技",
+          "return_20d": 27.01,
+          "close_price": 38.98,
+          "rank_in_market": 291,
+          "circ_mv": 11.34,
+          "amount": 383.0,
+          "institution_score": 1.46
+        },
+        {
+          "rank": 7,
+          "code": "688226",
+          "name": "威腾电气",
+          "return_20d": 26.64,
+          "close_price": 39.65,
+          "rank_in_market": 303,
+          "circ_mv": 62.51,
+          "amount": 143.07,
+          "institution_score": 1.16
+        },
+        {
+          "rank": 8,
+          "code": "002358",
+          "name": "森源电气",
+          "return_20d": 23.89,
+          "close_price": 6.43,
+          "rank_in_market": 376,
+          "circ_mv": 59.78,
+          "amount": 593.7,
+          "institution_score": 2.71
+        },
+        {
+          "rank": 9,
+          "code": "300932",
+          "name": "三友联众",
+          "return_20d": 23.7,
+          "close_price": 17.8,
+          "rank_in_market": 386,
+          "circ_mv": 28.99,
+          "amount": 272.03,
+          "institution_score": 1.26
+        },
+        {
+          "rank": 10,
+          "code": "605196",
+          "name": "华通线缆",
+          "return_20d": 23.01,
+          "close_price": 15.13,
+          "rank_in_market": 406,
+          "circ_mv": 77.3,
+          "amount": 480.91,
+          "institution_score": 2.5
+        },
+        {
+          "rank": 11,
+          "code": "002533",
+          "name": "金杯电工",
+          "return_20d": 22.95,
+          "close_price": 11.57,
+          "rank_in_market": 408,
+          "circ_mv": 73.75,
+          "amount": 534.16,
+          "institution_score": 2.65
+        },
+        {
+          "rank": 12,
+          "code": "601126",
+          "name": "四方股份",
+          "return_20d": 17.32,
+          "close_price": 18.29,
+          "rank_in_market": 652,
+          "circ_mv": 149.77,
+          "amount": 596.68,
+          "institution_score": 3.67
+        },
+        {
+          "rank": 13,
+          "code": "002692",
+          "name": "远程股份",
+          "return_20d": 17.05,
+          "close_price": 5.56,
+          "rank_in_market": 673,
+          "circ_mv": 39.91,
+          "amount": 350.23,
+          "institution_score": 1.65
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "sector_name": "工业金属",
+      "momentum_score": 1.37,
+      "listed_count": 9,
+      "total_count": 59,
+      "listed_ratio": 15.3,
+      "avg_return_20d": 41.87,
+      "rank_change": 6,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "605208",
+          "name": "永茂泰",
+          "return_20d": 111.2,
+          "close_price": 16.6,
+          "rank_in_market": 6,
+          "circ_mv": 54.77,
+          "amount": 663.8,
+          "institution_score": 2.9
+        },
+        {
+          "rank": 2,
+          "code": "601020",
+          "name": "华钰矿业",
+          "return_20d": 69.63,
+          "close_price": 22.51,
+          "rank_in_market": 30,
+          "circ_mv": 184.57,
+          "amount": 4488.29,
+          "institution_score": 6.96
+        },
+        {
+          "rank": 3,
+          "code": "300328",
+          "name": "宜安科技",
+          "return_20d": 50.48,
+          "close_price": 12.52,
+          "rank_in_market": 76,
+          "circ_mv": 85.93,
+          "amount": 1116.69,
+          "institution_score": 4.81
+        },
+        {
+          "rank": 4,
+          "code": "002501",
+          "name": "利源股份",
+          "return_20d": 31.52,
+          "close_price": 2.42,
+          "rank_in_market": 207,
+          "circ_mv": 85.91,
+          "amount": 719.39,
+          "institution_score": 3.42
+        },
+        {
+          "rank": 5,
+          "code": "002171",
+          "name": "楚江新材",
+          "return_20d": 29.19,
+          "close_price": 9.87,
+          "rank_in_market": 256,
+          "circ_mv": 147.99,
+          "amount": 205.23,
+          "institution_score": 2.29
+        },
+        {
+          "rank": 6,
+          "code": "002379",
+          "name": "宏桥控股",
+          "return_20d": 23.38,
+          "close_price": 11.98,
+          "rank_in_market": 393,
+          "circ_mv": 136.14,
+          "amount": 285.87,
+          "institution_score": 2.44
+        },
+        {
+          "rank": 7,
+          "code": "002824",
+          "name": "和胜股份",
+          "return_20d": 22.73,
+          "close_price": 20.57,
+          "rank_in_market": 419,
+          "circ_mv": 38.91,
+          "amount": 557.42,
+          "institution_score": 2.36
+        },
+        {
+          "rank": 8,
+          "code": "002114",
+          "name": "罗平锌电",
+          "return_20d": 20.89,
+          "close_price": 7.35,
+          "rank_in_market": 486,
+          "circ_mv": 23.77,
+          "amount": 326.61,
+          "institution_score": 1.39
+        },
+        {
+          "rank": 9,
+          "code": "600961",
+          "name": "株冶集团",
+          "return_20d": 17.78,
+          "close_price": 9.67,
+          "rank_in_market": 629,
+          "circ_mv": 72.7,
+          "amount": 653.73,
+          "institution_score": 3.06
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "sector_name": "计算机设备",
+      "momentum_score": 1.25,
+      "listed_count": 10,
+      "total_count": 80,
+      "listed_ratio": 12.5,
+      "avg_return_20d": 32.65,
+      "rank_change": -1,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300042",
+          "name": "朗科科技",
+          "return_20d": 62.26,
+          "close_price": 37.32,
+          "rank_in_market": 36,
+          "circ_mv": 74.79,
+          "amount": 1720.25,
+          "institution_score": 5.79
+        },
+        {
+          "rank": 2,
+          "code": "300248",
+          "name": "新开普",
+          "return_20d": 57.85,
+          "close_price": 19.1,
+          "rank_in_market": 44,
+          "circ_mv": 78.15,
+          "amount": 2984.49,
+          "institution_score": 5.83
+        },
+        {
+          "rank": 3,
+          "code": "688288",
+          "name": "鸿泉技术",
+          "return_20d": 51.01,
+          "close_price": 32.0,
+          "rank_in_market": 74,
+          "circ_mv": 32.21,
+          "amount": 192.01,
+          "institution_score": 1.01
+        },
+        {
+          "rank": 4,
+          "code": "002197",
+          "name": "证通电子",
+          "return_20d": 36.56,
+          "close_price": 6.2,
+          "rank_in_market": 140,
+          "circ_mv": 33.11,
+          "amount": 271.42,
+          "institution_score": 1.3
+        },
+        {
+          "rank": 5,
+          "code": "001339",
+          "name": "智微智能",
+          "return_20d": 22.23,
+          "close_price": 59.16,
+          "rank_in_market": 432,
+          "circ_mv": 43.26,
+          "amount": 1118.46,
+          "institution_score": 4.37
+        },
+        {
+          "rank": 6,
+          "code": "300324",
+          "name": "旋极信息",
+          "return_20d": 21.76,
+          "close_price": 4.98,
+          "rank_in_market": 445,
+          "circ_mv": 85.07,
+          "amount": 674.83,
+          "institution_score": 3.26
+        },
+        {
+          "rank": 7,
+          "code": "603496",
+          "name": "恒为科技",
+          "return_20d": 20.48,
+          "close_price": 34.0,
+          "rank_in_market": 504,
+          "circ_mv": 108.87,
+          "amount": 1294.0,
+          "institution_score": 5.68
+        },
+        {
+          "rank": 8,
+          "code": "605118",
+          "name": "力鼎光电",
+          "return_20d": 19.51,
+          "close_price": 22.85,
+          "rank_in_market": 546,
+          "circ_mv": 93.03,
+          "amount": 481.96,
+          "institution_score": 2.67
+        },
+        {
+          "rank": 9,
+          "code": "300275",
+          "name": "梅安森",
+          "return_20d": 17.44,
+          "close_price": 16.63,
+          "rank_in_market": 647,
+          "circ_mv": 42.49,
+          "amount": 373.47,
+          "institution_score": 1.76
+        },
+        {
+          "rank": 10,
+          "code": "300789",
+          "name": "唐源电气",
+          "return_20d": 17.42,
+          "close_price": 21.03,
+          "rank_in_market": 649,
+          "circ_mv": 20.78,
+          "amount": 303.47,
+          "institution_score": 1.28
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "sector_name": "半导体",
+      "momentum_score": 1.23,
+      "listed_count": 14,
+      "total_count": 159,
+      "listed_ratio": 8.8,
+      "avg_return_20d": 25.87,
+      "rank_change": 2,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "688521",
+          "name": "芯原股份",
+          "return_20d": 55.56,
+          "close_price": 86.71,
+          "rank_in_market": 54,
+          "circ_mv": 432.24,
+          "amount": 1420.92,
+          "institution_score": 9.55
+        },
+        {
+          "rank": 2,
+          "code": "688220",
+          "name": "翱捷科技-U",
+          "return_20d": 45.09,
+          "close_price": 104.0,
+          "rank_in_market": 95,
+          "circ_mv": 374.82,
+          "amount": 2283.56,
+          "institution_score": 8.97
+        },
+        {
+          "rank": 3,
+          "code": "688709",
+          "name": "成都华微",
+          "return_20d": 27.52,
+          "close_price": 36.65,
+          "rank_in_market": 279,
+          "circ_mv": 79.87,
+          "amount": 316.71,
+          "institution_score": 1.95
+        },
+        {
+          "rank": 4,
+          "code": "688234",
+          "name": "天岳先进",
+          "return_20d": 25.62,
+          "close_price": 72.07,
+          "rank_in_market": 329,
+          "circ_mv": 216.5,
+          "amount": 627.26,
+          "institution_score": 4.49
+        },
+        {
+          "rank": 5,
+          "code": "688200",
+          "name": "华峰测控",
+          "return_20d": 22.93,
+          "close_price": 148.22,
+          "rank_in_market": 410,
+          "circ_mv": 200.75,
+          "amount": 338.49,
+          "institution_score": 3.31
+        },
+        {
+          "rank": 6,
+          "code": "688385",
+          "name": "复旦微电",
+          "return_20d": 22.59,
+          "close_price": 50.85,
+          "rank_in_market": 423,
+          "circ_mv": 273.11,
+          "amount": 1213.63,
+          "institution_score": 7.14
+        },
+        {
+          "rank": 7,
+          "code": "001309",
+          "name": "德明利",
+          "return_20d": 22.35,
+          "close_price": 145.84,
+          "rank_in_market": 429,
+          "circ_mv": 127.81,
+          "amount": 957.93,
+          "institution_score": 4.7
+        },
+        {
+          "rank": 8,
+          "code": "688279",
+          "name": "峰岹科技",
+          "return_20d": 21.07,
+          "close_price": 267.01,
+          "rank_in_market": 474,
+          "circ_mv": 149.15,
+          "amount": 798.83,
+          "institution_score": 4.37
+        },
+        {
+          "rank": 9,
+          "code": "688110",
+          "name": "东芯股份",
+          "return_20d": 20.81,
+          "close_price": 32.74,
+          "rank_in_market": 489,
+          "circ_mv": 144.79,
+          "amount": 843.28,
+          "institution_score": 4.48
+        },
+        {
+          "rank": 10,
+          "code": "688536",
+          "name": "思瑞浦",
+          "return_20d": 20.48,
+          "close_price": 128.56,
+          "rank_in_market": 505,
+          "circ_mv": 170.47,
+          "amount": 381.01,
+          "institution_score": 3.14
+        },
+        {
+          "rank": 11,
+          "code": "688595",
+          "name": "芯海科技",
+          "return_20d": 20.33,
+          "close_price": 45.58,
+          "rank_in_market": 514,
+          "circ_mv": 64.92,
+          "amount": 293.17,
+          "institution_score": 1.71
+        },
+        {
+          "rank": 12,
+          "code": "688525",
+          "name": "佰维存储",
+          "return_20d": 20.07,
+          "close_price": 77.3,
+          "rank_in_market": 526,
+          "circ_mv": 245.28,
+          "amount": 1940.86,
+          "institution_score": 7.6
+        },
+        {
+          "rank": 13,
+          "code": "300458",
+          "name": "全志科技",
+          "return_20d": 19.7,
+          "close_price": 58.28,
+          "rank_in_market": 537,
+          "circ_mv": 301.87,
+          "amount": 2247.5,
+          "institution_score": 8.2
+        },
+        {
+          "rank": 14,
+          "code": "688661",
+          "name": "和林微纳",
+          "return_20d": 18.12,
+          "close_price": 53.98,
+          "rank_in_market": 617,
+          "circ_mv": 62.97,
+          "amount": 339.84,
+          "institution_score": 1.85
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "sector_name": "化学制药",
+      "momentum_score": 1.2,
+      "listed_count": 13,
+      "total_count": 141,
+      "listed_ratio": 9.2,
+      "avg_return_20d": 28.31,
+      "rank_change": 7,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "688166",
+          "name": "博瑞医药",
+          "return_20d": 45.5,
+          "close_price": 43.17,
+          "rank_in_market": 93,
+          "circ_mv": 182.38,
+          "amount": 444.15,
+          "institution_score": 3.48
+        },
+        {
+          "rank": 2,
+          "code": "300233",
+          "name": "金城医药",
+          "return_20d": 44.49,
+          "close_price": 19.0,
+          "rank_in_market": 98,
+          "circ_mv": 70.28,
+          "amount": 1529.44,
+          "institution_score": 5.74
+        },
+        {
+          "rank": 3,
+          "code": "688382",
+          "name": "益方生物-U",
+          "return_20d": 36.29,
+          "close_price": 17.05,
+          "rank_in_market": 147,
+          "circ_mv": 68.15,
+          "amount": 137.9,
+          "institution_score": 1.2
+        },
+        {
+          "rank": 4,
+          "code": "688266",
+          "name": "泽璟制药-U",
+          "return_20d": 34.62,
+          "close_price": 91.1,
+          "rank_in_market": 163,
+          "circ_mv": 241.15,
+          "amount": 217.7,
+          "institution_score": 3.32
+        },
+        {
+          "rank": 5,
+          "code": "300765",
+          "name": "新诺威",
+          "return_20d": 33.86,
+          "close_price": 37.0,
+          "rank_in_market": 168,
+          "circ_mv": 461.42,
+          "amount": 299.93,
+          "institution_score": 5.94
+        },
+        {
+          "rank": 6,
+          "code": "300723",
+          "name": "一品红",
+          "return_20d": 29.49,
+          "close_price": 24.02,
+          "rank_in_market": 252,
+          "circ_mv": 101.56,
+          "amount": 200.83,
+          "institution_score": 1.78
+        },
+        {
+          "rank": 7,
+          "code": "002755",
+          "name": "奥赛康",
+          "return_20d": 26.59,
+          "close_price": 16.28,
+          "rank_in_market": 304,
+          "circ_mv": 151.1,
+          "amount": 174.6,
+          "institution_score": 2.21
+        },
+        {
+          "rank": 8,
+          "code": "688091",
+          "name": "上海谊众",
+          "return_20d": 23.87,
+          "close_price": 42.45,
+          "rank_in_market": 377,
+          "circ_mv": 87.75,
+          "amount": 57.04,
+          "institution_score": 1.13
+        },
+        {
+          "rank": 9,
+          "code": "002102",
+          "name": "能特科技",
+          "return_20d": 22.34,
+          "close_price": 3.34,
+          "rank_in_market": 430,
+          "circ_mv": 77.82,
+          "amount": 169.28,
+          "institution_score": 1.42
+        },
+        {
+          "rank": 10,
+          "code": "300436",
+          "name": "广生堂",
+          "return_20d": 20.16,
+          "close_price": 37.25,
+          "rank_in_market": 522,
+          "circ_mv": 50.93,
+          "amount": 165.48,
+          "institution_score": 1.12
+        },
+        {
+          "rank": 11,
+          "code": "300966",
+          "name": "共同药业",
+          "return_20d": 17.09,
+          "close_price": 19.66,
+          "rank_in_market": 669,
+          "circ_mv": 15.07,
+          "amount": 254.87,
+          "institution_score": 1.05
+        },
+        {
+          "rank": 12,
+          "code": "688506",
+          "name": "百利天恒",
+          "return_20d": 17.0,
+          "close_price": 212.02,
+          "rank_in_market": 678,
+          "circ_mv": 195.21,
+          "amount": 173.75,
+          "institution_score": 2.68
+        },
+        {
+          "rank": 13,
+          "code": "002653",
+          "name": "海思科",
+          "return_20d": 16.79,
+          "close_price": 34.5,
+          "rank_in_market": 686,
+          "circ_mv": 184.86,
+          "amount": 90.72,
+          "institution_score": 2.28
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "sector_name": "专用设备",
+      "momentum_score": 1.16,
+      "listed_count": 14,
+      "total_count": 169,
+      "listed_ratio": 8.3,
+      "avg_return_20d": 32.59,
+      "rank_change": -10,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "301013",
+          "name": "利和兴",
+          "return_20d": 59.03,
+          "close_price": 19.37,
+          "rank_in_market": 41,
+          "circ_mv": 36.66,
+          "amount": 949.04,
+          "institution_score": 3.71
+        },
+        {
+          "rank": 2,
+          "code": "688700",
+          "name": "东威科技",
+          "return_20d": 54.57,
+          "close_price": 43.82,
+          "rank_in_market": 61,
+          "circ_mv": 130.76,
+          "amount": 395.2,
+          "institution_score": 2.77
+        },
+        {
+          "rank": 3,
+          "code": "605286",
+          "name": "同力天启",
+          "return_20d": 41.81,
+          "close_price": 45.62,
+          "rank_in_market": 107,
+          "circ_mv": 76.64,
+          "amount": 214.22,
+          "institution_score": 1.56
+        },
+        {
+          "rank": 4,
+          "code": "688022",
+          "name": "瀚川智能",
+          "return_20d": 36.92,
+          "close_price": 18.06,
+          "rank_in_market": 137,
+          "circ_mv": 31.76,
+          "amount": 451.57,
+          "institution_score": 1.91
+        },
+        {
+          "rank": 5,
+          "code": "301128",
+          "name": "强瑞技术",
+          "return_20d": 36.3,
+          "close_price": 86.03,
+          "rank_in_market": 146,
+          "circ_mv": 24.62,
+          "amount": 250.86,
+          "institution_score": 1.14
+        },
+        {
+          "rank": 6,
+          "code": "301063",
+          "name": "海锅股份",
+          "return_20d": 35.31,
+          "close_price": 23.03,
+          "rank_in_market": 153,
+          "circ_mv": 19.63,
+          "amount": 539.44,
+          "institution_score": 2.09
+        },
+        {
+          "rank": 7,
+          "code": "600835",
+          "name": "上海机电",
+          "return_20d": 30.93,
+          "close_price": 23.83,
+          "rank_in_market": 219,
+          "circ_mv": 192.19,
+          "amount": 573.36,
+          "institution_score": 4.04
+        },
+        {
+          "rank": 8,
+          "code": "002527",
+          "name": "新时达",
+          "return_20d": 29.63,
+          "close_price": 14.48,
+          "rank_in_market": 247,
+          "circ_mv": 76.63,
+          "amount": 495.26,
+          "institution_score": 2.54
+        },
+        {
+          "rank": 9,
+          "code": "688529",
+          "name": "豪森智能",
+          "return_20d": 27.43,
+          "close_price": 21.93,
+          "rank_in_market": 283,
+          "circ_mv": 36.69,
+          "amount": 256.65,
+          "institution_score": 1.29
+        },
+        {
+          "rank": 10,
+          "code": "002278",
+          "name": "神开股份",
+          "return_20d": 24.51,
+          "close_price": 7.01,
+          "rank_in_market": 356,
+          "circ_mv": 23.43,
+          "amount": 313.29,
+          "institution_score": 1.34
+        },
+        {
+          "rank": 11,
+          "code": "601717",
+          "name": "中创智领",
+          "return_20d": 21.16,
+          "close_price": 15.46,
+          "rank_in_market": 471,
+          "circ_mv": 238.42,
+          "amount": 684.21,
+          "institution_score": 4.92
+        },
+        {
+          "rank": 12,
+          "code": "688789",
+          "name": "宏华数科",
+          "return_20d": 21.04,
+          "close_price": 79.55,
+          "rank_in_market": 477,
+          "circ_mv": 142.75,
+          "amount": 223.34,
+          "institution_score": 2.29
+        },
+        {
+          "rank": 13,
+          "code": "300499",
+          "name": "高澜股份",
+          "return_20d": 20.06,
+          "close_price": 23.52,
+          "rank_in_market": 527,
+          "circ_mv": 63.84,
+          "amount": 1500.57,
+          "institution_score": 5.68
+        },
+        {
+          "rank": 14,
+          "code": "603081",
+          "name": "大丰实业",
+          "return_20d": 17.53,
+          "close_price": 15.35,
+          "rank_in_market": 640,
+          "circ_mv": 62.35,
+          "amount": 506.03,
+          "institution_score": 2.43
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "sector_name": "通信服务",
+      "momentum_score": 1.03,
+      "listed_count": 6,
+      "total_count": 35,
+      "listed_ratio": 17.1,
+      "avg_return_20d": 32.29,
+      "rank_change": -6,
+      "is_main_line": true,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300738",
+          "name": "奥飞数据",
+          "return_20d": 58.35,
+          "close_price": 27.6,
+          "rank_in_market": 42,
+          "circ_mv": 269.72,
+          "amount": 4851.43,
+          "institution_score": 7.86
+        },
+        {
+          "rank": 2,
+          "code": "301139",
+          "name": "元道通信",
+          "return_20d": 43.36,
+          "close_price": 37.0,
+          "rank_in_market": 103,
+          "circ_mv": 26.54,
+          "amount": 878.19,
+          "institution_score": 3.35
+        },
+        {
+          "rank": 3,
+          "code": "301382",
+          "name": "蜂助手",
+          "return_20d": 28.39,
+          "close_price": 53.73,
+          "rank_in_market": 269,
+          "circ_mv": 73.38,
+          "amount": 1344.11,
+          "institution_score": 5.48
+        },
+        {
+          "rank": 4,
+          "code": "603220",
+          "name": "中贝通信",
+          "return_20d": 23.93,
+          "close_price": 30.19,
+          "rank_in_market": 374,
+          "circ_mv": 131.02,
+          "amount": 2000.45,
+          "institution_score": 6.39
+        },
+        {
+          "rank": 5,
+          "code": "603206",
+          "name": "嘉环科技",
+          "return_20d": 22.91,
+          "close_price": 22.1,
+          "rank_in_market": 411,
+          "circ_mv": 19.27,
+          "amount": 1236.22,
+          "institution_score": 4.52
+        },
+        {
+          "rank": 6,
+          "code": "002929",
+          "name": "润建股份",
+          "return_20d": 16.77,
+          "close_price": 60.31,
+          "rank_in_market": 690,
+          "circ_mv": 128.64,
+          "amount": 1242.5,
+          "institution_score": 5.71
+        }
+      ]
+    },
+    {
+      "rank": 19,
+      "sector_name": "航海装备Ⅱ",
+      "momentum_score": 1.0,
+      "listed_count": 3,
+      "total_count": 9,
+      "listed_ratio": 33.3,
+      "avg_return_20d": 49.28,
+      "rank_change": 11,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300810",
+          "name": "中科海讯",
+          "return_20d": 79.95,
+          "close_price": 36.35,
+          "rank_in_market": 18,
+          "circ_mv": 41.43,
+          "amount": 894.32,
+          "institution_score": 3.56
+        },
+        {
+          "rank": 2,
+          "code": "300065",
+          "name": "海兰信",
+          "return_20d": 44.65,
+          "close_price": 15.42,
+          "rank_in_market": 97,
+          "circ_mv": 101.13,
+          "amount": 3216.57,
+          "institution_score": 6.07
+        },
+        {
+          "rank": 3,
+          "code": "600764",
+          "name": "中国海防",
+          "return_20d": 23.25,
+          "close_price": 32.6,
+          "rank_in_market": 398,
+          "circ_mv": 231.67,
+          "amount": 1085.34,
+          "institution_score": 6.25
+        }
+      ]
+    },
+    {
+      "rank": 20,
+      "sector_name": "饮料乳品",
+      "momentum_score": 0.96,
+      "listed_count": 5,
+      "total_count": 26,
+      "listed_ratio": 19.2,
+      "avg_return_20d": 22.25,
+      "rank_change": 0,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002910",
+          "name": "庄园牧场",
+          "return_20d": 25.44,
+          "close_price": 9.96,
+          "rank_in_market": 331,
+          "circ_mv": 17.04,
+          "amount": 316.8,
+          "institution_score": 1.29
+        },
+        {
+          "rank": 2,
+          "code": "300898",
+          "name": "熊猫乳品",
+          "return_20d": 24.36,
+          "close_price": 32.21,
+          "rank_in_market": 363,
+          "circ_mv": 36.96,
+          "amount": 635.86,
+          "institution_score": 2.61
+        },
+        {
+          "rank": 3,
+          "code": "600419",
+          "name": "天润乳业",
+          "return_20d": 21.54,
+          "close_price": 10.89,
+          "rank_in_market": 455,
+          "circ_mv": 34.87,
+          "amount": 260.61,
+          "institution_score": 1.28
+        },
+        {
+          "rank": 4,
+          "code": "300915",
+          "name": "海融科技",
+          "return_20d": 20.45,
+          "close_price": 37.64,
+          "rank_in_market": 507,
+          "circ_mv": 15.43,
+          "amount": 258.14,
+          "institution_score": 1.07
+        },
+        {
+          "rank": 5,
+          "code": "300106",
+          "name": "西部牧业",
+          "return_20d": 19.47,
+          "close_price": 10.8,
+          "rank_in_market": 551,
+          "circ_mv": 22.82,
+          "amount": 530.16,
+          "institution_score": 2.09
+        }
+      ]
+    },
+    {
+      "rank": 21,
+      "sector_name": "消费电子",
+      "momentum_score": 0.95,
+      "listed_count": 9,
+      "total_count": 85,
+      "listed_ratio": 10.6,
+      "avg_return_20d": 31.47,
+      "rank_change": -5,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002369",
+          "name": "卓翼科技",
+          "return_20d": 56.48,
+          "close_price": 12.8,
+          "rank_in_market": 50,
+          "circ_mv": 72.4,
+          "amount": 1996.99,
+          "institution_score": 5.77
+        },
+        {
+          "rank": 2,
+          "code": "301389",
+          "name": "隆扬电子",
+          "return_20d": 54.09,
+          "close_price": 28.6,
+          "rank_in_market": 64,
+          "circ_mv": 23.47,
+          "amount": 640.28,
+          "institution_score": 2.49
+        },
+        {
+          "rank": 3,
+          "code": "603629",
+          "name": "利通电子",
+          "return_20d": 31.62,
+          "close_price": 35.05,
+          "rank_in_market": 204,
+          "circ_mv": 89.31,
+          "amount": 2382.03,
+          "institution_score": 5.95
+        },
+        {
+          "rank": 4,
+          "code": "688678",
+          "name": "福立旺",
+          "return_20d": 31.06,
+          "close_price": 27.3,
+          "rank_in_market": 216,
+          "circ_mv": 68.14,
+          "amount": 226.63,
+          "institution_score": 1.51
+        },
+        {
+          "rank": 5,
+          "code": "300857",
+          "name": "协创数据",
+          "return_20d": 27.17,
+          "close_price": 130.03,
+          "rank_in_market": 287,
+          "circ_mv": 318.0,
+          "amount": 1581.97,
+          "institution_score": 8.37
+        },
+        {
+          "rank": 6,
+          "code": "600203",
+          "name": "福日电子",
+          "return_20d": 24.13,
+          "close_price": 12.5,
+          "rank_in_market": 370,
+          "circ_mv": 74.12,
+          "amount": 981.77,
+          "institution_score": 4.22
+        },
+        {
+          "rank": 7,
+          "code": "002993",
+          "name": "奥海科技",
+          "return_20d": 21.35,
+          "close_price": 46.1,
+          "rank_in_market": 461,
+          "circ_mv": 109.68,
+          "amount": 287.43,
+          "institution_score": 2.17
+        },
+        {
+          "rank": 8,
+          "code": "688210",
+          "name": "统联精密",
+          "return_20d": 18.9,
+          "close_price": 23.78,
+          "rank_in_market": 580,
+          "circ_mv": 25.54,
+          "amount": 262.37,
+          "institution_score": 1.19
+        },
+        {
+          "rank": 9,
+          "code": "300256",
+          "name": "星星科技",
+          "return_20d": 18.47,
+          "close_price": 5.26,
+          "rank_in_market": 601,
+          "circ_mv": 86.44,
+          "amount": 871.55,
+          "institution_score": 3.96
+        }
+      ]
+    },
+    {
+      "rank": 22,
+      "sector_name": "塑料",
+      "momentum_score": 0.93,
+      "listed_count": 8,
+      "total_count": 69,
+      "listed_ratio": 11.6,
+      "avg_return_20d": 28.07,
+      "rank_change": -8,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "301196",
+          "name": "唯科科技",
+          "return_20d": 50.59,
+          "close_price": 53.4,
+          "rank_in_market": 75,
+          "circ_mv": 35.92,
+          "amount": 271.23,
+          "institution_score": 1.33
+        },
+        {
+          "rank": 2,
+          "code": "605008",
+          "name": "长鸿高科",
+          "return_20d": 33.48,
+          "close_price": 15.39,
+          "rank_in_market": 174,
+          "circ_mv": 98.86,
+          "amount": 75.82,
+          "institution_score": 1.31
+        },
+        {
+          "rank": 3,
+          "code": "002361",
+          "name": "神剑股份",
+          "return_20d": 30.41,
+          "close_price": 6.99,
+          "rank_in_market": 229,
+          "circ_mv": 56.05,
+          "amount": 1762.54,
+          "institution_score": 5.59
+        },
+        {
+          "rank": 4,
+          "code": "002838",
+          "name": "道恩股份",
+          "return_20d": 26.98,
+          "close_price": 15.25,
+          "rank_in_market": 292,
+          "circ_mv": 59.52,
+          "amount": 355.59,
+          "institution_score": 1.87
+        },
+        {
+          "rank": 5,
+          "code": "002522",
+          "name": "浙江众成",
+          "return_20d": 23.91,
+          "close_price": 5.13,
+          "rank_in_market": 375,
+          "circ_mv": 44.58,
+          "amount": 204.39,
+          "institution_score": 1.19
+        },
+        {
+          "rank": 6,
+          "code": "300221",
+          "name": "银禧科技",
+          "return_20d": 21.55,
+          "close_price": 8.18,
+          "rank_in_market": 454,
+          "circ_mv": 37.01,
+          "amount": 174.81,
+          "institution_score": 1.0
+        },
+        {
+          "rank": 7,
+          "code": "605488",
+          "name": "福莱新材",
+          "return_20d": 19.7,
+          "close_price": 52.67,
+          "rank_in_market": 538,
+          "circ_mv": 101.7,
+          "amount": 576.92,
+          "institution_score": 3.09
+        },
+        {
+          "rank": 8,
+          "code": "601208",
+          "name": "东材科技",
+          "return_20d": 17.95,
+          "close_price": 9.92,
+          "rank_in_market": 624,
+          "circ_mv": 88.96,
+          "amount": 349.94,
+          "institution_score": 2.17
+        }
+      ]
+    },
+    {
+      "rank": 23,
+      "sector_name": "元件",
+      "momentum_score": 0.91,
+      "listed_count": 7,
+      "total_count": 54,
+      "listed_ratio": 13.0,
+      "avg_return_20d": 32.65,
+      "rank_change": -8,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "688519",
+          "name": "南亚新材",
+          "return_20d": 65.26,
+          "close_price": 40.29,
+          "rank_in_market": 33,
+          "circ_mv": 93.59,
+          "amount": 421.47,
+          "institution_score": 2.46
+        },
+        {
+          "rank": 2,
+          "code": "300476",
+          "name": "胜宏科技",
+          "return_20d": 46.48,
+          "close_price": 82.0,
+          "rank_in_market": 89,
+          "circ_mv": 701.27,
+          "amount": 6459.04,
+          "institution_score": 10.0
+        },
+        {
+          "rank": 3,
+          "code": "688655",
+          "name": "迅捷兴",
+          "return_20d": 30.47,
+          "close_price": 17.3,
+          "rank_in_market": 227,
+          "circ_mv": 23.08,
+          "amount": 309.07,
+          "institution_score": 1.32
+        },
+        {
+          "rank": 4,
+          "code": "300964",
+          "name": "本川智能",
+          "return_20d": 26.67,
+          "close_price": 48.06,
+          "rank_in_market": 301,
+          "circ_mv": 25.98,
+          "amount": 347.83,
+          "institution_score": 1.49
+        },
+        {
+          "rank": 5,
+          "code": "301366",
+          "name": "一博科技",
+          "return_20d": 22.06,
+          "close_price": 62.2,
+          "rank_in_market": 437,
+          "circ_mv": 34.03,
+          "amount": 414.36,
+          "institution_score": 1.81
+        },
+        {
+          "rank": 6,
+          "code": "002134",
+          "name": "天津普林",
+          "return_20d": 19.17,
+          "close_price": 22.63,
+          "rank_in_market": 568,
+          "circ_mv": 55.64,
+          "amount": 177.65,
+          "institution_score": 1.21
+        },
+        {
+          "rank": 7,
+          "code": "301176",
+          "name": "逸豪新材",
+          "return_20d": 18.45,
+          "close_price": 21.38,
+          "rank_in_market": 603,
+          "circ_mv": 12.05,
+          "amount": 329.23,
+          "institution_score": 1.28
+        }
+      ]
+    },
+    {
+      "rank": 24,
+      "sector_name": "IT服务Ⅱ",
+      "momentum_score": 0.89,
+      "listed_count": 10,
+      "total_count": 112,
+      "listed_ratio": 8.9,
+      "avg_return_20d": 39.47,
+      "rank_change": -2,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600589",
+          "name": "大位科技",
+          "return_20d": 69.85,
+          "close_price": 7.83,
+          "rank_in_market": 29,
+          "circ_mv": 115.76,
+          "amount": 2043.77,
+          "institution_score": 6.23
+        },
+        {
+          "rank": 2,
+          "code": "300895",
+          "name": "铜牛信息",
+          "return_20d": 55.96,
+          "close_price": 63.63,
+          "rank_in_market": 52,
+          "circ_mv": 87.92,
+          "amount": 1737.26,
+          "institution_score": 5.93
+        },
+        {
+          "rank": 3,
+          "code": "301396",
+          "name": "宏景科技",
+          "return_20d": 53.86,
+          "close_price": 77.7,
+          "rank_in_market": 65,
+          "circ_mv": 39.58,
+          "amount": 1046.2,
+          "institution_score": 4.08
+        },
+        {
+          "rank": 4,
+          "code": "000409",
+          "name": "云鼎科技",
+          "return_20d": 53.01,
+          "close_price": 15.5,
+          "rank_in_market": 67,
+          "circ_mv": 65.62,
+          "amount": 3040.24,
+          "institution_score": 5.7
+        },
+        {
+          "rank": 5,
+          "code": "300245",
+          "name": "天玑科技",
+          "return_20d": 40.3,
+          "close_price": 22.21,
+          "rank_in_market": 115,
+          "circ_mv": 69.13,
+          "amount": 1177.97,
+          "institution_score": 4.85
+        },
+        {
+          "rank": 6,
+          "code": "603887",
+          "name": "城地香江",
+          "return_20d": 32.58,
+          "close_price": 22.22,
+          "rank_in_market": 190,
+          "circ_mv": 132.27,
+          "amount": 1457.67,
+          "institution_score": 6.4
+        },
+        {
+          "rank": 7,
+          "code": "002195",
+          "name": "岩山科技",
+          "return_20d": 26.35,
+          "close_price": 6.33,
+          "rank_in_market": 311,
+          "circ_mv": 355.31,
+          "amount": 5221.5,
+          "institution_score": 8.76
+        },
+        {
+          "rank": 8,
+          "code": "300687",
+          "name": "赛意信息",
+          "return_20d": 24.02,
+          "close_price": 30.67,
+          "rank_in_market": 372,
+          "circ_mv": 99.79,
+          "amount": 947.97,
+          "institution_score": 4.37
+        },
+        {
+          "rank": 9,
+          "code": "000815",
+          "name": "美利云",
+          "return_20d": 21.24,
+          "close_price": 14.44,
+          "rank_in_market": 467,
+          "circ_mv": 100.4,
+          "amount": 787.25,
+          "institution_score": 3.82
+        },
+        {
+          "rank": 10,
+          "code": "002380",
+          "name": "科远智慧",
+          "return_20d": 17.53,
+          "close_price": 27.83,
+          "rank_in_market": 639,
+          "circ_mv": 39.58,
+          "amount": 176.05,
+          "institution_score": 1.03
+        }
+      ]
+    },
+    {
+      "rank": 25,
+      "sector_name": "家电零部件Ⅱ",
+      "momentum_score": 0.83,
+      "listed_count": 5,
+      "total_count": 30,
+      "listed_ratio": 16.7,
+      "avg_return_20d": 36.52,
+      "rank_change": 2,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "603677",
+          "name": "奇精机械",
+          "return_20d": 49.68,
+          "close_price": 21.18,
+          "rank_in_market": 80,
+          "circ_mv": 40.79,
+          "amount": 263.37,
+          "institution_score": 1.35
+        },
+        {
+          "rank": 2,
+          "code": "002290",
+          "name": "禾盛新材",
+          "return_20d": 49.2,
+          "close_price": 26.96,
+          "rank_in_market": 82,
+          "circ_mv": 66.66,
+          "amount": 295.02,
+          "institution_score": 1.74
+        },
+        {
+          "rank": 3,
+          "code": "300403",
+          "name": "汉宇集团",
+          "return_20d": 33.71,
+          "close_price": 17.81,
+          "rank_in_market": 170,
+          "circ_mv": 75.33,
+          "amount": 1106.8,
+          "institution_score": 4.67
+        },
+        {
+          "rank": 4,
+          "code": "301008",
+          "name": "宏昌科技",
+          "return_20d": 27.12,
+          "close_price": 25.31,
+          "rank_in_market": 288,
+          "circ_mv": 24.5,
+          "amount": 245.29,
+          "institution_score": 1.12
+        },
+        {
+          "rank": 5,
+          "code": "300543",
+          "name": "朗科智能",
+          "return_20d": 22.9,
+          "close_price": 14.06,
+          "rank_in_market": 412,
+          "circ_mv": 29.7,
+          "amount": 355.66,
+          "institution_score": 1.56
+        }
+      ]
+    },
+    {
+      "rank": 26,
+      "sector_name": "通信设备",
+      "momentum_score": 0.78,
+      "listed_count": 8,
+      "total_count": 82,
+      "listed_ratio": 9.8,
+      "avg_return_20d": 29.38,
+      "rank_change": -6,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "688182",
+          "name": "灿勤科技",
+          "return_20d": 69.99,
+          "close_price": 31.72,
+          "rank_in_market": 28,
+          "circ_mv": 126.88,
+          "amount": 265.67,
+          "institution_score": 2.27
+        },
+        {
+          "rank": 2,
+          "code": "301191",
+          "name": "菲菱科思",
+          "return_20d": 32.28,
+          "close_price": 129.01,
+          "rank_in_market": 195,
+          "circ_mv": 33.8,
+          "amount": 598.75,
+          "institution_score": 2.45
+        },
+        {
+          "rank": 3,
+          "code": "300353",
+          "name": "东土科技",
+          "return_20d": 28.77,
+          "close_price": 16.65,
+          "rank_in_market": 260,
+          "circ_mv": 86.95,
+          "amount": 1309.45,
+          "institution_score": 5.5
+        },
+        {
+          "rank": 4,
+          "code": "688143",
+          "name": "长盈通",
+          "return_20d": 22.22,
+          "close_price": 36.85,
+          "rank_in_market": 434,
+          "circ_mv": 34.83,
+          "amount": 188.26,
+          "institution_score": 1.03
+        },
+        {
+          "rank": 5,
+          "code": "300134",
+          "name": "大富科技",
+          "return_20d": 21.62,
+          "close_price": 15.47,
+          "rank_in_market": 451,
+          "circ_mv": 110.21,
+          "amount": 909.43,
+          "institution_score": 4.35
+        },
+        {
+          "rank": 6,
+          "code": "300565",
+          "name": "科信技术",
+          "return_20d": 21.43,
+          "close_price": 15.07,
+          "rank_in_market": 457,
+          "circ_mv": 34.3,
+          "amount": 995.48,
+          "institution_score": 3.84
+        },
+        {
+          "rank": 7,
+          "code": "300183",
+          "name": "东软载波",
+          "return_20d": 21.21,
+          "close_price": 21.2,
+          "rank_in_market": 468,
+          "circ_mv": 76.11,
+          "amount": 464.3,
+          "institution_score": 2.43
+        },
+        {
+          "rank": 8,
+          "code": "600734",
+          "name": "实达集团",
+          "return_20d": 17.49,
+          "close_price": 5.24,
+          "rank_in_market": 644,
+          "circ_mv": 113.63,
+          "amount": 972.06,
+          "institution_score": 4.6
+        }
+      ]
+    },
+    {
+      "rank": 27,
+      "sector_name": "个护用品",
+      "momentum_score": 0.75,
+      "listed_count": 3,
+      "total_count": 12,
+      "listed_ratio": 25.0,
+      "avg_return_20d": 22.39,
+      "rank_change": 32,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "603193",
+          "name": "润本股份",
+          "return_20d": 28.72,
+          "close_price": 36.53,
+          "rank_in_market": 262,
+          "circ_mv": 37.75,
+          "amount": 276.69,
+          "institution_score": 1.37
+        },
+        {
+          "rank": 2,
+          "code": "300888",
+          "name": "稳健医疗",
+          "return_20d": 20.76,
+          "close_price": 46.76,
+          "rank_in_market": 494,
+          "circ_mv": 82.07,
+          "amount": 635.13,
+          "institution_score": 3.09
+        },
+        {
+          "rank": 3,
+          "code": "301009",
+          "name": "可靠股份",
+          "return_20d": 17.68,
+          "close_price": 13.18,
+          "rank_in_market": 633,
+          "circ_mv": 16.49,
+          "amount": 355.21,
+          "institution_score": 1.42
+        }
+      ]
+    },
+    {
+      "rank": 28,
+      "sector_name": "工程机械",
+      "momentum_score": 0.57,
+      "listed_count": 4,
+      "total_count": 28,
+      "listed_ratio": 14.3,
+      "avg_return_20d": 23.79,
+      "rank_change": 6,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "301079",
+          "name": "邵阳液压",
+          "return_20d": 31.68,
+          "close_price": 21.2,
+          "rank_in_market": 203,
+          "circ_mv": 14.61,
+          "amount": 410.39,
+          "institution_score": 1.59
+        },
+        {
+          "rank": 2,
+          "code": "601100",
+          "name": "恒立液压",
+          "return_20d": 24.32,
+          "close_price": 87.71,
+          "rank_in_market": 366,
+          "circ_mv": 1176.03,
+          "amount": 2224.95,
+          "institution_score": 10.0
+        },
+        {
+          "rank": 3,
+          "code": "600984",
+          "name": "建设机械",
+          "return_20d": 21.13,
+          "close_price": 4.07,
+          "rank_in_market": 472,
+          "circ_mv": 51.16,
+          "amount": 204.2,
+          "institution_score": 1.26
+        },
+        {
+          "rank": 4,
+          "code": "600031",
+          "name": "三一重工",
+          "return_20d": 18.03,
+          "close_price": 20.49,
+          "rank_in_market": 619,
+          "circ_mv": 1734.32,
+          "amount": 2473.33,
+          "institution_score": 10.0
+        }
+      ]
+    },
+    {
+      "rank": 29,
+      "sector_name": "白酒Ⅱ",
+      "momentum_score": 0.47,
+      "listed_count": 3,
+      "total_count": 19,
+      "listed_ratio": 15.8,
+      "avg_return_20d": 18.36,
+      "rank_change": 46,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "000568",
+          "name": "泸州老窖",
+          "return_20d": 19.19,
+          "close_price": 143.61,
+          "rank_in_market": 565,
+          "circ_mv": 2110.13,
+          "amount": 4094.53,
+          "institution_score": 10.0
+        },
+        {
+          "rank": 2,
+          "code": "603369",
+          "name": "今世缘",
+          "return_20d": 18.72,
+          "close_price": 56.37,
+          "rank_in_market": 592,
+          "circ_mv": 702.82,
+          "amount": 693.81,
+          "institution_score": 7.42
+        },
+        {
+          "rank": 3,
+          "code": "000596",
+          "name": "古井贡酒",
+          "return_20d": 17.16,
+          "close_price": 193.54,
+          "rank_in_market": 660,
+          "circ_mv": 790.8,
+          "amount": 862.79,
+          "institution_score": 8.02
+        }
+      ]
+    },
+    {
+      "rank": 30,
+      "sector_name": "化学原料",
+      "momentum_score": 0.45,
+      "listed_count": 5,
+      "total_count": 56,
+      "listed_ratio": 8.9,
+      "avg_return_20d": 21.57,
+      "rank_change": -1,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600610",
+          "name": "中毅达",
+          "return_20d": 25.4,
+          "close_price": 5.43,
+          "rank_in_market": 333,
+          "circ_mv": 38.48,
+          "amount": 586.26,
+          "institution_score": 2.46
+        },
+        {
+          "rank": 2,
+          "code": "603663",
+          "name": "三祥新材",
+          "return_20d": 21.41,
+          "close_price": 24.55,
+          "rank_in_market": 458,
+          "circ_mv": 103.8,
+          "amount": 521.46,
+          "institution_score": 2.92
+        },
+        {
+          "rank": 3,
+          "code": "600714",
+          "name": "金瑞矿业",
+          "return_20d": 21.29,
+          "close_price": 12.42,
+          "rank_in_market": 463,
+          "circ_mv": 35.79,
+          "amount": 391.22,
+          "institution_score": 1.75
+        },
+        {
+          "rank": 4,
+          "code": "603067",
+          "name": "振华股份",
+          "return_20d": 21.0,
+          "close_price": 18.09,
+          "rank_in_market": 479,
+          "circ_mv": 92.08,
+          "amount": 337.83,
+          "institution_score": 2.16
+        },
+        {
+          "rank": 5,
+          "code": "600367",
+          "name": "红星发展",
+          "return_20d": 18.75,
+          "close_price": 15.45,
+          "rank_in_market": 589,
+          "circ_mv": 49.74,
+          "amount": 523.8,
+          "institution_score": 2.36
+        }
+      ]
+    },
+    {
+      "rank": 31,
+      "sector_name": "光学光电子",
+      "momentum_score": 0.41,
+      "listed_count": 6,
+      "total_count": 88,
+      "listed_ratio": 6.8,
+      "avg_return_20d": 27.66,
+      "rank_change": -10,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "003019",
+          "name": "宸展光电",
+          "return_20d": 35.83,
+          "close_price": 35.9,
+          "rank_in_market": 151,
+          "circ_mv": 60.47,
+          "amount": 196.77,
+          "institution_score": 1.33
+        },
+        {
+          "rank": 2,
+          "code": "301379",
+          "name": "天山电子",
+          "return_20d": 35.06,
+          "close_price": 32.86,
+          "rank_in_market": 157,
+          "circ_mv": 30.7,
+          "amount": 275.53,
+          "institution_score": 1.29
+        },
+        {
+          "rank": 3,
+          "code": "300076",
+          "name": "GQY视讯",
+          "return_20d": 28.69,
+          "close_price": 9.15,
+          "rank_in_market": 263,
+          "circ_mv": 38.8,
+          "amount": 445.08,
+          "institution_score": 1.97
+        },
+        {
+          "rank": 4,
+          "code": "002992",
+          "name": "宝明科技",
+          "return_20d": 24.39,
+          "close_price": 76.04,
+          "rank_in_market": 361,
+          "circ_mv": 119.54,
+          "amount": 224.57,
+          "institution_score": 2.05
+        },
+        {
+          "rank": 5,
+          "code": "002745",
+          "name": "木林森",
+          "return_20d": 21.07,
+          "close_price": 9.94,
+          "rank_in_market": 473,
+          "circ_mv": 105.83,
+          "amount": 448.31,
+          "institution_score": 2.69
+        },
+        {
+          "rank": 6,
+          "code": "300752",
+          "name": "隆利科技",
+          "return_20d": 20.92,
+          "close_price": 22.95,
+          "rank_in_market": 483,
+          "circ_mv": 35.34,
+          "amount": 248.74,
+          "institution_score": 1.24
+        }
+      ]
+    },
+    {
+      "rank": 32,
+      "sector_name": "普钢",
+      "momentum_score": 0.41,
+      "listed_count": 3,
+      "total_count": 22,
+      "listed_ratio": 13.6,
+      "avg_return_20d": 20.73,
+      "rank_change": -14,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002110",
+          "name": "三钢闽光",
+          "return_20d": 22.61,
+          "close_price": 4.23,
+          "rank_in_market": 422,
+          "circ_mv": 102.75,
+          "amount": 145.62,
+          "institution_score": 1.6
+        },
+        {
+          "rank": 2,
+          "code": "600782",
+          "name": "新钢股份",
+          "return_20d": 20.89,
+          "close_price": 4.63,
+          "rank_in_market": 485,
+          "circ_mv": 145.64,
+          "amount": 229.06,
+          "institution_score": 2.34
+        },
+        {
+          "rank": 3,
+          "code": "000932",
+          "name": "华菱钢铁",
+          "return_20d": 18.69,
+          "close_price": 5.27,
+          "rank_in_market": 593,
+          "circ_mv": 364.08,
+          "amount": 483.21,
+          "institution_score": 5.55
+        }
+      ]
+    },
+    {
+      "rank": 33,
+      "sector_name": "家居用品",
+      "momentum_score": 0.39,
+      "listed_count": 5,
+      "total_count": 64,
+      "listed_ratio": 7.8,
+      "avg_return_20d": 29.33,
+      "rank_change": 6,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "301336",
+          "name": "趣睡科技",
+          "return_20d": 39.73,
+          "close_price": 81.46,
+          "rank_in_market": 117,
+          "circ_mv": 20.97,
+          "amount": 297.59,
+          "institution_score": 1.26
+        },
+        {
+          "rank": 2,
+          "code": "002162",
+          "name": "悦心健康",
+          "return_20d": 34.04,
+          "close_price": 5.08,
+          "rank_in_market": 166,
+          "circ_mv": 46.77,
+          "amount": 567.35,
+          "institution_score": 2.48
+        },
+        {
+          "rank": 3,
+          "code": "603992",
+          "name": "松霖科技",
+          "return_20d": 32.92,
+          "close_price": 24.63,
+          "rank_in_market": 184,
+          "circ_mv": 103.53,
+          "amount": 137.72,
+          "institution_score": 1.58
+        },
+        {
+          "rank": 4,
+          "code": "603326",
+          "name": "我乐家居",
+          "return_20d": 20.47,
+          "close_price": 8.12,
+          "rank_in_market": 506,
+          "circ_mv": 25.92,
+          "amount": 217.04,
+          "institution_score": 1.03
+        },
+        {
+          "rank": 5,
+          "code": "605155",
+          "name": "西大门",
+          "return_20d": 19.51,
+          "close_price": 13.05,
+          "rank_in_market": 547,
+          "circ_mv": 24.68,
+          "amount": 304.89,
+          "institution_score": 1.33
+        }
+      ]
+    },
+    {
+      "rank": 34,
+      "sector_name": "航空装备Ⅱ",
+      "momentum_score": 0.37,
+      "listed_count": 4,
+      "total_count": 43,
+      "listed_ratio": 9.3,
+      "avg_return_20d": 23.36,
+      "rank_change": -8,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300395",
+          "name": "菲利华",
+          "return_20d": 29.88,
+          "close_price": 46.42,
+          "rank_in_market": 242,
+          "circ_mv": 238.35,
+          "amount": 409.93,
+          "institution_score": 3.96
+        },
+        {
+          "rank": 2,
+          "code": "300777",
+          "name": "中简科技",
+          "return_20d": 26.91,
+          "close_price": 36.79,
+          "rank_in_market": 296,
+          "circ_mv": 155.89,
+          "amount": 615.99,
+          "institution_score": 3.8
+        },
+        {
+          "rank": 3,
+          "code": "002389",
+          "name": "航天彩虹",
+          "return_20d": 19.43,
+          "close_price": 21.51,
+          "rank_in_market": 556,
+          "circ_mv": 213.13,
+          "amount": 513.13,
+          "institution_score": 4.05
+        },
+        {
+          "rank": 4,
+          "code": "600316",
+          "name": "洪都航空",
+          "return_20d": 17.24,
+          "close_price": 37.94,
+          "rank_in_market": 654,
+          "circ_mv": 272.07,
+          "amount": 686.04,
+          "institution_score": 5.28
+        }
+      ]
+    },
+    {
+      "rank": 35,
+      "sector_name": "风电设备",
+      "momentum_score": 0.35,
+      "listed_count": 3,
+      "total_count": 26,
+      "listed_ratio": 11.5,
+      "avg_return_20d": 18.54,
+      "rank_change": 8,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300850",
+          "name": "新强联",
+          "return_20d": 19.66,
+          "close_price": 26.36,
+          "rank_in_market": 540,
+          "circ_mv": 64.7,
+          "amount": 105.15,
+          "institution_score": 1.05
+        },
+        {
+          "rank": 2,
+          "code": "603507",
+          "name": "振江股份",
+          "return_20d": 18.8,
+          "close_price": 26.73,
+          "rank_in_market": 585,
+          "circ_mv": 49.26,
+          "amount": 142.56,
+          "institution_score": 1.02
+        },
+        {
+          "rank": 3,
+          "code": "603985",
+          "name": "恒润股份",
+          "return_20d": 17.16,
+          "close_price": 15.16,
+          "rank_in_market": 661,
+          "circ_mv": 66.83,
+          "amount": 595.57,
+          "institution_score": 2.79
+        }
+      ]
+    },
+    {
+      "rank": 36,
+      "sector_name": "专业服务",
+      "momentum_score": 0.33,
+      "listed_count": 3,
+      "total_count": 27,
+      "listed_ratio": 11.1,
+      "avg_return_20d": 34.18,
+      "rank_change": -4,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300938",
+          "name": "信测标准",
+          "return_20d": 47.07,
+          "close_price": 44.4,
+          "rank_in_market": 88,
+          "circ_mv": 50.05,
+          "amount": 894.95,
+          "institution_score": 3.66
+        },
+        {
+          "rank": 2,
+          "code": "300662",
+          "name": "科锐国际",
+          "return_20d": 30.37,
+          "close_price": 34.3,
+          "rank_in_market": 231,
+          "circ_mv": 67.33,
+          "amount": 292.69,
+          "institution_score": 1.74
+        },
+        {
+          "rank": 3,
+          "code": "300416",
+          "name": "苏试试验",
+          "return_20d": 25.11,
+          "close_price": 14.7,
+          "rank_in_market": 341,
+          "circ_mv": 74.26,
+          "amount": 451.91,
+          "institution_score": 2.37
+        }
+      ]
+    },
+    {
+      "rank": 37,
+      "sector_name": "饰品",
+      "momentum_score": 0.31,
+      "listed_count": 2,
+      "total_count": 13,
+      "listed_ratio": 15.4,
+      "avg_return_20d": 44.62,
+      "rank_change": -13,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002345",
+          "name": "潮宏基",
+          "return_20d": 52.89,
+          "close_price": 8.99,
+          "rank_in_market": 68,
+          "circ_mv": 77.95,
+          "amount": 553.91,
+          "institution_score": 2.76
+        },
+        {
+          "rank": 2,
+          "code": "301177",
+          "name": "迪阿股份",
+          "return_20d": 36.35,
+          "close_price": 33.95,
+          "rank_in_market": 144,
+          "circ_mv": 13.58,
+          "amount": 331.94,
+          "institution_score": 1.3
+        }
+      ]
+    },
+    {
+      "rank": 38,
+      "sector_name": "纺织制造",
+      "momentum_score": 0.3,
+      "listed_count": 3,
+      "total_count": 30,
+      "listed_ratio": 10.0,
+      "avg_return_20d": 42.3,
+      "rank_change": -3,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300819",
+          "name": "聚杰微纤",
+          "return_20d": 82.12,
+          "close_price": 24.04,
+          "rank_in_market": 15,
+          "circ_mv": 32.4,
+          "amount": 316.04,
+          "institution_score": 1.45
+        },
+        {
+          "rank": 2,
+          "code": "002042",
+          "name": "华孚时尚",
+          "return_20d": 24.34,
+          "close_price": 6.64,
+          "rank_in_market": 365,
+          "circ_mv": 112.93,
+          "amount": 485.22,
+          "institution_score": 2.89
+        },
+        {
+          "rank": 3,
+          "code": "300918",
+          "name": "南山智尚",
+          "return_20d": 20.44,
+          "close_price": 16.85,
+          "rank_in_market": 508,
+          "circ_mv": 69.46,
+          "amount": 437.62,
+          "institution_score": 2.27
+        }
+      ]
+    },
+    {
+      "rank": 39,
+      "sector_name": "其他电子Ⅱ",
+      "momentum_score": 0.29,
+      "listed_count": 3,
+      "total_count": 31,
+      "listed_ratio": 9.7,
+      "avg_return_20d": 24.71,
+      "rank_change": -2,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300475",
+          "name": "香农芯创",
+          "return_20d": 38.41,
+          "close_price": 43.28,
+          "rank_in_market": 127,
+          "circ_mv": 190.54,
+          "amount": 2344.35,
+          "institution_score": 7.02
+        },
+        {
+          "rank": 2,
+          "code": "301099",
+          "name": "雅创电子",
+          "return_20d": 18.03,
+          "close_price": 53.35,
+          "rank_in_market": 620,
+          "circ_mv": 34.97,
+          "amount": 396.22,
+          "institution_score": 1.76
+        },
+        {
+          "rank": 3,
+          "code": "301031",
+          "name": "中熔电气",
+          "return_20d": 17.68,
+          "close_price": 137.09,
+          "rank_in_market": 634,
+          "circ_mv": 65.35,
+          "amount": 327.01,
+          "institution_score": 1.84
+        }
+      ]
+    },
+    {
+      "rank": 40,
+      "sector_name": "化妆品",
+      "momentum_score": 0.29,
+      "listed_count": 2,
+      "total_count": 14,
+      "listed_ratio": 14.3,
+      "avg_return_20d": 20.57,
+      "rank_change": 25,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600315",
+          "name": "上海家化",
+          "return_20d": 21.84,
+          "close_price": 19.64,
+          "rank_in_market": 442,
+          "circ_mv": 132.03,
+          "amount": 137.25,
+          "institution_score": 1.88
+        },
+        {
+          "rank": 2,
+          "code": "603983",
+          "name": "丸美生物",
+          "return_20d": 19.31,
+          "close_price": 36.15,
+          "rank_in_market": 561,
+          "circ_mv": 144.96,
+          "amount": 102.0,
+          "institution_score": 1.89
+        }
+      ]
+    },
+    {
+      "rank": 41,
+      "sector_name": "摩托车及其他",
+      "momentum_score": 0.27,
+      "listed_count": 2,
+      "total_count": 15,
+      "listed_ratio": 13.3,
+      "avg_return_20d": 82.19,
+      "rank_change": -3,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002105",
+          "name": "信隆健康",
+          "return_20d": 129.76,
+          "close_price": 12.43,
+          "rank_in_market": 3,
+          "circ_mv": 45.3,
+          "amount": 1427.32,
+          "institution_score": 5.47
+        },
+        {
+          "rank": 2,
+          "code": "003033",
+          "name": "征和工业",
+          "return_20d": 34.63,
+          "close_price": 43.97,
+          "rank_in_market": 162,
+          "circ_mv": 35.44,
+          "amount": 239.69,
+          "institution_score": 1.21
+        }
+      ]
+    },
+    {
+      "rank": 42,
+      "sector_name": "电子化学品Ⅱ",
+      "momentum_score": 0.27,
+      "listed_count": 3,
+      "total_count": 33,
+      "listed_ratio": 9.1,
+      "avg_return_20d": 26.2,
+      "rank_change": 7,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "603931",
+          "name": "格林达",
+          "return_20d": 32.97,
+          "close_price": 30.69,
+          "rank_in_market": 183,
+          "circ_mv": 61.24,
+          "amount": 201.53,
+          "institution_score": 1.35
+        },
+        {
+          "rank": 2,
+          "code": "688359",
+          "name": "三孚新科",
+          "return_20d": 24.59,
+          "close_price": 57.25,
+          "rank_in_market": 353,
+          "circ_mv": 53.57,
+          "amount": 152.45,
+          "institution_score": 1.1
+        },
+        {
+          "rank": 3,
+          "code": "688550",
+          "name": "瑞联新材",
+          "return_20d": 21.04,
+          "close_price": 38.77,
+          "rank_in_market": 476,
+          "circ_mv": 66.73,
+          "amount": 207.58,
+          "institution_score": 1.43
+        }
+      ]
+    },
+    {
+      "rank": 43,
+      "sector_name": "一般零售",
+      "momentum_score": 0.27,
+      "listed_count": 4,
+      "total_count": 59,
+      "listed_ratio": 6.8,
+      "avg_return_20d": 22.68,
+      "rank_change": 1,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600693",
+          "name": "东百集团",
+          "return_20d": 28.08,
+          "close_price": 7.48,
+          "rank_in_market": 273,
+          "circ_mv": 65.0,
+          "amount": 1128.8,
+          "institution_score": 4.63
+        },
+        {
+          "rank": 2,
+          "code": "002277",
+          "name": "友阿股份",
+          "return_20d": 21.25,
+          "close_price": 6.22,
+          "rank_in_market": 464,
+          "circ_mv": 86.72,
+          "amount": 725.73,
+          "institution_score": 3.46
+        },
+        {
+          "rank": 3,
+          "code": "600729",
+          "name": "重庆百货",
+          "return_20d": 20.75,
+          "close_price": 33.64,
+          "rank_in_market": 496,
+          "circ_mv": 64.32,
+          "amount": 621.08,
+          "institution_score": 2.85
+        },
+        {
+          "rank": 4,
+          "code": "600738",
+          "name": "丽尚国潮",
+          "return_20d": 20.65,
+          "close_price": 5.96,
+          "rank_in_market": 501,
+          "circ_mv": 45.34,
+          "amount": 720.77,
+          "institution_score": 3.0
+        }
+      ]
+    },
+    {
+      "rank": 44,
+      "sector_name": "环境治理",
+      "momentum_score": 0.25,
+      "listed_count": 5,
+      "total_count": 102,
+      "listed_ratio": 4.9,
+      "avg_return_20d": 30.76,
+      "rank_change": -16,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300961",
+          "name": "深水海纳",
+          "return_20d": 55.14,
+          "close_price": 16.15,
+          "rank_in_market": 57,
+          "circ_mv": 24.39,
+          "amount": 1038.36,
+          "institution_score": 3.89
+        },
+        {
+          "rank": 2,
+          "code": "603200",
+          "name": "上海洗霸",
+          "return_20d": 34.74,
+          "close_price": 37.39,
+          "rank_in_market": 160,
+          "circ_mv": 65.61,
+          "amount": 498.38,
+          "institution_score": 2.44
+        },
+        {
+          "rank": 3,
+          "code": "603588",
+          "name": "高能环境",
+          "return_20d": 23.6,
+          "close_price": 6.39,
+          "rank_in_market": 389,
+          "circ_mv": 97.33,
+          "amount": 1036.91,
+          "institution_score": 4.66
+        },
+        {
+          "rank": 4,
+          "code": "300779",
+          "name": "惠城环保",
+          "return_20d": 20.96,
+          "close_price": 136.2,
+          "rank_in_market": 481,
+          "circ_mv": 213.21,
+          "amount": 375.34,
+          "institution_score": 3.57
+        },
+        {
+          "rank": 5,
+          "code": "002034",
+          "name": "旺能环境",
+          "return_20d": 19.37,
+          "close_price": 17.56,
+          "rank_in_market": 557,
+          "circ_mv": 74.46,
+          "amount": 82.38,
+          "institution_score": 1.08
+        }
+      ]
+    },
+    {
+      "rank": 45,
+      "sector_name": "专业工程",
+      "momentum_score": 0.24,
+      "listed_count": 3,
+      "total_count": 38,
+      "listed_ratio": 7.9,
+      "avg_return_20d": 29.56,
+      "rank_change": -4,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300986",
+          "name": "志特新材",
+          "return_20d": 54.95,
+          "close_price": 21.15,
+          "rank_in_market": 59,
+          "circ_mv": 53.83,
+          "amount": 605.91,
+          "institution_score": 2.69
+        },
+        {
+          "rank": 2,
+          "code": "002541",
+          "name": "鸿路钢构",
+          "return_20d": 16.94,
+          "close_price": 19.74,
+          "rank_in_market": 680,
+          "circ_mv": 97.94,
+          "amount": 137.24,
+          "institution_score": 1.52
+        },
+        {
+          "rank": 3,
+          "code": "603929",
+          "name": "亚翔集成",
+          "return_20d": 16.79,
+          "close_price": 36.66,
+          "rank_in_market": 687,
+          "circ_mv": 78.22,
+          "amount": 334.17,
+          "institution_score": 2.0
+        }
+      ]
+    },
+    {
+      "rank": 46,
+      "sector_name": "医疗器械",
+      "momentum_score": 0.2,
+      "listed_count": 5,
+      "total_count": 124,
+      "listed_ratio": 4.0,
+      "avg_return_20d": 26.58,
+      "rank_change": 1,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "688393",
+          "name": "安必平",
+          "return_20d": 31.48,
+          "close_price": 40.39,
+          "rank_in_market": 209,
+          "circ_mv": 37.79,
+          "amount": 278.22,
+          "institution_score": 1.37
+        },
+        {
+          "rank": 2,
+          "code": "688068",
+          "name": "热景生物",
+          "return_20d": 29.5,
+          "close_price": 83.24,
+          "rank_in_market": 250,
+          "circ_mv": 76.98,
+          "amount": 159.24,
+          "institution_score": 1.37
+        },
+        {
+          "rank": 3,
+          "code": "688626",
+          "name": "翔宇医疗",
+          "return_20d": 26.89,
+          "close_price": 42.8,
+          "rank_in_market": 297,
+          "circ_mv": 68.48,
+          "amount": 89.65,
+          "institution_score": 1.04
+        },
+        {
+          "rank": 4,
+          "code": "688114",
+          "name": "华大智造",
+          "return_20d": 25.89,
+          "close_price": 89.61,
+          "rank_in_market": 323,
+          "circ_mv": 190.81,
+          "amount": 384.26,
+          "institution_score": 3.36
+        },
+        {
+          "rank": 5,
+          "code": "300314",
+          "name": "戴维医疗",
+          "return_20d": 19.14,
+          "close_price": 13.88,
+          "rank_in_market": 571,
+          "circ_mv": 26.28,
+          "amount": 442.47,
+          "institution_score": 1.82
+        }
+      ]
+    },
+    {
+      "rank": 47,
+      "sector_name": "休闲食品",
+      "momentum_score": 0.19,
+      "listed_count": 2,
+      "total_count": 21,
+      "listed_ratio": 9.5,
+      "avg_return_20d": 18.45,
+      "rank_change": 29,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300973",
+          "name": "立高食品",
+          "return_20d": 19.5,
+          "close_price": 45.6,
+          "rank_in_market": 549,
+          "circ_mv": 51.9,
+          "amount": 340.35,
+          "institution_score": 1.74
+        },
+        {
+          "rank": 2,
+          "code": "002847",
+          "name": "盐津铺子",
+          "return_20d": 17.41,
+          "close_price": 59.74,
+          "rank_in_market": 651,
+          "circ_mv": 146.2,
+          "amount": 188.14,
+          "institution_score": 2.21
+        }
+      ]
+    },
+    {
+      "rank": 48,
+      "sector_name": "游戏Ⅱ",
+      "momentum_score": 0.17,
+      "listed_count": 2,
+      "total_count": 24,
+      "listed_ratio": 8.3,
+      "avg_return_20d": 22.71,
+      "rank_change": 30,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300031",
+          "name": "宝通科技",
+          "return_20d": 28.66,
+          "close_price": 30.75,
+          "rank_in_market": 266,
+          "circ_mv": 107.26,
+          "amount": 1398.77,
+          "institution_score": 6.03
+        },
+        {
+          "rank": 2,
+          "code": "300533",
+          "name": "冰川网络",
+          "return_20d": 16.77,
+          "close_price": 28.06,
+          "rank_in_market": 689,
+          "circ_mv": 46.23,
+          "amount": 472.17,
+          "institution_score": 2.14
+        }
+      ]
+    },
+    {
+      "rank": 49,
+      "sector_name": "光伏设备",
+      "momentum_score": 0.16,
+      "listed_count": 3,
+      "total_count": 58,
+      "listed_ratio": 5.2,
+      "avg_return_20d": 38.05,
+      "rank_change": -7,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "688680",
+          "name": "海优新材",
+          "return_20d": 49.97,
+          "close_price": 47.9,
+          "rank_in_market": 79,
+          "circ_mv": 40.25,
+          "amount": 325.05,
+          "institution_score": 1.56
+        },
+        {
+          "rank": 2,
+          "code": "688598",
+          "name": "金博股份",
+          "return_20d": 43.4,
+          "close_price": 32.25,
+          "rank_in_market": 101,
+          "circ_mv": 65.84,
+          "amount": 573.36,
+          "institution_score": 2.7
+        },
+        {
+          "rank": 3,
+          "code": "002056",
+          "name": "横店东磁",
+          "return_20d": 20.79,
+          "close_price": 15.51,
+          "rank_in_market": 492,
+          "circ_mv": 252.05,
+          "amount": 1589.8,
+          "institution_score": 7.67
+        }
+      ]
+    },
+    {
+      "rank": 50,
+      "sector_name": "炼化及贸易",
+      "momentum_score": 0.14,
+      "listed_count": 2,
+      "total_count": 29,
+      "listed_ratio": 6.9,
+      "avg_return_20d": 26.33,
+      "rank_change": -5,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "000096",
+          "name": "广聚能源",
+          "return_20d": 35.58,
+          "close_price": 18.9,
+          "rank_in_market": 152,
+          "circ_mv": 96.55,
+          "amount": 254.9,
+          "institution_score": 1.91
+        },
+        {
+          "rank": 2,
+          "code": "600506",
+          "name": "统一股份",
+          "return_20d": 17.08,
+          "close_price": 21.87,
+          "rank_in_market": 670,
+          "circ_mv": 32.3,
+          "amount": 481.27,
+          "institution_score": 2.02
+        }
+      ]
+    },
+    {
+      "rank": 51,
+      "sector_name": "专业连锁Ⅱ",
+      "momentum_score": 0.14,
+      "listed_count": 1,
+      "total_count": 7,
+      "listed_ratio": 14.3,
+      "avg_return_20d": 19.81,
+      "rank_change": 0,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "301078",
+          "name": "孩子王",
+          "return_20d": 19.81,
+          "close_price": 16.15,
+          "rank_in_market": 534,
+          "circ_mv": 201.3,
+          "amount": 2120.95,
+          "institution_score": 7.13
+        }
+      ]
+    },
+    {
+      "rank": 52,
+      "sector_name": "焦炭Ⅱ",
+      "momentum_score": 0.14,
+      "listed_count": 1,
+      "total_count": 7,
+      "listed_ratio": 14.3,
+      "avg_return_20d": 18.33,
+      "rank_change": -6,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "000723",
+          "name": "美锦能源",
+          "return_20d": 18.33,
+          "close_price": 5.1,
+          "rank_in_market": 608,
+          "circ_mv": 224.21,
+          "amount": 1793.91,
+          "institution_score": 7.38
+        }
+      ]
+    },
+    {
+      "rank": 53,
+      "sector_name": "医药商业",
+      "momentum_score": 0.13,
+      "listed_count": 2,
+      "total_count": 31,
+      "listed_ratio": 6.5,
+      "avg_return_20d": 21.23,
+      "rank_change": 29,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "603716",
+          "name": "塞力医疗",
+          "return_20d": 25.77,
+          "close_price": 13.42,
+          "rank_in_market": 325,
+          "circ_mv": 25.63,
+          "amount": 929.44,
+          "institution_score": 3.52
+        },
+        {
+          "rank": 2,
+          "code": "301126",
+          "name": "达嘉维康",
+          "return_20d": 16.68,
+          "close_price": 13.01,
+          "rank_in_market": 700,
+          "circ_mv": 17.94,
+          "amount": 342.85,
+          "institution_score": 1.39
+        }
+      ]
+    },
+    {
+      "rank": 54,
+      "sector_name": "房屋建设Ⅱ",
+      "momentum_score": 0.12,
+      "listed_count": 1,
+      "total_count": 8,
+      "listed_ratio": 12.5,
+      "avg_return_20d": 18.18,
+      "rank_change": -4,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "601789",
+          "name": "宁波建工",
+          "return_20d": 18.18,
+          "close_price": 6.76,
+          "rank_in_market": 616,
+          "circ_mv": 73.47,
+          "amount": 1346.07,
+          "institution_score": 5.48
+        }
+      ]
+    },
+    {
+      "rank": 55,
+      "sector_name": "黑色家电",
+      "momentum_score": 0.11,
+      "listed_count": 1,
+      "total_count": 9,
+      "listed_ratio": 11.1,
+      "avg_return_20d": 19.83,
+      "rank_change": -3,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "688696",
+          "name": "极米科技",
+          "return_20d": 19.83,
+          "close_price": 134.36,
+          "rank_in_market": 533,
+          "circ_mv": 94.05,
+          "amount": 81.3,
+          "institution_score": 1.28
+        }
+      ]
+    },
+    {
+      "rank": 56,
+      "sector_name": "厨卫电器",
+      "momentum_score": 0.11,
+      "listed_count": 1,
+      "total_count": 9,
+      "listed_ratio": 11.1,
+      "avg_return_20d": 17.42,
+      "rank_change": -5,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300911",
+          "name": "亿田智能",
+          "return_20d": 17.42,
+          "close_price": 46.5,
+          "rank_in_market": 650,
+          "circ_mv": 60.09,
+          "amount": 286.57,
+          "institution_score": 1.64
+        }
+      ]
+    },
+    {
+      "rank": 57,
+      "sector_name": "化学制品",
+      "momentum_score": 0.1,
+      "listed_count": 4,
+      "total_count": 162,
+      "listed_ratio": 2.5,
+      "avg_return_20d": 23.84,
+      "rank_change": -21,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300727",
+          "name": "润禾材料",
+          "return_20d": 29.04,
+          "close_price": 41.9,
+          "rank_in_market": 257,
+          "circ_mv": 47.86,
+          "amount": 211.76,
+          "institution_score": 1.25
+        },
+        {
+          "rank": 2,
+          "code": "603977",
+          "name": "国泰集团",
+          "return_20d": 24.96,
+          "close_price": 14.07,
+          "rank_in_market": 347,
+          "circ_mv": 87.41,
+          "amount": 412.22,
+          "institution_score": 2.37
+        },
+        {
+          "rank": 3,
+          "code": "002326",
+          "name": "永太科技",
+          "return_20d": 20.74,
+          "close_price": 11.47,
+          "rank_in_market": 497,
+          "circ_mv": 92.22,
+          "amount": 453.99,
+          "institution_score": 2.56
+        },
+        {
+          "rank": 4,
+          "code": "002683",
+          "name": "广东宏大",
+          "return_20d": 20.63,
+          "close_price": 30.46,
+          "rank_in_market": 502,
+          "circ_mv": 201.15,
+          "amount": 249.87,
+          "institution_score": 3.0
+        }
+      ]
+    },
+    {
+      "rank": 58,
+      "sector_name": "贵金属",
+      "momentum_score": 0.09,
+      "listed_count": 1,
+      "total_count": 11,
+      "listed_ratio": 9.1,
+      "avg_return_20d": 36.31,
+      "rank_change": -2,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002155",
+          "name": "湖南黄金",
+          "return_20d": 36.31,
+          "close_price": 23.65,
+          "rank_in_market": 145,
+          "circ_mv": 284.25,
+          "amount": 2746.12,
+          "institution_score": 8.01
+        }
+      ]
+    },
+    {
+      "rank": 59,
+      "sector_name": "教育",
+      "momentum_score": 0.08,
+      "listed_count": 1,
+      "total_count": 12,
+      "listed_ratio": 8.3,
+      "avg_return_20d": 70.16,
+      "rank_change": -1,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002093",
+          "name": "国脉科技",
+          "return_20d": 70.16,
+          "close_price": 14.6,
+          "rank_in_market": 27,
+          "circ_mv": 147.0,
+          "amount": 3792.21,
+          "institution_score": 6.56
+        }
+      ]
+    },
+    {
+      "rank": 60,
+      "sector_name": "特钢Ⅱ",
+      "momentum_score": 0.08,
+      "listed_count": 1,
+      "total_count": 12,
+      "listed_ratio": 8.3,
+      "avg_return_20d": 32.27,
+      "rank_change": -27,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "301160",
+          "name": "翔楼新材",
+          "return_20d": 32.27,
+          "close_price": 102.4,
+          "rank_in_market": 196,
+          "circ_mv": 45.24,
+          "amount": 395.9,
+          "institution_score": 1.86
+        }
+      ]
+    },
+    {
+      "rank": 61,
+      "sector_name": "证券Ⅱ",
+      "momentum_score": 0.08,
+      "listed_count": 2,
+      "total_count": 50,
+      "listed_ratio": 4.0,
+      "avg_return_20d": 24.5,
+      "rank_change": 0,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "601881",
+          "name": "中国银河",
+          "return_20d": 26.27,
+          "close_price": 18.7,
+          "rank_in_market": 313,
+          "circ_mv": 1354.52,
+          "amount": 7527.87,
+          "institution_score": 10.0
+        },
+        {
+          "rank": 2,
+          "code": "601059",
+          "name": "信达证券",
+          "return_20d": 22.74,
+          "close_price": 18.46,
+          "rank_in_market": 416,
+          "circ_mv": 127.67,
+          "amount": 2344.71,
+          "institution_score": 6.35
+        }
+      ]
+    },
+    {
+      "rank": 62,
+      "sector_name": "贸易Ⅱ",
+      "momentum_score": 0.08,
+      "listed_count": 1,
+      "total_count": 12,
+      "listed_ratio": 8.3,
+      "avg_return_20d": 24.17,
+      "rank_change": -2,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600710",
+          "name": "苏美达",
+          "return_20d": 24.17,
+          "close_price": 11.2,
+          "rank_in_market": 369,
+          "circ_mv": 146.36,
+          "amount": 662.71,
+          "institution_score": 3.87
+        }
+      ]
+    },
+    {
+      "rank": 63,
+      "sector_name": "非白酒",
+      "momentum_score": 0.08,
+      "listed_count": 1,
+      "total_count": 13,
+      "listed_ratio": 7.7,
+      "avg_return_20d": 23.73,
+      "rank_change": -1,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002568",
+          "name": "百润股份",
+          "return_20d": 23.73,
+          "close_price": 29.72,
+          "rank_in_market": 385,
+          "circ_mv": 212.91,
+          "amount": 404.06,
+          "institution_score": 3.67
+        }
+      ]
+    },
+    {
+      "rank": 64,
+      "sector_name": "电视广播Ⅱ",
+      "momentum_score": 0.07,
+      "listed_count": 1,
+      "total_count": 14,
+      "listed_ratio": 7.1,
+      "avg_return_20d": 50.44,
+      "rank_change": 0,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "000665",
+          "name": "湖北广电",
+          "return_20d": 50.44,
+          "close_price": 6.89,
+          "rank_in_market": 77,
+          "circ_mv": 78.35,
+          "amount": 2161.61,
+          "institution_score": 5.83
+        }
+      ]
+    },
+    {
+      "rank": 65,
+      "sector_name": "软件开发",
+      "momentum_score": 0.07,
+      "listed_count": 3,
+      "total_count": 126,
+      "listed_ratio": 2.4,
+      "avg_return_20d": 23.48,
+      "rank_change": -17,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300605",
+          "name": "恒锋信息",
+          "return_20d": 26.93,
+          "close_price": 17.96,
+          "rank_in_market": 295,
+          "circ_mv": 20.42,
+          "amount": 327.47,
+          "institution_score": 1.36
+        },
+        {
+          "rank": 2,
+          "code": "300469",
+          "name": "信息发展",
+          "return_20d": 22.83,
+          "close_price": 36.69,
+          "rank_in_market": 413,
+          "circ_mv": 91.08,
+          "amount": 613.73,
+          "institution_score": 3.11
+        },
+        {
+          "rank": 3,
+          "code": "600602",
+          "name": "云赛智联",
+          "return_20d": 20.69,
+          "close_price": 25.49,
+          "rank_in_market": 499,
+          "circ_mv": 273.84,
+          "amount": 2979.46,
+          "institution_score": 7.9
+        }
+      ]
+    },
+    {
+      "rank": 66,
+      "sector_name": "服装家纺",
+      "momentum_score": 0.07,
+      "listed_count": 2,
+      "total_count": 54,
+      "listed_ratio": 3.7,
+      "avg_return_20d": 20.32,
+      "rank_change": 22,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "603958",
+          "name": "哈森股份",
+          "return_20d": 23.5,
+          "close_price": 17.76,
+          "rank_in_market": 390,
+          "circ_mv": 38.96,
+          "amount": 368.51,
+          "institution_score": 1.7
+        },
+        {
+          "rank": 2,
+          "code": "002875",
+          "name": "安奈儿",
+          "return_20d": 17.14,
+          "close_price": 14.56,
+          "rank_in_market": 664,
+          "circ_mv": 26.56,
+          "amount": 359.26,
+          "institution_score": 1.54
+        }
+      ]
+    },
+    {
+      "rank": 67,
+      "sector_name": "农化制品",
+      "momentum_score": 0.07,
+      "listed_count": 2,
+      "total_count": 55,
+      "listed_ratio": 3.6,
+      "avg_return_20d": 19.43,
+      "rank_change": 0,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "000893",
+          "name": "亚钾国际",
+          "return_20d": 21.01,
+          "close_price": 26.38,
+          "rank_in_market": 478,
+          "circ_mv": 214.13,
+          "amount": 586.91,
+          "institution_score": 4.32
+        },
+        {
+          "rank": 2,
+          "code": "002170",
+          "name": "芭田股份",
+          "return_20d": 17.84,
+          "close_price": 10.04,
+          "rank_in_market": 627,
+          "circ_mv": 71.38,
+          "amount": 239.64,
+          "institution_score": 1.59
+        }
+      ]
+    },
+    {
+      "rank": 68,
+      "sector_name": "互联网电商",
+      "momentum_score": 0.06,
+      "listed_count": 1,
+      "total_count": 16,
+      "listed_ratio": 6.2,
+      "avg_return_20d": 33.38,
+      "rank_change": 1,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "003010",
+          "name": "若羽臣",
+          "return_20d": 33.38,
+          "close_price": 41.0,
+          "rank_in_market": 179,
+          "circ_mv": 49.58,
+          "amount": 450.51,
+          "institution_score": 2.1
+        }
+      ]
+    },
+    {
+      "rank": 69,
+      "sector_name": "饲料",
+      "momentum_score": 0.06,
+      "listed_count": 1,
+      "total_count": 17,
+      "listed_ratio": 5.9,
+      "avg_return_20d": 21.94,
+      "rank_change": 1,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002891",
+          "name": "中宠股份",
+          "return_20d": 21.94,
+          "close_price": 43.13,
+          "rank_in_market": 438,
+          "circ_mv": 126.85,
+          "amount": 516.1,
+          "institution_score": 3.15
+        }
+      ]
+    },
+    {
+      "rank": 70,
+      "sector_name": "橡胶",
+      "momentum_score": 0.06,
+      "listed_count": 1,
+      "total_count": 16,
+      "listed_ratio": 6.2,
+      "avg_return_20d": 18.88,
+      "rank_change": -30,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300320",
+          "name": "海达股份",
+          "return_20d": 18.88,
+          "close_price": 11.27,
+          "rank_in_market": 581,
+          "circ_mv": 55.26,
+          "amount": 353.07,
+          "institution_score": 1.82
+        }
+      ]
+    },
+    {
+      "rank": 71,
+      "sector_name": "种植业",
+      "momentum_score": 0.05,
+      "listed_count": 1,
+      "total_count": 20,
+      "listed_ratio": 5.0,
+      "avg_return_20d": 59.73,
+      "rank_change": 0,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300511",
+          "name": "雪榕生物",
+          "return_20d": 59.73,
+          "close_price": 5.83,
+          "rank_in_market": 39,
+          "circ_mv": 24.37,
+          "amount": 405.5,
+          "institution_score": 1.68
+        }
+      ]
+    },
+    {
+      "rank": 72,
+      "sector_name": "文娱用品",
+      "momentum_score": 0.05,
+      "listed_count": 1,
+      "total_count": 22,
+      "listed_ratio": 4.5,
+      "avg_return_20d": 20.98,
+      "rank_change": -1,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "301101",
+          "name": "明月镜片",
+          "return_20d": 20.98,
+          "close_price": 55.29,
+          "rank_in_market": 480,
+          "circ_mv": 105.56,
+          "amount": 339.74,
+          "institution_score": 2.31
+        }
+      ]
+    },
+    {
+      "rank": 73,
+      "sector_name": "农产品加工",
+      "momentum_score": 0.05,
+      "listed_count": 1,
+      "total_count": 19,
+      "listed_ratio": 5.3,
+      "avg_return_20d": 17.93,
+      "rank_change": 1,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "605198",
+          "name": "安德利",
+          "return_20d": 17.93,
+          "close_price": 36.77,
+          "rank_in_market": 625,
+          "circ_mv": 99.48,
+          "amount": 41.9,
+          "institution_score": 1.2
+        }
+      ]
+    },
+    {
+      "rank": 74,
+      "sector_name": "旅游及景区",
+      "momentum_score": 0.05,
+      "listed_count": 1,
+      "total_count": 22,
+      "listed_ratio": 4.5,
+      "avg_return_20d": 17.18,
+      "rank_change": -1,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600576",
+          "name": "祥源文旅",
+          "return_20d": 17.18,
+          "close_price": 9.48,
+          "rank_in_market": 659,
+          "circ_mv": 62.6,
+          "amount": 103.76,
+          "institution_score": 1.03
+        }
+      ]
+    },
+    {
+      "rank": 75,
+      "sector_name": "多元金融",
+      "momentum_score": 0.04,
+      "listed_count": 1,
+      "total_count": 25,
+      "listed_ratio": 4.0,
+      "avg_return_20d": 52.0,
+      "rank_change": 2,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "603300",
+          "name": "海南华铁",
+          "return_20d": 52.0,
+          "close_price": 12.16,
+          "rank_in_market": 71,
+          "circ_mv": 239.89,
+          "amount": 3989.51,
+          "institution_score": 7.54
+        }
+      ]
+    },
+    {
+      "rank": 76,
+      "sector_name": "食品加工",
+      "momentum_score": 0.04,
+      "listed_count": 1,
+      "total_count": 23,
+      "listed_ratio": 4.3,
+      "avg_return_20d": 19.05,
+      "rank_change": 3,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002515",
+          "name": "金字火腿",
+          "return_20d": 19.05,
+          "close_price": 5.25,
+          "rank_in_market": 576,
+          "circ_mv": 60.95,
+          "amount": 127.13,
+          "institution_score": 1.09
+        }
+      ]
+    },
+    {
+      "rank": 77,
+      "sector_name": "基础建设",
+      "momentum_score": 0.03,
+      "listed_count": 1,
+      "total_count": 39,
+      "listed_ratio": 2.6,
+      "avg_return_20d": 36.21,
+      "rank_change": -24,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "605303",
+          "name": "园林股份",
+          "return_20d": 36.21,
+          "close_price": 11.36,
+          "rank_in_market": 148,
+          "circ_mv": 18.32,
+          "amount": 381.06,
+          "institution_score": 1.53
+        }
+      ]
+    },
+    {
+      "rank": 78,
+      "sector_name": "煤炭开采",
+      "momentum_score": 0.03,
+      "listed_count": 1,
+      "total_count": 30,
+      "listed_ratio": 3.3,
+      "avg_return_20d": 30.74,
+      "rank_change": 7,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600403",
+          "name": "大有能源",
+          "return_20d": 30.74,
+          "close_price": 3.7,
+          "rank_in_market": 223,
+          "circ_mv": 88.46,
+          "amount": 151.1,
+          "institution_score": 1.47
+        }
+      ]
+    },
+    {
+      "rank": 79,
+      "sector_name": "包装印刷",
+      "momentum_score": 0.03,
+      "listed_count": 1,
+      "total_count": 40,
+      "listed_ratio": 2.5,
+      "avg_return_20d": 26.81,
+      "rank_change": -25,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002846",
+          "name": "英联股份",
+          "return_20d": 26.81,
+          "close_price": 11.21,
+          "rank_in_market": 299,
+          "circ_mv": 28.81,
+          "amount": 279.64,
+          "institution_score": 1.28
+        }
+      ]
+    },
+    {
+      "rank": 80,
+      "sector_name": "金属新材料",
+      "momentum_score": 0.03,
+      "listed_count": 1,
+      "total_count": 29,
+      "listed_ratio": 3.4,
+      "avg_return_20d": 19.29,
+      "rank_change": 4,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "000970",
+          "name": "中科三环",
+          "return_20d": 19.29,
+          "close_price": 13.05,
+          "rank_in_market": 563,
+          "circ_mv": 158.65,
+          "amount": 435.87,
+          "institution_score": 3.2
+        }
+      ]
+    },
+    {
+      "rank": 81,
+      "sector_name": "工程咨询服务Ⅱ",
+      "momentum_score": 0.03,
+      "listed_count": 1,
+      "total_count": 40,
+      "listed_ratio": 2.5,
+      "avg_return_20d": 18.78,
+      "rank_change": 2,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "301365",
+          "name": "矩阵股份",
+          "return_20d": 18.78,
+          "close_price": 19.92,
+          "rank_in_market": 587,
+          "circ_mv": 9.23,
+          "amount": 491.41,
+          "institution_score": 1.82
+        }
+      ]
+    },
+    {
+      "rank": 82,
+      "sector_name": "轨交设备Ⅱ",
+      "momentum_score": 0.03,
+      "listed_count": 1,
+      "total_count": 31,
+      "listed_ratio": 3.2,
+      "avg_return_20d": 17.21,
+      "rank_change": 4,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600458",
+          "name": "时代新材",
+          "return_20d": 17.21,
+          "close_price": 14.03,
+          "rank_in_market": 657,
+          "circ_mv": 112.63,
+          "amount": 119.4,
+          "institution_score": 1.61
+        }
+      ]
+    },
+    {
+      "rank": 83,
+      "sector_name": "医疗服务",
+      "momentum_score": 0.02,
+      "listed_count": 1,
+      "total_count": 48,
+      "listed_ratio": 2.1,
+      "avg_return_20d": 34.92,
+      "rank_change": 4,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "000710",
+          "name": "贝瑞基因",
+          "return_20d": 34.92,
+          "close_price": 17.27,
+          "rank_in_market": 158,
+          "circ_mv": 54.96,
+          "amount": 747.2,
+          "institution_score": 3.19
+        }
+      ]
+    },
+    {
+      "rank": 84,
+      "sector_name": "物流",
+      "momentum_score": 0.02,
+      "listed_count": 1,
+      "total_count": 43,
+      "listed_ratio": 2.3,
+      "avg_return_20d": 25.81,
+      "rank_change": 5,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300873",
+          "name": "海晨股份",
+          "return_20d": 25.81,
+          "close_price": 22.47,
+          "rank_in_market": 324,
+          "circ_mv": 38.03,
+          "amount": 255.05,
+          "institution_score": 1.29
+        }
+      ]
+    },
+    {
+      "rank": 85,
+      "sector_name": "生物制品",
+      "momentum_score": 0.02,
+      "listed_count": 1,
+      "total_count": 48,
+      "listed_ratio": 2.1,
+      "avg_return_20d": 22.47,
+      "rank_change": 5,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "688336",
+          "name": "三生国健",
+          "return_20d": 22.47,
+          "close_price": 27.36,
+          "rank_in_market": 427,
+          "circ_mv": 168.75,
+          "amount": 90.94,
+          "institution_score": 2.11
+        }
+      ]
+    }
+  ]
+}

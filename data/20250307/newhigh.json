@@ -1,0 +1,302 @@
+{
+  "trade_date": "20250307",
+  "data_source": "Tushare Pro (真实数据)",
+  "classification": "申万2021二级行业",
+  "market_strength": 0.21,
+  "total_stocks": 11,
+  "total_sectors": 9,
+  "sectors": [
+    {
+      "sector_name": "元件",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600601",
+          "name": "方正科技",
+          "close": 5.41,
+          "price": 5.41,
+          "high_250": 5.41,
+          "high_250d": 5.41,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.96,
+          "change": 9.96,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 204.76,
+          "amount": 676.29,
+          "turnover": 676.29,
+          "institution_score": 4.71,
+          "sector": "元件",
+          "industry": "元件"
+        },
+        {
+          "code": "002636",
+          "name": "金安国纪",
+          "close": 9.33,
+          "price": 9.33,
+          "high_250": 9.33,
+          "high_250d": 9.33,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 68.59,
+          "amount": 118.27,
+          "turnover": 118.27,
+          "institution_score": 1.18,
+          "sector": "元件",
+          "industry": "元件"
+        }
+      ]
+    },
+    {
+      "sector_name": "休闲食品",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002582",
+          "name": "好想你",
+          "close": 10.47,
+          "price": 10.47,
+          "high_250": 10.47,
+          "high_250d": 10.47,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.98,
+          "change": 9.98,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 35.1,
+          "amount": 830.57,
+          "turnover": 830.57,
+          "institution_score": 3.44,
+          "sector": "休闲食品",
+          "industry": "休闲食品"
+        },
+        {
+          "code": "603777",
+          "name": "来伊份",
+          "close": 24.6,
+          "price": 24.6,
+          "high_250": 24.6,
+          "high_250d": 24.6,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 52.9,
+          "amount": 434.6,
+          "turnover": 434.6,
+          "institution_score": 2.17,
+          "sector": "休闲食品",
+          "industry": "休闲食品"
+        }
+      ]
+    },
+    {
+      "sector_name": "化学原料",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600714",
+          "name": "金瑞矿业",
+          "close": 12.78,
+          "price": 12.78,
+          "high_250": 12.78,
+          "high_250d": 12.78,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.98,
+          "change": 9.98,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 37.09,
+          "amount": 461.32,
+          "turnover": 461.32,
+          "institution_score": 2.1,
+          "sector": "化学原料",
+          "industry": "化学原料"
+        }
+      ]
+    },
+    {
+      "sector_name": "通用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002164",
+          "name": "宁波东力",
+          "close": 7.03,
+          "price": 7.03,
+          "high_250": 7.03,
+          "high_250d": 7.03,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 33.63,
+          "amount": 383.77,
+          "turnover": 383.77,
+          "institution_score": 1.78,
+          "sector": "通用设备",
+          "industry": "通用设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "一般零售",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002187",
+          "name": "广百股份",
+          "close": 10.07,
+          "price": 10.07,
+          "high_250": 10.07,
+          "high_250d": 10.07,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.05,
+          "change": 10.05,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 37.85,
+          "amount": 290.36,
+          "turnover": 290.36,
+          "institution_score": 1.48,
+          "sector": "一般零售",
+          "industry": "一般零售"
+        }
+      ]
+    },
+    {
+      "sector_name": "其他",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300344",
+          "name": "立方退",
+          "close": 9.16,
+          "price": 9.16,
+          "high_250": 9.16,
+          "high_250d": 9.16,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.05,
+          "change": 20.05,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 73.64,
+          "amount": 2239.85,
+          "turnover": 2239.85,
+          "institution_score": 5.8,
+          "sector": "其他",
+          "industry": "其他"
+        }
+      ]
+    },
+    {
+      "sector_name": "化学制品",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002917",
+          "name": "金奥博",
+          "close": 17.38,
+          "price": 17.38,
+          "high_250": 17.38,
+          "high_250d": 17.38,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 39.37,
+          "amount": 412.3,
+          "turnover": 412.3,
+          "institution_score": 1.94,
+          "sector": "化学制品",
+          "industry": "化学制品"
+        }
+      ]
+    },
+    {
+      "sector_name": "半导体",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603068",
+          "name": "博通集成",
+          "close": 38.23,
+          "price": 38.23,
+          "high_250": 38.23,
+          "high_250d": 38.23,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 54.03,
+          "amount": 203.07,
+          "turnover": 203.07,
+          "institution_score": 1.33,
+          "sector": "半导体",
+          "industry": "半导体"
+        }
+      ]
+    },
+    {
+      "sector_name": "互联网电商",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300792",
+          "name": "壹网壹创",
+          "close": 37.6,
+          "price": 37.6,
+          "high_250": 37.6,
+          "high_250d": 37.6,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.01,
+          "change": 20.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 58.38,
+          "amount": 370.27,
+          "turnover": 370.27,
+          "institution_score": 2.0,
+          "sector": "互联网电商",
+          "industry": "互联网电商"
+        }
+      ]
+    }
+  ]
+}

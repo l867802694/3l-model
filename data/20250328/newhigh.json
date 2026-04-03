@@ -1,0 +1,206 @@
+{
+  "trade_date": "20250328",
+  "data_source": "Tushare Pro (真实数据)",
+  "classification": "申万2021二级行业",
+  "market_strength": 0.13,
+  "total_stocks": 7,
+  "total_sectors": 7,
+  "sectors": [
+    {
+      "sector_name": "通用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002132",
+          "name": "恒星科技",
+          "close": 3.5,
+          "price": 3.5,
+          "high_250": 3.5,
+          "high_250d": 3.5,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.06,
+          "change": 10.06,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 48.98,
+          "amount": 385.34,
+          "turnover": 385.34,
+          "institution_score": 2.44,
+          "sector": "通用设备",
+          "industry": "通用设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "塑料",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300230",
+          "name": "永利股份",
+          "close": 5.93,
+          "price": 5.93,
+          "high_250": 5.93,
+          "high_250d": 5.93,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.04,
+          "change": 20.04,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 37.35,
+          "amount": 1388.98,
+          "turnover": 1388.98,
+          "institution_score": 5.42,
+          "sector": "塑料",
+          "industry": "塑料"
+        }
+      ]
+    },
+    {
+      "sector_name": "环保设备Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002645",
+          "name": "华宏科技",
+          "close": 9.57,
+          "price": 9.57,
+          "high_250": 9.57,
+          "high_250d": 9.57,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 48.72,
+          "amount": 525.82,
+          "turnover": 525.82,
+          "institution_score": 3.12,
+          "sector": "环保设备Ⅱ",
+          "industry": "环保设备Ⅱ"
+        }
+      ]
+    },
+    {
+      "sector_name": "贵金属",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "601069",
+          "name": "西部黄金",
+          "close": 15.31,
+          "price": 15.31,
+          "high_250": 15.31,
+          "high_250d": 15.31,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 104.72,
+          "amount": 543.48,
+          "turnover": 543.48,
+          "institution_score": 3.83,
+          "sector": "贵金属",
+          "industry": "贵金属"
+        }
+      ]
+    },
+    {
+      "sector_name": "化学制药",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002923",
+          "name": "润都股份",
+          "close": 15.29,
+          "price": 15.29,
+          "high_250": 15.29,
+          "high_250d": 15.29,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 39.46,
+          "amount": 382.35,
+          "turnover": 382.35,
+          "institution_score": 2.31,
+          "sector": "化学制药",
+          "industry": "化学制药"
+        }
+      ]
+    },
+    {
+      "sector_name": "其他",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603579",
+          "name": "荣泰健康",
+          "close": 24.71,
+          "price": 24.71,
+          "high_250": 24.71,
+          "high_250d": 24.71,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 43.83,
+          "amount": 216.59,
+          "turnover": 216.59,
+          "institution_score": 1.55,
+          "sector": "其他",
+          "industry": "其他"
+        }
+      ]
+    },
+    {
+      "sector_name": "汽车零部件",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603949",
+          "name": "雪龙集团",
+          "close": 26.26,
+          "price": 26.26,
+          "high_250": 26.26,
+          "high_250d": 26.26,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 55.2,
+          "amount": 654.95,
+          "turnover": 654.95,
+          "institution_score": 3.83,
+          "sector": "汽车零部件",
+          "industry": "汽车零部件"
+        }
+      ]
+    }
+  ]
+}

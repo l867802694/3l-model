@@ -1,0 +1,234 @@
+{
+  "trade_date": "20250331",
+  "data_source": "Tushare Pro (真实数据)",
+  "classification": "申万2021二级行业",
+  "market_strength": 0.15,
+  "total_stocks": 8,
+  "total_sectors": 8,
+  "sectors": [
+    {
+      "sector_name": "通用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002132",
+          "name": "恒星科技",
+          "close": 3.85,
+          "price": 3.85,
+          "high_250": 3.85,
+          "high_250d": 3.85,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 53.88,
+          "amount": 410.47,
+          "turnover": 410.47,
+          "institution_score": 2.58,
+          "sector": "通用设备",
+          "industry": "通用设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "消费电子",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002655",
+          "name": "共达电声",
+          "close": 16.57,
+          "price": 16.57,
+          "high_250": 16.57,
+          "high_250d": 16.57,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.03,
+          "change": 10.03,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 59.63,
+          "amount": 1414.61,
+          "turnover": 1414.61,
+          "institution_score": 5.67,
+          "sector": "消费电子",
+          "industry": "消费电子"
+        }
+      ]
+    },
+    {
+      "sector_name": "贵金属",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "601069",
+          "name": "西部黄金",
+          "close": 16.84,
+          "price": 16.84,
+          "high_250": 16.84,
+          "high_250d": 16.84,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 115.18,
+          "amount": 1202.34,
+          "turnover": 1202.34,
+          "institution_score": 6.3,
+          "sector": "贵金属",
+          "industry": "贵金属"
+        }
+      ]
+    },
+    {
+      "sector_name": "专用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603169",
+          "name": "兰石重装",
+          "close": 7.4,
+          "price": 7.4,
+          "high_250": 7.4,
+          "high_250d": 7.4,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.96,
+          "change": 9.96,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 96.67,
+          "amount": 1004.37,
+          "turnover": 1004.37,
+          "institution_score": 5.91,
+          "sector": "专用设备",
+          "industry": "专用设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "其他",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603579",
+          "name": "荣泰健康",
+          "close": 27.18,
+          "price": 27.18,
+          "high_250": 27.18,
+          "high_250d": 27.18,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 48.21,
+          "amount": 273.32,
+          "turnover": 273.32,
+          "institution_score": 1.86,
+          "sector": "其他",
+          "industry": "其他"
+        }
+      ]
+    },
+    {
+      "sector_name": "汽车零部件",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603949",
+          "name": "雪龙集团",
+          "close": 28.89,
+          "price": 28.89,
+          "high_250": 28.89,
+          "high_250d": 28.89,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 60.73,
+          "amount": 901.88,
+          "turnover": 901.88,
+          "institution_score": 5.02,
+          "sector": "汽车零部件",
+          "industry": "汽车零部件"
+        }
+      ]
+    },
+    {
+      "sector_name": "IT服务Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "301396",
+          "name": "宏景科技",
+          "close": 94.81,
+          "price": 94.81,
+          "high_250": 94.81,
+          "high_250d": 94.81,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 48.3,
+          "amount": 1473.94,
+          "turnover": 1473.94,
+          "institution_score": 5.54,
+          "sector": "IT服务Ⅱ",
+          "industry": "IT服务Ⅱ"
+        }
+      ]
+    },
+    {
+      "sector_name": "电网设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603312",
+          "name": "西典新能",
+          "close": 40.26,
+          "price": 40.26,
+          "high_250": 40.26,
+          "high_250d": 40.26,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 21.14,
+          "amount": 292.33,
+          "turnover": 292.33,
+          "institution_score": 1.64,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        }
+      ]
+    }
+  ]
+}

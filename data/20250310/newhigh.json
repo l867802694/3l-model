@@ -1,0 +1,530 @@
+{
+  "trade_date": "20250310",
+  "data_source": "Tushare Pro (真实数据)",
+  "classification": "申万2021二级行业",
+  "market_strength": 0.39,
+  "total_stocks": 20,
+  "total_sectors": 15,
+  "sectors": [
+    {
+      "sector_name": "汽车零部件",
+      "new_high_count": 4,
+      "stock_count": 4,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000581",
+          "name": "威孚高科",
+          "close": 25.81,
+          "price": 25.81,
+          "high_250": 25.81,
+          "high_250d": 25.81,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 212.62,
+          "amount": 1455.89,
+          "turnover": 1455.89,
+          "institution_score": 7.29,
+          "sector": "汽车零部件",
+          "industry": "汽车零部件"
+        },
+        {
+          "code": "000678",
+          "name": "襄阳轴承",
+          "close": 10.4,
+          "price": 10.4,
+          "high_250": 10.4,
+          "high_250d": 10.4,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.05,
+          "change": 10.05,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 47.8,
+          "amount": 850.13,
+          "turnover": 850.13,
+          "institution_score": 4.04,
+          "sector": "汽车零部件",
+          "industry": "汽车零部件"
+        },
+        {
+          "code": "605018",
+          "name": "长华集团",
+          "close": 14.5,
+          "price": 14.5,
+          "high_250": 14.5,
+          "high_250d": 14.5,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 68.16,
+          "amount": 210.33,
+          "turnover": 210.33,
+          "institution_score": 1.61,
+          "sector": "汽车零部件",
+          "industry": "汽车零部件"
+        },
+        {
+          "code": "301225",
+          "name": "恒勃股份",
+          "close": 45.17,
+          "price": 45.17,
+          "high_250": 45.17,
+          "high_250d": 45.17,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.01,
+          "change": 20.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 13.63,
+          "amount": 557.73,
+          "turnover": 557.73,
+          "institution_score": 2.46,
+          "sector": "汽车零部件",
+          "industry": "汽车零部件"
+        }
+      ]
+    },
+    {
+      "sector_name": "通用设备",
+      "new_high_count": 3,
+      "stock_count": 3,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600860",
+          "name": "京城股份",
+          "close": 16.24,
+          "price": 16.24,
+          "high_250": 16.24,
+          "high_250d": 16.24,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.03,
+          "change": 10.03,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 70.68,
+          "amount": 435.96,
+          "turnover": 435.96,
+          "institution_score": 2.57,
+          "sector": "通用设备",
+          "industry": "通用设备"
+        },
+        {
+          "code": "002760",
+          "name": "凤形股份",
+          "close": 24.17,
+          "price": 24.17,
+          "high_250": 24.17,
+          "high_250d": 24.17,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 26.1,
+          "amount": 172.57,
+          "turnover": 172.57,
+          "institution_score": 1.0,
+          "sector": "通用设备",
+          "industry": "通用设备"
+        },
+        {
+          "code": "001306",
+          "name": "夏厦精密",
+          "close": 108.82,
+          "price": 108.82,
+          "high_250": 108.82,
+          "high_250d": 108.82,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 16.87,
+          "amount": 345.34,
+          "turnover": 345.34,
+          "institution_score": 1.61,
+          "sector": "通用设备",
+          "industry": "通用设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "电视广播Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000665",
+          "name": "湖北广电",
+          "close": 5.8,
+          "price": 5.8,
+          "high_250": 5.8,
+          "high_250d": 5.8,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.06,
+          "change": 10.06,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 65.95,
+          "amount": 1023.04,
+          "turnover": 1023.04,
+          "institution_score": 4.95,
+          "sector": "电视广播Ⅱ",
+          "industry": "电视广播Ⅱ"
+        }
+      ]
+    },
+    {
+      "sector_name": "航运港口",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000905",
+          "name": "厦门港务",
+          "close": 7.89,
+          "price": 7.89,
+          "high_250": 7.89,
+          "high_250d": 7.89,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.04,
+          "change": 10.04,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 58.53,
+          "amount": 344.68,
+          "turnover": 344.68,
+          "institution_score": 2.06,
+          "sector": "航运港口",
+          "industry": "航运港口"
+        }
+      ]
+    },
+    {
+      "sector_name": "地面兵装Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600184",
+          "name": "光电股份",
+          "close": 14.03,
+          "price": 14.03,
+          "high_250": 14.03,
+          "high_250d": 14.03,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.04,
+          "change": 10.04,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 71.38,
+          "amount": 278.45,
+          "turnover": 278.45,
+          "institution_score": 1.92,
+          "sector": "地面兵装Ⅱ",
+          "industry": "地面兵装Ⅱ"
+        }
+      ]
+    },
+    {
+      "sector_name": "IT服务Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600589",
+          "name": "大位科技",
+          "close": 7.78,
+          "price": 7.78,
+          "high_250": 7.78,
+          "high_250d": 7.78,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.04,
+          "change": 10.04,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 115.02,
+          "amount": 2183.0,
+          "turnover": 2183.0,
+          "institution_score": 6.24,
+          "sector": "IT服务Ⅱ",
+          "industry": "IT服务Ⅱ"
+        }
+      ]
+    },
+    {
+      "sector_name": "教育",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002093",
+          "name": "国脉科技",
+          "close": 10.96,
+          "price": 10.96,
+          "high_250": 10.96,
+          "high_250d": 10.96,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.04,
+          "change": 10.04,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 110.35,
+          "amount": 102.11,
+          "turnover": 102.11,
+          "institution_score": 1.61,
+          "sector": "教育",
+          "industry": "教育"
+        }
+      ]
+    },
+    {
+      "sector_name": "摩托车及其他",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002105",
+          "name": "信隆健康",
+          "close": 8.49,
+          "price": 8.49,
+          "high_250": 8.49,
+          "high_250d": 8.49,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.97,
+          "change": 9.97,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 30.94,
+          "amount": 679.04,
+          "turnover": 679.04,
+          "institution_score": 3.15,
+          "sector": "摩托车及其他",
+          "industry": "摩托车及其他"
+        }
+      ]
+    },
+    {
+      "sector_name": "元件",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300476",
+          "name": "胜宏科技",
+          "close": 64.66,
+          "price": 64.66,
+          "high_250": 64.66,
+          "high_250d": 64.66,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 8.58,
+          "change": 8.58,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 552.98,
+          "amount": 3440.42,
+          "turnover": 3440.42,
+          "institution_score": 10.0,
+          "sector": "元件",
+          "industry": "元件"
+        }
+      ]
+    },
+    {
+      "sector_name": "软件开发",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300451",
+          "name": "创业慧康",
+          "close": 8.03,
+          "price": 8.03,
+          "high_250": 8.03,
+          "high_250d": 8.03,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.03,
+          "change": 20.03,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 122.59,
+          "amount": 2887.01,
+          "turnover": 2887.01,
+          "institution_score": 6.32,
+          "sector": "软件开发",
+          "industry": "软件开发"
+        }
+      ]
+    },
+    {
+      "sector_name": "家居用品",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "605155",
+          "name": "西大门",
+          "close": 13.06,
+          "price": 13.06,
+          "high_250": 13.06,
+          "high_250d": 13.06,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.03,
+          "change": 10.03,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 24.7,
+          "amount": 192.83,
+          "turnover": 192.83,
+          "institution_score": 1.07,
+          "sector": "家居用品",
+          "industry": "家居用品"
+        }
+      ]
+    },
+    {
+      "sector_name": "电子化学品Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603931",
+          "name": "格林达",
+          "close": 33.09,
+          "price": 33.09,
+          "high_250": 33.09,
+          "high_250d": 33.09,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 66.03,
+          "amount": 360.48,
+          "turnover": 360.48,
+          "institution_score": 2.21,
+          "sector": "电子化学品Ⅱ",
+          "industry": "电子化学品Ⅱ"
+        }
+      ]
+    },
+    {
+      "sector_name": "专用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "688529",
+          "name": "豪森智能",
+          "close": 23.5,
+          "price": 23.5,
+          "high_250": 23.5,
+          "high_250d": 23.5,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.02,
+          "change": 20.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 39.31,
+          "amount": 510.59,
+          "turnover": 510.59,
+          "institution_score": 2.54,
+          "sector": "专用设备",
+          "industry": "专用设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "自动化设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "688395",
+          "name": "正弦电气",
+          "close": 25.32,
+          "price": 25.32,
+          "high_250": 25.32,
+          "high_250d": 25.32,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 21.93,
+          "amount": 203.72,
+          "turnover": 203.72,
+          "institution_score": 1.08,
+          "sector": "自动化设备",
+          "industry": "自动化设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "其他",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "920427",
+          "name": "华维设计",
+          "close": 19.56,
+          "price": 19.56,
+          "high_250": 19.56,
+          "high_250d": 19.56,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 29.97,
+          "change": 29.97,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 9.9,
+          "amount": 274.9,
+          "turnover": 274.9,
+          "institution_score": 1.25,
+          "sector": "其他",
+          "industry": "其他"
+        }
+      ]
+    }
+  ]
+}

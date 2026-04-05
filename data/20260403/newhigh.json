@@ -1,0 +1,266 @@
+{
+  "trade_date": "20260403",
+  "data_source": "Tushare Pro (真实数据)",
+  "classification": "申万2021二级行业",
+  "market_strength": 0.19,
+  "total_stocks": 10,
+  "total_sectors": 7,
+  "sectors": [
+    {
+      "sector_name": "电网设备",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000720",
+          "name": "新能泰山",
+          "close": 5.94,
+          "price": 5.94,
+          "high_250": 5.94,
+          "high_250d": 5.94,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 74.64,
+          "amount": 1680.83,
+          "turnover": 1680.83,
+          "institution_score": 5.68,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        },
+        {
+          "code": "600869",
+          "name": "远东股份",
+          "close": 15.61,
+          "price": 15.61,
+          "high_250": 15.61,
+          "high_250d": 15.61,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 346.44,
+          "amount": 2141.49,
+          "turnover": 2141.49,
+          "institution_score": 8.15,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "化学制药",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600488",
+          "name": "津药药业",
+          "close": 6.97,
+          "price": 6.97,
+          "high_250": 6.97,
+          "high_250d": 6.97,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.94,
+          "change": 9.94,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 76.1,
+          "amount": 652.49,
+          "turnover": 652.49,
+          "institution_score": 3.89,
+          "sector": "化学制药",
+          "industry": "化学制药"
+        },
+        {
+          "code": "300006",
+          "name": "莱美药业",
+          "close": 6.52,
+          "price": 6.52,
+          "high_250": 6.52,
+          "high_250d": 6.52,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.07,
+          "change": 20.07,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 68.84,
+          "amount": 1472.22,
+          "turnover": 1472.22,
+          "institution_score": 5.63,
+          "sector": "化学制药",
+          "industry": "化学制药"
+        }
+      ]
+    },
+    {
+      "sector_name": "通信设备",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "003031",
+          "name": "中瓷电子",
+          "close": 88.57,
+          "price": 88.57,
+          "high_250": 88.57,
+          "high_250d": 88.57,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 301.28,
+          "amount": 1632.02,
+          "turnover": 1632.02,
+          "institution_score": 7.74,
+          "sector": "通信设备",
+          "industry": "通信设备"
+        },
+        {
+          "code": "688205",
+          "name": "德科立",
+          "close": 247.21,
+          "price": 247.21,
+          "high_250": 247.21,
+          "high_250d": 247.21,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 391.3,
+          "amount": 3894.36,
+          "turnover": 3894.36,
+          "institution_score": 8.56,
+          "sector": "通信设备",
+          "industry": "通信设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "医药商业",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000950",
+          "name": "重药控股",
+          "close": 7.14,
+          "price": 7.14,
+          "high_250": 7.14,
+          "high_250d": 7.14,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 123.39,
+          "amount": 1088.61,
+          "turnover": 1088.61,
+          "institution_score": 6.12,
+          "sector": "医药商业",
+          "industry": "医药商业"
+        }
+      ]
+    },
+    {
+      "sector_name": "农化制品",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603585",
+          "name": "苏利股份",
+          "close": 24.51,
+          "price": 24.51,
+          "high_250": 24.51,
+          "high_250d": 24.51,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 44.79,
+          "amount": 306.01,
+          "turnover": 306.01,
+          "institution_score": 1.91,
+          "sector": "农化制品",
+          "industry": "农化制品"
+        }
+      ]
+    },
+    {
+      "sector_name": "电机Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300626",
+          "name": "华瑞股份",
+          "close": 24.59,
+          "price": 24.59,
+          "high_250": 24.59,
+          "high_250d": 24.59,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.01,
+          "change": 20.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 44.24,
+          "amount": 739.77,
+          "turnover": 739.77,
+          "institution_score": 4.03,
+          "sector": "电机Ⅱ",
+          "industry": "电机Ⅱ"
+        }
+      ]
+    },
+    {
+      "sector_name": "轨交设备Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "688485",
+          "name": "九州一轨",
+          "close": 31.3,
+          "price": 31.3,
+          "high_250": 31.3,
+          "high_250d": 31.3,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.02,
+          "change": 20.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 27.78,
+          "amount": 628.38,
+          "turnover": 628.38,
+          "institution_score": 3.33,
+          "sector": "轨交设备Ⅱ",
+          "industry": "轨交设备Ⅱ"
+        }
+      ]
+    }
+  ]
+}

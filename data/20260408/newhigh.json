@@ -20,11 +20,11 @@
     "trend_days": 5,
     "positive_days_5d": 5,
     "total_universe": 5011,
-    "market_status": "趋势可做",
-    "market_signal": "趋势可做",
-    "market_status_desc": "市场存在可操作的趋势扩散，优先盯强板块里的回踩和二次启动。",
-    "strength_score": 80,
-    "status_color_class": "text-orange-600"
+    "market_status": "趋势观察",
+    "market_signal": "趋势观察",
+    "market_status_desc": "市场有局部趋势，但扩散仍不够，机会更偏结构性。",
+    "strength_score": 48,
+    "status_color_class": "text-yellow-600"
   },
   "sectors": [
     {

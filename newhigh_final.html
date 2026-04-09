@@ -54,6 +54,48 @@
             cursor: not-allowed;
             opacity: 0.6;
         }
+        .hint-wrap {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .hint-icon {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            background: #f3f4f6;
+            color: #6b7280;
+            cursor: help;
+        }
+        .hint-tip {
+            position: absolute;
+            left: 0;
+            top: calc(100% + 0.5rem);
+            width: 220px;
+            padding: 0.75rem 0.9rem;
+            border-radius: 0.75rem;
+            background: rgba(17, 24, 39, 0.94);
+            color: #f9fafb;
+            font-size: 0.75rem;
+            line-height: 1.5;
+            box-shadow: 0 14px 32px rgba(17, 24, 39, 0.18);
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-4px);
+            transition: opacity 0.18s ease, transform 0.18s ease;
+            z-index: 20;
+        }
+        .hint-wrap:hover .hint-tip,
+        .hint-wrap:focus-within .hint-tip {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
@@ -154,22 +196,38 @@
             <!-- 市场统计卡片 -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <p class="text-xs font-medium text-gray-500 uppercase">创250日新高家数</p>
+                    <div class="hint-wrap">
+                        <p class="text-xs font-medium text-gray-500 uppercase">创250日新高家数</p>
+                        <button class="hint-icon" type="button">?</button>
+                        <div class="hint-tip">今天收盘价站上过去250个交易日最高价的股票数量。数量越多，说明趋势股的扩散越明显。</div>
+                    </div>
                     <p id="todayNewHigh" class="text-2xl font-bold text-stock-up mt-1">-</p>
                     <p id="newHighRatio" class="text-xs text-gray-400 mt-1">-</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <p class="text-xs font-medium text-gray-500 uppercase">趋势环境判断</p>
+                    <div class="hint-wrap">
+                        <p class="text-xs font-medium text-gray-500 uppercase">趋势环境判断</p>
+                        <button class="hint-icon" type="button">?</button>
+                        <div class="hint-tip">只看创一年新高和创一年新低的扩散情况。新高少时，即使局部很强，也不代表市场整体适合积极做趋势。</div>
+                    </div>
                     <p id="marketStatus" class="text-lg font-bold text-yellow-600 mt-1">-</p>
                     <p id="marketStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <p class="text-xs font-medium text-gray-500 uppercase">最近5日平均新高家数</p>
+                    <div class="hint-wrap">
+                        <p class="text-xs font-medium text-gray-500 uppercase">最近5日平均新高家数</p>
+                        <button class="hint-icon" type="button">?</button>
+                        <div class="hint-tip">用来判断今天是升温还是降温，避免只看单日波动。今天明显高于5日均值，才算扩散在加速。</div>
+                    </div>
                     <p id="avg5Days" class="text-2xl font-bold text-gray-700 mt-1">-</p>
                     <p id="avg5DaysChange" class="text-xs text-stock-up mt-1">-</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <p class="text-xs font-medium text-gray-500 uppercase">趋势环境评分</p>
+                    <div class="hint-wrap">
+                        <p class="text-xs font-medium text-gray-500 uppercase">趋势环境评分</p>
+                        <button class="hint-icon" type="button">?</button>
+                        <div class="hint-tip">这是一个保守分。新高占比、净新高、连续性共同决定，只有全市场明显扩散时才会给高分。</div>
+                    </div>
                     <div class="flex items-center gap-2 mt-1">
                         <p id="strengthScore" class="text-2xl font-bold text-stock-up">-</p>
                         <span class="text-xs text-gray-400">/100</span>
@@ -180,8 +238,8 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-                <div class="lg:col-span-2 bg-white rounded-xl shadow-card border border-gray-100 p-6">
+            <div class="bg-white rounded-xl shadow-card border border-gray-100 p-6 mb-6">
+                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
                     <div class="flex items-start justify-between gap-4">
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900">自动解读</h3>
@@ -189,7 +247,7 @@
                         </div>
                         <span id="marketSignalBadge" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600">-</span>
                     </div>
-                    <div class="mt-4">
+                    <div class="lg:max-w-2xl">
                         <p id="marketSummaryTitle" class="text-base font-semibold text-gray-900">-</p>
                         <p id="marketSummaryBody" class="text-sm text-gray-600 mt-2 leading-7">-</p>
                         <div class="mt-4 rounded-lg bg-red-50 border border-red-100 p-4">
@@ -197,15 +255,10 @@
                             <p id="marketActionHint" class="text-sm text-red-800 mt-1 leading-7">-</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-card border border-gray-100 p-6">
-                    <h3 class="text-lg font-semibold text-gray-900">怎么看这页</h3>
-                    <div class="mt-4 space-y-3 text-sm text-gray-600 leading-6">
-                        <p><strong>先看趋势环境判断：</strong>决定现在适不适合优先做趋势股。</p>
-                        <p><strong>再看新高和新低：</strong>新高越多、新低越少，说明趋势扩散越健康。</p>
-                        <p><strong>再看5日平均：</strong>如果今天明显高于5日均值，说明市场正在升温。</p>
-                        <p><strong>最后看板块分布：</strong>哪里新高股票最集中，哪里更可能是当前主攻方向。</p>
+                    <div class="lg:min-w-[220px] rounded-lg bg-gray-50 border border-gray-100 p-4">
+                        <p class="text-xs font-medium text-gray-500 uppercase">怎么快速看</p>
+                        <p class="text-sm text-gray-700 mt-3 leading-7">先看环境判断，再看右下板块。鼠标停在指标名旁边的 <strong>?</strong> 上，可以看每个指标具体是什么意思。</p>
+                        <p id="currentStatus" class="text-xs text-gray-500 mt-4">当前：-</p>
                     </div>
                 </div>
             </div>
@@ -219,37 +272,19 @@
                             <h3 class="text-lg font-semibold text-gray-900">新高板块分布</h3>
                             <p class="text-xs text-gray-500 mt-1">💡 点击任意板块查看该板块内创出新高的个股</p>
                         </div>
-                        <span class="text-xs text-gray-400">按新高股数量排序</span>
+                        <span class="text-xs text-gray-400">按新高优先级排序</span>
                     </div>
                     <div class="p-6" id="sectorList">
                         <!-- 动态填充 -->
                     </div>
                 </div>
 
-                <!-- 市场状态说明 -->
                 <div class="bg-white rounded-xl shadow-card border border-gray-100 p-6">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">指标说明</h3>
-                    <div class="space-y-3 text-sm" id="marketLevels">
-                        <div class="p-3 bg-gray-50 rounded-lg">
-                            <p class="font-medium text-gray-800">创250日新高家数</p>
-                            <p class="text-gray-500 mt-1">今天收盘价站上过去250个交易日最高价的股票数量。</p>
-                        </div>
-                        <div class="p-3 bg-gray-50 rounded-lg">
-                            <p class="font-medium text-gray-800">新低 / 净新高</p>
-                            <p class="text-gray-500 mt-1">新低越少越好；净新高 = 新高减去新低，越大说明环境越顺。</p>
-                        </div>
-                        <div class="p-3 bg-gray-50 rounded-lg">
-                            <p class="font-medium text-gray-800">最近5日平均</p>
-                            <p class="text-gray-500 mt-1">用来判断今天是升温还是降温，避免只看单日波动。</p>
-                        </div>
-                        <div class="p-3 bg-gray-50 rounded-lg">
-                            <p class="font-medium text-gray-800">趋势环境评分</p>
-                            <p class="text-gray-500 mt-1">综合新高、新低、净新高和最近几天延续性后的结果，分数越高越适合做趋势。</p>
-                        </div>
-                    </div>
-                    <div class="mt-4 pt-4 border-t border-gray-100">
-                        <p id="currentStatus" class="text-xs text-gray-500">当前：-</p>
-                        <p class="text-xs text-gray-400 mt-1">先看环境，再看板块，再看个股，不要把这页当成直接买入信号。</p>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">板块怎么用</h3>
+                    <div class="space-y-3 text-sm text-gray-600 leading-7">
+                        <p>这里不是简单按“新高数量”排，而是按 <strong>新高数量、连续性、突破强度、机构参与代理分、是否与动量主线共振</strong> 综合排序。</p>
+                        <p>所以前排板块，更接近“在你的趋势体系里值得先看”的方向，而不是单纯多出几只新高股。</p>
+                        <p class="text-xs text-gray-400">先看环境，再看板块，再看个股，不要把这页当成直接买入信号。</p>
                     </div>
                 </div>
             </div>

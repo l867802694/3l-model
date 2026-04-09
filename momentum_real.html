@@ -328,7 +328,7 @@
                                     <th class="px-4 py-3 text-right font-medium">成交额</th>
                                     <th class="px-4 py-3 text-right font-medium">流通市值(亿元)</th>
                                     <th class="px-4 py-3 text-left font-medium">关注理由</th>
-                                    <th class="px-4 py-3 text-center font-medium">机构关注度评分</th>
+                                    <th class="px-4 py-3 text-center font-medium">机构参与代理分</th>
                                 </tr>
                             </thead>
                             <tbody id="modalStockList" class="divide-y divide-gray-100"></tbody>
@@ -818,7 +818,7 @@
                 const return20d = s.return_20d || s.return || 0;
                 // 市值字段(亿元)
                 const circMv = s.circ_mv || '-';  
-                // 机构评分(0-10分)
+                // 机构参与代理分(0-10分)
                 const instScore = s.institution_score || 0;
                 const amountYi = (Number(s.amount || 0) / 10000).toFixed(2);
                 const tags = getStockReasonTags(s);

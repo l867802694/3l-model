@@ -284,7 +284,7 @@
                                 <option value="change">按当日涨幅</option>
                                 <option value="consecutive">按连新高天数</option>
                                 <option value="turnover">按成交额</option>
-                                <option value="institution">按关注度</option>
+                                <option value="institution">按机构参与代理分</option>
                             </select>
                         </div>
                     </div>
@@ -300,7 +300,7 @@
                                 <th class="px-6 py-3 font-medium">涨跌幅</th>
                                 <th class="px-6 py-3 font-medium">连新高</th>
                                 <th class="px-6 py-3 font-medium">成交额</th>
-                                <th class="px-6 py-3 font-medium">关注度</th>
+                                <th class="px-6 py-3 font-medium">机构参与代理分</th>
                             </tr>
                         </thead>
                         <tbody id="stockTable" class="divide-y divide-gray-100">
@@ -829,25 +829,35 @@
                 return;
             }
             
-            // 按新高数量排序
-            const sortedSectors = [...sectors].sort((a, b) => (b.new_high_count || b.stock_count || 0) - (a.new_high_count || a.stock_count || 0));
-            const maxCount = sortedSectors[0]?.new_high_count || sortedSectors[0]?.stock_count || 1;
+            const sortedSectors = [...sectors].sort((a, b) => (b.sector_score || b.new_high_count || b.stock_count || 0) - (a.sector_score || a.new_high_count || a.stock_count || 0));
+            const maxScore = sortedSectors[0]?.sector_score || sortedSectors[0]?.new_high_count || sortedSectors[0]?.stock_count || 1;
             
             // 显示所有板块，不限于前8个
             container.innerHTML = sortedSectors.map((sector, index) => {
                 const count = sector.new_high_count || sector.stock_count || 0;
-                const score = sector.strength_score || Math.round((count / maxCount) * 100);
+                const score = sector.sector_score || sector.strength_score || Math.round((count / maxScore) * 100);
                 const color = colors[index % colors.length];
-                const width = Math.max(10, (count / maxCount) * 100);
+                const width = Math.max(10, (score / maxScore) * 100);
+                const reason = sector.sector_reason || '新高数量和板块强度共同决定排序';
+                const badges = [];
+                if (sector.momentum_warning) badges.push('动量预警主线');
+                else if (sector.momentum_mainline) badges.push('动量主线');
+                if ((sector.avg_consecutive_days || 0) >= 2) badges.push(`均值${sector.avg_consecutive_days}天`);
                 
                 return `
                     <div class="sector-item flex items-center justify-between p-3 rounded-lg border border-transparent hover:border-red-200" onclick="openSectorModal('${sector.sector_name || sector.name}', ${count}, ${score})">
-                        <div class="flex items-center gap-3">
-                            <span class="w-6 h-6 flex items-center justify-center ${color.light} ${color.text} rounded text-sm font-bold">${index + 1}</span>
-                            <span class="font-medium text-gray-900">${sector.sector_name || sector.name} 🔍</span>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-3">
+                                <span class="w-6 h-6 flex items-center justify-center ${color.light} ${color.text} rounded text-sm font-bold">${index + 1}</span>
+                                <span class="font-medium text-gray-900">${sector.sector_name || sector.name} 🔍</span>
+                                <div class="flex flex-wrap gap-2">
+                                    ${badges.map((badge) => `<span class="inline-flex items-center px-2 py-1 rounded-full text-[11px] bg-gray-100 text-gray-600">${badge}</span>`).join('')}
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">${reason}</p>
                         </div>
                         <div class="flex items-center gap-4">
-                            <span class="text-sm text-gray-600">${count}只新高</span>
+                            <span class="text-sm text-gray-600">${count}只新高 · 均涨${Number(sector.avg_change_pct || 0).toFixed(1)}%</span>
                             <div class="w-32 bg-gray-200 rounded-full h-2">
                                 <div class="${color.bg} h-2 rounded-full progress-bar" style="width: ${width}%"></div>
                             </div>
@@ -907,7 +917,7 @@
                         <td class="px-6 py-4 text-gray-600">${turnoverYi.toFixed(2)}亿</td>
                         <td class="px-6 py-4">
                             <div class="font-medium text-gray-800">${institution}</div>
-                            <div class="text-xs text-gray-400 mt-1">机构代理分</div>
+                            <div class="text-xs text-gray-400 mt-1">容量/成交/换手代理分</div>
                         </td>
                     </tr>
                 `;

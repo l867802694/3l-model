@@ -1,15 +1,15 @@
 {
   "trade_date": "20260408",
   "data_source": "BaoStock (免费数据)",
-  "classification": "证监会行业分类",
+  "classification": "东财二级行业",
   "market_strength": 0.34,
   "total_stocks": 17,
-  "total_sectors": 13,
+  "total_sectors": 15,
   "sectors": [
     {
-      "sector_name": "C38电气机械和器材制造业",
-      "new_high_count": 3,
-      "stock_count": 3,
+      "sector_name": "通信设备",
+      "new_high_count": 2,
+      "stock_count": 2,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
@@ -29,28 +29,8 @@
           "amount": 500298.67,
           "turnover": 500298.67,
           "institution_score": 8.76,
-          "sector": "C38电气机械和器材制造业",
-          "industry": "C38电气机械和器材制造业"
-        },
-        {
-          "code": "600869",
-          "name": "远东股份",
-          "close": 15.83,
-          "price": 15.83,
-          "high_250": 15.83,
-          "high_250d": 15.83,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 338.13,
-          "amount": 205113.63,
-          "turnover": 205113.63,
-          "institution_score": 7.67,
-          "sector": "C38电气机械和器材制造业",
-          "industry": "C38电气机械和器材制造业"
+          "sector": "通信设备",
+          "industry": "通信设备"
         },
         {
           "code": "002491",
@@ -69,13 +49,13 @@
           "amount": 111295.14,
           "turnover": 111295.14,
           "institution_score": 4.81,
-          "sector": "C38电气机械和器材制造业",
-          "industry": "C38电气机械和器材制造业"
+          "sector": "通信设备",
+          "industry": "通信设备"
         }
       ]
     },
     {
-      "sector_name": "C18纺织服装、服饰业",
+      "sector_name": "服装家纺",
       "new_high_count": 2,
       "stock_count": 2,
       "avg_consecutive_days": 1.0,
@@ -97,8 +77,8 @@
           "amount": 19226.54,
           "turnover": 19226.54,
           "institution_score": 1.16,
-          "sector": "C18纺织服装、服饰业",
-          "industry": "C18纺织服装、服饰业"
+          "sector": "服装家纺",
+          "industry": "服装家纺"
         },
         {
           "code": "002634",
@@ -117,61 +97,13 @@
           "amount": 26562.1,
           "turnover": 26562.1,
           "institution_score": 1.14,
-          "sector": "C18纺织服装、服饰业",
-          "industry": "C18纺织服装、服饰业"
+          "sector": "服装家纺",
+          "industry": "服装家纺"
         }
       ]
     },
     {
-      "sector_name": "C35专用设备制造业",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "688630",
-          "name": "芯碁微装",
-          "close": 240.0,
-          "price": 240.0,
-          "high_250": 240.0,
-          "high_250d": 240.0,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 20.0,
-          "change": 20.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 304.66,
-          "amount": 282855.79,
-          "turnover": 282855.79,
-          "institution_score": 7.4,
-          "sector": "C35专用设备制造业",
-          "industry": "C35专用设备制造业"
-        },
-        {
-          "code": "002957",
-          "name": "科瑞技术",
-          "close": 37.05,
-          "price": 37.05,
-          "high_250": 37.05,
-          "high_250d": 37.05,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 152.6,
-          "amount": 113183.89,
-          "turnover": 113183.89,
-          "institution_score": 4.67,
-          "sector": "C35专用设备制造业",
-          "industry": "C35专用设备制造业"
-        }
-      ]
-    },
-    {
-      "sector_name": "C14食品制造业",
+      "sector_name": "调味发酵品Ⅱ",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -193,13 +125,41 @@
           "amount": 92954.66,
           "turnover": 92954.66,
           "institution_score": 3.91,
-          "sector": "C14食品制造业",
-          "industry": "C14食品制造业"
+          "sector": "调味发酵品Ⅱ",
+          "industry": "调味发酵品Ⅱ"
         }
       ]
     },
     {
-      "sector_name": "C36汽车制造业",
+      "sector_name": "电网设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600869",
+          "name": "远东股份",
+          "close": 15.83,
+          "price": 15.83,
+          "high_250": 15.83,
+          "high_250d": 15.83,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 338.13,
+          "amount": 205113.63,
+          "turnover": 205113.63,
+          "institution_score": 7.67,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "汽车零部件",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -221,13 +181,13 @@
           "amount": 35985.09,
           "turnover": 35985.09,
           "institution_score": 1.65,
-          "sector": "C36汽车制造业",
-          "industry": "C36汽车制造业"
+          "sector": "汽车零部件",
+          "industry": "汽车零部件"
         }
       ]
     },
     {
-      "sector_name": "C33金属制品业",
+      "sector_name": "风电设备",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -249,13 +209,13 @@
           "amount": 120656.62,
           "turnover": 120656.62,
           "institution_score": 4.44,
-          "sector": "C33金属制品业",
-          "industry": "C33金属制品业"
+          "sector": "风电设备",
+          "industry": "风电设备"
         }
       ]
     },
     {
-      "sector_name": "D44电力、热力生产和供应业",
+      "sector_name": "电力",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -277,13 +237,13 @@
           "amount": 89496.98,
           "turnover": 89496.98,
           "institution_score": 3.2,
-          "sector": "D44电力、热力生产和供应业",
-          "industry": "D44电力、热力生产和供应业"
+          "sector": "电力",
+          "industry": "电力"
         }
       ]
     },
     {
-      "sector_name": "C41其他制造业",
+      "sector_name": "装修建材",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -305,13 +265,13 @@
           "amount": 37638.17,
           "turnover": 37638.17,
           "institution_score": 1.97,
-          "sector": "C41其他制造业",
-          "industry": "C41其他制造业"
+          "sector": "装修建材",
+          "industry": "装修建材"
         }
       ]
     },
     {
-      "sector_name": "C40仪器仪表制造业",
+      "sector_name": "通用设备",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -333,13 +293,13 @@
           "amount": 39709.39,
           "turnover": 39709.39,
           "institution_score": 1.96,
-          "sector": "C40仪器仪表制造业",
-          "industry": "C40仪器仪表制造业"
+          "sector": "通用设备",
+          "industry": "通用设备"
         }
       ]
     },
     {
-      "sector_name": "N77生态保护和环境治理业",
+      "sector_name": "轨交设备Ⅱ",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -361,13 +321,41 @@
           "amount": 55929.23,
           "turnover": 55929.23,
           "institution_score": 1.98,
-          "sector": "N77生态保护和环境治理业",
-          "industry": "N77生态保护和环境治理业"
+          "sector": "轨交设备Ⅱ",
+          "industry": "轨交设备Ⅱ"
         }
       ]
     },
     {
-      "sector_name": "C39计算机、通信和其他电子设备制造业",
+      "sector_name": "专用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "688630",
+          "name": "芯碁微装",
+          "close": 240.0,
+          "price": 240.0,
+          "high_250": 240.0,
+          "high_250d": 240.0,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 304.66,
+          "amount": 282855.79,
+          "turnover": 282855.79,
+          "institution_score": 7.4,
+          "sector": "专用设备",
+          "industry": "专用设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "半导体",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -389,13 +377,13 @@
           "amount": 50916.63,
           "turnover": 50916.63,
           "institution_score": 1.75,
-          "sector": "C39计算机、通信和其他电子设备制造业",
-          "industry": "C39计算机、通信和其他电子设备制造业"
+          "sector": "半导体",
+          "industry": "半导体"
         }
       ]
     },
     {
-      "sector_name": "C27医药制造业",
+      "sector_name": "化学制药",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -417,13 +405,13 @@
           "amount": 84310.9,
           "turnover": 84310.9,
           "institution_score": 3.02,
-          "sector": "C27医药制造业",
-          "industry": "C27医药制造业"
+          "sector": "化学制药",
+          "industry": "化学制药"
         }
       ]
     },
     {
-      "sector_name": "E48土木工程建筑业",
+      "sector_name": "专业工程",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -445,8 +433,36 @@
           "amount": 49282.42,
           "turnover": 49282.42,
           "institution_score": 2.64,
-          "sector": "E48土木工程建筑业",
-          "industry": "E48土木工程建筑业"
+          "sector": "专业工程",
+          "industry": "专业工程"
+        }
+      ]
+    },
+    {
+      "sector_name": "自动化设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002957",
+          "name": "科瑞技术",
+          "close": 37.05,
+          "price": 37.05,
+          "high_250": 37.05,
+          "high_250d": 37.05,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 152.6,
+          "amount": 113183.89,
+          "turnover": 113183.89,
+          "institution_score": 4.67,
+          "sector": "自动化设备",
+          "industry": "自动化设备"
         }
       ]
     }

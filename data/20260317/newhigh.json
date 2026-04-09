@@ -1,0 +1,322 @@
+{
+  "trade_date": "20260317",
+  "data_source": "BaoStock (免费数据)",
+  "classification": "申万2021二级行业",
+  "market_strength": 0.24,
+  "total_stocks": 12,
+  "total_sectors": 9,
+  "sectors": [
+    {
+      "sector_name": "农化制品",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600227",
+          "name": "赤天化",
+          "close": 5.29,
+          "price": 5.29,
+          "high_250": 5.29,
+          "high_250d": 5.29,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.98,
+          "change": 9.98,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 64.37,
+          "amount": 231533.75,
+          "turnover": 231533.75,
+          "institution_score": 5.49,
+          "sector": "农化制品",
+          "industry": "农化制品"
+        },
+        {
+          "code": "002470",
+          "name": "金正大",
+          "close": 3.6,
+          "price": 3.6,
+          "high_250": 3.6,
+          "high_250d": 3.6,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.09,
+          "change": 10.09,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 110.5,
+          "amount": 307710.17,
+          "turnover": 307710.17,
+          "institution_score": 5.85,
+          "sector": "农化制品",
+          "industry": "农化制品"
+        }
+      ]
+    },
+    {
+      "sector_name": "化学纤维",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600370",
+          "name": "三房巷",
+          "close": 3.3,
+          "price": 3.3,
+          "high_250": 3.3,
+          "high_250d": 3.3,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 123.54,
+          "amount": 80514.18,
+          "turnover": 80514.18,
+          "institution_score": 3.57,
+          "sector": "化学纤维",
+          "industry": "化学纤维"
+        },
+        {
+          "code": "688295",
+          "name": "中复神鹰",
+          "close": 59.4,
+          "price": 59.4,
+          "high_250": 59.4,
+          "high_250d": 59.4,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 493.74,
+          "amount": 252098.6,
+          "turnover": 252098.6,
+          "institution_score": 8.79,
+          "sector": "化学纤维",
+          "industry": "化学纤维"
+        }
+      ]
+    },
+    {
+      "sector_name": "专业工程",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603929",
+          "name": "亚翔集成",
+          "close": 170.4,
+          "price": 170.4,
+          "high_250": 170.4,
+          "high_250d": 170.4,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 354.36,
+          "amount": 179477.5,
+          "turnover": 179477.5,
+          "institution_score": 7.72,
+          "sector": "专业工程",
+          "industry": "专业工程"
+        },
+        {
+          "code": "002323",
+          "name": "雅博股份",
+          "close": 2.75,
+          "price": 2.75,
+          "high_250": 2.75,
+          "high_250d": 2.75,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 56.48,
+          "amount": 51876.79,
+          "turnover": 51876.79,
+          "institution_score": 2.13,
+          "sector": "专业工程",
+          "industry": "专业工程"
+        }
+      ]
+    },
+    {
+      "sector_name": "电力",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600396",
+          "name": "华电辽能",
+          "close": 4.7,
+          "price": 4.7,
+          "high_250": 4.7,
+          "high_250d": 4.7,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.07,
+          "change": 10.07,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 67.12,
+          "amount": 84132.96,
+          "turnover": 84132.96,
+          "institution_score": 3.26,
+          "sector": "电力",
+          "industry": "电力"
+        }
+      ]
+    },
+    {
+      "sector_name": "专用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600545",
+          "name": "卓郎智能",
+          "close": 4.63,
+          "price": 4.63,
+          "high_250": 4.63,
+          "high_250d": 4.63,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.98,
+          "change": 9.98,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 82.05,
+          "amount": 64228.87,
+          "turnover": 64228.87,
+          "institution_score": 2.72,
+          "sector": "专用设备",
+          "industry": "专用设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "房地产开发",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600683",
+          "name": "京投发展",
+          "close": 10.6,
+          "price": 10.6,
+          "high_250": 10.6,
+          "high_250d": 10.6,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.96,
+          "change": 9.96,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 78.05,
+          "amount": 48131.08,
+          "turnover": 48131.08,
+          "institution_score": 2.17,
+          "sector": "房地产开发",
+          "industry": "房地产开发"
+        }
+      ]
+    },
+    {
+      "sector_name": "医疗器械",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603387",
+          "name": "基蛋生物",
+          "close": 9.44,
+          "price": 9.44,
+          "high_250": 9.44,
+          "high_250d": 9.44,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 46.88,
+          "amount": 35740.91,
+          "turnover": 35740.91,
+          "institution_score": 1.53,
+          "sector": "医疗器械",
+          "industry": "医疗器械"
+        }
+      ]
+    },
+    {
+      "sector_name": "电网设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000533",
+          "name": "顺钠股份",
+          "close": 20.53,
+          "price": 20.53,
+          "high_250": 20.53,
+          "high_250d": 20.53,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 129.73,
+          "amount": 514544.01,
+          "turnover": 514544.01,
+          "institution_score": 6.0,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "环保设备Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000890",
+          "name": "法尔胜",
+          "close": 13.42,
+          "price": 13.42,
+          "high_250": 13.42,
+          "high_250d": 13.42,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 54.12,
+          "amount": 124294.61,
+          "turnover": 124294.61,
+          "institution_score": 4.47,
+          "sector": "环保设备Ⅱ",
+          "industry": "环保设备Ⅱ"
+        }
+      ]
+    }
+  ]
+}

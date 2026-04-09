@@ -1,0 +1,262 @@
+{
+  "trade_date": "20260331",
+  "data_source": "BaoStock (免费数据)",
+  "classification": "申万2021二级行业",
+  "market_strength": 0.18,
+  "total_stocks": 9,
+  "total_sectors": 9,
+  "sectors": [
+    {
+      "sector_name": "商用车",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600066",
+          "name": "宇通客车",
+          "close": 35.86,
+          "price": 35.86,
+          "high_250": 35.86,
+          "high_250d": 35.86,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 793.85,
+          "amount": 119926.56,
+          "turnover": 119926.56,
+          "institution_score": 9.59,
+          "sector": "商用车",
+          "industry": "商用车"
+        }
+      ]
+    },
+    {
+      "sector_name": "其他",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600158",
+          "name": "中体产业",
+          "close": 11.99,
+          "price": 11.99,
+          "high_250": 11.99,
+          "high_250d": 11.99,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 112.76,
+          "amount": 149779.55,
+          "turnover": 149779.55,
+          "institution_score": 5.9,
+          "sector": "其他",
+          "industry": "其他"
+        }
+      ]
+    },
+    {
+      "sector_name": "化学制药",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600488",
+          "name": "津药药业",
+          "close": 5.24,
+          "price": 5.24,
+          "high_250": 5.24,
+          "high_250d": 5.24,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.08,
+          "change": 10.08,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 56.79,
+          "amount": 46691.49,
+          "turnover": 46691.49,
+          "institution_score": 2.24,
+          "sector": "化学制药",
+          "industry": "化学制药"
+        }
+      ]
+    },
+    {
+      "sector_name": "基础建设",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600502",
+          "name": "安徽建工",
+          "close": 5.63,
+          "price": 5.63,
+          "high_250": 5.63,
+          "high_250d": 5.63,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.96,
+          "change": 9.96,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 95.29,
+          "amount": 94871.62,
+          "turnover": 94871.62,
+          "institution_score": 4.4,
+          "sector": "基础建设",
+          "industry": "基础建设"
+        }
+      ]
+    },
+    {
+      "sector_name": "非金属材料Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603826",
+          "name": "坤彩科技",
+          "close": 27.67,
+          "price": 27.67,
+          "high_250": 27.67,
+          "high_250d": 27.67,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 177.79,
+          "amount": 69667.85,
+          "turnover": 69667.85,
+          "institution_score": 4.09,
+          "sector": "非金属材料Ⅱ",
+          "industry": "非金属材料Ⅱ"
+        }
+      ]
+    },
+    {
+      "sector_name": "文娱用品",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "605299",
+          "name": "舒华体育",
+          "close": 21.33,
+          "price": 21.33,
+          "high_250": 21.33,
+          "high_250d": 21.33,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 84.84,
+          "amount": 86312.75,
+          "turnover": 86312.75,
+          "institution_score": 3.98,
+          "sector": "文娱用品",
+          "industry": "文娱用品"
+        }
+      ]
+    },
+    {
+      "sector_name": "中药Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002082",
+          "name": "万邦德",
+          "close": 30.2,
+          "price": 30.2,
+          "high_250": 30.2,
+          "high_250d": 30.2,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 157.67,
+          "amount": 200859.79,
+          "turnover": 200859.79,
+          "institution_score": 6.26,
+          "sector": "中药Ⅱ",
+          "industry": "中药Ⅱ"
+        }
+      ]
+    },
+    {
+      "sector_name": "服装家纺",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002634",
+          "name": "棒杰股份",
+          "close": 8.94,
+          "price": 8.94,
+          "high_250": 8.94,
+          "high_250d": 8.94,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.96,
+          "change": 9.96,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 39.5,
+          "amount": 31221.56,
+          "turnover": 31221.56,
+          "institution_score": 1.51,
+          "sector": "服装家纺",
+          "industry": "服装家纺"
+        }
+      ]
+    },
+    {
+      "sector_name": "通用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300992",
+          "name": "泰福泵业",
+          "close": 41.88,
+          "price": 41.88,
+          "high_250": 41.88,
+          "high_250d": 41.88,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 29.19,
+          "amount": 58892.64,
+          "turnover": 58892.64,
+          "institution_score": 2.49,
+          "sector": "通用设备",
+          "industry": "通用设备"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "trade_date": "20260323",
+  "data_source": "BaoStock (免费数据)",
+  "classification": "申万2021二级行业",
+  "market_strength": 0.18,
+  "total_stocks": 9,
+  "total_sectors": 7,
+  "sectors": [
+    {
+      "sector_name": "电力",
+      "new_high_count": 3,
+      "stock_count": 3,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600032",
+          "name": "浙江新能",
+          "close": 10.76,
+          "price": 10.76,
+          "high_250": 10.76,
+          "high_250d": 10.76,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 251.84,
+          "amount": 172610.0,
+          "turnover": 172610.0,
+          "institution_score": 6.68,
+          "sector": "电力",
+          "industry": "电力"
+        },
+        {
+          "code": "600396",
+          "name": "华电辽能",
+          "close": 6.89,
+          "price": 6.89,
+          "high_250": 6.89,
+          "high_250d": 6.89,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.06,
+          "change": 10.06,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 100.46,
+          "amount": 114821.59,
+          "turnover": 114821.59,
+          "institution_score": 3.89,
+          "sector": "电力",
+          "industry": "电力"
+        },
+        {
+          "code": "603105",
+          "name": "芯能科技",
+          "close": 12.74,
+          "price": 12.74,
+          "high_250": 12.74,
+          "high_250d": 12.74,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 60.71,
+          "amount": 129875.29,
+          "turnover": 129875.29,
+          "institution_score": 3.96,
+          "sector": "电力",
+          "industry": "电力"
+        }
+      ]
+    },
+    {
+      "sector_name": "煤炭开采",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600758",
+          "name": "辽宁能源",
+          "close": 4.73,
+          "price": 4.73,
+          "high_250": 4.73,
+          "high_250d": 4.73,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 62.03,
+          "amount": 44617.87,
+          "turnover": 44617.87,
+          "institution_score": 1.7,
+          "sector": "煤炭开采",
+          "industry": "煤炭开采"
+        }
+      ]
+    },
+    {
+      "sector_name": "电网设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603016",
+          "name": "新宏泰",
+          "close": 38.58,
+          "price": 38.58,
+          "high_250": 38.58,
+          "high_250d": 38.58,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 55.43,
+          "amount": 39555.73,
+          "turnover": 39555.73,
+          "institution_score": 1.51,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "包装印刷",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603687",
+          "name": "大胜达",
+          "close": 14.73,
+          "price": 14.73,
+          "high_250": 14.73,
+          "high_250d": 14.73,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 79.16,
+          "amount": 240482.67,
+          "turnover": 240482.67,
+          "institution_score": 5.66,
+          "sector": "包装印刷",
+          "industry": "包装印刷"
+        }
+      ]
+    },
+    {
+      "sector_name": "通用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002150",
+          "name": "正泰电源",
+          "close": 38.37,
+          "price": 38.37,
+          "high_250": 38.37,
+          "high_250d": 38.37,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 136.2,
+          "amount": 224985.16,
+          "turnover": 224985.16,
+          "institution_score": 6.13,
+          "sector": "通用设备",
+          "industry": "通用设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "基础建设",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002310",
+          "name": "东方新能",
+          "close": 3.83,
+          "price": 3.83,
+          "high_250": 3.83,
+          "high_250d": 3.83,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.06,
+          "change": 10.06,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 157.45,
+          "amount": 319486.58,
+          "turnover": 319486.58,
+          "institution_score": 6.3,
+          "sector": "基础建设",
+          "industry": "基础建设"
+        }
+      ]
+    },
+    {
+      "sector_name": "消费电子",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300868",
+          "name": "杰美特",
+          "close": 46.33,
+          "price": 46.33,
+          "high_250": 46.33,
+          "high_250d": 46.33,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 19.99,
+          "change": 19.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 35.95,
+          "amount": 79714.67,
+          "turnover": 79714.67,
+          "institution_score": 2.42,
+          "sector": "消费电子",
+          "industry": "消费电子"
+        }
+      ]
+    }
+  ]
+}

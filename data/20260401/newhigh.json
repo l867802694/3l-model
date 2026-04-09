@@ -1,14 +1,15 @@
 {
   "trade_date": "20260401",
-  "data_source": "Tushare Pro (真实数据)",
-  "market_strength": 0.17,
-  "total_stocks": 9,
-  "total_sectors": 7,
+  "data_source": "BaoStock (免费数据)",
+  "classification": "申万2021二级行业",
+  "market_strength": 0.16,
+  "total_stocks": 8,
+  "total_sectors": 8,
   "sectors": [
     {
       "sector_name": "化学制药",
-      "new_high_count": 2,
-      "stock_count": 2,
+      "new_high_count": 1,
+      "stock_count": 1,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
@@ -24,113 +25,17 @@
           "change": 9.92,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 62.89,
-          "amount": 212.28,
-          "turnover": 212.28,
-          "institution_score": 1.45,
-          "sector": "化学制药",
-          "industry": "化学制药"
-        },
-        {
-          "code": "002923",
-          "name": "润都股份",
-          "close": 17.24,
-          "price": 17.24,
-          "high_250": 17.24,
-          "high_250d": 17.24,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.02,
-          "change": 10.02,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 44.49,
-          "amount": 145.53,
-          "turnover": 145.53,
-          "institution_score": 1.01,
+          "circ_mv": 62.82,
+          "amount": 21227.94,
+          "turnover": 21227.94,
+          "institution_score": 1.29,
           "sector": "化学制药",
           "industry": "化学制药"
         }
       ]
     },
     {
-      "sector_name": "专用机械",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "002730",
-          "name": "电光科技",
-          "close": 29.15,
-          "price": 29.15,
-          "high_250": 29.15,
-          "high_250d": 29.15,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 100.87,
-          "amount": 1450.28,
-          "turnover": 1450.28,
-          "institution_score": 5.88,
-          "sector": "专用机械",
-          "industry": "专用机械"
-        },
-        {
-          "code": "301312",
-          "name": "智立方",
-          "close": 103.2,
-          "price": 103.2,
-          "high_250": 103.2,
-          "high_250d": 103.2,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 20.0,
-          "change": 20.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 62.49,
-          "amount": 1071.0,
-          "turnover": 1071.0,
-          "institution_score": 5.09,
-          "sector": "专用机械",
-          "industry": "专用机械"
-        }
-      ]
-    },
-    {
-      "sector_name": "电气设备",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "002560",
-          "name": "通达股份",
-          "close": 11.87,
-          "price": 11.87,
-          "high_250": 11.87,
-          "high_250d": 11.87,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 53.76,
-          "amount": 981.09,
-          "turnover": 981.09,
-          "institution_score": 4.64,
-          "sector": "电气设备",
-          "industry": "电气设备"
-        }
-      ]
-    },
-    {
-      "sector_name": "铝",
+      "sector_name": "工业金属",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -148,17 +53,17 @@
           "change": 10.01,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 31.9,
-          "amount": 247.33,
-          "turnover": 247.33,
-          "institution_score": 1.33,
-          "sector": "铝",
-          "industry": "铝"
+          "circ_mv": 30.61,
+          "amount": 24732.68,
+          "turnover": 24732.68,
+          "institution_score": 1.16,
+          "sector": "工业金属",
+          "industry": "工业金属"
         }
       ]
     },
     {
-      "sector_name": "供气供热",
+      "sector_name": "电力",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -176,45 +81,17 @@
           "change": 9.99,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 51.15,
-          "amount": 664.23,
-          "turnover": 664.23,
-          "institution_score": 3.27,
-          "sector": "供气供热",
-          "industry": "供气供热"
+          "circ_mv": 48.53,
+          "amount": 66423.14,
+          "turnover": 66423.14,
+          "institution_score": 2.86,
+          "sector": "电力",
+          "industry": "电力"
         }
       ]
     },
     {
-      "sector_name": "化工原料",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "300834",
-          "name": "星辉环材",
-          "close": 36.24,
-          "price": 36.24,
-          "high_250": 36.24,
-          "high_250d": 36.24,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 20.0,
-          "change": 20.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 69.74,
-          "amount": 647.2,
-          "turnover": 647.2,
-          "institution_score": 3.36,
-          "sector": "化工原料",
-          "industry": "化工原料"
-        }
-      ]
-    },
-    {
-      "sector_name": "生物制药",
+      "sector_name": "生物制品",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -232,12 +109,124 @@
           "change": 11.83,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 234.85,
-          "amount": 2110.19,
-          "turnover": 2110.19,
-          "institution_score": 7.05,
-          "sector": "生物制药",
-          "industry": "生物制药"
+          "circ_mv": 224.04,
+          "amount": 211019.0,
+          "turnover": 211019.0,
+          "institution_score": 6.79,
+          "sector": "生物制品",
+          "industry": "生物制品"
+        }
+      ]
+    },
+    {
+      "sector_name": "电网设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002560",
+          "name": "通达股份",
+          "close": 11.87,
+          "price": 11.87,
+          "high_250": 11.87,
+          "high_250d": 11.87,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 53.14,
+          "amount": 98108.56,
+          "turnover": 98108.56,
+          "institution_score": 4.07,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "专用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002730",
+          "name": "电光科技",
+          "close": 29.15,
+          "price": 29.15,
+          "high_250": 29.15,
+          "high_250d": 29.15,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 96.99,
+          "amount": 145027.88,
+          "turnover": 145027.88,
+          "institution_score": 5.77,
+          "sector": "专用设备",
+          "industry": "专用设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "塑料",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300834",
+          "name": "星辉环材",
+          "close": 36.24,
+          "price": 36.24,
+          "high_250": 36.24,
+          "high_250d": 36.24,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 69.45,
+          "amount": 64719.92,
+          "turnover": 64719.92,
+          "institution_score": 2.96,
+          "sector": "塑料",
+          "industry": "塑料"
+        }
+      ]
+    },
+    {
+      "sector_name": "自动化设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "301312",
+          "name": "智立方",
+          "close": 103.2,
+          "price": 103.2,
+          "high_250": 103.2,
+          "high_250d": 103.2,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 59.36,
+          "amount": 107099.58,
+          "turnover": 107099.58,
+          "institution_score": 4.46,
+          "sector": "自动化设备",
+          "industry": "自动化设备"
         }
       ]
     }

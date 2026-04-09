@@ -1,59 +1,11 @@
 {
   "trade_date": "20260403",
-  "data_source": "Tushare Pro (真实数据)",
+  "data_source": "BaoStock (免费数据)",
   "classification": "申万2021二级行业",
-  "market_strength": 0.19,
+  "market_strength": 0.2,
   "total_stocks": 10,
   "total_sectors": 7,
   "sectors": [
-    {
-      "sector_name": "电网设备",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "000720",
-          "name": "新能泰山",
-          "close": 5.94,
-          "price": 5.94,
-          "high_250": 5.94,
-          "high_250d": 5.94,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 74.64,
-          "amount": 1680.83,
-          "turnover": 1680.83,
-          "institution_score": 5.68,
-          "sector": "电网设备",
-          "industry": "电网设备"
-        },
-        {
-          "code": "600869",
-          "name": "远东股份",
-          "close": 15.61,
-          "price": 15.61,
-          "high_250": 15.61,
-          "high_250d": 15.61,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 346.44,
-          "amount": 2141.49,
-          "turnover": 2141.49,
-          "institution_score": 8.15,
-          "sector": "电网设备",
-          "industry": "电网设备"
-        }
-      ]
-    },
     {
       "sector_name": "化学制药",
       "new_high_count": 2,
@@ -73,10 +25,10 @@
           "change": 9.94,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 76.1,
-          "amount": 652.49,
-          "turnover": 652.49,
-          "institution_score": 3.89,
+          "circ_mv": 76.0,
+          "amount": 65249.22,
+          "turnover": 65249.22,
+          "institution_score": 3.49,
           "sector": "化学制药",
           "industry": "化学制药"
         },
@@ -93,12 +45,60 @@
           "change": 20.07,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 68.84,
-          "amount": 1472.22,
-          "turnover": 1472.22,
-          "institution_score": 5.63,
+          "circ_mv": 65.89,
+          "amount": 147221.63,
+          "turnover": 147221.63,
+          "institution_score": 5.54,
           "sector": "化学制药",
           "industry": "化学制药"
+        }
+      ]
+    },
+    {
+      "sector_name": "电网设备",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600869",
+          "name": "远东股份",
+          "close": 15.61,
+          "price": 15.61,
+          "high_250": 15.61,
+          "high_250d": 15.61,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 332.12,
+          "amount": 214149.18,
+          "turnover": 214149.18,
+          "institution_score": 7.71,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        },
+        {
+          "code": "000720",
+          "name": "新能泰山",
+          "close": 5.94,
+          "price": 5.94,
+          "high_250": 5.94,
+          "high_250d": 5.94,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 71.68,
+          "amount": 168082.74,
+          "turnover": 168082.74,
+          "institution_score": 5.59,
+          "sector": "电网设备",
+          "industry": "电网设备"
         }
       ]
     },
@@ -108,26 +108,6 @@
       "stock_count": 2,
       "avg_consecutive_days": 1.0,
       "stocks": [
-        {
-          "code": "003031",
-          "name": "中瓷电子",
-          "close": 88.57,
-          "price": 88.57,
-          "high_250": 88.57,
-          "high_250d": 88.57,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 301.28,
-          "amount": 1632.02,
-          "turnover": 1632.02,
-          "institution_score": 7.74,
-          "sector": "通信设备",
-          "industry": "通信设备"
-        },
         {
           "code": "688205",
           "name": "德科立",
@@ -141,40 +121,32 @@
           "change": 20.0,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 391.3,
-          "amount": 3894.36,
-          "turnover": 3894.36,
-          "institution_score": 8.56,
+          "circ_mv": 380.91,
+          "amount": 389435.57,
+          "turnover": 389435.57,
+          "institution_score": 8.11,
           "sector": "通信设备",
           "industry": "通信设备"
-        }
-      ]
-    },
-    {
-      "sector_name": "医药商业",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
+        },
         {
-          "code": "000950",
-          "name": "重药控股",
-          "close": 7.14,
-          "price": 7.14,
-          "high_250": 7.14,
-          "high_250d": 7.14,
+          "code": "003031",
+          "name": "中瓷电子",
+          "close": 88.57,
+          "price": 88.57,
+          "high_250": 88.57,
+          "high_250d": 88.57,
           "consecutive_new_high_days": 1,
           "consecutive_days": 1,
-          "change_pct": 10.02,
-          "change": 10.02,
+          "change_pct": 10.0,
+          "change": 10.0,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 123.39,
-          "amount": 1088.61,
-          "turnover": 1088.61,
-          "institution_score": 6.12,
-          "sector": "医药商业",
-          "industry": "医药商业"
+          "circ_mv": 293.68,
+          "amount": 163201.86,
+          "turnover": 163201.86,
+          "institution_score": 7.4,
+          "sector": "通信设备",
+          "industry": "通信设备"
         }
       ]
     },
@@ -197,40 +169,12 @@
           "change": 10.01,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 44.79,
-          "amount": 306.01,
-          "turnover": 306.01,
-          "institution_score": 1.91,
+          "circ_mv": 43.37,
+          "amount": 30601.37,
+          "turnover": 30601.37,
+          "institution_score": 1.7,
           "sector": "农化制品",
           "industry": "农化制品"
-        }
-      ]
-    },
-    {
-      "sector_name": "电机Ⅱ",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "300626",
-          "name": "华瑞股份",
-          "close": 24.59,
-          "price": 24.59,
-          "high_250": 24.59,
-          "high_250d": 24.59,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 20.01,
-          "change": 20.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 44.24,
-          "amount": 739.77,
-          "turnover": 739.77,
-          "institution_score": 4.03,
-          "sector": "电机Ⅱ",
-          "industry": "电机Ⅱ"
         }
       ]
     },
@@ -253,12 +197,68 @@
           "change": 20.02,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 27.78,
-          "amount": 628.38,
-          "turnover": 628.38,
-          "institution_score": 3.33,
+          "circ_mv": 26.4,
+          "amount": 62837.82,
+          "turnover": 62837.82,
+          "institution_score": 2.98,
           "sector": "轨交设备Ⅱ",
           "industry": "轨交设备Ⅱ"
+        }
+      ]
+    },
+    {
+      "sector_name": "医药商业",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000950",
+          "name": "重药控股",
+          "close": 7.14,
+          "price": 7.14,
+          "high_250": 7.14,
+          "high_250d": 7.14,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 121.3,
+          "amount": 108861.27,
+          "turnover": 108861.27,
+          "institution_score": 5.78,
+          "sector": "医药商业",
+          "industry": "医药商业"
+        }
+      ]
+    },
+    {
+      "sector_name": "电机Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300626",
+          "name": "华瑞股份",
+          "close": 24.59,
+          "price": 24.59,
+          "high_250": 24.59,
+          "high_250d": 24.59,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.01,
+          "change": 20.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 43.08,
+          "amount": 73977.11,
+          "turnover": 73977.11,
+          "institution_score": 3.61,
+          "sector": "电机Ⅱ",
+          "industry": "电机Ⅱ"
         }
       ]
     }

@@ -1,0 +1,434 @@
+{
+  "trade_date": "20260407",
+  "data_source": "BaoStock (免费数据)",
+  "classification": "申万2021二级行业",
+  "market_strength": 0.32,
+  "total_stocks": 16,
+  "total_sectors": 13,
+  "sectors": [
+    {
+      "sector_name": "专业工程",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "601133",
+          "name": "柏诚股份",
+          "close": 21.43,
+          "price": 21.43,
+          "high_250": 21.43,
+          "high_250d": 21.43,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 31.4,
+          "amount": 90382.66,
+          "turnover": 90382.66,
+          "institution_score": 4.34,
+          "sector": "专业工程",
+          "industry": "专业工程"
+        },
+        {
+          "code": "002051",
+          "name": "中工国际",
+          "close": 10.48,
+          "price": 10.48,
+          "high_250": 10.48,
+          "high_250d": 10.48,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.97,
+          "change": 9.97,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 128.37,
+          "amount": 153509.49,
+          "turnover": 153509.49,
+          "institution_score": 6.04,
+          "sector": "专业工程",
+          "industry": "专业工程"
+        }
+      ]
+    },
+    {
+      "sector_name": "通信设备",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603042",
+          "name": "华脉科技",
+          "close": 22.81,
+          "price": 22.81,
+          "high_250": 22.81,
+          "high_250d": 22.81,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.98,
+          "change": 9.98,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 36.03,
+          "amount": 57943.34,
+          "turnover": 57943.34,
+          "institution_score": 2.91,
+          "sector": "通信设备",
+          "industry": "通信设备"
+        },
+        {
+          "code": "002491",
+          "name": "通鼎互联",
+          "close": 13.82,
+          "price": 13.82,
+          "high_250": 13.82,
+          "high_250d": 13.82,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.03,
+          "change": 10.03,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 160.29,
+          "amount": 250124.11,
+          "turnover": 250124.11,
+          "institution_score": 6.3,
+          "sector": "通信设备",
+          "industry": "通信设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "电网设备",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000720",
+          "name": "新能泰山",
+          "close": 6.53,
+          "price": 6.53,
+          "high_250": 6.53,
+          "high_250d": 6.53,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.93,
+          "change": 9.93,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 81.83,
+          "amount": 49670.07,
+          "turnover": 49670.07,
+          "institution_score": 2.91,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        },
+        {
+          "code": "002980",
+          "name": "华盛昌",
+          "close": 50.7,
+          "price": 50.7,
+          "high_250": 50.7,
+          "high_250d": 50.7,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 50.41,
+          "amount": 103478.62,
+          "turnover": 103478.62,
+          "institution_score": 5.09,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "化学制药",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600488",
+          "name": "津药药业",
+          "close": 7.67,
+          "price": 7.67,
+          "high_250": 7.67,
+          "high_250d": 7.67,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.04,
+          "change": 10.04,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 81.89,
+          "amount": 132268.91,
+          "turnover": 132268.91,
+          "institution_score": 5.66,
+          "sector": "化学制药",
+          "industry": "化学制药"
+        }
+      ]
+    },
+    {
+      "sector_name": "房地产开发",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600791",
+          "name": "京能置业",
+          "close": 11.79,
+          "price": 11.79,
+          "high_250": 11.79,
+          "high_250d": 11.79,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.98,
+          "change": 9.98,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 52.62,
+          "amount": 45839.88,
+          "turnover": 45839.88,
+          "institution_score": 2.5,
+          "sector": "房地产开发",
+          "industry": "房地产开发"
+        }
+      ]
+    },
+    {
+      "sector_name": "基础建设",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603778",
+          "name": "国晟科技",
+          "close": 31.55,
+          "price": 31.55,
+          "high_250": 31.55,
+          "high_250d": 31.55,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 198.58,
+          "amount": 299576.7,
+          "turnover": 299576.7,
+          "institution_score": 6.61,
+          "sector": "基础建设",
+          "industry": "基础建设"
+        }
+      ]
+    },
+    {
+      "sector_name": "电池",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "688345",
+          "name": "博力威",
+          "close": 51.6,
+          "price": 51.6,
+          "high_250": 51.6,
+          "high_250d": 51.6,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 48.72,
+          "amount": 42614.06,
+          "turnover": 42614.06,
+          "institution_score": 2.32,
+          "sector": "电池",
+          "industry": "电池"
+        }
+      ]
+    },
+    {
+      "sector_name": "炼化及贸易",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000703",
+          "name": "恒逸石化",
+          "close": 14.16,
+          "price": 14.16,
+          "high_250": 14.16,
+          "high_250d": 14.16,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 528.53,
+          "amount": 50104.9,
+          "turnover": 50104.9,
+          "institution_score": 6.55,
+          "sector": "炼化及贸易",
+          "industry": "炼化及贸易"
+        }
+      ]
+    },
+    {
+      "sector_name": "环保设备Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000890",
+          "name": "法尔胜",
+          "close": 17.61,
+          "price": 17.61,
+          "high_250": 17.61,
+          "high_250d": 17.61,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 73.63,
+          "amount": 82928.73,
+          "turnover": 82928.73,
+          "institution_score": 4.34,
+          "sector": "环保设备Ⅱ",
+          "industry": "环保设备Ⅱ"
+        }
+      ]
+    },
+    {
+      "sector_name": "中药Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002082",
+          "name": "万邦德",
+          "close": 36.24,
+          "price": 36.24,
+          "high_250": 36.24,
+          "high_250d": 36.24,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 6.43,
+          "change": 6.43,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 192.64,
+          "amount": 249012.16,
+          "turnover": 249012.16,
+          "institution_score": 6.56,
+          "sector": "中药Ⅱ",
+          "industry": "中药Ⅱ"
+        }
+      ]
+    },
+    {
+      "sector_name": "食品加工",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002840",
+          "name": "华统股份",
+          "close": 12.94,
+          "price": 12.94,
+          "high_250": 12.94,
+          "high_250d": 12.94,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.03,
+          "change": 10.03,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 100.94,
+          "amount": 111247.57,
+          "turnover": 111247.57,
+          "institution_score": 5.82,
+          "sector": "食品加工",
+          "industry": "食品加工"
+        }
+      ]
+    },
+    {
+      "sector_name": "自动化设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002957",
+          "name": "科瑞技术",
+          "close": 33.68,
+          "price": 33.68,
+          "high_250": 33.68,
+          "high_250d": 33.68,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 136.45,
+          "amount": 90943.59,
+          "turnover": 90943.59,
+          "institution_score": 5.22,
+          "sector": "自动化设备",
+          "industry": "自动化设备"
+        }
+      ]
+    },
+    {
+      "sector_name": "化学制品",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "301373",
+          "name": "凌玮科技",
+          "close": 82.86,
+          "price": 82.86,
+          "high_250": 82.86,
+          "high_250d": 82.86,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 30.16,
+          "amount": 59557.3,
+          "turnover": 59557.3,
+          "institution_score": 2.94,
+          "sector": "化学制品",
+          "industry": "化学制品"
+        }
+      ]
+    }
+  ]
+}

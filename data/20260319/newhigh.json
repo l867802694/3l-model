@@ -1,0 +1,218 @@
+{
+  "trade_date": "20260319",
+  "data_source": "BaoStock (免费数据)",
+  "classification": "申万2021二级行业",
+  "market_strength": 0.16,
+  "total_stocks": 8,
+  "total_sectors": 6,
+  "sectors": [
+    {
+      "sector_name": "电力",
+      "new_high_count": 3,
+      "stock_count": 3,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600396",
+          "name": "华电辽能",
+          "close": 5.69,
+          "price": 5.69,
+          "high_250": 5.69,
+          "high_250d": 5.69,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.06,
+          "change": 10.06,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 82.26,
+          "amount": 102918.36,
+          "turnover": 102918.36,
+          "institution_score": 4.22,
+          "sector": "电力",
+          "industry": "电力"
+        },
+        {
+          "code": "600726",
+          "name": "华电能源",
+          "close": 5.02,
+          "price": 5.02,
+          "high_250": 5.02,
+          "high_250d": 5.02,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.09,
+          "change": 10.09,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 355.08,
+          "amount": 240480.21,
+          "turnover": 240480.21,
+          "institution_score": 7.77,
+          "sector": "电力",
+          "industry": "电力"
+        },
+        {
+          "code": "000539",
+          "name": "粤电力A",
+          "close": 6.17,
+          "price": 6.17,
+          "high_250": 6.17,
+          "high_250d": 6.17,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.98,
+          "change": 9.98,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 155.6,
+          "amount": 84506.92,
+          "turnover": 84506.92,
+          "institution_score": 4.15,
+          "sector": "电力",
+          "industry": "电力"
+        }
+      ]
+    },
+    {
+      "sector_name": "光学光电子",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600666",
+          "name": "奥瑞德",
+          "close": 4.88,
+          "price": 4.88,
+          "high_250": 4.88,
+          "high_250d": 4.88,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.91,
+          "change": 9.91,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 114.52,
+          "amount": 134722.17,
+          "turnover": 134722.17,
+          "institution_score": 5.57,
+          "sector": "光学光电子",
+          "industry": "光学光电子"
+        }
+      ]
+    },
+    {
+      "sector_name": "消费电子",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603629",
+          "name": "利通电子",
+          "close": 68.07,
+          "price": 68.07,
+          "high_250": 68.07,
+          "high_250d": 68.07,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 169.51,
+          "amount": 220992.69,
+          "turnover": 220992.69,
+          "institution_score": 6.32,
+          "sector": "消费电子",
+          "industry": "消费电子"
+        }
+      ]
+    },
+    {
+      "sector_name": "基础建设",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002310",
+          "name": "东方新能",
+          "close": 3.16,
+          "price": 3.16,
+          "high_250": 3.16,
+          "high_250d": 3.16,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.1,
+          "change": 10.1,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 125.83,
+          "amount": 96737.65,
+          "turnover": 96737.65,
+          "institution_score": 4.34,
+          "sector": "基础建设",
+          "industry": "基础建设"
+        }
+      ]
+    },
+    {
+      "sector_name": "医疗器械",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002432",
+          "name": "九安医疗",
+          "close": 65.95,
+          "price": 65.95,
+          "high_250": 65.95,
+          "high_250d": 65.95,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 285.46,
+          "amount": 457246.31,
+          "turnover": 457246.31,
+          "institution_score": 7.23,
+          "sector": "医疗器械",
+          "industry": "医疗器械"
+        }
+      ]
+    },
+    {
+      "sector_name": "IT服务Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300895",
+          "name": "铜牛信息",
+          "close": 76.34,
+          "price": 76.34,
+          "high_250": 76.34,
+          "high_250d": 76.34,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 19.99,
+          "change": 19.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 99.92,
+          "amount": 205685.08,
+          "turnover": 205685.08,
+          "institution_score": 5.78,
+          "sector": "IT服务Ⅱ",
+          "industry": "IT服务Ⅱ"
+        }
+      ]
+    }
+  ]
+}

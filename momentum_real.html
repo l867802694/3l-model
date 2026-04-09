@@ -562,6 +562,12 @@
             return '观察';
         }
 
+        function getSectorHeatLabel(item) {
+            if (item.is_warning) return '过热';
+            if (item.is_main_line) return '主线';
+            return '观察';
+        }
+
         function getSectorToneClass(item) {
             if (item.is_warning) return 'bg-red-100 text-red-700';
             if (item.is_main_line) return 'bg-red-50 text-red-600';
@@ -699,6 +705,7 @@
             tbody.innerHTML = data.map(item => {
                 const stability = sectorStabilityMap.get(item.sector_name);
                 const role = getSectorRole(item);
+                const heatLabel = getSectorHeatLabel(item);
                 const roleClass = getSectorToneClass(item);
                 const coverageText = `${item.listed_count}/${item.total_count} | ${item.listed_ratio}%`;
                 const continuation = stability ? `${stability.label} · ${stability.note}` : '今日活跃 · 等更多历史验证';
@@ -733,7 +740,7 @@
                             <div class="text-xs text-gray-400 mt-1">${continuation}</div>
                         </td>
                         <td class="px-6 py-4">
-                            <span class="px-2 py-1 text-xs rounded-full ${roleClass}">${role}</span>
+                            <span class="inline-flex items-center justify-center whitespace-nowrap min-w-[3.5rem] px-2.5 py-1 text-xs rounded-full font-medium ${roleClass}">${heatLabel}</span>
                         </td>
                     </tr>
                 `;

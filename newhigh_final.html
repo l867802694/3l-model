@@ -239,34 +239,33 @@
             </div>
 
             <div class="bg-white rounded-xl shadow-card border border-gray-100 p-6 mb-6">
-                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
-                    <div class="flex items-start justify-between gap-4">
-                        <div>
-                            <h3 class="text-lg font-semibold text-gray-900">自动解读</h3>
-                            <p class="text-sm text-gray-500 mt-1">把“新高、新低、净新高、5日趋势”翻译成一句能直接使用的结论。</p>
-                        </div>
-                        <span id="marketSignalBadge" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600">-</span>
+                <div class="flex items-start justify-between gap-4">
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400 font-semibold">自动解读</p>
+                        <h3 class="text-xl font-semibold text-gray-900 mt-2">今天怎么看环境</h3>
                     </div>
-                    <div class="lg:max-w-2xl">
-                        <p id="marketSummaryTitle" class="text-base font-semibold text-gray-900">-</p>
-                        <p id="marketSummaryBody" class="text-sm text-gray-600 mt-2 leading-7">-</p>
-                        <div class="mt-4 rounded-lg bg-red-50 border border-red-100 p-4">
-                            <p class="text-xs font-medium text-red-700 uppercase">当前用法</p>
-                            <p id="marketActionHint" class="text-sm text-red-800 mt-1 leading-7">-</p>
-                        </div>
+                    <span id="marketSignalBadge" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600">-</span>
+                </div>
+                <div class="mt-5">
+                    <p id="marketSummaryTitle" class="text-lg font-semibold text-gray-900">-</p>
+                    <p id="marketSummaryBody" class="text-sm text-gray-600 mt-3 leading-7 max-w-4xl">-</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-5">
+                    <div class="rounded-xl bg-gray-50 border border-gray-100 p-4">
+                        <p class="text-xs font-medium text-gray-500 uppercase">环境结论</p>
+                        <p id="marketQuickTake" class="text-sm text-gray-900 font-medium mt-2 leading-7">-</p>
+                        <p id="currentStatus" class="text-xs text-gray-500 mt-3">当前：-</p>
                     </div>
-                    <div class="lg:min-w-[220px] rounded-lg bg-gray-50 border border-gray-100 p-4">
-                        <p class="text-xs font-medium text-gray-500 uppercase">怎么快速看</p>
-                        <p class="text-sm text-gray-700 mt-3 leading-7">先看环境判断，再看右下板块。鼠标停在指标名旁边的 <strong>?</strong> 上，可以看每个指标具体是什么意思。</p>
-                        <p id="currentStatus" class="text-xs text-gray-500 mt-4">当前：-</p>
+                    <div class="rounded-xl bg-red-50 border border-red-100 p-4">
+                        <p class="text-xs font-medium text-red-700 uppercase">当前用法</p>
+                        <p id="marketActionHint" class="text-sm text-red-800 mt-2 leading-7">-</p>
                     </div>
                 </div>
             </div>
 
             <!-- 板块分布 -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-                <!-- 板块排名 -->
-                <div class="lg:col-span-2 bg-white rounded-xl shadow-card border border-gray-100">
+            <div class="mb-6">
+                <div class="bg-white rounded-xl shadow-card border border-gray-100">
                     <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900">新高板块分布</h3>
@@ -276,15 +275,6 @@
                     </div>
                     <div class="p-6" id="sectorList">
                         <!-- 动态填充 -->
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-card border border-gray-100 p-6">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">板块怎么用</h3>
-                    <div class="space-y-3 text-sm text-gray-600 leading-7">
-                        <p>这里不是简单按“新高数量”排，而是按 <strong>新高数量、连续性、突破强度、机构参与代理分、是否与动量主线共振</strong> 综合排序。</p>
-                        <p>所以前排板块，更接近“在你的趋势体系里值得先看”的方向，而不是单纯多出几只新高股。</p>
-                        <p class="text-xs text-gray-400">先看环境，再看板块，再看个股，不要把这页当成直接买入信号。</p>
                     </div>
                 </div>
             </div>
@@ -350,7 +340,6 @@
                 <p class="font-medium mb-2"><strong>一年新高说明：</strong></p>
                 <ul class="space-y-1 list-disc list-inside">
                     <li><strong>一年新高</strong>：个股收盘价突破过去250个交易日的最高价</li>
-                    <li><strong>突破幅度</strong>：(当日收盘价 - 250日最高价) / 250日最高价 × 100%</li>
                     <li><strong>涨跌幅</strong>：当日股价涨跌百分比，反映突破强度</li>
                     <li><strong>连新高天数</strong>：连续创出新高的交易日数</li>
                     <li class="text-blue-600">💡 <strong>点击板块分布</strong>可查看该板块内创出新高的所有个股</li>
@@ -405,7 +394,6 @@
                                     <th class="px-4 py-3 text-left font-medium">名称</th>
                                     <th class="px-4 py-3 text-right font-medium">最新价</th>
                                     <th class="px-4 py-3 text-right font-medium">涨跌幅</th>
-                                    <th class="px-4 py-3 text-right font-medium">突破幅度</th>
                                     <th class="px-4 py-3 text-center font-medium">连新高</th>
                                     <th class="px-4 py-3 text-right font-medium">250日最高</th>
                                 </tr>
@@ -696,24 +684,52 @@
             const hlRatio = marketStats.new_high_low_ratio ?? 0;
             const signal = marketStats.market_signal || marketStats.market_status || '趋势观察';
 
-            const title = `${signal}：先看环境，再决定要不要积极出手`;
-            const body = `今天全市场有 ${newHighCount} 只股票创出250日新高，${newLowCount} 只股票创出250日新低，净新高为 ${netNewHigh}。新高占比 ${ratio}% ，新低占比 ${lowRatio}% 。最近5日平均新高家数是 ${avg5Days}，今天相对5日均值 ${avgChange >= 0 ? '升温' : '降温'} ${Math.abs(avgChange)}%。最近连续 ${trendDays} 天净新高为正，新高/新低比为 ${hlRatio}。`;
+            const title = `${signal}：先看环境，再决定参与强度`;
+            const body = `今天创250日新高 ${newHighCount} 只，创250日新低 ${newLowCount} 只，净新高 ${netNewHigh}。新高占全市场 ${ratio}% ，最近5日平均新高家数 ${avg5Days}，今天相对5日均值 ${avgChange >= 0 ? '升温' : '降温'} ${Math.abs(avgChange)}%，最近连续 ${trendDays} 天净新高为正，新高/新低比 ${hlRatio}。`;
 
             let action = '市场更偏结构性，先缩小范围到最强板块，再找回踩、平台突破或二次启动。';
+            let quickTake = '整体不强，只适合缩小到局部主线去做。';
             if (signal === '趋势活跃') {
                 action = '趋势环境很顺，优先盯强板块里的龙头和扩散股，但依然要等合适位置，不要无脑追高。';
+                quickTake = '市场扩散明显，强趋势方向可以更积极跟踪。';
             } else if (signal === '趋势可做') {
                 action = '环境是正的，可以做趋势，但更适合做强板块里的回踩确认和二次放量，而不是看到上涨就追。';
+                quickTake = '环境偏正，但更适合做强板块里的确认机会，不适合无差别追高。';
             } else if (signal === '趋势谨慎') {
                 action = '环境偏弱，先把仓位和出手频率降下来，更多以观察和等待为主。';
+                quickTake = '趋势扩散不够，先少做追涨，等待环境修复。';
             }
 
-            return { title, body, action };
+            return { title, body, action, quickTake };
         }
 
         function formatTurnoverYi(turnoverWan) {
             const turnover = Number(turnoverWan) || 0;
             return turnover / 10000;
+        }
+
+        function computeDisplayedStrengthScore(marketStats, newHighCount) {
+            const newHighRatio = Number(marketStats.new_high_ratio || 0);
+            const netNewHighRatio = Math.max(Number(marketStats.net_new_high_ratio || 0), 0);
+            const newHighLowRatio = Number(marketStats.new_high_low_ratio || 0);
+            const trendDays = Number(marketStats.trend_days || 0);
+            const avgChange = Math.max(Math.min(Number(marketStats.avg_5d_change_pct || 0), 80), -80);
+            const absoluteParticipationScore = newHighCount > 0 ? Math.min(newHighCount / 40, 1) * 18 : 0;
+
+            return Math.round(
+                Math.max(
+                    0,
+                    Math.min(
+                        100,
+                        newHighRatio * 20
+                            + netNewHighRatio * 24
+                            + Math.min(newHighLowRatio, 3) * 1.5
+                            + Math.min(trendDays, 5) * 2
+                            + avgChange * 0.04
+                            + absoluteParticipationScore
+                    )
+                )
+            );
         }
 
         function getFocusScore(stock) {
@@ -744,7 +760,7 @@
             if (consecutive >= 3) tags.push(`${consecutive}连新高`);
             else if (consecutive >= 2) tags.push('连续新高');
 
-            if (breakPct >= 1) tags.push(`站上前高${breakPct.toFixed(1)}%`);
+            if (breakPct >= 1) tags.push('突破确认');
             if (turnoverYi >= 20) tags.push(`成交${turnoverYi.toFixed(1)}亿`);
             if (institution >= 3) tags.push('资金关注高');
 
@@ -822,7 +838,7 @@
             const totalUniverse = marketStats.total_universe || data.universe_size || 4500;
             const marketStatusText = marketStats.market_status || getMarketStatus(newHighCount).status;
             const avg5Days = marketStats.avg_5d || Math.round(newHighCount * 0.9);
-            const strengthScore = marketStats.strength_score || Math.min(100, Math.round((newHighCount / 200) * 100));
+            const strengthScore = computeDisplayedStrengthScore(marketStats, newHighCount);
             
             const marketStatus = getMarketStatus(newHighCount);
             const ratio = ((newHighCount / totalUniverse) * 100).toFixed(2);
@@ -846,6 +862,7 @@
             document.getElementById('marketSignalBadge').className = `px-3 py-1 rounded-full text-xs font-medium ${statusColor.includes('red') ? 'bg-red-50 text-red-700' : statusColor.includes('orange') ? 'bg-orange-50 text-orange-700' : statusColor.includes('yellow') ? 'bg-yellow-50 text-yellow-700' : 'bg-gray-100 text-gray-700'}`;
             document.getElementById('marketSummaryTitle').textContent = narrative.title;
             document.getElementById('marketSummaryBody').textContent = narrative.body;
+            document.getElementById('marketQuickTake').textContent = narrative.quickTake;
             document.getElementById('marketActionHint').textContent = narrative.action;
             
             // 渲染板块分布
@@ -926,7 +943,6 @@
             tbody.innerHTML = filteredStocks.slice(0, 50).map(stock => {
                 // 兼容多种可能的字段名
                 const change = stock.change_pct || stock.change || stock.pct_change || 0;
-                const breakPct = stock.break_through || stock.break_pct || stock.break_through_pct || 0;
                 const consecutive = stock.consecutive_new_high_days || stock.consecutive_days || stock.days || 1;
                 const price = stock.close || stock.price || stock.current_close || 0;
                 const turnoverYi = formatTurnoverYi(stock.turnover || stock.amount || 0);
@@ -952,7 +968,6 @@
                         <td class="px-6 py-4 ${change >= 0 ? 'text-stock-up' : 'text-stock-down'}">${change >= 0 ? '+' : ''}${typeof change === 'number' ? change.toFixed(2) : change}%</td>
                         <td class="px-6 py-4">
                             <div class="inline-flex items-center px-2 py-1 bg-red-50 text-red-600 rounded text-xs">${consecutive}天</div>
-                            <div class="text-xs ${breakPct >= 0 ? 'text-stock-up' : 'text-stock-down'} mt-1">${breakPct >= 0 ? '+' : ''}${typeof breakPct === 'number' ? breakPct.toFixed(2) : breakPct}%</div>
                         </td>
                         <td class="px-6 py-4 text-gray-600">${turnoverYi.toFixed(2)}亿</td>
                         <td class="px-6 py-4">
@@ -1049,14 +1064,13 @@
             const tbody = document.getElementById('modalStockList');
             
             if (stocks.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="7" class="px-4 py-8 text-center text-gray-500">暂无数据</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="6" class="px-4 py-8 text-center text-gray-500">暂无数据</td></tr>';
                 return;
             }
             
             tbody.innerHTML = stocks.map(s => {
                 // 兼容多种可能的字段名
                 const change = s.change_pct || s.change || s.pct_change || 0;
-                const breakPct = s.break_through || s.break_pct || s.break_through_pct || 0;
                 const consecutive = s.consecutive_new_high_days || s.consecutive_days || s.days || 1;
                 const price = s.close || s.price || s.current_close || 0;
                 const high250 = s.high_250 || s.high_250d || price;
@@ -1067,7 +1081,6 @@
                         <td class="px-4 py-3 font-medium">${s.name}</td>
                         <td class="px-4 py-3 text-right">¥${typeof price === 'number' ? price.toFixed(2) : price}</td>
                         <td class="px-4 py-3 text-right font-bold ${change >= 0 ? 'text-stock-up' : 'text-stock-down'}">${change >= 0 ? '+' : ''}${typeof change === 'number' ? change.toFixed(2) : change}%</td>
-                        <td class="px-4 py-3 text-right font-medium ${breakPct >= 0 ? 'text-stock-up' : 'text-stock-down'}">${breakPct >= 0 ? '+' : ''}${typeof breakPct === 'number' ? breakPct.toFixed(2) : breakPct}%</td>
                         <td class="px-4 py-3 text-center"><span class="px-2 py-1 bg-red-50 text-red-600 rounded text-xs">${consecutive}天</span></td>
                         <td class="px-4 py-3 text-right text-gray-600">¥${typeof high250 === 'number' ? high250.toFixed(2) : high250}</td>
                     </tr>

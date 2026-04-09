@@ -1,7 +1,7 @@
 ---
 name: 3l-model
 description: |
-  A股3L模型分析系统 v1.0.6 - 修复动量页面日期选择器路径问题。
+  A股3L模型分析系统 v1.0.6 - 现已切换到 BaoStock 免费数据源。
   
   版本: v1.0.6 (2026-03-10) - 稳定版本
   
@@ -26,7 +26,7 @@ description: |
 
   v1.0.2优化：
   - 排名变动颜色：上升=红色，下降=绿色
-  - 排名逻辑：使用Tushare真实交易日历(pretrade_date)
+  - 排名逻辑：使用真实交易日历
 
   使用场景：
   - 分析A股板块动量排名和热点
@@ -60,7 +60,7 @@ description: |
 
 3L模型是一个A股股票分析工具，包含两个核心模型：
 
-1. **动量模型**：基于20日涨幅筛选强势股，按东财二级行业分类统计板块动量
+1. **动量模型**：基于20日涨幅筛选强势股，按证监会行业分类统计板块动量
 2. **一年新高模型**：统计突破250日最高价的个股，分析板块分布
 
 ## 更新日志
@@ -75,7 +75,7 @@ description: |
 ### v1.0.2 (2026-03-08)
 
 - 🎨 优化排名变动颜色（上升=红色，下降=绿色）
-- 📅 优化排名逻辑（使用Tushare真实交易日历）
+- 📅 优化排名逻辑（使用真实交易日历）
 
 ### v1.0.1 (2026-03-08)
 
@@ -97,14 +97,11 @@ https://l867802694.github.io/3l-model/
 ### 本地运行
 
 ```bash
-# 启动后端API
-cd ~/.openclaw/skills/3l-model/assets/backend
-source .venv/bin/activate
-uvicorn api_server:app --host 0.0.0.0 --port 8000
+# 进入项目目录
+cd /Users/lulululu/Documents/3l-model-排查
 
-# 启动前端（新开终端）
-cd ~/.openclaw/skills/3l-model/assets
-python -m http.server 8080
+# 一键启动本地服务
+bash 3l-model.sh start
 ```
 
 访问：
@@ -114,11 +111,12 @@ python -m http.server 8080
 ### 手动更新数据
 
 ```bash
-# 更新今天数据
-~/.openclaw/skills/3l-model/scripts/auto-update-and-push.sh
+# 更新今天数据并同步 deploy/
+cd /Users/lulululu/Documents/3l-model-排查
+bash 3l-model.sh update-now
 
 # 或分步执行
-cd ~/.openclaw/skills/3l-model/assets/backend
+cd /Users/lulululu/Documents/3l-model-排查/assets/backend
 source .venv/bin/activate
 python update_data.py
 ```
@@ -126,7 +124,8 @@ python update_data.py
 ### 设置定时任务
 
 ```bash
-~/.openclaw/skills/3l-model/scripts/setup-cron.sh
+cd /Users/lulululu/Documents/3l-model-排查
+bash 3l-model.sh setup-cron
 ```
 
 ## 模型逻辑
@@ -137,7 +136,7 @@ python update_data.py
 2. 剔除次新股（上市<20天）和ST股票
 3. 计算20日涨幅，取TOP 700
 4. 机构资金过滤（市值+成交额代理指标）
-5. 按东财二级行业分类统计
+5. 按证监会行业分类统计
 6. 计算动量分值 = 上榜数量 × 上榜占比
 
 ### 一年新高模型
@@ -176,7 +175,7 @@ python update_data.py
 ```
 每天 17:00 (下午5点)
     ↓
-1. 从Tushare获取最新A股数据
+1. 从BaoStock获取最新A股数据
     ↓
 2. 计算板块动量排名
     ↓
@@ -216,19 +215,18 @@ python update_data.py
 
 - Python 3.10+
 - FastAPI
-- Tushare Pro API
+- BaoStock
 - Git
 - crontab (macOS/Linux)
 
 ## 配置
 
-### Tushare Token
+### BaoStock 并发配置
 
-在 `assets/backend/update_data.py` 中配置：
+在 `assets/backend/.env` 中配置：
 
-```python
-TUSHARE_TOKEN = "your-token-here"
-TUSHARE_API_URL = "http://tushare.nlink.vip"
+```env
+BAOSTOCK_MAX_WORKERS=6
 ```
 
 ## 注意事项
@@ -237,7 +235,7 @@ TUSHARE_API_URL = "http://tushare.nlink.vip"
 2. **自动跳过周末和法定节假日**
 3. **机构关注度使用市值+成交额作为代理指标**
 4. **所有数据均为真实行情数据，非模拟生成**
-5. **GitHub仓库只包含静态文件，核心代码和Token只在本地**
+5. **GitHub仓库只包含静态文件，核心更新代码只在本地**
 
 ## 更新日志
 
@@ -271,7 +269,7 @@ TUSHARE_API_URL = "http://tushare.nlink.vip"
 ### v1.0.2 (2026-03-08)
 
 - 🎨 优化排名变动颜色（上升=红色，下降=绿色）
-- 📅 优化排名逻辑（使用Tushare真实交易日历）
+- 📅 优化排名逻辑（使用真实交易日历）
 
 ### v1.0.1 (2026-03-08)
 

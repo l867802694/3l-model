@@ -571,25 +571,30 @@
             // 统计数据 - 优先使用market_stats
             const marketStats = data.market_stats || {};
             const newHighCount = marketStats.new_high_count || allStocks.length || 0;
+            const newLowCount = marketStats.new_low_count || 0;
+            const netNewHigh = marketStats.net_new_high ?? (newHighCount - newLowCount);
+            const totalUniverse = marketStats.total_universe || data.universe_size || 4500;
             const marketStatusText = marketStats.market_status || getMarketStatus(newHighCount).status;
             const avg5Days = marketStats.avg_5d || Math.round(newHighCount * 0.9);
             const strengthScore = marketStats.strength_score || Math.min(100, Math.round((newHighCount / 200) * 100));
             
             const marketStatus = getMarketStatus(newHighCount);
-            const ratio = ((newHighCount / 4500) * 100).toFixed(2);
-            const avgChange = ((newHighCount - avg5Days) / avg5Days * 100).toFixed(1);
+            const ratio = ((newHighCount / totalUniverse) * 100).toFixed(2);
+            const avgChange = marketStats.avg_5d_change_pct ?? ((newHighCount - avg5Days) / avg5Days * 100).toFixed(1);
+            const statusColor = marketStats.status_color_class || marketStatus.color;
+            const statusDesc = marketStats.market_status_desc || marketStatus.desc;
             
             document.getElementById('todayNewHigh').textContent = newHighCount;
-            document.getElementById('newHighRatio').textContent = `占比 ${ratio}%`;
+            document.getElementById('newHighRatio').textContent = `占比 ${ratio}% | 新低 ${newLowCount} | 净新高 ${netNewHigh}`;
             document.getElementById('marketStatus').textContent = marketStatusText;
-            document.getElementById('marketStatus').className = `text-lg font-bold mt-1 ${marketStatus.color}`;
-            document.getElementById('marketStatusDesc').textContent = marketStatus.desc;
+            document.getElementById('marketStatus').className = `text-lg font-bold mt-1 ${statusColor}`;
+            document.getElementById('marketStatusDesc').textContent = statusDesc;
             document.getElementById('avg5Days').textContent = avg5Days;
             document.getElementById('avg5DaysChange').textContent = `${avgChange >= 0 ? '↑' : '↓'} ${Math.abs(avgChange)}%`;
             document.getElementById('avg5DaysChange').className = `text-xs mt-1 ${avgChange >= 0 ? 'text-stock-up' : 'text-stock-down'}`;
             document.getElementById('strengthScore').textContent = strengthScore;
             document.getElementById('strengthBar').style.width = `${strengthScore}%`;
-            document.getElementById('currentStatus').textContent = `当前：${newHighCount}只 | ${marketStatusText}`;
+            document.getElementById('currentStatus').textContent = `当前：新高 ${newHighCount} | 新低 ${newLowCount} | 净新高 ${netNewHigh} | ${marketStatusText}`;
             
             // 渲染板块分布
             renderSectors(data.sectors || [], newHighCount);

@@ -148,28 +148,58 @@
             <!-- 市场统计卡片 -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <p class="text-xs font-medium text-gray-500 uppercase">今日新高</p>
+                    <p class="text-xs font-medium text-gray-500 uppercase">创250日新高家数</p>
                     <p id="todayNewHigh" class="text-2xl font-bold text-stock-up mt-1">-</p>
                     <p id="newHighRatio" class="text-xs text-gray-400 mt-1">-</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <p class="text-xs font-medium text-gray-500 uppercase">市场状态</p>
+                    <p class="text-xs font-medium text-gray-500 uppercase">趋势环境判断</p>
                     <p id="marketStatus" class="text-lg font-bold text-yellow-600 mt-1">-</p>
                     <p id="marketStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <p class="text-xs font-medium text-gray-500 uppercase">5日均值</p>
+                    <p class="text-xs font-medium text-gray-500 uppercase">最近5日平均新高家数</p>
                     <p id="avg5Days" class="text-2xl font-bold text-gray-700 mt-1">-</p>
                     <p id="avg5DaysChange" class="text-xs text-stock-up mt-1">-</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <p class="text-xs font-medium text-gray-500 uppercase">强度评分</p>
+                    <p class="text-xs font-medium text-gray-500 uppercase">趋势环境评分</p>
                     <div class="flex items-center gap-2 mt-1">
                         <p id="strengthScore" class="text-2xl font-bold text-stock-up">-</p>
                         <span class="text-xs text-gray-400">/100</span>
                     </div>
                     <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
                         <div id="strengthBar" class="bg-stock-up h-2 rounded-full progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                <div class="lg:col-span-2 bg-white rounded-xl shadow-card border border-gray-100 p-6">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">自动解读</h3>
+                            <p class="text-sm text-gray-500 mt-1">把“新高、新低、净新高、5日趋势”翻译成一句能直接使用的结论。</p>
+                        </div>
+                        <span id="marketSignalBadge" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600">-</span>
+                    </div>
+                    <div class="mt-4">
+                        <p id="marketSummaryTitle" class="text-base font-semibold text-gray-900">-</p>
+                        <p id="marketSummaryBody" class="text-sm text-gray-600 mt-2 leading-7">-</p>
+                        <div class="mt-4 rounded-lg bg-red-50 border border-red-100 p-4">
+                            <p class="text-xs font-medium text-red-700 uppercase">当前用法</p>
+                            <p id="marketActionHint" class="text-sm text-red-800 mt-1 leading-7">-</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-card border border-gray-100 p-6">
+                    <h3 class="text-lg font-semibold text-gray-900">怎么看这页</h3>
+                    <div class="mt-4 space-y-3 text-sm text-gray-600 leading-6">
+                        <p><strong>先看趋势环境判断：</strong>决定现在适不适合优先做趋势股。</p>
+                        <p><strong>再看新高和新低：</strong>新高越多、新低越少，说明趋势扩散越健康。</p>
+                        <p><strong>再看5日平均：</strong>如果今天明显高于5日均值，说明市场正在升温。</p>
+                        <p><strong>最后看板块分布：</strong>哪里新高股票最集中，哪里更可能是当前主攻方向。</p>
                     </div>
                 </div>
             </div>
@@ -192,36 +222,28 @@
 
                 <!-- 市场状态说明 -->
                 <div class="bg-white rounded-xl shadow-card border border-gray-100 p-6">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">市场强弱等级</h3>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">指标说明</h3>
                     <div class="space-y-3 text-sm" id="marketLevels">
-                        <div class="flex items-center justify-between p-2 bg-red-50 rounded-lg">
-                            <span class="font-medium text-red-700">🔴 极度强势</span>
-                            <span class="text-red-600">≥200只</span>
+                        <div class="p-3 bg-gray-50 rounded-lg">
+                            <p class="font-medium text-gray-800">创250日新高家数</p>
+                            <p class="text-gray-500 mt-1">今天收盘价站上过去250个交易日最高价的股票数量。</p>
                         </div>
-                        <div class="flex items-center justify-between p-2 bg-red-50 rounded-lg">
-                            <span class="font-medium text-red-600">🟠 强势</span>
-                            <span>150-199</span>
+                        <div class="p-3 bg-gray-50 rounded-lg">
+                            <p class="font-medium text-gray-800">新低 / 净新高</p>
+                            <p class="text-gray-500 mt-1">新低越少越好；净新高 = 新高减去新低，越大说明环境越顺。</p>
                         </div>
-                        <div class="flex items-center justify-between p-2 bg-yellow-50 rounded-lg border border-yellow-200">
-                            <span class="font-medium text-yellow-700">🟡 正常偏强</span>
-                            <span class="font-bold">100-149</span>
+                        <div class="p-3 bg-gray-50 rounded-lg">
+                            <p class="font-medium text-gray-800">最近5日平均</p>
+                            <p class="text-gray-500 mt-1">用来判断今天是升温还是降温，避免只看单日波动。</p>
                         </div>
-                        <div class="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
-                            <span class="font-medium text-gray-600">⚪ 正常</span>
-                            <span>50-99</span>
-                        </div>
-                        <div class="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
-                            <span class="font-medium text-gray-500">🟤 弱势</span>
-                            <span>20-49</span>
-                        </div>
-                        <div class="flex items-center justify-between p-2 bg-gray-100 rounded-lg">
-                            <span class="font-medium text-gray-400">⚫ 极度弱势</span>
-                            <span>&lt;20</span>
+                        <div class="p-3 bg-gray-50 rounded-lg">
+                            <p class="font-medium text-gray-800">趋势环境评分</p>
+                            <p class="text-gray-500 mt-1">综合新高、新低、净新高和最近几天延续性后的结果，分数越高越适合做趋势。</p>
                         </div>
                     </div>
                     <div class="mt-4 pt-4 border-t border-gray-100">
                         <p id="currentStatus" class="text-xs text-gray-500">当前：-</p>
-                        <p class="text-xs text-gray-400 mt-1">基于4500只A股市场容量计算</p>
+                        <p class="text-xs text-gray-400 mt-1">先看环境，再看板块，再看个股，不要把这页当成直接买入信号。</p>
                     </div>
                 </div>
             </div>
@@ -563,6 +585,30 @@
             }
         }
 
+        function buildMarketNarrative(marketStats, newHighCount, newLowCount, netNewHigh) {
+            const ratio = marketStats.new_high_ratio ?? 0;
+            const lowRatio = marketStats.new_low_ratio ?? 0;
+            const trendDays = marketStats.trend_days ?? 0;
+            const avg5Days = marketStats.avg_5d ?? 0;
+            const avgChange = marketStats.avg_5d_change_pct ?? 0;
+            const hlRatio = marketStats.new_high_low_ratio ?? 0;
+            const signal = marketStats.market_signal || marketStats.market_status || '趋势观察';
+
+            const title = `${signal}：先看环境，再决定要不要积极出手`;
+            const body = `今天全市场有 ${newHighCount} 只股票创出250日新高，${newLowCount} 只股票创出250日新低，净新高为 ${netNewHigh}。新高占比 ${ratio}% ，新低占比 ${lowRatio}% 。最近5日平均新高家数是 ${avg5Days}，今天相对5日均值 ${avgChange >= 0 ? '升温' : '降温'} ${Math.abs(avgChange)}%。最近连续 ${trendDays} 天净新高为正，新高/新低比为 ${hlRatio}。`;
+
+            let action = '市场更偏结构性，先缩小范围到最强板块，再找回踩、平台突破或二次启动。';
+            if (signal === '趋势活跃') {
+                action = '趋势环境很顺，优先盯强板块里的龙头和扩散股，但依然要等合适位置，不要无脑追高。';
+            } else if (signal === '趋势可做') {
+                action = '环境是正的，可以做趋势，但更适合做强板块里的回踩确认和二次放量，而不是看到上涨就追。';
+            } else if (signal === '趋势谨慎') {
+                action = '环境偏弱，先把仓位和出手频率降下来，更多以观察和等待为主。';
+            }
+
+            return { title, body, action };
+        }
+
         // 渲染页面
         function renderPage(data) {
             const tradeDate = data.trade_date || currentDate;
@@ -583,6 +629,7 @@
             const avgChange = marketStats.avg_5d_change_pct ?? ((newHighCount - avg5Days) / avg5Days * 100).toFixed(1);
             const statusColor = marketStats.status_color_class || marketStatus.color;
             const statusDesc = marketStats.market_status_desc || marketStatus.desc;
+            const narrative = buildMarketNarrative(marketStats, newHighCount, newLowCount, netNewHigh);
             
             document.getElementById('todayNewHigh').textContent = newHighCount;
             document.getElementById('newHighRatio').textContent = `占比 ${ratio}% | 新低 ${newLowCount} | 净新高 ${netNewHigh}`;
@@ -595,6 +642,11 @@
             document.getElementById('strengthScore').textContent = strengthScore;
             document.getElementById('strengthBar').style.width = `${strengthScore}%`;
             document.getElementById('currentStatus').textContent = `当前：新高 ${newHighCount} | 新低 ${newLowCount} | 净新高 ${netNewHigh} | ${marketStatusText}`;
+            document.getElementById('marketSignalBadge').textContent = marketStatusText;
+            document.getElementById('marketSignalBadge').className = `px-3 py-1 rounded-full text-xs font-medium ${statusColor.includes('red') ? 'bg-red-50 text-red-700' : statusColor.includes('orange') ? 'bg-orange-50 text-orange-700' : statusColor.includes('yellow') ? 'bg-yellow-50 text-yellow-700' : 'bg-gray-100 text-gray-700'}`;
+            document.getElementById('marketSummaryTitle').textContent = narrative.title;
+            document.getElementById('marketSummaryBody').textContent = narrative.body;
+            document.getElementById('marketActionHint').textContent = narrative.action;
             
             // 渲染板块分布
             renderSectors(data.sectors || [], newHighCount);

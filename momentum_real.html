@@ -55,6 +55,25 @@
             cursor: not-allowed;
             opacity: 0.6;
         }
+        .signal-shell {
+            background:
+                linear-gradient(135deg, rgba(127, 29, 29, 0.96), rgba(220, 38, 38, 0.92)),
+                radial-gradient(circle at top right, rgba(255, 255, 255, 0.14), transparent 30%);
+            color: white;
+        }
+        .sub-card {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .tag-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.28rem 0.7rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
@@ -62,14 +81,14 @@
     <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3">
                     <div class="p-2 bg-gradient-to-br from-red-500 to-red-600 rounded-lg">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                         </svg>
                     </div>
                     <span class="text-xl font-bold bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">股海雷达</span>
-                </div>
+                </a>
 
                 <div class="flex items-center gap-1">
                     <a href="index.html" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
@@ -130,6 +149,12 @@
                         <p class="text-sm text-gray-500">板块动量排名与强势板块追踪 | 数据日期: <span id="tradeDate">-</span></p>
                     </div>
                 </div>
+                <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:bg-white">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    返回总览
+                </a>
                 <!-- 统一日期选择器 -->
                 <div class="date-selector">
                     <label for="dateSelect">选择日期:</label>
@@ -139,19 +164,59 @@
                 </div>
             </div>
 
+            <div class="signal-shell rounded-2xl p-6 mb-6 shadow-card">
+                <div class="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-6">
+                    <div class="max-w-3xl">
+                        <p class="text-xs uppercase tracking-[0.3em] text-white/60 font-semibold">今天怎么用动量页</p>
+                        <h2 id="heroTitle" class="mt-3 text-3xl font-bold">-</h2>
+                        <p id="heroBody" class="mt-3 text-sm text-white/80 leading-7">-</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span id="heroStatusPill" class="tag-chip bg-white/15 text-white">-</span>
+                            <span id="heroSectorPill" class="tag-chip bg-white/15 text-white">-</span>
+                            <span id="heroActionPill" class="tag-chip bg-white/15 text-white">-</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 min-w-full xl:min-w-[360px] xl:max-w-[420px]">
+                        <div class="sub-card rounded-2xl p-4">
+                            <p class="text-xs uppercase tracking-[0.2em] text-white/60">趋势环境</p>
+                            <p id="marketStatus" class="mt-2 text-2xl font-bold">-</p>
+                            <p id="marketStatusDesc" class="mt-2 text-xs text-white/70">-</p>
+                        </div>
+                        <div class="sub-card rounded-2xl p-4">
+                            <p class="text-xs uppercase tracking-[0.2em] text-white/60">今日最强</p>
+                            <p id="topSectorName" class="mt-2 text-2xl font-bold">-</p>
+                            <p id="topSectorMeta" class="mt-2 text-xs text-white/70">-</p>
+                        </div>
+                        <div class="sub-card rounded-2xl p-4">
+                            <p class="text-xs uppercase tracking-[0.2em] text-white/60">主线板块</p>
+                            <p id="mainLineCount" class="mt-2 text-2xl font-bold">-</p>
+                            <p id="warningCount" class="mt-2 text-xs text-white/70">-</p>
+                        </div>
+                        <div class="sub-card rounded-2xl p-4">
+                            <p class="text-xs uppercase tracking-[0.2em] text-white/60">总板块数</p>
+                            <p id="totalSectors" class="mt-2 text-2xl font-bold">-</p>
+                            <p id="top10Count" class="mt-2 text-xs text-white/70">-</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- 统计卡片 -->
-            <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <p class="text-xs font-medium text-gray-500 uppercase">总板块数</p>
-                    <p id="totalSectors" class="text-2xl font-bold text-gray-900 mt-1">-</p>
+                    <p class="text-xs font-medium text-gray-500 uppercase">板块观察重点</p>
+                    <p id="summaryFocus" class="text-lg font-bold text-gray-900 mt-1">-</p>
+                    <p id="summaryFocusMeta" class="text-xs text-gray-500 mt-2">-</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <p class="text-xs font-medium text-gray-500 uppercase">主线板块</p>
-                    <p id="mainLineCount" class="text-2xl font-bold text-stock-up mt-1">-</p>
+                    <p class="text-xs font-medium text-gray-500 uppercase">持续性最好</p>
+                    <p id="summaryContinuation" class="text-lg font-bold text-gray-900 mt-1">-</p>
+                    <p id="summaryContinuationMeta" class="text-xs text-gray-500 mt-2">-</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <p class="text-xs font-medium text-gray-500 uppercase">预警板块</p>
-                    <p id="warningCount" class="text-2xl font-bold text-stock-alert mt-1">-</p>
+                    <p class="text-xs font-medium text-gray-500 uppercase">当前建议</p>
+                    <p id="summaryAction" class="text-lg font-bold text-gray-900 mt-1">-</p>
+                    <p id="summaryActionMeta" class="text-xs text-gray-500 mt-2">-</p>
                 </div>
             </div>
 
@@ -172,11 +237,11 @@
                                 <th class="px-6 py-3 font-medium">排名</th>
                                 <th class="px-6 py-3 font-medium">板块名称</th>
                                 <th class="px-6 py-3 font-medium">动量分值</th>
-                                <th class="px-6 py-3 font-medium">排名变动</th>
-                                <th class="px-6 py-3 font-medium">上榜数量</th>
-                                <th class="px-6 py-3 font-medium">上榜占比</th>
+                                <th class="px-6 py-3 font-medium">持续性</th>
+                                <th class="px-6 py-3 font-medium">强股覆盖</th>
                                 <th class="px-6 py-3 font-medium">平均涨幅</th>
-                                <th class="px-6 py-3 font-medium">标识</th>
+                                <th class="px-6 py-3 font-medium">关注理由</th>
+                                <th class="px-6 py-3 font-medium">温度</th>
                             </tr>
                         </thead>
                         <tbody id="momentumTable" class="divide-y divide-gray-100">
@@ -222,27 +287,35 @@
             </div>
             
             <div id="modalContent" class="hidden overflow-y-auto max-h-[70vh]">
-                <div class="grid grid-cols-4 gap-4 p-6 border-b border-gray-100">
+                <div class="grid md:grid-cols-3 gap-4 p-6 border-b border-gray-100">
                     <div class="text-center">
                         <p class="text-xs text-gray-500">上榜股票</p>
                         <p id="modalListedCount" class="text-2xl font-bold text-stock-up">-</p>
                     </div>
                     <div class="text-center">
-                        <p class="text-xs text-gray-500">成分股总数</p>
-                        <p id="modalTotalCount" class="text-2xl font-bold text-gray-700">-</p>
+                        <p class="text-xs text-gray-500">板块角色</p>
+                        <p id="modalRole" class="text-2xl font-bold text-gray-700">-</p>
                     </div>
                     <div class="text-center">
-                        <p class="text-xs text-gray-500">上榜占比</p>
+                        <p class="text-xs text-gray-500">持续性</p>
+                        <p id="modalContinuation" class="text-2xl font-bold text-gray-700">-</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-xs text-gray-500">强股覆盖</p>
                         <p id="modalListedRatio" class="text-2xl font-bold text-stock-up">-</p>
                     </div>
                     <div class="text-center">
                         <p class="text-xs text-gray-500">平均涨幅</p>
                         <p id="modalAvgReturn" class="text-2xl font-bold text-stock-up">-</p>
                     </div>
+                    <div class="text-center">
+                        <p class="text-xs text-gray-500">操作提示</p>
+                        <p id="modalAction" class="text-lg font-bold text-gray-700">-</p>
+                    </div>
                 </div>
                 
                 <div class="p-6">
-                    <h4 class="text-sm font-semibold text-gray-700 mb-4">符合动量逻辑的股票（真实数据）</h4>
+                    <h4 class="text-sm font-semibold text-gray-700 mb-4">符合动量逻辑的股票（优先从“涨幅、成交、关注度”三项看机会）</h4>
                     <div class="overflow-x-auto">
                         <table class="w-full text-sm">
                             <thead class="bg-gray-50 text-gray-600">
@@ -250,9 +323,11 @@
                                     <th class="px-4 py-3 text-left font-medium">排名</th>
                                     <th class="px-4 py-3 text-left font-medium">代码</th>
                                     <th class="px-4 py-3 text-left font-medium">名称</th>
-                                    <th class="px-4 py-3 text-right font-medium">当日收盘价</th>
                                     <th class="px-4 py-3 text-right font-medium">20日涨幅</th>
+                                    <th class="px-4 py-3 text-right font-medium">收盘价</th>
+                                    <th class="px-4 py-3 text-right font-medium">成交额</th>
                                     <th class="px-4 py-3 text-right font-medium">流通市值(亿元)</th>
+                                    <th class="px-4 py-3 text-left font-medium">关注理由</th>
                                     <th class="px-4 py-3 text-center font-medium">机构关注度评分</th>
                                 </tr>
                             </thead>
@@ -296,6 +371,8 @@
         let currentFilter = 'all';
         let currentDate = null;  // 当前选中的日期
         let availableDates = []; // 可用日期列表（有数据的日期）
+        let marketContext = null;
+        let sectorStabilityMap = new Map();
 
         /**
          * ============================================
@@ -391,6 +468,141 @@
             return currentDate || (availableDates.length > 0 ? availableDates[0] : null);
         }
 
+        function getDataUrl(kind, date, latest = false) {
+            const cacheBuster = `?_=${Date.now()}`;
+            if (isLocalhost && !isFileProtocol) {
+                return latest
+                    ? `${DATA_BASE}/api/${kind}/latest${cacheBuster}`
+                    : `${DATA_BASE}/api/${kind}/${date}${cacheBuster}`;
+            }
+            if (isGitHubPages) {
+                return latest
+                    ? `${DATA_BASE}/${kind}_latest.json${cacheBuster}`
+                    : `${DATA_BASE}/${date}/${kind}.json${cacheBuster}`;
+            }
+            return latest
+                ? `./data/${kind}_latest.json${cacheBuster}`
+                : `./data/${date}/${kind}.json${cacheBuster}`;
+        }
+
+        async function fetchJson(url) {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error('网络请求失败');
+            }
+            return response.json();
+        }
+
+        function getHistoryDates(date, count = 5) {
+            const index = availableDates.indexOf(date);
+            if (index === -1) return [];
+            return availableDates.slice(index, index + count);
+        }
+
+        function buildSectorStabilityMap(historyPayloads) {
+            const map = new Map();
+            historyPayloads.filter(Boolean).forEach((payload) => {
+                (payload.data || []).forEach((sector) => {
+                    const entry = map.get(sector.sector_name) || {
+                        top10Days: 0,
+                        mainlineDays: 0,
+                        warningDays: 0,
+                        ranks: []
+                    };
+                    if ((sector.rank || 99) <= 10) entry.top10Days += 1;
+                    if (sector.is_main_line) entry.mainlineDays += 1;
+                    if (sector.is_warning) entry.warningDays += 1;
+                    entry.ranks.push(sector.rank || 99);
+                    map.set(sector.sector_name, entry);
+                });
+            });
+
+            const result = new Map();
+            map.forEach((value, key) => {
+                const newestRank = value.ranks[0] || 99;
+                const oldestRank = value.ranks[value.ranks.length - 1] || newestRank;
+                const rankTrend = oldestRank - newestRank;
+                let label = '今日活跃';
+                let note = `最近5日进入前十 ${value.top10Days} 次`;
+                if (value.top10Days >= 4) {
+                    label = '连续强势';
+                    note = `最近5日有 ${value.top10Days} 天位于前十`;
+                } else if (rankTrend >= 5) {
+                    label = '趋势升温';
+                    note = `比5日前提升 ${rankTrend} 名`;
+                } else if (value.warningDays >= 2) {
+                    label = '高热主线';
+                    note = `最近5日有 ${value.warningDays} 天进入预警`;
+                } else if (value.mainlineDays >= 3) {
+                    label = '持续主线';
+                    note = `最近5日有 ${value.mainlineDays} 天属于主线`;
+                }
+                result.set(key, {
+                    ...value,
+                    label,
+                    note,
+                    rankTrend
+                });
+            });
+            return result;
+        }
+
+        function getMarketAction(marketStats) {
+            const status = marketStats?.market_status || '趋势观察';
+            if (status === '趋势活跃') {
+                return '环境顺，优先做主线板块里的领涨和扩散股，但不追最高潮。';
+            }
+            if (status === '趋势可做') {
+                return '环境正向，优先做主线板块里的回踩确认和二次启动。';
+            }
+            if (status === '趋势谨慎') {
+                return '环境偏弱，先降低出手频率，更多是盯住主线演化。';
+            }
+            return '环境偏中性，先等板块持续性确认，再提高参与度。';
+        }
+
+        function getSectorRole(item) {
+            if (item.is_warning) return '预警主线';
+            if (item.is_main_line) return '主线';
+            return '观察';
+        }
+
+        function getSectorToneClass(item) {
+            if (item.is_warning) return 'bg-red-100 text-red-700';
+            if (item.is_main_line) return 'bg-red-50 text-red-600';
+            return 'bg-gray-100 text-gray-600';
+        }
+
+        function getSectorReason(item, stability) {
+            const reasons = [];
+            if ((item.rank || 99) <= 5) reasons.push('位居前排');
+            if ((item.listed_ratio || 0) >= 20) reasons.push('覆盖面广');
+            if ((item.avg_return_20d || 0) >= 15) reasons.push('涨幅强');
+            if (stability?.top10Days >= 4) reasons.push('持续性强');
+            else if (stability?.rankTrend >= 5) reasons.push('趋势升温');
+            if (!reasons.length) reasons.push('保持关注');
+            return reasons.slice(0, 3).join(' / ');
+        }
+
+        function getStockReasonTags(stock) {
+            const tags = [];
+            const marketRank = Number(stock.rank_in_market || stock.rank || 99);
+            const return20d = Number(stock.return_20d || stock.return || 0);
+            const amountYi = Number(stock.amount || 0) / 10000;
+            const instScore = Number(stock.institution_score || 0);
+
+            if (marketRank <= 20) tags.push('市场前排');
+            if (return20d >= 60) tags.push('20日爆发');
+            else if (return20d >= 35) tags.push('趋势很强');
+
+            if (amountYi >= 8) tags.push(`成交${amountYi.toFixed(1)}亿`);
+            if (instScore >= 3) tags.push('关注度高');
+            if (Number(stock.circ_mv || 0) >= 150) tags.push('容量较大');
+
+            if (!tags.length) tags.push('趋势跟踪');
+            return tags.slice(0, 3);
+        }
+
         /**
          * ============================================
          * 统一日期选择器组件 - 结束
@@ -405,37 +617,26 @@
             const targetDate = date || getSelectedDate();
             
             try {
-                // 添加时间戳防止缓存
-                const cacheBuster = `?_=${Date.now()}`;
-                let url;
-                if (isLocalhost && !isFileProtocol) {
-                    // 本地使用 API
-                    url = targetDate 
-                        ? `${DATA_BASE}/api/momentum/${targetDate}${cacheBuster}`
-                        : `${DATA_BASE}/api/momentum/latest${cacheBuster}`;
-                } else {
-                    // 静态文件模式（GitHub Pages 或本地文件）
-                    if (isGitHubPages) {
-                        url = targetDate 
-                            ? `${DATA_BASE}/${targetDate}/momentum.json${cacheBuster}`
-                            : `${DATA_BASE}/momentum_latest.json${cacheBuster}`;
-                    } else {
-                        url = targetDate 
-                            ? `./data/${targetDate}/momentum.json${cacheBuster}`
-                            : `./data/momentum_latest.json${cacheBuster}`;
-                    }
-                }
-                
-                const response = await fetch(url);
-                if (!response.ok) throw new Error('网络请求失败');
-                
-                const result = await response.json();
+                const result = await fetchJson(targetDate ? getDataUrl('momentum', targetDate) : getDataUrl('momentum', null, true));
                 momentumData = result.data || [];
+                try {
+                    marketContext = await fetchJson(targetDate ? getDataUrl('newhigh', targetDate) : getDataUrl('newhigh', null, true));
+                } catch (error) {
+                    marketContext = null;
+                }
+
+                const historyDates = getHistoryDates(targetDate, 5);
+                const historyPayloads = await Promise.all(
+                    historyDates.map((historyDate) =>
+                        fetchJson(getDataUrl('momentum', historyDate)).catch(() => null)
+                    )
+                );
+                sectorStabilityMap = buildSectorStabilityMap(historyPayloads);
                 
                 document.getElementById('tradeDate').textContent = formatDate(result.trade_date);
                 document.getElementById('updateTime').textContent = formatDate(result.trade_date) + ' 15:00';
-                renderTable(momentumData);
-                updateStats(momentumData);
+                updateSummary(result, momentumData);
+                filterData(currentFilter);
                 showContent();
             } catch (error) {
                 showError(error.message);
@@ -464,42 +665,76 @@
             document.getElementById('content').classList.remove('hidden');
         }
 
+        function updateSummary(result, data) {
+            const topSector = data[0];
+            const marketStats = marketContext?.market_stats || null;
+            const continuationSector = [...data]
+                .sort((a, b) => (sectorStabilityMap.get(b.sector_name)?.top10Days || 0) - (sectorStabilityMap.get(a.sector_name)?.top10Days || 0))[0];
+            const summaryAction = getMarketAction(marketStats);
+
+            document.getElementById('totalSectors').textContent = data.length;
+            document.getElementById('top10Count').textContent = `前十板块 ${Math.min(10, data.length)} 个`;
+            document.getElementById('mainLineCount').textContent = data.filter(i => i.is_main_line).length;
+            document.getElementById('warningCount').textContent = `预警 ${data.filter(i => i.is_warning).length} 个`;
+            document.getElementById('marketStatus').textContent = marketStats?.market_status || '未联动';
+            document.getElementById('marketStatusDesc').textContent = marketStats?.market_status_desc || '一年新高数据不可用时，仅展示板块动量。';
+            document.getElementById('topSectorName').textContent = topSector?.sector_name || '-';
+            document.getElementById('topSectorMeta').textContent = topSector ? `分值 ${topSector.momentum_score.toFixed(2)} · 平均涨幅 ${topSector.avg_return_20d}%` : '-';
+            document.getElementById('heroTitle').textContent = topSector ? `今天先盯 ${topSector.sector_name}` : '今天先看主线是否明确';
+            document.getElementById('heroBody').textContent = topSector
+                ? `${summaryAction} 当前动量最强的是 ${topSector.sector_name}，上榜 ${topSector.listed_count} 只，占板块 ${topSector.listed_ratio}% ，属于 ${getSectorRole(topSector)}。`
+                : '先用动量页找主线方向，再回到总览页结合趋势环境做筛选。';
+            document.getElementById('heroStatusPill').textContent = marketStats?.market_status || '趋势环境待确认';
+            document.getElementById('heroSectorPill').textContent = topSector ? `今日最强 ${topSector.sector_name}` : '暂无主线';
+            document.getElementById('heroActionPill').textContent = topSector?.is_warning ? '注意过热风险' : '优先盯回踩确认';
+            document.getElementById('summaryFocus').textContent = topSector?.sector_name || '-';
+            document.getElementById('summaryFocusMeta').textContent = topSector ? `上榜 ${topSector.listed_count} 只 | 覆盖 ${topSector.listed_ratio}% | 分值 ${topSector.momentum_score.toFixed(2)}` : '-';
+            document.getElementById('summaryContinuation').textContent = continuationSector?.sector_name || '-';
+            document.getElementById('summaryContinuationMeta').textContent = continuationSector
+                ? `${sectorStabilityMap.get(continuationSector.sector_name)?.note || '持续性待确认'}`
+                : '-';
+            document.getElementById('summaryAction').textContent = marketStats?.market_status || '趋势观察';
+            document.getElementById('summaryActionMeta').textContent = summaryAction;
+        }
+
         // 渲染表格
         function renderTable(data) {
             const tbody = document.getElementById('momentumTable');
             
             tbody.innerHTML = data.map(item => {
-                // 排名变动处理
-                const rankChange = item.rank_change || 0;
-                const rankChangeIcon = rankChange > 0 ? '↑' : rankChange < 0 ? '↓' : '-';
-                // 排名上升=红色(强势)，下降=绿色(弱势) - 与股票颜色一致
-                const rankChangeClass = rankChange > 0 ? 'text-stock-up' : rankChange < 0 ? 'text-stock-down' : 'text-stock-neutral';
-                const rankChangeText = rankChange !== 0 ? `${rankChangeIcon} ${Math.abs(rankChange)}` : '-';
-                const fireIcon = rankChange >= 3 ? ' 🔥' : '';
+                const stability = sectorStabilityMap.get(item.sector_name);
+                const role = getSectorRole(item);
+                const roleClass = getSectorToneClass(item);
+                const coverageText = `${item.listed_count}/${item.total_count} | ${item.listed_ratio}%`;
+                const continuation = stability ? `${stability.label} · ${stability.note}` : '今日活跃 · 等更多历史验证';
                 
                 return `
                     <tr class="table-row" onclick="openModal('${item.sector_name}')">
                         <td class="px-6 py-4 font-semibold">${item.rank || '-'}</td>
-                        <td class="px-6 py-4 font-medium text-gray-900">${item.sector_name} 🔍</td>
+                        <td class="px-6 py-4">
+                            <div class="font-medium text-gray-900">${item.sector_name} 🔍</div>
+                            <div class="text-xs text-gray-400 mt-1">${role}</div>
+                        </td>
                         <td class="px-6 py-4 font-bold text-stock-up">${item.momentum_score.toFixed(2)}</td>
-                        <td class="px-6 py-4 ${rankChangeClass}">${rankChangeText}${fireIcon}</td>
-                        <td class="px-6 py-4">${item.listed_count}</td>
-                        <td class="px-6 py-4">${item.listed_ratio}%</td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm font-medium text-gray-800">${stability?.label || '今日活跃'}</div>
+                            <div class="text-xs text-gray-500 mt-1">${stability?.note || '需要更多历史验证'}</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="font-medium text-gray-800">${coverageText}</div>
+                            <div class="text-xs text-gray-500 mt-1">强股覆盖面</div>
+                        </td>
                         <td class="px-6 py-4 text-stock-up">+${item.avg_return_20d}%</td>
                         <td class="px-6 py-4">
-                            ${item.is_warning ? '<span class="px-2 py-1 text-xs bg-red-100 text-red-700 rounded-full">预警</span>' : 
-                              item.is_main_line ? '<span class="px-2 py-1 text-xs bg-red-50 text-red-600 rounded-full">主线</span>' : ''}
+                            <div class="text-sm text-gray-700">${getSectorReason(item, stability)}</div>
+                            <div class="text-xs text-gray-400 mt-1">${continuation}</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 text-xs rounded-full ${roleClass}">${role}</span>
                         </td>
                     </tr>
                 `;
             }).join('');
-        }
-
-        // 更新统计
-        function updateStats(data) {
-            document.getElementById('totalSectors').textContent = data.length;
-            document.getElementById('mainLineCount').textContent = data.filter(i => i.is_main_line).length;
-            document.getElementById('warningCount').textContent = data.filter(i => i.is_warning).length;
         }
 
         // 筛选数据
@@ -527,12 +762,15 @@
             if (!sector) return;
             
             document.getElementById('modalTitle').textContent = sectorName;
+            const stability = sectorStabilityMap.get(sectorName);
             document.getElementById('modalSubtitle').textContent = `动量分值: ${sector.momentum_score} | 排名: 第${sector.rank}名`;
             
             document.getElementById('modalListedCount').textContent = sector.listed_count + '只';
-            document.getElementById('modalTotalCount').textContent = sector.total_count + '只';
+            document.getElementById('modalRole').textContent = getSectorRole(sector);
+            document.getElementById('modalContinuation').textContent = stability?.label || '今日活跃';
             document.getElementById('modalListedRatio').textContent = sector.listed_ratio + '%';
             document.getElementById('modalAvgReturn').textContent = '+' + sector.avg_return_20d + '%';
+            document.getElementById('modalAction').textContent = sector.is_warning ? '盯分歧回踩' : sector.is_main_line ? '盯回踩确认' : '先观察';
             
             modal.classList.remove('hidden');
             document.getElementById('modalLoading').classList.remove('hidden');
@@ -567,7 +805,7 @@
             const tbody = document.getElementById('modalStockList');
             
             if (stocks.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="7" class="px-4 py-8 text-center text-gray-500">暂无数据</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="9" class="px-4 py-8 text-center text-gray-500">暂无数据</td></tr>';
                 return;
             }
             
@@ -582,15 +820,23 @@
                 const circMv = s.circ_mv || '-';  
                 // 机构评分(0-10分)
                 const instScore = s.institution_score || 0;
+                const amountYi = (Number(s.amount || 0) / 10000).toFixed(2);
+                const tags = getStockReasonTags(s);
                 
                 return `
                 <tr class="hover:bg-red-50">
                     <td class="px-4 py-3 font-semibold">${rank}</td>
                     <td class="px-4 py-3 font-mono text-gray-600">${code}</td>
                     <td class="px-4 py-3 font-medium">${name}</td>
-                    <td class="px-4 py-3 text-right">¥${closePrice.toFixed(2)}</td>
                     <td class="px-4 py-3 text-right font-bold text-stock-up">+${return20d}%</td>
+                    <td class="px-4 py-3 text-right">¥${closePrice.toFixed(2)}</td>
+                    <td class="px-4 py-3 text-right text-gray-600">${amountYi}亿</td>
                     <td class="px-4 py-3 text-right text-gray-600">${circMv !== '-' ? circMv + '亿' : '-'}</td>
+                    <td class="px-4 py-3">
+                        <div class="flex flex-wrap gap-1.5">
+                            ${tags.map(tag => `<span class="px-2 py-1 bg-red-50 text-red-700 rounded-full text-xs">${tag}</span>`).join('')}
+                        </div>
+                    </td>
                     <td class="px-4 py-3 text-center"><span class="px-2 py-1 bg-blue-50 text-blue-600 rounded text-xs">${instScore.toFixed(2)}分</span></td>
                 </tr>
             `}).join('');

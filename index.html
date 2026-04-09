@@ -85,6 +85,35 @@
             background: linear-gradient(90deg, #f97316, #dc2626);
         }
 
+        .history-track {
+            display: grid;
+            grid-template-columns: repeat(10, minmax(0, 1fr));
+            gap: 0.7rem;
+            align-items: end;
+            min-width: 560px;
+        }
+
+        .history-bar {
+            position: relative;
+            min-height: 148px;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+        }
+
+        .history-bar-fill {
+            width: 100%;
+            min-height: 20px;
+            border-radius: 1rem 1rem 0.55rem 0.55rem;
+            transition: height 0.25s ease;
+        }
+
+        .history-bar-meta {
+            position: absolute;
+            inset: auto 0 -2.8rem 0;
+            text-align: center;
+        }
+
         .date-selector select {
             appearance: none;
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
@@ -221,6 +250,60 @@
                     <div class="mt-6 rounded-3xl bg-amber-50 border border-amber-100 p-4">
                         <p class="text-xs uppercase tracking-[0.2em] text-amber-700 font-semibold">今日提醒</p>
                         <p id="riskHint" class="mt-2 text-sm leading-7 text-amber-900">-</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 xl:grid-cols-[1.08fr_0.92fr] gap-6">
+                <div class="shell rounded-[2rem] p-6 sm:p-7">
+                    <div class="flex items-center justify-between gap-4">
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">历史趋势</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">最近10个交易日环境怎么走</h2>
+                        </div>
+                        <span id="trendModePill" class="status-pill bg-gray-100 text-gray-700">-</span>
+                    </div>
+                    <p id="trendHistorySummary" class="mt-4 text-sm leading-7 text-gray-700">-</p>
+                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="rounded-3xl bg-gray-50 p-4">
+                            <p class="text-xs uppercase tracking-[0.2em] text-gray-400">当前位置</p>
+                            <p id="trendPosition" class="mt-2 text-xl font-semibold text-gray-950">-</p>
+                            <p id="trendPositionMeta" class="mt-2 text-xs text-gray-500">-</p>
+                        </div>
+                        <div class="rounded-3xl bg-gray-50 p-4">
+                            <p class="text-xs uppercase tracking-[0.2em] text-gray-400">最近5日均分</p>
+                            <p id="trendAvg5" class="mt-2 text-xl font-semibold text-gray-950">-</p>
+                            <p id="trendAvg5Meta" class="mt-2 text-xs text-gray-500">-</p>
+                        </div>
+                        <div class="rounded-3xl bg-gray-50 p-4">
+                            <p class="text-xs uppercase tracking-[0.2em] text-gray-400">历史高低点</p>
+                            <p id="trendRange" class="mt-2 text-xl font-semibold text-gray-950">-</p>
+                            <p id="trendRangeMeta" class="mt-2 text-xs text-gray-500">-</p>
+                        </div>
+                    </div>
+                    <div class="mt-7 rounded-[1.6rem] bg-gray-50 border border-gray-100 p-5 overflow-x-auto">
+                        <div id="trendHistoryChart" class="history-track"></div>
+                    </div>
+                </div>
+
+                <div class="shell rounded-[2rem] p-6 sm:p-7">
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">历史解读</p>
+                        <h2 class="mt-2 text-2xl font-semibold text-gray-950">用历史确认今天不是错觉</h2>
+                    </div>
+                    <div class="mt-6 space-y-4 text-sm leading-7 text-gray-600">
+                        <div class="rounded-3xl bg-gray-50 p-4">
+                            <p class="font-semibold text-gray-900">最近趋势</p>
+                            <p id="trendHistoryDetail" class="mt-2">-</p>
+                        </div>
+                        <div class="rounded-3xl bg-gray-50 p-4">
+                            <p class="font-semibold text-gray-900">现在该怎么理解</p>
+                            <p id="trendHistoryAction" class="mt-2">-</p>
+                        </div>
+                        <div class="rounded-3xl bg-gray-50 p-4">
+                            <p class="font-semibold text-gray-900">怎么避免误判</p>
+                            <p id="trendHistoryRisk" class="mt-2">-</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -391,6 +474,11 @@
             return availableDates.slice(index, index + count);
         }
 
+        function average(values) {
+            if (!values.length) return 0;
+            return values.reduce((sum, value) => sum + value, 0) / values.length;
+        }
+
         function getStatusTone(status) {
             if (status === '趋势活跃') {
                 return {
@@ -538,6 +626,98 @@
             return source.sort((a, b) => b.opportunity_score - a.opportunity_score);
         }
 
+        function getTrendTone(status) {
+            if (status === '趋势活跃') return 'bg-red-50 text-red-700';
+            if (status === '趋势可做') return 'bg-amber-50 text-amber-700';
+            if (status === '趋势观察') return 'bg-slate-100 text-slate-700';
+            return 'bg-gray-100 text-gray-700';
+        }
+
+        function getTrendBarClass(status) {
+            if (status === '趋势活跃') return 'bg-gradient-to-t from-red-700 to-red-500';
+            if (status === '趋势可做') return 'bg-gradient-to-t from-amber-600 to-orange-400';
+            if (status === '趋势观察') return 'bg-gradient-to-t from-slate-700 to-slate-500';
+            return 'bg-gradient-to-t from-gray-500 to-gray-400';
+        }
+
+        function buildTrendHistoryInsights(historyPayloads, targetDate) {
+            const timeline = historyPayloads
+                .filter(Boolean)
+                .map((payload) => {
+                    const marketStats = payload.market_stats || {};
+                    return {
+                        date: payload.trade_date,
+                        score: Number(marketStats.strength_score || 0),
+                        status: marketStats.market_status || '趋势谨慎',
+                        newHighCount: Number(marketStats.new_high_count || 0),
+                        newLowCount: Number(marketStats.new_low_count || 0),
+                        netNewHigh: Number(marketStats.net_new_high || 0)
+                    };
+                })
+                .sort((a, b) => a.date.localeCompare(b.date));
+
+            if (!timeline.length) return null;
+
+            const latest = timeline[timeline.length - 1];
+            const prev = timeline[timeline.length - 2] || latest;
+            const first = timeline[0];
+            const latestFive = timeline.slice(-5);
+            const firstThree = timeline.slice(0, Math.min(3, timeline.length));
+            const lastThree = timeline.slice(-Math.min(3, timeline.length));
+            const latest5Avg = average(latestFive.map((item) => item.score));
+            const first3Avg = average(firstThree.map((item) => item.score));
+            const last3Avg = average(lastThree.map((item) => item.score));
+            const scoreDelta = latest.score - prev.score;
+            const trendDelta = last3Avg - first3Avg;
+            const sortedScores = [...timeline].sort((a, b) => b.score - a.score);
+            const position = sortedScores.findIndex((item) => item.date === latest.date) + 1;
+            const highest = sortedScores[0];
+            const lowest = sortedScores[sortedScores.length - 1];
+
+            let mode = '震荡观察';
+            let summary = `最近10个交易日里，趋势分从 ${first.score} 走到 ${latest.score}。当前 ${latest.status}，属于局部修复，不是全面强趋势。`;
+            let detail = `近3日均分 ${last3Avg.toFixed(1)}，相对前段 ${first3Avg.toFixed(1)} ${trendDelta >= 0 ? '抬升' : '回落'} ${Math.abs(trendDelta).toFixed(1)} 分。`;
+            let action = '先把它当成环境修复看，只有后面继续抬分、且新高家数继续扩散，才值得提高出手强度。';
+            let risk = '如果分数只是单日拉高，但后面两三天接不住，就还是弱环境里的局部脉冲。';
+
+            if (latest.score >= 55 && trendDelta >= 8) {
+                mode = '持续升温';
+                summary = `最近10个交易日趋势分明显抬升，当前来到 ${latest.score} 分，已经接近这段历史高位。`;
+                detail = `最近3日均分 ${last3Avg.toFixed(1)}，显著高于前段 ${first3Avg.toFixed(1)}，说明环境在持续修复。`;
+                action = '可以更积极跟踪主线，但仍然只做前排板块里的确认机会，不做泛化追高。';
+                risk = '即使环境升温，也要盯住主线是否继续扩散，别把边缘补涨误当主升。';
+            } else if (latest.score >= 35 && trendDelta >= 5) {
+                mode = '修复回暖';
+                summary = `最近环境在修复，当前 ${latest.score} 分，已经明显好于前几天，但仍然偏结构性。`;
+                detail = `最近3日均分 ${last3Avg.toFixed(1)}，比前段 ${first3Avg.toFixed(1)} 提升 ${Math.abs(trendDelta).toFixed(1)} 分，说明情绪在回暖。`;
+                action = '优先看主线板块里的回踩确认和二次启动，先赚确定性的那一段。';
+                risk = '修复期最怕把“能做”理解成“全面都能做”，非主线方向仍然容易掉队。';
+            } else if (latest.score <= 22 && trendDelta <= 0) {
+                mode = '持续偏弱';
+                summary = `最近10个交易日整体偏弱，当前只有 ${latest.score} 分，趋势环境还没有真正打开。`;
+                detail = `近3日均分 ${last3Avg.toFixed(1)}，没有比前段 ${first3Avg.toFixed(1)} 更强，说明环境还在弱势区间。`;
+                action = '先降频，重点记录最强方向，不着急把榜单里的票都当机会。';
+                risk = '弱环境里的新高股更像孤立表演，最容易追在短线高潮后。';
+            }
+
+            return {
+                timeline,
+                latest,
+                prev,
+                latest5Avg,
+                position,
+                highest,
+                lowest,
+                mode,
+                summary,
+                detail,
+                action,
+                risk,
+                scoreDelta,
+                targetDate
+            };
+        }
+
         function renderSignalSection(newhighPayload, momentumPayload, opportunities) {
             const marketStats = newhighPayload.market_stats || {};
             const status = marketStats.market_status || '趋势观察';
@@ -565,6 +745,54 @@
             document.getElementById('step2').textContent = `再看板块：优先跟踪动量榜前排、且最近5日持续留在前十的方向。今天前排核心是 ${topSector?.sector_name || '暂无'}。`;
             document.getElementById('step3').textContent = '最后看个股：只从强板块里的新高股下手，优先“主线共振 + 连续趋势 + 放量确认”的组合。';
             document.getElementById('riskHint').textContent = tone.risk;
+        }
+
+        function renderTrendHistory(historyInsight) {
+            if (!historyInsight) return;
+
+            const {
+                timeline,
+                latest,
+                prev,
+                latest5Avg,
+                position,
+                highest,
+                lowest,
+                mode,
+                summary,
+                detail,
+                action,
+                risk,
+                scoreDelta
+            } = historyInsight;
+
+            document.getElementById('trendModePill').className = `status-pill ${getTrendTone(latest.status)}`;
+            document.getElementById('trendModePill').textContent = mode;
+            document.getElementById('trendHistorySummary').textContent = summary;
+            document.getElementById('trendPosition').textContent = `近10日第 ${position} 位`;
+            document.getElementById('trendPositionMeta').textContent = `当前 ${latest.score} 分，${scoreDelta >= 0 ? '较前一日上升' : '较前一日回落'} ${Math.abs(scoreDelta)} 分`;
+            document.getElementById('trendAvg5').textContent = `${latest5Avg.toFixed(1)} 分`;
+            document.getElementById('trendAvg5Meta').textContent = `当前 ${latest.score >= latest5Avg ? '高于' : '低于'} 最近5日均值`;
+            document.getElementById('trendRange').textContent = `${lowest.score} - ${highest.score}`;
+            document.getElementById('trendRangeMeta').textContent = `${formatDate(lowest.date)} 到 ${formatDate(highest.date)} 的区间`;
+            document.getElementById('trendHistoryDetail').textContent = detail;
+            document.getElementById('trendHistoryAction').textContent = action;
+            document.getElementById('trendHistoryRisk').textContent = risk;
+
+            const maxScore = Math.max(...timeline.map((item) => item.score), 1);
+            document.getElementById('trendHistoryChart').innerHTML = timeline.map((item) => {
+                const height = Math.max(20, (item.score / maxScore) * 148);
+                const isCurrent = item.date === latest.date;
+                return `
+                    <div class="history-bar">
+                        <div class="history-bar-fill ${getTrendBarClass(item.status)} ${isCurrent ? 'ring-4 ring-red-100' : ''}" style="height: ${height}px"></div>
+                        <div class="history-bar-meta">
+                            <p class="text-[11px] font-semibold ${isCurrent ? 'text-red-700' : 'text-gray-700'}">${item.score}</p>
+                            <p class="mt-1 text-[10px] text-gray-400">${formatDate(item.date).slice(5)}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
         }
 
         function renderSectorGrid(momentumPayload, sectorStabilityMap) {
@@ -709,15 +937,23 @@
                     fetchJson(getDataUrl('newhigh', targetDate))
                 ]);
 
-                const historyDates = getHistoryDates(targetDate, 5);
-                const historyPayloads = await Promise.all(
-                    historyDates.map((date) => fetchJson(getDataUrl('momentum', date)).catch(() => null))
-                );
+                const momentumHistoryDates = getHistoryDates(targetDate, 5);
+                const trendHistoryDates = getHistoryDates(targetDate, 10).reverse();
+                const [historyPayloads, trendHistoryPayloads] = await Promise.all([
+                    Promise.all(
+                        momentumHistoryDates.map((date) => fetchJson(getDataUrl('momentum', date)).catch(() => null))
+                    ),
+                    Promise.all(
+                        trendHistoryDates.map((date) => fetchJson(getDataUrl('newhigh', date)).catch(() => null))
+                    )
+                ]);
                 const validHistory = historyPayloads.filter(Boolean);
+                const trendInsight = buildTrendHistoryInsights(trendHistoryPayloads, targetDate);
                 const sectorStabilityMap = buildSectorStabilityMap(validHistory);
                 const opportunities = buildOpportunityList(newhighPayload, momentumPayload, sectorStabilityMap);
 
                 renderSignalSection(newhighPayload, momentumPayload, opportunities);
+                renderTrendHistory(trendInsight);
                 renderSectorGrid(momentumPayload, sectorStabilityMap);
                 renderOpportunityList(opportunities);
                 renderSectorHeatmap(momentumPayload, sectorStabilityMap);

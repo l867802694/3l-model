@@ -845,23 +845,28 @@
                 if ((sector.avg_consecutive_days || 0) >= 2) badges.push(`均值${sector.avg_consecutive_days}天`);
                 
                 return `
-                    <div class="sector-item flex items-center justify-between p-3 rounded-lg border border-transparent hover:border-red-200" onclick="openSectorModal('${sector.sector_name || sector.name}', ${count}, ${score})">
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-center gap-3">
-                                <span class="w-6 h-6 flex items-center justify-center ${color.light} ${color.text} rounded text-sm font-bold">${index + 1}</span>
-                                <span class="font-medium text-gray-900">${sector.sector_name || sector.name} 🔍</span>
-                                <div class="flex flex-wrap gap-2">
-                                    ${badges.map((badge) => `<span class="inline-flex items-center px-2 py-1 rounded-full text-[11px] bg-gray-100 text-gray-600">${badge}</span>`).join('')}
+                    <div class="sector-item p-4 rounded-lg border border-transparent hover:border-red-200" onclick="openSectorModal('${sector.sector_name || sector.name}', ${count}, ${score})">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="flex-1 min-w-0">
+                                <div class="flex flex-wrap items-center gap-3">
+                                    <span class="w-6 h-6 flex items-center justify-center ${color.light} ${color.text} rounded text-sm font-bold shrink-0">${index + 1}</span>
+                                    <span class="font-medium text-gray-900">${sector.sector_name || sector.name} 🔍</span>
+                                    <div class="flex flex-wrap gap-2">
+                                        ${badges.map((badge) => `<span class="inline-flex items-center px-2 py-1 rounded-full text-[11px] bg-gray-100 text-gray-600">${badge}</span>`).join('')}
+                                    </div>
                                 </div>
+                                <p class="text-xs text-gray-500 mt-2">${reason}</p>
                             </div>
-                            <p class="text-xs text-gray-500 mt-2">${reason}</p>
+                            <div class="text-right shrink-0">
+                                <div class="text-sm text-gray-600">${count}只新高</div>
+                                <div class="text-xs text-gray-400 mt-1">均涨${Number(sector.avg_change_pct || 0).toFixed(1)}%</div>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-4">
-                            <span class="text-sm text-gray-600">${count}只新高 · 均涨${Number(sector.avg_change_pct || 0).toFixed(1)}%</span>
-                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                        <div class="mt-3 flex items-center gap-3">
+                            <div class="flex-1 min-w-0 bg-gray-200 rounded-full h-2 overflow-hidden">
                                 <div class="${color.bg} h-2 rounded-full progress-bar" style="width: ${width}%"></div>
                             </div>
-                            <span class="text-sm font-medium text-stock-up w-12 text-right">${score}</span>
+                            <span class="text-sm font-medium text-stock-up w-12 text-right shrink-0">${score}</span>
                         </div>
                     </div>
                 `;

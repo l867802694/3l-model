@@ -149,12 +149,6 @@
                         <p class="text-sm text-gray-500">板块动量排名与强势板块追踪 | 数据日期: <span id="tradeDate">-</span></p>
                     </div>
                 </div>
-                <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:bg-white">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                    </svg>
-                    返回总览
-                </a>
                 <!-- 统一日期选择器 -->
                 <div class="date-selector">
                     <label for="dateSelect">选择日期:</label>
@@ -237,6 +231,7 @@
                                 <th class="px-6 py-3 font-medium">排名</th>
                                 <th class="px-6 py-3 font-medium">板块名称</th>
                                 <th class="px-6 py-3 font-medium">动量分值</th>
+                                <th class="px-6 py-3 font-medium">较前一日</th>
                                 <th class="px-6 py-3 font-medium">持续性</th>
                                 <th class="px-6 py-3 font-medium">强股覆盖</th>
                                 <th class="px-6 py-3 font-medium">平均涨幅</th>
@@ -707,6 +702,10 @@
                 const roleClass = getSectorToneClass(item);
                 const coverageText = `${item.listed_count}/${item.total_count} | ${item.listed_ratio}%`;
                 const continuation = stability ? `${stability.label} · ${stability.note}` : '今日活跃 · 等更多历史验证';
+                const rankChange = Number(item.rank_change || 0);
+                const rankChangeClass = rankChange > 0 ? 'text-stock-up' : rankChange < 0 ? 'text-stock-down' : 'text-stock-neutral';
+                const rankChangeText = rankChange > 0 ? `↑ ${rankChange}` : rankChange < 0 ? `↓ ${Math.abs(rankChange)}` : '—';
+                const rankChangeHint = rankChange > 0 ? '名次上升' : rankChange < 0 ? '名次下降' : '名次持平';
                 
                 return `
                     <tr class="table-row" onclick="openModal('${item.sector_name}')">
@@ -716,6 +715,10 @@
                             <div class="text-xs text-gray-400 mt-1">${role}</div>
                         </td>
                         <td class="px-6 py-4 font-bold text-stock-up">${item.momentum_score.toFixed(2)}</td>
+                        <td class="px-6 py-4">
+                            <div class="text-sm font-medium ${rankChangeClass}">${rankChangeText}</div>
+                            <div class="text-xs text-gray-500 mt-1">${rankChangeHint}</div>
+                        </td>
                         <td class="px-6 py-4">
                             <div class="text-sm font-medium text-gray-800">${stability?.label || '今日活跃'}</div>
                             <div class="text-xs text-gray-500 mt-1">${stability?.note || '需要更多历史验证'}</div>

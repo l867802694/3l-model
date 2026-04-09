@@ -454,5 +454,25 @@
         }
       ]
     }
-  ]
+  ],
+  "market_stats": {
+    "new_high_count": 18,
+    "new_low_count": 0,
+    "net_new_high": 18,
+    "new_high_ratio": 0.0,
+    "new_low_ratio": 0.0,
+    "net_new_high_ratio": 0.0,
+    "new_high_low_ratio": 18.0,
+    "avg_5d": 18.6,
+    "avg_5d_net": 18.6,
+    "avg_5d_change_pct": -3.2,
+    "trend_days": 5,
+    "positive_days_5d": 5,
+    "total_universe": 0,
+    "market_status": "趋势谨慎",
+    "market_signal": "趋势谨慎",
+    "market_status_desc": "新高不足或新低压制明显，先控制节奏，少做追涨。",
+    "strength_score": 22,
+    "status_color_class": "text-gray-500"
+  }
 }

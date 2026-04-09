@@ -250,27 +250,51 @@
 
             <!-- 新高个股列表 -->
             <div class="bg-white rounded-xl shadow-card border border-gray-100 overflow-hidden">
-                <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
-                    <h3 class="text-lg font-semibold text-gray-900">新高个股列表</h3>
-                    <div class="flex gap-2">
-                        <button onclick="filterStocks('all')" id="stockFilterAll" class="px-3 py-1.5 text-xs bg-red-50 text-red-600 rounded-full font-medium">全部</button>
-                        <button onclick="filterStocks('main')" id="stockFilterMain" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">主板</button>
-                        <button onclick="filterStocks('cyb')" id="stockFilterCyb" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">创业板</button>
-                        <button onclick="filterStocks('kcb')" id="stockFilterKcb" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">科创板</button>
+                <div class="px-6 py-4 border-b border-gray-200 flex flex-col gap-4">
+                    <div class="flex items-center justify-between gap-4">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">新高个股列表</h3>
+                            <p id="stockListSummary" class="text-xs text-gray-500 mt-1">-</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="filterStocks('all')" id="stockFilterAll" class="px-3 py-1.5 text-xs bg-red-50 text-red-600 rounded-full font-medium">全部</button>
+                            <button onclick="filterStocks('main')" id="stockFilterMain" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">主板</button>
+                            <button onclick="filterStocks('cyb')" id="stockFilterCyb" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">创业板</button>
+                            <button onclick="filterStocks('kcb')" id="stockFilterKcb" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">科创板</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="filterQuickStocks('all')" id="quickFilterAll" class="px-3 py-1.5 text-xs bg-gray-900 text-white rounded-full font-medium">全部信号</button>
+                            <button onclick="filterQuickStocks('strong')" id="quickFilterStrong" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">强势突破</button>
+                            <button onclick="filterQuickStocks('consecutive')" id="quickFilterConsecutive" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">连续新高</button>
+                            <button onclick="filterQuickStocks('active')" id="quickFilterActive" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">高成交额</button>
+                            <button onclick="filterQuickStocks('focus')" id="quickFilterFocus" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">优先关注</button>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <label for="stockSort" class="text-xs text-gray-500">排序</label>
+                            <select id="stockSort" onchange="setStockSort(this.value)" class="px-3 py-2 text-xs border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-red-100 focus:border-red-300">
+                                <option value="focus">综合优先级</option>
+                                <option value="change">按当日涨幅</option>
+                                <option value="consecutive">按连新高天数</option>
+                                <option value="turnover">按成交额</option>
+                                <option value="institution">按关注度</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm text-left">
                         <thead class="bg-gray-50 text-gray-700">
                             <tr>
-                                <th class="px-6 py-3 font-medium">代码</th>
-                                <th class="px-6 py-3 font-medium">名称</th>
-                                <th class="px-6 py-3 font-medium">行业</th>
+                                <th class="px-6 py-3 font-medium">股票</th>
+                                <th class="px-6 py-3 font-medium">板块</th>
+                                <th class="px-6 py-3 font-medium">关注理由</th>
                                 <th class="px-6 py-3 font-medium">最新价</th>
                                 <th class="px-6 py-3 font-medium">涨跌幅</th>
-                                <th class="px-6 py-3 font-medium">突破幅度</th>
                                 <th class="px-6 py-3 font-medium">连新高</th>
                                 <th class="px-6 py-3 font-medium">成交额</th>
+                                <th class="px-6 py-3 font-medium">关注度</th>
                             </tr>
                         </thead>
                         <tbody id="stockTable" class="divide-y divide-gray-100">
@@ -385,6 +409,8 @@
         let currentData = null;
         let currentDate = null;
         let currentStockFilter = 'all';
+        let currentQuickFilter = 'all';
+        let currentSortKey = 'focus';
         let allStocks = []; // 展平后的所有股票列表
         let availableDates = []; // 可用日期列表（有数据的日期）
 
@@ -609,6 +635,99 @@
             return { title, body, action };
         }
 
+        function formatTurnoverYi(turnoverWan) {
+            const turnover = Number(turnoverWan) || 0;
+            return turnover / 10000;
+        }
+
+        function getFocusScore(stock) {
+            const change = Number(stock.change_pct || stock.change || stock.pct_change || 0);
+            const breakPct = Number(stock.break_through || stock.break_pct || stock.break_through_pct || 0);
+            const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || stock.days || 1);
+            const turnoverYi = formatTurnoverYi(stock.turnover || stock.amount || 0);
+            const institution = Number(stock.institution_score || 0);
+            return change * 0.45 + breakPct * 0.35 + consecutive * 2 + Math.min(turnoverYi, 80) * 0.08 + institution * 1.4;
+        }
+
+        function getStockReasonTags(stock) {
+            const change = Number(stock.change_pct || stock.change || stock.pct_change || 0);
+            const breakPct = Number(stock.break_through || stock.break_pct || stock.break_through_pct || 0);
+            const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || stock.days || 1);
+            const turnoverYi = formatTurnoverYi(stock.turnover || stock.amount || 0);
+            const institution = Number(stock.institution_score || 0);
+            const tags = [];
+
+            if (change >= 9.8) tags.push('涨停突破');
+            else if (change >= 5) tags.push('强势上攻');
+
+            if (consecutive >= 3) tags.push(`${consecutive}连新高`);
+            else if (consecutive >= 2) tags.push('连续新高');
+
+            if (breakPct >= 1) tags.push(`站上前高${breakPct.toFixed(1)}%`);
+            if (turnoverYi >= 20) tags.push(`成交${turnoverYi.toFixed(1)}亿`);
+            if (institution >= 3) tags.push('资金关注高');
+
+            if (!tags.length) tags.push('新高确认');
+            return tags.slice(0, 3);
+        }
+
+        function applyBoardFilter(stocks) {
+            if (currentStockFilter === 'main') {
+                return stocks.filter(s => {
+                    const code = s.ts_code || s.code || '';
+                    return !code.startsWith('3') && !code.startsWith('688') && !code.startsWith('8') && !code.startsWith('4');
+                });
+            }
+            if (currentStockFilter === 'cyb') {
+                return stocks.filter(s => {
+                    const code = s.ts_code || s.code || '';
+                    return code.startsWith('3');
+                });
+            }
+            if (currentStockFilter === 'kcb') {
+                return stocks.filter(s => {
+                    const code = s.ts_code || s.code || '';
+                    return code.startsWith('688');
+                });
+            }
+            return stocks;
+        }
+
+        function applyQuickFilter(stocks) {
+            if (currentQuickFilter === 'strong') {
+                return stocks.filter(s => Number(s.change_pct || s.change || 0) >= 5 || Number(s.break_through || s.break_pct || 0) >= 1);
+            }
+            if (currentQuickFilter === 'consecutive') {
+                return stocks.filter(s => Number(s.consecutive_new_high_days || s.consecutive_days || 1) >= 2);
+            }
+            if (currentQuickFilter === 'active') {
+                return stocks.filter(s => formatTurnoverYi(s.turnover || s.amount || 0) >= 10);
+            }
+            if (currentQuickFilter === 'focus') {
+                return stocks.filter(s => getFocusScore(s) >= 8);
+            }
+            return stocks;
+        }
+
+        function sortStockList(stocks) {
+            const list = [...stocks];
+            const sorters = {
+                focus: (a, b) => getFocusScore(b) - getFocusScore(a),
+                change: (a, b) => Number(b.change_pct || b.change || 0) - Number(a.change_pct || a.change || 0),
+                consecutive: (a, b) => Number(b.consecutive_new_high_days || b.consecutive_days || 1) - Number(a.consecutive_new_high_days || a.consecutive_days || 1),
+                turnover: (a, b) => Number(b.turnover || b.amount || 0) - Number(a.turnover || a.amount || 0),
+                institution: (a, b) => Number(b.institution_score || 0) - Number(a.institution_score || 0)
+            };
+            return list.sort(sorters[currentSortKey] || sorters.focus);
+        }
+
+        function updateStockListSummary(filteredCount, totalCount) {
+            const boardTextMap = { all: '全市场', main: '主板', cyb: '创业板', kcb: '科创板' };
+            const quickTextMap = { all: '全部信号', strong: '强势突破', consecutive: '连续新高', active: '高成交额', focus: '优先关注' };
+            const sortLabel = document.getElementById('stockSort')?.selectedOptions?.[0]?.text || '综合优先级';
+            document.getElementById('stockListSummary').textContent = `当前显示 ${filteredCount} / ${totalCount} 只 | ${boardTextMap[currentStockFilter]} | ${quickTextMap[currentQuickFilter]} | ${sortLabel}`;
+        }
+
         // 渲染页面
         function renderPage(data) {
             const tradeDate = data.trade_date || currentDate;
@@ -698,49 +817,52 @@
             const tbody = document.getElementById('stockTable');
             
             if (!stocks || stocks.length === 0) {
+                updateStockListSummary(0, 0);
                 tbody.innerHTML = '<tr><td colspan="8" class="px-6 py-8 text-center text-gray-500">暂无个股数据</td></tr>';
                 return;
             }
-            
-            // 应用筛选
-            let filteredStocks = stocks;
-            if (currentStockFilter === 'main') {
-                filteredStocks = stocks.filter(s => {
-                    const code = s.ts_code || s.code || '';
-                    return !code.startsWith('3') && !code.startsWith('688') && !code.startsWith('8') && !code.startsWith('4');
-                });
-            } else if (currentStockFilter === 'cyb') {
-                filteredStocks = stocks.filter(s => {
-                    const code = s.ts_code || s.code || '';
-                    return code.startsWith('3');
-                });
-            } else if (currentStockFilter === 'kcb') {
-                filteredStocks = stocks.filter(s => {
-                    const code = s.ts_code || s.code || '';
-                    return code.startsWith('688');
-                });
-            }
-            
+
+            const boardFiltered = applyBoardFilter(stocks);
+            const quickFiltered = applyQuickFilter(boardFiltered);
+            const filteredStocks = sortStockList(quickFiltered);
+            updateStockListSummary(filteredStocks.length, stocks.length);
+
             tbody.innerHTML = filteredStocks.slice(0, 50).map(stock => {
                 // 兼容多种可能的字段名
                 const change = stock.change_pct || stock.change || stock.pct_change || 0;
                 const breakPct = stock.break_through || stock.break_pct || stock.break_through_pct || 0;
                 const consecutive = stock.consecutive_new_high_days || stock.consecutive_days || stock.days || 1;
                 const price = stock.close || stock.price || stock.current_close || 0;
-                const high250 = stock.high_250 || stock.high_250d || price;
-                const turnover = stock.turnover || stock.amount || '0亿';
+                const turnoverYi = formatTurnoverYi(stock.turnover || stock.amount || 0);
                 const sector = stock.sector || stock.industry || '-';
+                const institution = Number(stock.institution_score || 0).toFixed(1);
+                const tags = getStockReasonTags(stock);
                 
                 return `
                     <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-mono text-gray-600">${stock.ts_code || stock.code || '-'}</td>
-                        <td class="px-6 py-4 font-medium text-gray-900">${stock.name}</td>
-                        <td class="px-6 py-4">${sector}</td>
+                        <td class="px-6 py-4">
+                            <div class="font-medium text-gray-900">${stock.name}</div>
+                            <div class="font-mono text-xs text-gray-500 mt-1">${stock.ts_code || stock.code || '-'}</div>
+                        </td>
+                        <td class="px-6 py-4">
+                            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs bg-gray-100 text-gray-700">${sector}</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="flex flex-wrap gap-2">
+                                ${tags.map(tag => `<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs bg-red-50 text-red-700">${tag}</span>`).join('')}
+                            </div>
+                        </td>
                         <td class="px-6 py-4 font-medium">¥${typeof price === 'number' ? price.toFixed(2) : price}</td>
                         <td class="px-6 py-4 ${change >= 0 ? 'text-stock-up' : 'text-stock-down'}">${change >= 0 ? '+' : ''}${typeof change === 'number' ? change.toFixed(2) : change}%</td>
-                        <td class="px-6 py-4 ${breakPct >= 0 ? 'text-stock-up' : 'text-stock-down'} font-medium">${breakPct >= 0 ? '+' : ''}${typeof breakPct === 'number' ? breakPct.toFixed(2) : breakPct}%</td>
-                        <td class="px-6 py-4"><span class="px-2 py-1 bg-red-50 text-red-600 rounded text-xs">${consecutive}天</span></td>
-                        <td class="px-6 py-4 text-gray-600">${typeof turnover === 'number' ? turnover.toFixed(1) + '亿' : turnover}</td>
+                        <td class="px-6 py-4">
+                            <div class="inline-flex items-center px-2 py-1 bg-red-50 text-red-600 rounded text-xs">${consecutive}天</div>
+                            <div class="text-xs ${breakPct >= 0 ? 'text-stock-up' : 'text-stock-down'} mt-1">${breakPct >= 0 ? '+' : ''}${typeof breakPct === 'number' ? breakPct.toFixed(2) : breakPct}%</div>
+                        </td>
+                        <td class="px-6 py-4 text-gray-600">${turnoverYi.toFixed(2)}亿</td>
+                        <td class="px-6 py-4">
+                            <div class="font-medium text-gray-800">${institution}</div>
+                            <div class="text-xs text-gray-400 mt-1">机构代理分</div>
+                        </td>
                     </tr>
                 `;
             }).join('');
@@ -767,6 +889,33 @@
                 }
             });
             
+            renderStocks(allStocks);
+        }
+
+        function filterQuickStocks(type) {
+            currentQuickFilter = type;
+            const buttons = {
+                all: 'quickFilterAll',
+                strong: 'quickFilterStrong',
+                consecutive: 'quickFilterConsecutive',
+                active: 'quickFilterActive',
+                focus: 'quickFilterFocus'
+            };
+
+            Object.keys(buttons).forEach(key => {
+                const btn = document.getElementById(buttons[key]);
+                if (key === type) {
+                    btn.className = 'px-3 py-1.5 text-xs bg-gray-900 text-white rounded-full font-medium';
+                } else {
+                    btn.className = 'px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200';
+                }
+            });
+
+            renderStocks(allStocks);
+        }
+
+        function setStockSort(value) {
+            currentSortKey = value;
             renderStocks(allStocks);
         }
 

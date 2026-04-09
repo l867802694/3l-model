@@ -3,201 +3,739 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3L模型 - A股股票分析系统</title>
+    <title>股海雷达 - 总览</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%);
+        :root {
+            --ink: #111827;
+            --muted: #6b7280;
+            --paper: #fffaf3;
+            --line: rgba(17, 24, 39, 0.08);
+            --accent: #b91c1c;
+            --accent-soft: rgba(185, 28, 28, 0.08);
+            --gold: #c27c2c;
+            --forest: #166534;
+            --shadow-xl: 0 20px 55px rgba(17, 24, 39, 0.08);
         }
-        .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 40px rgba(220, 38, 38, 0.2);
+
+        body {
+            background:
+                radial-gradient(circle at top left, rgba(185, 28, 28, 0.08), transparent 35%),
+                radial-gradient(circle at top right, rgba(194, 124, 44, 0.12), transparent 28%),
+                linear-gradient(180deg, #fffdf8 0%, #f8f3ea 100%);
+            color: var(--ink);
+        }
+
+        .shell {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .mesh-card {
+            background:
+                linear-gradient(140deg, rgba(255, 255, 255, 0.96), rgba(255, 248, 240, 0.88)),
+                radial-gradient(circle at top right, rgba(185, 28, 28, 0.08), transparent 30%);
+        }
+
+        .signal-card {
+            background:
+                linear-gradient(135deg, rgba(127, 29, 29, 0.98), rgba(185, 28, 28, 0.94)),
+                radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 28%);
+            color: white;
+        }
+
+        .sector-card:hover,
+        .opportunity-row:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 36px rgba(127, 29, 29, 0.12);
+        }
+
+        .loading {
+            animation: pulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.45; }
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .mini-bar {
+            position: relative;
+            overflow: hidden;
+            border-radius: 9999px;
+            background: rgba(17, 24, 39, 0.08);
+        }
+
+        .mini-bar > span {
+            display: block;
+            height: 100%;
+            border-radius: 9999px;
+            background: linear-gradient(90deg, #f97316, #dc2626);
+        }
+
+        .date-selector select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.65rem center;
+            background-repeat: no-repeat;
+            background-size: 1.2rem 1.2rem;
         }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
-    <!-- Hero Section -->
-    <div class="gradient-bg text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="text-center">
-                <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full mb-6">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                    </svg>
-                    <span class="text-sm font-medium">实时更新 | 真实数据</span>
-                </div>
-                
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                    3L 模型
-                </h1>
-                <p class="text-xl md:text-2xl text-white/90 mb-4">
-                    A股股票分析系统
-                </p>
-                <p class="text-lg text-white/70 max-w-2xl mx-auto">
-                    基于板块动量与一年新高的双模型股票分析工具，
-                    助您追踪市场热点，发现强势股
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <!-- Feature Cards -->
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-            <!-- 动量股池 -->
-            <a href="momentum.html" class="block bg-white rounded-2xl shadow-lg overflow-hidden card-hover transition-all duration-300">
-                <div class="p-8">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="p-3 bg-red-50 rounded-xl">
-                            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h2 class="text-2xl font-bold text-gray-900">动量股池</h2>
-                            <p class="text-gray-500">板块动量排名</p>
-                        </div>
-                    </div>
-                    
-                    <p class="text-gray-600 mb-6">
-                        基于20日涨幅筛选强势股，按申万2021二级行业统计板块动量，
-                        实时追踪市场热点板块
-                    </p>
-                    
-                    <div class="flex items-center gap-2 text-red-600 font-medium">
-                        <span>查看详情</span>
+<body class="min-h-screen">
+    <nav class="sticky top-0 z-50 border-b border-white/60 bg-white/70 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="h-16 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-2xl bg-gradient-to-br from-red-700 via-red-600 to-orange-500 flex items-center justify-center text-white shadow-lg">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 px-8 py-4">
-                    <div class="flex items-center gap-6 text-sm text-gray-600">
-                        <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>实时数据</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>板块排名</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>个股详情</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <!-- 一年新高 -->
-            <a href="newhigh.html" class="block bg-white rounded-2xl shadow-lg overflow-hidden card-hover transition-all duration-300">
-                <div class="p-8">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="p-3 bg-red-50 rounded-xl">
-                            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h2 class="text-2xl font-bold text-gray-900">一年新高</h2>
-                            <p class="text-gray-500">强势股追踪</p>
-                        </div>
-                    </div>
-                    
-                    <p class="text-gray-600 mb-6">
-                        统计突破250日最高价的个股，分析板块分布，
-                        发现持续创出新高的强势股
-                    </p>
-                    
-                    <div class="flex items-center gap-2 text-red-600 font-medium">
-                        <span>查看详情</span>
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 px-8 py-4">
-                    <div class="flex items-center gap-6 text-sm text-gray-600">
-                        <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>250日新高</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>板块分布</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>市场强度</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <!-- Features -->
-        <div class="bg-white rounded-2xl shadow-lg p-8">
-            <h3 class="text-xl font-bold text-gray-900 mb-6">系统特性</h3>
-            
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="flex gap-4">
-                    <div class="p-3 bg-blue-50 rounded-lg h-fit">
-                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 17l6-6 4 4 6-8"></path>
                         </svg>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-gray-900 mb-2">真实数据</h4>
-                        <p class="text-sm text-gray-600">使用 BaoStock 免费数据源获取真实行情数据，确保分析结果可持续更新</p>
+                        <p class="text-[11px] uppercase tracking-[0.25em] text-gray-400">Trend Radar</p>
+                        <p class="text-lg font-semibold text-gray-900">股海雷达</p>
                     </div>
                 </div>
-
-                <div class="flex gap-4">
-                    <div class="p-3 bg-green-50 rounded-lg h-fit">
-                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-2">自动更新</h4>
-                        <p class="text-sm text-gray-600">每天下午5点自动更新数据，自动跳过周末和节假日</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4">
-                    <div class="p-3 bg-purple-50 rounded-lg h-fit">
-                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-2">专业分析</h4>
-                        <p class="text-sm text-gray-600">基于申万2021二级行业，提供板块动量排名和趋势分析</p>
-                    </div>
+                <div class="flex items-center gap-1 text-sm">
+                    <button class="px-4 py-2 rounded-full bg-red-50 text-red-700 font-semibold">总览</button>
+                    <a href="momentum.html" class="px-4 py-2 rounded-full text-gray-600 hover:bg-gray-100">动量股池</a>
+                    <a href="newhigh.html" class="px-4 py-2 rounded-full text-gray-600 hover:bg-gray-100">一年新高</a>
                 </div>
             </div>
         </div>
+    </nav>
 
-        <!-- Footer -->
-        <div class="mt-12 text-center text-gray-500 text-sm">
-            <p>3L 模型 - A股股票分析系统</p>
-            <p class="mt-2">数据仅供参考，不构成投资建议</p>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <section class="shell rounded-[2rem] p-6 sm:p-8 mb-8">
+            <div class="flex flex-col xl:flex-row xl:items-end xl:justify-between gap-6">
+                <div class="max-w-3xl">
+                    <p class="text-xs uppercase tracking-[0.35em] text-red-700/80 font-semibold">大势 -> 板块 -> 机会</p>
+                    <h1 class="mt-3 text-4xl sm:text-5xl font-semibold tracking-tight text-gray-950">先判断能不能做，再决定去哪里做。</h1>
+                    <p class="mt-4 text-base sm:text-lg text-gray-600 leading-8">
+                        这页把你的三步决策顺序放在一个屏幕里：先看趋势环境，再看当前主线板块，最后只给出强板块里的优先机会，不再让你在多个页面之间来回切。
+                    </p>
+                </div>
+                <div class="date-selector flex items-center gap-3">
+                    <label for="dateSelect" class="text-sm font-medium text-gray-500">选择日期</label>
+                    <select id="dateSelect" onchange="onDateChange(this.value)" disabled class="rounded-2xl border border-gray-200 bg-white px-4 py-3 pr-10 text-sm font-medium text-gray-700 shadow-sm focus:outline-none focus:ring-4 focus:ring-red-100 focus:border-red-300">
+                        <option value="">加载中...</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <div id="loadingState" class="text-center py-20">
+            <div class="inline-block loading rounded-full h-10 w-10 border-b-2 border-red-700"></div>
+            <p class="mt-4 text-gray-500">正在组合趋势环境、板块动量和机会个股...</p>
         </div>
-    </div>
+
+        <div id="errorState" class="hidden shell rounded-[2rem] p-10 text-center">
+            <div class="mx-auto mb-4 h-14 w-14 rounded-full bg-red-50 text-red-600 flex items-center justify-center">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+            </div>
+            <p class="text-lg font-semibold text-gray-900">总览加载失败</p>
+            <p id="errorMessage" class="mt-2 text-sm text-gray-500"></p>
+            <button onclick="loadDashboard()" class="mt-5 rounded-full bg-red-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-red-800">重新加载</button>
+        </div>
+
+        <div id="content" class="hidden space-y-8">
+            <section class="grid grid-cols-1 xl:grid-cols-[1.25fr_0.95fr] gap-6">
+                <div class="signal-card rounded-[2rem] p-7 sm:p-8">
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-5">
+                        <div class="max-w-2xl">
+                            <p class="text-xs uppercase tracking-[0.35em] text-white/70 font-semibold">今日结论</p>
+                            <h2 id="headline" class="mt-4 text-3xl sm:text-4xl font-semibold leading-tight">-</h2>
+                            <p id="headlineSummary" class="mt-4 text-base text-white/84 leading-8">-</p>
+                        </div>
+                        <div class="rounded-3xl bg-white/12 px-5 py-4 min-w-[220px]">
+                            <p class="text-xs uppercase tracking-[0.28em] text-white/60 font-semibold">环境状态</p>
+                            <p id="marketStatus" class="mt-3 text-2xl font-semibold">-</p>
+                            <p id="marketStatusDesc" class="mt-2 text-sm text-white/75">-</p>
+                            <div class="mt-5 h-2.5 mini-bar bg-white/20">
+                                <span id="strengthBar" style="width: 0%"></span>
+                            </div>
+                            <p class="mt-2 text-xs text-white/70">趋势环境评分 <span id="strengthScore">-</span>/100</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="rounded-3xl bg-white/12 p-4">
+                            <p class="text-xs uppercase tracking-[0.2em] text-white/60">创250日新高</p>
+                            <p id="newHighCount" class="mt-2 text-3xl font-semibold">-</p>
+                            <p id="newHighRatio" class="mt-2 text-xs text-white/70">-</p>
+                        </div>
+                        <div class="rounded-3xl bg-white/12 p-4">
+                            <p class="text-xs uppercase tracking-[0.2em] text-white/60">净新高</p>
+                            <p id="netNewHigh" class="mt-2 text-3xl font-semibold">-</p>
+                            <p id="trendDays" class="mt-2 text-xs text-white/70">-</p>
+                        </div>
+                        <div class="rounded-3xl bg-white/12 p-4">
+                            <p class="text-xs uppercase tracking-[0.2em] text-white/60">主线板块</p>
+                            <p id="mainLineCount" class="mt-2 text-3xl font-semibold">-</p>
+                            <p id="warningCount" class="mt-2 text-xs text-white/70">-</p>
+                        </div>
+                        <div class="rounded-3xl bg-white/12 p-4">
+                            <p class="text-xs uppercase tracking-[0.2em] text-white/60">优先机会</p>
+                            <p id="opportunityCount" class="mt-2 text-3xl font-semibold">-</p>
+                            <p id="opportunityHint" class="mt-2 text-xs text-white/70">-</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shell mesh-card rounded-[2rem] p-6 sm:p-7">
+                    <div class="flex items-center justify-between gap-4">
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">执行顺序</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">今天怎么用这套模型</h2>
+                        </div>
+                        <span id="tradeDateBadge" class="status-pill bg-gray-900 text-white">-</span>
+                    </div>
+                    <div class="mt-6 space-y-4">
+                        <div class="rounded-3xl bg-white/80 border border-white p-4">
+                            <p class="text-xs uppercase tracking-[0.2em] text-gray-400">第一步</p>
+                            <p id="step1" class="mt-2 text-sm leading-7 text-gray-700">-</p>
+                        </div>
+                        <div class="rounded-3xl bg-white/80 border border-white p-4">
+                            <p class="text-xs uppercase tracking-[0.2em] text-gray-400">第二步</p>
+                            <p id="step2" class="mt-2 text-sm leading-7 text-gray-700">-</p>
+                        </div>
+                        <div class="rounded-3xl bg-white/80 border border-white p-4">
+                            <p class="text-xs uppercase tracking-[0.2em] text-gray-400">第三步</p>
+                            <p id="step3" class="mt-2 text-sm leading-7 text-gray-700">-</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 rounded-3xl bg-amber-50 border border-amber-100 p-4">
+                        <p class="text-xs uppercase tracking-[0.2em] text-amber-700 font-semibold">今日提醒</p>
+                        <p id="riskHint" class="mt-2 text-sm leading-7 text-amber-900">-</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 xl:grid-cols-[1.15fr_0.85fr] gap-6">
+                <div class="shell rounded-[2rem] p-6 sm:p-7">
+                    <div class="flex items-center justify-between gap-4 mb-6">
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">主线板块</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">今天先盯这几个方向</h2>
+                        </div>
+                        <a href="momentum.html" class="text-sm font-semibold text-red-700 hover:text-red-800">看完整板块榜单</a>
+                    </div>
+                    <div id="sectorGrid" class="grid md:grid-cols-2 gap-4"></div>
+                </div>
+
+                <div class="shell rounded-[2rem] p-6 sm:p-7">
+                    <div class="flex items-center justify-between gap-4 mb-6">
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">优先机会</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">强板块里的新高股</h2>
+                        </div>
+                        <a href="newhigh.html" class="text-sm font-semibold text-red-700 hover:text-red-800">看完整新高列表</a>
+                    </div>
+                    <div id="opportunityList" class="space-y-3"></div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 xl:grid-cols-[1.05fr_0.95fr] gap-6">
+                <div class="shell rounded-[2rem] p-6 sm:p-7">
+                    <div class="flex items-center justify-between gap-4 mb-6">
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">板块热力</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">谁是今天的主攻线</h2>
+                        </div>
+                        <p class="text-xs text-gray-400">连续性 = 最近5个交易日内进入前10的次数</p>
+                    </div>
+                    <div id="sectorHeatmap" class="space-y-3"></div>
+                </div>
+
+                <div class="shell rounded-[2rem] p-6 sm:p-7">
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">理解这页</p>
+                        <h2 class="mt-2 text-2xl font-semibold text-gray-950">这不是热点榜，是趋势决策台</h2>
+                    </div>
+                    <div class="mt-6 space-y-4 text-sm leading-7 text-gray-600">
+                        <div class="rounded-3xl bg-gray-50 p-4">
+                            <p class="font-semibold text-gray-900">1. 先看环境</p>
+                            <p class="mt-2">一年新高决定现在是不是适合优先做趋势。新高多、新低少、净新高持续为正，才说明环境健康。</p>
+                        </div>
+                        <div class="rounded-3xl bg-gray-50 p-4">
+                            <p class="font-semibold text-gray-900">2. 再看主线</p>
+                            <p class="mt-2">动量分值负责找强板块，连续性负责判断这是不是单日脉冲。只有强度和持续性同时在线，板块才值得盯。</p>
+                        </div>
+                        <div class="rounded-3xl bg-gray-50 p-4">
+                            <p class="font-semibold text-gray-900">3. 最后才看个股</p>
+                            <p class="mt-2">机会清单只保留强板块里的新高股，并打上“主线共振、连续趋势、放量确认”等标签，避免从全市场硬挑。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const isFileProtocol = window.location.protocol === 'file:';
+        const isGitHubPages = window.location.hostname.includes('github.io');
+
+        let DATA_BASE;
+        if (isLocalhost && !isFileProtocol) {
+            DATA_BASE = 'http://localhost:8000';
+        } else if (isGitHubPages) {
+            const pathParts = window.location.pathname.split('/');
+            if (pathParts[pathParts.length - 1].endsWith('.html')) {
+                pathParts.pop();
+            }
+            const basePath = pathParts.join('/');
+            DATA_BASE = basePath + (basePath.endsWith('/') ? 'data' : '/data');
+        } else {
+            DATA_BASE = './data';
+        }
+
+        let availableDates = [];
+        let currentDate = null;
+
+        function formatDate(dateStr) {
+            if (!dateStr) return '';
+            if (dateStr.length === 8) {
+                return `${dateStr.slice(0, 4)}-${dateStr.slice(4, 6)}-${dateStr.slice(6, 8)}`;
+            }
+            return dateStr;
+        }
+
+        function formatPercent(value, digits = 2) {
+            const num = Number(value || 0);
+            return `${num >= 0 ? '+' : ''}${num.toFixed(digits)}%`;
+        }
+
+        function formatYi(valueWan) {
+            return (Number(valueWan || 0) / 10000).toFixed(1);
+        }
+
+        async function fetchJson(url) {
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: { 'Accept': 'application/json' }
+            });
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            return response.json();
+        }
+
+        async function fetchAvailableDates() {
+            const cacheBuster = `?_=${Date.now()}`;
+            if (isLocalhost && !isFileProtocol) {
+                const result = await fetchJson(`${DATA_BASE}/api/momentum/dates${cacheBuster}`);
+                return (result.dates || []).sort((a, b) => b.localeCompare(a));
+            }
+            const result = await fetchJson(`${DATA_BASE}/dates.json${cacheBuster}`);
+            return (result.dates || []).sort((a, b) => b.localeCompare(a));
+        }
+
+        function getDataUrl(kind, date) {
+            if (isLocalhost && !isFileProtocol) {
+                return `${DATA_BASE}/api/${kind}/${date}`;
+            }
+            if (isGitHubPages) {
+                return `${DATA_BASE}/${date}/${kind}.json`;
+            }
+            return `./data/${date}/${kind}.json`;
+        }
+
+        async function initDateSelector() {
+            const select = document.getElementById('dateSelect');
+            select.disabled = true;
+            select.innerHTML = '<option value="">加载中...</option>';
+            availableDates = await fetchAvailableDates();
+            select.innerHTML = '';
+
+            if (!availableDates.length) {
+                select.innerHTML = '<option value="">无可用日期</option>';
+                return;
+            }
+
+            availableDates.forEach((date) => {
+                const option = document.createElement('option');
+                option.value = date;
+                option.textContent = formatDate(date);
+                select.appendChild(option);
+            });
+
+            currentDate = availableDates[0];
+            select.value = currentDate;
+            select.disabled = false;
+        }
+
+        function onDateChange(date) {
+            if (!date || date === currentDate) return;
+            currentDate = date;
+            loadDashboard();
+        }
+
+        function getHistoryDates(date, count = 5) {
+            const index = availableDates.indexOf(date);
+            if (index === -1) return [];
+            return availableDates.slice(index, index + count);
+        }
+
+        function getStatusTone(status) {
+            if (status === '趋势活跃') {
+                return {
+                    pill: 'bg-red-50 text-red-700',
+                    action: '环境很顺，可以积极聚焦主线，但依然只做最强方向里的确认型机会。',
+                    risk: '最容易犯的错不是没看到机会，而是看到主线就一路追价。保持“强板块 + 形态确认”的纪律。'
+                };
+            }
+            if (status === '趋势可做') {
+                return {
+                    pill: 'bg-amber-50 text-amber-700',
+                    action: '环境是正的，但不是全面高潮。更适合做主线板块里的回踩确认、放量突破和连续新高。',
+                    risk: '别把全部新高股都当成机会。优先做板块共振，其次看成交和连续性。'
+                };
+            }
+            if (status === '趋势观察') {
+                return {
+                    pill: 'bg-slate-100 text-slate-700',
+                    action: '环境偏中性，先观察板块是否持续扩散，再决定是否提高出手频率。',
+                    risk: '这时候最容易被单日脉冲误导。板块如果没有持续性，就不要因为榜单漂亮就追。'
+                };
+            }
+            return {
+                pill: 'bg-gray-100 text-gray-700',
+                action: '环境偏谨慎，以观察为主，只记录最强方向，不要把弱环境下的局部强势理解为全面趋势。',
+                risk: '弱环境里，新高股更容易变成孤立表演。先降频，等净新高重新回暖。'
+            };
+        }
+
+        function buildSectorStabilityMap(historyPayloads) {
+            const map = new Map();
+            historyPayloads.forEach((payload, snapshotIndex) => {
+                (payload.data || []).forEach((sector) => {
+                    const prev = map.get(sector.sector_name) || {
+                        top10Days: 0,
+                        mainlineDays: 0,
+                        warningDays: 0,
+                        ranks: [],
+                        scores: []
+                    };
+                    if ((sector.rank || 99) <= 10) prev.top10Days += 1;
+                    if (sector.is_main_line) prev.mainlineDays += 1;
+                    if (sector.is_warning) prev.warningDays += 1;
+                    prev.ranks.push({ snapshotIndex, rank: sector.rank || 99 });
+                    prev.scores.push(sector.momentum_score || 0);
+                    map.set(sector.sector_name, prev);
+                });
+            });
+
+            const result = new Map();
+            map.forEach((value, key) => {
+                const oldestRank = value.ranks[value.ranks.length - 1]?.rank || value.ranks[0]?.rank || 99;
+                const newestRank = value.ranks[0]?.rank || 99;
+                const rankChange = oldestRank - newestRank;
+                const avgScore = value.scores.reduce((sum, score) => sum + score, 0) / value.scores.length;
+                let label = '今日活跃';
+                let note = `最近5日进入前十 ${value.top10Days} 次`;
+
+                if (value.top10Days >= 4) {
+                    label = '连续强势';
+                    note = `最近5日有 ${value.top10Days} 天在前十`;
+                } else if (rankChange >= 5) {
+                    label = '趋势升温';
+                    note = `较5日前提升 ${rankChange} 名`;
+                } else if (value.warningDays >= 2) {
+                    label = '高热主线';
+                    note = `最近5日有 ${value.warningDays} 天处于预警区`;
+                } else if (value.mainlineDays >= 3) {
+                    label = '持续主线';
+                    note = `最近5日有 ${value.mainlineDays} 天属于主线`;
+                }
+
+                result.set(key, {
+                    ...value,
+                    label,
+                    note,
+                    rankChange,
+                    avgScore: Number(avgScore.toFixed(2))
+                });
+            });
+            return result;
+        }
+
+        function buildOpportunityScore(stock, sector) {
+            const change = Number(stock.change_pct || stock.change || 0);
+            const breakPct = Number(stock.break_pct || stock.break_through || 0);
+            const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || 1);
+            const turnoverYi = Number(formatYi(stock.turnover || stock.amount || 0));
+            const institution = Number(stock.institution_score || 0);
+            const sectorBonus = sector
+                ? (sector.is_warning ? 10 : sector.is_main_line ? 7 : 0) + Math.max(0, 10 - Number(sector.rank || 10))
+                : 0;
+            return change * 0.5 + breakPct * 0.35 + consecutive * 2.2 + Math.min(turnoverYi, 50) * 0.18 + institution * 1.3 + sectorBonus;
+        }
+
+        function buildOpportunityTags(stock, sector, stability) {
+            const tags = [];
+            const change = Number(stock.change_pct || stock.change || 0);
+            const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || 1);
+            const turnoverYi = Number(formatYi(stock.turnover || stock.amount || 0));
+            const institution = Number(stock.institution_score || 0);
+
+            if (sector?.rank <= 5) tags.push('主线共振');
+            else if (sector?.is_main_line) tags.push('板块共振');
+
+            if (stability?.top10Days >= 4) tags.push('持续主线');
+            else if (stability?.rankChange >= 5) tags.push('趋势升温');
+
+            if (consecutive >= 3) tags.push(`${consecutive}连新高`);
+            else if (consecutive >= 2) tags.push('连续趋势');
+
+            if (change >= 9.8) tags.push('涨停突破');
+            else if (change >= 5) tags.push('强势突破');
+
+            if (turnoverYi >= 20) tags.push('放量确认');
+            else if (institution >= 3) tags.push('关注度高');
+
+            if (!tags.length) tags.push('趋势跟踪');
+            return tags.slice(0, 3);
+        }
+
+        function buildOpportunityList(newhighPayload, momentumPayload, sectorStabilityMap) {
+            const sectorMap = new Map((momentumPayload.data || []).map((sector) => [sector.sector_name, sector]));
+            const list = [];
+
+            (newhighPayload.sectors || []).forEach((sectorGroup) => {
+                (sectorGroup.stocks || []).forEach((stock) => {
+                    const sectorName = sectorGroup.sector_name || sectorGroup.name;
+                    const sector = sectorMap.get(sectorName);
+                    const stability = sectorStabilityMap.get(sectorName);
+                    const score = buildOpportunityScore(stock, sector);
+                    list.push({
+                        ...stock,
+                        sector_name: sectorName,
+                        sector,
+                        stability,
+                        opportunity_score: score,
+                        tags: buildOpportunityTags(stock, sector, stability)
+                    });
+                });
+            });
+
+            const preferred = list.filter((stock) => stock.sector?.rank <= 12 || stock.sector?.is_main_line);
+            const source = preferred.length >= 6 ? preferred : list;
+            return source.sort((a, b) => b.opportunity_score - a.opportunity_score);
+        }
+
+        function renderSignalSection(newhighPayload, momentumPayload, opportunities) {
+            const marketStats = newhighPayload.market_stats || {};
+            const status = marketStats.market_status || '趋势观察';
+            const tone = getStatusTone(status);
+            const topSector = (momentumPayload.data || [])[0];
+            const headlineSector = topSector ? `主攻方向先看 ${topSector.sector_name}` : '先看环境，再找主线';
+            const summary = `今天是 ${status}。一年新高显示趋势环境 ${marketStats.market_status_desc || '偏结构性'}，动量榜最强的是 ${topSector?.sector_name || '暂无板块数据'}，优先机会里已经只保留强板块中的新高股。`;
+
+            document.getElementById('headline').textContent = headlineSector;
+            document.getElementById('headlineSummary').textContent = summary;
+            document.getElementById('marketStatus').textContent = status;
+            document.getElementById('marketStatusDesc').textContent = marketStats.market_status_desc || '-';
+            document.getElementById('strengthScore').textContent = marketStats.strength_score || 0;
+            document.getElementById('strengthBar').style.width = `${marketStats.strength_score || 0}%`;
+            document.getElementById('newHighCount').textContent = marketStats.new_high_count || 0;
+            document.getElementById('newHighRatio').textContent = `占全市场 ${(marketStats.new_high_ratio || 0).toFixed(2)}%`;
+            document.getElementById('netNewHigh').textContent = marketStats.net_new_high ?? 0;
+            document.getElementById('trendDays').textContent = `连续 ${marketStats.trend_days || 0} 天净新高为正`;
+            document.getElementById('mainLineCount').textContent = (momentumPayload.data || []).filter((item) => item.is_main_line).length;
+            document.getElementById('warningCount').textContent = `预警板块 ${(momentumPayload.data || []).filter((item) => item.is_warning).length} 个`;
+            document.getElementById('opportunityCount').textContent = opportunities.length;
+            document.getElementById('opportunityHint').textContent = opportunities.length ? `${opportunities[0].sector_name} 方向最值得先看` : '暂无共振机会';
+            document.getElementById('tradeDateBadge').textContent = formatDate(newhighPayload.trade_date || currentDate);
+            document.getElementById('step1').textContent = `先看大势：今天新高 ${marketStats.new_high_count || 0}，新低 ${marketStats.new_low_count || 0}，净新高 ${marketStats.net_new_high || 0}。${tone.action}`;
+            document.getElementById('step2').textContent = `再看板块：优先跟踪动量榜前排、且最近5日持续留在前十的方向。今天前排核心是 ${topSector?.sector_name || '暂无'}。`;
+            document.getElementById('step3').textContent = '最后看个股：只从强板块里的新高股下手，优先“主线共振 + 连续趋势 + 放量确认”的组合。';
+            document.getElementById('riskHint').textContent = tone.risk;
+        }
+
+        function renderSectorGrid(momentumPayload, sectorStabilityMap) {
+            const sectors = (momentumPayload.data || []).slice(0, 6);
+            const grid = document.getElementById('sectorGrid');
+            if (!sectors.length) {
+                grid.innerHTML = '<p class="text-sm text-gray-500">暂无板块数据</p>';
+                return;
+            }
+
+            grid.innerHTML = sectors.map((sector) => {
+                const stability = sectorStabilityMap.get(sector.sector_name);
+                const toneClass = sector.is_warning ? 'bg-red-50 text-red-700' : sector.is_main_line ? 'bg-amber-50 text-amber-700' : 'bg-gray-100 text-gray-700';
+                const rankText = sector.rank_change > 0 ? `较前期上升 ${sector.rank_change} 名` : sector.rank_change < 0 ? `较前期回落 ${Math.abs(sector.rank_change)} 名` : '排名基本稳定';
+                return `
+                    <article class="sector-card transition-all duration-200 rounded-[1.6rem] border border-[var(--line)] bg-white p-5">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <p class="text-xs uppercase tracking-[0.2em] text-gray-400">No.${sector.rank}</p>
+                                <h3 class="mt-2 text-xl font-semibold text-gray-950">${sector.sector_name}</h3>
+                            </div>
+                            <span class="status-pill ${toneClass}">${stability?.label || '今日活跃'}</span>
+                        </div>
+                        <div class="mt-5 grid grid-cols-3 gap-3 text-sm">
+                            <div>
+                                <p class="text-gray-400">动量分值</p>
+                                <p class="mt-1 text-lg font-semibold text-red-700">${sector.momentum_score.toFixed(2)}</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-400">上榜占比</p>
+                                <p class="mt-1 text-lg font-semibold text-gray-900">${sector.listed_ratio}%</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-400">平均涨幅</p>
+                                <p class="mt-1 text-lg font-semibold text-gray-900">${formatPercent(sector.avg_return_20d, 1)}</p>
+                            </div>
+                        </div>
+                        <div class="mt-5 rounded-2xl bg-gray-50 px-4 py-3 text-sm text-gray-600 leading-7">
+                            <p>${stability?.note || '今天进入主线观察区。'}</p>
+                            <p class="mt-1">${rankText}，当前上榜 ${sector.listed_count} / ${sector.total_count} 只。</p>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        function renderOpportunityList(opportunities) {
+            const list = document.getElementById('opportunityList');
+            if (!opportunities.length) {
+                list.innerHTML = '<p class="text-sm text-gray-500">暂无优先机会。</p>';
+                return;
+            }
+
+            list.innerHTML = opportunities.slice(0, 8).map((stock, index) => {
+                const change = Number(stock.change_pct || stock.change || 0);
+                const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || 1);
+                return `
+                    <article class="opportunity-row transition-all duration-200 rounded-[1.4rem] border border-[var(--line)] bg-white p-4">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="h-7 w-7 rounded-full bg-red-50 text-red-700 flex items-center justify-center text-xs font-bold">${index + 1}</span>
+                                    <h3 class="text-base font-semibold text-gray-950">${stock.name}</h3>
+                                    <span class="text-xs font-mono text-gray-400">${stock.code || stock.ts_code || '-'}</span>
+                                </div>
+                                <p class="mt-2 text-sm text-gray-500">${stock.sector_name} · ${consecutive}天连新高 · 成交 ${formatYi(stock.turnover || stock.amount || 0)} 亿</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-lg font-semibold ${change >= 0 ? 'text-red-700' : 'text-green-700'}">${formatPercent(change, 2)}</p>
+                                <p class="mt-1 text-xs text-gray-400">优先级 ${stock.opportunity_score.toFixed(1)}</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            ${stock.tags.map((tag) => `<span class="rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700">${tag}</span>`).join('')}
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        function renderSectorHeatmap(momentumPayload, sectorStabilityMap) {
+            const list = document.getElementById('sectorHeatmap');
+            const sectors = (momentumPayload.data || []).slice(0, 10);
+            if (!sectors.length) {
+                list.innerHTML = '<p class="text-sm text-gray-500">暂无板块热力数据。</p>';
+                return;
+            }
+
+            const maxScore = sectors[0].momentum_score || 1;
+            list.innerHTML = sectors.map((sector) => {
+                const stability = sectorStabilityMap.get(sector.sector_name);
+                const width = Math.max(8, (sector.momentum_score / maxScore) * 100);
+                return `
+                    <div class="rounded-[1.4rem] border border-[var(--line)] bg-white p-4">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                            <div class="min-w-0">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <p class="text-base font-semibold text-gray-950">${sector.rank}. ${sector.sector_name}</p>
+                                    <span class="status-pill ${sector.is_warning ? 'bg-red-50 text-red-700' : sector.is_main_line ? 'bg-amber-50 text-amber-700' : 'bg-gray-100 text-gray-700'}">${stability?.label || '今日活跃'}</span>
+                                </div>
+                                <p class="mt-1 text-sm text-gray-500">${stability?.note || '今天进入关注区'} · 平均涨幅 ${formatPercent(sector.avg_return_20d, 1)} · 上榜 ${sector.listed_count} 只</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xl font-semibold text-red-700">${sector.momentum_score.toFixed(2)}</p>
+                                <p class="text-xs text-gray-400">动量分值</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 h-2.5 mini-bar">
+                            <span style="width: ${width}%"></span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function showLoading() {
+            document.getElementById('loadingState').classList.remove('hidden');
+            document.getElementById('errorState').classList.add('hidden');
+            document.getElementById('content').classList.add('hidden');
+        }
+
+        function showError(message) {
+            document.getElementById('loadingState').classList.add('hidden');
+            document.getElementById('errorState').classList.remove('hidden');
+            document.getElementById('content').classList.add('hidden');
+            document.getElementById('errorMessage').textContent = message;
+        }
+
+        function showContent() {
+            document.getElementById('loadingState').classList.add('hidden');
+            document.getElementById('errorState').classList.add('hidden');
+            document.getElementById('content').classList.remove('hidden');
+        }
+
+        async function loadDashboard() {
+            showLoading();
+            const targetDate = currentDate || availableDates[0];
+
+            try {
+                const [momentumPayload, newhighPayload] = await Promise.all([
+                    fetchJson(getDataUrl('momentum', targetDate)),
+                    fetchJson(getDataUrl('newhigh', targetDate))
+                ]);
+
+                const historyDates = getHistoryDates(targetDate, 5);
+                const historyPayloads = await Promise.all(
+                    historyDates.map((date) => fetchJson(getDataUrl('momentum', date)).catch(() => null))
+                );
+                const validHistory = historyPayloads.filter(Boolean);
+                const sectorStabilityMap = buildSectorStabilityMap(validHistory);
+                const opportunities = buildOpportunityList(newhighPayload, momentumPayload, sectorStabilityMap);
+
+                renderSignalSection(newhighPayload, momentumPayload, opportunities);
+                renderSectorGrid(momentumPayload, sectorStabilityMap);
+                renderOpportunityList(opportunities);
+                renderSectorHeatmap(momentumPayload, sectorStabilityMap);
+                showContent();
+            } catch (error) {
+                console.error('加载总览失败:', error);
+                showError(error.message || '总览加载失败');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                await initDateSelector();
+                await loadDashboard();
+            } catch (error) {
+                showError(error.message || '初始化失败');
+            }
+        });
+    </script>
 </body>
 </html>

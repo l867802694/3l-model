@@ -71,6 +71,12 @@
                 </div>
 
                 <div class="flex items-center gap-1">
+                    <a href="index.html" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9.75L12 4l9 5.75V20a1 1 0 01-1 1h-5.5v-6h-5v6H4a1 1 0 01-1-1V9.75z"></path>
+                        </svg>
+                        总览
+                    </a>
                     <a href="momentum.html" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -413,6 +419,7 @@
         let currentSortKey = 'focus';
         let allStocks = []; // 展平后的所有股票列表
         let availableDates = []; // 可用日期列表（有数据的日期）
+        let momentumSectorMap = new Map();
 
         // 颜色配置
         const colors = [
@@ -580,7 +587,8 @@
                 }
                 
                 currentData = result;
-                
+                await loadMomentumContext(targetDate);
+
                 // 展平股票数据 - 从sectors中提取所有stocks
                 flattenStocks(result);
                 
@@ -599,15 +607,48 @@
                 data.sectors.forEach(sector => {
                     if (sector.stocks && Array.isArray(sector.stocks)) {
                         sector.stocks.forEach(stock => {
+                            const sectorName = sector.sector_name || sector.name || '-';
+                            const momentum = momentumSectorMap.get(sectorName);
                             // 添加行业信息到股票数据
                             allStocks.push({
                                 ...stock,
-                                sector: sector.sector_name || sector.name || '-',
-                                industry: sector.sector_name || sector.name || '-'
+                                sector: sectorName,
+                                industry: sectorName,
+                                sector_rank: momentum?.rank || null,
+                                sector_is_main_line: Boolean(momentum?.is_main_line),
+                                sector_is_warning: Boolean(momentum?.is_warning),
+                                sector_momentum_score: momentum?.momentum_score || null
                             });
                         });
                     }
                 });
+            }
+        }
+
+        async function loadMomentumContext(date) {
+            try {
+                let url;
+                if (isLocalhost && !isFileProtocol) {
+                    url = date ? `${DATA_BASE}/api/momentum/${date}` : `${DATA_BASE}/api/momentum/latest`;
+                } else if (isGitHubPages) {
+                    url = date ? `${DATA_BASE}/${date}/momentum.json` : `${DATA_BASE}/momentum_latest.json`;
+                } else {
+                    url = date ? `./data/${date}/momentum.json` : `./data/momentum_latest.json`;
+                }
+
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (!response.ok) {
+                    momentumSectorMap = new Map();
+                    return;
+                }
+                const payload = await response.json();
+                momentumSectorMap = new Map((payload.data || []).map((item) => [item.sector_name, item]));
+            } catch (error) {
+                console.warn('加载动量上下文失败:', error);
+                momentumSectorMap = new Map();
             }
         }
 
@@ -646,7 +687,9 @@
             const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || stock.days || 1);
             const turnoverYi = formatTurnoverYi(stock.turnover || stock.amount || 0);
             const institution = Number(stock.institution_score || 0);
-            return change * 0.45 + breakPct * 0.35 + consecutive * 2 + Math.min(turnoverYi, 80) * 0.08 + institution * 1.4;
+            const sectorRank = Number(stock.sector_rank || 99);
+            const sectorBonus = stock.sector_is_warning ? 10 : stock.sector_is_main_line ? 6 : 0;
+            return change * 0.45 + breakPct * 0.35 + consecutive * 2 + Math.min(turnoverYi, 80) * 0.08 + institution * 1.4 + Math.max(0, 10 - sectorRank) + sectorBonus;
         }
 
         function getStockReasonTags(stock) {
@@ -656,6 +699,9 @@
             const turnoverYi = formatTurnoverYi(stock.turnover || stock.amount || 0);
             const institution = Number(stock.institution_score || 0);
             const tags = [];
+
+            if (Number(stock.sector_rank || 99) <= 5) tags.push('主线共振');
+            else if (stock.sector_is_main_line) tags.push('板块共振');
 
             if (change >= 9.8) tags.push('涨停突破');
             else if (change >= 5) tags.push('强势上攻');

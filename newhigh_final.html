@@ -96,6 +96,19 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .trend-score-bar {
+            position: relative;
+            overflow: hidden;
+            border-radius: 9999px;
+            background: #E5E7EB;
+            height: 0.45rem;
+        }
+        .trend-score-bar > span {
+            display: block;
+            height: 100%;
+            border-radius: 9999px;
+            transition: width 0.3s ease;
+        }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
@@ -194,7 +207,7 @@
         <!-- 数据内容 -->
         <div id="content" class="hidden">
             <!-- 市场统计卡片 -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 mb-6">
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
                     <div class="hint-wrap">
                         <p class="text-xs font-medium text-gray-500 uppercase">创250日新高家数</p>
@@ -206,12 +219,43 @@
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
                     <div class="hint-wrap">
-                        <p class="text-xs font-medium text-gray-500 uppercase">趋势环境判断</p>
+                        <p class="text-xs font-medium text-gray-500 uppercase">广度趋势</p>
                         <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">先看新高、新低、净新高这些广度，再用指数位置做确认。只有广度和指数一起配合，才更接近可做的大势环境。</div>
+                        <div class="hint-tip">只看新高、新低、净新高、最近5日升温和连续净新高天数，不看指数。它回答的是：趋势股扩散本身强不强。</div>
                     </div>
-                    <p id="marketStatus" class="text-lg font-bold text-yellow-600 mt-1">-</p>
+                    <p id="breadthStatus" class="text-lg font-bold text-yellow-600 mt-1">-</p>
+                    <p id="breadthStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
+                    <div class="trend-score-bar mt-3"><span id="breadthScoreBar" class="bg-amber-500" style="width: 0%"></span></div>
+                    <p class="text-xs text-gray-400 mt-2">广度分 <span id="breadthScore">-</span>/100</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
+                    <div class="hint-wrap">
+                        <p class="text-xs font-medium text-gray-500 uppercase">指数趋势</p>
+                        <button class="hint-icon" type="button">?</button>
+                        <div class="hint-tip">看上证指数、沪深300、创业板指的站位和趋势确认。主要参考收盘是否站上 MA20、MA60，MA20 是否在 MA60 上方，以及 20 日趋势是否为正。</div>
+                    </div>
+                    <p id="indexStatus" class="text-lg font-bold text-gray-700 mt-1">-</p>
+                    <p id="indexStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
+                    <div class="trend-score-bar mt-3"><span id="indexScoreBar" class="bg-slate-700" style="width: 0%"></span></div>
+                    <p class="text-xs text-gray-400 mt-2">指数分 <span id="indexScore">-</span>/100</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
+                    <div class="hint-wrap">
+                        <p class="text-xs font-medium text-gray-500 uppercase">综合趋势</p>
+                        <button class="hint-icon" type="button">?</button>
+                        <div class="hint-tip">综合趋势 = 广度分 75% + 指数分 25%，并且指数只负责确认，不会轻易把局部强行放大成全面强。</div>
+                    </div>
+                    <div class="flex items-center gap-2 mt-1">
+                        <p id="marketStatus" class="text-lg font-bold text-yellow-600 mt-1">-</p>
+                    </div>
                     <p id="marketStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
+                    <div class="flex items-center gap-2 mt-3">
+                        <p id="strengthScore" class="text-2xl font-bold text-stock-up">-</p>
+                        <span class="text-xs text-gray-400">/100</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                        <div id="strengthBar" class="bg-stock-up h-2 rounded-full progress-bar" style="width: 0%"></div>
+                    </div>
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
                     <div class="hint-wrap">
@@ -224,17 +268,12 @@
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
                     <div class="hint-wrap">
-                        <p class="text-xs font-medium text-gray-500 uppercase">趋势环境评分</p>
+                        <p class="text-xs font-medium text-gray-500 uppercase">当前状态</p>
                         <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">这是广度分和指数确认分一起算出来的保守总分。先看广度，再看指数确认，不会因为单日局部强就轻易给高分。</div>
+                        <div class="hint-tip">这是把新高、新低、净新高、指数确认一起翻译成一句能直接用的结论。先看环境，再看板块，再看个股。</div>
                     </div>
-                    <div class="flex items-center gap-2 mt-1">
-                        <p id="strengthScore" class="text-2xl font-bold text-stock-up">-</p>
-                        <span class="text-xs text-gray-400">/100</span>
-                    </div>
-                    <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
-                        <div id="strengthBar" class="bg-stock-up h-2 rounded-full progress-bar" style="width: 0%"></div>
-                    </div>
+                    <p id="currentStatusMini" class="text-lg font-bold text-gray-900 mt-1">-</p>
+                    <p id="currentStatusMeta" class="text-xs text-gray-400 mt-1">-</p>
                 </div>
             </div>
 
@@ -564,6 +603,20 @@
             return { status: '极度弱势', desc: '市场低迷', color: 'text-gray-400' };
         }
 
+        function getTrendStatusColor(status) {
+            if (status === '趋势活跃') return 'text-red-600';
+            if (status === '趋势可做') return 'text-orange-600';
+            if (status === '趋势观察') return 'text-yellow-600';
+            return 'text-gray-500';
+        }
+
+        function getIndexStatusColor(status) {
+            if (status === '强确认') return 'text-red-600';
+            if (status === '确认') return 'text-orange-600';
+            if (status === '弱确认') return 'text-yellow-600';
+            return 'text-gray-500';
+        }
+
         // 加载数据
         async function loadData() {
             showLoading();
@@ -835,11 +888,25 @@
             const avgChange = marketStats.avg_5d_change_pct ?? ((newHighCount - avg5Days) / avg5Days * 100).toFixed(1);
             const statusColor = marketStats.status_color_class || marketStatus.color;
             const statusDesc = marketStats.market_status_desc || marketStatus.desc;
+            const breadthStatus = marketStats.breadth_status || marketStatusText;
+            const breadthScore = Number(marketStats.breadth_strength_score || strengthScore || 0);
             const indexStatus = marketStats.index_confirmation_status || '未确认';
+            const indexScore = Number(marketStats.index_confirmation_score || 0);
+            const indexSummary = marketStats.index_confirmation_summary || '指数当前没有给出明确确认。';
             const narrative = buildMarketNarrative(marketStats, newHighCount, newLowCount, netNewHigh);
             
             document.getElementById('todayNewHigh').textContent = newHighCount;
             document.getElementById('newHighRatio').textContent = `占比 ${ratio}% | 新低 ${newLowCount} | 净新高 ${netNewHigh}`;
+            document.getElementById('breadthStatus').textContent = breadthStatus;
+            document.getElementById('breadthStatus').className = `text-lg font-bold mt-1 ${getTrendStatusColor(breadthStatus)}`;
+            document.getElementById('breadthStatusDesc').textContent = `净新高 ${netNewHigh} | 连续 ${marketStats.trend_days || 0} 天为正`;
+            document.getElementById('breadthScore').textContent = breadthScore;
+            document.getElementById('breadthScoreBar').style.width = `${Math.max(0, Math.min(100, breadthScore))}%`;
+            document.getElementById('indexStatus').textContent = indexStatus;
+            document.getElementById('indexStatus').className = `text-lg font-bold mt-1 ${getIndexStatusColor(indexStatus)}`;
+            document.getElementById('indexStatusDesc').textContent = indexSummary;
+            document.getElementById('indexScore').textContent = indexScore;
+            document.getElementById('indexScoreBar').style.width = `${Math.max(0, Math.min(100, indexScore))}%`;
             document.getElementById('marketStatus').textContent = marketStatusText;
             document.getElementById('marketStatus').className = `text-lg font-bold mt-1 ${statusColor}`;
             document.getElementById('marketStatusDesc').textContent = `${statusDesc} | 指数${indexStatus}`;
@@ -848,6 +915,9 @@
             document.getElementById('avg5DaysChange').className = `text-xs mt-1 ${avgChange >= 0 ? 'text-stock-up' : 'text-stock-down'}`;
             document.getElementById('strengthScore').textContent = strengthScore;
             document.getElementById('strengthBar').style.width = `${strengthScore}%`;
+            document.getElementById('currentStatusMini').textContent = marketStatusText;
+            document.getElementById('currentStatusMini').className = `text-lg font-bold mt-1 ${statusColor}`;
+            document.getElementById('currentStatusMeta').textContent = `${breadthStatus} + 指数${indexStatus}`;
             document.getElementById('currentStatus').textContent = `当前：新高 ${newHighCount} | 新低 ${newLowCount} | 净新高 ${netNewHigh} | ${marketStatusText} | 指数${indexStatus}`;
             document.getElementById('marketSignalBadge').textContent = marketStatusText;
             document.getElementById('marketSignalBadge').className = `px-3 py-1 rounded-full text-xs font-medium ${statusColor.includes('red') ? 'bg-red-50 text-red-700' : statusColor.includes('orange') ? 'bg-orange-50 text-orange-700' : statusColor.includes('yellow') ? 'bg-yellow-50 text-yellow-700' : 'bg-gray-100 text-gray-700'}`;

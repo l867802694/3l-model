@@ -7,6 +7,138 @@
   "total_sectors": 11,
   "sectors": [
     {
+      "sector_name": "电力",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600396",
+          "name": "华电辽能",
+          "close": 5.17,
+          "price": 5.17,
+          "high_250": 5.17,
+          "high_250d": 5.17,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 76.14,
+          "amount": 33103.88,
+          "turnover": 33103.88,
+          "institution_score": 1.81,
+          "sector": "电力",
+          "industry": "电力"
+        }
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 20.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "元件",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "605058",
+          "name": "澳弘电子",
+          "close": 35.49,
+          "price": 35.49,
+          "high_250": 35.49,
+          "high_250d": 35.49,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 49.83,
+          "amount": 35921.35,
+          "turnover": 35921.35,
+          "institution_score": 1.7,
+          "sector": "元件",
+          "industry": "元件"
+        }
+      ],
+      "momentum_rank": 3,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 18.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "化学原料",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000990",
+          "name": "诚志股份",
+          "close": 10.79,
+          "price": 10.79,
+          "high_250": 10.79,
+          "high_250d": 10.79,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 128.67,
+          "amount": 75629.46,
+          "turnover": 75629.46,
+          "institution_score": 3.77,
+          "sector": "化学原料",
+          "industry": "化学原料"
+        }
+      ],
+      "momentum_rank": 5,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 16.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "专业工程",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002323",
+          "name": "雅博股份",
+          "close": 3.03,
+          "price": 3.03,
+          "high_250": 3.03,
+          "high_250d": 3.03,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.18,
+          "change": 10.18,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 63.28,
+          "amount": 34088.89,
+          "turnover": 34088.89,
+          "institution_score": 1.74,
+          "sector": "专业工程",
+          "industry": "专业工程"
+        }
+      ],
+      "momentum_rank": 7,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 14.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
       "sector_name": "专用设备",
       "new_high_count": 3,
       "stock_count": 3,
@@ -72,203 +204,12 @@
           "sector": "专用设备",
           "industry": "专用设备"
         }
-      ]
-    },
-    {
-      "sector_name": "普钢",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600307",
-          "name": "酒钢宏兴",
-          "close": 2.42,
-          "price": 2.42,
-          "high_250": 2.42,
-          "high_250d": 2.42,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 147.71,
-          "amount": 140347.31,
-          "turnover": 140347.31,
-          "institution_score": 6.15,
-          "sector": "普钢",
-          "industry": "普钢"
-        }
-      ]
-    },
-    {
-      "sector_name": "化学纤维",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600370",
-          "name": "三房巷",
-          "close": 3.63,
-          "price": 3.63,
-          "high_250": 3.63,
-          "high_250d": 3.63,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 137.97,
-          "amount": 146943.37,
-          "turnover": 146943.37,
-          "institution_score": 6.07,
-          "sector": "化学纤维",
-          "industry": "化学纤维"
-        }
-      ]
-    },
-    {
-      "sector_name": "电力",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600396",
-          "name": "华电辽能",
-          "close": 5.17,
-          "price": 5.17,
-          "high_250": 5.17,
-          "high_250d": 5.17,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 76.14,
-          "amount": 33103.88,
-          "turnover": 33103.88,
-          "institution_score": 1.81,
-          "sector": "电力",
-          "industry": "电力"
-        }
-      ]
-    },
-    {
-      "sector_name": "医疗器械",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603387",
-          "name": "基蛋生物",
-          "close": 10.38,
-          "price": 10.38,
-          "high_250": 10.38,
-          "high_250d": 10.38,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.96,
-          "change": 9.96,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 51.99,
-          "amount": 34326.99,
-          "turnover": 34326.99,
-          "institution_score": 1.66,
-          "sector": "医疗器械",
-          "industry": "医疗器械"
-        }
-      ]
-    },
-    {
-      "sector_name": "电机Ⅱ",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603489",
-          "name": "八方股份",
-          "close": 36.67,
-          "price": 36.67,
-          "high_250": 36.67,
-          "high_250d": 36.67,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.99,
-          "change": 9.99,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 84.28,
-          "amount": 27107.17,
-          "turnover": 27107.17,
-          "institution_score": 1.65,
-          "sector": "电机Ⅱ",
-          "industry": "电机Ⅱ"
-        }
-      ]
-    },
-    {
-      "sector_name": "元件",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "605058",
-          "name": "澳弘电子",
-          "close": 35.49,
-          "price": 35.49,
-          "high_250": 35.49,
-          "high_250d": 35.49,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 49.83,
-          "amount": 35921.35,
-          "turnover": 35921.35,
-          "institution_score": 1.7,
-          "sector": "元件",
-          "industry": "元件"
-        }
-      ]
-    },
-    {
-      "sector_name": "化学原料",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "000990",
-          "name": "诚志股份",
-          "close": 10.79,
-          "price": 10.79,
-          "high_250": 10.79,
-          "high_250d": 10.79,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.99,
-          "change": 9.99,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 128.67,
-          "amount": 75629.46,
-          "turnover": 75629.46,
-          "institution_score": 3.77,
-          "sector": "化学原料",
-          "industry": "化学原料"
-        }
-      ]
+      ],
+      "momentum_rank": 18,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 13.2,
+      "sector_reason": "与动量主线同向 / 新高数量集中"
     },
     {
       "sector_name": "半导体",
@@ -296,35 +237,144 @@
           "sector": "半导体",
           "industry": "半导体"
         }
-      ]
+      ],
+      "momentum_rank": 9,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 12.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
-      "sector_name": "专业工程",
+      "sector_name": "化学纤维",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "code": "002323",
-          "name": "雅博股份",
-          "close": 3.03,
-          "price": 3.03,
-          "high_250": 3.03,
-          "high_250d": 3.03,
+          "code": "600370",
+          "name": "三房巷",
+          "close": 3.63,
+          "price": 3.63,
+          "high_250": 3.63,
+          "high_250d": 3.63,
           "consecutive_new_high_days": 1,
           "consecutive_days": 1,
-          "change_pct": 10.18,
-          "change": 10.18,
+          "change_pct": 10.0,
+          "change": 10.0,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 63.28,
-          "amount": 34088.89,
-          "turnover": 34088.89,
-          "institution_score": 1.74,
-          "sector": "专业工程",
-          "industry": "专业工程"
+          "circ_mv": 137.97,
+          "amount": 146943.37,
+          "turnover": 146943.37,
+          "institution_score": 6.07,
+          "sector": "化学纤维",
+          "industry": "化学纤维"
         }
-      ]
+      ],
+      "momentum_rank": 20,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "普钢",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600307",
+          "name": "酒钢宏兴",
+          "close": 2.42,
+          "price": 2.42,
+          "high_250": 2.42,
+          "high_250d": 2.42,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 147.71,
+          "amount": 140347.31,
+          "turnover": 140347.31,
+          "institution_score": 6.15,
+          "sector": "普钢",
+          "industry": "普钢"
+        }
+      ],
+      "momentum_rank": 56,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "医疗器械",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603387",
+          "name": "基蛋生物",
+          "close": 10.38,
+          "price": 10.38,
+          "high_250": 10.38,
+          "high_250d": 10.38,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.96,
+          "change": 9.96,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 51.99,
+          "amount": 34326.99,
+          "turnover": 34326.99,
+          "institution_score": 1.66,
+          "sector": "医疗器械",
+          "industry": "医疗器械"
+        }
+      ],
+      "momentum_rank": 29,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "电机Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603489",
+          "name": "八方股份",
+          "close": 36.67,
+          "price": 36.67,
+          "high_250": 36.67,
+          "high_250d": 36.67,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 84.28,
+          "amount": 27107.17,
+          "turnover": 27107.17,
+          "institution_score": 1.65,
+          "sector": "电机Ⅱ",
+          "industry": "电机Ⅱ"
+        }
+      ],
+      "momentum_rank": 43,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "计算机设备",
@@ -352,7 +402,12 @@
           "sector": "计算机设备",
           "industry": "计算机设备"
         }
-      ]
+      ],
+      "momentum_rank": 38,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

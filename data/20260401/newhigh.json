@@ -32,35 +32,12 @@
           "sector": "化学制药",
           "industry": "化学制药"
         }
-      ]
-    },
-    {
-      "sector_name": "工业金属",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603937",
-          "name": "丽岛新材",
-          "close": 15.27,
-          "price": 15.27,
-          "high_250": 15.27,
-          "high_250d": 15.27,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 30.61,
-          "amount": 24732.68,
-          "turnover": 24732.68,
-          "institution_score": 1.16,
-          "sector": "工业金属",
-          "industry": "工业金属"
-        }
-      ]
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 20.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "电力",
@@ -88,7 +65,12 @@
           "sector": "电力",
           "industry": "电力"
         }
-      ]
+      ],
+      "momentum_rank": 3,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 18.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "生物制品",
@@ -116,7 +98,45 @@
           "sector": "生物制品",
           "industry": "生物制品"
         }
-      ]
+      ],
+      "momentum_rank": 5,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 16.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "工业金属",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603937",
+          "name": "丽岛新材",
+          "close": 15.27,
+          "price": 15.27,
+          "high_250": 15.27,
+          "high_250d": 15.27,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 30.61,
+          "amount": 24732.68,
+          "turnover": 24732.68,
+          "institution_score": 1.16,
+          "sector": "工业金属",
+          "industry": "工业金属"
+        }
+      ],
+      "momentum_rank": 41,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "电网设备",
@@ -144,7 +164,12 @@
           "sector": "电网设备",
           "industry": "电网设备"
         }
-      ]
+      ],
+      "momentum_rank": 22,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "专用设备",
@@ -172,7 +197,12 @@
           "sector": "专用设备",
           "industry": "专用设备"
         }
-      ]
+      ],
+      "momentum_rank": 20,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "塑料",
@@ -200,7 +230,12 @@
           "sector": "塑料",
           "industry": "塑料"
         }
-      ]
+      ],
+      "momentum_rank": 14,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "自动化设备",
@@ -228,7 +263,12 @@
           "sector": "自动化设备",
           "industry": "自动化设备"
         }
-      ]
+      ],
+      "momentum_rank": 48,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

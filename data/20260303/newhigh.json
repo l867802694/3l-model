@@ -232,7 +232,12 @@
           "sector": "油服工程",
           "industry": "油服工程"
         }
-      ]
+      ],
+      "momentum_rank": 2,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 49.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "炼化及贸易",
@@ -380,7 +385,12 @@
           "sector": "炼化及贸易",
           "industry": "炼化及贸易"
         }
-      ]
+      ],
+      "momentum_rank": 3,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 36.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "燃气Ⅱ",
@@ -528,7 +538,12 @@
           "sector": "燃气Ⅱ",
           "industry": "燃气Ⅱ"
         }
-      ]
+      ],
+      "momentum_rank": 7,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 32.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "航运港口",
@@ -616,7 +631,98 @@
           "sector": "航运港口",
           "industry": "航运港口"
         }
-      ]
+      ],
+      "momentum_rank": 4,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 26.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
+    },
+    {
+      "sector_name": "焦炭Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "601015",
+          "name": "陕西黑猫",
+          "close": 5.69,
+          "price": 5.69,
+          "high_250": 5.69,
+          "high_250d": 5.69,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.06,
+          "change": 10.06,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 109.97,
+          "amount": 117000.75,
+          "turnover": 117000.75,
+          "institution_score": 3.48,
+          "sector": "焦炭Ⅱ",
+          "industry": "焦炭Ⅱ"
+        }
+      ],
+      "momentum_rank": 5,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 16.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "电网设备",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002350",
+          "name": "北京科锐",
+          "close": 13.08,
+          "price": 13.08,
+          "high_250": 13.08,
+          "high_250d": 13.08,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 65.54,
+          "amount": 102815.63,
+          "turnover": 102815.63,
+          "institution_score": 2.82,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        },
+        {
+          "code": "002980",
+          "name": "华盛昌",
+          "close": 35.06,
+          "price": 35.06,
+          "high_250": 35.06,
+          "high_250d": 35.06,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 35.01,
+          "amount": 149755.09,
+          "turnover": 149755.09,
+          "institution_score": 3.65,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        }
+      ],
+      "momentum_rank": 9,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 15.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "其他",
@@ -684,7 +790,12 @@
           "sector": "其他",
           "industry": "其他"
         }
-      ]
+      ],
+      "momentum_rank": 18,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 13.2,
+      "sector_reason": "与动量主线同向 / 新高数量集中"
     },
     {
       "sector_name": "化学原料",
@@ -732,55 +843,12 @@
           "sector": "化学原料",
           "industry": "化学原料"
         }
-      ]
-    },
-    {
-      "sector_name": "电网设备",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "002350",
-          "name": "北京科锐",
-          "close": 13.08,
-          "price": 13.08,
-          "high_250": 13.08,
-          "high_250d": 13.08,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 65.54,
-          "amount": 102815.63,
-          "turnover": 102815.63,
-          "institution_score": 2.82,
-          "sector": "电网设备",
-          "industry": "电网设备"
-        },
-        {
-          "code": "002980",
-          "name": "华盛昌",
-          "close": 35.06,
-          "price": 35.06,
-          "high_250": 35.06,
-          "high_250d": 35.06,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 35.01,
-          "amount": 149755.09,
-          "turnover": 149755.09,
-          "institution_score": 3.65,
-          "sector": "电网设备",
-          "industry": "电网设备"
-        }
-      ]
+      ],
+      "momentum_rank": 12,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 12.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "种植业",
@@ -808,35 +876,12 @@
           "sector": "种植业",
           "industry": "种植业"
         }
-      ]
-    },
-    {
-      "sector_name": "焦炭Ⅱ",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "601015",
-          "name": "陕西黑猫",
-          "close": 5.69,
-          "price": 5.69,
-          "high_250": 5.69,
-          "high_250d": 5.69,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.06,
-          "change": 10.06,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 109.97,
-          "amount": 117000.75,
-          "turnover": 117000.75,
-          "institution_score": 3.48,
-          "sector": "焦炭Ⅱ",
-          "industry": "焦炭Ⅱ"
-        }
-      ]
+      ],
+      "momentum_rank": 11,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 10.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "通信设备",
@@ -864,7 +909,12 @@
           "sector": "通信设备",
           "industry": "通信设备"
         }
-      ]
+      ],
+      "momentum_rank": 14,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "通用设备",
@@ -892,7 +942,12 @@
           "sector": "通用设备",
           "industry": "通用设备"
         }
-      ]
+      ],
+      "momentum_rank": 13,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "专用设备",
@@ -920,7 +975,12 @@
           "sector": "专用设备",
           "industry": "专用设备"
         }
-      ]
+      ],
+      "momentum_rank": 20,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
     },
     {
       "sector_name": "军工电子Ⅱ",
@@ -948,7 +1008,12 @@
           "sector": "军工电子Ⅱ",
           "industry": "军工电子Ⅱ"
         }
-      ]
+      ],
+      "momentum_rank": 43,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

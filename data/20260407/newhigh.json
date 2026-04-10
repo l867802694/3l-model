@@ -7,54 +7,6 @@
   "total_sectors": 13,
   "sectors": [
     {
-      "sector_name": "专业工程",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "601133",
-          "name": "柏诚股份",
-          "close": 21.43,
-          "price": 21.43,
-          "high_250": 21.43,
-          "high_250d": 21.43,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 31.4,
-          "amount": 90382.66,
-          "turnover": 90382.66,
-          "institution_score": 4.34,
-          "sector": "专业工程",
-          "industry": "专业工程"
-        },
-        {
-          "code": "002051",
-          "name": "中工国际",
-          "close": 10.48,
-          "price": 10.48,
-          "high_250": 10.48,
-          "high_250d": 10.48,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.97,
-          "change": 9.97,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 128.37,
-          "amount": 153509.49,
-          "turnover": 153509.49,
-          "institution_score": 6.04,
-          "sector": "专业工程",
-          "industry": "专业工程"
-        }
-      ]
-    },
-    {
       "sector_name": "通信设备",
       "new_high_count": 2,
       "stock_count": 2,
@@ -100,7 +52,164 @@
           "sector": "通信设备",
           "industry": "通信设备"
         }
-      ]
+      ],
+      "momentum_rank": 4,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 20.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "化学制药",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600488",
+          "name": "津药药业",
+          "close": 7.67,
+          "price": 7.67,
+          "high_250": 7.67,
+          "high_250d": 7.67,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.04,
+          "change": 10.04,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 81.89,
+          "amount": 132268.91,
+          "turnover": 132268.91,
+          "institution_score": 5.66,
+          "sector": "化学制药",
+          "industry": "化学制药"
+        }
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 20.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "电池",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "688345",
+          "name": "博力威",
+          "close": 51.6,
+          "price": 51.6,
+          "high_250": 51.6,
+          "high_250d": 51.6,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 48.72,
+          "amount": 42614.06,
+          "turnover": 42614.06,
+          "institution_score": 2.32,
+          "sector": "电池",
+          "industry": "电池"
+        }
+      ],
+      "momentum_rank": 3,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 18.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "中药Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002082",
+          "name": "万邦德",
+          "close": 36.24,
+          "price": 36.24,
+          "high_250": 36.24,
+          "high_250d": 36.24,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 6.43,
+          "change": 6.43,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 192.64,
+          "amount": 249012.16,
+          "turnover": 249012.16,
+          "institution_score": 6.56,
+          "sector": "中药Ⅱ",
+          "industry": "中药Ⅱ"
+        }
+      ],
+      "momentum_rank": 9,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 10.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "专业工程",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "601133",
+          "name": "柏诚股份",
+          "close": 21.43,
+          "price": 21.43,
+          "high_250": 21.43,
+          "high_250d": 21.43,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 31.4,
+          "amount": 90382.66,
+          "turnover": 90382.66,
+          "institution_score": 4.34,
+          "sector": "专业工程",
+          "industry": "专业工程"
+        },
+        {
+          "code": "002051",
+          "name": "中工国际",
+          "close": 10.48,
+          "price": 10.48,
+          "high_250": 10.48,
+          "high_250d": 10.48,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.97,
+          "change": 9.97,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 128.37,
+          "amount": 153509.49,
+          "turnover": 153509.49,
+          "institution_score": 6.04,
+          "sector": "专业工程",
+          "industry": "专业工程"
+        }
+      ],
+      "momentum_rank": 23,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 8.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "电网设备",
@@ -148,147 +257,12 @@
           "sector": "电网设备",
           "industry": "电网设备"
         }
-      ]
-    },
-    {
-      "sector_name": "化学制药",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600488",
-          "name": "津药药业",
-          "close": 7.67,
-          "price": 7.67,
-          "high_250": 7.67,
-          "high_250d": 7.67,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.04,
-          "change": 10.04,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 81.89,
-          "amount": 132268.91,
-          "turnover": 132268.91,
-          "institution_score": 5.66,
-          "sector": "化学制药",
-          "industry": "化学制药"
-        }
-      ]
-    },
-    {
-      "sector_name": "房地产开发",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600791",
-          "name": "京能置业",
-          "close": 11.79,
-          "price": 11.79,
-          "high_250": 11.79,
-          "high_250d": 11.79,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.98,
-          "change": 9.98,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 52.62,
-          "amount": 45839.88,
-          "turnover": 45839.88,
-          "institution_score": 2.5,
-          "sector": "房地产开发",
-          "industry": "房地产开发"
-        }
-      ]
-    },
-    {
-      "sector_name": "基础建设",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603778",
-          "name": "国晟科技",
-          "close": 31.55,
-          "price": 31.55,
-          "high_250": 31.55,
-          "high_250d": 31.55,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 198.58,
-          "amount": 299576.7,
-          "turnover": 299576.7,
-          "institution_score": 6.61,
-          "sector": "基础建设",
-          "industry": "基础建设"
-        }
-      ]
-    },
-    {
-      "sector_name": "电池",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "688345",
-          "name": "博力威",
-          "close": 51.6,
-          "price": 51.6,
-          "high_250": 51.6,
-          "high_250d": 51.6,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 20.0,
-          "change": 20.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 48.72,
-          "amount": 42614.06,
-          "turnover": 42614.06,
-          "institution_score": 2.32,
-          "sector": "电池",
-          "industry": "电池"
-        }
-      ]
-    },
-    {
-      "sector_name": "炼化及贸易",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "000703",
-          "name": "恒逸石化",
-          "close": 14.16,
-          "price": 14.16,
-          "high_250": 14.16,
-          "high_250d": 14.16,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.02,
-          "change": 10.02,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 528.53,
-          "amount": 50104.9,
-          "turnover": 50104.9,
-          "institution_score": 6.55,
-          "sector": "炼化及贸易",
-          "industry": "炼化及贸易"
-        }
-      ]
+      ],
+      "momentum_rank": 22,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 8.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "环保设备Ⅱ",
@@ -316,35 +290,111 @@
           "sector": "环保设备Ⅱ",
           "industry": "环保设备Ⅱ"
         }
-      ]
+      ],
+      "momentum_rank": 11,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 8.2,
+      "sector_reason": "与动量主线同向"
     },
     {
-      "sector_name": "中药Ⅱ",
+      "sector_name": "房地产开发",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "code": "002082",
-          "name": "万邦德",
-          "close": 36.24,
-          "price": 36.24,
-          "high_250": 36.24,
-          "high_250d": 36.24,
+          "code": "600791",
+          "name": "京能置业",
+          "close": 11.79,
+          "price": 11.79,
+          "high_250": 11.79,
+          "high_250d": 11.79,
           "consecutive_new_high_days": 1,
           "consecutive_days": 1,
-          "change_pct": 6.43,
-          "change": 6.43,
+          "change_pct": 9.98,
+          "change": 9.98,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 192.64,
-          "amount": 249012.16,
-          "turnover": 249012.16,
-          "institution_score": 6.56,
-          "sector": "中药Ⅱ",
-          "industry": "中药Ⅱ"
+          "circ_mv": 52.62,
+          "amount": 45839.88,
+          "turnover": 45839.88,
+          "institution_score": 2.5,
+          "sector": "房地产开发",
+          "industry": "房地产开发"
         }
-      ]
+      ],
+      "momentum_rank": 52,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "基础建设",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603778",
+          "name": "国晟科技",
+          "close": 31.55,
+          "price": 31.55,
+          "high_250": 31.55,
+          "high_250d": 31.55,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 198.58,
+          "amount": 299576.7,
+          "turnover": 299576.7,
+          "institution_score": 6.61,
+          "sector": "基础建设",
+          "industry": "基础建设"
+        }
+      ],
+      "momentum_rank": 27,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "炼化及贸易",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000703",
+          "name": "恒逸石化",
+          "close": 14.16,
+          "price": 14.16,
+          "high_250": 14.16,
+          "high_250d": 14.16,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 528.53,
+          "amount": 50104.9,
+          "turnover": 50104.9,
+          "institution_score": 6.55,
+          "sector": "炼化及贸易",
+          "industry": "炼化及贸易"
+        }
+      ],
+      "momentum_rank": 26,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "食品加工",
@@ -372,7 +422,12 @@
           "sector": "食品加工",
           "industry": "食品加工"
         }
-      ]
+      ],
+      "momentum_rank": 32,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "自动化设备",
@@ -400,7 +455,12 @@
           "sector": "自动化设备",
           "industry": "自动化设备"
         }
-      ]
+      ],
+      "momentum_rank": 31,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "化学制品",
@@ -428,7 +488,12 @@
           "sector": "化学制品",
           "industry": "化学制品"
         }
-      ]
+      ],
+      "momentum_rank": 54,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

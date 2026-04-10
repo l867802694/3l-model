@@ -72,7 +72,12 @@
           "sector": "电力",
           "industry": "电力"
         }
-      ]
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 26.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "光学光电子",
@@ -100,35 +105,12 @@
           "sector": "光学光电子",
           "industry": "光学光电子"
         }
-      ]
-    },
-    {
-      "sector_name": "消费电子",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603629",
-          "name": "利通电子",
-          "close": 68.07,
-          "price": 68.07,
-          "high_250": 68.07,
-          "high_250d": 68.07,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 169.51,
-          "amount": 220992.69,
-          "turnover": 220992.69,
-          "institution_score": 6.32,
-          "sector": "消费电子",
-          "industry": "消费电子"
-        }
-      ]
+      ],
+      "momentum_rank": 14,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
     },
     {
       "sector_name": "基础建设",
@@ -156,7 +138,45 @@
           "sector": "基础建设",
           "industry": "基础建设"
         }
-      ]
+      ],
+      "momentum_rank": 16,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "消费电子",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603629",
+          "name": "利通电子",
+          "close": 68.07,
+          "price": 68.07,
+          "high_250": 68.07,
+          "high_250d": 68.07,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 169.51,
+          "amount": 220992.69,
+          "turnover": 220992.69,
+          "institution_score": 6.32,
+          "sector": "消费电子",
+          "industry": "消费电子"
+        }
+      ],
+      "momentum_rank": 40,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "医疗器械",
@@ -184,7 +204,12 @@
           "sector": "医疗器械",
           "industry": "医疗器械"
         }
-      ]
+      ],
+      "momentum_rank": 28,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "IT服务Ⅱ",
@@ -212,7 +237,12 @@
           "sector": "IT服务Ⅱ",
           "industry": "IT服务Ⅱ"
         }
-      ]
+      ],
+      "momentum_rank": 27,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

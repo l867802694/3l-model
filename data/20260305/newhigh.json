@@ -92,7 +92,12 @@
           "sector": "电网设备",
           "industry": "电网设备"
         }
-      ]
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 29.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "光学光电子",
@@ -180,7 +185,12 @@
           "sector": "光学光电子",
           "industry": "光学光电子"
         }
-      ]
+      ],
+      "momentum_rank": 14,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 18.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "电力",
@@ -208,119 +218,12 @@
           "sector": "电力",
           "industry": "电力"
         }
-      ]
-    },
-    {
-      "sector_name": "其他电源设备Ⅱ",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600875",
-          "name": "东方电气",
-          "close": 42.21,
-          "price": 42.21,
-          "high_250": 42.21,
-          "high_250d": 42.21,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 938.5,
-          "amount": 340404.27,
-          "turnover": 340404.27,
-          "institution_score": 10.0,
-          "sector": "其他电源设备Ⅱ",
-          "industry": "其他电源设备Ⅱ"
-        }
-      ]
-    },
-    {
-      "sector_name": "化学原料",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603067",
-          "name": "振华股份",
-          "close": 45.87,
-          "price": 45.87,
-          "high_250": 45.87,
-          "high_250d": 45.87,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 317.72,
-          "amount": 154358.06,
-          "turnover": 154358.06,
-          "institution_score": 7.36,
-          "sector": "化学原料",
-          "industry": "化学原料"
-        }
-      ]
-    },
-    {
-      "sector_name": "非金属材料Ⅱ",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603688",
-          "name": "石英股份",
-          "close": 53.04,
-          "price": 53.04,
-          "high_250": 53.04,
-          "high_250d": 53.04,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 285.22,
-          "amount": 61077.33,
-          "turnover": 61077.33,
-          "institution_score": 4.14,
-          "sector": "非金属材料Ⅱ",
-          "industry": "非金属材料Ⅱ"
-        }
-      ]
-    },
-    {
-      "sector_name": "基础建设",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "001267",
-          "name": "汇绿生态",
-          "close": 36.96,
-          "price": 36.96,
-          "high_250": 36.96,
-          "high_250d": 36.96,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 215.76,
-          "amount": 296462.77,
-          "turnover": 296462.77,
-          "institution_score": 6.66,
-          "sector": "基础建设",
-          "industry": "基础建设"
-        }
-      ]
+      ],
+      "momentum_rank": 3,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 18.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "通信设备",
@@ -348,35 +251,111 @@
           "sector": "通信设备",
           "industry": "通信设备"
         }
-      ]
+      ],
+      "momentum_rank": 7,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 14.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
-      "sector_name": "炼化及贸易",
+      "sector_name": "非金属材料Ⅱ",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "code": "002986",
-          "name": "宇新股份",
-          "close": 16.01,
-          "price": 16.01,
-          "high_250": 16.01,
-          "high_250d": 16.01,
+          "code": "603688",
+          "name": "石英股份",
+          "close": 53.04,
+          "price": 53.04,
+          "high_250": 53.04,
+          "high_250d": 53.04,
           "consecutive_new_high_days": 1,
           "consecutive_days": 1,
-          "change_pct": 10.03,
-          "change": 10.03,
+          "change_pct": 10.0,
+          "change": 10.0,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 46.79,
-          "amount": 44300.43,
-          "turnover": 44300.43,
-          "institution_score": 1.77,
-          "sector": "炼化及贸易",
-          "industry": "炼化及贸易"
+          "circ_mv": 285.22,
+          "amount": 61077.33,
+          "turnover": 61077.33,
+          "institution_score": 4.14,
+          "sector": "非金属材料Ⅱ",
+          "industry": "非金属材料Ⅱ"
         }
-      ]
+      ],
+      "momentum_rank": 8,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 13.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "其他电源设备Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600875",
+          "name": "东方电气",
+          "close": 42.21,
+          "price": 42.21,
+          "high_250": 42.21,
+          "high_250d": 42.21,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 938.5,
+          "amount": 340404.27,
+          "turnover": 340404.27,
+          "institution_score": 10.0,
+          "sector": "其他电源设备Ⅱ",
+          "industry": "其他电源设备Ⅱ"
+        }
+      ],
+      "momentum_rank": 9,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 12.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "化学原料",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603067",
+          "name": "振华股份",
+          "close": 45.87,
+          "price": 45.87,
+          "high_250": 45.87,
+          "high_250d": 45.87,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 317.72,
+          "amount": 154358.06,
+          "turnover": 154358.06,
+          "institution_score": 7.36,
+          "sector": "化学原料",
+          "industry": "化学原料"
+        }
+      ],
+      "momentum_rank": 16,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "自动化设备",
@@ -404,7 +383,78 @@
           "sector": "自动化设备",
           "industry": "自动化设备"
         }
-      ]
+      ],
+      "momentum_rank": 15,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "炼化及贸易",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002986",
+          "name": "宇新股份",
+          "close": 16.01,
+          "price": 16.01,
+          "high_250": 16.01,
+          "high_250d": 16.01,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.03,
+          "change": 10.03,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 46.79,
+          "amount": 44300.43,
+          "turnover": 44300.43,
+          "institution_score": 1.77,
+          "sector": "炼化及贸易",
+          "industry": "炼化及贸易"
+        }
+      ],
+      "momentum_rank": 17,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "基础建设",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "001267",
+          "name": "汇绿生态",
+          "close": 36.96,
+          "price": 36.96,
+          "high_250": 36.96,
+          "high_250d": 36.96,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 215.76,
+          "amount": 296462.77,
+          "turnover": 296462.77,
+          "institution_score": 6.66,
+          "sector": "基础建设",
+          "industry": "基础建设"
+        }
+      ],
+      "momentum_rank": 36,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

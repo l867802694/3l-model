@@ -152,7 +152,12 @@
           "sector": "电网设备",
           "industry": "电网设备"
         }
-      ]
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 38.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "电力",
@@ -260,7 +265,12 @@
           "sector": "电力",
           "industry": "电力"
         }
-      ]
+      ],
+      "momentum_rank": 3,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 30.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "IT服务Ⅱ",
@@ -328,7 +338,12 @@
           "sector": "IT服务Ⅱ",
           "industry": "IT服务Ⅱ"
         }
-      ]
+      ],
+      "momentum_rank": 13,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 15.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "农化制品",
@@ -356,7 +371,12 @@
           "sector": "农化制品",
           "industry": "农化制品"
         }
-      ]
+      ],
+      "momentum_rank": 8,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 13.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "通用设备",
@@ -384,7 +404,12 @@
           "sector": "通用设备",
           "industry": "通用设备"
         }
-      ]
+      ],
+      "momentum_rank": 15,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "生物制品",
@@ -412,7 +437,12 @@
           "sector": "生物制品",
           "industry": "生物制品"
         }
-      ]
+      ],
+      "momentum_rank": 67,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "物流",
@@ -440,7 +470,12 @@
           "sector": "物流",
           "industry": "物流"
         }
-      ]
+      ],
+      "momentum_rank": 44,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

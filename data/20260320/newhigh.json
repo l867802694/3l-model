@@ -112,63 +112,12 @@
           "sector": "电力",
           "industry": "电力"
         }
-      ]
-    },
-    {
-      "sector_name": "光学光电子",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "000509",
-          "name": "华塑控股",
-          "close": 4.54,
-          "price": 4.54,
-          "high_250": 4.54,
-          "high_250d": 4.54,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.93,
-          "change": 9.93,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 47.35,
-          "amount": 34848.18,
-          "turnover": 34848.18,
-          "institution_score": 1.55,
-          "sector": "光学光电子",
-          "industry": "光学光电子"
-        }
-      ]
-    },
-    {
-      "sector_name": "基础建设",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "002310",
-          "name": "东方新能",
-          "close": 3.48,
-          "price": 3.48,
-          "high_250": 3.48,
-          "high_250d": 3.48,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.13,
-          "change": 10.13,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 143.79,
-          "amount": 262881.41,
-          "turnover": 262881.41,
-          "institution_score": 6.14,
-          "sector": "基础建设",
-          "industry": "基础建设"
-        }
-      ]
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 32.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "光伏设备",
@@ -196,7 +145,78 @@
           "sector": "光伏设备",
           "industry": "光伏设备"
         }
-      ]
+      ],
+      "momentum_rank": 5,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 16.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "光学光电子",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000509",
+          "name": "华塑控股",
+          "close": 4.54,
+          "price": 4.54,
+          "high_250": 4.54,
+          "high_250d": 4.54,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.93,
+          "change": 9.93,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 47.35,
+          "amount": 34848.18,
+          "turnover": 34848.18,
+          "institution_score": 1.55,
+          "sector": "光学光电子",
+          "industry": "光学光电子"
+        }
+      ],
+      "momentum_rank": 18,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "基础建设",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002310",
+          "name": "东方新能",
+          "close": 3.48,
+          "price": 3.48,
+          "high_250": 3.48,
+          "high_250d": 3.48,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.13,
+          "change": 10.13,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 143.79,
+          "amount": 262881.41,
+          "turnover": 262881.41,
+          "institution_score": 6.14,
+          "sector": "基础建设",
+          "industry": "基础建设"
+        }
+      ],
+      "momentum_rank": 14,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
     }
   ],
   "market_stats": {

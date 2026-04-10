@@ -72,7 +72,78 @@
           "sector": "电网设备",
           "industry": "电网设备"
         }
-      ]
+      ],
+      "momentum_rank": 9,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 18.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
+    },
+    {
+      "sector_name": "化学制药",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603538",
+          "name": "美诺华",
+          "close": 43.1,
+          "price": 43.1,
+          "high_250": 43.1,
+          "high_250d": 43.1,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 93.13,
+          "amount": 38367.65,
+          "turnover": 38367.65,
+          "institution_score": 2.24,
+          "sector": "化学制药",
+          "industry": "化学制药"
+        }
+      ],
+      "momentum_rank": 3,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 18.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "通信设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "601869",
+          "name": "长飞光纤",
+          "close": 301.69,
+          "price": 301.69,
+          "high_250": 301.69,
+          "high_250d": 301.69,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 1183.91,
+          "amount": 434627.01,
+          "turnover": 434627.01,
+          "institution_score": 10.0,
+          "sector": "通信设备",
+          "industry": "通信设备"
+        }
+      ],
+      "momentum_rank": 10,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线同向"
     },
     {
       "sector_name": "专用设备",
@@ -120,119 +191,12 @@
           "sector": "专用设备",
           "industry": "专用设备"
         }
-      ]
-    },
-    {
-      "sector_name": "互联网电商",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600539",
-          "name": "狮头股份",
-          "close": 15.63,
-          "price": 15.63,
-          "high_250": 15.63,
-          "high_250d": 15.63,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.99,
-          "change": 9.99,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 35.24,
-          "amount": 81737.12,
-          "turnover": 81737.12,
-          "institution_score": 3.45,
-          "sector": "互联网电商",
-          "industry": "互联网电商"
-        }
-      ]
-    },
-    {
-      "sector_name": "通信设备",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "601869",
-          "name": "长飞光纤",
-          "close": 301.69,
-          "price": 301.69,
-          "high_250": 301.69,
-          "high_250d": 301.69,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 1183.91,
-          "amount": 434627.01,
-          "turnover": 434627.01,
-          "institution_score": 10.0,
-          "sector": "通信设备",
-          "industry": "通信设备"
-        }
-      ]
-    },
-    {
-      "sector_name": "家居用品",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603272",
-          "name": "联翔股份",
-          "close": 35.55,
-          "price": 35.55,
-          "high_250": 35.55,
-          "high_250d": 35.55,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.99,
-          "change": 9.99,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 35.46,
-          "amount": 43953.3,
-          "turnover": 43953.3,
-          "institution_score": 1.99,
-          "sector": "家居用品",
-          "industry": "家居用品"
-        }
-      ]
-    },
-    {
-      "sector_name": "化学制药",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603538",
-          "name": "美诺华",
-          "close": 43.1,
-          "price": 43.1,
-          "high_250": 43.1,
-          "high_250d": 43.1,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 93.13,
-          "amount": 38367.65,
-          "turnover": 38367.65,
-          "institution_score": 2.24,
-          "sector": "化学制药",
-          "industry": "化学制药"
-        }
-      ]
+      ],
+      "momentum_rank": 17,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 8.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "半导体",
@@ -260,35 +224,12 @@
           "sector": "半导体",
           "industry": "半导体"
         }
-      ]
-    },
-    {
-      "sector_name": "养殖业",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "000048",
-          "name": "京基智农",
-          "close": 22.61,
-          "price": 22.61,
-          "high_250": 22.61,
-          "high_250d": 22.61,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.02,
-          "change": 10.02,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 117.45,
-          "amount": 87283.95,
-          "turnover": 87283.95,
-          "institution_score": 4.33,
-          "sector": "养殖业",
-          "industry": "养殖业"
-        }
-      ]
+      ],
+      "momentum_rank": 11,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 8.2,
+      "sector_reason": "与动量主线同向"
     },
     {
       "sector_name": "环保设备Ⅱ",
@@ -316,7 +257,111 @@
           "sector": "环保设备Ⅱ",
           "industry": "环保设备Ⅱ"
         }
-      ]
+      ],
+      "momentum_rank": 13,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "互联网电商",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600539",
+          "name": "狮头股份",
+          "close": 15.63,
+          "price": 15.63,
+          "high_250": 15.63,
+          "high_250d": 15.63,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 35.24,
+          "amount": 81737.12,
+          "turnover": 81737.12,
+          "institution_score": 3.45,
+          "sector": "互联网电商",
+          "industry": "互联网电商"
+        }
+      ],
+      "momentum_rank": 24,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "家居用品",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603272",
+          "name": "联翔股份",
+          "close": 35.55,
+          "price": 35.55,
+          "high_250": 35.55,
+          "high_250d": 35.55,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 35.46,
+          "amount": 43953.3,
+          "turnover": 43953.3,
+          "institution_score": 1.99,
+          "sector": "家居用品",
+          "industry": "家居用品"
+        }
+      ],
+      "momentum_rank": 61,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "养殖业",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000048",
+          "name": "京基智农",
+          "close": 22.61,
+          "price": 22.61,
+          "high_250": 22.61,
+          "high_250d": 22.61,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 117.45,
+          "amount": 87283.95,
+          "turnover": 87283.95,
+          "institution_score": 4.33,
+          "sector": "养殖业",
+          "industry": "养殖业"
+        }
+      ],
+      "momentum_rank": 76,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "医疗器械",
@@ -344,7 +389,12 @@
           "sector": "医疗器械",
           "industry": "医疗器械"
         }
-      ]
+      ],
+      "momentum_rank": 19,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "服装家纺",
@@ -372,7 +422,12 @@
           "sector": "服装家纺",
           "industry": "服装家纺"
         }
-      ]
+      ],
+      "momentum_rank": 52,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "化学制品",
@@ -400,7 +455,12 @@
           "sector": "化学制品",
           "industry": "化学制品"
         }
-      ]
+      ],
+      "momentum_rank": 33,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

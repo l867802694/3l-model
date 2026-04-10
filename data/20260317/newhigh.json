@@ -7,6 +7,72 @@
   "total_sectors": 9,
   "sectors": [
     {
+      "sector_name": "电力",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600396",
+          "name": "华电辽能",
+          "close": 4.7,
+          "price": 4.7,
+          "high_250": 4.7,
+          "high_250d": 4.7,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.07,
+          "change": 10.07,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 67.12,
+          "amount": 84132.96,
+          "turnover": 84132.96,
+          "institution_score": 3.26,
+          "sector": "电力",
+          "industry": "电力"
+        }
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 20.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "电网设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000533",
+          "name": "顺钠股份",
+          "close": 20.53,
+          "price": 20.53,
+          "high_250": 20.53,
+          "high_250d": 20.53,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 129.73,
+          "amount": 514544.01,
+          "turnover": 514544.01,
+          "institution_score": 6.0,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        }
+      ],
+      "momentum_rank": 4,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 17.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
       "sector_name": "农化制品",
       "new_high_count": 2,
       "stock_count": 2,
@@ -52,55 +118,12 @@
           "sector": "农化制品",
           "industry": "农化制品"
         }
-      ]
-    },
-    {
-      "sector_name": "化学纤维",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600370",
-          "name": "三房巷",
-          "close": 3.3,
-          "price": 3.3,
-          "high_250": 3.3,
-          "high_250d": 3.3,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 123.54,
-          "amount": 80514.18,
-          "turnover": 80514.18,
-          "institution_score": 3.57,
-          "sector": "化学纤维",
-          "industry": "化学纤维"
-        },
-        {
-          "code": "688295",
-          "name": "中复神鹰",
-          "close": 59.4,
-          "price": 59.4,
-          "high_250": 59.4,
-          "high_250d": 59.4,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 20.0,
-          "change": 20.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 493.74,
-          "amount": 252098.6,
-          "turnover": 252098.6,
-          "institution_score": 8.79,
-          "sector": "化学纤维",
-          "industry": "化学纤维"
-        }
-      ]
+      ],
+      "momentum_rank": 8,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 16.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "专业工程",
@@ -148,35 +171,65 @@
           "sector": "专业工程",
           "industry": "专业工程"
         }
-      ]
+      ],
+      "momentum_rank": 12,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 12.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
-      "sector_name": "电力",
-      "new_high_count": 1,
-      "stock_count": 1,
+      "sector_name": "化学纤维",
+      "new_high_count": 2,
+      "stock_count": 2,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "code": "600396",
-          "name": "华电辽能",
-          "close": 4.7,
-          "price": 4.7,
-          "high_250": 4.7,
-          "high_250d": 4.7,
+          "code": "600370",
+          "name": "三房巷",
+          "close": 3.3,
+          "price": 3.3,
+          "high_250": 3.3,
+          "high_250d": 3.3,
           "consecutive_new_high_days": 1,
           "consecutive_days": 1,
-          "change_pct": 10.07,
-          "change": 10.07,
+          "change_pct": 10.0,
+          "change": 10.0,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 67.12,
-          "amount": 84132.96,
-          "turnover": 84132.96,
-          "institution_score": 3.26,
-          "sector": "电力",
-          "industry": "电力"
+          "circ_mv": 123.54,
+          "amount": 80514.18,
+          "turnover": 80514.18,
+          "institution_score": 3.57,
+          "sector": "化学纤维",
+          "industry": "化学纤维"
+        },
+        {
+          "code": "688295",
+          "name": "中复神鹰",
+          "close": 59.4,
+          "price": 59.4,
+          "high_250": 59.4,
+          "high_250d": 59.4,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 493.74,
+          "amount": 252098.6,
+          "turnover": 252098.6,
+          "institution_score": 8.79,
+          "sector": "化学纤维",
+          "industry": "化学纤维"
         }
-      ]
+      ],
+      "momentum_rank": 23,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 10.2,
+      "sector_reason": "与动量主线同向"
     },
     {
       "sector_name": "专用设备",
@@ -204,7 +257,12 @@
           "sector": "专用设备",
           "industry": "专用设备"
         }
-      ]
+      ],
+      "momentum_rank": 37,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "房地产开发",
@@ -232,7 +290,12 @@
           "sector": "房地产开发",
           "industry": "房地产开发"
         }
-      ]
+      ],
+      "momentum_rank": 71,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "医疗器械",
@@ -260,35 +323,12 @@
           "sector": "医疗器械",
           "industry": "医疗器械"
         }
-      ]
-    },
-    {
-      "sector_name": "电网设备",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "000533",
-          "name": "顺钠股份",
-          "close": 20.53,
-          "price": 20.53,
-          "high_250": 20.53,
-          "high_250d": 20.53,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.02,
-          "change": 10.02,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 129.73,
-          "amount": 514544.01,
-          "turnover": 514544.01,
-          "institution_score": 6.0,
-          "sector": "电网设备",
-          "industry": "电网设备"
-        }
-      ]
+      ],
+      "momentum_rank": 40,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "环保设备Ⅱ",
@@ -316,7 +356,12 @@
           "sector": "环保设备Ⅱ",
           "industry": "环保设备Ⅱ"
         }
-      ]
+      ],
+      "momentum_rank": 33,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

@@ -52,63 +52,12 @@
           "sector": "元件",
           "industry": "元件"
         }
-      ]
-    },
-    {
-      "sector_name": "电池",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600152",
-          "name": "维科技术",
-          "close": 10.75,
-          "price": 10.75,
-          "high_250": 10.75,
-          "high_250d": 10.75,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.03,
-          "change": 10.03,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 54.41,
-          "amount": 64666.21,
-          "turnover": 64666.21,
-          "institution_score": 2.48,
-          "sector": "电池",
-          "industry": "电池"
-        }
-      ]
-    },
-    {
-      "sector_name": "农化制品",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600227",
-          "name": "赤天化",
-          "close": 4.81,
-          "price": 4.81,
-          "high_250": 4.81,
-          "high_250d": 4.81,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.07,
-          "change": 10.07,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 60.61,
-          "amount": 208969.32,
-          "turnover": 208969.32,
-          "institution_score": 5.46,
-          "sector": "农化制品",
-          "industry": "农化制品"
-        }
-      ]
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 23.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "电力",
@@ -136,35 +85,78 @@
           "sector": "电力",
           "industry": "电力"
         }
-      ]
+      ],
+      "momentum_rank": 2,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 19.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
-      "sector_name": "房地产开发",
+      "sector_name": "电池",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "code": "600683",
-          "name": "京投发展",
-          "close": 9.64,
-          "price": 9.64,
-          "high_250": 9.64,
-          "high_250d": 9.64,
+          "code": "600152",
+          "name": "维科技术",
+          "close": 10.75,
+          "price": 10.75,
+          "high_250": 10.75,
+          "high_250d": 10.75,
           "consecutive_new_high_days": 1,
           "consecutive_days": 1,
-          "change_pct": 10.05,
-          "change": 10.05,
+          "change_pct": 10.03,
+          "change": 10.03,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 70.02,
-          "amount": 23054.28,
-          "turnover": 23054.28,
-          "institution_score": 1.27,
-          "sector": "房地产开发",
-          "industry": "房地产开发"
+          "circ_mv": 54.41,
+          "amount": 64666.21,
+          "turnover": 64666.21,
+          "institution_score": 2.48,
+          "sector": "电池",
+          "industry": "电池"
         }
-      ]
+      ],
+      "momentum_rank": 8,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 13.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "农化制品",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600227",
+          "name": "赤天化",
+          "close": 4.81,
+          "price": 4.81,
+          "high_250": 4.81,
+          "high_250d": 4.81,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.07,
+          "change": 10.07,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 60.61,
+          "amount": 208969.32,
+          "turnover": 208969.32,
+          "institution_score": 5.46,
+          "sector": "农化制品",
+          "industry": "农化制品"
+        }
+      ],
+      "momentum_rank": 9,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 12.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "通信设备",
@@ -192,175 +184,12 @@
           "sector": "通信设备",
           "industry": "通信设备"
         }
-      ]
-    },
-    {
-      "sector_name": "环保设备Ⅱ",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "000890",
-          "name": "法尔胜",
-          "close": 12.2,
-          "price": 12.2,
-          "high_250": 12.2,
-          "high_250d": 12.2,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 49.2,
-          "amount": 153117.88,
-          "turnover": 153117.88,
-          "institution_score": 5.26,
-          "sector": "环保设备Ⅱ",
-          "industry": "环保设备Ⅱ"
-        }
-      ]
-    },
-    {
-      "sector_name": "半导体",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "001309",
-          "name": "德明利",
-          "close": 352.06,
-          "price": 352.06,
-          "high_250": 352.06,
-          "high_250d": 352.06,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 534.63,
-          "amount": 884864.68,
-          "turnover": 884864.68,
-          "institution_score": 9.09,
-          "sector": "半导体",
-          "industry": "半导体"
-        }
-      ]
-    },
-    {
-      "sector_name": "基础建设",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "002310",
-          "name": "东方新能",
-          "close": 2.99,
-          "price": 2.99,
-          "high_250": 2.99,
-          "high_250d": 2.99,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.93,
-          "change": 9.93,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 123.51,
-          "amount": 157278.94,
-          "turnover": 157278.94,
-          "institution_score": 5.94,
-          "sector": "基础建设",
-          "industry": "基础建设"
-        }
-      ]
-    },
-    {
-      "sector_name": "包装印刷",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "002831",
-          "name": "裕同科技",
-          "close": 38.02,
-          "price": 38.02,
-          "high_250": 38.02,
-          "high_250d": 38.02,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 179.85,
-          "amount": 131765.72,
-          "turnover": 131765.72,
-          "institution_score": 5.58,
-          "sector": "包装印刷",
-          "industry": "包装印刷"
-        }
-      ]
-    },
-    {
-      "sector_name": "计算机设备",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "300042",
-          "name": "朗科科技",
-          "close": 45.6,
-          "price": 45.6,
-          "high_250": 45.6,
-          "high_250d": 45.6,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 20.0,
-          "change": 20.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 85.49,
-          "amount": 154074.25,
-          "turnover": 154074.25,
-          "institution_score": 5.57,
-          "sector": "计算机设备",
-          "industry": "计算机设备"
-        }
-      ]
-    },
-    {
-      "sector_name": "软件开发",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "300209",
-          "name": "行云科技",
-          "close": 11.14,
-          "price": 11.14,
-          "high_250": 11.14,
-          "high_250d": 11.14,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 20.04,
-          "change": 20.04,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 74.91,
-          "amount": 139235.21,
-          "turnover": 139235.21,
-          "institution_score": 5.02,
-          "sector": "软件开发",
-          "industry": "软件开发"
-        }
-      ]
+      ],
+      "momentum_rank": 18,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "通用设备",
@@ -388,7 +217,243 @@
           "sector": "通用设备",
           "industry": "通用设备"
         }
-      ]
+      ],
+      "momentum_rank": 17,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "环保设备Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000890",
+          "name": "法尔胜",
+          "close": 12.2,
+          "price": 12.2,
+          "high_250": 12.2,
+          "high_250d": 12.2,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 49.2,
+          "amount": 153117.88,
+          "turnover": 153117.88,
+          "institution_score": 5.26,
+          "sector": "环保设备Ⅱ",
+          "industry": "环保设备Ⅱ"
+        }
+      ],
+      "momentum_rank": 26,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "半导体",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "001309",
+          "name": "德明利",
+          "close": 352.06,
+          "price": 352.06,
+          "high_250": 352.06,
+          "high_250d": 352.06,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 534.63,
+          "amount": 884864.68,
+          "turnover": 884864.68,
+          "institution_score": 9.09,
+          "sector": "半导体",
+          "industry": "半导体"
+        }
+      ],
+      "momentum_rank": 22,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "基础建设",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002310",
+          "name": "东方新能",
+          "close": 2.99,
+          "price": 2.99,
+          "high_250": 2.99,
+          "high_250d": 2.99,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.93,
+          "change": 9.93,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 123.51,
+          "amount": 157278.94,
+          "turnover": 157278.94,
+          "institution_score": 5.94,
+          "sector": "基础建设",
+          "industry": "基础建设"
+        }
+      ],
+      "momentum_rank": 21,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "房地产开发",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600683",
+          "name": "京投发展",
+          "close": 9.64,
+          "price": 9.64,
+          "high_250": 9.64,
+          "high_250d": 9.64,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.05,
+          "change": 10.05,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 70.02,
+          "amount": 23054.28,
+          "turnover": 23054.28,
+          "institution_score": 1.27,
+          "sector": "房地产开发",
+          "industry": "房地产开发"
+        }
+      ],
+      "momentum_rank": 66,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "包装印刷",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002831",
+          "name": "裕同科技",
+          "close": 38.02,
+          "price": 38.02,
+          "high_250": 38.02,
+          "high_250d": 38.02,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 179.85,
+          "amount": 131765.72,
+          "turnover": 131765.72,
+          "institution_score": 5.58,
+          "sector": "包装印刷",
+          "industry": "包装印刷"
+        }
+      ],
+      "momentum_rank": 58,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "计算机设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300042",
+          "name": "朗科科技",
+          "close": 45.6,
+          "price": 45.6,
+          "high_250": 45.6,
+          "high_250d": 45.6,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 85.49,
+          "amount": 154074.25,
+          "turnover": 154074.25,
+          "institution_score": 5.57,
+          "sector": "计算机设备",
+          "industry": "计算机设备"
+        }
+      ],
+      "momentum_rank": 46,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "软件开发",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300209",
+          "name": "行云科技",
+          "close": 11.14,
+          "price": 11.14,
+          "high_250": 11.14,
+          "high_250d": 11.14,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.04,
+          "change": 20.04,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 74.91,
+          "amount": 139235.21,
+          "turnover": 139235.21,
+          "institution_score": 5.02,
+          "sector": "软件开发",
+          "industry": "软件开发"
+        }
+      ],
+      "momentum_rank": 51,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

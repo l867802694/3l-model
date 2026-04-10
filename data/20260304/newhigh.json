@@ -112,7 +112,12 @@
           "sector": "电网设备",
           "industry": "电网设备"
         }
-      ]
+      ],
+      "momentum_rank": 2,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 31.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "电力",
@@ -180,55 +185,12 @@
           "sector": "电力",
           "industry": "电力"
         }
-      ]
-    },
-    {
-      "sector_name": "种植业",
-      "new_high_count": 2,
-      "stock_count": 2,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600108",
-          "name": "亚盛集团",
-          "close": 5.29,
-          "price": 5.29,
-          "high_250": 5.29,
-          "high_250d": 5.29,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.98,
-          "change": 9.98,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 96.29,
-          "amount": 179790.83,
-          "turnover": 179790.83,
-          "institution_score": 5.75,
-          "sector": "种植业",
-          "industry": "种植业"
-        },
-        {
-          "code": "600313",
-          "name": "农发种业",
-          "close": 9.24,
-          "price": 9.24,
-          "high_250": 9.24,
-          "high_250d": 9.24,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 98.17,
-          "amount": 199783.66,
-          "turnover": 199783.66,
-          "institution_score": 5.77,
-          "sector": "种植业",
-          "industry": "种植业"
-        }
-      ]
+      ],
+      "momentum_rank": 4,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 23.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "油服工程",
@@ -276,35 +238,65 @@
           "sector": "油服工程",
           "industry": "油服工程"
         }
-      ]
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 23.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
-      "sector_name": "其他",
-      "new_high_count": 1,
-      "stock_count": 1,
+      "sector_name": "种植业",
+      "new_high_count": 2,
+      "stock_count": 2,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "code": "600759",
-          "name": "洲际油气",
-          "close": 8.26,
-          "price": 8.26,
-          "high_250": 8.26,
-          "high_250d": 8.26,
+          "code": "600108",
+          "name": "亚盛集团",
+          "close": 5.29,
+          "price": 5.29,
+          "high_250": 5.29,
+          "high_250d": 5.29,
           "consecutive_new_high_days": 1,
           "consecutive_days": 1,
-          "change_pct": 9.99,
-          "change": 9.99,
+          "change_pct": 9.98,
+          "change": 9.98,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 342.1,
-          "amount": 543302.78,
-          "turnover": 543302.78,
-          "institution_score": 7.67,
-          "sector": "其他",
-          "industry": "其他"
+          "circ_mv": 96.29,
+          "amount": 179790.83,
+          "turnover": 179790.83,
+          "institution_score": 5.75,
+          "sector": "种植业",
+          "industry": "种植业"
+        },
+        {
+          "code": "600313",
+          "name": "农发种业",
+          "close": 9.24,
+          "price": 9.24,
+          "high_250": 9.24,
+          "high_250d": 9.24,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 98.17,
+          "amount": 199783.66,
+          "turnover": 199783.66,
+          "institution_score": 5.77,
+          "sector": "种植业",
+          "industry": "种植业"
         }
-      ]
+      ],
+      "momentum_rank": 8,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 16.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "燃气Ⅱ",
@@ -332,63 +324,45 @@
           "sector": "燃气Ⅱ",
           "industry": "燃气Ⅱ"
         }
-      ]
+      ],
+      "momentum_rank": 10,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 11.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
-      "sector_name": "环保设备Ⅱ",
+      "sector_name": "其他",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "code": "000890",
-          "name": "法尔胜",
-          "close": 8.87,
-          "price": 8.87,
-          "high_250": 8.87,
-          "high_250d": 8.87,
+          "code": "600759",
+          "name": "洲际油气",
+          "close": 8.26,
+          "price": 8.26,
+          "high_250": 8.26,
+          "high_250d": 8.26,
           "consecutive_new_high_days": 1,
           "consecutive_days": 1,
-          "change_pct": 10.05,
-          "change": 10.05,
+          "change_pct": 9.99,
+          "change": 9.99,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 35.58,
-          "amount": 99340.63,
-          "turnover": 99340.63,
-          "institution_score": 3.35,
-          "sector": "环保设备Ⅱ",
-          "industry": "环保设备Ⅱ"
+          "circ_mv": 342.1,
+          "amount": 543302.78,
+          "turnover": 543302.78,
+          "institution_score": 7.67,
+          "sector": "其他",
+          "industry": "其他"
         }
-      ]
-    },
-    {
-      "sector_name": "家居用品",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "002162",
-          "name": "悦心健康",
-          "close": 6.08,
-          "price": 6.08,
-          "high_250": 6.08,
-          "high_250d": 6.08,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.95,
-          "change": 9.95,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 53.92,
-          "amount": 51609.03,
-          "turnover": 51609.03,
-          "institution_score": 2.02,
-          "sector": "家居用品",
-          "industry": "家居用品"
-        }
-      ]
+      ],
+      "momentum_rank": 19,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
     },
     {
       "sector_name": "专用设备",
@@ -416,7 +390,78 @@
           "sector": "专用设备",
           "industry": "专用设备"
         }
-      ]
+      ],
+      "momentum_rank": 23,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "环保设备Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000890",
+          "name": "法尔胜",
+          "close": 8.87,
+          "price": 8.87,
+          "high_250": 8.87,
+          "high_250d": 8.87,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.05,
+          "change": 10.05,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 35.58,
+          "amount": 99340.63,
+          "turnover": 99340.63,
+          "institution_score": 3.35,
+          "sector": "环保设备Ⅱ",
+          "industry": "环保设备Ⅱ"
+        }
+      ],
+      "momentum_rank": 39,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "家居用品",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002162",
+          "name": "悦心健康",
+          "close": 6.08,
+          "price": 6.08,
+          "high_250": 6.08,
+          "high_250d": 6.08,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.95,
+          "change": 9.95,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 53.92,
+          "amount": 51609.03,
+          "turnover": 51609.03,
+          "institution_score": 2.02,
+          "sector": "家居用品",
+          "industry": "家居用品"
+        }
+      ],
+      "momentum_rank": 56,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

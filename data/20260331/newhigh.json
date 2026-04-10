@@ -7,62 +7,6 @@
   "total_sectors": 9,
   "sectors": [
     {
-      "sector_name": "商用车",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600066",
-          "name": "宇通客车",
-          "close": 35.86,
-          "price": 35.86,
-          "high_250": 35.86,
-          "high_250d": 35.86,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 793.85,
-          "amount": 119926.56,
-          "turnover": 119926.56,
-          "institution_score": 9.59,
-          "sector": "商用车",
-          "industry": "商用车"
-        }
-      ]
-    },
-    {
-      "sector_name": "其他",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600158",
-          "name": "中体产业",
-          "close": 11.99,
-          "price": 11.99,
-          "high_250": 11.99,
-          "high_250d": 11.99,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 112.76,
-          "amount": 149779.55,
-          "turnover": 149779.55,
-          "institution_score": 5.9,
-          "sector": "其他",
-          "industry": "其他"
-        }
-      ]
-    },
-    {
       "sector_name": "化学制药",
       "new_high_count": 1,
       "stock_count": 1,
@@ -88,35 +32,12 @@
           "sector": "化学制药",
           "industry": "化学制药"
         }
-      ]
-    },
-    {
-      "sector_name": "基础建设",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600502",
-          "name": "安徽建工",
-          "close": 5.63,
-          "price": 5.63,
-          "high_250": 5.63,
-          "high_250d": 5.63,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.96,
-          "change": 9.96,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 95.29,
-          "amount": 94871.62,
-          "turnover": 94871.62,
-          "institution_score": 4.4,
-          "sector": "基础建设",
-          "industry": "基础建设"
-        }
-      ]
+      ],
+      "momentum_rank": 2,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 19.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "非金属材料Ⅱ",
@@ -144,7 +65,111 @@
           "sector": "非金属材料Ⅱ",
           "industry": "非金属材料Ⅱ"
         }
-      ]
+      ],
+      "momentum_rank": 14,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "商用车",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600066",
+          "name": "宇通客车",
+          "close": 35.86,
+          "price": 35.86,
+          "high_250": 35.86,
+          "high_250d": 35.86,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 793.85,
+          "amount": 119926.56,
+          "turnover": 119926.56,
+          "institution_score": 9.59,
+          "sector": "商用车",
+          "industry": "商用车"
+        }
+      ],
+      "momentum_rank": 19,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "其他",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600158",
+          "name": "中体产业",
+          "close": 11.99,
+          "price": 11.99,
+          "high_250": 11.99,
+          "high_250d": 11.99,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 112.76,
+          "amount": 149779.55,
+          "turnover": 149779.55,
+          "institution_score": 5.9,
+          "sector": "其他",
+          "industry": "其他"
+        }
+      ],
+      "momentum_rank": 65,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "基础建设",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600502",
+          "name": "安徽建工",
+          "close": 5.63,
+          "price": 5.63,
+          "high_250": 5.63,
+          "high_250d": 5.63,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.96,
+          "change": 9.96,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 95.29,
+          "amount": 94871.62,
+          "turnover": 94871.62,
+          "institution_score": 4.4,
+          "sector": "基础建设",
+          "industry": "基础建设"
+        }
+      ],
+      "momentum_rank": 16,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "文娱用品",
@@ -172,7 +197,12 @@
           "sector": "文娱用品",
           "industry": "文娱用品"
         }
-      ]
+      ],
+      "momentum_rank": 33,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "中药Ⅱ",
@@ -200,7 +230,12 @@
           "sector": "中药Ⅱ",
           "industry": "中药Ⅱ"
         }
-      ]
+      ],
+      "momentum_rank": 30,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "服装家纺",
@@ -228,7 +263,12 @@
           "sector": "服装家纺",
           "industry": "服装家纺"
         }
-      ]
+      ],
+      "momentum_rank": 56,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "通用设备",
@@ -256,7 +296,12 @@
           "sector": "通用设备",
           "industry": "通用设备"
         }
-      ]
+      ],
+      "momentum_rank": 49,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

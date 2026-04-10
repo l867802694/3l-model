@@ -172,95 +172,12 @@
           "sector": "油服工程",
           "industry": "油服工程"
         }
-      ]
-    },
-    {
-      "sector_name": "炼化及贸易",
-      "new_high_count": 4,
-      "stock_count": 4,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600028",
-          "name": "中国石化",
-          "close": 7.11,
-          "price": 7.11,
-          "high_250": 7.11,
-          "high_250d": 7.11,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.06,
-          "change": 10.06,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 6466.32,
-          "amount": 742915.45,
-          "turnover": 742915.45,
-          "institution_score": 10.0,
-          "sector": "炼化及贸易",
-          "industry": "炼化及贸易"
-        },
-        {
-          "code": "600688",
-          "name": "上海石化",
-          "close": 3.49,
-          "price": 3.49,
-          "high_250": 3.49,
-          "high_250d": 3.49,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.09,
-          "change": 10.09,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 249.22,
-          "amount": 85375.83,
-          "turnover": 85375.83,
-          "institution_score": 3.87,
-          "sector": "炼化及贸易",
-          "industry": "炼化及贸易"
-        },
-        {
-          "code": "601857",
-          "name": "中国石油",
-          "close": 11.95,
-          "price": 11.95,
-          "high_250": 11.95,
-          "high_250d": 11.95,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.04,
-          "change": 10.04,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 18912.58,
-          "amount": 1022225.16,
-          "turnover": 1022225.16,
-          "institution_score": 10.0,
-          "sector": "炼化及贸易",
-          "industry": "炼化及贸易"
-        },
-        {
-          "code": "603353",
-          "name": "和顺石油",
-          "close": 46.34,
-          "price": 46.34,
-          "high_250": 46.34,
-          "high_250d": 46.34,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.99,
-          "change": 9.99,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 77.81,
-          "amount": 93823.96,
-          "turnover": 93823.96,
-          "institution_score": 2.79,
-          "sector": "炼化及贸易",
-          "industry": "炼化及贸易"
-        }
-      ]
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 41.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "小金属",
@@ -348,7 +265,224 @@
           "sector": "小金属",
           "industry": "小金属"
         }
-      ]
+      ],
+      "momentum_rank": 2,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 28.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
+    },
+    {
+      "sector_name": "炼化及贸易",
+      "new_high_count": 4,
+      "stock_count": 4,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600028",
+          "name": "中国石化",
+          "close": 7.11,
+          "price": 7.11,
+          "high_250": 7.11,
+          "high_250d": 7.11,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.06,
+          "change": 10.06,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 6466.32,
+          "amount": 742915.45,
+          "turnover": 742915.45,
+          "institution_score": 10.0,
+          "sector": "炼化及贸易",
+          "industry": "炼化及贸易"
+        },
+        {
+          "code": "600688",
+          "name": "上海石化",
+          "close": 3.49,
+          "price": 3.49,
+          "high_250": 3.49,
+          "high_250d": 3.49,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.09,
+          "change": 10.09,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 249.22,
+          "amount": 85375.83,
+          "turnover": 85375.83,
+          "institution_score": 3.87,
+          "sector": "炼化及贸易",
+          "industry": "炼化及贸易"
+        },
+        {
+          "code": "601857",
+          "name": "中国石油",
+          "close": 11.95,
+          "price": 11.95,
+          "high_250": 11.95,
+          "high_250d": 11.95,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.04,
+          "change": 10.04,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 18912.58,
+          "amount": 1022225.16,
+          "turnover": 1022225.16,
+          "institution_score": 10.0,
+          "sector": "炼化及贸易",
+          "industry": "炼化及贸易"
+        },
+        {
+          "code": "603353",
+          "name": "和顺石油",
+          "close": 46.34,
+          "price": 46.34,
+          "high_250": 46.34,
+          "high_250d": 46.34,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 77.81,
+          "amount": 93823.96,
+          "turnover": 93823.96,
+          "institution_score": 2.79,
+          "sector": "炼化及贸易",
+          "industry": "炼化及贸易"
+        }
+      ],
+      "momentum_rank": 9,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 21.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
+    },
+    {
+      "sector_name": "元件",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603738",
+          "name": "泰晶科技",
+          "close": 23.96,
+          "price": 23.96,
+          "high_250": 23.96,
+          "high_250d": 23.96,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 86.69,
+          "amount": 170656.66,
+          "turnover": 170656.66,
+          "institution_score": 4.66,
+          "sector": "元件",
+          "industry": "元件"
+        }
+      ],
+      "momentum_rank": 3,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 18.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "电网设备",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603861",
+          "name": "白云电器",
+          "close": 20.49,
+          "price": 20.49,
+          "high_250": 20.49,
+          "high_250d": 20.49,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.98,
+          "change": 9.98,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 102.84,
+          "amount": 79162.44,
+          "turnover": 79162.44,
+          "institution_score": 2.63,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        },
+        {
+          "code": "603897",
+          "name": "长城科技",
+          "close": 33.7,
+          "price": 33.7,
+          "high_250": 33.7,
+          "high_250d": 33.7,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 68.11,
+          "amount": 62299.97,
+          "turnover": 62299.97,
+          "institution_score": 1.97,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        }
+      ],
+      "momentum_rank": 7,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 17.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "煤炭开采",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "601918",
+          "name": "新集能源",
+          "close": 8.0,
+          "price": 8.0,
+          "high_250": 8.0,
+          "high_250d": 8.0,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 3.36,
+          "change": 3.36,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 204.78,
+          "amount": 100757.7,
+          "turnover": 100757.7,
+          "institution_score": 3.9,
+          "sector": "煤炭开采",
+          "industry": "煤炭开采"
+        }
+      ],
+      "momentum_rank": 4,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 17.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "化学原料",
@@ -436,7 +570,12 @@
           "sector": "化学原料",
           "industry": "化学原料"
         }
-      ]
+      ],
+      "momentum_rank": 25,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 16.2,
+      "sector_reason": "与动量主线同向 / 新高数量集中"
     },
     {
       "sector_name": "专用设备",
@@ -524,7 +663,45 @@
           "sector": "专用设备",
           "industry": "专用设备"
         }
-      ]
+      ],
+      "momentum_rank": 30,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 16.2,
+      "sector_reason": "与动量主线同向 / 新高数量集中"
+    },
+    {
+      "sector_name": "通用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "300157",
+          "name": "新锦动力",
+          "close": 8.39,
+          "price": 8.39,
+          "high_250": 8.39,
+          "high_250d": 8.39,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.03,
+          "change": 20.03,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 56.1,
+          "amount": 195646.3,
+          "turnover": 195646.3,
+          "institution_score": 5.01,
+          "sector": "通用设备",
+          "industry": "通用设备"
+        }
+      ],
+      "momentum_rank": 5,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 16.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "航运港口",
@@ -592,7 +769,12 @@
           "sector": "航运港口",
           "industry": "航运港口"
         }
-      ]
+      ],
+      "momentum_rank": 20,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 15.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "农化制品",
@@ -660,7 +842,12 @@
           "sector": "农化制品",
           "industry": "农化制品"
         }
-      ]
+      ],
+      "momentum_rank": 12,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 15.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "其他",
@@ -728,7 +915,65 @@
           "sector": "其他",
           "industry": "其他"
         }
-      ]
+      ],
+      "momentum_rank": 28,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 13.2,
+      "sector_reason": "与动量主线同向 / 新高数量集中"
+    },
+    {
+      "sector_name": "电力",
+      "new_high_count": 2,
+      "stock_count": 2,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600236",
+          "name": "桂冠电力",
+          "close": 9.78,
+          "price": 9.78,
+          "high_250": 9.78,
+          "high_250d": 9.78,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 752.62,
+          "amount": 24527.92,
+          "turnover": 24527.92,
+          "institution_score": 5.58,
+          "sector": "电力",
+          "industry": "电力"
+        },
+        {
+          "code": "600452",
+          "name": "涪陵电力",
+          "close": 14.61,
+          "price": 14.61,
+          "high_250": 14.61,
+          "high_250d": 14.61,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 222.86,
+          "amount": 121508.61,
+          "turnover": 121508.61,
+          "institution_score": 4.52,
+          "sector": "电力",
+          "industry": "电力"
+        }
+      ],
+      "momentum_rank": 23,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 12.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "燃气Ⅱ",
@@ -796,103 +1041,144 @@
           "sector": "燃气Ⅱ",
           "industry": "燃气Ⅱ"
         }
-      ]
+      ],
+      "momentum_rank": 36,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 11.2,
+      "sector_reason": "新高数量集中"
     },
     {
-      "sector_name": "电力",
-      "new_high_count": 2,
-      "stock_count": 2,
+      "sector_name": "种植业",
+      "new_high_count": 1,
+      "stock_count": 1,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "code": "600236",
-          "name": "桂冠电力",
-          "close": 9.78,
-          "price": 9.78,
-          "high_250": 9.78,
-          "high_250d": 9.78,
+          "code": "600108",
+          "name": "亚盛集团",
+          "close": 4.37,
+          "price": 4.37,
+          "high_250": 4.37,
+          "high_250d": 4.37,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.08,
+          "change": 10.08,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 85.08,
+          "amount": 30745.07,
+          "turnover": 30745.07,
+          "institution_score": 1.36,
+          "sector": "种植业",
+          "industry": "种植业"
+        }
+      ],
+      "momentum_rank": 21,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "通信设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600498",
+          "name": "烽火通信",
+          "close": 56.71,
+          "price": 56.71,
+          "high_250": 56.71,
+          "high_250d": 56.71,
           "consecutive_new_high_days": 1,
           "consecutive_days": 1,
           "change_pct": 10.01,
           "change": 10.01,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 752.62,
-          "amount": 24527.92,
-          "turnover": 24527.92,
-          "institution_score": 5.58,
-          "sector": "电力",
-          "industry": "电力"
-        },
-        {
-          "code": "600452",
-          "name": "涪陵电力",
-          "close": 14.61,
-          "price": 14.61,
-          "high_250": 14.61,
-          "high_250d": 14.61,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.02,
-          "change": 10.02,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 222.86,
-          "amount": 121508.61,
-          "turnover": 121508.61,
-          "institution_score": 4.52,
-          "sector": "电力",
-          "industry": "电力"
+          "circ_mv": 711.42,
+          "amount": 198350.35,
+          "turnover": 198350.35,
+          "institution_score": 9.66,
+          "sector": "通信设备",
+          "industry": "通信设备"
         }
-      ]
+      ],
+      "momentum_rank": 13,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
-      "sector_name": "电网设备",
-      "new_high_count": 2,
-      "stock_count": 2,
+      "sector_name": "消费电子",
+      "new_high_count": 1,
+      "stock_count": 1,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "code": "603861",
-          "name": "白云电器",
-          "close": 20.49,
-          "price": 20.49,
-          "high_250": 20.49,
-          "high_250d": 20.49,
+          "code": "603629",
+          "name": "利通电子",
+          "close": 64.37,
+          "price": 64.37,
+          "high_250": 64.37,
+          "high_250d": 64.37,
           "consecutive_new_high_days": 1,
           "consecutive_days": 1,
-          "change_pct": 9.98,
-          "change": 9.98,
+          "change_pct": 10.0,
+          "change": 10.0,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 102.84,
-          "amount": 79162.44,
-          "turnover": 79162.44,
-          "institution_score": 2.63,
-          "sector": "电网设备",
-          "industry": "电网设备"
-        },
-        {
-          "code": "603897",
-          "name": "长城科技",
-          "close": 33.7,
-          "price": 33.7,
-          "high_250": 33.7,
-          "high_250d": 33.7,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.99,
-          "change": 9.99,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 68.11,
-          "amount": 62299.97,
-          "turnover": 62299.97,
-          "institution_score": 1.97,
-          "sector": "电网设备",
-          "industry": "电网设备"
+          "circ_mv": 161.28,
+          "amount": 278988.39,
+          "turnover": 278988.39,
+          "institution_score": 6.2,
+          "sector": "消费电子",
+          "industry": "消费电子"
         }
-      ]
+      ],
+      "momentum_rank": 18,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "光伏设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "605117",
+          "name": "德业股份",
+          "close": 114.95,
+          "price": 114.95,
+          "high_250": 114.95,
+          "high_250d": 114.95,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 1018.39,
+          "amount": 179196.38,
+          "turnover": 179196.38,
+          "institution_score": 9.21,
+          "sector": "光伏设备",
+          "industry": "光伏设备"
+        }
+      ],
+      "momentum_rank": 16,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "汽车零部件",
@@ -940,343 +1226,12 @@
           "sector": "汽车零部件",
           "industry": "汽车零部件"
         }
-      ]
-    },
-    {
-      "sector_name": "种植业",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600108",
-          "name": "亚盛集团",
-          "close": 4.37,
-          "price": 4.37,
-          "high_250": 4.37,
-          "high_250d": 4.37,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.08,
-          "change": 10.08,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 85.08,
-          "amount": 30745.07,
-          "turnover": 30745.07,
-          "institution_score": 1.36,
-          "sector": "种植业",
-          "industry": "种植业"
-        }
-      ]
-    },
-    {
-      "sector_name": "通信设备",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600498",
-          "name": "烽火通信",
-          "close": 56.71,
-          "price": 56.71,
-          "high_250": 56.71,
-          "high_250d": 56.71,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 711.42,
-          "amount": 198350.35,
-          "turnover": 198350.35,
-          "institution_score": 9.66,
-          "sector": "通信设备",
-          "industry": "通信设备"
-        }
-      ]
-    },
-    {
-      "sector_name": "煤炭开采",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "601918",
-          "name": "新集能源",
-          "close": 8.0,
-          "price": 8.0,
-          "high_250": 8.0,
-          "high_250d": 8.0,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 3.36,
-          "change": 3.36,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 204.78,
-          "amount": 100757.7,
-          "turnover": 100757.7,
-          "institution_score": 3.9,
-          "sector": "煤炭开采",
-          "industry": "煤炭开采"
-        }
-      ]
-    },
-    {
-      "sector_name": "工业金属",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603115",
-          "name": "海星股份",
-          "close": 30.91,
-          "price": 30.91,
-          "high_250": 30.91,
-          "high_250d": 30.91,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 72.92,
-          "amount": 43780.26,
-          "turnover": 43780.26,
-          "institution_score": 1.57,
-          "sector": "工业金属",
-          "industry": "工业金属"
-        }
-      ]
-    },
-    {
-      "sector_name": "消费电子",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603629",
-          "name": "利通电子",
-          "close": 64.37,
-          "price": 64.37,
-          "high_250": 64.37,
-          "high_250d": 64.37,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 161.28,
-          "amount": 278988.39,
-          "turnover": 278988.39,
-          "institution_score": 6.2,
-          "sector": "消费电子",
-          "industry": "消费电子"
-        }
-      ]
-    },
-    {
-      "sector_name": "元件",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603738",
-          "name": "泰晶科技",
-          "close": 23.96,
-          "price": 23.96,
-          "high_250": 23.96,
-          "high_250d": 23.96,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 86.69,
-          "amount": 170656.66,
-          "turnover": 170656.66,
-          "institution_score": 4.66,
-          "sector": "元件",
-          "industry": "元件"
-        }
-      ]
-    },
-    {
-      "sector_name": "光伏设备",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "605117",
-          "name": "德业股份",
-          "close": 114.95,
-          "price": 114.95,
-          "high_250": 114.95,
-          "high_250d": 114.95,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 1018.39,
-          "amount": 179196.38,
-          "turnover": 179196.38,
-          "institution_score": 9.21,
-          "sector": "光伏设备",
-          "industry": "光伏设备"
-        }
-      ]
-    },
-    {
-      "sector_name": "计算机设备",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "688307",
-          "name": "中润光学",
-          "close": 60.02,
-          "price": 60.02,
-          "high_250": 60.02,
-          "high_250d": 60.02,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 19.99,
-          "change": 19.99,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 48.89,
-          "amount": 55119.19,
-          "turnover": 55119.19,
-          "institution_score": 1.66,
-          "sector": "计算机设备",
-          "industry": "计算机设备"
-        }
-      ]
-    },
-    {
-      "sector_name": "环境治理",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "000035",
-          "name": "中国天楹",
-          "close": 7.71,
-          "price": 7.71,
-          "high_250": 7.71,
-          "high_250d": 7.71,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.99,
-          "change": 9.99,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 177.82,
-          "amount": 96343.62,
-          "turnover": 96343.62,
-          "institution_score": 3.59,
-          "sector": "环境治理",
-          "industry": "环境治理"
-        }
-      ]
-    },
-    {
-      "sector_name": "环保设备Ⅱ",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "000890",
-          "name": "法尔胜",
-          "close": 8.43,
-          "price": 8.43,
-          "high_250": 8.43,
-          "high_250d": 8.43,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.05,
-          "change": 10.05,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 34.07,
-          "amount": 100645.63,
-          "turnover": 100645.63,
-          "institution_score": 2.62,
-          "sector": "环保设备Ⅱ",
-          "industry": "环保设备Ⅱ"
-        }
-      ]
-    },
-    {
-      "sector_name": "基础建设",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "001267",
-          "name": "汇绿生态",
-          "close": 33.55,
-          "price": 33.55,
-          "high_250": 33.55,
-          "high_250d": 33.55,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 198.76,
-          "amount": 173930.84,
-          "turnover": 173930.84,
-          "institution_score": 5.57,
-          "sector": "基础建设",
-          "industry": "基础建设"
-        }
-      ]
-    },
-    {
-      "sector_name": "贵金属",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "002155",
-          "name": "湖南黄金",
-          "close": 41.47,
-          "price": 41.47,
-          "high_250": 41.47,
-          "high_250d": 41.47,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 631.95,
-          "amount": 1072996.23,
-          "turnover": 1072996.23,
-          "institution_score": 9.72,
-          "sector": "贵金属",
-          "industry": "贵金属"
-        }
-      ]
+      ],
+      "momentum_rank": 40,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 8.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "IT服务Ⅱ",
@@ -1304,7 +1259,210 @@
           "sector": "IT服务Ⅱ",
           "industry": "IT服务Ⅱ"
         }
-      ]
+      ],
+      "momentum_rank": 26,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "工业金属",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603115",
+          "name": "海星股份",
+          "close": 30.91,
+          "price": 30.91,
+          "high_250": 30.91,
+          "high_250d": 30.91,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 72.92,
+          "amount": 43780.26,
+          "turnover": 43780.26,
+          "institution_score": 1.57,
+          "sector": "工业金属",
+          "industry": "工业金属"
+        }
+      ],
+      "momentum_rank": 42,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "计算机设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "688307",
+          "name": "中润光学",
+          "close": 60.02,
+          "price": 60.02,
+          "high_250": 60.02,
+          "high_250d": 60.02,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 19.99,
+          "change": 19.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 48.89,
+          "amount": 55119.19,
+          "turnover": 55119.19,
+          "institution_score": 1.66,
+          "sector": "计算机设备",
+          "industry": "计算机设备"
+        }
+      ],
+      "momentum_rank": 51,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "环境治理",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000035",
+          "name": "中国天楹",
+          "close": 7.71,
+          "price": 7.71,
+          "high_250": 7.71,
+          "high_250d": 7.71,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 177.82,
+          "amount": 96343.62,
+          "turnover": 96343.62,
+          "institution_score": 3.59,
+          "sector": "环境治理",
+          "industry": "环境治理"
+        }
+      ],
+      "momentum_rank": 50,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "环保设备Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000890",
+          "name": "法尔胜",
+          "close": 8.43,
+          "price": 8.43,
+          "high_250": 8.43,
+          "high_250d": 8.43,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.05,
+          "change": 10.05,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 34.07,
+          "amount": 100645.63,
+          "turnover": 100645.63,
+          "institution_score": 2.62,
+          "sector": "环保设备Ⅱ",
+          "industry": "环保设备Ⅱ"
+        }
+      ],
+      "momentum_rank": 43,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "基础建设",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "001267",
+          "name": "汇绿生态",
+          "close": 33.55,
+          "price": 33.55,
+          "high_250": 33.55,
+          "high_250d": 33.55,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 198.76,
+          "amount": 173930.84,
+          "turnover": 173930.84,
+          "institution_score": 5.57,
+          "sector": "基础建设",
+          "industry": "基础建设"
+        }
+      ],
+      "momentum_rank": 59,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "贵金属",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002155",
+          "name": "湖南黄金",
+          "close": 41.47,
+          "price": 41.47,
+          "high_250": 41.47,
+          "high_250d": 41.47,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 631.95,
+          "amount": 1072996.23,
+          "turnover": 1072996.23,
+          "institution_score": 9.72,
+          "sector": "贵金属",
+          "industry": "贵金属"
+        }
+      ],
+      "momentum_rank": 38,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "医疗器械",
@@ -1332,35 +1490,12 @@
           "sector": "医疗器械",
           "industry": "医疗器械"
         }
-      ]
-    },
-    {
-      "sector_name": "通用设备",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "300157",
-          "name": "新锦动力",
-          "close": 8.39,
-          "price": 8.39,
-          "high_250": 8.39,
-          "high_250d": 8.39,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 20.03,
-          "change": 20.03,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 56.1,
-          "amount": 195646.3,
-          "turnover": 195646.3,
-          "institution_score": 5.01,
-          "sector": "通用设备",
-          "industry": "通用设备"
-        }
-      ]
+      ],
+      "momentum_rank": 54,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

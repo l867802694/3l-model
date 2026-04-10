@@ -72,7 +72,12 @@
           "sector": "电力",
           "industry": "电力"
         }
-      ]
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 26.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "煤炭开采",
@@ -100,7 +105,12 @@
           "sector": "煤炭开采",
           "industry": "煤炭开采"
         }
-      ]
+      ],
+      "momentum_rank": 2,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 19.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "电网设备",
@@ -128,63 +138,12 @@
           "sector": "电网设备",
           "industry": "电网设备"
         }
-      ]
-    },
-    {
-      "sector_name": "包装印刷",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603687",
-          "name": "大胜达",
-          "close": 14.73,
-          "price": 14.73,
-          "high_250": 14.73,
-          "high_250d": 14.73,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 79.16,
-          "amount": 240482.67,
-          "turnover": 240482.67,
-          "institution_score": 5.66,
-          "sector": "包装印刷",
-          "industry": "包装印刷"
-        }
-      ]
-    },
-    {
-      "sector_name": "通用设备",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "002150",
-          "name": "正泰电源",
-          "close": 38.37,
-          "price": 38.37,
-          "high_250": 38.37,
-          "high_250d": 38.37,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 136.2,
-          "amount": 224985.16,
-          "turnover": 224985.16,
-          "institution_score": 6.13,
-          "sector": "通用设备",
-          "industry": "通用设备"
-        }
-      ]
+      ],
+      "momentum_rank": 7,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 14.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "基础建设",
@@ -212,7 +171,78 @@
           "sector": "基础建设",
           "industry": "基础建设"
         }
-      ]
+      ],
+      "momentum_rank": 13,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "包装印刷",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603687",
+          "name": "大胜达",
+          "close": 14.73,
+          "price": 14.73,
+          "high_250": 14.73,
+          "high_250d": 14.73,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 79.16,
+          "amount": 240482.67,
+          "turnover": 240482.67,
+          "institution_score": 5.66,
+          "sector": "包装印刷",
+          "industry": "包装印刷"
+        }
+      ],
+      "momentum_rank": 46,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "通用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002150",
+          "name": "正泰电源",
+          "close": 38.37,
+          "price": 38.37,
+          "high_250": 38.37,
+          "high_250d": 38.37,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 136.2,
+          "amount": 224985.16,
+          "turnover": 224985.16,
+          "institution_score": 6.13,
+          "sector": "通用设备",
+          "industry": "通用设备"
+        }
+      ],
+      "momentum_rank": 40,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "消费电子",
@@ -240,7 +270,12 @@
           "sector": "消费电子",
           "industry": "消费电子"
         }
-      ]
+      ],
+      "momentum_rank": 31,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

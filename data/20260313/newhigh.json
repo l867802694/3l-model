@@ -92,55 +92,45 @@
           "sector": "风电设备",
           "industry": "风电设备"
         }
-      ]
+      ],
+      "momentum_rank": 3,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 27.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
-      "sector_name": "农化制品",
-      "new_high_count": 2,
-      "stock_count": 2,
+      "sector_name": "电力",
+      "new_high_count": 1,
+      "stock_count": 1,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "code": "600227",
-          "name": "赤天化",
-          "close": 4.37,
-          "price": 4.37,
-          "high_250": 4.37,
-          "high_250d": 4.37,
+          "code": "600726",
+          "name": "华电能源",
+          "close": 4.27,
+          "price": 4.27,
+          "high_250": 4.27,
+          "high_250d": 4.27,
           "consecutive_new_high_days": 1,
           "consecutive_days": 1,
-          "change_pct": 10.08,
-          "change": 10.08,
+          "change_pct": 10.05,
+          "change": 10.05,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 54.79,
-          "amount": 170736.58,
-          "turnover": 170736.58,
-          "institution_score": 5.41,
-          "sector": "农化制品",
-          "industry": "农化制品"
-        },
-        {
-          "code": "600691",
-          "name": "潞化科技",
-          "close": 4.43,
-          "price": 4.43,
-          "high_250": 4.43,
-          "high_250d": 4.43,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.93,
-          "change": 9.93,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 105.19,
-          "amount": 31260.0,
-          "turnover": 31260.0,
-          "institution_score": 1.76,
-          "sector": "农化制品",
-          "industry": "农化制品"
+          "circ_mv": 300.48,
+          "amount": 149377.55,
+          "turnover": 149377.55,
+          "institution_score": 6.87,
+          "sector": "电力",
+          "industry": "电力"
         }
-      ]
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 20.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "化学原料",
@@ -188,91 +178,65 @@
           "sector": "化学原料",
           "industry": "化学原料"
         }
-      ]
+      ],
+      "momentum_rank": 5,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 19.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
-      "sector_name": "普钢",
-      "new_high_count": 1,
-      "stock_count": 1,
+      "sector_name": "农化制品",
+      "new_high_count": 2,
+      "stock_count": 2,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "code": "600307",
-          "name": "酒钢宏兴",
-          "close": 2.22,
-          "price": 2.22,
-          "high_250": 2.22,
-          "high_250d": 2.22,
+          "code": "600227",
+          "name": "赤天化",
+          "close": 4.37,
+          "price": 4.37,
+          "high_250": 4.37,
+          "high_250d": 4.37,
           "consecutive_new_high_days": 1,
           "consecutive_days": 1,
-          "change_pct": 9.9,
-          "change": 9.9,
+          "change_pct": 10.08,
+          "change": 10.08,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 137.23,
-          "amount": 93562.91,
-          "turnover": 93562.91,
-          "institution_score": 3.92,
-          "sector": "普钢",
-          "industry": "普钢"
-        }
-      ]
-    },
-    {
-      "sector_name": "房地产开发",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
+          "circ_mv": 54.79,
+          "amount": 170736.58,
+          "turnover": 170736.58,
+          "institution_score": 5.41,
+          "sector": "农化制品",
+          "industry": "农化制品"
+        },
         {
-          "code": "600683",
-          "name": "京投发展",
-          "close": 8.76,
-          "price": 8.76,
-          "high_250": 8.76,
-          "high_250d": 8.76,
+          "code": "600691",
+          "name": "潞化科技",
+          "close": 4.43,
+          "price": 4.43,
+          "high_250": 4.43,
+          "high_250d": 4.43,
           "consecutive_new_high_days": 1,
           "consecutive_days": 1,
-          "change_pct": 10.05,
-          "change": 10.05,
+          "change_pct": 9.93,
+          "change": 9.93,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 62.21,
-          "amount": 36427.63,
-          "turnover": 36427.63,
-          "institution_score": 1.59,
-          "sector": "房地产开发",
-          "industry": "房地产开发"
+          "circ_mv": 105.19,
+          "amount": 31260.0,
+          "turnover": 31260.0,
+          "institution_score": 1.76,
+          "sector": "农化制品",
+          "industry": "农化制品"
         }
-      ]
-    },
-    {
-      "sector_name": "电力",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600726",
-          "name": "华电能源",
-          "close": 4.27,
-          "price": 4.27,
-          "high_250": 4.27,
-          "high_250d": 4.27,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.05,
-          "change": 10.05,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 300.48,
-          "amount": 149377.55,
-          "turnover": 149377.55,
-          "institution_score": 6.87,
-          "sector": "电力",
-          "industry": "电力"
-        }
-      ]
+      ],
+      "momentum_rank": 6,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 18.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "电池",
@@ -300,7 +264,12 @@
           "sector": "电池",
           "industry": "电池"
         }
-      ]
+      ],
+      "momentum_rank": 11,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 10.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "通信设备",
@@ -328,35 +297,12 @@
           "sector": "通信设备",
           "industry": "通信设备"
         }
-      ]
-    },
-    {
-      "sector_name": "环保设备Ⅱ",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "000890",
-          "name": "法尔胜",
-          "close": 11.09,
-          "price": 11.09,
-          "high_250": 11.09,
-          "high_250d": 11.09,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.02,
-          "change": 10.02,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 45.69,
-          "amount": 42479.96,
-          "turnover": 42479.96,
-          "institution_score": 1.65,
-          "sector": "环保设备Ⅱ",
-          "industry": "环保设备Ⅱ"
-        }
-      ]
+      ],
+      "momentum_rank": 13,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "光伏设备",
@@ -384,35 +330,12 @@
           "sector": "光伏设备",
           "industry": "光伏设备"
         }
-      ]
-    },
-    {
-      "sector_name": "医疗器械",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "002382",
-          "name": "蓝帆医疗",
-          "close": 7.59,
-          "price": 7.59,
-          "high_250": 7.59,
-          "high_250d": 7.59,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 74.87,
-          "amount": 41042.53,
-          "turnover": 41042.53,
-          "institution_score": 1.83,
-          "sector": "医疗器械",
-          "industry": "医疗器械"
-        }
-      ]
+      ],
+      "momentum_rank": 14,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "通用设备",
@@ -440,7 +363,144 @@
           "sector": "通用设备",
           "industry": "通用设备"
         }
-      ]
+      ],
+      "momentum_rank": 17,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 9.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "环保设备Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "000890",
+          "name": "法尔胜",
+          "close": 11.09,
+          "price": 11.09,
+          "high_250": 11.09,
+          "high_250d": 11.09,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.02,
+          "change": 10.02,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 45.69,
+          "amount": 42479.96,
+          "turnover": 42479.96,
+          "institution_score": 1.65,
+          "sector": "环保设备Ⅱ",
+          "industry": "环保设备Ⅱ"
+        }
+      ],
+      "momentum_rank": 24,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "普钢",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600307",
+          "name": "酒钢宏兴",
+          "close": 2.22,
+          "price": 2.22,
+          "high_250": 2.22,
+          "high_250d": 2.22,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.9,
+          "change": 9.9,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 137.23,
+          "amount": 93562.91,
+          "turnover": 93562.91,
+          "institution_score": 3.92,
+          "sector": "普钢",
+          "industry": "普钢"
+        }
+      ],
+      "momentum_rank": 44,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "房地产开发",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600683",
+          "name": "京投发展",
+          "close": 8.76,
+          "price": 8.76,
+          "high_250": 8.76,
+          "high_250d": 8.76,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.05,
+          "change": 10.05,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 62.21,
+          "amount": 36427.63,
+          "turnover": 36427.63,
+          "institution_score": 1.59,
+          "sector": "房地产开发",
+          "industry": "房地产开发"
+        }
+      ],
+      "momentum_rank": 75,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "医疗器械",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002382",
+          "name": "蓝帆医疗",
+          "close": 7.59,
+          "price": 7.59,
+          "high_250": 7.59,
+          "high_250d": 7.59,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 74.87,
+          "amount": 41042.53,
+          "turnover": 41042.53,
+          "institution_score": 1.83,
+          "sector": "医疗器械",
+          "industry": "医疗器械"
+        }
+      ],
+      "momentum_rank": 39,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

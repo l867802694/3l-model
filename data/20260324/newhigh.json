@@ -132,7 +132,12 @@
           "sector": "电力",
           "industry": "电力"
         }
-      ]
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 35.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "煤炭开采",
@@ -160,91 +165,12 @@
           "sector": "煤炭开采",
           "industry": "煤炭开采"
         }
-      ]
-    },
-    {
-      "sector_name": "工业金属",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603115",
-          "name": "海星股份",
-          "close": 35.21,
-          "price": 35.21,
-          "high_250": 35.21,
-          "high_250d": 35.21,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 83.16,
-          "amount": 34400.27,
-          "turnover": 34400.27,
-          "institution_score": 1.88,
-          "sector": "工业金属",
-          "industry": "工业金属"
-        }
-      ]
-    },
-    {
-      "sector_name": "专业工程",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603929",
-          "name": "亚翔集成",
-          "close": 191.18,
-          "price": 191.18,
-          "high_250": 191.18,
-          "high_250d": 191.18,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 393.47,
-          "amount": 72631.36,
-          "turnover": 72631.36,
-          "institution_score": 5.79,
-          "sector": "专业工程",
-          "industry": "专业工程"
-        }
-      ]
-    },
-    {
-      "sector_name": "中药Ⅱ",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "002082",
-          "name": "万邦德",
-          "close": 19.79,
-          "price": 19.79,
-          "high_250": 19.79,
-          "high_250d": 19.79,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 106.76,
-          "amount": 53162.69,
-          "turnover": 53162.69,
-          "institution_score": 2.73,
-          "sector": "中药Ⅱ",
-          "industry": "中药Ⅱ"
-        }
-      ]
+      ],
+      "momentum_rank": 2,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 19.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "电网设备",
@@ -272,7 +198,111 @@
           "sector": "电网设备",
           "industry": "电网设备"
         }
-      ]
+      ],
+      "momentum_rank": 5,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 16.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "工业金属",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603115",
+          "name": "海星股份",
+          "close": 35.21,
+          "price": 35.21,
+          "high_250": 35.21,
+          "high_250d": 35.21,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 83.16,
+          "amount": 34400.27,
+          "turnover": 34400.27,
+          "institution_score": 1.88,
+          "sector": "工业金属",
+          "industry": "工业金属"
+        }
+      ],
+      "momentum_rank": 73,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "专业工程",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603929",
+          "name": "亚翔集成",
+          "close": 191.18,
+          "price": 191.18,
+          "high_250": 191.18,
+          "high_250d": 191.18,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 393.47,
+          "amount": 72631.36,
+          "turnover": 72631.36,
+          "institution_score": 5.79,
+          "sector": "专业工程",
+          "industry": "专业工程"
+        }
+      ],
+      "momentum_rank": 25,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "中药Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002082",
+          "name": "万邦德",
+          "close": 19.79,
+          "price": 19.79,
+          "high_250": 19.79,
+          "high_250d": 19.79,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 106.76,
+          "amount": 53162.69,
+          "turnover": 53162.69,
+          "institution_score": 2.73,
+          "sector": "中药Ⅱ",
+          "industry": "中药Ⅱ"
+        }
+      ],
+      "momentum_rank": 80,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "环境治理",
@@ -300,7 +330,12 @@
           "sector": "环境治理",
           "industry": "环境治理"
         }
-      ]
+      ],
+      "momentum_rank": 18,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

@@ -72,75 +72,12 @@
           "sector": "电力",
           "industry": "电力"
         }
-      ]
-    },
-    {
-      "sector_name": "通用设备",
-      "new_high_count": 3,
-      "stock_count": 3,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603269",
-          "name": "海鸥股份",
-          "close": 17.93,
-          "price": 17.93,
-          "high_250": 17.93,
-          "high_250d": 17.93,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 53.34,
-          "amount": 66830.85,
-          "turnover": 66830.85,
-          "institution_score": 2.56,
-          "sector": "通用设备",
-          "industry": "通用设备"
-        },
-        {
-          "code": "002903",
-          "name": "宇环数控",
-          "close": 30.37,
-          "price": 30.37,
-          "high_250": 30.37,
-          "high_250d": 30.37,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 31.32,
-          "amount": 54070.2,
-          "turnover": 54070.2,
-          "institution_score": 1.99,
-          "sector": "通用设备",
-          "industry": "通用设备"
-        },
-        {
-          "code": "300257",
-          "name": "开山股份",
-          "close": 34.33,
-          "price": 34.33,
-          "high_250": 34.33,
-          "high_250d": 34.33,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 19.99,
-          "change": 19.99,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 316.84,
-          "amount": 133054.78,
-          "turnover": 133054.78,
-          "institution_score": 6.69,
-          "sector": "通用设备",
-          "industry": "通用设备"
-        }
-      ]
+      ],
+      "momentum_rank": 2,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 25.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "元件",
@@ -208,7 +145,151 @@
           "sector": "元件",
           "industry": "元件"
         }
-      ]
+      ],
+      "momentum_rank": 4,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 23.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
+    },
+    {
+      "sector_name": "电网设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002350",
+          "name": "北京科锐",
+          "close": 15.22,
+          "price": 15.22,
+          "high_250": 15.22,
+          "high_250d": 15.22,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.97,
+          "change": 9.97,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 76.02,
+          "amount": 100274.09,
+          "turnover": 100274.09,
+          "institution_score": 3.82,
+          "sector": "电网设备",
+          "industry": "电网设备"
+        }
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 20.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "通用设备",
+      "new_high_count": 3,
+      "stock_count": 3,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603269",
+          "name": "海鸥股份",
+          "close": 17.93,
+          "price": 17.93,
+          "high_250": 17.93,
+          "high_250d": 17.93,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 53.34,
+          "amount": 66830.85,
+          "turnover": 66830.85,
+          "institution_score": 2.56,
+          "sector": "通用设备",
+          "industry": "通用设备"
+        },
+        {
+          "code": "002903",
+          "name": "宇环数控",
+          "close": 30.37,
+          "price": 30.37,
+          "high_250": 30.37,
+          "high_250d": 30.37,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 31.32,
+          "amount": 54070.2,
+          "turnover": 54070.2,
+          "institution_score": 1.99,
+          "sector": "通用设备",
+          "industry": "通用设备"
+        },
+        {
+          "code": "300257",
+          "name": "开山股份",
+          "close": 34.33,
+          "price": 34.33,
+          "high_250": 34.33,
+          "high_250d": 34.33,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 19.99,
+          "change": 19.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 316.84,
+          "amount": 133054.78,
+          "turnover": 133054.78,
+          "institution_score": 6.69,
+          "sector": "通用设备",
+          "industry": "通用设备"
+        }
+      ],
+      "momentum_rank": 11,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 16.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
+    },
+    {
+      "sector_name": "非金属材料Ⅱ",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "688300",
+          "name": "联瑞新材",
+          "close": 99.96,
+          "price": 99.96,
+          "high_250": 99.96,
+          "high_250d": 99.96,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 235.05,
+          "amount": 181325.74,
+          "turnover": 181325.74,
+          "institution_score": 6.77,
+          "sector": "非金属材料Ⅱ",
+          "industry": "非金属材料Ⅱ"
+        }
+      ],
+      "momentum_rank": 7,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 14.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "通信设备",
@@ -256,63 +337,12 @@
           "sector": "通信设备",
           "industry": "通信设备"
         }
-      ]
-    },
-    {
-      "sector_name": "种植业",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600108",
-          "name": "亚盛集团",
-          "close": 5.97,
-          "price": 5.97,
-          "high_250": 5.97,
-          "high_250d": 5.97,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.94,
-          "change": 9.94,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 111.72,
-          "amount": 257078.55,
-          "turnover": 257078.55,
-          "institution_score": 5.84,
-          "sector": "种植业",
-          "industry": "种植业"
-        }
-      ]
-    },
-    {
-      "sector_name": "工业金属",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603115",
-          "name": "海星股份",
-          "close": 32.0,
-          "price": 32.0,
-          "high_250": 32.0,
-          "high_250d": 32.0,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 74.77,
-          "amount": 27715.21,
-          "turnover": 27715.21,
-          "institution_score": 1.46,
-          "sector": "工业金属",
-          "industry": "工业金属"
-        }
-      ]
+      ],
+      "momentum_rank": 15,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 12.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "半导体",
@@ -340,63 +370,12 @@
           "sector": "半导体",
           "industry": "半导体"
         }
-      ]
-    },
-    {
-      "sector_name": "非金属材料Ⅱ",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "688300",
-          "name": "联瑞新材",
-          "close": 99.96,
-          "price": 99.96,
-          "high_250": 99.96,
-          "high_250d": 99.96,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 20.0,
-          "change": 20.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 235.05,
-          "amount": 181325.74,
-          "turnover": 181325.74,
-          "institution_score": 6.77,
-          "sector": "非金属材料Ⅱ",
-          "industry": "非金属材料Ⅱ"
-        }
-      ]
-    },
-    {
-      "sector_name": "基础建设",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "001267",
-          "name": "汇绿生态",
-          "close": 45.68,
-          "price": 45.68,
-          "high_250": 45.68,
-          "high_250d": 45.68,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.99,
-          "change": 9.99,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 271.0,
-          "amount": 201982.02,
-          "turnover": 201982.02,
-          "institution_score": 7.04,
-          "sector": "基础建设",
-          "industry": "基础建设"
-        }
-      ]
+      ],
+      "momentum_rank": 24,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
     },
     {
       "sector_name": "专用设备",
@@ -424,35 +403,111 @@
           "sector": "专用设备",
           "industry": "专用设备"
         }
-      ]
+      ],
+      "momentum_rank": 22,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
     },
     {
-      "sector_name": "电网设备",
+      "sector_name": "种植业",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
       "stocks": [
         {
-          "code": "002350",
-          "name": "北京科锐",
-          "close": 15.22,
-          "price": 15.22,
-          "high_250": 15.22,
-          "high_250d": 15.22,
+          "code": "600108",
+          "name": "亚盛集团",
+          "close": 5.97,
+          "price": 5.97,
+          "high_250": 5.97,
+          "high_250d": 5.97,
           "consecutive_new_high_days": 1,
           "consecutive_days": 1,
-          "change_pct": 9.97,
-          "change": 9.97,
+          "change_pct": 9.94,
+          "change": 9.94,
           "break_through": 0.0,
           "break_pct": 0.0,
-          "circ_mv": 76.02,
-          "amount": 100274.09,
-          "turnover": 100274.09,
-          "institution_score": 3.82,
-          "sector": "电网设备",
-          "industry": "电网设备"
+          "circ_mv": 111.72,
+          "amount": 257078.55,
+          "turnover": 257078.55,
+          "institution_score": 5.84,
+          "sector": "种植业",
+          "industry": "种植业"
         }
-      ]
+      ],
+      "momentum_rank": 39,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "工业金属",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603115",
+          "name": "海星股份",
+          "close": 32.0,
+          "price": 32.0,
+          "high_250": 32.0,
+          "high_250d": 32.0,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 74.77,
+          "amount": 27715.21,
+          "turnover": 27715.21,
+          "institution_score": 1.46,
+          "sector": "工业金属",
+          "industry": "工业金属"
+        }
+      ],
+      "momentum_rank": 57,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "基础建设",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "001267",
+          "name": "汇绿生态",
+          "close": 45.68,
+          "price": 45.68,
+          "high_250": 45.68,
+          "high_250d": 45.68,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 271.0,
+          "amount": 201982.02,
+          "turnover": 201982.02,
+          "institution_score": 7.04,
+          "sector": "基础建设",
+          "industry": "基础建设"
+        }
+      ],
+      "momentum_rank": 37,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

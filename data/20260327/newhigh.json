@@ -72,7 +72,12 @@
           "sector": "电力",
           "industry": "电力"
         }
-      ]
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 26.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
     },
     {
       "sector_name": "能源金属",
@@ -140,7 +145,78 @@
           "sector": "能源金属",
           "industry": "能源金属"
         }
-      ]
+      ],
+      "momentum_rank": 7,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 20.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
+    },
+    {
+      "sector_name": "电池",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "301292",
+          "name": "海科新源",
+          "close": 96.29,
+          "price": 96.29,
+          "high_250": 96.29,
+          "high_250d": 96.29,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 20.0,
+          "change": 20.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 74.88,
+          "amount": 271058.25,
+          "turnover": 271058.25,
+          "institution_score": 5.61,
+          "sector": "电池",
+          "industry": "电池"
+        }
+      ],
+      "momentum_rank": 2,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 19.2,
+      "sector_reason": "与动量主线强共振"
+    },
+    {
+      "sector_name": "化学制药",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603538",
+          "name": "美诺华",
+          "close": 39.18,
+          "price": 39.18,
+          "high_250": 39.18,
+          "high_250d": 39.18,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 83.51,
+          "amount": 81959.02,
+          "turnover": 81959.02,
+          "institution_score": 4.04,
+          "sector": "化学制药",
+          "industry": "化学制药"
+        }
+      ],
+      "momentum_rank": 6,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 15.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "电网设备",
@@ -188,7 +264,12 @@
           "sector": "电网设备",
           "industry": "电网设备"
         }
-      ]
+      ],
+      "momentum_rank": 8,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 14.2,
+      "sector_reason": "与动量主线同向"
     },
     {
       "sector_name": "光学光电子",
@@ -216,7 +297,12 @@
           "sector": "光学光电子",
           "industry": "光学光电子"
         }
-      ]
+      ],
+      "momentum_rank": 15,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
     },
     {
       "sector_name": "化学原料",
@@ -244,7 +330,12 @@
           "sector": "化学原料",
           "industry": "化学原料"
         }
-      ]
+      ],
+      "momentum_rank": 19,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "工业金属",
@@ -272,7 +363,12 @@
           "sector": "工业金属",
           "industry": "工业金属"
         }
-      ]
+      ],
+      "momentum_rank": 41,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "家居用品",
@@ -300,35 +396,12 @@
           "sector": "家居用品",
           "industry": "家居用品"
         }
-      ]
-    },
-    {
-      "sector_name": "化学制药",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603538",
-          "name": "美诺华",
-          "close": 39.18,
-          "price": 39.18,
-          "high_250": 39.18,
-          "high_250d": 39.18,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.99,
-          "change": 9.99,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 83.51,
-          "amount": 81959.02,
-          "turnover": 81959.02,
-          "institution_score": 4.04,
-          "sector": "化学制药",
-          "industry": "化学制药"
-        }
-      ]
+      ],
+      "momentum_rank": 55,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "中药Ⅱ",
@@ -356,7 +429,12 @@
           "sector": "中药Ⅱ",
           "industry": "中药Ⅱ"
         }
-      ]
+      ],
+      "momentum_rank": 38,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "小金属",
@@ -384,7 +462,12 @@
           "sector": "小金属",
           "industry": "小金属"
         }
-      ]
+      ],
+      "momentum_rank": 85,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "医疗器械",
@@ -412,35 +495,12 @@
           "sector": "医疗器械",
           "industry": "医疗器械"
         }
-      ]
-    },
-    {
-      "sector_name": "电池",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "301292",
-          "name": "海科新源",
-          "close": 96.29,
-          "price": 96.29,
-          "high_250": 96.29,
-          "high_250d": 96.29,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 20.0,
-          "change": 20.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 74.88,
-          "amount": 271058.25,
-          "turnover": 271058.25,
-          "institution_score": 5.61,
-          "sector": "电池",
-          "industry": "电池"
-        }
-      ]
+      ],
+      "momentum_rank": 31,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

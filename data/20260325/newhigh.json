@@ -252,7 +252,45 @@
           "sector": "电力",
           "industry": "电力"
         }
-      ]
+      ],
+      "momentum_rank": 1,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 53.2,
+      "sector_reason": "与动量主线强共振 / 新高数量集中"
+    },
+    {
+      "sector_name": "煤炭开采",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600758",
+          "name": "辽宁能源",
+          "close": 5.72,
+          "price": 5.72,
+          "high_250": 5.72,
+          "high_250d": 5.72,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 75.37,
+          "amount": 93129.1,
+          "turnover": 93129.1,
+          "institution_score": 3.97,
+          "sector": "煤炭开采",
+          "industry": "煤炭开采"
+        }
+      ],
+      "momentum_rank": 2,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 19.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "电网设备",
@@ -300,175 +338,12 @@
           "sector": "电网设备",
           "industry": "电网设备"
         }
-      ]
-    },
-    {
-      "sector_name": "光学光电子",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600666",
-          "name": "奥瑞德",
-          "close": 5.28,
-          "price": 5.28,
-          "high_250": 5.28,
-          "high_250d": 5.28,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 127.76,
-          "amount": 34719.3,
-          "turnover": 34719.3,
-          "institution_score": 2.28,
-          "sector": "光学光电子",
-          "industry": "光学光电子"
-        }
-      ]
-    },
-    {
-      "sector_name": "煤炭开采",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "600758",
-          "name": "辽宁能源",
-          "close": 5.72,
-          "price": 5.72,
-          "high_250": 5.72,
-          "high_250d": 5.72,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 75.37,
-          "amount": 93129.1,
-          "turnover": 93129.1,
-          "institution_score": 3.97,
-          "sector": "煤炭开采",
-          "industry": "煤炭开采"
-        }
-      ]
-    },
-    {
-      "sector_name": "化学制药",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "603538",
-          "name": "美诺华",
-          "close": 32.38,
-          "price": 32.38,
-          "high_250": 32.38,
-          "high_250d": 32.38,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.99,
-          "change": 9.99,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 69.6,
-          "amount": 93900.58,
-          "turnover": 93900.58,
-          "institution_score": 3.95,
-          "sector": "化学制药",
-          "industry": "化学制药"
-        }
-      ]
-    },
-    {
-      "sector_name": "文娱用品",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "605299",
-          "name": "舒华体育",
-          "close": 17.74,
-          "price": 17.74,
-          "high_250": 17.74,
-          "high_250d": 17.74,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 9.98,
-          "change": 9.98,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 69.71,
-          "amount": 36751.48,
-          "turnover": 36751.48,
-          "institution_score": 1.89,
-          "sector": "文娱用品",
-          "industry": "文娱用品"
-        }
-      ]
-    },
-    {
-      "sector_name": "化学制品",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "605366",
-          "name": "宏柏新材",
-          "close": 11.21,
-          "price": 11.21,
-          "high_250": 11.21,
-          "high_250d": 11.21,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.01,
-          "change": 10.01,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 85.83,
-          "amount": 31217.9,
-          "turnover": 31217.9,
-          "institution_score": 1.81,
-          "sector": "化学制品",
-          "industry": "化学制品"
-        }
-      ]
-    },
-    {
-      "sector_name": "专用设备",
-      "new_high_count": 1,
-      "stock_count": 1,
-      "avg_consecutive_days": 1.0,
-      "stocks": [
-        {
-          "code": "002730",
-          "name": "电光科技",
-          "close": 25.86,
-          "price": 25.86,
-          "high_250": 25.86,
-          "high_250d": 25.86,
-          "consecutive_new_high_days": 1,
-          "consecutive_days": 1,
-          "change_pct": 10.0,
-          "change": 10.0,
-          "break_through": 0.0,
-          "break_pct": 0.0,
-          "circ_mv": 85.54,
-          "amount": 81386.74,
-          "turnover": 81386.74,
-          "institution_score": 3.62,
-          "sector": "专用设备",
-          "industry": "专用设备"
-        }
-      ]
+      ],
+      "momentum_rank": 6,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 18.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "通信设备",
@@ -496,7 +371,177 @@
           "sector": "通信设备",
           "industry": "通信设备"
         }
-      ]
+      ],
+      "momentum_rank": 12,
+      "momentum_mainline": true,
+      "momentum_warning": false,
+      "sector_score": 7.2,
+      "sector_reason": "与动量主线同向"
+    },
+    {
+      "sector_name": "光学光电子",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "600666",
+          "name": "奥瑞德",
+          "close": 5.28,
+          "price": 5.28,
+          "high_250": 5.28,
+          "high_250d": 5.28,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 127.76,
+          "amount": 34719.3,
+          "turnover": 34719.3,
+          "institution_score": 2.28,
+          "sector": "光学光电子",
+          "industry": "光学光电子"
+        }
+      ],
+      "momentum_rank": 19,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "化学制药",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "603538",
+          "name": "美诺华",
+          "close": 32.38,
+          "price": 32.38,
+          "high_250": 32.38,
+          "high_250d": 32.38,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.99,
+          "change": 9.99,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 69.6,
+          "amount": 93900.58,
+          "turnover": 93900.58,
+          "institution_score": 3.95,
+          "sector": "化学制药",
+          "industry": "化学制药"
+        }
+      ],
+      "momentum_rank": 29,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "文娱用品",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "605299",
+          "name": "舒华体育",
+          "close": 17.74,
+          "price": 17.74,
+          "high_250": 17.74,
+          "high_250d": 17.74,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 9.98,
+          "change": 9.98,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 69.71,
+          "amount": 36751.48,
+          "turnover": 36751.48,
+          "institution_score": 1.89,
+          "sector": "文娱用品",
+          "industry": "文娱用品"
+        }
+      ],
+      "momentum_rank": 37,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "化学制品",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "605366",
+          "name": "宏柏新材",
+          "close": 11.21,
+          "price": 11.21,
+          "high_250": 11.21,
+          "high_250d": 11.21,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 85.83,
+          "amount": 31217.9,
+          "turnover": 31217.9,
+          "institution_score": 1.81,
+          "sector": "化学制品",
+          "industry": "化学制品"
+        }
+      ],
+      "momentum_rank": 52,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
+    },
+    {
+      "sector_name": "专用设备",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "avg_consecutive_days": 1.0,
+      "stocks": [
+        {
+          "code": "002730",
+          "name": "电光科技",
+          "close": 25.86,
+          "price": 25.86,
+          "high_250": 25.86,
+          "high_250d": 25.86,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.0,
+          "change": 10.0,
+          "break_through": 0.0,
+          "break_pct": 0.0,
+          "circ_mv": 85.54,
+          "amount": 81386.74,
+          "turnover": 81386.74,
+          "institution_score": 3.62,
+          "sector": "专用设备",
+          "industry": "专用设备"
+        }
+      ],
+      "momentum_rank": 33,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

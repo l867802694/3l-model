@@ -52,7 +52,12 @@
           "sector": "通信设备",
           "industry": "通信设备"
         }
-      ]
+      ],
+      "momentum_rank": 5,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 19.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "电力",
@@ -80,7 +85,12 @@
           "sector": "电力",
           "industry": "电力"
         }
-      ]
+      ],
+      "momentum_rank": 7,
+      "momentum_mainline": true,
+      "momentum_warning": true,
+      "sector_score": 14.2,
+      "sector_reason": "与动量主线强共振"
     },
     {
       "sector_name": "专业工程",
@@ -108,7 +118,12 @@
           "sector": "专业工程",
           "industry": "专业工程"
         }
-      ]
+      ],
+      "momentum_rank": 36,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "电网设备",
@@ -136,7 +151,12 @@
           "sector": "电网设备",
           "industry": "电网设备"
         }
-      ]
+      ],
+      "momentum_rank": 20,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     },
     {
       "sector_name": "塑料",
@@ -164,7 +184,12 @@
           "sector": "塑料",
           "industry": "塑料"
         }
-      ]
+      ],
+      "momentum_rank": 16,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "sector_score": 5.2,
+      "sector_reason": "板块内有新高扩散"
     }
   ],
   "market_stats": {

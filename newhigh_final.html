@@ -210,15 +210,6 @@
             <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 mb-6">
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
                     <div class="hint-wrap">
-                        <p class="text-xs font-medium text-gray-500 uppercase">创250日新高家数</p>
-                        <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">今天收盘价站上过去250个交易日最高价的股票数量。数量越多，说明趋势股的扩散越明显。</div>
-                    </div>
-                    <p id="todayNewHigh" class="text-2xl font-bold text-stock-up mt-1">-</p>
-                    <p id="newHighRatio" class="text-xs text-gray-400 mt-1">-</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <div class="hint-wrap">
                         <p class="text-xs font-medium text-gray-500 uppercase">广度趋势</p>
                         <button class="hint-icon" type="button">?</button>
                         <div class="hint-tip">只看新高、新低、净新高、最近5日升温和连续净新高天数，不看指数。它回答的是：趋势股扩散本身强不强。</div>
@@ -230,7 +221,29 @@
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
                     <div class="hint-wrap">
-                        <p class="text-xs font-medium text-gray-500 uppercase">指数趋势</p>
+                        <p class="text-xs font-medium text-gray-500 uppercase">深度趋势</p>
+                        <button class="hint-icon" type="button">?</button>
+                        <div class="hint-tip">看新高股本身够不够强。主要参考新高股平均涨幅、连续新高天数、机构参与代理分，以及是否集中在动量主线里。</div>
+                    </div>
+                    <p id="depthStatus" class="text-lg font-bold text-gray-700 mt-1">-</p>
+                    <p id="depthStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
+                    <div class="trend-score-bar mt-3"><span id="depthScoreBar" class="bg-red-500" style="width: 0%"></span></div>
+                    <p class="text-xs text-gray-400 mt-2">深度分 <span id="depthScore">-</span>/100</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
+                    <div class="hint-wrap">
+                        <p class="text-xs font-medium text-gray-500 uppercase">整体趋势</p>
+                        <button class="hint-icon" type="button">?</button>
+                        <div class="hint-tip">整体趋势 = 广度分 55% + 深度分 45%。它才是你判断“现在能不能积极做趋势”的主开关，指数确认单独看，不并进整体。</div>
+                    </div>
+                    <p id="marketStatus" class="text-lg font-bold text-yellow-600 mt-1">-</p>
+                    <p id="marketStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
+                    <div class="trend-score-bar mt-3"><span id="strengthBar" class="bg-red-600" style="width: 0%"></span></div>
+                    <p class="text-xs text-gray-400 mt-2">整体分 <span id="strengthScore">-</span>/100</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
+                    <div class="hint-wrap">
+                        <p class="text-xs font-medium text-gray-500 uppercase">指数确认</p>
                         <button class="hint-icon" type="button">?</button>
                         <div class="hint-tip">看上证指数、沪深300、创业板指的站位和趋势确认。主要参考收盘是否站上 MA20、MA60，MA20 是否在 MA60 上方，以及 20 日趋势是否为正。</div>
                     </div>
@@ -241,21 +254,12 @@
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
                     <div class="hint-wrap">
-                        <p class="text-xs font-medium text-gray-500 uppercase">综合趋势</p>
+                        <p class="text-xs font-medium text-gray-500 uppercase">创250日新高家数</p>
                         <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">综合趋势 = 广度分 75% + 指数分 25%，并且指数只负责确认，不会轻易把局部强行放大成全面强。</div>
+                        <div class="hint-tip">今天收盘价站上过去250个交易日最高价的股票数量。数量越多，说明趋势股的扩散越明显。</div>
                     </div>
-                    <div class="flex items-center gap-2 mt-1">
-                        <p id="marketStatus" class="text-lg font-bold text-yellow-600 mt-1">-</p>
-                    </div>
-                    <p id="marketStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
-                    <div class="flex items-center gap-2 mt-3">
-                        <p id="strengthScore" class="text-2xl font-bold text-stock-up">-</p>
-                        <span class="text-xs text-gray-400">/100</span>
-                    </div>
-                    <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
-                        <div id="strengthBar" class="bg-stock-up h-2 rounded-full progress-bar" style="width: 0%"></div>
-                    </div>
+                    <p id="todayNewHigh" class="text-2xl font-bold text-stock-up mt-1">-</p>
+                    <p id="newHighRatio" class="text-xs text-gray-400 mt-1">-</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
                     <div class="hint-wrap">
@@ -265,15 +269,6 @@
                     </div>
                     <p id="avg5Days" class="text-2xl font-bold text-gray-700 mt-1">-</p>
                     <p id="avg5DaysChange" class="text-xs text-stock-up mt-1">-</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <div class="hint-wrap">
-                        <p class="text-xs font-medium text-gray-500 uppercase">当前状态</p>
-                        <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">这是把新高、新低、净新高、指数确认一起翻译成一句能直接用的结论。先看环境，再看板块，再看个股。</div>
-                    </div>
-                    <p id="currentStatusMini" class="text-lg font-bold text-gray-900 mt-1">-</p>
-                    <p id="currentStatusMeta" class="text-xs text-gray-400 mt-1">-</p>
                 </div>
             </div>
 
@@ -617,6 +612,13 @@
             return 'text-gray-500';
         }
 
+        function getDepthStatusColor(status) {
+            if (status === '深度强') return 'text-red-600';
+            if (status === '深度可做') return 'text-orange-600';
+            if (status === '深度一般') return 'text-yellow-600';
+            return 'text-gray-500';
+        }
+
         // 加载数据
         async function loadData() {
             showLoading();
@@ -730,17 +732,18 @@
 
         function buildMarketNarrative(marketStats, newHighCount, newLowCount, netNewHigh) {
             const ratio = marketStats.new_high_ratio ?? 0;
-            const lowRatio = marketStats.new_low_ratio ?? 0;
             const trendDays = marketStats.trend_days ?? 0;
             const avg5Days = marketStats.avg_5d ?? 0;
             const avgChange = marketStats.avg_5d_change_pct ?? 0;
             const hlRatio = marketStats.new_high_low_ratio ?? 0;
-            const signal = marketStats.market_signal || marketStats.market_status || '趋势观察';
+            const signal = marketStats.overall_trend_status || marketStats.market_signal || marketStats.market_status || '趋势观察';
+            const breadthStatus = marketStats.breadth_status || signal;
+            const depthStatus = marketStats.depth_trend_status || '深度不足';
             const indexStatus = marketStats.index_confirmation_status || '未确认';
             const indexSummary = marketStats.index_confirmation_summary || '指数确认不可用。';
 
-            const title = `${signal}：广度和指数一起看`;
-            const body = `今天创250日新高 ${newHighCount} 只，创250日新低 ${newLowCount} 只，净新高 ${netNewHigh}。新高占全市场 ${ratio}% ，最近5日平均新高家数 ${avg5Days}，今天相对5日均值 ${avgChange >= 0 ? '升温' : '降温'} ${Math.abs(avgChange)}%，最近连续 ${trendDays} 天净新高为正，新高/新低比 ${hlRatio}。指数确认目前为 ${indexStatus}。`;
+            const title = `${signal}：先看广度，再看深度，最后用指数确认`;
+            const body = `今天创250日新高 ${newHighCount} 只，创250日新低 ${newLowCount} 只，净新高 ${netNewHigh}。广度目前是 ${breadthStatus}，新高占全市场 ${ratio}% ，最近连续 ${trendDays} 天净新高为正。深度目前是 ${depthStatus}，最近5日平均新高家数 ${avg5Days}，今天相对5日均值 ${avgChange >= 0 ? '升温' : '降温'} ${Math.abs(avgChange)}%，新高/新低比 ${hlRatio}。指数确认目前为 ${indexStatus}。`;
 
             let action = '市场更偏结构性，先缩小范围到最强板块，再找回踩、平台突破或二次启动。';
             let quickTake = '整体不强，只适合缩小到局部主线去做。';
@@ -879,9 +882,9 @@
             const newLowCount = marketStats.new_low_count || 0;
             const netNewHigh = marketStats.net_new_high ?? (newHighCount - newLowCount);
             const totalUniverse = marketStats.total_universe || data.universe_size || 4500;
-            const marketStatusText = marketStats.market_status || getMarketStatus(newHighCount).status;
+            const marketStatusText = marketStats.overall_trend_status || marketStats.market_status || getMarketStatus(newHighCount).status;
             const avg5Days = marketStats.avg_5d || Math.round(newHighCount * 0.9);
-            const strengthScore = computeDisplayedStrengthScore(marketStats, newHighCount);
+            const strengthScore = Number(marketStats.overall_trend_score || computeDisplayedStrengthScore(marketStats, newHighCount));
             
             const marketStatus = getMarketStatus(newHighCount);
             const ratio = ((newHighCount / totalUniverse) * 100).toFixed(2);
@@ -890,6 +893,8 @@
             const statusDesc = marketStats.market_status_desc || marketStatus.desc;
             const breadthStatus = marketStats.breadth_status || marketStatusText;
             const breadthScore = Number(marketStats.breadth_strength_score || strengthScore || 0);
+            const depthStatus = marketStats.depth_trend_status || '深度不足';
+            const depthScore = Number(marketStats.depth_trend_score || 0);
             const indexStatus = marketStats.index_confirmation_status || '未确认';
             const indexScore = Number(marketStats.index_confirmation_score || 0);
             const indexSummary = marketStats.index_confirmation_summary || '指数当前没有给出明确确认。';
@@ -902,6 +907,11 @@
             document.getElementById('breadthStatusDesc').textContent = `净新高 ${netNewHigh} | 连续 ${marketStats.trend_days || 0} 天为正`;
             document.getElementById('breadthScore').textContent = breadthScore;
             document.getElementById('breadthScoreBar').style.width = `${Math.max(0, Math.min(100, breadthScore))}%`;
+            document.getElementById('depthStatus').textContent = depthStatus;
+            document.getElementById('depthStatus').className = `text-lg font-bold mt-1 ${getDepthStatusColor(depthStatus)}`;
+            document.getElementById('depthStatusDesc').textContent = marketStats.depth_trend_desc || '新高股质量不足。';
+            document.getElementById('depthScore').textContent = depthScore;
+            document.getElementById('depthScoreBar').style.width = `${Math.max(0, Math.min(100, depthScore))}%`;
             document.getElementById('indexStatus').textContent = indexStatus;
             document.getElementById('indexStatus').className = `text-lg font-bold mt-1 ${getIndexStatusColor(indexStatus)}`;
             document.getElementById('indexStatusDesc').textContent = indexSummary;
@@ -915,10 +925,7 @@
             document.getElementById('avg5DaysChange').className = `text-xs mt-1 ${avgChange >= 0 ? 'text-stock-up' : 'text-stock-down'}`;
             document.getElementById('strengthScore').textContent = strengthScore;
             document.getElementById('strengthBar').style.width = `${strengthScore}%`;
-            document.getElementById('currentStatusMini').textContent = marketStatusText;
-            document.getElementById('currentStatusMini').className = `text-lg font-bold mt-1 ${statusColor}`;
-            document.getElementById('currentStatusMeta').textContent = `${breadthStatus} + 指数${indexStatus}`;
-            document.getElementById('currentStatus').textContent = `当前：新高 ${newHighCount} | 新低 ${newLowCount} | 净新高 ${netNewHigh} | ${marketStatusText} | 指数${indexStatus}`;
+            document.getElementById('currentStatus').textContent = `当前：广度 ${breadthStatus} | 深度 ${depthStatus} | 整体 ${marketStatusText} | 指数${indexStatus}`;
             document.getElementById('marketSignalBadge').textContent = marketStatusText;
             document.getElementById('marketSignalBadge').className = `px-3 py-1 rounded-full text-xs font-medium ${statusColor.includes('red') ? 'bg-red-50 text-red-700' : statusColor.includes('orange') ? 'bg-orange-50 text-orange-700' : statusColor.includes('yellow') ? 'bg-yellow-50 text-yellow-700' : 'bg-gray-100 text-gray-700'}`;
             document.getElementById('marketSummaryTitle').textContent = narrative.title;

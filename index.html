@@ -301,7 +301,7 @@
                 </div>
             </section>
 
-            <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
                 <div class="shell rounded-[1.6rem] p-5">
                     <div class="hint-wrap">
                         <p class="text-xs uppercase tracking-[0.22em] text-gray-400 font-semibold">广度趋势</p>
@@ -318,7 +318,35 @@
                 </div>
                 <div class="shell rounded-[1.6rem] p-5">
                     <div class="hint-wrap">
-                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400 font-semibold">指数趋势</p>
+                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400 font-semibold">深度趋势</p>
+                        <button class="hint-icon" type="button">?</button>
+                        <div class="hint-tip">看新高股本身够不够强。主要参考新高股平均涨幅、连续新高天数、机构参与代理分，以及是否集中在动量主线里。</div>
+                    </div>
+                    <div class="mt-3 flex items-end justify-between gap-4">
+                        <div>
+                            <p id="depthStatusCard" class="text-2xl font-semibold text-gray-950">-</p>
+                            <p id="depthMetaCard" class="mt-2 text-sm text-gray-500">-</p>
+                        </div>
+                        <p class="text-3xl font-semibold text-gray-950"><span id="depthScoreCard">-</span><span class="text-sm text-gray-400">/100</span></p>
+                    </div>
+                </div>
+                <div class="shell rounded-[1.6rem] p-5">
+                    <div class="hint-wrap">
+                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400 font-semibold">整体趋势</p>
+                        <button class="hint-icon" type="button">?</button>
+                        <div class="hint-tip">整体趋势 = 广度分 55% + 深度分 45%。它才是你判断“现在能不能积极做趋势”的主开关，指数确认单独看，不并进整体。</div>
+                    </div>
+                    <div class="mt-3 flex items-end justify-between gap-4">
+                        <div>
+                            <p id="overallStatusCard" class="text-2xl font-semibold text-gray-950">-</p>
+                            <p id="overallMetaCard" class="mt-2 text-sm text-gray-500">-</p>
+                        </div>
+                        <p class="text-3xl font-semibold text-gray-950"><span id="overallScoreCard">-</span><span class="text-sm text-gray-400">/100</span></p>
+                    </div>
+                </div>
+                <div class="shell rounded-[1.6rem] p-5">
+                    <div class="hint-wrap">
+                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400 font-semibold">指数确认</p>
                         <button class="hint-icon" type="button">?</button>
                         <div class="hint-tip">看上证指数、沪深300、创业板指的站位和趋势确认。主要参考收盘是否站上 MA20、MA60，MA20 是否在 MA60 上方，以及 20 日趋势是否为正。</div>
                     </div>
@@ -328,20 +356,6 @@
                             <p id="indexMetaCard" class="mt-2 text-sm text-gray-500">-</p>
                         </div>
                         <p class="text-3xl font-semibold text-gray-950"><span id="indexScoreCard">-</span><span class="text-sm text-gray-400">/100</span></p>
-                    </div>
-                </div>
-                <div class="shell rounded-[1.6rem] p-5">
-                    <div class="hint-wrap">
-                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400 font-semibold">广度 + 指数趋势</p>
-                        <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">综合趋势 = 广度分 75% + 指数分 25%，并且指数只负责确认，不会轻易把局部强行放大成全面强。</div>
-                    </div>
-                    <div class="mt-3 flex items-end justify-between gap-4">
-                        <div>
-                            <p id="combinedStatusCard" class="text-2xl font-semibold text-gray-950">-</p>
-                            <p id="combinedMetaCard" class="mt-2 text-sm text-gray-500">-</p>
-                        </div>
-                        <p class="text-3xl font-semibold text-gray-950"><span id="combinedScoreCard">-</span><span class="text-sm text-gray-400">/100</span></p>
                     </div>
                 </div>
             </section>
@@ -621,6 +635,13 @@
             return 'text-gray-700';
         }
 
+        function getDepthTextClass(status) {
+            if (status === '深度强') return 'text-red-700';
+            if (status === '深度可做') return 'text-amber-700';
+            if (status === '深度一般') return 'text-slate-700';
+            return 'text-gray-700';
+        }
+
         function buildSectorStabilityMap(historyPayloads) {
             const map = new Map();
             historyPayloads.forEach((payload, snapshotIndex) => {
@@ -834,15 +855,17 @@
 
         function renderSignalSection(newhighPayload, momentumPayload, opportunities) {
             const marketStats = newhighPayload.market_stats || {};
-            const status = marketStats.market_status || '趋势观察';
+            const status = marketStats.overall_trend_status || marketStats.market_status || '趋势观察';
             const tone = getStatusTone(status);
             const breadthStatus = marketStats.breadth_status || status;
             const breadthScore = Number(marketStats.breadth_strength_score || marketStats.strength_score || 0);
+            const depthStatus = marketStats.depth_trend_status || '深度不足';
+            const depthScore = Number(marketStats.depth_trend_score || 0);
             const indexStatus = marketStats.index_confirmation_status || '未确认';
             const indexScore = Number(marketStats.index_confirmation_score || 0);
             const topSector = (momentumPayload.data || [])[0];
             const headlineSector = topSector ? `主攻方向先看 ${topSector.sector_name}` : '先看环境，再找主线';
-            const summary = `今天是 ${status}，${getIndexTone(indexStatus)}。一年新高显示趋势环境 ${marketStats.market_status_desc || '偏结构性'}，动量榜最强的是 ${topSector?.sector_name || '暂无板块数据'}，优先机会里已经只保留强板块中的新高股。`;
+            const summary = `今天整体趋势是 ${status}。广度是 ${breadthStatus}，深度是 ${depthStatus}，指数端 ${getIndexTone(indexStatus)}。动量榜最强的是 ${topSector?.sector_name || '暂无板块数据'}，优先机会里已经只保留强板块中的新高股。`;
 
             document.getElementById('headline').textContent = headlineSector;
             document.getElementById('headlineSummary').textContent = summary;
@@ -854,14 +877,18 @@
             document.getElementById('breadthStatusCard').className = `text-2xl font-semibold ${getTrendTextClass(breadthStatus)}`;
             document.getElementById('breadthMetaCard').textContent = `净新高 ${marketStats.net_new_high || 0} | 连续 ${marketStats.trend_days || 0} 天为正`;
             document.getElementById('breadthScoreCard').textContent = breadthScore;
+            document.getElementById('depthStatusCard').textContent = depthStatus;
+            document.getElementById('depthStatusCard').className = `text-2xl font-semibold ${getDepthTextClass(depthStatus)}`;
+            document.getElementById('depthMetaCard').textContent = marketStats.depth_trend_desc || '新高股质量不足。';
+            document.getElementById('depthScoreCard').textContent = depthScore;
             document.getElementById('indexStatusCard').textContent = getIndexTone(indexStatus);
             document.getElementById('indexStatusCard').className = `text-2xl font-semibold ${getIndexTextClass(indexStatus)}`;
             document.getElementById('indexMetaCard').textContent = marketStats.index_confirmation_summary || '指数暂无明确确认。';
             document.getElementById('indexScoreCard').textContent = indexScore;
-            document.getElementById('combinedStatusCard').textContent = status;
-            document.getElementById('combinedStatusCard').className = `text-2xl font-semibold ${getTrendTextClass(status)}`;
-            document.getElementById('combinedMetaCard').textContent = `${breadthStatus} + ${getIndexTone(indexStatus)}`;
-            document.getElementById('combinedScoreCard').textContent = marketStats.strength_score || 0;
+            document.getElementById('overallStatusCard').textContent = status;
+            document.getElementById('overallStatusCard').className = `text-2xl font-semibold ${getTrendTextClass(status)}`;
+            document.getElementById('overallMetaCard').textContent = `${breadthStatus} + ${depthStatus}`;
+            document.getElementById('overallScoreCard').textContent = marketStats.overall_trend_score || marketStats.strength_score || 0;
             document.getElementById('newHighCount').textContent = marketStats.new_high_count || 0;
             document.getElementById('newHighRatio').textContent = `占全市场 ${(marketStats.new_high_ratio || 0).toFixed(2)}%`;
             document.getElementById('netNewHigh').textContent = marketStats.net_new_high ?? 0;
@@ -871,7 +898,7 @@
             document.getElementById('opportunityCount').textContent = opportunities.length;
             document.getElementById('opportunityHint').textContent = opportunities.length ? `${opportunities[0].sector_name} 方向最值得先看` : '暂无共振机会';
             document.getElementById('tradeDateBadge').textContent = formatDate(newhighPayload.trade_date || currentDate);
-            document.getElementById('step1').textContent = `先看大势：今天新高 ${marketStats.new_high_count || 0}，新低 ${marketStats.new_low_count || 0}，净新高 ${marketStats.net_new_high || 0}，${getIndexTone(indexStatus)}。${tone.action}`;
+            document.getElementById('step1').textContent = `先看整体：今天广度 ${breadthStatus}，深度 ${depthStatus}，整体 ${status}。指数端是${getIndexTone(indexStatus)}。${tone.action}`;
             document.getElementById('step2').textContent = `再看板块：优先跟踪动量榜前排、且最近5日持续留在前十的方向。今天前排核心是 ${topSector?.sector_name || '暂无'}。`;
             document.getElementById('step3').textContent = '最后看个股：只从强板块里的新高股下手，优先“主线共振 + 连续趋势 + 放量确认”的组合。';
             document.getElementById('riskHint').textContent = tone.risk;

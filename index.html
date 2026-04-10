@@ -508,6 +508,13 @@
             };
         }
 
+        function getIndexTone(status) {
+            if (status === '强确认') return '指数强确认';
+            if (status === '确认') return '指数已确认';
+            if (status === '弱确认') return '指数弱确认';
+            return '指数未确认';
+        }
+
         function buildSectorStabilityMap(historyPayloads) {
             const map = new Map();
             historyPayloads.forEach((payload, snapshotIndex) => {
@@ -649,6 +656,7 @@
                         date: payload.trade_date,
                         score: Number(marketStats.strength_score || 0),
                         status: marketStats.market_status || '趋势谨慎',
+                        indexStatus: marketStats.index_confirmation_status || '未确认',
                         newHighCount: Number(marketStats.new_high_count || 0),
                         newLowCount: Number(marketStats.new_low_count || 0),
                         netNewHigh: Number(marketStats.net_new_high || 0)
@@ -675,27 +683,27 @@
             const lowest = sortedScores[sortedScores.length - 1];
 
             let mode = '震荡观察';
-            let summary = `最近10个交易日里，趋势分从 ${first.score} 走到 ${latest.score}。当前 ${latest.status}，属于局部修复，不是全面强趋势。`;
-            let detail = `近3日均分 ${last3Avg.toFixed(1)}，相对前段 ${first3Avg.toFixed(1)} ${trendDelta >= 0 ? '抬升' : '回落'} ${Math.abs(trendDelta).toFixed(1)} 分。`;
+            let summary = `最近10个交易日里，趋势分从 ${first.score} 走到 ${latest.score}。当前 ${latest.status}，${getIndexTone(latest.indexStatus)}，整体属于局部修复，不是全面强趋势。`;
+            let detail = `近3日均分 ${last3Avg.toFixed(1)}，相对前段 ${first3Avg.toFixed(1)} ${trendDelta >= 0 ? '抬升' : '回落'} ${Math.abs(trendDelta).toFixed(1)} 分。指数端当前为 ${latest.indexStatus}。`;
             let action = '先把它当成环境修复看，只有后面继续抬分、且新高家数继续扩散，才值得提高出手强度。';
             let risk = '如果分数只是单日拉高，但后面两三天接不住，就还是弱环境里的局部脉冲。';
 
             if (latest.score >= 55 && trendDelta >= 8) {
                 mode = '持续升温';
-                summary = `最近10个交易日趋势分明显抬升，当前来到 ${latest.score} 分，已经接近这段历史高位。`;
-                detail = `最近3日均分 ${last3Avg.toFixed(1)}，显著高于前段 ${first3Avg.toFixed(1)}，说明环境在持续修复。`;
+                summary = `最近10个交易日趋势分明显抬升，当前来到 ${latest.score} 分，已经接近这段历史高位。${getIndexTone(latest.indexStatus)}，环境修复更扎实。`;
+                detail = `最近3日均分 ${last3Avg.toFixed(1)}，显著高于前段 ${first3Avg.toFixed(1)}，说明环境在持续修复，指数端也在配合。`;
                 action = '可以更积极跟踪主线，但仍然只做前排板块里的确认机会，不做泛化追高。';
                 risk = '即使环境升温，也要盯住主线是否继续扩散，别把边缘补涨误当主升。';
             } else if (latest.score >= 35 && trendDelta >= 5) {
                 mode = '修复回暖';
-                summary = `最近环境在修复，当前 ${latest.score} 分，已经明显好于前几天，但仍然偏结构性。`;
-                detail = `最近3日均分 ${last3Avg.toFixed(1)}，比前段 ${first3Avg.toFixed(1)} 提升 ${Math.abs(trendDelta).toFixed(1)} 分，说明情绪在回暖。`;
+                summary = `最近环境在修复，当前 ${latest.score} 分，已经明显好于前几天，但仍然偏结构性。${getIndexTone(latest.indexStatus)}。`;
+                detail = `最近3日均分 ${last3Avg.toFixed(1)}，比前段 ${first3Avg.toFixed(1)} 提升 ${Math.abs(trendDelta).toFixed(1)} 分，说明情绪在回暖，但指数还不是全面顺风。`;
                 action = '优先看主线板块里的回踩确认和二次启动，先赚确定性的那一段。';
                 risk = '修复期最怕把“能做”理解成“全面都能做”，非主线方向仍然容易掉队。';
             } else if (latest.score <= 22 && trendDelta <= 0) {
                 mode = '持续偏弱';
-                summary = `最近10个交易日整体偏弱，当前只有 ${latest.score} 分，趋势环境还没有真正打开。`;
-                detail = `近3日均分 ${last3Avg.toFixed(1)}，没有比前段 ${first3Avg.toFixed(1)} 更强，说明环境还在弱势区间。`;
+                summary = `最近10个交易日整体偏弱，当前只有 ${latest.score} 分，趋势环境还没有真正打开。${getIndexTone(latest.indexStatus)}。`;
+                detail = `近3日均分 ${last3Avg.toFixed(1)}，没有比前段 ${first3Avg.toFixed(1)} 更强，说明环境还在弱势区间，指数也没有给出确认。`;
                 action = '先降频，重点记录最强方向，不着急把榜单里的票都当机会。';
                 risk = '弱环境里的新高股更像孤立表演，最容易追在短线高潮后。';
             }
@@ -722,14 +730,15 @@
             const marketStats = newhighPayload.market_stats || {};
             const status = marketStats.market_status || '趋势观察';
             const tone = getStatusTone(status);
+            const indexStatus = marketStats.index_confirmation_status || '未确认';
             const topSector = (momentumPayload.data || [])[0];
             const headlineSector = topSector ? `主攻方向先看 ${topSector.sector_name}` : '先看环境，再找主线';
-            const summary = `今天是 ${status}。一年新高显示趋势环境 ${marketStats.market_status_desc || '偏结构性'}，动量榜最强的是 ${topSector?.sector_name || '暂无板块数据'}，优先机会里已经只保留强板块中的新高股。`;
+            const summary = `今天是 ${status}，${getIndexTone(indexStatus)}。一年新高显示趋势环境 ${marketStats.market_status_desc || '偏结构性'}，动量榜最强的是 ${topSector?.sector_name || '暂无板块数据'}，优先机会里已经只保留强板块中的新高股。`;
 
             document.getElementById('headline').textContent = headlineSector;
             document.getElementById('headlineSummary').textContent = summary;
             document.getElementById('marketStatus').textContent = status;
-            document.getElementById('marketStatusDesc').textContent = marketStats.market_status_desc || '-';
+            document.getElementById('marketStatusDesc').textContent = `${marketStats.market_status_desc || '-'} | ${getIndexTone(indexStatus)}`;
             document.getElementById('strengthScore').textContent = marketStats.strength_score || 0;
             document.getElementById('strengthBar').style.width = `${marketStats.strength_score || 0}%`;
             document.getElementById('newHighCount').textContent = marketStats.new_high_count || 0;
@@ -741,7 +750,7 @@
             document.getElementById('opportunityCount').textContent = opportunities.length;
             document.getElementById('opportunityHint').textContent = opportunities.length ? `${opportunities[0].sector_name} 方向最值得先看` : '暂无共振机会';
             document.getElementById('tradeDateBadge').textContent = formatDate(newhighPayload.trade_date || currentDate);
-            document.getElementById('step1').textContent = `先看大势：今天新高 ${marketStats.new_high_count || 0}，新低 ${marketStats.new_low_count || 0}，净新高 ${marketStats.net_new_high || 0}。${tone.action}`;
+            document.getElementById('step1').textContent = `先看大势：今天新高 ${marketStats.new_high_count || 0}，新低 ${marketStats.new_low_count || 0}，净新高 ${marketStats.net_new_high || 0}，${getIndexTone(indexStatus)}。${tone.action}`;
             document.getElementById('step2').textContent = `再看板块：优先跟踪动量榜前排、且最近5日持续留在前十的方向。今天前排核心是 ${topSector?.sector_name || '暂无'}。`;
             document.getElementById('step3').textContent = '最后看个股：只从强板块里的新高股下手，优先“主线共振 + 连续趋势 + 放量确认”的组合。';
             document.getElementById('riskHint').textContent = tone.risk;

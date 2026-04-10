@@ -208,7 +208,7 @@
                     <div class="hint-wrap">
                         <p class="text-xs font-medium text-gray-500 uppercase">趋势环境判断</p>
                         <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">只看创一年新高和创一年新低的扩散情况。新高少时，即使局部很强，也不代表市场整体适合积极做趋势。</div>
+                        <div class="hint-tip">先看新高、新低、净新高这些广度，再用指数位置做确认。只有广度和指数一起配合，才更接近可做的大势环境。</div>
                     </div>
                     <p id="marketStatus" class="text-lg font-bold text-yellow-600 mt-1">-</p>
                     <p id="marketStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
@@ -226,7 +226,7 @@
                     <div class="hint-wrap">
                         <p class="text-xs font-medium text-gray-500 uppercase">趋势环境评分</p>
                         <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">这是一个保守分。新高占比、净新高、连续性共同决定，只有全市场明显扩散时才会给高分。</div>
+                        <div class="hint-tip">这是广度分和指数确认分一起算出来的保守总分。先看广度，再看指数确认，不会因为单日局部强就轻易给高分。</div>
                     </div>
                     <div class="flex items-center gap-2 mt-1">
                         <p id="strengthScore" class="text-2xl font-bold text-stock-up">-</p>
@@ -683,9 +683,11 @@
             const avgChange = marketStats.avg_5d_change_pct ?? 0;
             const hlRatio = marketStats.new_high_low_ratio ?? 0;
             const signal = marketStats.market_signal || marketStats.market_status || '趋势观察';
+            const indexStatus = marketStats.index_confirmation_status || '未确认';
+            const indexSummary = marketStats.index_confirmation_summary || '指数确认不可用。';
 
-            const title = `${signal}：先看环境，再决定参与强度`;
-            const body = `今天创250日新高 ${newHighCount} 只，创250日新低 ${newLowCount} 只，净新高 ${netNewHigh}。新高占全市场 ${ratio}% ，最近5日平均新高家数 ${avg5Days}，今天相对5日均值 ${avgChange >= 0 ? '升温' : '降温'} ${Math.abs(avgChange)}%，最近连续 ${trendDays} 天净新高为正，新高/新低比 ${hlRatio}。`;
+            const title = `${signal}：广度和指数一起看`;
+            const body = `今天创250日新高 ${newHighCount} 只，创250日新低 ${newLowCount} 只，净新高 ${netNewHigh}。新高占全市场 ${ratio}% ，最近5日平均新高家数 ${avg5Days}，今天相对5日均值 ${avgChange >= 0 ? '升温' : '降温'} ${Math.abs(avgChange)}%，最近连续 ${trendDays} 天净新高为正，新高/新低比 ${hlRatio}。指数确认目前为 ${indexStatus}。`;
 
             let action = '市场更偏结构性，先缩小范围到最强板块，再找回踩、平台突破或二次启动。';
             let quickTake = '整体不强，只适合缩小到局部主线去做。';
@@ -700,7 +702,7 @@
                 quickTake = '趋势扩散不够，先少做追涨，等待环境修复。';
             }
 
-            return { title, body, action, quickTake };
+            return { title, body, action, quickTake: `${quickTake} ${indexSummary}` };
         }
 
         function formatTurnoverYi(turnoverWan) {
@@ -709,27 +711,15 @@
         }
 
         function computeDisplayedStrengthScore(marketStats, newHighCount) {
-            const newHighRatio = Number(marketStats.new_high_ratio || 0);
-            const netNewHighRatio = Math.max(Number(marketStats.net_new_high_ratio || 0), 0);
-            const newHighLowRatio = Number(marketStats.new_high_low_ratio || 0);
-            const trendDays = Number(marketStats.trend_days || 0);
-            const avgChange = Math.max(Math.min(Number(marketStats.avg_5d_change_pct || 0), 80), -80);
-            const absoluteParticipationScore = newHighCount > 0 ? Math.min(newHighCount / 40, 1) * 18 : 0;
+            const explicitScore = Number(marketStats.strength_score || 0);
+            if (explicitScore > 0) return explicitScore;
 
-            return Math.round(
-                Math.max(
-                    0,
-                    Math.min(
-                        100,
-                        newHighRatio * 20
-                            + netNewHighRatio * 24
-                            + Math.min(newHighLowRatio, 3) * 1.5
-                            + Math.min(trendDays, 5) * 2
-                            + avgChange * 0.04
-                            + absoluteParticipationScore
-                    )
-                )
-            );
+            const breadthScore = Number(marketStats.breadth_strength_score || 0);
+            const indexScore = Number(marketStats.index_confirmation_score || 0);
+            if (breadthScore > 0 || indexScore > 0) {
+                return Math.round(Math.max(0, Math.min(100, breadthScore * 0.75 + indexScore * 0.25)));
+            }
+            return 0;
         }
 
         function getFocusScore(stock) {
@@ -845,19 +835,20 @@
             const avgChange = marketStats.avg_5d_change_pct ?? ((newHighCount - avg5Days) / avg5Days * 100).toFixed(1);
             const statusColor = marketStats.status_color_class || marketStatus.color;
             const statusDesc = marketStats.market_status_desc || marketStatus.desc;
+            const indexStatus = marketStats.index_confirmation_status || '未确认';
             const narrative = buildMarketNarrative(marketStats, newHighCount, newLowCount, netNewHigh);
             
             document.getElementById('todayNewHigh').textContent = newHighCount;
             document.getElementById('newHighRatio').textContent = `占比 ${ratio}% | 新低 ${newLowCount} | 净新高 ${netNewHigh}`;
             document.getElementById('marketStatus').textContent = marketStatusText;
             document.getElementById('marketStatus').className = `text-lg font-bold mt-1 ${statusColor}`;
-            document.getElementById('marketStatusDesc').textContent = statusDesc;
+            document.getElementById('marketStatusDesc').textContent = `${statusDesc} | 指数${indexStatus}`;
             document.getElementById('avg5Days').textContent = avg5Days;
             document.getElementById('avg5DaysChange').textContent = `${avgChange >= 0 ? '↑' : '↓'} ${Math.abs(avgChange)}%`;
             document.getElementById('avg5DaysChange').className = `text-xs mt-1 ${avgChange >= 0 ? 'text-stock-up' : 'text-stock-down'}`;
             document.getElementById('strengthScore').textContent = strengthScore;
             document.getElementById('strengthBar').style.width = `${strengthScore}%`;
-            document.getElementById('currentStatus').textContent = `当前：新高 ${newHighCount} | 新低 ${newLowCount} | 净新高 ${netNewHigh} | ${marketStatusText}`;
+            document.getElementById('currentStatus').textContent = `当前：新高 ${newHighCount} | 新低 ${newLowCount} | 净新高 ${netNewHigh} | ${marketStatusText} | 指数${indexStatus}`;
             document.getElementById('marketSignalBadge').textContent = marketStatusText;
             document.getElementById('marketSignalBadge').className = `px-3 py-1 rounded-full text-xs font-medium ${statusColor.includes('red') ? 'bg-red-50 text-red-700' : statusColor.includes('orange') ? 'bg-orange-50 text-orange-700' : statusColor.includes('yellow') ? 'bg-yellow-50 text-yellow-700' : 'bg-gray-100 text-gray-700'}`;
             document.getElementById('marketSummaryTitle').textContent = narrative.title;

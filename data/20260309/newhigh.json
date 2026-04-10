@@ -494,8 +494,60 @@
     "total_universe": 0,
     "market_status": "趋势谨慎",
     "market_signal": "趋势谨慎",
-    "market_status_desc": "新高不足或新低压制明显，先控制节奏，少做追涨。",
-    "strength_score": 22,
+    "market_status_desc": "新高不足或新低压制明显，先控制节奏，少做追涨。 指数确认：弱确认。",
+    "strength_score": 26,
+    "breadth_strength_score": 22,
+    "breadth_status": "趋势谨慎",
+    "index_confirmation_score": 40.0,
+    "index_confirmation_status": "弱确认",
+    "index_confirmation_summary": "指数有修复但还不够顺，广度信号需要谨慎对待。",
+    "index_confirmation_details": [
+      {
+        "code": "sh.000001",
+        "name": "上证指数",
+        "close": 4096.6,
+        "daily_change_pct": -0.67,
+        "return_20d": -0.52,
+        "ma20": 4110.9,
+        "ma60": 4046.13,
+        "score": 60,
+        "status": "确认",
+        "above_ma20": false,
+        "above_ma60": true,
+        "ma20_above_ma60": true,
+        "ma20_rising": false
+      },
+      {
+        "code": "sh.000300",
+        "name": "沪深300",
+        "close": 4615.46,
+        "daily_change_pct": -0.97,
+        "return_20d": -1.93,
+        "ma20": 4680.38,
+        "ma60": 4671.2,
+        "score": 30,
+        "status": "未确认",
+        "above_ma20": false,
+        "above_ma60": false,
+        "ma20_above_ma60": true,
+        "ma20_rising": false
+      },
+      {
+        "code": "sz.399006",
+        "name": "创业板指",
+        "close": 3208.58,
+        "daily_change_pct": -0.64,
+        "return_20d": -4.12,
+        "ma20": 3279.03,
+        "ma60": 3261.75,
+        "score": 30,
+        "status": "未确认",
+        "above_ma20": false,
+        "above_ma60": false,
+        "ma20_above_ma60": true,
+        "ma20_rising": false
+      }
+    ],
     "status_color_class": "text-gray-500"
   }
 }

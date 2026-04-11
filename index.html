@@ -204,6 +204,7 @@
                     <p class="mt-4 text-base sm:text-lg text-gray-600 leading-8">
                         这页只做盘后最有用的三件事：先判断今天能不能做，再告诉你先看哪个主线，最后只保留“动量前排 + 新高确认 + 成交跟上”的交集机会。
                     </p>
+                    <p id="pageMeta" class="mt-4 text-xs text-gray-500">数据日期 - | 样本口径 - | 页面更新 -</p>
                 </div>
                 <div class="date-selector flex items-center gap-3">
                     <label for="dateSelect" class="text-sm font-medium text-gray-500">选择日期</label>
@@ -518,6 +519,9 @@
         let currentOpportunityState = null;
         let currentSignalSnapshot = null;
         let selectedSectorName = null;
+        const pageParams = new URLSearchParams(window.location.search);
+        let requestedDate = pageParams.get('date') || '';
+        let requestedSectorName = pageParams.get('sector') || '';
 
         function formatDate(dateStr) {
             if (!dateStr) return '';
@@ -562,6 +566,25 @@
             return marketStats.market_phase || marketStats.overall_trend_status || marketStats.market_status || '趋势观察';
         }
 
+        function formatPageUpdatedAt() {
+            const value = document.lastModified;
+            if (!value) return '-';
+            const date = new Date(value);
+            if (Number.isNaN(date.getTime())) return value;
+            return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')} ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
+        }
+
+        function syncPageQuery() {
+            const params = new URLSearchParams(window.location.search);
+            if (currentDate) params.set('date', currentDate);
+            else params.delete('date');
+            if (selectedSectorName) params.set('sector', selectedSectorName);
+            else params.delete('sector');
+            const query = params.toString();
+            const nextUrl = `${window.location.pathname}${query ? `?${query}` : ''}${window.location.hash || ''}`;
+            window.history.replaceState({}, '', nextUrl);
+        }
+
         function buildPageHref(page) {
             const params = new URLSearchParams();
             if (currentDate) params.set('date', currentDate);
@@ -571,6 +594,7 @@
         }
 
         function updateCrossPageLinks() {
+            syncPageQuery();
             const momentumHref = buildPageHref('momentum.html');
             const newhighHref = buildPageHref('newhigh.html');
             document.getElementById('navMomentumLink').href = momentumHref;
@@ -629,14 +653,17 @@
                 select.appendChild(option);
             });
 
-            currentDate = availableDates[0];
+            const initialDate = requestedDate && availableDates.includes(requestedDate) ? requestedDate : availableDates[0];
+            currentDate = initialDate;
             select.value = currentDate;
             select.disabled = false;
+            syncPageQuery();
         }
 
         function onDateChange(date) {
             if (!date || date === currentDate) return;
             currentDate = date;
+            requestedDate = date;
             loadDashboard();
         }
 
@@ -1210,6 +1237,7 @@
             document.getElementById('step2').textContent = `再看板块：优先跟踪动量榜前排、且最近5日持续留在前十的方向。今天前排核心是 ${topSector?.sector_name || '暂无'}。`;
             document.getElementById('step3').textContent = '最后看个股：只从“动量前排 + 新高确认 + 成交跟上”的交集里下手，优先“主线共振 + 连续趋势 + 成交额大/换手确认”的组合。';
             document.getElementById('riskHint').textContent = tone.risk;
+            document.getElementById('pageMeta').textContent = `数据日期 ${formatDate(newhighPayload.trade_date || currentDate)} | 样本口径 可计算 250 日窗口 | 页面更新 ${formatPageUpdatedAt()}`;
             currentSignalSnapshot = {
                 headline: headlineSector,
                 headlineSummary: summary,
@@ -1402,7 +1430,13 @@
             if (selectedSectorName) {
                 label.textContent = `当前：${selectedSectorName} · 本板块新高 ${filteredState.sectorTotalCount || 0} 只 · 强确认 ${filteredState.strongSignalCount || 0} 只`;
                 title.textContent = `只看 ${selectedSectorName} 的龙头 / 容量 / 弹性`;
-                subtitle.textContent = `这里会直接重算 ${selectedSectorName} 板块内部的机会分层，不再只是全市场榜单里的被动过滤。`;
+                if ((filteredState.sectorTotalCount || 0) === 0) {
+                    subtitle.textContent = `${selectedSectorName} 今天在一年新高池里没有样本，右侧暂时不给票，建议切回全市场或改看别的主线。`;
+                } else if ((filteredState.strongSignalCount || 0) === 0) {
+                    subtitle.textContent = `${selectedSectorName} 今天有新高，但强确认信号还不够。右侧先保留板块内样本供你观察，不建议按确认机会直接下手。`;
+                } else {
+                    subtitle.textContent = `这里会直接重算 ${selectedSectorName} 板块内部的机会分层，不再只是全市场榜单里的被动过滤。`;
+                }
                 clearButton.classList.remove('hidden');
             } else {
                 label.textContent = `当前：全市场交集机会 · ${filteredState.selectedCount || 0} 只`;
@@ -1419,6 +1453,7 @@
         function selectSector(sectorName) {
             if (!sectorName || !currentMomentumPayload) return;
             selectedSectorName = selectedSectorName === sectorName ? null : sectorName;
+            requestedSectorName = selectedSectorName || '';
             renderSectorGrid(currentMomentumPayload, currentSectorStabilityMap);
             renderOpportunityPanel();
             renderSectorHeatmap(currentMomentumPayload, currentSectorStabilityMap);
@@ -1427,6 +1462,7 @@
         function clearSectorSelection() {
             if (!selectedSectorName) return;
             selectedSectorName = null;
+            requestedSectorName = '';
             if (!currentMomentumPayload) return;
             renderSectorGrid(currentMomentumPayload, currentSectorStabilityMap);
             renderOpportunityPanel();
@@ -1522,7 +1558,8 @@
                 currentNewhighPayload = newhighPayload;
                 currentSectorStabilityMap = sectorStabilityMap;
                 currentOpportunityState = opportunityState;
-                selectedSectorName = null;
+                const canRestoreSector = requestedSectorName && (momentumPayload.data || []).some((sector) => sector.sector_name === requestedSectorName);
+                selectedSectorName = canRestoreSector ? requestedSectorName : null;
 
                 renderSignalSection(newhighPayload, momentumPayload, opportunityState);
                 renderTrendHistory(trendInsight);

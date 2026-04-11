@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="0; url=newhigh_final.html" />
+    <meta charset="UTF-8" />
+    <script>
+        const target = `newhigh_final.html${window.location.search || ''}${window.location.hash || ''}`;
+        window.location.replace(target);
+    </script>
 </head>
 <body>
-    <p>Redirecting to <a href="newhigh_final.html">newhigh_final.html</a>...</p>
+    <p>Redirecting to <a id="targetLink" href="newhigh_final.html">newhigh_final.html</a>...</p>
+    <script>
+        document.getElementById('targetLink').href = `newhigh_final.html${window.location.search || ''}${window.location.hash || ''}`;
+    </script>
 </body>
 </html>

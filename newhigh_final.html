@@ -126,13 +126,13 @@
                 </div>
 
                 <div class="flex items-center gap-1">
-                    <a href="index.html" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+                    <a id="navHomeLink" href="index.html" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9.75L12 4l9 5.75V20a1 1 0 01-1 1h-5.5v-6h-5v6H4a1 1 0 01-1-1V9.75z"></path>
                         </svg>
                         总览
                     </a>
-                    <a href="momentum.html" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+                    <a id="navMomentumLink" href="momentum.html" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
@@ -348,6 +348,15 @@
                             </select>
                         </div>
                     </div>
+                    <div id="selectedSectorBar" class="hidden rounded-lg border border-red-100 bg-red-50 px-4 py-3">
+                        <div class="flex flex-wrap items-center justify-between gap-3">
+                            <p id="selectedSectorText" class="text-sm text-red-800">-</p>
+                            <div class="flex gap-2">
+                                <button onclick="openSelectedSectorModal()" class="rounded-full border border-red-200 bg-white px-3 py-1.5 text-xs font-semibold text-red-700 hover:bg-red-50">查看板块明细</button>
+                                <button onclick="clearSelectedSector()" class="rounded-full border border-red-200 bg-white px-3 py-1.5 text-xs font-semibold text-red-700 hover:bg-red-50">看全部新高</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm text-left">
@@ -479,6 +488,9 @@
         let allStocks = []; // 展平后的所有股票列表
         let availableDates = []; // 可用日期列表（有数据的日期）
         let momentumSectorMap = new Map();
+        const pageParams = new URLSearchParams(window.location.search);
+        let selectedSectorName = pageParams.get('sector') || '';
+        let requestedDate = pageParams.get('date') || '';
 
         // 颜色配置
         const colors = [
@@ -507,6 +519,36 @@
             }
             // 处理 YYYY-MM-DD 格式
             return dateStr;
+        }
+
+        function syncPageQuery() {
+            const params = new URLSearchParams(window.location.search);
+            if (currentDate) params.set('date', currentDate);
+            else params.delete('date');
+            if (selectedSectorName) params.set('sector', selectedSectorName);
+            else params.delete('sector');
+            const query = params.toString();
+            const nextUrl = `${window.location.pathname}${query ? `?${query}` : ''}${window.location.hash || ''}`;
+            window.history.replaceState({}, '', nextUrl);
+            document.getElementById('navHomeLink').href = `index.html${query ? `?${query}` : ''}`;
+            document.getElementById('navMomentumLink').href = `momentum.html${query ? `?${query}` : ''}`;
+        }
+
+        function updateSelectedSectorBar() {
+            const bar = document.getElementById('selectedSectorBar');
+            const text = document.getElementById('selectedSectorText');
+            if (selectedSectorName) {
+                const baseStocks = getDisplayedStocksBase(allStocks);
+                text.textContent = `当前从总览带入：${selectedSectorName}。个股列表已切到这个板块，共 ${baseStocks.length} 只新高股。`;
+                bar.classList.remove('hidden');
+            } else {
+                bar.classList.add('hidden');
+            }
+        }
+
+        function getDisplayedStocksBase(stocks) {
+            if (!selectedSectorName) return stocks;
+            return (stocks || []).filter((s) => (s.sector === selectedSectorName) || (s.industry === selectedSectorName));
         }
 
         // 从API或静态文件获取可用日期列表
@@ -565,17 +607,20 @@
             });
             
             // 默认选中最新有数据的日期
-            select.value = availableDates[0];
-            currentDate = availableDates[0];
+            const initialDate = requestedDate && availableDates.includes(requestedDate) ? requestedDate : availableDates[0];
+            select.value = initialDate;
+            currentDate = initialDate;
             
             // 启用选择器
             select.disabled = false;
+            syncPageQuery();
         }
 
         // 日期切换回调
         function onDateChange(date) {
             if (!date || date === currentDate) return;
             currentDate = date;
+            syncPageQuery();
             loadData();
         }
 
@@ -889,7 +934,8 @@
             const boardTextMap = { all: '全市场', main: '主板', cyb: '创业板', kcb: '科创板' };
             const quickTextMap = { all: '全部信号', strong: '强势突破', consecutive: '连续新高', active: '高成交额', focus: '优先关注' };
             const sortLabel = document.getElementById('stockSort')?.selectedOptions?.[0]?.text || '综合优先级';
-            document.getElementById('stockListSummary').textContent = `当前显示 ${filteredCount} / ${totalCount} 只 | ${boardTextMap[currentStockFilter]} | ${quickTextMap[currentQuickFilter]} | ${sortLabel}`;
+            const sectorText = selectedSectorName ? `板块 ${selectedSectorName}` : '全板块';
+            document.getElementById('stockListSummary').textContent = `当前显示 ${filteredCount} / ${totalCount} 只 | ${sectorText} | ${boardTextMap[currentStockFilter]} | ${quickTextMap[currentQuickFilter]} | ${sortLabel}`;
         }
 
         // 渲染页面
@@ -955,6 +1001,7 @@
             document.getElementById('sampleUniverseNote').textContent = `样本说明：250 日新高占比按可计算样本统计。今天可计算样本 ${totalUniverse} 只，全市场 ${allUniverse} 只，历史长度不足 250 个交易日的股票不会计入分母。`;
             document.getElementById('marketQuickTake').textContent = narrative.quickTake;
             document.getElementById('marketActionHint').textContent = narrative.action;
+            updateSelectedSectorBar();
             
             // 渲染板块分布
             renderSectors(data.sectors || [], newHighCount);
@@ -983,17 +1030,18 @@
                 const width = Math.max(10, (score / maxScore) * 100);
                 const reason = sector.sector_reason || '新高数量和板块强度共同决定排序';
                 const badges = [];
+                const isSelected = selectedSectorName && (sector.sector_name || sector.name) === selectedSectorName;
                 if (sector.momentum_warning) badges.push('动量预警主线');
                 else if (sector.momentum_mainline) badges.push('动量主线');
                 if ((sector.avg_consecutive_days || 0) >= 2) badges.push(`均值${sector.avg_consecutive_days}天`);
                 
                 return `
-                    <div class="sector-item p-4 rounded-lg border border-transparent hover:border-red-200" onclick="openSectorModal('${sector.sector_name || sector.name}', ${count}, ${score})">
+                    <div class="sector-item p-4 rounded-lg border ${isSelected ? 'border-red-200 bg-red-50/60' : 'border-transparent'} hover:border-red-200" onclick="openSectorModal('${sector.sector_name || sector.name}', ${count}, ${score})">
                         <div class="flex items-start justify-between gap-4">
                             <div class="flex-1 min-w-0">
                                 <div class="flex flex-wrap items-center gap-3">
                                     <span class="w-6 h-6 flex items-center justify-center ${color.light} ${color.text} rounded text-sm font-bold shrink-0">${index + 1}</span>
-                                    <span class="font-medium text-gray-900">${sector.sector_name || sector.name} 🔍</span>
+                                    <span class="font-medium text-gray-900">${sector.sector_name || sector.name} ${isSelected ? '📍' : '🔍'}</span>
                                     <div class="flex flex-wrap gap-2">
                                         ${badges.map((badge) => `<span class="inline-flex items-center px-2 py-1 rounded-full text-[11px] bg-gray-100 text-gray-600">${badge}</span>`).join('')}
                                     </div>
@@ -1026,10 +1074,11 @@
                 return;
             }
 
-            const boardFiltered = applyBoardFilter(stocks);
+            const sectorFiltered = getDisplayedStocksBase(stocks);
+            const boardFiltered = applyBoardFilter(sectorFiltered);
             const quickFiltered = applyQuickFilter(boardFiltered);
             const filteredStocks = sortStockList(quickFiltered);
-            updateStockListSummary(filteredStocks.length, stocks.length);
+            updateStockListSummary(filteredStocks.length, sectorFiltered.length);
 
             tbody.innerHTML = filteredStocks.slice(0, 50).map(stock => {
                 // 兼容多种可能的字段名
@@ -1120,6 +1169,21 @@
         function setStockSort(value) {
             currentSortKey = value;
             renderStocks(allStocks);
+        }
+
+        function clearSelectedSector() {
+            selectedSectorName = '';
+            syncPageQuery();
+            if (currentData) renderPage(currentData);
+        }
+
+        function openSelectedSectorModal() {
+            if (!selectedSectorName || !currentData) return;
+            const sector = (currentData.sectors || []).find((item) => (item.sector_name || item.name) === selectedSectorName);
+            if (!sector) return;
+            const count = sector.new_high_count || sector.stock_count || 0;
+            const score = sector.sector_score || sector.strength_score || count;
+            openSectorModal(selectedSectorName, count, score);
         }
 
         // 打开板块弹窗

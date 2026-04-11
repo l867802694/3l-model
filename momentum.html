@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="0; url=momentum_real.html" />
+    <meta charset="UTF-8" />
+    <script>
+        const target = `momentum_real.html${window.location.search || ''}${window.location.hash || ''}`;
+        window.location.replace(target);
+    </script>
 </head>
 <body>
-    <p>Redirecting to <a href="momentum_real.html">momentum_real.html</a>...</p>
+    <p>Redirecting to <a id="targetLink" href="momentum_real.html">momentum_real.html</a>...</p>
+    <script>
+        document.getElementById('targetLink').href = `momentum_real.html${window.location.search || ''}${window.location.hash || ''}`;
+    </script>
 </body>
 </html>

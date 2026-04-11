@@ -188,8 +188,8 @@
                 </div>
                 <div class="flex items-center gap-1 text-sm">
                     <button class="px-4 py-2 rounded-full bg-red-50 text-red-700 font-semibold">总览</button>
-                    <a href="momentum.html" class="px-4 py-2 rounded-full text-gray-600 hover:bg-gray-100">动量股池</a>
-                    <a href="newhigh.html" class="px-4 py-2 rounded-full text-gray-600 hover:bg-gray-100">一年新高</a>
+                    <a id="navMomentumLink" href="momentum.html" class="px-4 py-2 rounded-full text-gray-600 hover:bg-gray-100">动量股池</a>
+                    <a id="navNewhighLink" href="newhigh.html" class="px-4 py-2 rounded-full text-gray-600 hover:bg-gray-100">一年新高</a>
                 </div>
             </div>
         </div>
@@ -426,7 +426,7 @@
                             <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">主线板块</p>
                             <h2 class="mt-2 text-2xl font-semibold text-gray-950">今天先盯这几个主线</h2>
                         </div>
-                        <a href="momentum.html" class="text-sm font-semibold text-red-700 hover:text-red-800">看完整板块榜单</a>
+                        <a id="sectorDetailLink" href="momentum.html" class="text-sm font-semibold text-red-700 hover:text-red-800">看完整板块榜单</a>
                     </div>
                     <div id="sectorGrid" class="grid md:grid-cols-2 gap-4"></div>
                 </div>
@@ -438,7 +438,7 @@
                             <h2 id="opportunityTitle" class="mt-2 text-2xl font-semibold text-gray-950">只看主线和确认信号重叠的票</h2>
                             <p id="opportunitySubtitle" class="mt-2 text-sm text-gray-500">默认展示全市场里，主线和确认信号重叠的机会。</p>
                         </div>
-                        <a href="newhigh.html" class="text-sm font-semibold text-red-700 hover:text-red-800">看完整新高列表</a>
+                        <a id="opportunityDetailLink" href="newhigh.html" class="text-sm font-semibold text-red-700 hover:text-red-800">看完整新高列表</a>
                     </div>
                     <div class="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-[1.2rem] bg-gray-50 px-4 py-3">
                         <p id="selectedSectorLabel" class="text-sm text-gray-600">当前：全市场交集机会</p>
@@ -513,8 +513,10 @@
         let availableDates = [];
         let currentDate = null;
         let currentMomentumPayload = null;
+        let currentNewhighPayload = null;
         let currentSectorStabilityMap = new Map();
         let currentOpportunityState = null;
+        let currentSignalSnapshot = null;
         let selectedSectorName = null;
 
         function formatDate(dateStr) {
@@ -558,6 +560,23 @@
 
         function getMarketPhase(marketStats = {}) {
             return marketStats.market_phase || marketStats.overall_trend_status || marketStats.market_status || '趋势观察';
+        }
+
+        function buildPageHref(page) {
+            const params = new URLSearchParams();
+            if (currentDate) params.set('date', currentDate);
+            if (selectedSectorName) params.set('sector', selectedSectorName);
+            const query = params.toString();
+            return query ? `${page}?${query}` : page;
+        }
+
+        function updateCrossPageLinks() {
+            const momentumHref = buildPageHref('momentum.html');
+            const newhighHref = buildPageHref('newhigh.html');
+            document.getElementById('navMomentumLink').href = momentumHref;
+            document.getElementById('sectorDetailLink').href = momentumHref;
+            document.getElementById('navNewhighLink').href = newhighHref;
+            document.getElementById('opportunityDetailLink').href = newhighHref;
         }
 
         async function fetchJson(url) {
@@ -919,6 +938,36 @@
             return buckets;
         }
 
+        function buildOpportunityReason(stock) {
+            const bucketKey = stock?.bucket?.key;
+            const parts = [];
+            const sectorRank = Number(stock?.sector?.rank || 99);
+            const consecutive = Number(stock?.consecutive_new_high_days || stock?.consecutive_days || 1);
+            const amountYi = getAmountYi(stock);
+            const turnoverRatio = getTurnoverRatio(stock);
+            const breakPct = Number(stock?.break_pct || stock?.break_through || 0);
+            const top10Days = Number(stock?.stability?.top10Days || 0);
+
+            if (bucketKey === 'leaders') {
+                if (sectorRank <= 5) parts.push(`板块前排第 ${sectorRank}`);
+                if (top10Days >= 3) parts.push(`近5日上榜 ${top10Days} 次`);
+                if (consecutive >= 2) parts.push(`${consecutive} 连新高`);
+                if (amountYi >= 20) parts.push(`成交额 ${amountYi.toFixed(1)} 亿`);
+            } else if (bucketKey === 'capacity') {
+                if (amountYi >= 12) parts.push(`成交额 ${amountYi.toFixed(1)} 亿`);
+                if (turnoverRatio >= 3) parts.push(`换手 ${turnoverRatio.toFixed(2)}%`);
+                if (consecutive >= 2) parts.push(`${consecutive} 连新高`);
+                if (sectorRank <= 10) parts.push(`板块仍在前排`);
+            } else if (bucketKey === 'elastic') {
+                if (breakPct >= 1.5) parts.push(`突破幅度 ${breakPct.toFixed(1)}%`);
+                if (turnoverRatio >= 2.5) parts.push(`换手 ${turnoverRatio.toFixed(2)}%`);
+                if (consecutive >= 2) parts.push(`${consecutive} 连新高`);
+            }
+
+            if (!parts.length) parts.push('优先看板块位置、成交和连续性');
+            return parts.slice(0, 3).join(' + ');
+        }
+
         function buildOpportunityList(newhighPayload, momentumPayload, sectorStabilityMap) {
             const sectorMap = new Map((momentumPayload.data || []).map((sector) => [sector.sector_name, sector]));
             const list = [];
@@ -995,6 +1044,30 @@
                 strongSignalCount: sectorStrong.length,
                 selectedSectorName: sectorName
             };
+        }
+
+        function renderSelectionNarrative(filteredState) {
+            if (!currentSignalSnapshot) return;
+
+            if (!selectedSectorName) {
+                document.getElementById('headline').textContent = currentSignalSnapshot.headline;
+                document.getElementById('headlineSummary').textContent = currentSignalSnapshot.headlineSummary;
+                document.getElementById('opportunityHint').textContent = currentSignalSnapshot.opportunityHint;
+                document.getElementById('step2').textContent = currentSignalSnapshot.step2;
+                document.getElementById('step3').textContent = currentSignalSnapshot.step3;
+                return;
+            }
+
+            const topStock = filteredState.list?.[0];
+            const bucketTitle = topStock?.bucket?.title || '确认机会';
+            const stockName = topStock?.name ? `，当前优先看 ${topStock.name}` : '';
+            document.getElementById('headline').textContent = `今天先看 ${selectedSectorName}，优先 ${bucketTitle}${stockName}`;
+            document.getElementById('headlineSummary').textContent = `当前整体环境仍按全市场判断，但个股层面已经切到 ${selectedSectorName}。这个板块今天共有 ${filteredState.sectorTotalCount || 0} 只新高，其中 ${filteredState.strongSignalCount || 0} 只是强确认信号，右侧按龙头、容量、弹性三层重排。`;
+            document.getElementById('opportunityHint').textContent = `${selectedSectorName} | 本板块新高 ${filteredState.sectorTotalCount || 0} 只 | 强确认 ${filteredState.strongSignalCount || 0} 只`;
+            document.getElementById('step2').textContent = `再看板块：当前已经切到 ${selectedSectorName}，先判断它是龙头延续、容量承接，还是弹性补涨，不把三种票混着看。`;
+            document.getElementById('step3').textContent = topStock
+                ? `最后看个股：先看 ${topStock.bucket.title} 里的前排，当前第一优先是 ${topStock.name}，核心依据是 ${buildOpportunityReason(topStock)}。`
+                : `最后看个股：先只看 ${selectedSectorName} 里的确认机会，再决定是做龙头、容量还是弹性。`;
         }
 
         function getTrendTone(status) {
@@ -1152,6 +1225,14 @@
             document.getElementById('step2').textContent = `再看板块：优先跟踪动量榜前排、且最近5日持续留在前十的方向。今天前排核心是 ${topSector?.sector_name || '暂无'}。`;
             document.getElementById('step3').textContent = '最后看个股：只从“动量前排 + 新高确认 + 成交跟上”的交集里下手，优先“主线共振 + 连续趋势 + 成交额大/换手确认”的组合。';
             document.getElementById('riskHint').textContent = tone.risk;
+            currentSignalSnapshot = {
+                headline: headlineSector,
+                headlineSummary: summary,
+                opportunityHint: opportunities.length ? `${opportunities[0].sector_name} 方向最值得先看 | 主线新高 ${opportunityState.preferredCount || opportunities.length} 只` : '暂无交集机会',
+                step2: `再看板块：优先跟踪动量榜前排、且最近5日持续留在前十的方向。今天前排核心是 ${topSector?.sector_name || '暂无'}。`,
+                step3: '最后看个股：只从“动量前排 + 新高确认 + 成交跟上”的交集里下手，优先“主线共振 + 连续趋势 + 成交额大/换手确认”的组合。'
+            };
+            updateCrossPageLinks();
         }
 
         function renderTrendHistory(historyInsight) {
@@ -1212,6 +1293,8 @@
 
             grid.innerHTML = sectors.map((sector) => {
                 const stability = sectorStabilityMap.get(sector.sector_name);
+                const sectorAllCount = (currentOpportunityState?.allList || []).filter((stock) => stock.sector_name === sector.sector_name).length;
+                const sectorStrongCount = (currentOpportunityState?.intersectionList || []).filter((stock) => stock.sector_name === sector.sector_name).length;
                 const toneClass = sector.is_warning ? 'bg-red-50 text-red-700' : sector.is_main_line ? 'bg-amber-50 text-amber-700' : 'bg-gray-100 text-gray-700';
                 const rankText = sector.rank_change > 0 ? `较前期上升 ${sector.rank_change} 名` : sector.rank_change < 0 ? `较前期回落 ${Math.abs(sector.rank_change)} 名` : '排名基本稳定';
                 const isSelected = selectedSectorName === sector.sector_name;
@@ -1246,6 +1329,10 @@
                         <div class="mt-5 rounded-2xl bg-gray-50 px-4 py-3 text-sm text-gray-600 leading-7">
                             <p>${stability?.note || '今天进入主线观察区。'}</p>
                             <p class="mt-1">${rankText}，当前上榜 ${sector.listed_count} / ${sector.total_count} 只。</p>
+                        </div>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700">板块新高 ${sectorAllCount} 只</span>
+                            <span class="rounded-full bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700">强确认 ${sectorStrongCount} 只</span>
                         </div>
                         <p class="mt-3 text-xs ${isSelected ? 'text-red-700' : 'text-gray-400'}">${isSelected ? '当前已联动到右侧机会池' : '点击后，右侧机会池只看这个板块'}</p>
                     </article>
@@ -1301,6 +1388,7 @@
                                                     <span class="text-xs font-mono text-gray-400">${stock.code || stock.ts_code || '-'}</span>
                                                 </div>
                                                 <p class="mt-2 text-sm text-gray-500">${stock.sector_name} · ${consecutive}天连新高 · 成交额 ${amountYi.toFixed(1)} 亿${turnoverRatio > 0 ? ` · 换手 ${turnoverRatio.toFixed(2)}%` : ''}</p>
+                                                <p class="mt-1 text-xs text-gray-400">${buildOpportunityReason(stock)}</p>
                                             </div>
                                             <div class="text-right">
                                                 <p class="text-lg font-semibold ${change >= 0 ? 'text-red-700' : 'text-green-700'}">${formatPercent(change, 2)}</p>
@@ -1338,6 +1426,8 @@
                 clearButton.classList.add('hidden');
             }
 
+            renderSelectionNarrative(filteredState);
+            updateCrossPageLinks();
             renderOpportunityList(filteredState);
         }
 
@@ -1444,6 +1534,7 @@
                 const sectorStabilityMap = buildSectorStabilityMap(validHistory);
                 const opportunityState = buildOpportunityList(newhighPayload, momentumPayload, sectorStabilityMap);
                 currentMomentumPayload = momentumPayload;
+                currentNewhighPayload = newhighPayload;
                 currentSectorStabilityMap = sectorStabilityMap;
                 currentOpportunityState = opportunityState;
                 selectedSectorName = null;

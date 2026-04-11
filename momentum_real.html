@@ -402,7 +402,7 @@
                     }
                 } else {
                     // 静态文件模式（GitHub Pages 或本地文件）
-                    const datesUrl = isGitHubPages ? `${DATA_BASE}/dates.json${cacheBuster}` : `./data/dates.json${cacheBuster}`;
+                    const datesUrl = isGitHubPages ? `${DATA_BASE}/momentum_dates.json${cacheBuster}` : `./data/momentum_dates.json${cacheBuster}`;
                     const response = await fetch(datesUrl);
                     if (response.ok) {
                         const result = await response.json();

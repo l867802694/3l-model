@@ -2,7 +2,7 @@
   "trade_date": "20260327",
   "data_source": "BaoStock (免费数据)",
   "classification": "申万2021二级行业",
-  "market_strength": 0.8,
+  "market_strength": 0.81,
   "universe_size": 5011,
   "total_stocks": 40,
   "total_sectors": 25,
@@ -10,21 +10,24 @@
     "new_high_count": 40,
     "new_low_count": 1,
     "net_new_high": 39,
-    "new_high_ratio": 0.8,
+    "new_high_ratio": 0.81,
     "new_low_ratio": 0.02,
-    "net_new_high_ratio": 0.78,
+    "net_new_high_ratio": 0.79,
     "new_high_low_ratio": 40.0,
     "avg_5d": 37.6,
     "avg_5d_net": -70.8,
     "avg_5d_change_pct": 6.4,
     "trend_days": 4,
     "positive_days_5d": 4,
-    "total_universe": 5011,
+    "total_universe": 4927,
+    "pulse_signal": false,
     "market_status": "趋势可做",
+    "market_phase": "趋势可做",
+    "market_phase_desc": "市场存在可操作的趋势扩散，优先盯强板块里的回踩和二次启动。 新高股涨幅、连续性和主线共振都较强，趋势深度扎实。 指数确认：未确认。",
     "market_signal": "趋势可做",
     "market_status_desc": "市场存在可操作的趋势扩散，优先盯强板块里的回踩和二次启动。 新高股涨幅、连续性和主线共振都较强，趋势深度扎实。 指数确认：未确认。",
     "strength_score": 70,
-    "breadth_strength_score": 65,
+    "breadth_strength_score": 66,
     "breadth_status": "趋势可做",
     "depth_trend_score": 75.0,
     "depth_trend_status": "深度强",
@@ -1284,5 +1287,8 @@
         }
       ]
     }
-  ]
+  ],
+  "history_eligible_ratio": 98.32,
+  "history_window_complete": true,
+  "history_eligible_stocks": 4927
 }

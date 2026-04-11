@@ -2,7 +2,7 @@
   "trade_date": "20260318",
   "data_source": "BaoStock (免费数据)",
   "classification": "申万2021二级行业",
-  "market_strength": 0.68,
+  "market_strength": 0.69,
   "universe_size": 5011,
   "total_stocks": 34,
   "total_sectors": 20,
@@ -10,8 +10,8 @@
     "new_high_count": 34,
     "new_low_count": 19,
     "net_new_high": 15,
-    "new_high_ratio": 0.68,
-    "new_low_ratio": 0.38,
+    "new_high_ratio": 0.69,
+    "new_low_ratio": 0.39,
     "net_new_high_ratio": 0.3,
     "new_high_low_ratio": 1.79,
     "avg_5d": 11.4,
@@ -19,8 +19,11 @@
     "avg_5d_change_pct": 198.2,
     "trend_days": 2,
     "positive_days_5d": 2,
-    "total_universe": 5011,
+    "total_universe": 4925,
+    "pulse_signal": false,
     "market_status": "趋势观察",
+    "market_phase": "趋势观察",
+    "market_phase_desc": "市场有局部趋势，但扩散仍不够，机会更偏结构性。 新高股质量和主线共振尚可，适合优先看强板块里的确认机会。 指数确认：弱确认。",
     "market_signal": "趋势观察",
     "market_status_desc": "市场有局部趋势，但扩散仍不够，机会更偏结构性。 新高股质量和主线共振尚可，适合优先看强板块里的确认机会。 指数确认：弱确认。",
     "strength_score": 49,
@@ -1084,5 +1087,8 @@
         }
       ]
     }
-  ]
+  ],
+  "history_eligible_ratio": 98.28,
+  "history_window_complete": true,
+  "history_eligible_stocks": 4925
 }

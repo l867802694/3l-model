@@ -2,7 +2,7 @@
   "trade_date": "20260408",
   "data_source": "BaoStock (免费数据)",
   "classification": "申万2021二级行业",
-  "market_strength": 1.22,
+  "market_strength": 1.24,
   "universe_size": 5011,
   "total_stocks": 61,
   "total_sectors": 33,
@@ -10,27 +10,30 @@
     "new_high_count": 61,
     "new_low_count": 3,
     "net_new_high": 58,
-    "new_high_ratio": 1.22,
+    "new_high_ratio": 1.24,
     "new_low_ratio": 0.06,
-    "net_new_high_ratio": 1.16,
+    "net_new_high_ratio": 1.18,
     "new_high_low_ratio": 20.33,
     "avg_5d": 36.0,
     "avg_5d_net": -18.8,
     "avg_5d_change_pct": 69.4,
     "trend_days": 1,
     "positive_days_5d": 2,
-    "total_universe": 5011,
-    "market_status": "趋势谨慎",
-    "market_signal": "趋势谨慎",
-    "market_status_desc": "新高不足或新低压制明显，先控制节奏，少做追涨。 新高股质量和主线共振尚可，适合优先看强板块里的确认机会。 指数确认：未确认。",
-    "strength_score": 24,
-    "breadth_strength_score": 24,
-    "breadth_status": "趋势谨慎",
+    "total_universe": 4933,
+    "pulse_signal": true,
+    "market_status": "趋势观察",
+    "market_phase": "单日脉冲",
+    "market_phase_desc": "今天新高突然放大，但持续性还没建立，先把它当强修复日，优先看主线交集，不要直接放大成全面牛市。",
+    "market_signal": "趋势观察",
+    "market_status_desc": "今天新高家数突然放大，但持续性还没建立，先把它当作强修复日观察。 新高股质量和主线共振尚可，适合优先看强板块里的确认机会。 指数确认：未确认。",
+    "strength_score": 49,
+    "breadth_strength_score": 44,
+    "breadth_status": "单日脉冲",
     "depth_trend_score": 65.0,
     "depth_trend_status": "深度可做",
     "depth_trend_desc": "新高股质量和主线共振尚可，适合优先看强板块里的确认机会。",
-    "overall_trend_score": 24,
-    "overall_trend_status": "趋势谨慎",
+    "overall_trend_score": 49,
+    "overall_trend_status": "趋势观察",
     "index_confirmation_score": 33.3,
     "index_confirmation_status": "未确认",
     "index_confirmation_summary": "指数没有跟上，广度信号更像结构性修复，不宜过度放大。",
@@ -81,7 +84,7 @@
         "ma20_rising": false
       }
     ],
-    "status_color_class": "text-gray-500"
+    "status_color_class": "text-yellow-600"
   },
   "sectors": [
     {
@@ -1832,5 +1835,8 @@
         }
       ]
     }
-  ]
+  ],
+  "history_eligible_ratio": 98.44,
+  "history_window_complete": true,
+  "history_eligible_stocks": 4933
 }

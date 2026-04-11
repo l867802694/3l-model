@@ -20,7 +20,10 @@
     "trend_days": 0,
     "positive_days_5d": 0,
     "total_universe": 5011,
+    "pulse_signal": false,
     "market_status": "趋势谨慎",
+    "market_phase": "趋势谨慎",
+    "market_phase_desc": "新高不足或新低压制明显，先控制节奏，少做追涨。 新高股强度、连续性和主线共振都不够，趋势深度偏弱。 指数确认：确认。",
     "market_signal": "趋势谨慎",
     "market_status_desc": "新高不足或新低压制明显，先控制节奏，少做追涨。 新高股强度、连续性和主线共振都不够，趋势深度偏弱。 指数确认：确认。",
     "strength_score": 0,
@@ -83,5 +86,8 @@
     ],
     "status_color_class": "text-gray-500"
   },
-  "sectors": []
+  "sectors": [],
+  "history_eligible_ratio": 0.0,
+  "history_window_complete": false,
+  "history_eligible_stocks": 0
 }

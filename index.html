@@ -254,6 +254,10 @@
                         <span id="sampleUniversePill" class="status-pill bg-white/12 text-white">-</span>
                         <span id="intersectionPill" class="status-pill bg-white/12 text-white">-</span>
                     </div>
+                    <div class="mt-5 rounded-3xl bg-white/12 p-4">
+                        <p class="text-xs uppercase tracking-[0.2em] text-white/60">一句话动作</p>
+                        <p id="actionSummary" class="mt-2 text-sm leading-7 text-white/90">-</p>
+                    </div>
                     <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
                         <div class="rounded-3xl bg-white/12 p-4">
                             <p class="text-xs uppercase tracking-[0.2em] text-white/60">创250日新高</p>
@@ -995,6 +999,21 @@
             return parts.slice(0, 3).join(' + ');
         }
 
+        function getOpportunityActionLabel(stock) {
+            const bucketKey = stock?.bucket?.key;
+            const change = Number(stock?.change_pct || stock?.change || 0);
+            const turnoverRatio = getTurnoverRatio(stock);
+            const consecutive = Number(stock?.consecutive_new_high_days || stock?.consecutive_days || 1);
+
+            if (bucketKey === 'leaders' && consecutive >= 2) {
+                return { text: '优先看', className: 'bg-red-50 text-red-700' };
+            }
+            if (bucketKey === 'capacity' && (turnoverRatio >= 3 || change >= 4)) {
+                return { text: '重点跟踪', className: 'bg-amber-50 text-amber-700' };
+            }
+            return { text: '先观察', className: 'bg-gray-100 text-gray-700' };
+        }
+
         function buildOpportunityList(newhighPayload, momentumPayload, sectorStabilityMap) {
             const sectorMap = new Map((momentumPayload.data || []).map((sector) => [sector.sector_name, sector]));
             const list = [];
@@ -1208,6 +1227,9 @@
             document.getElementById('strengthBar').style.width = `${marketStats.strength_score || 0}%`;
             document.getElementById('sampleUniversePill').textContent = `可计算样本 ${effectiveUniverse} / 全市场 ${newhighPayload.universe_size || effectiveUniverse}`;
             document.getElementById('intersectionPill').textContent = `主线新高 ${opportunityState.preferredCount || opportunities.length} | 交集机会 ${opportunityState.intersectionCount || opportunities.length}`;
+            document.getElementById('actionSummary').textContent = topSector
+                ? `${marketPhase} 环境下，先盯 ${topSector.sector_name}，只做主线交集里有确认信号的票。`
+                : `${marketPhase} 环境下，先看趋势扩散，再决定是否提高出手强度。`;
             document.getElementById('breadthStatusCard').textContent = breadthStatus;
             document.getElementById('breadthStatusCard').className = `text-2xl font-semibold ${getTrendTextClass(breadthStatus)}`;
             document.getElementById('breadthMetaCard').textContent = `净新高 ${marketStats.net_new_high || 0} | 连续 ${marketStats.trend_days || 0} 天为正`;
@@ -1391,6 +1413,7 @@
                                 const amountYi = getAmountYi(stock);
                                 const turnoverRatio = getTurnoverRatio(stock);
                                 const priority = Number(stock.bucket_priority_score || 0);
+                                const actionTag = getOpportunityActionLabel(stock);
                                 return `
                                     <article class="opportunity-row transition-all duration-200 rounded-[1.2rem] border border-[var(--line)] bg-white p-4">
                                         <div class="flex items-start justify-between gap-4">
@@ -1399,6 +1422,7 @@
                                                     <span class="h-7 w-7 rounded-full bg-red-50 text-red-700 flex items-center justify-center text-xs font-bold">${index + 1}</span>
                                                     <h3 class="text-base font-semibold text-gray-950">${stock.name}</h3>
                                                     <span class="text-xs font-mono text-gray-400">${stock.code || stock.ts_code || '-'}</span>
+                                                    <span class="rounded-full px-2.5 py-1 text-xs font-medium ${actionTag.className}">${actionTag.text}</span>
                                                 </div>
                                                 <p class="mt-2 text-sm text-gray-500">${stock.sector_name} · ${consecutive}天连新高 · 成交额 ${amountYi.toFixed(1)} 亿${turnoverRatio > 0 ? ` · 换手 ${turnoverRatio.toFixed(2)}%` : ''}</p>
                                                 <p class="mt-1 text-xs text-gray-400">${buildOpportunityReason(stock)}</p>
@@ -1457,6 +1481,7 @@
             renderSectorGrid(currentMomentumPayload, currentSectorStabilityMap);
             renderOpportunityPanel();
             renderSectorHeatmap(currentMomentumPayload, currentSectorStabilityMap);
+            document.getElementById('opportunityList').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         function clearSectorSelection() {

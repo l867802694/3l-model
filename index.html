@@ -200,7 +200,7 @@
             <div class="flex flex-col xl:flex-row xl:items-end xl:justify-between gap-6">
                 <div class="max-w-3xl">
                     <p class="text-xs uppercase tracking-[0.35em] text-red-700/80 font-semibold">大势 -> 板块 -> 机会</p>
-                    <h1 class="mt-3 text-4xl sm:text-5xl font-semibold tracking-tight text-gray-950">先判断能不能做，再决定去哪里做。</h1>
+                    <h1 class="mt-3 text-4xl sm:text-5xl font-semibold tracking-tight text-gray-950">先看环境，再看方向，最后看机会。</h1>
                     <p class="mt-4 text-base sm:text-lg text-gray-600 leading-8">
                         这页只做盘后最有用的三件事：先判断今天能不能做，再告诉你先看哪个主线，最后只保留“动量前排 + 新高确认 + 成交跟上”的交集机会。
                     </p>
@@ -428,8 +428,9 @@
                 <div class="shell rounded-[2rem] p-6 sm:p-7">
                     <div class="flex items-center justify-between gap-4 mb-6">
                         <div>
-                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">主线板块</p>
-                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">今天先盯这几个主线</h2>
+                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">优先方向</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">今天先看这几个候选主线</h2>
+                            <p class="mt-2 text-sm text-gray-500">点击板块，右侧机会池会同步切换。</p>
                         </div>
                         <a id="sectorDetailLink" href="momentum.html" class="text-sm font-semibold text-red-700 hover:text-red-800">看完整板块榜单</a>
                     </div>
@@ -441,7 +442,7 @@
                         <div>
                             <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">交集机会池</p>
                             <h2 id="opportunityTitle" class="mt-2 text-2xl font-semibold text-gray-950">只看主线和确认信号重叠的票</h2>
-                            <p id="opportunitySubtitle" class="mt-2 text-sm text-gray-500">默认展示全市场里，主线和确认信号重叠的机会。</p>
+                            <p id="opportunitySubtitle" class="mt-2 text-sm text-gray-500">不选板块时看全市场交集，选板块后只看该板块。</p>
                         </div>
                         <a id="opportunityDetailLink" href="newhigh.html" class="text-sm font-semibold text-red-700 hover:text-red-800">看完整新高列表</a>
                     </div>
@@ -464,31 +465,32 @@
                 <div class="shell rounded-[2rem] p-6 sm:p-7">
                     <div class="flex items-center justify-between gap-4 mb-6">
                         <div>
-                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">板块热力</p>
-                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">谁是今天的主攻线</h2>
+                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">板块强度排序</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">看谁最强，谁在升温</h2>
+                            <p class="mt-2 text-sm text-gray-500">这块用来验证强弱，不是第二个主线入口。</p>
                         </div>
-                        <p class="text-xs text-gray-400">连续性 = 最近5个交易日内进入前10的次数</p>
+                        <p class="text-xs text-gray-400">连续性 = 最近 5 日进入前十的次数</p>
                     </div>
                     <div id="sectorHeatmap" class="space-y-3"></div>
                 </div>
 
                 <div class="shell rounded-[2rem] p-6 sm:p-7">
                     <div>
-                        <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">理解这页</p>
-                        <h2 class="mt-2 text-2xl font-semibold text-gray-950">这不是热点榜，是趋势决策台</h2>
+                        <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">怎么读这页</p>
+                        <h2 class="mt-2 text-2xl font-semibold text-gray-950">只看这三步</h2>
                     </div>
                     <div class="mt-6 space-y-4 text-sm leading-7 text-gray-600">
                         <div class="rounded-3xl bg-gray-50 p-4">
                             <p class="font-semibold text-gray-900">1. 先看环境</p>
-                            <p class="mt-2">一年新高决定现在是不是适合优先做趋势。新高多、新低少、净新高持续为正，才说明环境健康。</p>
+                            <p class="mt-2">环境不对，就先别把趋势交易当主线。</p>
                         </div>
                         <div class="rounded-3xl bg-gray-50 p-4">
-                            <p class="font-semibold text-gray-900">2. 再看主线</p>
-                            <p class="mt-2">动量分值负责找强板块，连续性负责判断这是不是单日脉冲。只有强度和持续性同时在线，板块才值得盯。</p>
+                            <p class="font-semibold text-gray-900">2. 再看方向</p>
+                            <p class="mt-2">先看候选主线，再用强度排序验证它是不是只强一天。</p>
                         </div>
                         <div class="rounded-3xl bg-gray-50 p-4">
                             <p class="font-semibold text-gray-900">3. 最后才看个股</p>
-                            <p class="mt-2">机会池先做交集筛选，再拆成“龙头确认、容量趋势、弹性补涨”三层。这样你能先看最稳的，再看更有弹性的，不会把不同类型的票混在一个榜里硬排。</p>
+                            <p class="mt-2">个股只看交集机会，再分龙头、容量、弹性，不把不同类型的票混着排。</p>
                         </div>
                     </div>
                 </div>
@@ -1215,9 +1217,9 @@
             const indexScore = Number(marketStats.index_confirmation_score || 0);
             const topSector = (momentumPayload.data || [])[0];
             const opportunities = opportunityState.list || [];
-            const headlineSector = topSector ? `今天先做 ${topSector.sector_name} 方向的交集机会` : '先看环境，再找主线';
+            const headlineSector = topSector ? `今天先看 ${topSector.sector_name}` : '先看环境，再找主线';
             const effectiveUniverse = marketStats.total_universe || newhighPayload.history_eligible_stocks || newhighPayload.universe_size || 0;
-            const summary = `今天的交易相位是 ${marketPhase}。广度是 ${breadthStatus}，深度是 ${depthStatus}，指数端 ${getIndexTone(indexStatus)}。动量榜最强的是 ${topSector?.sector_name || '暂无板块数据'}，机会池只保留主线里同时满足新高确认和成交跟上的票。`;
+            const summary = `今天是 ${marketPhase}。广度 ${breadthStatus}，深度 ${depthStatus}，指数端 ${getIndexTone(indexStatus)}。当前先看 ${topSector?.sector_name || '主线方向'}。`;
 
             document.getElementById('headline').textContent = headlineSector;
             document.getElementById('headlineSummary').textContent = summary;
@@ -1228,8 +1230,8 @@
             document.getElementById('sampleUniversePill').textContent = `可计算样本 ${effectiveUniverse} / 全市场 ${newhighPayload.universe_size || effectiveUniverse}`;
             document.getElementById('intersectionPill').textContent = `主线新高 ${opportunityState.preferredCount || opportunities.length} | 交集机会 ${opportunityState.intersectionCount || opportunities.length}`;
             document.getElementById('actionSummary').textContent = topSector
-                ? `${marketPhase} 环境下，先盯 ${topSector.sector_name}，只做主线交集里有确认信号的票。`
-                : `${marketPhase} 环境下，先看趋势扩散，再决定是否提高出手强度。`;
+                ? `${marketPhase}，先看 ${topSector.sector_name}，只做强确认。`
+                : `${marketPhase}，先看趋势扩散，再决定要不要出手。`;
             document.getElementById('breadthStatusCard').textContent = breadthStatus;
             document.getElementById('breadthStatusCard').className = `text-2xl font-semibold ${getTrendTextClass(breadthStatus)}`;
             document.getElementById('breadthMetaCard').textContent = `净新高 ${marketStats.net_new_high || 0} | 连续 ${marketStats.trend_days || 0} 天为正`;
@@ -1366,10 +1368,9 @@
                             <p class="mt-1">${rankText}，当前上榜 ${sector.listed_count} / ${sector.total_count} 只。</p>
                         </div>
                         <div class="mt-3 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700">板块新高 ${sectorAllCount} 只</span>
+                            <span class="rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700">新高 ${sectorAllCount} 只</span>
                             <span class="rounded-full bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700">强确认 ${sectorStrongCount} 只</span>
                         </div>
-                        <p class="mt-3 text-xs ${isSelected ? 'text-red-700' : 'text-gray-400'}">${isSelected ? '当前已联动到右侧机会池' : '点击后，右侧机会池只看这个板块'}</p>
                     </article>
                 `;
             }).join('');
@@ -1389,11 +1390,6 @@
                 if (!bucketStocks.length) return '';
 
                 const bucketMeta = bucketStocks[0].bucket;
-                const bucketHint = bucketKey === 'leaders'
-                    ? '先看板块地位和连新高'
-                    : bucketKey === 'capacity'
-                        ? '优先看成交额和换手确认'
-                        : '更看突破力度和加速度';
                 return `
                     <section class="rounded-[1.5rem] border border-[var(--line)] bg-gray-50/80 p-4">
                         <div class="flex items-start justify-between gap-4">
@@ -1403,7 +1399,6 @@
                             </div>
                             <div class="text-right">
                                 <span class="rounded-full bg-white px-2.5 py-1 text-xs font-medium text-gray-600">${bucketStocks.length} 只</span>
-                                <p class="mt-2 text-[11px] text-gray-400">${bucketHint}</p>
                             </div>
                         </div>
                         <div class="mt-4 space-y-3">
@@ -1429,7 +1424,6 @@
                                             </div>
                                             <div class="text-right">
                                                 <p class="text-lg font-semibold ${change >= 0 ? 'text-red-700' : 'text-green-700'}">${formatPercent(change, 2)}</p>
-                                                <p class="mt-1 text-xs text-gray-400">组内优先级 ${priority.toFixed(1)}</p>
                                             </div>
                                         </div>
                                         <div class="mt-3 flex flex-wrap gap-2">
@@ -1455,11 +1449,11 @@
                 label.textContent = `当前：${selectedSectorName} · 本板块新高 ${filteredState.sectorTotalCount || 0} 只 · 强确认 ${filteredState.strongSignalCount || 0} 只`;
                 title.textContent = `只看 ${selectedSectorName} 的龙头 / 容量 / 弹性`;
                 if ((filteredState.sectorTotalCount || 0) === 0) {
-                    subtitle.textContent = `${selectedSectorName} 今天在一年新高池里没有样本，右侧暂时不给票，建议切回全市场或改看别的主线。`;
+                    subtitle.textContent = `${selectedSectorName} 今天在一年新高池里没有样本，建议切回全市场。`;
                 } else if ((filteredState.strongSignalCount || 0) === 0) {
-                    subtitle.textContent = `${selectedSectorName} 今天有新高，但强确认信号还不够。右侧先保留板块内样本供你观察，不建议按确认机会直接下手。`;
+                    subtitle.textContent = `${selectedSectorName} 今天有新高，但强确认不够，先观察。`;
                 } else {
-                    subtitle.textContent = `这里会直接重算 ${selectedSectorName} 板块内部的机会分层，不再只是全市场榜单里的被动过滤。`;
+                    subtitle.textContent = `现在只看 ${selectedSectorName} 的龙头、容量、弹性。`;
                 }
                 clearButton.classList.remove('hidden');
             } else {
@@ -1530,7 +1524,6 @@
                         <div class="mt-3 h-2.5 mini-bar">
                             <span style="width: ${width}%"></span>
                         </div>
-                        <p class="mt-2 text-xs ${isSelected ? 'text-red-700' : 'text-gray-400'}">${isSelected ? '当前已筛到这个板块' : '点击同步右侧机会池'}</p>
                     </div>
                 `;
             }).join('');

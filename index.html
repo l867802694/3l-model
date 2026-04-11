@@ -1048,26 +1048,11 @@
 
         function renderSelectionNarrative(filteredState) {
             if (!currentSignalSnapshot) return;
-
-            if (!selectedSectorName) {
-                document.getElementById('headline').textContent = currentSignalSnapshot.headline;
-                document.getElementById('headlineSummary').textContent = currentSignalSnapshot.headlineSummary;
-                document.getElementById('opportunityHint').textContent = currentSignalSnapshot.opportunityHint;
-                document.getElementById('step2').textContent = currentSignalSnapshot.step2;
-                document.getElementById('step3').textContent = currentSignalSnapshot.step3;
-                return;
-            }
-
-            const topStock = filteredState.list?.[0];
-            const bucketTitle = topStock?.bucket?.title || '确认机会';
-            const stockName = topStock?.name ? `，当前优先看 ${topStock.name}` : '';
-            document.getElementById('headline').textContent = `今天先看 ${selectedSectorName}，优先 ${bucketTitle}${stockName}`;
-            document.getElementById('headlineSummary').textContent = `当前整体环境仍按全市场判断，但个股层面已经切到 ${selectedSectorName}。这个板块今天共有 ${filteredState.sectorTotalCount || 0} 只新高，其中 ${filteredState.strongSignalCount || 0} 只是强确认信号，右侧按龙头、容量、弹性三层重排。`;
-            document.getElementById('opportunityHint').textContent = `${selectedSectorName} | 本板块新高 ${filteredState.sectorTotalCount || 0} 只 | 强确认 ${filteredState.strongSignalCount || 0} 只`;
-            document.getElementById('step2').textContent = `再看板块：当前已经切到 ${selectedSectorName}，先判断它是龙头延续、容量承接，还是弹性补涨，不把三种票混着看。`;
-            document.getElementById('step3').textContent = topStock
-                ? `最后看个股：先看 ${topStock.bucket.title} 里的前排，当前第一优先是 ${topStock.name}，核心依据是 ${buildOpportunityReason(topStock)}。`
-                : `最后看个股：先只看 ${selectedSectorName} 里的确认机会，再决定是做龙头、容量还是弹性。`;
+            document.getElementById('headline').textContent = currentSignalSnapshot.headline;
+            document.getElementById('headlineSummary').textContent = currentSignalSnapshot.headlineSummary;
+            document.getElementById('opportunityHint').textContent = currentSignalSnapshot.opportunityHint;
+            document.getElementById('step2').textContent = currentSignalSnapshot.step2;
+            document.getElementById('step3').textContent = currentSignalSnapshot.step3;
         }
 
         function getTrendTone(status) {

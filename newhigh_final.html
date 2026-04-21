@@ -835,16 +835,16 @@
                 return;
             }
             
-            const sortedSectors = [...sectors].sort((a, b) => (b.sector_score || b.new_high_count || b.stock_count || 0) - (a.sector_score || a.new_high_count || a.stock_count || 0));
-            const maxScore = sortedSectors[0]?.sector_score || sortedSectors[0]?.new_high_count || sortedSectors[0]?.stock_count || 1;
+            const sortedSectors = [...sectors].sort((a, b) => (b.sector_confirmation_score || b.sector_score || b.new_high_count || b.stock_count || 0) - (a.sector_confirmation_score || a.sector_score || a.new_high_count || a.stock_count || 0));
+            const maxScore = sortedSectors[0]?.sector_confirmation_score || sortedSectors[0]?.sector_score || sortedSectors[0]?.new_high_count || sortedSectors[0]?.stock_count || 1;
             
             // 显示所有板块，不限于前8个
             container.innerHTML = sortedSectors.map((sector, index) => {
                 const count = sector.new_high_count || sector.stock_count || 0;
-                const score = sector.sector_score || sector.strength_score || Math.round((count / maxScore) * 100);
+                const score = sector.sector_confirmation_score || sector.sector_score || sector.strength_score || Math.round((count / maxScore) * 100);
                 const color = colors[index % colors.length];
                 const width = Math.max(10, (score / maxScore) * 100);
-                const reason = sector.sector_reason || '新高数量、连续性和主线共振决定排序';
+                const reason = '按新高数量、连续性、突破幅度与动量共振排序';
                 const badges = [];
                 const isSelected = selectedSectorName && (sector.sector_name || sector.name) === selectedSectorName;
                 if (sector.momentum_warning) badges.push('动量预警主线');
@@ -903,7 +903,7 @@
                 const turnoverYi = getAmountYi(stock);
                 const turnoverRatio = getTurnoverRatio(stock);
                 const sector = stock.sector || stock.industry || '-';
-                const institution = Number(stock.institution_score || 0).toFixed(1);
+                const institution = Number(stock.capacity_score || stock.institution_score || 0).toFixed(1);
                 return `
                     <tr class="hover:bg-gray-50">
                         <td class="px-6 py-4">
@@ -921,7 +921,7 @@
                         <td class="px-6 py-4 text-gray-600">${turnoverYi.toFixed(2)}亿${turnoverRatio > 0 ? `<div class="text-xs text-gray-400 mt-1">换手 ${turnoverRatio.toFixed(2)}%</div>` : ''}</td>
                         <td class="px-6 py-4">
                             <div class="font-medium text-gray-800">${institution}</div>
-                            <div class="text-xs text-gray-400 mt-1">机构关注分</div>
+                            <div class="text-xs text-gray-400 mt-1">容量代理分</div>
                         </td>
                     </tr>
                 `;
@@ -963,7 +963,7 @@
             const sector = (currentData.sectors || []).find((item) => (item.sector_name || item.name) === selectedSectorName);
             if (!sector) return;
             const count = sector.new_high_count || sector.stock_count || 0;
-            const score = sector.sector_score || sector.strength_score || count;
+            const score = sector.sector_confirmation_score || sector.sector_score || sector.strength_score || count;
             openSectorModal(selectedSectorName, count, score);
         }
 

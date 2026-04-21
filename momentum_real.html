@@ -721,7 +721,7 @@
                 // 市值字段(亿元)
                 const circMv = s.circ_mv || '-';  
                 // 机构参与代理分(0-10分)
-                const instScore = s.institution_score || 0;
+                const instScore = s.capacity_score || s.institution_score || 0;
                 const amountYi = (Number(s.amount || 0) / 10000).toFixed(2);
                 return `
                 <tr class="hover:bg-red-50">

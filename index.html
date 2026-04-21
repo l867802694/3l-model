@@ -199,10 +199,10 @@
         <section class="shell rounded-[2rem] p-6 sm:p-8 mb-8">
             <div class="flex flex-col xl:flex-row xl:items-end xl:justify-between gap-6">
                 <div class="max-w-3xl">
-                    <p class="text-xs uppercase tracking-[0.35em] text-red-700/80 font-semibold">大势 -> 板块 -> 机会</p>
-                    <h1 class="mt-3 text-4xl sm:text-5xl font-semibold tracking-tight text-gray-950">先看环境，再看方向，最后看机会。</h1>
-                    <p class="mt-4 text-base sm:text-lg text-gray-600 leading-8">
-                        这页只做盘后最有用的三件事：先判断今天能不能做，再告诉你先看哪个主线，最后只保留“动量前排 + 新高确认 + 成交跟上”的交集机会。
+                        <p class="text-xs uppercase tracking-[0.35em] text-red-700/80 font-semibold">环境 -> 方向 -> 确认</p>
+                        <h1 class="mt-3 text-4xl sm:text-5xl font-semibold tracking-tight text-gray-950">先看环境，再看方向，再看确认。</h1>
+                        <p class="mt-4 text-base sm:text-lg text-gray-600 leading-8">
+                        这页只做三件事：先判断今天能不能做，再告诉你先看哪个方向，最后只保留已经被市场确认的强票。
                     </p>
                     <p id="pageMeta" class="mt-4 text-xs text-gray-500">数据日期 - | 样本口径 - | 页面更新 -</p>
                 </div>
@@ -275,7 +275,7 @@
                             <p id="warningCount" class="mt-2 text-xs text-white/70">-</p>
                         </div>
                         <div class="rounded-3xl bg-white/12 p-4">
-                            <p class="text-xs uppercase tracking-[0.2em] text-white/60">交集机会</p>
+                            <p class="text-xs uppercase tracking-[0.2em] text-white/60">确认名单</p>
                             <p id="opportunityCount" class="mt-2 text-3xl font-semibold">-</p>
                             <p id="opportunityHint" class="mt-2 text-xs text-white/70">-</p>
                         </div>
@@ -285,8 +285,8 @@
                 <div class="shell mesh-card rounded-[2rem] p-6 sm:p-7">
                     <div class="flex items-center justify-between gap-4">
                         <div>
-                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">操作顺序</p>
-                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">今天怎么做</h2>
+                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">页面定位</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">这页只做发现</h2>
                         </div>
                         <span id="tradeDateBadge" class="status-pill bg-gray-900 text-white">-</span>
                     </div>
@@ -305,121 +305,8 @@
                         </div>
                     </div>
                     <div class="mt-6 rounded-3xl bg-amber-50 border border-amber-100 p-4">
-                        <p class="text-xs uppercase tracking-[0.2em] text-amber-700 font-semibold">今日提醒</p>
+                        <p class="text-xs uppercase tracking-[0.2em] text-amber-700 font-semibold">使用边界</p>
                         <p id="riskHint" class="mt-2 text-sm leading-7 text-amber-900">-</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-                <div class="shell rounded-[1.6rem] p-5">
-                    <div class="hint-wrap">
-                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400 font-semibold">广度趋势</p>
-                        <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">只看新高、新低、净新高、最近5日升温和连续净新高天数，不看指数。它回答的是：趋势股扩散本身强不强。</div>
-                    </div>
-                    <div class="mt-3 flex items-end justify-between gap-4">
-                        <div>
-                            <p id="breadthStatusCard" class="text-2xl font-semibold text-gray-950">-</p>
-                            <p id="breadthMetaCard" class="mt-2 text-sm text-gray-500">-</p>
-                        </div>
-                        <p class="text-3xl font-semibold text-gray-950"><span id="breadthScoreCard">-</span><span class="text-sm text-gray-400">/100</span></p>
-                    </div>
-                </div>
-                <div class="shell rounded-[1.6rem] p-5">
-                    <div class="hint-wrap">
-                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400 font-semibold">深度趋势</p>
-                        <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">看新高股本身够不够强。主要参考新高股平均涨幅、连续新高天数、机构参与代理分，以及是否集中在动量主线里。</div>
-                    </div>
-                    <div class="mt-3 flex items-end justify-between gap-4">
-                        <div>
-                            <p id="depthStatusCard" class="text-2xl font-semibold text-gray-950">-</p>
-                            <p id="depthMetaCard" class="mt-2 text-sm text-gray-500">-</p>
-                        </div>
-                        <p class="text-3xl font-semibold text-gray-950"><span id="depthScoreCard">-</span><span class="text-sm text-gray-400">/100</span></p>
-                    </div>
-                </div>
-                <div class="shell rounded-[1.6rem] p-5">
-                    <div class="hint-wrap">
-                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400 font-semibold">整体趋势</p>
-                        <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">整体趋势 = 广度分 55% + 深度分 45%。它才是你判断“现在能不能积极做趋势”的主开关，指数确认单独看，不并进整体。</div>
-                    </div>
-                    <div class="mt-3 flex items-end justify-between gap-4">
-                        <div>
-                            <p id="overallStatusCard" class="text-2xl font-semibold text-gray-950">-</p>
-                            <p id="overallMetaCard" class="mt-2 text-sm text-gray-500">-</p>
-                        </div>
-                        <p class="text-3xl font-semibold text-gray-950"><span id="overallScoreCard">-</span><span class="text-sm text-gray-400">/100</span></p>
-                    </div>
-                </div>
-                <div class="shell rounded-[1.6rem] p-5">
-                    <div class="hint-wrap">
-                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400 font-semibold">指数确认</p>
-                        <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">看上证指数、沪深300、创业板指的站位和趋势确认。主要参考收盘是否站上 MA20、MA60，MA20 是否在 MA60 上方，以及 20 日趋势是否为正。</div>
-                    </div>
-                    <div class="mt-3 flex items-end justify-between gap-4">
-                        <div>
-                            <p id="indexStatusCard" class="text-2xl font-semibold text-gray-950">-</p>
-                            <p id="indexMetaCard" class="mt-2 text-sm text-gray-500">-</p>
-                        </div>
-                        <p class="text-3xl font-semibold text-gray-950"><span id="indexScoreCard">-</span><span class="text-sm text-gray-400">/100</span></p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="grid grid-cols-1 xl:grid-cols-[1.08fr_0.92fr] gap-6">
-                <div class="shell rounded-[2rem] p-6 sm:p-7">
-                    <div class="flex items-center justify-between gap-4">
-                        <div>
-                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">历史趋势</p>
-                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">最近10个交易日环境怎么走</h2>
-                        </div>
-                        <span id="trendModePill" class="status-pill bg-gray-100 text-gray-700">-</span>
-                    </div>
-                    <p id="trendHistorySummary" class="mt-4 text-sm leading-7 text-gray-700">-</p>
-                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div class="rounded-3xl bg-gray-50 p-4">
-                            <p class="text-xs uppercase tracking-[0.2em] text-gray-400">当前位置</p>
-                            <p id="trendPosition" class="mt-2 text-xl font-semibold text-gray-950">-</p>
-                            <p id="trendPositionMeta" class="mt-2 text-xs text-gray-500">-</p>
-                        </div>
-                        <div class="rounded-3xl bg-gray-50 p-4">
-                            <p class="text-xs uppercase tracking-[0.2em] text-gray-400">最近5日均分</p>
-                            <p id="trendAvg5" class="mt-2 text-xl font-semibold text-gray-950">-</p>
-                            <p id="trendAvg5Meta" class="mt-2 text-xs text-gray-500">-</p>
-                        </div>
-                        <div class="rounded-3xl bg-gray-50 p-4">
-                            <p class="text-xs uppercase tracking-[0.2em] text-gray-400">历史高低点</p>
-                            <p id="trendRange" class="mt-2 text-xl font-semibold text-gray-950">-</p>
-                            <p id="trendRangeMeta" class="mt-2 text-xs text-gray-500">-</p>
-                        </div>
-                    </div>
-                    <div class="mt-7 rounded-[1.6rem] bg-gray-50 border border-gray-100 p-5 overflow-x-auto">
-                        <div id="trendHistoryChart" class="history-track"></div>
-                    </div>
-                </div>
-
-                <div class="shell rounded-[2rem] p-6 sm:p-7">
-                    <div>
-                        <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">历史解读</p>
-                        <h2 class="mt-2 text-2xl font-semibold text-gray-950">用历史确认今天不是错觉</h2>
-                    </div>
-                    <div class="mt-6 space-y-4 text-sm leading-7 text-gray-600">
-                        <div class="rounded-3xl bg-gray-50 p-4">
-                            <p class="font-semibold text-gray-900">最近趋势</p>
-                            <p id="trendHistoryDetail" class="mt-2">-</p>
-                        </div>
-                        <div class="rounded-3xl bg-gray-50 p-4">
-                            <p class="font-semibold text-gray-900">现在该怎么理解</p>
-                            <p id="trendHistoryAction" class="mt-2">-</p>
-                        </div>
-                        <div class="rounded-3xl bg-gray-50 p-4">
-                            <p class="font-semibold text-gray-900">怎么避免误判</p>
-                            <p id="trendHistoryRisk" class="mt-2">-</p>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -429,8 +316,8 @@
                     <div class="flex items-center justify-between gap-4 mb-6">
                         <div>
                             <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">板块入口</p>
-                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">选一个方向，再看右侧机会</h2>
-                            <p class="mt-2 text-sm text-gray-500">这里只负责切换机会池，强弱和连续性已经写在卡片里。</p>
+                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">选一个方向，再看右侧确认名单</h2>
+                            <p class="mt-2 text-sm text-gray-500">这里只负责切换方向，不负责逻辑和买点判断。</p>
                         </div>
                         <a id="sectorDetailLink" href="momentum.html" class="text-sm font-semibold text-red-700 hover:text-red-800">看完整板块榜单</a>
                     </div>
@@ -440,21 +327,21 @@
                 <div class="shell rounded-[2rem] p-6 sm:p-7">
                     <div class="flex items-center justify-between gap-4 mb-6">
                         <div>
-                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">交集机会池</p>
-                            <h2 id="opportunityTitle" class="mt-2 text-2xl font-semibold text-gray-950">只看主线和确认信号重叠的票</h2>
-                            <p id="opportunitySubtitle" class="mt-2 text-sm text-gray-500">不选板块时看全市场交集，选板块后只看该板块。</p>
+                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">确认名单</p>
+                            <h2 id="opportunityTitle" class="mt-2 text-2xl font-semibold text-gray-950">只看已经被市场确认的票</h2>
+                            <p id="opportunitySubtitle" class="mt-2 text-sm text-gray-500">不选板块时看全市场确认名单，选板块后只看该板块。</p>
                         </div>
                         <a id="opportunityDetailLink" href="newhigh.html" class="text-sm font-semibold text-red-700 hover:text-red-800">看完整新高列表</a>
                     </div>
                     <div class="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-[1.2rem] bg-gray-50 px-4 py-3">
-                        <p id="selectedSectorLabel" class="text-sm text-gray-600">当前：全市场交集机会</p>
+                        <p id="selectedSectorLabel" class="text-sm text-gray-600">当前：全市场确认名单</p>
                         <button
                             id="clearSectorFilter"
                             type="button"
                             onclick="clearSectorSelection()"
                             class="hidden rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-gray-600 transition hover:border-red-200 hover:text-red-700"
                         >
-                            看全部交集
+                            看全部确认名单
                         </button>
                     </div>
                     <div id="opportunityList" class="space-y-4"></div>
@@ -486,7 +373,6 @@
         let availableDates = [];
         let currentDate = null;
         let currentMomentumPayload = null;
-        let currentNewhighPayload = null;
         let currentSectorStabilityMap = new Map();
         let currentOpportunityState = null;
         let currentSignalSnapshot = null;
@@ -645,11 +531,6 @@
             return availableDates.slice(index, index + count);
         }
 
-        function average(values) {
-            if (!values.length) return 0;
-            return values.reduce((sum, value) => sum + value, 0) / values.length;
-        }
-
         function getStatusTone(status) {
             if (status === '趋势活跃') {
                 return {
@@ -668,7 +549,7 @@
             if (status === '单日脉冲') {
                 return {
                     pill: 'bg-orange-50 text-orange-700',
-                    action: '今天像强修复日，先把注意力放到主线交集机会，等后面两三天确认扩散再提高强度。',
+                    action: '今天像强修复日，先把注意力放到主线确认名单，等后面两三天确认扩散再提高强度。',
                     risk: '单日爆量不等于趋势全面打开。没有持续净新高和板块延续时，不要把修复日当成主升日。'
                 };
             }
@@ -691,28 +572,6 @@
             if (status === '确认') return '指数已确认';
             if (status === '弱确认') return '指数弱确认';
             return '指数未确认';
-        }
-
-        function getTrendTextClass(status) {
-            if (status === '趋势活跃') return 'text-red-700';
-            if (status === '趋势可做') return 'text-amber-700';
-            if (status === '单日脉冲') return 'text-orange-700';
-            if (status === '趋势观察') return 'text-slate-700';
-            return 'text-gray-700';
-        }
-
-        function getIndexTextClass(status) {
-            if (status === '强确认') return 'text-red-700';
-            if (status === '确认') return 'text-amber-700';
-            if (status === '弱确认') return 'text-slate-700';
-            return 'text-gray-700';
-        }
-
-        function getDepthTextClass(status) {
-            if (status === '深度强') return 'text-red-700';
-            if (status === '深度可做') return 'text-amber-700';
-            if (status === '深度一般') return 'text-slate-700';
-            return 'text-gray-700';
         }
 
         function buildSectorStabilityMap(historyPayloads) {
@@ -769,219 +628,6 @@
             return result;
         }
 
-        function buildOpportunityScore(stock, sector) {
-            const change = Number(stock.change_pct || stock.change || 0);
-            const breakPct = Number(stock.break_pct || stock.break_through || 0);
-            const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || 1);
-            const amountYi = getAmountYi(stock);
-            const turnoverRatio = getTurnoverRatio(stock);
-            const institution = Number(stock.institution_score || 0);
-            const sectorBonus = sector
-                ? (sector.is_warning ? 10 : sector.is_main_line ? 7 : 0) + Math.max(0, 10 - Number(sector.rank || 10))
-                : 0;
-            return (
-                change * 0.48
-                + breakPct * 0.35
-                + consecutive * 2.35
-                + Math.min(amountYi, 80) * 0.12
-                + Math.min(turnoverRatio, 12) * 0.35
-                + institution * 1.25
-                + sectorBonus
-            );
-        }
-
-        function buildOpportunityTags(stock, sector, stability) {
-            const tags = [];
-            const change = Number(stock.change_pct || stock.change || 0);
-            const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || 1);
-            const amountYi = getAmountYi(stock);
-            const turnoverRatio = getTurnoverRatio(stock);
-            const institution = Number(stock.institution_score || 0);
-
-            if (sector?.rank <= 5) tags.push('主线共振');
-            else if (sector?.is_main_line) tags.push('板块共振');
-
-            if (stability?.top10Days >= 4) tags.push('持续主线');
-            else if (stability?.rankChange >= 5) tags.push('趋势升温');
-
-            if (consecutive >= 3) tags.push(`${consecutive}连新高`);
-            else if (consecutive >= 2) tags.push('连续趋势');
-
-            if (change >= 9.8) tags.push('涨停突破');
-            else if (change >= 5) tags.push('强势突破');
-
-            if (amountYi >= 20) tags.push('成交额大');
-            else if (turnoverRatio >= 3) tags.push('换手确认');
-            else if (institution >= 3) tags.push('关注度高');
-
-            if (!tags.length) tags.push('趋势跟踪');
-            return tags.slice(0, 3);
-        }
-
-        function classifyOpportunityBucket(stock) {
-            const amountYi = getAmountYi(stock);
-            const turnoverRatio = getTurnoverRatio(stock);
-            const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || 1);
-            const sectorRank = Number(stock.sector?.rank || 99);
-            const circMv = Number(stock.circ_mv || 0);
-
-            if (sectorRank <= 5 && (amountYi >= 20 || circMv >= 250)) {
-                return {
-                    key: 'leaders',
-                    title: '龙头确认',
-                    desc: '主线最前排，优先看板块龙头和最强确认。',
-                };
-            }
-
-            if (amountYi >= 12 || circMv >= 180 || turnoverRatio >= 4) {
-                return {
-                    key: 'capacity',
-                    title: '容量趋势',
-                    desc: '成交和容量更好，适合跟踪趋势延续和回踩确认。',
-                };
-            }
-
-            if (consecutive >= 2 || turnoverRatio >= 2.5) {
-                return {
-                    key: 'elastic',
-                    title: '弹性补涨',
-                    desc: '偏弹性和加速，适合盯节奏，不适合无差别追高。',
-                };
-            }
-
-            return {
-                key: 'watch',
-                title: '观察跟踪',
-                desc: '先留档观察，等板块和成交进一步确认。',
-            };
-        }
-
-        function getBucketPriorityScore(stock, bucketKey) {
-            const change = Number(stock.change_pct || stock.change || 0);
-            const breakPct = Number(stock.break_pct || stock.break_through || 0);
-            const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || 1);
-            const amountYi = getAmountYi(stock);
-            const turnoverRatio = getTurnoverRatio(stock);
-            const institution = Number(stock.institution_score || 0);
-            const sectorRank = Number(stock.sector?.rank || 99);
-            const top10Days = Number(stock.stability?.top10Days || 0);
-            const circMv = Number(stock.circ_mv || 0);
-
-            if (bucketKey === 'leaders') {
-                return (
-                    Math.max(0, 12 - sectorRank) * 4.2
-                    + consecutive * 3.2
-                    + top10Days * 2.4
-                    + Math.min(amountYi, 80) * 0.22
-                    + Math.min(circMv, 500) * 0.03
-                    + institution * 1.5
-                    + breakPct * 0.6
-                );
-            }
-
-            if (bucketKey === 'capacity') {
-                return (
-                    Math.min(amountYi, 100) * 0.34
-                    + Math.min(circMv, 600) * 0.04
-                    + Math.min(turnoverRatio, 12) * 1.2
-                    + consecutive * 2.6
-                    + institution * 1.6
-                    + Math.max(0, 10 - sectorRank) * 1.4
-                );
-            }
-
-            if (bucketKey === 'elastic') {
-                return (
-                    change * 1.35
-                    + breakPct * 1.1
-                    + consecutive * 2.8
-                    + Math.min(turnoverRatio, 12) * 1.4
-                    + Math.min(amountYi, 40) * 0.18
-                    + institution
-                );
-            }
-
-            return Number(stock.opportunity_score || 0);
-        }
-
-        function matchesOpportunitySignal(stock) {
-            const change = Number(stock.change_pct || stock.change || 0);
-            const breakPct = Number(stock.break_pct || stock.break_through || 0);
-            const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || 1);
-            return consecutive >= 2 || change >= 5 || breakPct >= 1.5 || getAmountYi(stock) >= 20;
-        }
-
-        function buildBucketsForStocks(stocks) {
-            const buckets = {
-                leaders: [],
-                capacity: [],
-                elastic: [],
-                watch: [],
-            };
-
-            stocks.forEach((stock) => {
-                const bucket = classifyOpportunityBucket(stock);
-                stock.bucket = bucket;
-                stock.bucket_priority_score = getBucketPriorityScore(stock, bucket.key);
-                buckets[bucket.key].push(stock);
-            });
-
-            Object.keys(buckets).forEach((bucketKey) => {
-                buckets[bucketKey].sort((a, b) => {
-                    const scoreGap = Number(b.bucket_priority_score || 0) - Number(a.bucket_priority_score || 0);
-                    if (Math.abs(scoreGap) > 0.01) return scoreGap;
-                    return Number(b.opportunity_score || 0) - Number(a.opportunity_score || 0);
-                });
-            });
-
-            return buckets;
-        }
-
-        function buildOpportunityReason(stock) {
-            const bucketKey = stock?.bucket?.key;
-            const parts = [];
-            const sectorRank = Number(stock?.sector?.rank || 99);
-            const consecutive = Number(stock?.consecutive_new_high_days || stock?.consecutive_days || 1);
-            const amountYi = getAmountYi(stock);
-            const turnoverRatio = getTurnoverRatio(stock);
-            const breakPct = Number(stock?.break_pct || stock?.break_through || 0);
-            const top10Days = Number(stock?.stability?.top10Days || 0);
-
-            if (bucketKey === 'leaders') {
-                if (sectorRank <= 5) parts.push(`板块前排第 ${sectorRank}`);
-                if (top10Days >= 3) parts.push(`近5日上榜 ${top10Days} 次`);
-                if (consecutive >= 2) parts.push(`${consecutive} 连新高`);
-                if (amountYi >= 20) parts.push(`成交额 ${amountYi.toFixed(1)} 亿`);
-            } else if (bucketKey === 'capacity') {
-                if (amountYi >= 12) parts.push(`成交额 ${amountYi.toFixed(1)} 亿`);
-                if (turnoverRatio >= 3) parts.push(`换手 ${turnoverRatio.toFixed(2)}%`);
-                if (consecutive >= 2) parts.push(`${consecutive} 连新高`);
-                if (sectorRank <= 10) parts.push(`板块仍在前排`);
-            } else if (bucketKey === 'elastic') {
-                if (breakPct >= 1.5) parts.push(`突破幅度 ${breakPct.toFixed(1)}%`);
-                if (turnoverRatio >= 2.5) parts.push(`换手 ${turnoverRatio.toFixed(2)}%`);
-                if (consecutive >= 2) parts.push(`${consecutive} 连新高`);
-            }
-
-            if (!parts.length) parts.push('优先看板块位置、成交和连续性');
-            return parts.slice(0, 3).join(' + ');
-        }
-
-        function getOpportunityActionLabel(stock) {
-            const bucketKey = stock?.bucket?.key;
-            const change = Number(stock?.change_pct || stock?.change || 0);
-            const turnoverRatio = getTurnoverRatio(stock);
-            const consecutive = Number(stock?.consecutive_new_high_days || stock?.consecutive_days || 1);
-
-            if (bucketKey === 'leaders' && consecutive >= 2) {
-                return { text: '优先看', className: 'bg-red-50 text-red-700' };
-            }
-            if (bucketKey === 'capacity' && (turnoverRatio >= 3 || change >= 4)) {
-                return { text: '重点跟踪', className: 'bg-amber-50 text-amber-700' };
-            }
-            return { text: '先观察', className: 'bg-gray-100 text-gray-700' };
-        }
-
         function buildOpportunityList(newhighPayload, momentumPayload, sectorStabilityMap) {
             const sectorMap = new Map((momentumPayload.data || []).map((sector) => [sector.sector_name, sector]));
             const list = [];
@@ -990,33 +636,40 @@
                 (sectorGroup.stocks || []).forEach((stock) => {
                     const sectorName = sectorGroup.sector_name || sectorGroup.name;
                     const sector = sectorMap.get(sectorName);
-                    const stability = sectorStabilityMap.get(sectorName);
-                    const score = buildOpportunityScore(stock, sector);
                     list.push({
                         ...stock,
                         sector_name: sectorName,
                         sector,
-                        stability,
-                        opportunity_score: score,
-                        tags: buildOpportunityTags(stock, sector, stability)
+                        stability: sectorStabilityMap.get(sectorName)
                     });
                 });
             });
 
+            const sortStocks = (stocks) => [...stocks].sort((a, b) => {
+                const sectorRankGap = Number(a.sector?.rank || 99) - Number(b.sector?.rank || 99);
+                if (sectorRankGap !== 0) return sectorRankGap;
+
+                const consecutiveGap = Number(b.consecutive_new_high_days || b.consecutive_days || 1) - Number(a.consecutive_new_high_days || a.consecutive_days || 1);
+                if (consecutiveGap !== 0) return consecutiveGap;
+
+                const amountGap = getAmountYi(b) - getAmountYi(a);
+                if (Math.abs(amountGap) > 0.01) return amountGap;
+
+                return Number(b.change_pct || b.change || 0) - Number(a.change_pct || a.change || 0);
+            });
+
             const preferred = list.filter((stock) => stock.sector?.rank <= 12 || stock.sector?.is_main_line);
-            const intersection = preferred.filter((stock) => matchesOpportunitySignal(stock));
-            const source = intersection.length >= 6 ? intersection : preferred.length ? preferred : list;
-            const ranked = source.sort((a, b) => b.opportunity_score - a.opportunity_score);
-            const buckets = buildBucketsForStocks(ranked);
+            const rankedAll = sortStocks(list);
+            const rankedPreferred = sortStocks(preferred);
+            const source = rankedPreferred.length ? rankedPreferred : rankedAll;
 
             return {
-                allList: [...list].sort((a, b) => b.opportunity_score - a.opportunity_score),
-                preferredList: [...preferred].sort((a, b) => b.opportunity_score - a.opportunity_score),
-                intersectionList: [...intersection].sort((a, b) => b.opportunity_score - a.opportunity_score),
-                list: ranked,
-                buckets,
-                preferredCount: preferred.length,
-                intersectionCount: intersection.length,
+                allList: rankedAll,
+                preferredList: rankedPreferred,
+                intersectionList: rankedPreferred,
+                list: source,
+                preferredCount: rankedPreferred.length,
+                intersectionCount: rankedPreferred.length,
             };
         }
 
@@ -1024,7 +677,6 @@
             if (!opportunityState) {
                 return {
                     list: [],
-                    buckets: { leaders: [], capacity: [], elastic: [], watch: [] },
                     preferredCount: 0,
                     intersectionCount: 0,
                     selectedCount: 0,
@@ -1037,25 +689,21 @@
                     ...opportunityState,
                     selectedCount: opportunityState.list?.length || 0,
                     sectorTotalCount: opportunityState.allList?.length || 0,
-                    strongSignalCount: opportunityState.intersectionCount || 0,
+                    strongSignalCount: opportunityState.preferredCount || 0,
                     selectedSectorName: null
                 };
             }
 
             const sectorAll = (opportunityState.allList || []).filter((stock) => stock.sector_name === sectorName);
-            const sectorStrong = sectorAll.filter((stock) => matchesOpportunitySignal(stock));
-            const sectorSource = sectorStrong.length ? sectorStrong : sectorAll;
-            const filteredBuckets = buildBucketsForStocks([...sectorSource]);
 
             return {
                 ...opportunityState,
-                list: sectorSource,
-                buckets: filteredBuckets,
+                list: sectorAll,
                 preferredCount: sectorAll.length,
-                intersectionCount: sectorStrong.length,
-                selectedCount: sectorSource.length,
+                intersectionCount: sectorAll.length,
+                selectedCount: sectorAll.length,
                 sectorTotalCount: sectorAll.length,
-                strongSignalCount: sectorStrong.length,
+                strongSignalCount: sectorAll.length,
                 selectedSectorName: sectorName
             };
         }
@@ -1069,123 +717,16 @@
             document.getElementById('step3').textContent = currentSignalSnapshot.step3;
         }
 
-        function getTrendTone(status) {
-            if (status === '趋势活跃') return 'bg-red-50 text-red-700';
-            if (status === '趋势可做') return 'bg-amber-50 text-amber-700';
-            if (status === '单日脉冲') return 'bg-orange-50 text-orange-700';
-            if (status === '趋势观察') return 'bg-slate-100 text-slate-700';
-            return 'bg-gray-100 text-gray-700';
-        }
-
-        function getTrendBarClass(status) {
-            if (status === '趋势活跃') return 'bg-gradient-to-t from-red-700 to-red-500';
-            if (status === '趋势可做') return 'bg-gradient-to-t from-amber-600 to-orange-400';
-            if (status === '单日脉冲') return 'bg-gradient-to-t from-orange-700 to-orange-400';
-            if (status === '趋势观察') return 'bg-gradient-to-t from-slate-700 to-slate-500';
-            return 'bg-gradient-to-t from-gray-500 to-gray-400';
-        }
-
-        function buildTrendHistoryInsights(historyPayloads, targetDate) {
-            const timeline = historyPayloads
-                .filter(Boolean)
-                .map((payload) => {
-                    const marketStats = payload.market_stats || {};
-                    return {
-                        date: payload.trade_date,
-                        score: Number(marketStats.strength_score || 0),
-                        status: getMarketPhase(marketStats),
-                        indexStatus: marketStats.index_confirmation_status || '未确认',
-                        newHighCount: Number(marketStats.new_high_count || 0),
-                        newLowCount: Number(marketStats.new_low_count || 0),
-                        netNewHigh: Number(marketStats.net_new_high || 0)
-                    };
-                })
-                .sort((a, b) => a.date.localeCompare(b.date));
-
-            if (!timeline.length) return null;
-
-            const latest = timeline[timeline.length - 1];
-            const prev = timeline[timeline.length - 2] || latest;
-            const first = timeline[0];
-            const latestFive = timeline.slice(-5);
-            const firstThree = timeline.slice(0, Math.min(3, timeline.length));
-            const lastThree = timeline.slice(-Math.min(3, timeline.length));
-            const latest5Avg = average(latestFive.map((item) => item.score));
-            const first3Avg = average(firstThree.map((item) => item.score));
-            const last3Avg = average(lastThree.map((item) => item.score));
-            const scoreDelta = latest.score - prev.score;
-            const trendDelta = last3Avg - first3Avg;
-            const sortedScores = [...timeline].sort((a, b) => b.score - a.score);
-            const position = sortedScores.findIndex((item) => item.date === latest.date) + 1;
-            const highest = sortedScores[0];
-            const lowest = sortedScores[sortedScores.length - 1];
-
-            let mode = '震荡观察';
-            let summary = `最近10个交易日里，趋势分从 ${first.score} 走到 ${latest.score}。当前 ${latest.status}，${getIndexTone(latest.indexStatus)}，整体属于局部修复，不是全面强趋势。`;
-            let detail = `近3日均分 ${last3Avg.toFixed(1)}，相对前段 ${first3Avg.toFixed(1)} ${trendDelta >= 0 ? '抬升' : '回落'} ${Math.abs(trendDelta).toFixed(1)} 分。指数端当前为 ${latest.indexStatus}。`;
-            let action = '先把它当成环境修复看，只有后面继续抬分、且新高家数继续扩散，才值得提高出手强度。';
-            let risk = '如果分数只是单日拉高，但后面两三天接不住，就还是弱环境里的局部脉冲。';
-
-            if (latest.score >= 55 && trendDelta >= 8) {
-                mode = '持续升温';
-                summary = `最近10个交易日趋势分明显抬升，当前来到 ${latest.score} 分，已经接近这段历史高位。${getIndexTone(latest.indexStatus)}，环境修复更扎实。`;
-                detail = `最近3日均分 ${last3Avg.toFixed(1)}，显著高于前段 ${first3Avg.toFixed(1)}，说明环境在持续修复，指数端也在配合。`;
-                action = '可以更积极跟踪主线，但仍然只做前排板块里的确认机会，不做泛化追高。';
-                risk = '即使环境升温，也要盯住主线是否继续扩散，别把边缘补涨误当主升。';
-            } else if (latest.score >= 35 && trendDelta >= 5) {
-                mode = '修复回暖';
-                summary = `最近环境在修复，当前 ${latest.score} 分，已经明显好于前几天，但仍然偏结构性。${getIndexTone(latest.indexStatus)}。`;
-                detail = `最近3日均分 ${last3Avg.toFixed(1)}，比前段 ${first3Avg.toFixed(1)} 提升 ${Math.abs(trendDelta).toFixed(1)} 分，说明情绪在回暖，但指数还不是全面顺风。`;
-                action = '优先看主线板块里的回踩确认和二次启动，先赚确定性的那一段。';
-                risk = '修复期最怕把“能做”理解成“全面都能做”，非主线方向仍然容易掉队。';
-            } else if (latest.status === '单日脉冲') {
-                mode = '单日脉冲';
-                summary = `今天像强修复日，最新趋势相位是“单日脉冲”。新高突然放大，但扩散天数还不够，${getIndexTone(latest.indexStatus)}。`;
-                detail = `最近3日均分 ${last3Avg.toFixed(1)}，相对前段 ${first3Avg.toFixed(1)} 已有抬升，但目前更像情绪快速回补，不是持续趋势已经坐实。`;
-                action = '只做主线交集里的确认型机会，优先看连续新高、成交跟上的票，等后面两三天确认扩散。';
-                risk = '单日爆量最容易把人带进“全面开做”的错觉，第二天到第三天接不住时，回撤会很快。';
-            } else if (latest.score <= 22 && trendDelta <= 0) {
-                mode = '持续偏弱';
-                summary = `最近10个交易日整体偏弱，当前只有 ${latest.score} 分，趋势环境还没有真正打开。${getIndexTone(latest.indexStatus)}。`;
-                detail = `近3日均分 ${last3Avg.toFixed(1)}，没有比前段 ${first3Avg.toFixed(1)} 更强，说明环境还在弱势区间，指数也没有给出确认。`;
-                action = '先降频，重点记录最强方向，不着急把榜单里的票都当机会。';
-                risk = '弱环境里的新高股更像孤立表演，最容易追在短线高潮后。';
-            }
-
-            return {
-                timeline,
-                latest,
-                prev,
-                latest5Avg,
-                position,
-                highest,
-                lowest,
-                mode,
-                summary,
-                detail,
-                action,
-                risk,
-                scoreDelta,
-                targetDate
-            };
-        }
-
         function renderSignalSection(newhighPayload, momentumPayload, opportunityState) {
             const marketStats = newhighPayload.market_stats || {};
             const marketPhase = getMarketPhase(marketStats);
-            const status = marketStats.overall_trend_status || marketStats.market_status || marketPhase;
             const tone = getStatusTone(marketPhase);
-            const breadthStatus = marketStats.breadth_status || status;
-            const breadthScore = Number(marketStats.breadth_strength_score || marketStats.strength_score || 0);
-            const depthStatus = marketStats.depth_trend_status || '深度不足';
-            const depthScore = Number(marketStats.depth_trend_score || 0);
             const indexStatus = marketStats.index_confirmation_status || '未确认';
-            const indexScore = Number(marketStats.index_confirmation_score || 0);
             const topSector = (momentumPayload.data || [])[0];
             const opportunities = opportunityState.list || [];
-            const headlineSector = topSector ? `今天先看 ${topSector.sector_name}` : '先看环境，再找主线';
+            const headlineSector = topSector ? `今天先看 ${topSector.sector_name}` : '先看环境，再找方向';
             const effectiveUniverse = marketStats.total_universe || newhighPayload.history_eligible_stocks || newhighPayload.universe_size || 0;
-            const summary = `今天是 ${marketPhase}。广度 ${breadthStatus}，深度 ${depthStatus}，指数端 ${getIndexTone(indexStatus)}。当前先看 ${topSector?.sector_name || '主线方向'}。`;
+            const summary = `今天是 ${marketPhase}。指数端 ${getIndexTone(indexStatus)}。当前先看 ${topSector?.sector_name || '主线方向'}，再回到新高页确认强票。`;
 
             document.getElementById('headline').textContent = headlineSector;
             document.getElementById('headlineSummary').textContent = summary;
@@ -1194,96 +735,32 @@
             document.getElementById('strengthScore').textContent = marketStats.strength_score || 0;
             document.getElementById('strengthBar').style.width = `${marketStats.strength_score || 0}%`;
             document.getElementById('sampleUniversePill').textContent = `可计算样本 ${effectiveUniverse} / 全市场 ${newhighPayload.universe_size || effectiveUniverse}`;
-            document.getElementById('intersectionPill').textContent = `主线新高 ${opportunityState.preferredCount || opportunities.length} | 交集机会 ${opportunityState.intersectionCount || opportunities.length}`;
+            document.getElementById('intersectionPill').textContent = `主线确认 ${opportunityState.preferredCount || opportunities.length} | 全市场确认 ${opportunityState.allList?.length || opportunities.length}`;
             document.getElementById('actionSummary').textContent = topSector
-                ? `${marketPhase}，先看 ${topSector.sector_name}，只做强确认。`
+                ? `${marketPhase}，先看 ${topSector.sector_name}，再去新高页确认。`
                 : `${marketPhase}，先看趋势扩散，再决定要不要出手。`;
-            document.getElementById('breadthStatusCard').textContent = breadthStatus;
-            document.getElementById('breadthStatusCard').className = `text-2xl font-semibold ${getTrendTextClass(breadthStatus)}`;
-            document.getElementById('breadthMetaCard').textContent = `净新高 ${marketStats.net_new_high || 0} | 连续 ${marketStats.trend_days || 0} 天为正`;
-            document.getElementById('breadthScoreCard').textContent = breadthScore;
-            document.getElementById('depthStatusCard').textContent = depthStatus;
-            document.getElementById('depthStatusCard').className = `text-2xl font-semibold ${getDepthTextClass(depthStatus)}`;
-            document.getElementById('depthMetaCard').textContent = marketStats.depth_trend_desc || '新高股质量不足。';
-            document.getElementById('depthScoreCard').textContent = depthScore;
-            document.getElementById('indexStatusCard').textContent = getIndexTone(indexStatus);
-            document.getElementById('indexStatusCard').className = `text-2xl font-semibold ${getIndexTextClass(indexStatus)}`;
-            document.getElementById('indexMetaCard').textContent = marketStats.index_confirmation_summary || '指数暂无明确确认。';
-            document.getElementById('indexScoreCard').textContent = indexScore;
-            document.getElementById('overallStatusCard').textContent = marketPhase;
-            document.getElementById('overallStatusCard').className = `text-2xl font-semibold ${getTrendTextClass(marketPhase)}`;
-            document.getElementById('overallMetaCard').textContent = `${breadthStatus} + ${depthStatus}`;
-            document.getElementById('overallScoreCard').textContent = marketStats.overall_trend_score || marketStats.strength_score || 0;
             document.getElementById('newHighCount').textContent = marketStats.new_high_count || 0;
             document.getElementById('newHighRatio').textContent = `可计算 ${effectiveUniverse} / 全市场 ${newhighPayload.universe_size || effectiveUniverse} | 占比 ${(marketStats.new_high_ratio || 0).toFixed(2)}%`;
             document.getElementById('netNewHigh').textContent = marketStats.net_new_high ?? 0;
             document.getElementById('trendDays').textContent = `连续 ${marketStats.trend_days || 0} 天净新高为正`;
             document.getElementById('mainLineCount').textContent = (momentumPayload.data || []).filter((item) => item.is_main_line).length;
-            document.getElementById('warningCount').textContent = `预警板块 ${(momentumPayload.data || []).filter((item) => item.is_warning).length} 个`;
-            document.getElementById('opportunityCount').textContent = Math.max(opportunityState.intersectionCount || 0, opportunities.length);
-            document.getElementById('opportunityHint').textContent = opportunities.length ? `${opportunities[0].sector_name} 方向最值得先看 | 主线新高 ${opportunityState.preferredCount || opportunities.length} 只` : '暂无交集机会';
+            document.getElementById('warningCount').textContent = `过热板块 ${(momentumPayload.data || []).filter((item) => item.is_warning).length} 个`;
+            document.getElementById('opportunityCount').textContent = opportunities.length;
+            document.getElementById('opportunityHint').textContent = opportunities.length ? `${opportunities[0].sector_name} 方向优先看 | 主线确认 ${opportunityState.preferredCount || opportunities.length} 只` : '暂无确认名单';
             document.getElementById('tradeDateBadge').textContent = formatDate(newhighPayload.trade_date || currentDate);
-            document.getElementById('step1').textContent = `先看整体：今天广度 ${breadthStatus}，深度 ${depthStatus}，当前相位 ${marketPhase}。指数端是${getIndexTone(indexStatus)}。${tone.action}`;
-            document.getElementById('step2').textContent = `再看板块：优先跟踪动量榜前排、且最近5日持续留在前十的方向。今天前排核心是 ${topSector?.sector_name || '暂无'}。`;
-            document.getElementById('step3').textContent = '最后看个股：只从“动量前排 + 新高确认 + 成交跟上”的交集里下手，优先“主线共振 + 连续趋势 + 成交额大/换手确认”的组合。';
-            document.getElementById('riskHint').textContent = tone.risk;
+            document.getElementById('step1').textContent = `先看环境：今天相位 ${marketPhase}，指数端 ${getIndexTone(indexStatus)}。${tone.action}`;
+            document.getElementById('step2').textContent = `再看方向：优先跟踪动量榜前排。今天前排核心是 ${topSector?.sector_name || '暂无'}。`;
+            document.getElementById('step3').textContent = '最后看确认：只看已经创出新高、且处在主线方向里的票。逻辑和买点不在这页判断。';
+            document.getElementById('riskHint').textContent = '这页只做发现，不替代逻辑判断、买点判断和持仓管理。';
             document.getElementById('pageMeta').textContent = `数据日期 ${formatDate(newhighPayload.trade_date || currentDate)} | 样本口径 可计算 250 日窗口 | 页面更新 ${formatPageUpdatedAt()}`;
             currentSignalSnapshot = {
                 headline: headlineSector,
                 headlineSummary: summary,
-                opportunityHint: opportunities.length ? `${opportunities[0].sector_name} 方向最值得先看 | 主线新高 ${opportunityState.preferredCount || opportunities.length} 只` : '暂无交集机会',
-                step2: `再看板块：优先跟踪动量榜前排、且最近5日持续留在前十的方向。今天前排核心是 ${topSector?.sector_name || '暂无'}。`,
-                step3: '最后看个股：只从“动量前排 + 新高确认 + 成交跟上”的交集里下手，优先“主线共振 + 连续趋势 + 成交额大/换手确认”的组合。'
+                opportunityHint: opportunities.length ? `${opportunities[0].sector_name} 方向优先看 | 主线确认 ${opportunityState.preferredCount || opportunities.length} 只` : '暂无确认名单',
+                step2: `再看板块：优先跟踪动量榜前排。今天前排核心是 ${topSector?.sector_name || '暂无'}。`,
+                step3: '最后看确认：只看已经创出新高、且处在主线方向里的票。'
             };
             updateCrossPageLinks();
-        }
-
-        function renderTrendHistory(historyInsight) {
-            if (!historyInsight) return;
-
-            const {
-                timeline,
-                latest,
-                prev,
-                latest5Avg,
-                position,
-                highest,
-                lowest,
-                mode,
-                summary,
-                detail,
-                action,
-                risk,
-                scoreDelta
-            } = historyInsight;
-
-            document.getElementById('trendModePill').className = `status-pill ${getTrendTone(latest.status)}`;
-            document.getElementById('trendModePill').textContent = mode;
-            document.getElementById('trendHistorySummary').textContent = summary;
-            document.getElementById('trendPosition').textContent = `近10日第 ${position} 位`;
-            document.getElementById('trendPositionMeta').textContent = `当前 ${latest.score} 分，${scoreDelta >= 0 ? '较前一日上升' : '较前一日回落'} ${Math.abs(scoreDelta)} 分`;
-            document.getElementById('trendAvg5').textContent = `${latest5Avg.toFixed(1)} 分`;
-            document.getElementById('trendAvg5Meta').textContent = `当前 ${latest.score >= latest5Avg ? '高于' : '低于'} 最近5日均值`;
-            document.getElementById('trendRange').textContent = `${lowest.score} - ${highest.score}`;
-            document.getElementById('trendRangeMeta').textContent = `${formatDate(lowest.date)} 到 ${formatDate(highest.date)} 的区间`;
-            document.getElementById('trendHistoryDetail').textContent = detail;
-            document.getElementById('trendHistoryAction').textContent = action;
-            document.getElementById('trendHistoryRisk').textContent = risk;
-
-            const maxScore = Math.max(...timeline.map((item) => item.score), 1);
-            document.getElementById('trendHistoryChart').innerHTML = timeline.map((item) => {
-                const height = Math.max(20, (item.score / maxScore) * 148);
-                const isCurrent = item.date === latest.date;
-                return `
-                    <div class="history-bar">
-                        <div class="history-bar-fill ${getTrendBarClass(item.status)} ${isCurrent ? 'ring-4 ring-red-100' : ''}" style="height: ${height}px"></div>
-                        <div class="history-bar-meta">
-                            <p class="text-[11px] font-semibold ${isCurrent ? 'text-red-700' : 'text-gray-700'}">${item.score}</p>
-                            <p class="mt-1 text-[10px] text-gray-400">${formatDate(item.date).slice(5)}</p>
-                        </div>
-                    </div>
-                `;
-            }).join('');
         }
 
         function renderSectorGrid(momentumPayload, sectorStabilityMap) {
@@ -1297,7 +774,7 @@
             grid.innerHTML = sectors.map((sector) => {
                 const stability = sectorStabilityMap.get(sector.sector_name);
                 const sectorAllCount = (currentOpportunityState?.allList || []).filter((stock) => stock.sector_name === sector.sector_name).length;
-                const sectorStrongCount = (currentOpportunityState?.intersectionList || []).filter((stock) => stock.sector_name === sector.sector_name).length;
+                const sectorPreferredCount = (currentOpportunityState?.preferredList || []).filter((stock) => stock.sector_name === sector.sector_name).length;
                 const toneClass = sector.is_warning ? 'bg-red-50 text-red-700' : sector.is_main_line ? 'bg-amber-50 text-amber-700' : 'bg-gray-100 text-gray-700';
                 const rankText = sector.rank_change > 0 ? `较前期上升 ${sector.rank_change} 名` : sector.rank_change < 0 ? `较前期回落 ${Math.abs(sector.rank_change)} 名` : '排名基本稳定';
                 const isSelected = selectedSectorName === sector.sector_name;
@@ -1334,8 +811,8 @@
                             <p class="mt-1">${rankText}，当前上榜 ${sector.listed_count} / ${sector.total_count} 只。</p>
                         </div>
                         <div class="mt-3 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700">新高 ${sectorAllCount} 只</span>
-                            <span class="rounded-full bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700">强确认 ${sectorStrongCount} 只</span>
+                            <span class="rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700">确认 ${sectorAllCount} 只</span>
+                            <span class="rounded-full bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700">主线确认 ${sectorPreferredCount} 只</span>
                         </div>
                     </article>
                 `;
@@ -1346,60 +823,30 @@
             const opportunities = opportunityState.list || [];
             const list = document.getElementById('opportunityList');
             if (!opportunities.length) {
-                list.innerHTML = '<p class="text-sm text-gray-500">暂无交集机会。</p>';
+                list.innerHTML = '<p class="text-sm text-gray-500">暂无确认名单。</p>';
                 return;
             }
-
-            const bucketOrder = ['leaders', 'capacity', 'elastic'];
-            list.innerHTML = bucketOrder.map((bucketKey) => {
-                const bucketStocks = (opportunityState.buckets?.[bucketKey] || []).slice(0, 3);
-                if (!bucketStocks.length) return '';
-
-                const bucketMeta = bucketStocks[0].bucket;
+            list.innerHTML = opportunities.slice(0, 12).map((stock, index) => {
+                const change = Number(stock.change_pct || stock.change || 0);
+                const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || 1);
+                const amountYi = getAmountYi(stock);
+                const turnoverRatio = getTurnoverRatio(stock);
                 return `
-                    <section class="rounded-[1.5rem] border border-[var(--line)] bg-gray-50/80 p-4">
+                    <article class="opportunity-row transition-all duration-200 rounded-[1.2rem] border border-[var(--line)] bg-white p-4">
                         <div class="flex items-start justify-between gap-4">
                             <div>
-                                <p class="text-sm font-semibold text-gray-950">${bucketMeta.title}</p>
-                                <p class="mt-1 text-xs text-gray-500">${bucketMeta.desc}</p>
+                                <div class="flex items-center gap-2">
+                                    <span class="h-7 w-7 rounded-full bg-red-50 text-red-700 flex items-center justify-center text-xs font-bold">${index + 1}</span>
+                                    <h3 class="text-base font-semibold text-gray-950">${stock.name}</h3>
+                                    <span class="text-xs font-mono text-gray-400">${stock.code || stock.ts_code || '-'}</span>
+                                </div>
+                                <p class="mt-2 text-sm text-gray-500">${stock.sector_name} · ${consecutive} 天连新高 · 成交额 ${amountYi.toFixed(1)} 亿${turnoverRatio > 0 ? ` · 换手 ${turnoverRatio.toFixed(2)}%` : ''}</p>
                             </div>
                             <div class="text-right">
-                                <span class="rounded-full bg-white px-2.5 py-1 text-xs font-medium text-gray-600">${bucketStocks.length} 只</span>
+                                <p class="text-lg font-semibold ${change >= 0 ? 'text-red-700' : 'text-green-700'}">${formatPercent(change, 2)}</p>
                             </div>
                         </div>
-                        <div class="mt-4 space-y-3">
-                            ${bucketStocks.map((stock, index) => {
-                                const change = Number(stock.change_pct || stock.change || 0);
-                                const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || 1);
-                                const amountYi = getAmountYi(stock);
-                                const turnoverRatio = getTurnoverRatio(stock);
-                                const priority = Number(stock.bucket_priority_score || 0);
-                                const actionTag = getOpportunityActionLabel(stock);
-                                return `
-                                    <article class="opportunity-row transition-all duration-200 rounded-[1.2rem] border border-[var(--line)] bg-white p-4">
-                                        <div class="flex items-start justify-between gap-4">
-                                            <div>
-                                                <div class="flex items-center gap-2">
-                                                    <span class="h-7 w-7 rounded-full bg-red-50 text-red-700 flex items-center justify-center text-xs font-bold">${index + 1}</span>
-                                                    <h3 class="text-base font-semibold text-gray-950">${stock.name}</h3>
-                                                    <span class="text-xs font-mono text-gray-400">${stock.code || stock.ts_code || '-'}</span>
-                                                    <span class="rounded-full px-2.5 py-1 text-xs font-medium ${actionTag.className}">${actionTag.text}</span>
-                                                </div>
-                                                <p class="mt-2 text-sm text-gray-500">${stock.sector_name} · ${consecutive}天连新高 · 成交额 ${amountYi.toFixed(1)} 亿${turnoverRatio > 0 ? ` · 换手 ${turnoverRatio.toFixed(2)}%` : ''}</p>
-                                                <p class="mt-1 text-xs text-gray-400">${buildOpportunityReason(stock)}</p>
-                                            </div>
-                                            <div class="text-right">
-                                                <p class="text-lg font-semibold ${change >= 0 ? 'text-red-700' : 'text-green-700'}">${formatPercent(change, 2)}</p>
-                                            </div>
-                                        </div>
-                                        <div class="mt-3 flex flex-wrap gap-2">
-                                            ${stock.tags.map((tag) => `<span class="rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700">${tag}</span>`).join('')}
-                                        </div>
-                                    </article>
-                                `;
-                            }).join('')}
-                        </div>
-                    </section>
+                    </article>
                 `;
             }).join('');
         }
@@ -1412,20 +859,22 @@
             const subtitle = document.getElementById('opportunitySubtitle');
 
             if (selectedSectorName) {
-                label.textContent = `当前：${selectedSectorName} · 本板块新高 ${filteredState.sectorTotalCount || 0} 只 · 强确认 ${filteredState.strongSignalCount || 0} 只`;
-                title.textContent = `只看 ${selectedSectorName} 的龙头 / 容量 / 弹性`;
+                label.textContent = `当前：${selectedSectorName} · 确认名单 ${filteredState.sectorTotalCount || 0} 只`;
+                title.textContent = `只看 ${selectedSectorName} 的确认名单`;
                 if ((filteredState.sectorTotalCount || 0) === 0) {
                     subtitle.textContent = `${selectedSectorName} 今天在一年新高池里没有样本，建议切回全市场。`;
-                } else if ((filteredState.strongSignalCount || 0) === 0) {
-                    subtitle.textContent = `${selectedSectorName} 今天有新高，但强确认不够，先观察。`;
                 } else {
-                    subtitle.textContent = `现在只看 ${selectedSectorName} 的龙头、容量、弹性。`;
+                    subtitle.textContent = `现在只看 ${selectedSectorName} 已经创出新高的确认票。`;
                 }
                 clearButton.classList.remove('hidden');
             } else {
-                label.textContent = `当前：全市场交集机会 · ${filteredState.selectedCount || 0} 只`;
-                title.textContent = '只看主线和确认信号重叠的票';
-                subtitle.textContent = '默认展示全市场里，主线和确认信号重叠的机会。';
+                label.textContent = filteredState.strongSignalCount
+                    ? `当前：主线确认名单 · ${filteredState.selectedCount || 0} 只`
+                    : `当前：全市场确认名单 · ${filteredState.selectedCount || 0} 只`;
+                title.textContent = '只看已经被市场确认的票';
+                subtitle.textContent = filteredState.strongSignalCount
+                    ? '默认优先展示主线方向里的确认名单。'
+                    : '默认展示全市场确认名单。';
                 clearButton.classList.add('hidden');
             }
 
@@ -1482,28 +931,19 @@
                 ]);
 
                 const momentumHistoryDates = getHistoryDates(targetDate, 5);
-                const trendHistoryDates = getHistoryDates(targetDate, 10).reverse();
-                const [historyPayloads, trendHistoryPayloads] = await Promise.all([
-                    Promise.all(
-                        momentumHistoryDates.map((date) => fetchJson(getDataUrl('momentum', date)).catch(() => null))
-                    ),
-                    Promise.all(
-                        trendHistoryDates.map((date) => fetchJson(getDataUrl('newhigh', date)).catch(() => null))
-                    )
-                ]);
+                const historyPayloads = await Promise.all(
+                    momentumHistoryDates.map((date) => fetchJson(getDataUrl('momentum', date)).catch(() => null))
+                );
                 const validHistory = historyPayloads.filter(Boolean);
-                const trendInsight = buildTrendHistoryInsights(trendHistoryPayloads, targetDate);
                 const sectorStabilityMap = buildSectorStabilityMap(validHistory);
                 const opportunityState = buildOpportunityList(newhighPayload, momentumPayload, sectorStabilityMap);
                 currentMomentumPayload = momentumPayload;
-                currentNewhighPayload = newhighPayload;
                 currentSectorStabilityMap = sectorStabilityMap;
                 currentOpportunityState = opportunityState;
                 const canRestoreSector = requestedSectorName && (momentumPayload.data || []).some((sector) => sector.sector_name === requestedSectorName);
                 selectedSectorName = canRestoreSector ? requestedSectorName : null;
 
                 renderSignalSection(newhighPayload, momentumPayload, opportunityState);
-                renderTrendHistory(trendInsight);
                 renderSectorGrid(momentumPayload, sectorStabilityMap);
                 renderOpportunityPanel();
                 showContent();

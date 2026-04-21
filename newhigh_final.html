@@ -207,39 +207,17 @@
         <!-- 数据内容 -->
         <div id="content" class="hidden">
             <!-- 市场统计卡片 -->
-            <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 mb-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
                     <div class="hint-wrap">
-                        <p class="text-xs font-medium text-gray-500 uppercase">广度趋势</p>
+                        <p class="text-xs font-medium text-gray-500 uppercase">环境状态</p>
                         <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">只看新高、新低、净新高、最近5日升温和连续净新高天数，不看指数。它回答的是：趋势股扩散本身强不强。</div>
-                    </div>
-                    <p id="breadthStatus" class="text-lg font-bold text-yellow-600 mt-1">-</p>
-                    <p id="breadthStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
-                    <div class="trend-score-bar mt-3"><span id="breadthScoreBar" class="bg-amber-500" style="width: 0%"></span></div>
-                    <p class="text-xs text-gray-400 mt-2">广度分 <span id="breadthScore">-</span>/100</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <div class="hint-wrap">
-                        <p class="text-xs font-medium text-gray-500 uppercase">深度趋势</p>
-                        <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">看新高股本身够不够强。主要参考新高股平均涨幅、连续新高天数、机构参与代理分，以及是否集中在动量主线里。</div>
-                    </div>
-                    <p id="depthStatus" class="text-lg font-bold text-gray-700 mt-1">-</p>
-                    <p id="depthStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
-                    <div class="trend-score-bar mt-3"><span id="depthScoreBar" class="bg-red-500" style="width: 0%"></span></div>
-                    <p class="text-xs text-gray-400 mt-2">深度分 <span id="depthScore">-</span>/100</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <div class="hint-wrap">
-                        <p class="text-xs font-medium text-gray-500 uppercase">整体趋势</p>
-                        <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">整体趋势 = 广度分 55% + 深度分 45%。它才是你判断“现在能不能积极做趋势”的主开关，指数确认单独看，不并进整体。</div>
+                        <div class="hint-tip">这是趋势环境总开关。只回答现在能不能积极看趋势，不代替板块逻辑和买点判断。</div>
                     </div>
                     <p id="marketStatus" class="text-lg font-bold text-yellow-600 mt-1">-</p>
                     <p id="marketStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
                     <div class="trend-score-bar mt-3"><span id="strengthBar" class="bg-red-600" style="width: 0%"></span></div>
-                    <p class="text-xs text-gray-400 mt-2">整体分 <span id="strengthScore">-</span>/100</p>
+                    <p class="text-xs text-gray-400 mt-2">环境分 <span id="strengthScore">-</span>/100</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
                     <div class="hint-wrap">
@@ -269,32 +247,6 @@
                     </div>
                     <p id="avg5Days" class="text-2xl font-bold text-gray-700 mt-1">-</p>
                     <p id="avg5DaysChange" class="text-xs text-stock-up mt-1">-</p>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-card border border-gray-100 p-6 mb-6">
-                <div class="flex items-start justify-between gap-4">
-                    <div>
-                        <p class="text-xs uppercase tracking-[0.22em] text-gray-400 font-semibold">自动解读</p>
-                        <h3 class="text-xl font-semibold text-gray-900 mt-2">今天怎么看环境</h3>
-                    </div>
-                    <span id="marketSignalBadge" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600">-</span>
-                </div>
-                <div class="mt-5">
-                    <p id="marketSummaryTitle" class="text-lg font-semibold text-gray-900">-</p>
-                    <p id="marketSummaryBody" class="text-sm text-gray-600 mt-3 leading-7 max-w-4xl">-</p>
-                    <p id="sampleUniverseNote" class="text-xs text-gray-500 mt-3">-</p>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-5">
-                    <div class="rounded-xl bg-gray-50 border border-gray-100 p-4">
-                        <p class="text-xs font-medium text-gray-500 uppercase">环境结论</p>
-                        <p id="marketQuickTake" class="text-sm text-gray-900 font-medium mt-2 leading-7">-</p>
-                        <p id="currentStatus" class="text-xs text-gray-500 mt-3">当前：-</p>
-                    </div>
-                    <div class="rounded-xl bg-red-50 border border-red-100 p-4">
-                        <p class="text-xs font-medium text-red-700 uppercase">当前用法</p>
-                        <p id="marketActionHint" class="text-sm text-red-800 mt-2 leading-7">-</p>
-                    </div>
                 </div>
             </div>
 
@@ -329,25 +281,6 @@
                             <button onclick="filterStocks('kcb')" id="stockFilterKcb" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">科创板</button>
                         </div>
                     </div>
-                    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
-                        <div class="flex flex-wrap gap-2">
-                            <button onclick="filterQuickStocks('all')" id="quickFilterAll" class="px-3 py-1.5 text-xs bg-gray-900 text-white rounded-full font-medium">全部信号</button>
-                            <button onclick="filterQuickStocks('strong')" id="quickFilterStrong" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">强势突破</button>
-                            <button onclick="filterQuickStocks('consecutive')" id="quickFilterConsecutive" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">连续新高</button>
-                            <button onclick="filterQuickStocks('active')" id="quickFilterActive" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">高成交额</button>
-                            <button onclick="filterQuickStocks('focus')" id="quickFilterFocus" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">优先关注</button>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <label for="stockSort" class="text-xs text-gray-500">排序</label>
-                            <select id="stockSort" onchange="setStockSort(this.value)" class="px-3 py-2 text-xs border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-red-100 focus:border-red-300">
-                                <option value="focus">综合优先级</option>
-                                <option value="change">按当日涨幅</option>
-                                <option value="consecutive">按连新高天数</option>
-                                <option value="turnover">按成交额</option>
-                                <option value="institution">按机构参与代理分</option>
-                            </select>
-                        </div>
-                    </div>
                     <div id="selectedSectorBar" class="hidden rounded-lg border border-red-100 bg-red-50 px-4 py-3">
                         <div class="flex flex-wrap items-center justify-between gap-3">
                             <p id="selectedSectorText" class="text-sm text-red-800">-</p>
@@ -364,7 +297,6 @@
                             <tr>
                                 <th class="px-6 py-3 font-medium">股票</th>
                                 <th class="px-6 py-3 font-medium">板块</th>
-                                <th class="px-6 py-3 font-medium">关注理由</th>
                                 <th class="px-6 py-3 font-medium">最新价</th>
                                 <th class="px-6 py-3 font-medium">涨跌幅</th>
                                 <th class="px-6 py-3 font-medium">连新高</th>
@@ -387,6 +319,7 @@
                     <li><strong>新高占比</strong>：分母使用“可计算250日窗口”的股票数，不直接拿全市场总数做除数</li>
                     <li><strong>涨跌幅</strong>：当日股价涨跌百分比，反映突破强度</li>
                     <li><strong>连新高天数</strong>：连续创出新高的交易日数</li>
+                    <li><strong>这页只负责验证</strong>：它回答哪些票已经被市场确认，不回答逻辑和买点</li>
                     <li class="text-blue-600">💡 <strong>点击板块分布</strong>可查看该板块内创出新高的所有个股</li>
                 </ul>        
             </div>
@@ -483,8 +416,6 @@
         let currentData = null;
         let currentDate = null;
         let currentStockFilter = 'all';
-        let currentQuickFilter = 'all';
-        let currentSortKey = 'focus';
         let allStocks = []; // 展平后的所有股票列表
         let availableDates = []; // 可用日期列表（有数据的日期）
         let momentumSectorMap = new Map();
@@ -782,40 +713,6 @@
             }
         }
 
-        function buildMarketNarrative(marketStats, newHighCount, newLowCount, netNewHigh) {
-            const ratio = marketStats.new_high_ratio ?? 0;
-            const trendDays = marketStats.trend_days ?? 0;
-            const avg5Days = marketStats.avg_5d ?? 0;
-            const avgChange = marketStats.avg_5d_change_pct ?? 0;
-            const hlRatio = marketStats.new_high_low_ratio ?? 0;
-            const signal = getMarketPhase(marketStats);
-            const breadthStatus = marketStats.breadth_status || signal;
-            const depthStatus = marketStats.depth_trend_status || '深度不足';
-            const indexStatus = marketStats.index_confirmation_status || '未确认';
-            const indexSummary = marketStats.index_confirmation_summary || '指数确认不可用。';
-
-            const title = `${signal}：先看广度，再看深度，最后用指数确认`;
-            const body = `今天创250日新高 ${newHighCount} 只，创250日新低 ${newLowCount} 只，净新高 ${netNewHigh}。广度目前是 ${breadthStatus}，新高占可计算样本 ${ratio}% ，最近连续 ${trendDays} 天净新高为正。深度目前是 ${depthStatus}，最近5日平均新高家数 ${avg5Days}，今天相对5日均值 ${avgChange >= 0 ? '升温' : '降温'} ${Math.abs(avgChange)}%，新高/新低比 ${hlRatio}。指数确认目前为 ${indexStatus}。`;
-
-            let action = '市场更偏结构性，先缩小范围到最强板块，再找回踩、平台突破或二次启动。';
-            let quickTake = '整体不强，只适合缩小到局部主线去做。';
-            if (signal === '趋势活跃') {
-                action = '趋势环境很顺，优先盯强板块里的龙头和扩散股，但依然要等合适位置，不要无脑追高。';
-                quickTake = '市场扩散明显，强趋势方向可以更积极跟踪。';
-            } else if (signal === '趋势可做') {
-                action = '环境是正的，可以做趋势，但更适合做强板块里的回踩确认和二次放量，而不是看到上涨就追。';
-                quickTake = '环境偏正，但更适合做强板块里的确认机会，不适合无差别追高。';
-            } else if (signal === '单日脉冲') {
-                action = '今天更像强修复日，先只看主线共振里的确认机会，等后面两三天接力再提高强度。';
-                quickTake = '新高突然放大，但先按强修复日理解，不要立刻放大成全面趋势。';
-            } else if (signal === '趋势谨慎') {
-                action = '环境偏弱，先把仓位和出手频率降下来，更多以观察和等待为主。';
-                quickTake = '趋势扩散不够，先少做追涨，等待环境修复。';
-            }
-
-            return { title, body, action, quickTake: `${quickTake} ${indexSummary}` };
-        }
-
         function formatTurnoverYi(turnoverWan) {
             const turnover = Number(turnoverWan) || 0;
             return turnover / 10000;
@@ -829,7 +726,7 @@
             return Number(stock.turnover_ratio || 0);
         }
 
-        function computeDisplayedStrengthScore(marketStats, newHighCount) {
+        function computeDisplayedStrengthScore(marketStats) {
             const explicitScore = Number(marketStats.strength_score || 0);
             if (explicitScore > 0) return explicitScore;
 
@@ -839,45 +736,6 @@
                 return Math.round(Math.max(0, Math.min(100, breadthScore * 0.75 + indexScore * 0.25)));
             }
             return 0;
-        }
-
-        function getFocusScore(stock) {
-            const change = Number(stock.change_pct || stock.change || stock.pct_change || 0);
-            const breakPct = Number(stock.break_through || stock.break_pct || stock.break_through_pct || 0);
-            const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || stock.days || 1);
-            const turnoverYi = getAmountYi(stock);
-            const turnoverRatio = getTurnoverRatio(stock);
-            const institution = Number(stock.institution_score || 0);
-            const sectorRank = Number(stock.sector_rank || 99);
-            const sectorBonus = stock.sector_is_warning ? 10 : stock.sector_is_main_line ? 6 : 0;
-            return change * 0.45 + breakPct * 0.35 + consecutive * 2 + Math.min(turnoverYi, 80) * 0.08 + Math.min(turnoverRatio, 12) * 0.3 + institution * 1.4 + Math.max(0, 10 - sectorRank) + sectorBonus;
-        }
-
-        function getStockReasonTags(stock) {
-            const change = Number(stock.change_pct || stock.change || stock.pct_change || 0);
-            const breakPct = Number(stock.break_through || stock.break_pct || stock.break_through_pct || 0);
-            const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || stock.days || 1);
-            const turnoverYi = getAmountYi(stock);
-            const turnoverRatio = getTurnoverRatio(stock);
-            const institution = Number(stock.institution_score || 0);
-            const tags = [];
-
-            if (Number(stock.sector_rank || 99) <= 5) tags.push('主线共振');
-            else if (stock.sector_is_main_line) tags.push('板块共振');
-
-            if (change >= 9.8) tags.push('涨停突破');
-            else if (change >= 5) tags.push('强势上攻');
-
-            if (consecutive >= 3) tags.push(`${consecutive}连新高`);
-            else if (consecutive >= 2) tags.push('连续新高');
-
-            if (breakPct >= 1) tags.push('突破确认');
-            if (turnoverYi >= 20) tags.push(`成交${turnoverYi.toFixed(1)}亿`);
-            else if (turnoverRatio >= 3) tags.push(`换手${turnoverRatio.toFixed(1)}%`);
-            if (institution >= 3) tags.push('资金关注高');
-
-            if (!tags.length) tags.push('新高确认');
-            return tags.slice(0, 3);
         }
 
         function applyBoardFilter(stocks) {
@@ -902,40 +760,21 @@
             return stocks;
         }
 
-        function applyQuickFilter(stocks) {
-            if (currentQuickFilter === 'strong') {
-                return stocks.filter(s => Number(s.change_pct || s.change || 0) >= 5 || Number(s.break_through || s.break_pct || 0) >= 1);
-            }
-            if (currentQuickFilter === 'consecutive') {
-                return stocks.filter(s => Number(s.consecutive_new_high_days || s.consecutive_days || 1) >= 2);
-            }
-            if (currentQuickFilter === 'active') {
-                return stocks.filter(s => getAmountYi(s) >= 10);
-            }
-            if (currentQuickFilter === 'focus') {
-                return stocks.filter(s => getFocusScore(s) >= 8);
-            }
-            return stocks;
-        }
-
         function sortStockList(stocks) {
             const list = [...stocks];
-            const sorters = {
-                focus: (a, b) => getFocusScore(b) - getFocusScore(a),
-                change: (a, b) => Number(b.change_pct || b.change || 0) - Number(a.change_pct || a.change || 0),
-                consecutive: (a, b) => Number(b.consecutive_new_high_days || b.consecutive_days || 1) - Number(a.consecutive_new_high_days || a.consecutive_days || 1),
-                turnover: (a, b) => Number(b.amount || 0) - Number(a.amount || 0),
-                institution: (a, b) => Number(b.institution_score || 0) - Number(a.institution_score || 0)
-            };
-            return list.sort(sorters[currentSortKey] || sorters.focus);
+            return list.sort((a, b) => {
+                const sectorRankGap = Number(a.sector_rank || 99) - Number(b.sector_rank || 99);
+                if (sectorRankGap !== 0) return sectorRankGap;
+                const consecutiveGap = Number(b.consecutive_new_high_days || b.consecutive_days || 1) - Number(a.consecutive_new_high_days || a.consecutive_days || 1);
+                if (consecutiveGap !== 0) return consecutiveGap;
+                return Number(b.amount || 0) - Number(a.amount || 0);
+            });
         }
 
         function updateStockListSummary(filteredCount, totalCount) {
             const boardTextMap = { all: '全市场', main: '主板', cyb: '创业板', kcb: '科创板' };
-            const quickTextMap = { all: '全部信号', strong: '强势突破', consecutive: '连续新高', active: '高成交额', focus: '优先关注' };
-            const sortLabel = document.getElementById('stockSort')?.selectedOptions?.[0]?.text || '综合优先级';
             const sectorText = selectedSectorName ? `板块 ${selectedSectorName}` : '全板块';
-            document.getElementById('stockListSummary').textContent = `当前显示 ${filteredCount} / ${totalCount} 只 | ${sectorText} | ${boardTextMap[currentStockFilter]} | ${quickTextMap[currentQuickFilter]} | ${sortLabel}`;
+            document.getElementById('stockListSummary').textContent = `当前显示 ${filteredCount} / ${totalCount} 只 | ${sectorText} | ${boardTextMap[currentStockFilter]} | 默认按主线共振、连新高、成交额排序`;
         }
 
         // 渲染页面
@@ -952,34 +791,19 @@
             const allUniverse = data.universe_size || totalUniverse;
             const marketStatusText = getMarketPhase(marketStats) || getMarketStatus(newHighCount).status;
             const avg5Days = marketStats.avg_5d || Math.round(newHighCount * 0.9);
-            const strengthScore = Number(marketStats.overall_trend_score || computeDisplayedStrengthScore(marketStats, newHighCount));
+            const strengthScore = Number(marketStats.overall_trend_score || computeDisplayedStrengthScore(marketStats));
             
             const marketStatus = getMarketStatus(newHighCount);
             const ratio = ((newHighCount / totalUniverse) * 100).toFixed(2);
             const avgChange = marketStats.avg_5d_change_pct ?? ((newHighCount - avg5Days) / avg5Days * 100).toFixed(1);
             const statusColor = marketStats.status_color_class || marketStatus.color;
             const statusDesc = marketStats.market_status_desc || marketStatus.desc;
-            const breadthStatus = marketStats.breadth_status || marketStatusText;
-            const breadthScore = Number(marketStats.breadth_strength_score || strengthScore || 0);
-            const depthStatus = marketStats.depth_trend_status || '深度不足';
-            const depthScore = Number(marketStats.depth_trend_score || 0);
             const indexStatus = marketStats.index_confirmation_status || '未确认';
             const indexScore = Number(marketStats.index_confirmation_score || 0);
             const indexSummary = marketStats.index_confirmation_summary || '指数当前没有给出明确确认。';
-            const narrative = buildMarketNarrative(marketStats, newHighCount, newLowCount, netNewHigh);
             
             document.getElementById('todayNewHigh').textContent = newHighCount;
             document.getElementById('newHighRatio').textContent = `可计算 ${totalUniverse} / 全市场 ${allUniverse} | 占比 ${ratio}% | 新低 ${newLowCount} | 净新高 ${netNewHigh}`;
-            document.getElementById('breadthStatus').textContent = breadthStatus;
-            document.getElementById('breadthStatus').className = `text-lg font-bold mt-1 ${getTrendStatusColor(breadthStatus)}`;
-            document.getElementById('breadthStatusDesc').textContent = `净新高 ${netNewHigh} | 连续 ${marketStats.trend_days || 0} 天为正`;
-            document.getElementById('breadthScore').textContent = breadthScore;
-            document.getElementById('breadthScoreBar').style.width = `${Math.max(0, Math.min(100, breadthScore))}%`;
-            document.getElementById('depthStatus').textContent = depthStatus;
-            document.getElementById('depthStatus').className = `text-lg font-bold mt-1 ${getDepthStatusColor(depthStatus)}`;
-            document.getElementById('depthStatusDesc').textContent = marketStats.depth_trend_desc || '新高股质量不足。';
-            document.getElementById('depthScore').textContent = depthScore;
-            document.getElementById('depthScoreBar').style.width = `${Math.max(0, Math.min(100, depthScore))}%`;
             document.getElementById('indexStatus').textContent = indexStatus;
             document.getElementById('indexStatus').className = `text-lg font-bold mt-1 ${getIndexStatusColor(indexStatus)}`;
             document.getElementById('indexStatusDesc').textContent = indexSummary;
@@ -993,14 +817,6 @@
             document.getElementById('avg5DaysChange').className = `text-xs mt-1 ${avgChange >= 0 ? 'text-stock-up' : 'text-stock-down'}`;
             document.getElementById('strengthScore').textContent = strengthScore;
             document.getElementById('strengthBar').style.width = `${strengthScore}%`;
-            document.getElementById('currentStatus').textContent = `当前：广度 ${breadthStatus} | 深度 ${depthStatus} | 整体 ${marketStatusText} | 指数${indexStatus}`;
-            document.getElementById('marketSignalBadge').textContent = marketStatusText;
-            document.getElementById('marketSignalBadge').className = `px-3 py-1 rounded-full text-xs font-medium ${statusColor.includes('red') ? 'bg-red-50 text-red-700' : statusColor.includes('orange') ? 'bg-orange-50 text-orange-700' : statusColor.includes('yellow') ? 'bg-yellow-50 text-yellow-700' : 'bg-gray-100 text-gray-700'}`;
-            document.getElementById('marketSummaryTitle').textContent = narrative.title;
-            document.getElementById('marketSummaryBody').textContent = narrative.body;
-            document.getElementById('sampleUniverseNote').textContent = `样本说明：250 日新高占比按可计算样本统计。今天可计算样本 ${totalUniverse} 只，全市场 ${allUniverse} 只，历史长度不足 250 个交易日的股票不会计入分母。`;
-            document.getElementById('marketQuickTake').textContent = narrative.quickTake;
-            document.getElementById('marketActionHint').textContent = narrative.action;
             updateSelectedSectorBar();
             
             // 渲染板块分布
@@ -1028,7 +844,7 @@
                 const score = sector.sector_score || sector.strength_score || Math.round((count / maxScore) * 100);
                 const color = colors[index % colors.length];
                 const width = Math.max(10, (score / maxScore) * 100);
-                const reason = sector.sector_reason || '新高数量和板块强度共同决定排序';
+                const reason = sector.sector_reason || '新高数量、连续性和主线共振决定排序';
                 const badges = [];
                 const isSelected = selectedSectorName && (sector.sector_name || sector.name) === selectedSectorName;
                 if (sector.momentum_warning) badges.push('动量预警主线');
@@ -1070,14 +886,13 @@
             
             if (!stocks || stocks.length === 0) {
                 updateStockListSummary(0, 0);
-                tbody.innerHTML = '<tr><td colspan="8" class="px-6 py-8 text-center text-gray-500">暂无个股数据</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="7" class="px-6 py-8 text-center text-gray-500">暂无个股数据</td></tr>';
                 return;
             }
 
             const sectorFiltered = getDisplayedStocksBase(stocks);
             const boardFiltered = applyBoardFilter(sectorFiltered);
-            const quickFiltered = applyQuickFilter(boardFiltered);
-            const filteredStocks = sortStockList(quickFiltered);
+            const filteredStocks = sortStockList(boardFiltered);
             updateStockListSummary(filteredStocks.length, sectorFiltered.length);
 
             tbody.innerHTML = filteredStocks.slice(0, 50).map(stock => {
@@ -1089,8 +904,6 @@
                 const turnoverRatio = getTurnoverRatio(stock);
                 const sector = stock.sector || stock.industry || '-';
                 const institution = Number(stock.institution_score || 0).toFixed(1);
-                const tags = getStockReasonTags(stock);
-                
                 return `
                     <tr class="hover:bg-gray-50">
                         <td class="px-6 py-4">
@@ -1100,11 +913,6 @@
                         <td class="px-6 py-4">
                             <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs bg-gray-100 text-gray-700">${sector}</span>
                         </td>
-                        <td class="px-6 py-4">
-                            <div class="flex flex-wrap gap-2">
-                                ${tags.map(tag => `<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs bg-red-50 text-red-700">${tag}</span>`).join('')}
-                            </div>
-                        </td>
                         <td class="px-6 py-4 font-medium">¥${typeof price === 'number' ? price.toFixed(2) : price}</td>
                         <td class="px-6 py-4 ${change >= 0 ? 'text-stock-up' : 'text-stock-down'}">${change >= 0 ? '+' : ''}${typeof change === 'number' ? change.toFixed(2) : change}%</td>
                         <td class="px-6 py-4">
@@ -1113,7 +921,7 @@
                         <td class="px-6 py-4 text-gray-600">${turnoverYi.toFixed(2)}亿${turnoverRatio > 0 ? `<div class="text-xs text-gray-400 mt-1">换手 ${turnoverRatio.toFixed(2)}%</div>` : ''}</td>
                         <td class="px-6 py-4">
                             <div class="font-medium text-gray-800">${institution}</div>
-                            <div class="text-xs text-gray-400 mt-1">容量/成交/换手代理分</div>
+                            <div class="text-xs text-gray-400 mt-1">机构关注分</div>
                         </td>
                     </tr>
                 `;
@@ -1141,33 +949,6 @@
                 }
             });
             
-            renderStocks(allStocks);
-        }
-
-        function filterQuickStocks(type) {
-            currentQuickFilter = type;
-            const buttons = {
-                all: 'quickFilterAll',
-                strong: 'quickFilterStrong',
-                consecutive: 'quickFilterConsecutive',
-                active: 'quickFilterActive',
-                focus: 'quickFilterFocus'
-            };
-
-            Object.keys(buttons).forEach(key => {
-                const btn = document.getElementById(buttons[key]);
-                if (key === type) {
-                    btn.className = 'px-3 py-1.5 text-xs bg-gray-900 text-white rounded-full font-medium';
-                } else {
-                    btn.className = 'px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200';
-                }
-            });
-
-            renderStocks(allStocks);
-        }
-
-        function setStockSort(value) {
-            currentSortKey = value;
             renderStocks(allStocks);
         }
 

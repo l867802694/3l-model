@@ -161,7 +161,7 @@
             <div class="signal-shell rounded-2xl p-6 mb-6 shadow-card">
                 <div class="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-6">
                     <div class="max-w-3xl">
-                        <p class="text-xs uppercase tracking-[0.3em] text-white/60 font-semibold">今天怎么用动量页</p>
+                        <p class="text-xs uppercase tracking-[0.3em] text-white/60 font-semibold">动量页只看方向</p>
                         <h2 id="heroTitle" class="mt-3 text-3xl font-bold">-</h2>
                         <p id="heroBody" class="mt-3 text-sm text-white/80 leading-7">-</p>
                         <div class="mt-4 flex flex-wrap gap-2">
@@ -195,25 +195,6 @@
                 </div>
             </div>
 
-            <!-- 统计卡片 -->
-            <div class="grid md:grid-cols-3 gap-4 mb-6">
-                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <p class="text-xs font-medium text-gray-500 uppercase">板块观察重点</p>
-                    <p id="summaryFocus" class="text-lg font-bold text-gray-900 mt-1">-</p>
-                    <p id="summaryFocusMeta" class="text-xs text-gray-500 mt-2">-</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <p class="text-xs font-medium text-gray-500 uppercase">持续性最好</p>
-                    <p id="summaryContinuation" class="text-lg font-bold text-gray-900 mt-1">-</p>
-                    <p id="summaryContinuationMeta" class="text-xs text-gray-500 mt-2">-</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <p class="text-xs font-medium text-gray-500 uppercase">当前建议</p>
-                    <p id="summaryAction" class="text-lg font-bold text-gray-900 mt-1">-</p>
-                    <p id="summaryActionMeta" class="text-xs text-gray-500 mt-2">-</p>
-                </div>
-            </div>
-
             <!-- 动量表格 -->
                 <div class="bg-white rounded-xl shadow-card border border-gray-100 overflow-hidden">
                     <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
@@ -238,11 +219,9 @@
                                 <th class="px-6 py-3 font-medium">板块名称</th>
                                 <th class="px-6 py-3 font-medium">动量分值</th>
                                 <th class="px-6 py-3 font-medium">较前一日</th>
-                                <th class="px-6 py-3 font-medium">持续性</th>
                                 <th class="px-6 py-3 font-medium">强股覆盖</th>
                                 <th class="px-6 py-3 font-medium">平均涨幅</th>
-                                <th class="px-6 py-3 font-medium">关注理由</th>
-                                <th class="px-6 py-3 font-medium">温度</th>
+                                <th class="px-6 py-3 font-medium">状态</th>
                             </tr>
                         </thead>
                         <tbody id="momentumTable" class="divide-y divide-gray-100">
@@ -257,10 +236,10 @@
                 <p class="font-medium mb-2"><strong>数据说明：</strong></p>
                 <ul class="space-y-1 list-disc list-inside">
                     <li><span class="font-medium text-stock-main">主线</span>：动量分值 ≥ 12 的板块</li>
-                    <li><span class="font-medium text-stock-alert">预警</span>：动量分值 ≥ 20 的板块（需注意过热风险）</li>
+                    <li><span class="font-medium text-stock-alert">过热</span>：动量分值 ≥ 20 的板块，说明方向很热，不代表就有买点</li>
                     <li><strong>强势股池</strong>：按全市场20日涨幅取前15%</li>
-                    <li><strong>动量分值</strong>：更偏趋势交易，不再做平滑处理。上榜数量、上榜占比、平均20日涨幅共同决定，平均涨幅越强，加权越明显；涨幅弱的板块会被明显压分。</li>
-                    <li>💡 <strong>点击任意板块</strong>可查看该板块内的动量股票列表</li>
+                    <li><strong>动量分值</strong>：只回答方向强弱，不回答逻辑和买点</li>
+                    <li>💡 <strong>点击任意板块</strong>可查看该板块内的强势股票列表</li>
                     <li class="text-xs text-blue-600 mt-2">更新时间: <span id="updateTime">-</span> | 仅供参考，不构成投资建议</li>
                 </ul>
             </div>
@@ -294,14 +273,6 @@
                         <p id="modalListedCount" class="text-2xl font-bold text-stock-up">-</p>
                     </div>
                     <div class="text-center">
-                        <p class="text-xs text-gray-500">板块角色</p>
-                        <p id="modalRole" class="text-2xl font-bold text-gray-700">-</p>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-xs text-gray-500">持续性</p>
-                        <p id="modalContinuation" class="text-2xl font-bold text-gray-700">-</p>
-                    </div>
-                    <div class="text-center">
                         <p class="text-xs text-gray-500">强股覆盖</p>
                         <p id="modalListedRatio" class="text-2xl font-bold text-stock-up">-</p>
                     </div>
@@ -309,14 +280,10 @@
                         <p class="text-xs text-gray-500">平均涨幅</p>
                         <p id="modalAvgReturn" class="text-2xl font-bold text-stock-up">-</p>
                     </div>
-                    <div class="text-center">
-                        <p class="text-xs text-gray-500">操作提示</p>
-                        <p id="modalAction" class="text-lg font-bold text-gray-700">-</p>
-                    </div>
                 </div>
                 
                 <div class="p-6">
-                    <h4 class="text-sm font-semibold text-gray-700 mb-4">符合动量逻辑的股票（优先从“涨幅、成交、关注度”三项看机会）</h4>
+                    <h4 class="text-sm font-semibold text-gray-700 mb-4">板块内强势股票</h4>
                     <div class="overflow-x-auto">
                         <table class="w-full text-sm">
                             <thead class="bg-gray-50 text-gray-600">
@@ -328,7 +295,6 @@
                                     <th class="px-4 py-3 text-right font-medium">收盘价</th>
                                     <th class="px-4 py-3 text-right font-medium">成交额</th>
                                     <th class="px-4 py-3 text-right font-medium">流通市值(亿元)</th>
-                                    <th class="px-4 py-3 text-left font-medium">关注理由</th>
                                     <th class="px-4 py-3 text-center font-medium">机构参与代理分</th>
                                 </tr>
                             </thead>
@@ -373,7 +339,6 @@
         let currentDate = null;  // 当前选中的日期
         let availableDates = []; // 可用日期列表（有数据的日期）
         let marketContext = null;
-        let sectorStabilityMap = new Map();
         const pageParams = new URLSearchParams(window.location.search);
         let requestedSectorName = pageParams.get('sector') || '';
         let requestedDate = pageParams.get('date') || '';
@@ -528,76 +493,8 @@
             return response.json();
         }
 
-        function getHistoryDates(date, count = 5) {
-            const index = availableDates.indexOf(date);
-            if (index === -1) return [];
-            return availableDates.slice(index, index + count);
-        }
-
-        function buildSectorStabilityMap(historyPayloads) {
-            const map = new Map();
-            historyPayloads.filter(Boolean).forEach((payload) => {
-                (payload.data || []).forEach((sector) => {
-                    const entry = map.get(sector.sector_name) || {
-                        top10Days: 0,
-                        mainlineDays: 0,
-                        warningDays: 0,
-                        ranks: []
-                    };
-                    if ((sector.rank || 99) <= 10) entry.top10Days += 1;
-                    if (sector.is_main_line) entry.mainlineDays += 1;
-                    if (sector.is_warning) entry.warningDays += 1;
-                    entry.ranks.push(sector.rank || 99);
-                    map.set(sector.sector_name, entry);
-                });
-            });
-
-            const result = new Map();
-            map.forEach((value, key) => {
-                const newestRank = value.ranks[0] || 99;
-                const oldestRank = value.ranks[value.ranks.length - 1] || newestRank;
-                const rankTrend = oldestRank - newestRank;
-                let label = '今日活跃';
-                let note = `最近5日进入前十 ${value.top10Days} 次`;
-                if (value.top10Days >= 4) {
-                    label = '连续强势';
-                    note = `最近5日有 ${value.top10Days} 天位于前十`;
-                } else if (rankTrend >= 5) {
-                    label = '趋势升温';
-                    note = `比5日前提升 ${rankTrend} 名`;
-                } else if (value.warningDays >= 2) {
-                    label = '高热主线';
-                    note = `最近5日有 ${value.warningDays} 天进入预警`;
-                } else if (value.mainlineDays >= 3) {
-                    label = '持续主线';
-                    note = `最近5日有 ${value.mainlineDays} 天属于主线`;
-                }
-                result.set(key, {
-                    ...value,
-                    label,
-                    note,
-                    rankTrend
-                });
-            });
-            return result;
-        }
-
-        function getMarketAction(marketStats) {
-            const status = marketStats?.market_status || '趋势观察';
-            if (status === '趋势活跃') {
-                return '环境顺，优先做主线板块里的领涨和扩散股，但不追最高潮。';
-            }
-            if (status === '趋势可做') {
-                return '环境正向，优先做主线板块里的回踩确认和二次启动。';
-            }
-            if (status === '趋势谨慎') {
-                return '环境偏弱，先降低出手频率，更多是盯住主线演化。';
-            }
-            return '环境偏中性，先等板块持续性确认，再提高参与度。';
-        }
-
         function getSectorRole(item) {
-            if (item.is_warning) return '预警主线';
+            if (item.is_warning) return '过热';
             if (item.is_main_line) return '主线';
             return '观察';
         }
@@ -612,36 +509,6 @@
             if (item.is_warning) return 'bg-red-100 text-red-700';
             if (item.is_main_line) return 'bg-red-50 text-red-600';
             return 'bg-gray-100 text-gray-600';
-        }
-
-        function getSectorReason(item, stability) {
-            const reasons = [];
-            if ((item.rank || 99) <= 5) reasons.push('位居前排');
-            if ((item.listed_ratio || 0) >= 20) reasons.push('覆盖面广');
-            if ((item.avg_return_20d || 0) >= 15) reasons.push('涨幅强');
-            if (stability?.top10Days >= 4) reasons.push('持续性强');
-            else if (stability?.rankTrend >= 5) reasons.push('趋势升温');
-            if (!reasons.length) reasons.push('保持关注');
-            return reasons.slice(0, 3).join(' / ');
-        }
-
-        function getStockReasonTags(stock) {
-            const tags = [];
-            const marketRank = Number(stock.rank_in_market || stock.rank || 99);
-            const return20d = Number(stock.return_20d || stock.return || 0);
-            const amountYi = Number(stock.amount || 0) / 10000;
-            const instScore = Number(stock.institution_score || 0);
-
-            if (marketRank <= 20) tags.push('市场前排');
-            if (return20d >= 60) tags.push('20日爆发');
-            else if (return20d >= 35) tags.push('趋势很强');
-
-            if (amountYi >= 8) tags.push(`成交${amountYi.toFixed(1)}亿`);
-            if (instScore >= 3) tags.push('关注度高');
-            if (Number(stock.circ_mv || 0) >= 150) tags.push('容量较大');
-
-            if (!tags.length) tags.push('趋势跟踪');
-            return tags.slice(0, 3);
         }
 
         /**
@@ -666,14 +533,6 @@
                     marketContext = null;
                 }
 
-                const historyDates = getHistoryDates(targetDate, 5);
-                const historyPayloads = await Promise.all(
-                    historyDates.map((historyDate) =>
-                        fetchJson(getDataUrl('momentum', historyDate)).catch(() => null)
-                    )
-                );
-                sectorStabilityMap = buildSectorStabilityMap(historyPayloads);
-                
                 document.getElementById('tradeDate').textContent = formatDate(result.trade_date);
                 document.getElementById('updateTime').textContent = formatDate(result.trade_date) + ' 15:00';
                 updateSummary(result, momentumData);
@@ -711,33 +570,21 @@
             const requestedSector = requestedSectorName ? data.find((item) => item.sector_name === requestedSectorName) : null;
             const focusSector = requestedSector || topSector;
             const marketStats = marketContext?.market_stats || null;
-            const continuationSector = [...data]
-                .sort((a, b) => (sectorStabilityMap.get(b.sector_name)?.top10Days || 0) - (sectorStabilityMap.get(a.sector_name)?.top10Days || 0))[0];
-            const summaryAction = getMarketAction(marketStats);
-
             document.getElementById('totalSectors').textContent = data.length;
             document.getElementById('top10Count').textContent = `前十板块 ${Math.min(10, data.length)} 个`;
             document.getElementById('mainLineCount').textContent = data.filter(i => i.is_main_line).length;
-            document.getElementById('warningCount').textContent = `预警 ${data.filter(i => i.is_warning).length} 个`;
+            document.getElementById('warningCount').textContent = `过热 ${data.filter(i => i.is_warning).length} 个`;
             document.getElementById('marketStatus').textContent = marketStats?.market_status || '未联动';
-            document.getElementById('marketStatusDesc').textContent = marketStats?.market_status_desc || '一年新高数据不可用时，仅展示板块动量。';
+            document.getElementById('marketStatusDesc').textContent = marketStats?.market_status_desc || '一年新高环境不可用时，这页只展示方向强弱。';
             document.getElementById('topSectorName').textContent = focusSector?.sector_name || '-';
             document.getElementById('topSectorMeta').textContent = focusSector ? `分值 ${focusSector.momentum_score.toFixed(2)} · 平均涨幅 ${focusSector.avg_return_20d}%` : '-';
-            document.getElementById('heroTitle').textContent = focusSector ? `今天先盯 ${focusSector.sector_name}` : '今天先看主线是否明确';
+            document.getElementById('heroTitle').textContent = focusSector ? `先看 ${focusSector.sector_name}` : '先看主线是否明确';
             document.getElementById('heroBody').textContent = focusSector
-                ? `${summaryAction} ${requestedSector ? '当前从总览带入的板块是' : '当前动量最强的是'} ${focusSector.sector_name}，上榜 ${focusSector.listed_count} 只，占板块 ${focusSector.listed_ratio}% ，属于 ${getSectorRole(focusSector)}。`
-                : '先用动量页找主线方向，再回到总览页结合趋势环境做筛选。';
+                ? `${requestedSector ? '当前从总览带入的板块是' : '当前动量最强的是'} ${focusSector.sector_name}，上榜 ${focusSector.listed_count} 只，占板块 ${focusSector.listed_ratio}% ，状态为 ${getSectorRole(focusSector)}。这页只负责判断方向强弱，不负责买点。`
+                : '这页只负责找主线方向，不负责逻辑和买点判断。';
             document.getElementById('heroStatusPill').textContent = marketStats?.market_status || '趋势环境待确认';
             document.getElementById('heroSectorPill').textContent = focusSector ? `${requestedSector ? '当前定位' : '今日最强'} ${focusSector.sector_name}` : '暂无主线';
-            document.getElementById('heroActionPill').textContent = focusSector?.is_warning ? '注意过热风险' : '优先盯回踩确认';
-            document.getElementById('summaryFocus').textContent = focusSector?.sector_name || '-';
-            document.getElementById('summaryFocusMeta').textContent = focusSector ? `上榜 ${focusSector.listed_count} 只 | 覆盖 ${focusSector.listed_ratio}% | 分值 ${focusSector.momentum_score.toFixed(2)}` : '-';
-            document.getElementById('summaryContinuation').textContent = continuationSector?.sector_name || '-';
-            document.getElementById('summaryContinuationMeta').textContent = continuationSector
-                ? `${sectorStabilityMap.get(continuationSector.sector_name)?.note || '持续性待确认'}`
-                : '-';
-            document.getElementById('summaryAction').textContent = marketStats?.market_status || '趋势观察';
-            document.getElementById('summaryActionMeta').textContent = summaryAction;
+            document.getElementById('heroActionPill').textContent = focusSector?.is_warning ? '过热' : focusSector?.is_main_line ? '主线' : '观察';
         }
 
         // 渲染表格
@@ -754,17 +601,15 @@
                 : data;
 
             tbody.innerHTML = rows.map(item => {
-                const stability = sectorStabilityMap.get(item.sector_name);
                 const role = getSectorRole(item);
                 const heatLabel = getSectorHeatLabel(item);
                 const roleClass = getSectorToneClass(item);
                 const isRequested = requestedSectorName && item.sector_name === requestedSectorName;
                 const coverageText = `${item.listed_count}/${item.total_count} | ${item.listed_ratio}%`;
-                const continuation = stability ? `${stability.label} · ${stability.note}` : '今日活跃 · 等更多历史验证';
                 const rankChange = Number(item.rank_change || 0);
                 const rankChangeClass = rankChange > 0 ? 'text-stock-up' : rankChange < 0 ? 'text-stock-down' : 'text-stock-neutral';
                 const rankChangeText = rankChange > 0 ? `↑ ${rankChange}` : rankChange < 0 ? `↓ ${Math.abs(rankChange)}` : '—';
-                const rankChangeHint = rankChange > 0 ? '名次上升' : rankChange < 0 ? '名次下降' : '名次持平';
+                const rankChangeHint = rankChange > 0 ? '排名上升' : rankChange < 0 ? '排名回落' : '排名持平';
                 
                 return `
                     <tr class="table-row ${isRequested ? 'bg-red-50/60' : ''}" onclick="openModal('${item.sector_name}')">
@@ -779,18 +624,10 @@
                             <div class="text-xs text-gray-500 mt-1">${rankChangeHint}</div>
                         </td>
                         <td class="px-6 py-4">
-                            <div class="text-sm font-medium text-gray-800">${stability?.label || '今日活跃'}</div>
-                            <div class="text-xs text-gray-500 mt-1">${stability?.note || '需要更多历史验证'}</div>
-                        </td>
-                        <td class="px-6 py-4">
                             <div class="font-medium text-gray-800">${coverageText}</div>
                             <div class="text-xs text-gray-500 mt-1">强股覆盖面</div>
                         </td>
                         <td class="px-6 py-4 text-stock-up">+${item.avg_return_20d}%</td>
-                        <td class="px-6 py-4">
-                            <div class="text-sm text-gray-700">${getSectorReason(item, stability)}</div>
-                            <div class="text-xs text-gray-400 mt-1">${continuation}</div>
-                        </td>
                         <td class="px-6 py-4">
                             <span class="inline-flex items-center justify-center whitespace-nowrap min-w-[3.5rem] px-2.5 py-1 text-xs rounded-full font-medium ${roleClass}">${heatLabel}</span>
                         </td>
@@ -831,15 +668,11 @@
             if (!sector) return;
             
             document.getElementById('modalTitle').textContent = sectorName;
-            const stability = sectorStabilityMap.get(sectorName);
             document.getElementById('modalSubtitle').textContent = `动量分值: ${sector.momentum_score} | 排名: 第${sector.rank}名`;
             
             document.getElementById('modalListedCount').textContent = sector.listed_count + '只';
-            document.getElementById('modalRole').textContent = getSectorRole(sector);
-            document.getElementById('modalContinuation').textContent = stability?.label || '今日活跃';
             document.getElementById('modalListedRatio').textContent = sector.listed_ratio + '%';
             document.getElementById('modalAvgReturn').textContent = '+' + sector.avg_return_20d + '%';
-            document.getElementById('modalAction').textContent = sector.is_warning ? '盯分歧回踩' : sector.is_main_line ? '盯回踩确认' : '先观察';
             
             modal.classList.remove('hidden');
             document.getElementById('modalLoading').classList.remove('hidden');
@@ -874,7 +707,7 @@
             const tbody = document.getElementById('modalStockList');
             
             if (stocks.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="9" class="px-4 py-8 text-center text-gray-500">暂无数据</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="8" class="px-4 py-8 text-center text-gray-500">暂无数据</td></tr>';
                 return;
             }
             
@@ -890,8 +723,6 @@
                 // 机构参与代理分(0-10分)
                 const instScore = s.institution_score || 0;
                 const amountYi = (Number(s.amount || 0) / 10000).toFixed(2);
-                const tags = getStockReasonTags(s);
-                
                 return `
                 <tr class="hover:bg-red-50">
                     <td class="px-4 py-3 font-semibold">${rank}</td>
@@ -901,11 +732,6 @@
                     <td class="px-4 py-3 text-right">¥${closePrice.toFixed(2)}</td>
                     <td class="px-4 py-3 text-right text-gray-600">${amountYi}亿</td>
                     <td class="px-4 py-3 text-right text-gray-600">${circMv !== '-' ? circMv + '亿' : '-'}</td>
-                    <td class="px-4 py-3">
-                        <div class="flex flex-wrap gap-1.5">
-                            ${tags.map(tag => `<span class="px-2 py-1 bg-red-50 text-red-700 rounded-full text-xs">${tag}</span>`).join('')}
-                        </div>
-                    </td>
                     <td class="px-4 py-3 text-center"><span class="px-2 py-1 bg-blue-50 text-blue-600 rounded text-xs">${instScore.toFixed(2)}分</span></td>
                 </tr>
             `}).join('');

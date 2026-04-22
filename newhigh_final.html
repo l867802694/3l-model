@@ -903,7 +903,7 @@
                 const turnoverYi = getAmountYi(stock);
                 const turnoverRatio = getTurnoverRatio(stock);
                 const sector = stock.sector || stock.industry || '-';
-                const institution = Number(stock.capacity_score || stock.institution_score || 0).toFixed(1);
+                const institution = Number(stock.capacity_proxy_score || stock.capacity_score || stock.institution_score || 0).toFixed(1);
                 return `
                     <tr class="hover:bg-gray-50">
                         <td class="px-6 py-4">

@@ -3,9 +3,9 @@
   "data_source": "AkShare (免费数据)",
   "classification": "申万2021二级行业",
   "market_strength": 1.62,
-  "universe_size": 5012,
+  "universe_size": 5009,
   "history_window_requirement": 251,
-  "history_eligible_stocks": 4935,
+  "history_eligible_stocks": 4932,
   "history_eligible_ratio": 98.46,
   "history_window_complete": true,
   "raw_new_high_count": 80,
@@ -25,7 +25,7 @@
     "avg_5d_change_pct": -22.0,
     "trend_days": 5,
     "positive_days_5d": 5,
-    "total_universe": 4935,
+    "total_universe": 4932,
     "pulse_signal": false,
     "market_breadth_state": "趋势观察",
     "market_observation_state": "趋势观察",
@@ -84,11 +84,11 @@
       {
         "code": "sz.399006",
         "name": "创业板指",
-        "close": 3752.76,
-        "daily_change_pct": 1.73,
-        "return_20d": 15.41,
-        "ma20": 3408.38,
-        "ma60": 3334.18,
+        "close": 3720.25,
+        "daily_change_pct": -0.87,
+        "return_20d": 12.16,
+        "ma20": 3428.55,
+        "ma60": 3341.55,
         "score": 100,
         "status": "强确认",
         "above_ma20": true,
@@ -546,7 +546,7 @@
           "circ_mv": 68.16,
           "amount": 23530.44,
           "turnover_ratio": 3.45,
-          "capacity_proxy_score": 5.75,
+          "capacity_proxy_score": 5.74,
           "sector": "化学制品",
           "industry": "化学制品"
         }
@@ -642,7 +642,7 @@
           "circ_mv": 32.85,
           "amount": 26343.25,
           "turnover_ratio": 8.02,
-          "capacity_proxy_score": 5.38,
+          "capacity_proxy_score": 5.37,
           "sector": "电池",
           "industry": "电池"
         }
@@ -698,7 +698,7 @@
           "circ_mv": 36.41,
           "amount": 87948.04,
           "turnover_ratio": 24.16,
-          "capacity_proxy_score": 6.09,
+          "capacity_proxy_score": 6.08,
           "sector": "种植业",
           "industry": "种植业"
         }
@@ -1018,7 +1018,7 @@
           "circ_mv": 178.23,
           "amount": 106934.7,
           "turnover_ratio": 6.0,
-          "capacity_proxy_score": 8.7,
+          "capacity_proxy_score": 8.69,
           "sector": "消费电子",
           "industry": "消费电子"
         },
@@ -1183,9 +1183,9 @@
       "avg_consecutive_days": 2.0,
       "avg_change_pct": 5.72,
       "avg_break_pct": 1.62,
-      "avg_capacity_proxy_score": 7.92,
-      "sector_confirmation_score": 32.21,
-      "sector_score": 32.21,
+      "avg_capacity_proxy_score": 7.91,
+      "sector_confirmation_score": 32.2,
+      "sector_score": 32.2,
       "momentum_rank": 18,
       "momentum_mainline": true,
       "momentum_warning": true,
@@ -1246,7 +1246,7 @@
           "circ_mv": 62.5,
           "amount": 119859.7,
           "turnover_ratio": 19.18,
-          "capacity_proxy_score": 7.39,
+          "capacity_proxy_score": 7.38,
           "sector": "专用设备",
           "industry": "专用设备"
         }
@@ -1295,10 +1295,10 @@
       "avg_consecutive_days": 1.0,
       "avg_change_pct": 8.03,
       "avg_break_pct": 4.03,
-      "avg_capacity_proxy_score": 8.05,
-      "sector_confirmation_score": 31.94,
-      "sector_score": 31.94,
-      "momentum_rank": 20,
+      "avg_capacity_proxy_score": 8.04,
+      "sector_confirmation_score": 31.92,
+      "sector_score": 31.92,
+      "momentum_rank": 21,
       "momentum_mainline": true,
       "momentum_warning": false,
       "stocks": [
@@ -1318,7 +1318,7 @@
           "circ_mv": 58.84,
           "amount": 65962.82,
           "turnover_ratio": 11.21,
-          "capacity_proxy_score": 7.19,
+          "capacity_proxy_score": 7.18,
           "sector": "家电零部件Ⅱ",
           "industry": "家电零部件Ⅱ"
         },
@@ -1338,7 +1338,7 @@
           "circ_mv": 298.44,
           "amount": 613803.24,
           "turnover_ratio": 20.57,
-          "capacity_proxy_score": 8.92,
+          "capacity_proxy_score": 8.91,
           "sector": "家电零部件Ⅱ",
           "industry": "家电零部件Ⅱ"
         }
@@ -1722,7 +1722,7 @@
           "circ_mv": 124.5,
           "amount": 471898.17,
           "turnover_ratio": 37.9,
-          "capacity_proxy_score": 7.91,
+          "capacity_proxy_score": 7.9,
           "sector": "航空装备Ⅱ",
           "industry": "航空装备Ⅱ"
         },
@@ -2027,9 +2027,9 @@
       "avg_consecutive_days": 2.0,
       "avg_change_pct": 2.79,
       "avg_break_pct": 0.4,
-      "avg_capacity_proxy_score": 9.09,
-      "sector_confirmation_score": 23.99,
-      "sector_score": 23.99,
+      "avg_capacity_proxy_score": 9.08,
+      "sector_confirmation_score": 23.97,
+      "sector_score": 23.97,
       "momentum_rank": 42,
       "momentum_mainline": false,
       "momentum_warning": false,
@@ -2050,7 +2050,7 @@
           "circ_mv": 255.18,
           "amount": 431509.02,
           "turnover_ratio": 16.91,
-          "capacity_proxy_score": 9.09,
+          "capacity_proxy_score": 9.08,
           "sector": "IT服务Ⅱ",
           "industry": "IT服务Ⅱ"
         }

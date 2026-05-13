@@ -190,6 +190,7 @@
                     <button class="px-4 py-2 rounded-full bg-red-50 text-red-700 font-semibold">总览</button>
                     <a id="navMomentumLink" href="momentum.html" class="px-4 py-2 rounded-full text-gray-600 hover:bg-gray-100">动量股池</a>
                     <a id="navNewhighLink" href="newhigh.html" class="px-4 py-2 rounded-full text-gray-600 hover:bg-gray-100">一年新高</a>
+                    <button onclick="document.getElementById('stockSearch').scrollIntoView({behavior:'smooth'})" class="px-4 py-2 rounded-full text-gray-600 hover:bg-gray-100">查行业</button>
                 </div>
             </div>
         </div>
@@ -211,6 +212,25 @@
                     <select id="dateSelect" onchange="onDateChange(this.value)" disabled class="rounded-2xl border border-gray-200 bg-white px-4 py-3 pr-10 text-sm font-medium text-gray-700 shadow-sm focus:outline-none focus:ring-4 focus:ring-red-100 focus:border-red-300">
                         <option value="">加载中...</option>
                     </select>
+                </div>
+            </div>
+        </section>
+
+        <section id="stockSearch" class="shell rounded-[2rem] p-6 sm:p-8 mb-8 border-2 border-red-100">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="flex-1">
+                    <p class="text-xs uppercase tracking-[0.25em] text-red-700/80 font-semibold">申万行业速查</p>
+                    <h3 class="mt-1 text-xl font-semibold text-gray-900">股票代码 → 申万二级行业</h3>
+                    <p class="mt-1 text-sm text-gray-500">输入股票代码（6位或8位），立即知道它属于哪个申万行业</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <input id="stockCodeInput" type="text" placeholder="如 300308 或 688223"
+                           oninput="onStockCodeInput(this.value)"
+                           class="w-44 rounded-2xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 shadow-sm focus:outline-none focus:ring-4 focus:ring-red-100 focus:border-red-300 placeholder-gray-300"
+                           maxlength="8">
+                    <div id="stockIndustryResult" class="min-w-[140px] rounded-2xl bg-red-50 border border-red-200 px-5 py-3 text-center">
+                        <span class="text-sm text-gray-400">输入代码</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -950,6 +970,45 @@
             } catch (error) {
                 console.error('加载总览失败:', error);
                 showError(error.message || '总览加载失败');
+            }
+        }
+
+        let stockIndustryCache = null;
+
+        function getStockIndustryUrl() {
+            if (isLocalhost && !isFileProtocol) {
+                return `${DATA_BASE}/api/stock_industry.json?_=${Date.now()}`;
+            }
+            if (isGitHubPages) {
+                return `${DATA_BASE}/backend/data/stock_industry.json`;
+            }
+            return `./backend/data/stock_industry.json`;
+        }
+
+        async function loadStockIndustry() {
+            if (stockIndustryCache) return stockIndustryCache;
+            try {
+                stockIndustryCache = await fetchJson(getStockIndustryUrl());
+                return stockIndustryCache;
+            } catch {
+                stockIndustryCache = {};
+                return stockIndustryCache;
+            }
+        }
+
+        async function onStockCodeInput(value) {
+            const code = value.trim();
+            const resultDiv = document.getElementById('stockIndustryResult');
+            if (!code || code.length < 4) {
+                resultDiv.innerHTML = '<span class="text-sm text-gray-400">输入代码</span>';
+                return;
+            }
+            const data = await loadStockIndustry();
+            const info = data[code];
+            if (info) {
+                resultDiv.innerHTML = `<span class="text-base font-semibold text-red-700">${info.industry}</span>`;
+            } else {
+                resultDiv.innerHTML = '<span class="text-sm text-gray-400">未找到</span>';
             }
         }
 

@@ -9,7 +9,7 @@
     {
       "rank": 1,
       "sector_name": "通信设备",
-      "momentum_score": 62.94,
+      "momentum_score": 3.5,
       "listed_count": 30,
       "total_count": 82,
       "listed_ratio": 36.6,
@@ -89,7 +89,7 @@
           "code": "688205",
           "name": "德科立",
           "return_20d": 30.47,
-          "close_price": 243.0,
+          "close_price": 243,
           "rank_in_market": 64,
           "circ_mv": 395.82,
           "amount": 362499.44,
@@ -122,7 +122,7 @@
           "code": "300502",
           "name": "新易盛",
           "return_20d": 24.61,
-          "close_price": 490.0,
+          "close_price": 490,
           "rank_in_market": 100,
           "circ_mv": 4361.03,
           "amount": 1469798.8,
@@ -353,7 +353,7 @@
     {
       "rank": 2,
       "sector_name": "化学制药",
-      "momentum_score": 46.96,
+      "momentum_score": 2.61,
       "listed_count": 49,
       "total_count": 142,
       "listed_ratio": 34.5,
@@ -433,7 +433,7 @@
           "code": "688266",
           "name": "泽璟制药",
           "return_20d": 17.62,
-          "close_price": 98.0,
+          "close_price": 98,
           "rank_in_market": 173,
           "circ_mv": 262.4,
           "amount": 23555.91,
@@ -469,7 +469,7 @@
           "close_price": 71.16,
           "rank_in_market": 194,
           "circ_mv": 126.92,
-          "amount": 40091.0,
+          "amount": 40091,
           "institution_score": 7.4
         },
         {
@@ -906,14 +906,14 @@
     {
       "rank": 3,
       "sector_name": "电池",
-      "momentum_score": 27.86,
+      "momentum_score": 1.54,
       "listed_count": 27,
       "total_count": 92,
       "listed_ratio": 29.3,
       "avg_return_20d": 12.09,
       "rank_change": 0,
       "is_main_line": true,
-      "is_warning": true,
+      "is_warning": false,
       "stocks": [
         {
           "rank": 1,
@@ -975,7 +975,7 @@
           "code": "300390",
           "name": "天华新能",
           "return_20d": 21.07,
-          "close_price": 62.0,
+          "close_price": 62,
           "rank_in_market": 133,
           "circ_mv": 424.49,
           "amount": 700323.65,
@@ -1217,14 +1217,14 @@
     {
       "rank": 4,
       "sector_name": "半导体",
-      "momentum_score": 26.53,
+      "momentum_score": 1.47,
       "listed_count": 40,
       "total_count": 170,
       "listed_ratio": 23.5,
       "avg_return_20d": 11.84,
       "rank_change": 8,
       "is_main_line": true,
-      "is_warning": true,
+      "is_warning": false,
       "stocks": [
         {
           "rank": 1,
@@ -1352,7 +1352,7 @@
           "code": "688802",
           "name": "沐曦股份",
           "return_20d": 13.53,
-          "close_price": 610.0,
+          "close_price": 610,
           "rank_in_market": 238,
           "circ_mv": 111.15,
           "amount": 96847.98,
@@ -1407,7 +1407,7 @@
           "code": "688256",
           "name": "寒武纪",
           "return_20d": 9.01,
-          "close_price": 1198.0,
+          "close_price": 1198,
           "rank_in_market": 375,
           "circ_mv": 5014.43,
           "amount": 1168763.1,
@@ -1417,7 +1417,7 @@
           "rank": 18,
           "code": "688072",
           "name": "拓荆科技",
-          "return_20d": 9.0,
+          "return_20d": 9,
           "close_price": 391.85,
           "rank_in_market": 376,
           "circ_mv": 1099.35,
@@ -1560,7 +1560,7 @@
           "rank": 31,
           "code": "688252",
           "name": "天德钰",
-          "return_20d": 4.0,
+          "return_20d": 4,
           "close_price": 21.84,
           "rank_in_market": 590,
           "circ_mv": 87.51,
@@ -1671,14 +1671,14 @@
     {
       "rank": 5,
       "sector_name": "医疗服务",
-      "momentum_score": 26.41,
+      "momentum_score": 1.47,
       "listed_count": 17,
       "total_count": 49,
       "listed_ratio": 34.7,
       "avg_return_20d": 12.19,
       "rank_change": -1,
       "is_main_line": true,
-      "is_warning": true,
+      "is_warning": false,
       "stocks": [
         {
           "rank": 1,
@@ -1718,7 +1718,7 @@
           "code": "301201",
           "name": "诚达药业",
           "return_20d": 18.91,
-          "close_price": 53.0,
+          "close_price": 53,
           "rank_in_market": 153,
           "circ_mv": 62.22,
           "amount": 155469.71,
@@ -1806,7 +1806,7 @@
           "code": "603127",
           "name": "昭衍新药",
           "return_20d": 9.14,
-          "close_price": 37.0,
+          "close_price": 37,
           "rank_in_market": 365,
           "circ_mv": 234.18,
           "amount": 157796.25,
@@ -1854,7 +1854,7 @@
           "rank_in_market": 693,
           "circ_mv": 109.41,
           "amount": 32435.53,
-          "institution_score": 7.0
+          "institution_score": 7
         },
         {
           "rank": 17,
@@ -1872,14 +1872,14 @@
     {
       "rank": 6,
       "sector_name": "自动化设备",
-      "momentum_score": 24.21,
+      "momentum_score": 1.35,
       "listed_count": 19,
       "total_count": 78,
       "listed_ratio": 24.4,
       "avg_return_20d": 15.14,
       "rank_change": 8,
       "is_main_line": true,
-      "is_warning": true,
+      "is_warning": false,
       "stocks": [
         {
           "rank": 1,
@@ -1933,7 +1933,7 @@
           "close_price": 27.37,
           "rank_in_market": 134,
           "circ_mv": 66.2,
-          "amount": 52535.0,
+          "amount": 52535,
           "institution_score": 7.43
         },
         {
@@ -2095,14 +2095,14 @@
     {
       "rank": 7,
       "sector_name": "消费电子",
-      "momentum_score": 22.5,
+      "momentum_score": 1.25,
       "listed_count": 23,
       "total_count": 87,
       "listed_ratio": 26.4,
       "avg_return_20d": 12.58,
       "rank_change": 3,
       "is_main_line": true,
-      "is_warning": true,
+      "is_warning": false,
       "stocks": [
         {
           "rank": 1,
@@ -2362,14 +2362,14 @@
     {
       "rank": 8,
       "sector_name": "环保设备Ⅱ",
-      "momentum_score": 20.51,
+      "momentum_score": 1.14,
       "listed_count": 7,
       "total_count": 25,
-      "listed_ratio": 28.0,
+      "listed_ratio": 28,
       "avg_return_20d": 23.75,
       "rank_change": 5,
-      "is_main_line": true,
-      "is_warning": true,
+      "is_main_line": false,
+      "is_warning": false,
       "stocks": [
         {
           "rank": 1,
@@ -2453,13 +2453,13 @@
     {
       "rank": 9,
       "sector_name": "能源金属",
-      "momentum_score": 19.98,
+      "momentum_score": 1.11,
       "listed_count": 7,
       "total_count": 13,
       "listed_ratio": 53.8,
       "avg_return_20d": 9.5,
       "rank_change": -1,
-      "is_main_line": true,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -2532,7 +2532,7 @@
           "rank": 7,
           "code": "000408",
           "name": "藏格矿业",
-          "return_20d": 2.0,
+          "return_20d": 2,
           "close_price": 84.08,
           "rank_in_market": 722,
           "circ_mv": 1325.07,
@@ -2544,13 +2544,13 @@
     {
       "rank": 10,
       "sector_name": "电子化学品Ⅱ",
-      "momentum_score": 19.11,
+      "momentum_score": 1.06,
       "listed_count": 11,
       "total_count": 34,
       "listed_ratio": 32.4,
       "avg_return_20d": 14.43,
       "rank_change": 5,
-      "is_main_line": true,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -2679,13 +2679,13 @@
     {
       "rank": 11,
       "sector_name": "元件",
-      "momentum_score": 18.47,
+      "momentum_score": 1.03,
       "listed_count": 15,
       "total_count": 55,
       "listed_ratio": 27.3,
       "avg_return_20d": 13.21,
       "rank_change": -5,
-      "is_main_line": true,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -2858,13 +2858,13 @@
     {
       "rank": 12,
       "sector_name": "生物制品",
-      "momentum_score": 17.27,
+      "momentum_score": 0.96,
       "listed_count": 16,
       "total_count": 49,
       "listed_ratio": 32.7,
       "avg_return_20d": 9.48,
       "rank_change": -7,
-      "is_main_line": true,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -3048,13 +3048,13 @@
     {
       "rank": 13,
       "sector_name": "专业工程",
-      "momentum_score": 15.68,
+      "momentum_score": 0.87,
       "listed_count": 8,
       "total_count": 38,
       "listed_ratio": 21.1,
       "avg_return_20d": 23.59,
       "rank_change": 5,
-      "is_main_line": true,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -3150,13 +3150,13 @@
     {
       "rank": 14,
       "sector_name": "医疗器械",
-      "momentum_score": 14.61,
+      "momentum_score": 0.81,
       "listed_count": 20,
       "total_count": 128,
       "listed_ratio": 15.6,
       "avg_return_20d": 17.44,
       "rank_change": -3,
-      "is_main_line": true,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -3168,7 +3168,7 @@
           "rank_in_market": 4,
           "circ_mv": 85.61,
           "amount": 76521.81,
-          "institution_score": 8.0
+          "institution_score": 8
         },
         {
           "rank": 2,
@@ -3285,7 +3285,7 @@
           "code": "688617",
           "name": "惠泰医疗",
           "return_20d": 9.79,
-          "close_price": 258.0,
+          "close_price": 258,
           "rank_in_market": 342,
           "circ_mv": 364.45,
           "amount": 42847.86,
@@ -3340,7 +3340,7 @@
           "code": "301093",
           "name": "华兰股份",
           "return_20d": 3.53,
-          "close_price": 88.0,
+          "close_price": 88,
           "rank_in_market": 622,
           "circ_mv": 136.26,
           "amount": 42202.41,
@@ -3384,13 +3384,13 @@
     {
       "rank": 15,
       "sector_name": "专用设备",
-      "momentum_score": 14.3,
+      "momentum_score": 0.79,
       "listed_count": 24,
       "total_count": 170,
       "listed_ratio": 14.1,
       "avg_return_20d": 16.01,
       "rank_change": 1,
-      "is_main_line": true,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -3532,7 +3532,7 @@
           "return_20d": 11.04,
           "close_price": 143.8,
           "rank_in_market": 296,
-          "circ_mv": 58.0,
+          "circ_mv": 58,
           "amount": 125798.87,
           "institution_score": 7.15
         },
@@ -3585,7 +3585,7 @@
           "code": "603488",
           "name": "展鹏科技",
           "return_20d": 4.76,
-          "close_price": 11.0,
+          "close_price": 11,
           "rank_in_market": 544,
           "circ_mv": 31.96,
           "amount": 14905.59,
@@ -3596,7 +3596,7 @@
           "code": "001256",
           "name": "炜冈科技",
           "return_20d": 4.71,
-          "close_price": 24.0,
+          "close_price": 24,
           "rank_in_market": 549,
           "circ_mv": 25.12,
           "amount": 18753.31,
@@ -3662,13 +3662,13 @@
     {
       "rank": 16,
       "sector_name": "航运港口",
-      "momentum_score": 13.9,
+      "momentum_score": 0.77,
       "listed_count": 11,
       "total_count": 34,
       "listed_ratio": 32.4,
       "avg_return_20d": 9.7,
       "rank_change": -7,
-      "is_main_line": true,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -3757,7 +3757,7 @@
           "rank_in_market": 463,
           "circ_mv": 179.85,
           "amount": 15087.4,
-          "institution_score": 6.0
+          "institution_score": 6
         },
         {
           "rank": 9,
@@ -3797,13 +3797,13 @@
     {
       "rank": 17,
       "sector_name": "汽车零部件",
-      "momentum_score": 12.17,
+      "momentum_score": 0.68,
       "listed_count": 32,
       "total_count": 235,
       "listed_ratio": 13.6,
       "avg_return_20d": 10.8,
       "rank_change": 22,
-      "is_main_line": true,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -3876,7 +3876,7 @@
           "rank": 7,
           "code": "605228",
           "name": "神通科技",
-          "return_20d": 14.0,
+          "return_20d": 14,
           "close_price": 14.74,
           "rank_in_market": 230,
           "circ_mv": 69.24,
@@ -3997,7 +3997,7 @@
           "rank": 18,
           "code": "301560",
           "name": "众捷汽车",
-          "return_20d": 9.0,
+          "return_20d": 9,
           "close_price": 42.41,
           "rank_in_market": 377,
           "circ_mv": 10.33,
@@ -4053,7 +4053,7 @@
           "code": "300580",
           "name": "贝斯特",
           "return_20d": 7.05,
-          "close_price": 24.0,
+          "close_price": 24,
           "rank_in_market": 445,
           "circ_mv": 114.5,
           "amount": 21368.65,
@@ -4163,13 +4163,13 @@
     {
       "rank": 18,
       "sector_name": "光学光电子",
-      "momentum_score": 12.11,
+      "momentum_score": 0.67,
       "listed_count": 14,
       "total_count": 89,
       "listed_ratio": 15.7,
       "avg_return_20d": 18.69,
       "rank_change": 8,
-      "is_main_line": true,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -4247,7 +4247,7 @@
           "rank_in_market": 288,
           "circ_mv": 61.15,
           "amount": 36261.67,
-          "institution_score": 7.0
+          "institution_score": 7
         },
         {
           "rank": 8,
@@ -4309,7 +4309,7 @@
           "code": "600071",
           "name": "凤凰光学",
           "return_20d": 2.39,
-          "close_price": 21.0,
+          "close_price": 21,
           "rank_in_market": 698,
           "circ_mv": 57.95,
           "amount": 22286.32,
@@ -4331,7 +4331,7 @@
     {
       "rank": 19,
       "sector_name": "电网设备",
-      "momentum_score": 10.58,
+      "momentum_score": 0.59,
       "listed_count": 16,
       "total_count": 121,
       "listed_ratio": 13.2,
@@ -4521,7 +4521,7 @@
     {
       "rank": 20,
       "sector_name": "医药商业",
-      "momentum_score": 10.52,
+      "momentum_score": 0.58,
       "listed_count": 9,
       "total_count": 32,
       "listed_ratio": 28.1,
@@ -4634,7 +4634,7 @@
     {
       "rank": 21,
       "sector_name": "通用设备",
-      "momentum_score": 9.69,
+      "momentum_score": 0.54,
       "listed_count": 26,
       "total_count": 210,
       "listed_ratio": 12.4,
@@ -4826,7 +4826,7 @@
           "return_20d": 7.52,
           "close_price": 205.95,
           "rank_in_market": 432,
-          "circ_mv": 149.0,
+          "circ_mv": 149,
           "amount": 76280.77,
           "institution_score": 8.55
         },
@@ -4934,7 +4934,7 @@
     {
       "rank": 22,
       "sector_name": "工业金属",
-      "momentum_score": 9.67,
+      "momentum_score": 0.54,
       "listed_count": 11,
       "total_count": 60,
       "listed_ratio": 18.3,
@@ -4991,7 +4991,7 @@
           "rank": 5,
           "code": "300057",
           "name": "万顺新材",
-          "return_20d": 11.0,
+          "return_20d": 11,
           "close_price": 6.96,
           "rank_in_market": 297,
           "circ_mv": 50.63,
@@ -5029,7 +5029,7 @@
           "rank_in_market": 478,
           "circ_mv": 213.14,
           "amount": 283929.04,
-          "institution_score": 9.0
+          "institution_score": 9
         },
         {
           "rank": 9,
@@ -5069,10 +5069,10 @@
     {
       "rank": 23,
       "sector_name": "军工电子Ⅱ",
-      "momentum_score": 9.64,
+      "momentum_score": 0.53,
       "listed_count": 8,
       "total_count": 57,
-      "listed_ratio": 14.0,
+      "listed_ratio": 14,
       "avg_return_20d": 22.09,
       "rank_change": 8,
       "is_main_line": false,
@@ -5159,7 +5159,7 @@
           "rank": 8,
           "code": "688081",
           "name": "兴图新科",
-          "return_20d": 5.0,
+          "return_20d": 5,
           "close_price": 41.99,
           "rank_in_market": 534,
           "circ_mv": 42.79,
@@ -5171,7 +5171,7 @@
     {
       "rank": 24,
       "sector_name": "照明设备Ⅱ",
-      "momentum_score": 9.17,
+      "momentum_score": 0.51,
       "listed_count": 4,
       "total_count": 11,
       "listed_ratio": 36.4,
@@ -5229,7 +5229,7 @@
     {
       "rank": 25,
       "sector_name": "文娱用品",
-      "momentum_score": 8.98,
+      "momentum_score": 0.5,
       "listed_count": 4,
       "total_count": 22,
       "listed_ratio": 18.2,
@@ -5287,10 +5287,10 @@
     {
       "rank": 26,
       "sector_name": "包装印刷",
-      "momentum_score": 8.91,
+      "momentum_score": 0.49,
       "listed_count": 6,
       "total_count": 40,
-      "listed_ratio": 15.0,
+      "listed_ratio": 15,
       "avg_return_20d": 24.66,
       "rank_change": -6,
       "is_main_line": false,
@@ -5304,7 +5304,7 @@
           "close_price": 18.16,
           "rank_in_market": 5,
           "circ_mv": 96.3,
-          "amount": 198199.0,
+          "amount": 198199,
           "institution_score": 7.95
         },
         {
@@ -5348,7 +5348,7 @@
           "close_price": 38.05,
           "rank_in_market": 271,
           "circ_mv": 195.89,
-          "amount": 81640.0,
+          "amount": 81640,
           "institution_score": 8.79
         },
         {
@@ -5367,7 +5367,7 @@
     {
       "rank": 27,
       "sector_name": "塑料",
-      "momentum_score": 8.81,
+      "momentum_score": 0.49,
       "listed_count": 10,
       "total_count": 71,
       "listed_ratio": 14.1,
@@ -5483,7 +5483,7 @@
           "close_price": 27.2,
           "rank_in_market": 663,
           "circ_mv": 113.79,
-          "amount": 24536.0,
+          "amount": 24536,
           "institution_score": 6.72
         }
       ]
@@ -5491,10 +5491,10 @@
     {
       "rank": 28,
       "sector_name": "互联网电商",
-      "momentum_score": 8.04,
+      "momentum_score": 0.45,
       "listed_count": 4,
       "total_count": 16,
-      "listed_ratio": 25.0,
+      "listed_ratio": 25,
       "avg_return_20d": 12.41,
       "rank_change": 0,
       "is_main_line": false,
@@ -5549,7 +5549,7 @@
     {
       "rank": 29,
       "sector_name": "中药Ⅱ",
-      "momentum_score": 7.72,
+      "momentum_score": 0.43,
       "listed_count": 10,
       "total_count": 63,
       "listed_ratio": 15.9,
@@ -5673,7 +5673,7 @@
     {
       "rank": 30,
       "sector_name": "风电设备",
-      "momentum_score": 7.67,
+      "momentum_score": 0.43,
       "listed_count": 5,
       "total_count": 29,
       "listed_ratio": 17.2,
@@ -5698,7 +5698,7 @@
           "code": "603248",
           "name": "锡华科技",
           "return_20d": 23.56,
-          "close_price": 30.0,
+          "close_price": 30,
           "rank_in_market": 107,
           "circ_mv": 20.57,
           "amount": 46128.29,
@@ -5742,7 +5742,7 @@
     {
       "rank": 31,
       "sector_name": "调味发酵品Ⅱ",
-      "momentum_score": 7.5,
+      "momentum_score": 0.42,
       "listed_count": 4,
       "total_count": 13,
       "listed_ratio": 30.8,
@@ -5800,7 +5800,7 @@
     {
       "rank": 32,
       "sector_name": "计算机设备",
-      "momentum_score": 6.85,
+      "momentum_score": 0.38,
       "listed_count": 11,
       "total_count": 80,
       "listed_ratio": 13.8,
@@ -5935,7 +5935,7 @@
     {
       "rank": 33,
       "sector_name": "工程咨询服务Ⅱ",
-      "momentum_score": 6.29,
+      "momentum_score": 0.35,
       "listed_count": 5,
       "total_count": 41,
       "listed_ratio": 12.2,
@@ -6004,10 +6004,10 @@
     {
       "rank": 34,
       "sector_name": "电机Ⅱ",
-      "momentum_score": 6.2,
+      "momentum_score": 0.34,
       "listed_count": 4,
       "total_count": 25,
-      "listed_ratio": 16.0,
+      "listed_ratio": 16,
       "avg_return_20d": 16.45,
       "rank_change": 12,
       "is_main_line": false,
@@ -6062,7 +6062,7 @@
     {
       "rank": 35,
       "sector_name": "出版",
-      "momentum_score": 6.07,
+      "momentum_score": 0.34,
       "listed_count": 6,
       "total_count": 28,
       "listed_ratio": 21.4,
@@ -6142,7 +6142,7 @@
     {
       "rank": 36,
       "sector_name": "电力",
-      "momentum_score": 5.96,
+      "momentum_score": 0.33,
       "listed_count": 9,
       "total_count": 101,
       "listed_ratio": 8.9,
@@ -6255,7 +6255,7 @@
     {
       "rank": 37,
       "sector_name": "化学纤维",
-      "momentum_score": 5.66,
+      "momentum_score": 0.31,
       "listed_count": 4,
       "total_count": 27,
       "listed_ratio": 14.8,
@@ -6313,7 +6313,7 @@
     {
       "rank": 38,
       "sector_name": "食品加工",
-      "momentum_score": 5.31,
+      "momentum_score": 0.29,
       "listed_count": 5,
       "total_count": 24,
       "listed_ratio": 20.8,
@@ -6382,7 +6382,7 @@
     {
       "rank": 39,
       "sector_name": "基础建设",
-      "momentum_score": 5.22,
+      "momentum_score": 0.29,
       "listed_count": 5,
       "total_count": 40,
       "listed_ratio": 12.5,
@@ -6451,7 +6451,7 @@
     {
       "rank": 40,
       "sector_name": "其他电子Ⅱ",
-      "momentum_score": 4.99,
+      "momentum_score": 0.28,
       "listed_count": 6,
       "total_count": 33,
       "listed_ratio": 18.2,
@@ -6467,7 +6467,7 @@
           "return_20d": 19.72,
           "close_price": 52.2,
           "rank_in_market": 143,
-          "circ_mv": 47.0,
+          "circ_mv": 47,
           "amount": 73696.57,
           "institution_score": 6.9
         },
@@ -6531,7 +6531,7 @@
     {
       "rank": 41,
       "sector_name": "股份制银行Ⅱ",
-      "momentum_score": 4.85,
+      "momentum_score": 0.27,
       "listed_count": 3,
       "total_count": 9,
       "listed_ratio": 33.3,
@@ -6578,7 +6578,7 @@
     {
       "rank": 42,
       "sector_name": "农产品加工",
-      "momentum_score": 4.83,
+      "momentum_score": 0.27,
       "listed_count": 5,
       "total_count": 19,
       "listed_ratio": 26.3,
@@ -6647,7 +6647,7 @@
     {
       "rank": 43,
       "sector_name": "通信服务",
-      "momentum_score": 4.81,
+      "momentum_score": 0.27,
       "listed_count": 6,
       "total_count": 34,
       "listed_ratio": 17.6,
@@ -6676,7 +6676,7 @@
           "rank_in_market": 298,
           "circ_mv": 33.22,
           "amount": 45315.41,
-          "institution_score": 6.0
+          "institution_score": 6
         },
         {
           "rank": 3,
@@ -6727,7 +6727,7 @@
     {
       "rank": 44,
       "sector_name": "环境治理",
-      "momentum_score": 4.75,
+      "momentum_score": 0.26,
       "listed_count": 9,
       "total_count": 102,
       "listed_ratio": 8.8,
@@ -6840,7 +6840,7 @@
     {
       "rank": 45,
       "sector_name": "工程机械",
-      "momentum_score": 4.42,
+      "momentum_score": 0.25,
       "listed_count": 5,
       "total_count": 28,
       "listed_ratio": 17.9,
@@ -6909,7 +6909,7 @@
     {
       "rank": 46,
       "sector_name": "化学制品",
-      "momentum_score": 4.38,
+      "momentum_score": 0.24,
       "listed_count": 14,
       "total_count": 165,
       "listed_ratio": 8.5,
@@ -7014,7 +7014,7 @@
           "close_price": 81.33,
           "rank_in_market": 430,
           "circ_mv": 30.84,
-          "amount": 61038.0,
+          "amount": 61038,
           "institution_score": 6.13
         },
         {
@@ -7077,10 +7077,10 @@
     {
       "rank": 47,
       "sector_name": "国有大型银行Ⅱ",
-      "momentum_score": 4.3,
+      "momentum_score": 0.24,
       "listed_count": 3,
       "total_count": 6,
-      "listed_ratio": 50.0,
+      "listed_ratio": 50,
       "avg_return_20d": 3.85,
       "rank_change": -14,
       "is_main_line": false,
@@ -7124,7 +7124,7 @@
     {
       "rank": 48,
       "sector_name": "装修建材",
-      "momentum_score": 4.29,
+      "momentum_score": 0.24,
       "listed_count": 4,
       "total_count": 34,
       "listed_ratio": 11.8,
@@ -7182,7 +7182,7 @@
     {
       "rank": 49,
       "sector_name": "炼化及贸易",
-      "momentum_score": 4.23,
+      "momentum_score": 0.23,
       "listed_count": 5,
       "total_count": 29,
       "listed_ratio": 17.2,
@@ -7251,7 +7251,7 @@
     {
       "rank": 50,
       "sector_name": "纺织制造",
-      "momentum_score": 3.91,
+      "momentum_score": 0.22,
       "listed_count": 5,
       "total_count": 31,
       "listed_ratio": 16.1,
@@ -7309,18 +7309,18 @@
           "code": "002083",
           "name": "孚日股份",
           "return_20d": 4.71,
-          "close_price": 12.0,
+          "close_price": 12,
           "rank_in_market": 550,
           "circ_mv": 114.21,
           "amount": 49500.78,
-          "institution_score": 8.0
+          "institution_score": 8
         }
       ]
     },
     {
       "rank": 51,
       "sector_name": "房地产开发",
-      "momentum_score": 3.82,
+      "momentum_score": 0.21,
       "listed_count": 6,
       "total_count": 81,
       "listed_ratio": 7.4,
@@ -7400,7 +7400,7 @@
     {
       "rank": 52,
       "sector_name": "服装家纺",
-      "momentum_score": 3.8,
+      "momentum_score": 0.21,
       "listed_count": 6,
       "total_count": 54,
       "listed_ratio": 11.1,
@@ -7457,7 +7457,7 @@
           "rank": 5,
           "code": "600398",
           "name": "海澜之家",
-          "return_20d": 3.0,
+          "return_20d": 3,
           "close_price": 6.52,
           "rank_in_market": 650,
           "circ_mv": 312.94,
@@ -7480,7 +7480,7 @@
     {
       "rank": 53,
       "sector_name": "家电零部件Ⅱ",
-      "momentum_score": 3.78,
+      "momentum_score": 0.21,
       "listed_count": 4,
       "total_count": 30,
       "listed_ratio": 13.3,
@@ -7538,7 +7538,7 @@
     {
       "rank": 54,
       "sector_name": "化学原料",
-      "momentum_score": 3.64,
+      "momentum_score": 0.2,
       "listed_count": 6,
       "total_count": 56,
       "listed_ratio": 10.7,
@@ -7587,7 +7587,7 @@
           "return_20d": 4.71,
           "close_price": 14.66,
           "rank_in_market": 547,
-          "circ_mv": 100.0,
+          "circ_mv": 100,
           "amount": 148036.66,
           "institution_score": 8.18
         },
@@ -7618,7 +7618,7 @@
     {
       "rank": 55,
       "sector_name": "小家电",
-      "momentum_score": 3.63,
+      "momentum_score": 0.2,
       "listed_count": 6,
       "total_count": 19,
       "listed_ratio": 31.6,
@@ -7643,7 +7643,7 @@
           "code": "603215",
           "name": "比依股份",
           "return_20d": 3.52,
-          "close_price": 20.0,
+          "close_price": 20,
           "rank_in_market": 623,
           "circ_mv": 37.76,
           "amount": 7410.09,
@@ -7698,7 +7698,7 @@
     {
       "rank": 56,
       "sector_name": "轨交设备Ⅱ",
-      "momentum_score": 3.6,
+      "momentum_score": 0.2,
       "listed_count": 3,
       "total_count": 31,
       "listed_ratio": 9.7,
@@ -7745,7 +7745,7 @@
     {
       "rank": 57,
       "sector_name": "休闲食品",
-      "momentum_score": 3.51,
+      "momentum_score": 0.2,
       "listed_count": 3,
       "total_count": 21,
       "listed_ratio": 14.3,
@@ -7792,7 +7792,7 @@
     {
       "rank": 58,
       "sector_name": "贸易Ⅱ",
-      "momentum_score": 3.38,
+      "momentum_score": 0.19,
       "listed_count": 2,
       "total_count": 12,
       "listed_ratio": 16.7,
@@ -7828,10 +7828,10 @@
     {
       "rank": 59,
       "sector_name": "IT服务Ⅱ",
-      "momentum_score": 3.18,
+      "momentum_score": 0.18,
       "listed_count": 9,
       "total_count": 113,
-      "listed_ratio": 8.0,
+      "listed_ratio": 8,
       "avg_return_20d": 14.71,
       "rank_change": -6,
       "is_main_line": false,
@@ -7941,7 +7941,7 @@
     {
       "rank": 60,
       "sector_name": "专业连锁Ⅱ",
-      "momentum_score": 3.14,
+      "momentum_score": 0.17,
       "listed_count": 1,
       "total_count": 7,
       "listed_ratio": 14.3,
@@ -7966,7 +7966,7 @@
     {
       "rank": 61,
       "sector_name": "商用车",
-      "momentum_score": 3.07,
+      "momentum_score": 0.17,
       "listed_count": 2,
       "total_count": 13,
       "listed_ratio": 15.4,
@@ -8002,7 +8002,7 @@
     {
       "rank": 62,
       "sector_name": "酒店餐饮",
-      "momentum_score": 3.05,
+      "momentum_score": 0.17,
       "listed_count": 3,
       "total_count": 8,
       "listed_ratio": 37.5,
@@ -8049,10 +8049,10 @@
     {
       "rank": 63,
       "sector_name": "多元金融",
-      "momentum_score": 2.85,
+      "momentum_score": 0.16,
       "listed_count": 3,
       "total_count": 25,
-      "listed_ratio": 12.0,
+      "listed_ratio": 12,
       "avg_return_20d": 10.94,
       "rank_change": 1,
       "is_main_line": false,
@@ -8073,7 +8073,7 @@
           "rank": 2,
           "code": "600643",
           "name": "爱建集团",
-          "return_20d": 10.0,
+          "return_20d": 10,
           "close_price": 5.17,
           "rank_in_market": 336,
           "circ_mv": 82.28,
@@ -8096,7 +8096,7 @@
     {
       "rank": 64,
       "sector_name": "非白酒",
-      "momentum_score": 2.81,
+      "momentum_score": 0.16,
       "listed_count": 4,
       "total_count": 13,
       "listed_ratio": 30.8,
@@ -8123,7 +8123,7 @@
           "return_20d": 4.25,
           "close_price": 18.15,
           "rank_in_market": 581,
-          "circ_mv": 87.0,
+          "circ_mv": 87,
           "amount": 17996.82,
           "institution_score": 6.04
         },
@@ -8154,7 +8154,7 @@
     {
       "rank": 65,
       "sector_name": "家居用品",
-      "momentum_score": 2.71,
+      "momentum_score": 0.15,
       "listed_count": 5,
       "total_count": 69,
       "listed_ratio": 7.2,
@@ -8223,7 +8223,7 @@
     {
       "rank": 66,
       "sector_name": "动物保健Ⅱ",
-      "momentum_score": 2.64,
+      "momentum_score": 0.15,
       "listed_count": 3,
       "total_count": 9,
       "listed_ratio": 33.3,
@@ -8270,7 +8270,7 @@
     {
       "rank": 67,
       "sector_name": "个护用品",
-      "momentum_score": 2.46,
+      "momentum_score": 0.14,
       "listed_count": 2,
       "total_count": 12,
       "listed_ratio": 16.7,
@@ -8305,13 +8305,60 @@
     },
     {
       "rank": 68,
+      "sector_name": "玻璃玻纤",
+      "momentum_score": 0.14,
+      "listed_count": 3,
+      "total_count": 16,
+      "listed_ratio": 18.8,
+      "avg_return_20d": 6.43,
+      "rank_change": 20,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "603601",
+          "name": "再升科技",
+          "return_20d": 9.32,
+          "close_price": 13.61,
+          "rank_in_market": 358,
+          "circ_mv": 156.99,
+          "amount": 279319.19,
+          "institution_score": 8.79
+        },
+        {
+          "rank": 2,
+          "code": "600176",
+          "name": "中国巨石",
+          "return_20d": 5.66,
+          "close_price": 28,
+          "rank_in_market": 509,
+          "circ_mv": 1098.22,
+          "amount": 261190.28,
+          "institution_score": 9.25
+        },
+        {
+          "rank": 3,
+          "code": "603256",
+          "name": "宏和科技",
+          "return_20d": 4.3,
+          "close_price": 76.2,
+          "rank_in_market": 577,
+          "circ_mv": 661.75,
+          "amount": 174092.22,
+          "institution_score": 9.04
+        }
+      ]
+    },
+    {
+      "rank": 69,
       "sector_name": "光伏设备",
-      "momentum_score": 2.43,
+      "momentum_score": 0.13,
       "listed_count": 5,
       "total_count": 60,
       "listed_ratio": 8.3,
       "avg_return_20d": 11.12,
-      "rank_change": -21,
+      "rank_change": -22,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8357,7 +8404,7 @@
           "rank_in_market": 637,
           "circ_mv": 290.21,
           "amount": 43638.81,
-          "institution_score": 8.0
+          "institution_score": 8
         },
         {
           "rank": 5,
@@ -8373,56 +8420,9 @@
       ]
     },
     {
-      "rank": 69,
-      "sector_name": "玻璃玻纤",
-      "momentum_score": 2.43,
-      "listed_count": 3,
-      "total_count": 16,
-      "listed_ratio": 18.8,
-      "avg_return_20d": 6.43,
-      "rank_change": 19,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "603601",
-          "name": "再升科技",
-          "return_20d": 9.32,
-          "close_price": 13.61,
-          "rank_in_market": 358,
-          "circ_mv": 156.99,
-          "amount": 279319.19,
-          "institution_score": 8.79
-        },
-        {
-          "rank": 2,
-          "code": "600176",
-          "name": "中国巨石",
-          "return_20d": 5.66,
-          "close_price": 28.0,
-          "rank_in_market": 509,
-          "circ_mv": 1098.22,
-          "amount": 261190.28,
-          "institution_score": 9.25
-        },
-        {
-          "rank": 3,
-          "code": "603256",
-          "name": "宏和科技",
-          "return_20d": 4.3,
-          "close_price": 76.2,
-          "rank_in_market": 577,
-          "circ_mv": 661.75,
-          "amount": 174092.22,
-          "institution_score": 9.04
-        }
-      ]
-    },
-    {
       "rank": 70,
       "sector_name": "软件开发",
-      "momentum_score": 2.27,
+      "momentum_score": 0.13,
       "listed_count": 8,
       "total_count": 126,
       "listed_ratio": 6.3,
@@ -8524,10 +8524,10 @@
     {
       "rank": 71,
       "sector_name": "农商行Ⅱ",
-      "momentum_score": 2.1,
+      "momentum_score": 0.12,
       "listed_count": 2,
       "total_count": 10,
-      "listed_ratio": 20.0,
+      "listed_ratio": 20,
       "avg_return_20d": 6.55,
       "rank_change": -11,
       "is_main_line": false,
@@ -8537,7 +8537,7 @@
           "rank": 1,
           "code": "601077",
           "name": "渝农商行",
-          "return_20d": 7.0,
+          "return_20d": 7,
           "close_price": 7.18,
           "rank_in_market": 448,
           "circ_mv": 637.24,
@@ -8560,7 +8560,7 @@
     {
       "rank": 72,
       "sector_name": "城商行Ⅱ",
-      "momentum_score": 2.04,
+      "momentum_score": 0.11,
       "listed_count": 4,
       "total_count": 17,
       "listed_ratio": 23.5,
@@ -8618,7 +8618,7 @@
     {
       "rank": 73,
       "sector_name": "装修装饰Ⅱ",
-      "momentum_score": 1.88,
+      "momentum_score": 0.1,
       "listed_count": 2,
       "total_count": 15,
       "listed_ratio": 13.3,
@@ -8654,7 +8654,7 @@
     {
       "rank": 74,
       "sector_name": "其他电源设备Ⅱ",
-      "momentum_score": 1.81,
+      "momentum_score": 0.1,
       "listed_count": 3,
       "total_count": 28,
       "listed_ratio": 10.7,
@@ -8690,7 +8690,7 @@
           "code": "300870",
           "name": "欧陆通",
           "return_20d": 4.96,
-          "close_price": 300.0,
+          "close_price": 300,
           "rank_in_market": 536,
           "circ_mv": 330.2,
           "amount": 238392.65,
@@ -8701,7 +8701,7 @@
     {
       "rank": 75,
       "sector_name": "油服工程",
-      "momentum_score": 1.7,
+      "momentum_score": 0.09,
       "listed_count": 3,
       "total_count": 13,
       "listed_ratio": 23.1,
@@ -8748,7 +8748,7 @@
     {
       "rank": 76,
       "sector_name": "橡胶",
-      "momentum_score": 1.62,
+      "momentum_score": 0.09,
       "listed_count": 2,
       "total_count": 17,
       "listed_ratio": 11.8,
@@ -8784,7 +8784,7 @@
     {
       "rank": 77,
       "sector_name": "金属新材料",
-      "momentum_score": 1.48,
+      "momentum_score": 0.08,
       "listed_count": 2,
       "total_count": 30,
       "listed_ratio": 6.7,
@@ -8809,7 +8809,7 @@
           "code": "603124",
           "name": "江南新材",
           "return_20d": 13.5,
-          "close_price": 117.0,
+          "close_price": 117,
           "rank_in_market": 239,
           "circ_mv": 90.11,
           "amount": 35280.41,
@@ -8820,7 +8820,7 @@
     {
       "rank": 78,
       "sector_name": "小金属",
-      "momentum_score": 1.47,
+      "momentum_score": 0.08,
       "listed_count": 2,
       "total_count": 24,
       "listed_ratio": 8.3,
@@ -8856,7 +8856,7 @@
     {
       "rank": 79,
       "sector_name": "非金属材料Ⅱ",
-      "momentum_score": 1.39,
+      "momentum_score": 0.08,
       "listed_count": 1,
       "total_count": 7,
       "listed_ratio": 14.3,
@@ -8881,7 +8881,7 @@
     {
       "rank": 80,
       "sector_name": "燃气Ⅱ",
-      "momentum_score": 1.22,
+      "momentum_score": 0.07,
       "listed_count": 2,
       "total_count": 28,
       "listed_ratio": 7.1,
@@ -8917,10 +8917,10 @@
     {
       "rank": 81,
       "sector_name": "其他",
-      "momentum_score": 0.91,
+      "momentum_score": 0.05,
       "listed_count": 2,
       "total_count": 20,
-      "listed_ratio": 10.0,
+      "listed_ratio": 10,
       "avg_return_20d": 5.33,
       "rank_change": 8,
       "is_main_line": false,
@@ -8953,7 +8953,7 @@
     {
       "rank": 82,
       "sector_name": "电视广播Ⅱ",
-      "momentum_score": 0.83,
+      "momentum_score": 0.05,
       "listed_count": 1,
       "total_count": 14,
       "listed_ratio": 7.1,
@@ -8978,7 +8978,7 @@
     {
       "rank": 83,
       "sector_name": "造纸",
-      "momentum_score": 0.82,
+      "momentum_score": 0.05,
       "listed_count": 2,
       "total_count": 22,
       "listed_ratio": 9.1,
@@ -9014,7 +9014,7 @@
     {
       "rank": 84,
       "sector_name": "贵金属",
-      "momentum_score": 0.81,
+      "momentum_score": 0.05,
       "listed_count": 1,
       "total_count": 11,
       "listed_ratio": 9.1,
@@ -9039,7 +9039,7 @@
     {
       "rank": 85,
       "sector_name": "广告营销",
-      "momentum_score": 0.74,
+      "momentum_score": 0.04,
       "listed_count": 3,
       "total_count": 26,
       "listed_ratio": 11.5,
@@ -9086,7 +9086,7 @@
     {
       "rank": 86,
       "sector_name": "黑色家电",
-      "momentum_score": 0.71,
+      "momentum_score": 0.04,
       "listed_count": 1,
       "total_count": 9,
       "listed_ratio": 11.1,
@@ -9111,7 +9111,7 @@
     {
       "rank": 87,
       "sector_name": "摩托车及其他",
-      "momentum_score": 0.7,
+      "momentum_score": 0.04,
       "listed_count": 2,
       "total_count": 15,
       "listed_ratio": 13.3,
@@ -9147,7 +9147,7 @@
     {
       "rank": 88,
       "sector_name": "饲料",
-      "momentum_score": 0.61,
+      "momentum_score": 0.03,
       "listed_count": 2,
       "total_count": 17,
       "listed_ratio": 11.8,
@@ -9183,7 +9183,7 @@
     {
       "rank": 89,
       "sector_name": "专业服务",
-      "momentum_score": 0.56,
+      "momentum_score": 0.03,
       "listed_count": 2,
       "total_count": 30,
       "listed_ratio": 6.7,
@@ -9219,7 +9219,7 @@
     {
       "rank": 90,
       "sector_name": "地面兵装Ⅱ",
-      "momentum_score": 0.56,
+      "momentum_score": 0.03,
       "listed_count": 1,
       "total_count": 11,
       "listed_ratio": 9.1,
@@ -9235,7 +9235,7 @@
           "return_20d": 6.63,
           "close_price": 19.62,
           "rank_in_market": 458,
-          "circ_mv": 113.0,
+          "circ_mv": 113,
           "amount": 136977.73,
           "institution_score": 8.27
         }
@@ -9244,7 +9244,7 @@
     {
       "rank": 91,
       "sector_name": "铁路公路",
-      "momentum_score": 0.56,
+      "momentum_score": 0.03,
       "listed_count": 3,
       "total_count": 33,
       "listed_ratio": 9.1,
@@ -9291,10 +9291,10 @@
     {
       "rank": 92,
       "sector_name": "种植业",
-      "momentum_score": 0.54,
+      "momentum_score": 0.03,
       "listed_count": 1,
       "total_count": 20,
-      "listed_ratio": 5.0,
+      "listed_ratio": 5,
       "avg_return_20d": 13.13,
       "rank_change": 1,
       "is_main_line": false,
@@ -9316,7 +9316,7 @@
     {
       "rank": 93,
       "sector_name": "饮料乳品",
-      "momentum_score": 0.52,
+      "momentum_score": 0.03,
       "listed_count": 1,
       "total_count": 26,
       "listed_ratio": 3.8,
@@ -9341,7 +9341,7 @@
     {
       "rank": 94,
       "sector_name": "旅游及景区",
-      "momentum_score": 0.46,
+      "momentum_score": 0.03,
       "listed_count": 1,
       "total_count": 23,
       "listed_ratio": 4.3,
@@ -9366,7 +9366,7 @@
     {
       "rank": 95,
       "sector_name": "物流",
-      "momentum_score": 0.36,
+      "momentum_score": 0.02,
       "listed_count": 2,
       "total_count": 44,
       "listed_ratio": 4.5,
@@ -9402,10 +9402,10 @@
     {
       "rank": 96,
       "sector_name": "房地产服务",
-      "momentum_score": 0.34,
+      "momentum_score": 0.02,
       "listed_count": 1,
       "total_count": 10,
-      "listed_ratio": 10.0,
+      "listed_ratio": 10,
       "avg_return_20d": 4.51,
       "rank_change": -11,
       "is_main_line": false,
@@ -9427,7 +9427,7 @@
     {
       "rank": 97,
       "sector_name": "农化制品",
-      "momentum_score": 0.29,
+      "momentum_score": 0.02,
       "listed_count": 3,
       "total_count": 56,
       "listed_ratio": 5.4,
@@ -9465,7 +9465,7 @@
           "return_20d": 3.24,
           "close_price": 6.38,
           "rank_in_market": 635,
-          "circ_mv": 139.0,
+          "circ_mv": 139,
           "amount": 11955.63,
           "institution_score": 5.44
         }
@@ -9474,7 +9474,7 @@
     {
       "rank": 98,
       "sector_name": "教育",
-      "momentum_score": 0.27,
+      "momentum_score": 0.02,
       "listed_count": 1,
       "total_count": 12,
       "listed_ratio": 8.3,
@@ -9499,7 +9499,7 @@
     {
       "rank": 99,
       "sector_name": "航空机场",
-      "momentum_score": 0.27,
+      "momentum_score": 0.02,
       "listed_count": 1,
       "total_count": 12,
       "listed_ratio": 8.3,
@@ -9524,7 +9524,7 @@
     {
       "rank": 100,
       "sector_name": "化妆品",
-      "momentum_score": 0.23,
+      "momentum_score": 0.01,
       "listed_count": 1,
       "total_count": 14,
       "listed_ratio": 7.1,
@@ -9549,7 +9549,7 @@
     {
       "rank": 101,
       "sector_name": "综合Ⅱ",
-      "momentum_score": 0.21,
+      "momentum_score": 0.01,
       "listed_count": 1,
       "total_count": 15,
       "listed_ratio": 6.7,
@@ -9574,7 +9574,7 @@
     {
       "rank": 102,
       "sector_name": "白酒Ⅱ",
-      "momentum_score": 0.16,
+      "momentum_score": 0.01,
       "listed_count": 1,
       "total_count": 19,
       "listed_ratio": 5.3,
@@ -9599,7 +9599,7 @@
     {
       "rank": 103,
       "sector_name": "水泥",
-      "momentum_score": 0.14,
+      "momentum_score": 0.01,
       "listed_count": 1,
       "total_count": 21,
       "listed_ratio": 4.8,
@@ -9624,7 +9624,7 @@
     {
       "rank": 104,
       "sector_name": "普钢",
-      "momentum_score": 0.13,
+      "momentum_score": 0.01,
       "listed_count": 1,
       "total_count": 22,
       "listed_ratio": 4.5,
@@ -9649,7 +9649,7 @@
     {
       "rank": 105,
       "sector_name": "航空装备Ⅱ",
-      "momentum_score": 0.11,
+      "momentum_score": 0.01,
       "listed_count": 1,
       "total_count": 43,
       "listed_ratio": 2.3,

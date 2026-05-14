@@ -703,6 +703,16 @@
         }
 
         // 渲染弹窗股票列表
+        function renderConceptTags(tags) {
+            const list = Array.isArray(tags) ? tags.filter(Boolean).slice(0, 5) : [];
+            if (list.length === 0) return '<div class="text-xs text-gray-400 mt-1">暂无题材标签</div>';
+            return `
+                <div class="flex flex-wrap gap-1 mt-1 max-w-[18rem]">
+                    ${list.map(tag => `<span class="px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 text-[11px] leading-4">${tag}</span>`).join('')}
+                </div>
+            `;
+        }
+
         function renderModalStocks(stocks) {
             const tbody = document.getElementById('modalStockList');
             
@@ -727,7 +737,10 @@
                 <tr class="hover:bg-red-50">
                     <td class="px-4 py-3 font-semibold">${rank}</td>
                     <td class="px-4 py-3 font-mono text-gray-600">${code}</td>
-                    <td class="px-4 py-3 font-medium">${name}</td>
+                    <td class="px-4 py-3">
+                        <div class="font-medium">${name}</div>
+                        ${renderConceptTags(s.concept_tags)}
+                    </td>
                     <td class="px-4 py-3 text-right font-bold text-stock-up">+${return20d}%</td>
                     <td class="px-4 py-3 text-right">¥${closePrice.toFixed(2)}</td>
                     <td class="px-4 py-3 text-right text-gray-600">${amountYi}亿</td>

@@ -835,8 +835,8 @@
                 return;
             }
             
-            const sortedSectors = [...sectors].sort((a, b) => (b.sector_confirmation_score || b.sector_score || b.new_high_count || b.stock_count || 0) - (a.sector_confirmation_score || a.sector_score || a.new_high_count || a.stock_count || 0));
-            const maxScore = sortedSectors[0]?.sector_confirmation_score || sortedSectors[0]?.sector_score || sortedSectors[0]?.new_high_count || sortedSectors[0]?.stock_count || 1;
+            const sortedSectors = [...sectors].sort((a, b) => (b.new_high_count || b.stock_count || 0) - (a.new_high_count || a.stock_count || 0));
+            const maxScore = sortedSectors[0]?.new_high_count || sortedSectors[0]?.stock_count || 1;
             
             // 显示所有板块，不限于前8个
             container.innerHTML = sortedSectors.map((sector, index) => {
@@ -844,7 +844,7 @@
                 const score = sector.sector_confirmation_score || sector.sector_score || sector.strength_score || Math.round((count / maxScore) * 100);
                 const color = colors[index % colors.length];
                 const width = Math.max(10, (score / maxScore) * 100);
-                const reason = '按新高数量、连续性、突破幅度与动量共振排序';
+                const reason = '按新高数量排序';
                 const badges = [];
                 const isSelected = selectedSectorName && (sector.sector_name || sector.name) === selectedSectorName;
                 if (sector.momentum_warning) badges.push('动量预警主线');

@@ -170,6 +170,7 @@
             transform: translateY(0);
         }
     </style>
+    <link rel="stylesheet" href="app.css">
 </head>
 <body class="min-h-screen">
     <nav class="sticky top-0 z-50 border-b border-white/60 bg-white/70 backdrop-blur-xl">
@@ -182,7 +183,7 @@
                         </svg>
                     </div>
                     <div>
-                        <p class="text-[11px] uppercase tracking-[0.25em] text-gray-400">Trend Radar</p>
+                        <p class="hidden sm:block text-[11px] uppercase tracking-[0.25em] text-gray-400">Trend Radar</p>
                         <p class="text-lg font-semibold text-gray-900">股海雷达</p>
                     </div>
                 </div>
@@ -197,40 +198,17 @@
     </nav>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <section class="shell rounded-[2rem] p-6 sm:p-8 mb-8">
-            <div class="flex flex-col xl:flex-row xl:items-end xl:justify-between gap-6">
-                <div class="max-w-3xl">
-                        <p class="text-xs uppercase tracking-[0.35em] text-red-700/80 font-semibold">环境 -> 方向 -> 确认</p>
-                        <h1 class="mt-3 text-4xl sm:text-5xl font-semibold tracking-tight text-gray-950">先看环境，再看方向，再看确认。</h1>
-                        <p class="mt-4 text-base sm:text-lg text-gray-600 leading-8">
-                        这页只做三件事：先判断今天能不能做，再告诉你先看哪个方向，最后只保留已经被市场确认的强票。
-                    </p>
-                    <p id="pageMeta" class="mt-4 text-xs text-gray-500">数据日期 - | 样本口径 - | 页面更新 -</p>
+        <section class="mb-6">
+            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+                <div>
+                    <h1 class="text-2xl font-semibold text-gray-950">今日总览</h1>
+                    <p id="pageMeta" class="mt-2 text-xs text-gray-500">数据日期 - | 东方财富行业板块 | 页面更新 -</p>
                 </div>
                 <div class="date-selector flex items-center gap-3">
                     <label for="dateSelect" class="text-sm font-medium text-gray-500">选择日期</label>
                     <select id="dateSelect" onchange="onDateChange(this.value)" disabled class="rounded-2xl border border-gray-200 bg-white px-4 py-3 pr-10 text-sm font-medium text-gray-700 shadow-sm focus:outline-none focus:ring-4 focus:ring-red-100 focus:border-red-300">
                         <option value="">加载中...</option>
                     </select>
-                </div>
-            </div>
-        </section>
-
-        <section id="stockSearch" class="shell rounded-[2rem] p-6 sm:p-8 mb-8 border-2 border-red-100">
-            <div class="flex flex-col sm:flex-row sm:items-center gap-4">
-                <div class="flex-1">
-                    <p class="text-xs uppercase tracking-[0.25em] text-red-700/80 font-semibold">申万行业速查</p>
-                    <h3 class="mt-1 text-xl font-semibold text-gray-900">股票代码 → 申万二级行业</h3>
-                    <p class="mt-1 text-sm text-gray-500">输入股票代码（6位或8位），立即知道它属于哪个申万行业</p>
-                </div>
-                <div class="flex items-center gap-3">
-                    <input id="stockCodeInput" type="text" placeholder="如 300308 或 688223"
-                           oninput="onStockCodeInput(this.value)"
-                           class="w-44 rounded-2xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 shadow-sm focus:outline-none focus:ring-4 focus:ring-red-100 focus:border-red-300 placeholder-gray-300"
-                           maxlength="8">
-                    <div id="stockIndustryResult" class="min-w-[140px] rounded-2xl bg-red-50 border border-red-200 px-5 py-3 text-center">
-                        <span class="text-sm text-gray-400">输入代码</span>
-                    </div>
                 </div>
             </div>
         </section>
@@ -252,7 +230,7 @@
         </div>
 
         <div id="content" class="hidden space-y-8">
-            <section class="grid grid-cols-1 xl:grid-cols-[1.25fr_0.95fr] gap-6">
+            <section>
                 <div class="signal-card rounded-[2rem] p-7 sm:p-8">
                     <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-5">
                         <div class="max-w-2xl">
@@ -274,7 +252,7 @@
                         <span id="sampleUniversePill" class="status-pill bg-white/12 text-white">-</span>
                         <span id="intersectionPill" class="status-pill bg-white/12 text-white">-</span>
                     </div>
-                    <div class="mt-5 rounded-3xl bg-white/12 p-4">
+                    <div class="hidden">
                         <p class="text-xs uppercase tracking-[0.2em] text-white/60">一句话动作</p>
                         <p id="actionSummary" class="mt-2 text-sm leading-7 text-white/90">-</p>
                     </div>
@@ -302,7 +280,7 @@
                     </div>
                 </div>
 
-                <div class="shell mesh-card rounded-[2rem] p-6 sm:p-7">
+                <div class="hidden" aria-hidden="true">
                     <div class="flex items-center justify-between gap-4">
                         <div>
                             <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">页面定位</p>
@@ -367,6 +345,19 @@
                     <div id="opportunityList" class="space-y-4"></div>
                 </div>
             </section>
+
+            <details id="stockSearch" class="data-note py-4">
+                <summary>查询股票所属东财行业</summary>
+                <div class="mt-4 flex flex-col sm:flex-row sm:items-center gap-3">
+                    <input id="stockCodeInput" type="text" placeholder="输入6位股票代码"
+                           oninput="onStockCodeInput(this.value)"
+                           class="w-48 rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-red-100"
+                           maxlength="8">
+                    <div id="stockIndustryResult" class="min-w-[140px] rounded-lg bg-red-50 border border-red-100 px-4 py-2.5 text-center">
+                        <span class="text-sm text-gray-400">等待输入</span>
+                    </div>
+                </div>
+            </details>
 
         </div>
     </main>
@@ -772,7 +763,7 @@
             document.getElementById('step2').textContent = `再看方向：优先跟踪动量榜前排。今天前排核心是 ${topSector?.sector_name || '暂无'}。`;
             document.getElementById('step3').textContent = '最后看确认：只看已经创出新高、且处在主线方向里的票。逻辑和买点不在这页判断。';
             document.getElementById('riskHint').textContent = '这页只做发现，不替代逻辑判断、买点判断和持仓管理。';
-            document.getElementById('pageMeta').textContent = `数据日期 ${formatDate(newhighPayload.trade_date || currentDate)} | 样本口径 可计算 250 日窗口 | 页面更新 ${formatPageUpdatedAt()}`;
+            document.getElementById('pageMeta').textContent = `数据日期 ${formatDate(newhighPayload.trade_date || currentDate)} | 东方财富行业板块 | 更新 ${formatPageUpdatedAt()}`;
             currentSignalSnapshot = {
                 headline: headlineSector,
                 headlineSummary: summary,
@@ -784,7 +775,7 @@
         }
 
         function renderSectorGrid(momentumPayload, sectorStabilityMap) {
-            const sectors = (momentumPayload.data || []).slice(0, 6);
+            const sectors = (momentumPayload.data || []).slice(0, 4);
             const grid = document.getElementById('sectorGrid');
             if (!sectors.length) {
                 grid.innerHTML = '<p class="text-sm text-gray-500">暂无板块数据</p>';
@@ -812,7 +803,7 @@
                             </div>
                             <span class="status-pill ${toneClass}">${stability?.label || '今日活跃'}</span>
                         </div>
-                        <div class="mt-5 grid grid-cols-3 gap-3 text-sm">
+                        <div class="mt-4 grid grid-cols-3 gap-3 text-sm">
                             <div>
                                 <p class="text-gray-400">动量分值</p>
                                 <p class="mt-1 text-lg font-semibold text-red-700">${sector.momentum_score.toFixed(2)}</p>
@@ -826,13 +817,9 @@
                                 <p class="mt-1 text-lg font-semibold text-gray-900">${formatPercent(sector.avg_return_20d, 1)}</p>
                             </div>
                         </div>
-                        <div class="mt-5 rounded-2xl bg-gray-50 px-4 py-3 text-sm text-gray-600 leading-7">
-                            <p>${stability?.note || '今天进入主线观察区。'}</p>
-                            <p class="mt-1">${rankText}，当前上榜 ${sector.listed_count} / ${sector.total_count} 只。</p>
-                        </div>
-                        <div class="mt-3 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700">确认 ${sectorAllCount} 只</span>
-                            <span class="rounded-full bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700">主线确认 ${sectorPreferredCount} 只</span>
+                        <div class="mt-4 flex items-center justify-between text-xs text-gray-500">
+                            <span>上榜 ${sector.listed_count} / ${sector.total_count}</span>
+                            <span class="text-red-700">确认 ${sectorPreferredCount || sectorAllCount} 只</span>
                         </div>
                     </article>
                 `;
@@ -846,7 +833,7 @@
                 list.innerHTML = '<p class="text-sm text-gray-500">暂无确认名单。</p>';
                 return;
             }
-            list.innerHTML = opportunities.slice(0, 12).map((stock, index) => {
+            list.innerHTML = opportunities.slice(0, 8).map((stock, index) => {
                 const change = Number(stock.change_pct || stock.change || 0);
                 const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || 1);
                 const amountYi = getAmountYi(stock);
@@ -980,9 +967,9 @@
                 return `${DATA_BASE}/api/stock_industry.json?_=${Date.now()}`;
             }
             if (isGitHubPages) {
-                return `${DATA_BASE}/backend/data/stock_industry.json`;
+                return `${DATA_BASE}/stock_industry.json`;
             }
-            return `./backend/data/stock_industry.json`;
+            return `./data/stock_industry.json`;
         }
 
         async function loadStockIndustry() {

@@ -110,6 +110,7 @@
             transition: width 0.3s ease;
         }
     </style>
+    <link rel="stylesheet" href="app.css">
 </head>
 <body class="bg-gray-50 min-h-screen">
     <!-- 导航栏 -->
@@ -207,47 +208,24 @@
         <!-- 数据内容 -->
         <div id="content" class="hidden">
             <!-- 市场统计卡片 -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <div class="hint-wrap">
-                        <p class="text-xs font-medium text-gray-500 uppercase">环境状态</p>
-                        <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">这是趋势环境总开关。只回答现在能不能积极看趋势，不代替板块逻辑和买点判断。</div>
-                    </div>
+            <div class="focus-panel grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 p-5 mb-6">
+                <div class="py-3 sm:py-0 sm:px-4 sm:first:pl-0">
+                    <p class="focus-label">环境</p>
                     <p id="marketStatus" class="text-lg font-bold text-yellow-600 mt-1">-</p>
                     <p id="marketStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
-                    <div class="trend-score-bar mt-3"><span id="strengthBar" class="bg-red-600" style="width: 0%"></span></div>
-                    <p class="text-xs text-gray-400 mt-2">环境分 <span id="strengthScore">-</span>/100</p>
+                    <span id="strengthScore" class="hidden">-</span><span id="strengthBar" class="hidden"></span>
                 </div>
-                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <div class="hint-wrap">
-                        <p class="text-xs font-medium text-gray-500 uppercase">指数确认</p>
-                        <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">看上证指数、沪深300、创业板指的站位和趋势确认。主要参考收盘是否站上 MA20、MA60，MA20 是否在 MA60 上方，以及 20 日趋势是否为正。</div>
-                    </div>
-                    <p id="indexStatus" class="text-lg font-bold text-gray-700 mt-1">-</p>
-                    <p id="indexStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
-                    <div class="trend-score-bar mt-3"><span id="indexScoreBar" class="bg-slate-700" style="width: 0%"></span></div>
-                    <p class="text-xs text-gray-400 mt-2">指数分 <span id="indexScore">-</span>/100</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <div class="hint-wrap">
-                        <p class="text-xs font-medium text-gray-500 uppercase">创250日新高家数</p>
-                        <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">今天收盘价站上过去250个交易日最高价的股票数量。占比的分母只用“可计算 250 日窗口”的股票，不把历史不够长的新股混进去。</div>
-                    </div>
+                <div class="py-3 sm:py-0 sm:px-4">
+                    <p class="focus-label">250日新高</p>
                     <p id="todayNewHigh" class="text-2xl font-bold text-stock-up mt-1">-</p>
                     <p id="newHighRatio" class="text-xs text-gray-400 mt-1">-</p>
                 </div>
-                <div class="bg-white rounded-xl shadow-card p-4 border border-gray-100">
-                    <div class="hint-wrap">
-                        <p class="text-xs font-medium text-gray-500 uppercase">最近5日平均新高家数</p>
-                        <button class="hint-icon" type="button">?</button>
-                        <div class="hint-tip">用来判断今天是升温还是降温，避免只看单日波动。今天明显高于5日均值，才算扩散在加速。</div>
-                    </div>
+                <div class="py-3 sm:py-0 sm:px-4">
+                    <p class="focus-label">5日均值</p>
                     <p id="avg5Days" class="text-2xl font-bold text-gray-700 mt-1">-</p>
                     <p id="avg5DaysChange" class="text-xs text-stock-up mt-1">-</p>
                 </div>
+                <div class="hidden" aria-hidden="true"><span id="indexStatus"></span><span id="indexStatusDesc"></span><span id="indexScoreBar"></span><span id="indexScore"></span></div>
             </div>
 
             <!-- 板块分布 -->
@@ -255,10 +233,10 @@
                 <div class="bg-white rounded-xl shadow-card border border-gray-100">
                     <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900">新高板块分布</h3>
-                            <p class="text-xs text-gray-500 mt-1">💡 点击任意板块查看该板块内创出新高的个股</p>
+                            <h3 class="text-lg font-semibold text-gray-900">新高集中方向</h3>
+                            <p class="text-xs text-gray-500 mt-1">默认展示前6个，点击查看个股</p>
                         </div>
-                        <span class="text-xs text-gray-400">按新高优先级排序</span>
+                        <button id="toggleSectors" onclick="toggleSectorList()" class="quiet-button px-3 py-1.5 text-xs">展开全部</button>
                     </div>
                     <div class="p-6" id="sectorList">
                         <!-- 动态填充 -->
@@ -312,17 +290,17 @@
             </div>
 
             <!-- 说明 -->
-            <div class="mt-6 bg-blue-50 rounded-lg p-4 text-sm text-blue-800">
-                <p class="font-medium mb-2"><strong>一年新高说明：</strong></p>
+            <details class="data-note mt-6 py-4 text-sm">
+                <summary>查看计算口径与免责声明</summary>
                 <ul class="space-y-1 list-disc list-inside">
                     <li><strong>一年新高</strong>：个股收盘价突破过去250个交易日的最高价</li>
                     <li><strong>新高占比</strong>：分母使用“可计算250日窗口”的股票数，不直接拿全市场总数做除数</li>
                     <li><strong>涨跌幅</strong>：当日股价涨跌百分比，反映突破强度</li>
                     <li><strong>连新高天数</strong>：连续创出新高的交易日数</li>
                     <li><strong>这页只负责验证</strong>：它回答哪些票已经被市场确认，不回答逻辑和买点</li>
-                    <li class="text-blue-600">💡 <strong>点击板块分布</strong>可查看该板块内创出新高的所有个股</li>
+                    <li>分类来源：东方财富行业板块；仅供参考，不构成投资建议</li>
                 </ul>        
-            </div>
+            </details>
         </div>
     </main>
 
@@ -422,6 +400,8 @@
         const pageParams = new URLSearchParams(window.location.search);
         let selectedSectorName = pageParams.get('sector') || '';
         let requestedDate = pageParams.get('date') || '';
+        let showAllSectors = false;
+        let currentSectors = [];
 
         // 颜色配置
         const colors = [
@@ -820,7 +800,8 @@
             updateSelectedSectorBar();
             
             // 渲染板块分布
-            renderSectors(data.sectors || [], newHighCount);
+            currentSectors = data.sectors || [];
+            renderSectors(currentSectors, newHighCount);
             
             // 渲染个股列表
             renderStocks(allStocks);
@@ -837,12 +818,15 @@
             
             const sortedSectors = [...sectors].sort((a, b) => (b.new_high_count || b.stock_count || 0) - (a.new_high_count || a.stock_count || 0));
             const maxScore = sortedSectors[0]?.new_high_count || sortedSectors[0]?.stock_count || 1;
+            const visibleSectors = showAllSectors ? sortedSectors : sortedSectors.slice(0, 6);
             
             // 显示所有板块，不限于前8个
-            container.innerHTML = sortedSectors.map((sector, index) => {
+            container.innerHTML = visibleSectors.map((sector, index) => {
                 const count = sector.new_high_count || sector.stock_count || 0;
                 const score = sector.sector_confirmation_score || sector.sector_score || sector.strength_score || Math.round((count / maxScore) * 100);
-                const color = colors[index % colors.length];
+                const color = index === 0
+                    ? colors[0]
+                    : { bg: 'bg-gray-400', light: 'bg-gray-100', text: 'text-gray-600' };
                 const width = Math.max(10, (score / maxScore) * 100);
                 const reason = '按新高数量排序';
                 const badges = [];
@@ -878,6 +862,12 @@
                     </div>
                 `;
             }).join('');
+        }
+
+        function toggleSectorList() {
+            showAllSectors = !showAllSectors;
+            document.getElementById('toggleSectors').textContent = showAllSectors ? '收起' : '展开全部';
+            renderSectors(currentSectors, currentData?.market_stats?.new_high_count || allStocks.length || 0);
         }
 
         // 渲染个股列表

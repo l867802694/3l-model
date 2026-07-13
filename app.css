@@ -1,0 +1,101 @@
+:root {
+    --canvas: #f6f6f3;
+    --panel: #ffffff;
+    --ink: #18181b;
+    --muted: #71717a;
+    --line: #e4e4e7;
+    --accent: #c81e1e;
+    --accent-soft: #fef2f2;
+}
+
+html { background: var(--canvas); }
+body {
+    background: var(--canvas) !important;
+    color: var(--ink);
+    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    letter-spacing: 0;
+}
+
+nav { box-shadow: none !important; }
+main { padding-top: 1.5rem !important; }
+
+.focus-panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+}
+
+.focus-label {
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.focus-value {
+    margin-top: 0.4rem;
+    color: var(--ink);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.quiet-button {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: #fff;
+    color: #52525b;
+}
+
+.quiet-button[aria-pressed="true"],
+.quiet-button.is-active {
+    border-color: #fecaca;
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+.data-note {
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+}
+
+.data-note summary {
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    list-style: none;
+}
+
+.data-note summary::-webkit-details-marker { display: none; }
+
+table tbody tr { transition: background-color 120ms ease; }
+.overflow-x-auto > table { min-width: 760px; }
+
+.signal-card {
+    background: #fff !important;
+    color: var(--ink) !important;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+.signal-card [class*="text-white"] { color: #71717a !important; }
+.signal-card h2 { color: var(--ink) !important; }
+.signal-card [class*="bg-white/"] { background: #f4f4f5 !important; }
+.signal-card .mini-bar { background: #e4e4e7 !important; }
+.shell { border-radius: 8px !important; box-shadow: none !important; backdrop-filter: none !important; }
+
+@media (max-width: 640px) {
+    main { padding-top: 1rem !important; }
+    nav .text-xl { font-size: 1rem !important; }
+    nav .h-16 { gap: 0.25rem; }
+    nav a, nav button {
+        padding: 0.4rem 0.45rem !important;
+        font-size: 0.75rem !important;
+        white-space: nowrap;
+    }
+    nav .gap-3 { gap: 0.4rem !important; }
+    nav .h-10.w-10 { width: 2rem !important; height: 2rem !important; }
+    .focus-value { font-size: 1.1rem; }
+    th, td { padding-left: 0.8rem !important; padding-right: 0.8rem !important; }
+}

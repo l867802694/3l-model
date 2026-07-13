@@ -207,25 +207,31 @@
 
         <!-- 数据内容 -->
         <div id="content" class="hidden">
-            <!-- 市场统计卡片 -->
-            <div class="focus-panel grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 p-5 mb-6">
-                <div class="py-3 sm:py-0 sm:px-4 sm:first:pl-0">
-                    <p class="focus-label">环境</p>
-                    <p id="marketStatus" class="text-lg font-bold text-yellow-600 mt-1">-</p>
-                    <p id="marketStatusDesc" class="text-xs text-gray-400 mt-1">-</p>
-                    <span id="strengthScore" class="hidden">-</span><span id="strengthBar" class="hidden"></span>
+            <!-- 新高摘要 -->
+            <div class="focus-panel p-4 sm:p-5 mb-6">
+                <div class="grid grid-cols-2 lg:grid-cols-[repeat(4,minmax(0,1fr))_auto] gap-4 lg:items-center">
+                    <div>
+                        <p class="focus-label">今日新高</p>
+                        <p id="todayNewHigh" class="focus-value text-stock-up">-</p>
+                    </div>
+                    <div>
+                        <p class="focus-label">净新高</p>
+                        <p id="netNewHigh" class="focus-value">-</p>
+                    </div>
+                    <div>
+                        <p class="focus-label">近5日均值</p>
+                        <p id="avg5Days" class="focus-value">-</p>
+                    </div>
+                    <div>
+                        <p class="focus-label">较5日均值</p>
+                        <p id="avg5DaysChange" class="focus-value">-</p>
+                    </div>
+                    <a id="marketOverviewLink" href="index.html" class="quiet-button col-span-2 lg:col-span-1 px-3 py-2 text-xs text-center whitespace-nowrap">
+                        大盘：<span id="marketStatus">-</span> · 查看总览
+                    </a>
                 </div>
-                <div class="py-3 sm:py-0 sm:px-4">
-                    <p class="focus-label">250日新高</p>
-                    <p id="todayNewHigh" class="text-2xl font-bold text-stock-up mt-1">-</p>
-                    <p id="newHighRatio" class="text-xs text-gray-400 mt-1">-</p>
-                </div>
-                <div class="py-3 sm:py-0 sm:px-4">
-                    <p class="focus-label">5日均值</p>
-                    <p id="avg5Days" class="text-2xl font-bold text-gray-700 mt-1">-</p>
-                    <p id="avg5DaysChange" class="text-xs text-stock-up mt-1">-</p>
-                </div>
-                <div class="hidden" aria-hidden="true"><span id="indexStatus"></span><span id="indexStatusDesc"></span><span id="indexScoreBar"></span><span id="indexScore"></span></div>
+                <p id="newHighRatio" class="mt-3 pt-3 border-t border-gray-100 text-xs text-gray-400">-</p>
+                <div class="hidden" aria-hidden="true"><span id="marketStatusDesc"></span><span id="strengthScore"></span><span id="strengthBar"></span><span id="indexStatus"></span><span id="indexStatusDesc"></span><span id="indexScoreBar"></span><span id="indexScore"></span></div>
             </div>
 
             <!-- 板块分布 -->
@@ -764,12 +770,13 @@
             
             // 统计数据 - 优先使用market_stats
             const marketStats = data.market_stats || {};
+            const marketOverview = data.market_overview || {};
             const newHighCount = marketStats.new_high_count || allStocks.length || 0;
             const newLowCount = marketStats.new_low_count || 0;
             const netNewHigh = marketStats.net_new_high ?? (newHighCount - newLowCount);
             const totalUniverse = marketStats.total_universe || data.universe_size || 4500;
             const allUniverse = data.universe_size || totalUniverse;
-            const marketStatusText = getMarketPhase(marketStats) || getMarketStatus(newHighCount).status;
+            const marketStatusText = marketOverview.market_status || getMarketPhase(marketStats) || getMarketStatus(newHighCount).status;
             const avg5Days = marketStats.avg_5d || Math.round(newHighCount * 0.9);
             const strengthScore = Number(marketStats.overall_trend_score || computeDisplayedStrengthScore(marketStats));
             
@@ -783,6 +790,8 @@
             const indexSummary = marketStats.index_confirmation_summary || '指数当前没有给出明确确认。';
             
             document.getElementById('todayNewHigh').textContent = newHighCount;
+            document.getElementById('netNewHigh').textContent = `${netNewHigh >= 0 ? '+' : ''}${netNewHigh}`;
+            document.getElementById('netNewHigh').className = `focus-value ${netNewHigh >= 0 ? 'text-stock-up' : 'text-stock-down'}`;
             document.getElementById('newHighRatio').textContent = `可计算 ${totalUniverse} / 全市场 ${allUniverse} | 占比 ${ratio}% | 新低 ${newLowCount} | 净新高 ${netNewHigh}`;
             document.getElementById('indexStatus').textContent = indexStatus;
             document.getElementById('indexStatus').className = `text-lg font-bold mt-1 ${getIndexStatusColor(indexStatus)}`;
@@ -790,11 +799,12 @@
             document.getElementById('indexScore').textContent = indexScore;
             document.getElementById('indexScoreBar').style.width = `${Math.max(0, Math.min(100, indexScore))}%`;
             document.getElementById('marketStatus').textContent = marketStatusText;
-            document.getElementById('marketStatus').className = `text-lg font-bold mt-1 ${statusColor}`;
+            document.getElementById('marketStatus').className = marketOverview.market_status === '偏强' ? 'text-red-700 font-semibold' : marketOverview.market_status === '偏弱' ? 'text-gray-700 font-semibold' : 'text-amber-700 font-semibold';
             document.getElementById('marketStatusDesc').textContent = `${marketStats.market_phase_desc || statusDesc} | 指数${indexStatus}`;
             document.getElementById('avg5Days').textContent = avg5Days;
-            document.getElementById('avg5DaysChange').textContent = `${avgChange >= 0 ? '↑' : '↓'} ${Math.abs(avgChange)}%`;
-            document.getElementById('avg5DaysChange').className = `text-xs mt-1 ${avgChange >= 0 ? 'text-stock-up' : 'text-stock-down'}`;
+            document.getElementById('avg5DaysChange').textContent = `${avgChange >= 0 ? '+' : ''}${avgChange}%`;
+            document.getElementById('avg5DaysChange').className = `focus-value ${avgChange >= 0 ? 'text-stock-up' : 'text-stock-down'}`;
+            document.getElementById('marketOverviewLink').href = `index.html?date=${tradeDate}`;
             document.getElementById('strengthScore').textContent = strengthScore;
             document.getElementById('strengthBar').style.width = `${strengthScore}%`;
             updateSelectedSectorBar();

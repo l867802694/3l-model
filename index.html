@@ -230,82 +230,88 @@
         </div>
 
         <div id="content" class="hidden space-y-8">
-            <section>
-                <div class="signal-card rounded-[2rem] p-7 sm:p-8">
-                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-5">
-                        <div class="max-w-2xl">
-                            <p class="text-xs uppercase tracking-[0.35em] text-white/70 font-semibold">今日结论</p>
-                            <h2 id="headline" class="mt-4 text-3xl sm:text-4xl font-semibold leading-tight">-</h2>
-                            <p id="headlineSummary" class="mt-4 text-base text-white/84 leading-8">-</p>
+            <section class="space-y-5">
+                <div class="focus-panel p-6 sm:p-7">
+                    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
+                        <div class="max-w-3xl">
+                            <p class="focus-label">今日结论</p>
+                            <h2 id="headline" class="mt-3 text-3xl font-semibold leading-tight text-gray-950">-</h2>
+                            <p id="headlineSummary" class="mt-3 text-sm sm:text-base leading-7 text-gray-600">-</p>
                         </div>
-                        <div class="rounded-3xl bg-white/12 px-5 py-4 min-w-[220px]">
-                            <p class="text-xs uppercase tracking-[0.28em] text-white/60 font-semibold">环境状态</p>
-                            <p id="marketStatus" class="mt-3 text-2xl font-semibold">-</p>
-                            <p id="marketStatusDesc" class="mt-2 text-sm text-white/75">-</p>
-                            <div class="mt-5 h-2.5 mini-bar bg-white/20">
-                                <span id="strengthBar" style="width: 0%"></span>
-                            </div>
-                            <p class="mt-2 text-xs text-white/70">趋势环境评分 <span id="strengthScore">-</span>/100</p>
+                        <div class="flex flex-wrap lg:justify-end gap-2">
+                            <span id="marketStatus" class="status-pill bg-gray-100 text-gray-700">-</span>
+                            <span id="operationTone" class="status-pill bg-red-50 text-red-700">-</span>
                         </div>
                     </div>
-                    <div class="mt-5 flex flex-wrap gap-2">
-                        <span id="sampleUniversePill" class="status-pill bg-white/12 text-white">-</span>
-                        <span id="intersectionPill" class="status-pill bg-white/12 text-white">-</span>
+
+                    <div class="mt-6 grid grid-cols-2 lg:grid-cols-4 border-t border-gray-200">
+                        <div class="market-metric">
+                            <p class="focus-label">两市成交额</p>
+                            <p id="totalMarketAmount" class="focus-value">-</p>
+                            <p id="totalMarketAmountCompare" class="market-meta">-</p>
+                        </div>
+                        <div class="market-metric">
+                            <p class="focus-label">两市成交量</p>
+                            <p id="totalMarketVolume" class="focus-value">-</p>
+                            <p id="totalMarketVolumeCompare" class="market-meta">-</p>
+                        </div>
+                        <div class="market-metric">
+                            <p class="focus-label">涨跌家数</p>
+                            <p id="breadthCount" class="focus-value">-</p>
+                            <p id="breadthHint" class="market-meta">-</p>
+                        </div>
+                        <div class="market-metric">
+                            <p class="focus-label">250日新高 / 新低</p>
+                            <p id="newHighCount" class="focus-value">-</p>
+                            <p id="newHighRatio" class="market-meta">-</p>
+                        </div>
                     </div>
-                    <div class="hidden">
-                        <p class="text-xs uppercase tracking-[0.2em] text-white/60">一句话动作</p>
-                        <p id="actionSummary" class="mt-2 text-sm leading-7 text-white/90">-</p>
+                </div>
+
+                <div class="shell overflow-hidden">
+                    <div class="px-5 py-4 border-b border-gray-200">
+                        <h2 class="text-base font-semibold text-gray-950">指数与量能</h2>
+                        <p class="mt-1 text-xs text-gray-500">成交额、成交量同时对比上一交易日和此前5日均值</p>
                     </div>
-                    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="rounded-3xl bg-white/12 p-4">
-                            <p class="text-xs uppercase tracking-[0.2em] text-white/60">创250日新高</p>
-                            <p id="newHighCount" class="mt-2 text-3xl font-semibold">-</p>
-                            <p id="newHighRatio" class="mt-2 text-xs text-white/70">-</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm market-index-table">
+                            <thead class="bg-gray-50 text-gray-500">
+                                <tr>
+                                    <th class="px-5 py-3 text-left font-medium">指数</th>
+                                    <th class="px-5 py-3 text-right font-medium">收盘</th>
+                                    <th class="px-5 py-3 text-right font-medium">涨跌</th>
+                                    <th class="px-5 py-3 text-right font-medium">成交额</th>
+                                    <th class="px-5 py-3 text-right font-medium">成交量</th>
+                                    <th class="px-5 py-3 text-left font-medium">较昨日</th>
+                                    <th class="px-5 py-3 text-left font-medium">较5日均值</th>
+                                    <th class="px-5 py-3 text-left font-medium">近5日量能</th>
+                                </tr>
+                            </thead>
+                            <tbody id="marketIndexRows" class="divide-y divide-gray-100"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="shell p-5 sm:p-6 market-analysis">
+                    <div class="grid lg:grid-cols-[1fr_0.38fr] gap-6">
+                        <div>
+                            <p class="focus-label">大盘解读</p>
+                            <p id="marketAnalysis" class="mt-3 text-sm leading-7 text-gray-700">-</p>
                         </div>
-                        <div class="rounded-3xl bg-white/12 p-4">
-                            <p class="text-xs uppercase tracking-[0.2em] text-white/60">净新高</p>
-                            <p id="netNewHigh" class="mt-2 text-3xl font-semibold">-</p>
-                            <p id="trendDays" class="mt-2 text-xs text-white/70">-</p>
-                        </div>
-                        <div class="rounded-3xl bg-white/12 p-4">
-                            <p class="text-xs uppercase tracking-[0.2em] text-white/60">主线板块</p>
-                            <p id="mainLineCount" class="mt-2 text-3xl font-semibold">-</p>
-                            <p id="warningCount" class="mt-2 text-xs text-white/70">-</p>
-                        </div>
-                        <div class="rounded-3xl bg-white/12 p-4">
-                            <p class="text-xs uppercase tracking-[0.2em] text-white/60">确认名单</p>
-                            <p id="opportunityCount" class="mt-2 text-3xl font-semibold">-</p>
-                            <p id="opportunityHint" class="mt-2 text-xs text-white/70">-</p>
+                        <div class="lg:border-l lg:border-gray-200 lg:pl-6">
+                            <p class="focus-label">接下来观察</p>
+                            <p id="marketWatch" class="mt-3 text-sm leading-7 text-gray-700">-</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="hidden" aria-hidden="true">
-                    <div class="flex items-center justify-between gap-4">
-                        <div>
-                            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">页面定位</p>
-                            <h2 class="mt-2 text-2xl font-semibold text-gray-950">这页只做发现</h2>
-                        </div>
-                        <span id="tradeDateBadge" class="status-pill bg-gray-900 text-white">-</span>
-                    </div>
-                    <div class="mt-6 space-y-4">
-                        <div class="rounded-3xl bg-white/80 border border-white p-4">
-                            <p class="text-xs uppercase tracking-[0.2em] text-gray-400">第一步</p>
-                            <p id="step1" class="mt-2 text-sm leading-7 text-gray-700">-</p>
-                        </div>
-                        <div class="rounded-3xl bg-white/80 border border-white p-4">
-                            <p class="text-xs uppercase tracking-[0.2em] text-gray-400">第二步</p>
-                            <p id="step2" class="mt-2 text-sm leading-7 text-gray-700">-</p>
-                        </div>
-                        <div class="rounded-3xl bg-white/80 border border-white p-4">
-                            <p class="text-xs uppercase tracking-[0.2em] text-gray-400">第三步</p>
-                            <p id="step3" class="mt-2 text-sm leading-7 text-gray-700">-</p>
-                        </div>
-                    </div>
-                    <div class="mt-6 rounded-3xl bg-amber-50 border border-amber-100 p-4">
-                        <p class="text-xs uppercase tracking-[0.2em] text-amber-700 font-semibold">使用边界</p>
-                        <p id="riskHint" class="mt-2 text-sm leading-7 text-amber-900">-</p>
-                    </div>
+                    <span id="marketStatusDesc"></span><span id="strengthBar"></span><span id="strengthScore"></span>
+                    <span id="sampleUniversePill"></span><span id="intersectionPill"></span><span id="actionSummary"></span>
+                    <span id="netNewHigh"></span><span id="trendDays"></span><span id="mainLineCount"></span>
+                    <span id="warningCount"></span><span id="opportunityCount"></span><span id="opportunityHint"></span>
+                    <span id="tradeDateBadge"></span><span id="step1"></span><span id="step2"></span>
+                    <span id="step3"></span><span id="riskHint"></span>
                 </div>
             </section>
 
@@ -407,6 +413,39 @@
 
         function formatYi(valueWan) {
             return (Number(valueWan || 0) / 10000).toFixed(1);
+        }
+
+        function formatMarketAmount(value) {
+            const amount = Number(value || 0);
+            if (amount <= 0) return '-';
+            if (amount >= 1000000000000) return `${(amount / 1000000000000).toFixed(2)}万亿`;
+            return `${(amount / 100000000).toFixed(amount >= 100000000000 ? 0 : 1)}亿`;
+        }
+
+        function formatMarketVolume(value) {
+            const volume = Number(value || 0);
+            return volume > 0 ? `${(volume / 100000000).toFixed(1)}亿股` : '-';
+        }
+
+        function changeClass(value) {
+            const number = Number(value || 0);
+            if (number > 0.001) return 'change-up';
+            if (number < -0.001) return 'change-down';
+            return 'change-flat';
+        }
+
+        function compareText(yesterday, average) {
+            if (yesterday === undefined || average === undefined) return '暂无历史比较';
+            return `较昨日 ${formatPercent(yesterday, 1)} · 较5日 ${formatPercent(average, 1)}`;
+        }
+
+        function renderVolumeSpark(history = []) {
+            const amounts = history.map((item) => Number(item.amount || 0));
+            const maxAmount = Math.max(...amounts, 1);
+            return `<div class="volume-spark" title="最近5个交易日成交额">${amounts.map((amount) => {
+                const height = Math.max(15, Math.round(amount / maxAmount * 100));
+                return `<span style="height:${height}%"></span>`;
+            }).join('')}</div>`;
         }
 
         function escapeHtml(value) {
@@ -730,18 +769,24 @@
 
         function renderSignalSection(newhighPayload, momentumPayload, opportunityState) {
             const marketStats = newhighPayload.market_stats || {};
+            const marketOverview = newhighPayload.market_overview || {};
+            const totalMarket = marketOverview.total_market || {};
             const marketPhase = getMarketPhase(marketStats);
             const tone = getStatusTone(marketPhase);
             const indexStatus = marketStats.index_confirmation_status || '未确认';
             const topSector = (momentumPayload.data || [])[0];
             const opportunities = opportunityState.list || [];
-            const headlineSector = topSector ? `今天先看 ${topSector.sector_name}` : '先看环境，再找方向';
             const effectiveUniverse = marketStats.total_universe || newhighPayload.history_eligible_stocks || newhighPayload.universe_size || 0;
-            const summary = `今天是 ${marketPhase}。指数端 ${getIndexTone(indexStatus)}。当前先看 ${topSector?.sector_name || '主线方向'}，再回到新高页确认强票。`;
+            const fallbackHeadline = topSector ? `今天先看 ${topSector.sector_name}` : '先看环境，再找方向';
+            const fallbackSummary = `今天是 ${marketPhase}。指数端 ${getIndexTone(indexStatus)}。当前先看 ${topSector?.sector_name || '主线方向'}，再回到新高页确认强票。`;
+            const headline = marketOverview.headline || fallbackHeadline;
+            const summary = marketOverview.headline_summary || fallbackSummary;
 
-            document.getElementById('headline').textContent = headlineSector;
+            document.getElementById('headline').textContent = headline;
             document.getElementById('headlineSummary').textContent = summary;
-            document.getElementById('marketStatus').textContent = marketPhase;
+            document.getElementById('marketStatus').textContent = marketOverview.market_status || marketPhase;
+            document.getElementById('marketStatus').className = `status-pill ${marketOverview.market_status === '偏强' ? 'bg-red-50 text-red-700' : marketOverview.market_status === '偏弱' ? 'bg-gray-100 text-gray-700' : 'bg-amber-50 text-amber-700'}`;
+            document.getElementById('operationTone').textContent = marketOverview.operation_tone || tone.action.split('，')[0];
             document.getElementById('marketStatusDesc').textContent = `${marketStats.market_phase_desc || marketStats.market_status_desc || '-'} | ${getIndexTone(indexStatus)}`;
             document.getElementById('strengthScore').textContent = marketStats.strength_score || 0;
             document.getElementById('strengthBar').style.width = `${marketStats.strength_score || 0}%`;
@@ -750,7 +795,13 @@
             document.getElementById('actionSummary').textContent = topSector
                 ? `${marketPhase}，先看 ${topSector.sector_name}，再去新高页确认。`
                 : `${marketPhase}，先看趋势扩散，再决定要不要出手。`;
-            document.getElementById('newHighCount').textContent = marketStats.new_high_count || 0;
+            document.getElementById('totalMarketAmount').textContent = formatMarketAmount(totalMarket.amount);
+            document.getElementById('totalMarketAmountCompare').textContent = compareText(totalMarket.amount_change_pct, totalMarket.amount_vs_5d_pct);
+            document.getElementById('totalMarketVolume').textContent = formatMarketVolume(totalMarket.volume);
+            document.getElementById('totalMarketVolumeCompare').textContent = compareText(totalMarket.volume_change_pct, totalMarket.volume_vs_5d_pct);
+            document.getElementById('breadthCount').innerHTML = `<span class="change-up">${totalMarket.advance_count ?? '-'}</span> / <span class="change-down">${totalMarket.decline_count ?? '-'}</span>`;
+            document.getElementById('breadthHint').textContent = `上涨 / 下跌 · 平盘 ${totalMarket.flat_count ?? '-'}`;
+            document.getElementById('newHighCount').textContent = `${marketStats.new_high_count || 0} / ${marketStats.new_low_count || 0}`;
             document.getElementById('newHighRatio').textContent = `可计算 ${effectiveUniverse} / 全市场 ${newhighPayload.universe_size || effectiveUniverse} | 占比 ${(marketStats.new_high_ratio || 0).toFixed(2)}%`;
             document.getElementById('netNewHigh').textContent = marketStats.net_new_high ?? 0;
             document.getElementById('trendDays').textContent = `连续 ${marketStats.trend_days || 0} 天净新高为正`;
@@ -763,9 +814,34 @@
             document.getElementById('step2').textContent = `再看方向：优先跟踪动量榜前排。今天前排核心是 ${topSector?.sector_name || '暂无'}。`;
             document.getElementById('step3').textContent = '最后看确认：只看已经创出新高、且处在主线方向里的票。逻辑和买点不在这页判断。';
             document.getElementById('riskHint').textContent = '这页只做发现，不替代逻辑判断、买点判断和持仓管理。';
+            document.getElementById('marketAnalysis').textContent = marketOverview.analysis_summary || summary;
+            document.getElementById('marketWatch').textContent = marketOverview.watch_text || '关注指数、量能与市场广度能否形成同向确认。';
+            const indexRows = document.getElementById('marketIndexRows');
+            const indices = marketOverview.indices || [];
+            indexRows.innerHTML = indices.length ? indices.map((item) => `
+                <tr>
+                    <td class="px-5 py-4">
+                        <p class="font-semibold text-gray-900">${escapeHtml(item.name)}</p>
+                        <p class="mt-1 text-xs text-gray-400">${escapeHtml(item.turnover_label || '')}</p>
+                    </td>
+                    <td class="px-5 py-4 text-right font-medium text-gray-900">${Number(item.close || 0).toFixed(2)}</td>
+                    <td class="px-5 py-4 text-right font-semibold ${changeClass(item.daily_change_pct)}">${formatPercent(item.daily_change_pct, 2)}</td>
+                    <td class="px-5 py-4 text-right text-gray-700">${formatMarketAmount(item.amount)}</td>
+                    <td class="px-5 py-4 text-right text-gray-700">${formatMarketVolume(item.volume)}</td>
+                    <td class="px-5 py-4 text-xs leading-5 text-gray-600">
+                        <span class="${changeClass(item.amount_change_pct)}">额 ${formatPercent(item.amount_change_pct, 1)}</span><br>
+                        <span class="${changeClass(item.volume_change_pct)}">量 ${formatPercent(item.volume_change_pct, 1)}</span>
+                    </td>
+                    <td class="px-5 py-4 text-xs leading-5 text-gray-600">
+                        <span class="${changeClass(item.amount_vs_5d_pct)}">额 ${formatPercent(item.amount_vs_5d_pct, 1)}</span><br>
+                        <span class="${changeClass(item.volume_vs_5d_pct)}">量 ${formatPercent(item.volume_vs_5d_pct, 1)}</span>
+                    </td>
+                    <td class="px-5 py-4">${renderVolumeSpark(item.history || [])}</td>
+                </tr>
+            `).join('') : '<tr><td colspan="8" class="px-5 py-8 text-center text-gray-400">该日期暂未生成完整量价数据</td></tr>';
             document.getElementById('pageMeta').textContent = `数据日期 ${formatDate(newhighPayload.trade_date || currentDate)} | 东方财富行业板块 | 更新 ${formatPageUpdatedAt()}`;
             currentSignalSnapshot = {
-                headline: headlineSector,
+                headline,
                 headlineSummary: summary,
                 opportunityHint: opportunities.length ? `${opportunities[0].sector_name} 方向优先看 | 主线确认 ${opportunityState.preferredCount || opportunities.length} 只` : '暂无确认名单',
                 step2: `再看板块：优先跟踪动量榜前排。今天前排核心是 ${topSector?.sector_name || '暂无'}。`,

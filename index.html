@@ -661,7 +661,7 @@
                     label = '趋势升温';
                     note = `较5日前提升 ${rankChange} 名`;
                 } else if (value.warningDays >= 2) {
-                    label = '高热主线';
+                    label = '高潮警惕';
                     note = `最近5日有 ${value.warningDays} 天处于预警区`;
                 } else if (value.mainlineDays >= 3) {
                     label = '持续主线';
@@ -807,7 +807,7 @@
             document.getElementById('netNewHigh').textContent = marketStats.net_new_high ?? 0;
             document.getElementById('trendDays').textContent = `连续 ${marketStats.trend_days || 0} 天净新高为正`;
             document.getElementById('mainLineCount').textContent = (momentumPayload.data || []).filter((item) => item.is_main_line).length;
-            document.getElementById('warningCount').textContent = `过热板块 ${(momentumPayload.data || []).filter((item) => item.is_warning).length} 个`;
+            document.getElementById('warningCount').textContent = `高潮警惕 ${(momentumPayload.data || []).filter((item) => item.is_warning).length} 个`;
             document.getElementById('opportunityCount').textContent = opportunities.length;
             document.getElementById('opportunityHint').textContent = opportunities.length ? `${opportunities[0].sector_name} 方向优先看 | 主线确认 ${opportunityState.preferredCount || opportunities.length} 只` : '暂无确认名单';
             document.getElementById('tradeDateBadge').textContent = formatDate(newhighPayload.trade_date || currentDate);
@@ -878,7 +878,7 @@
                                 <p class="text-xs uppercase tracking-[0.2em] text-gray-400">No.${sector.rank}</p>
                                 <h3 class="mt-2 text-xl font-semibold text-gray-950">${sectorName}</h3>
                             </div>
-                            <span class="status-pill ${toneClass}">${stability?.label || '今日活跃'}</span>
+                            <span class="status-pill ${toneClass}">${sector.momentum_state_label || stability?.label || '今日活跃'}</span>
                         </div>
                         <div class="mt-4 grid grid-cols-3 gap-3 text-sm">
                             <div>
@@ -890,7 +890,7 @@
                                 <p class="mt-1 text-lg font-semibold text-gray-900">${sector.listed_ratio}%</p>
                             </div>
                             <div>
-                                <p class="text-gray-400">平均涨幅</p>
+                                <p class="text-gray-400">强股20日均涨幅</p>
                                 <p class="mt-1 text-lg font-semibold text-gray-900">${formatPercent(sector.avg_return_20d, 1)}</p>
                             </div>
                         </div>

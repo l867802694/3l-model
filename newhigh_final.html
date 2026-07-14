@@ -665,6 +665,7 @@
                                 sector_rank: momentum?.rank || null,
                                 sector_is_main_line: Boolean(momentum?.is_main_line),
                                 sector_is_warning: Boolean(momentum?.is_warning),
+                                sector_momentum_state_label: momentum?.momentum_state_label || null,
                                 sector_momentum_score: momentum?.momentum_score || null
                             });
                         });
@@ -842,8 +843,8 @@
                 const reason = '按新高数量排序';
                 const badges = [];
                 const isSelected = selectedSectorName && (sector.sector_name || sector.name) === selectedSectorName;
-                if (sector.momentum_warning) badges.push('动量预警主线');
-                else if (sector.momentum_mainline) badges.push('动量主线');
+                if (sector.momentum_warning) badges.push('高潮警惕');
+                else if (sector.momentum_mainline) badges.push(sector.momentum_state_label || '动量主线');
                 if ((sector.avg_consecutive_days || 0) >= 2) badges.push(`均值${sector.avg_consecutive_days}天`);
                 
                 return `

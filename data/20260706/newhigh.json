@@ -1,12 +1,12 @@
 {
   "trade_date": "20260706",
   "data_source": "AkShare (免费数据)",
-  "classification": "东方财富行业",
+  "classification": "东方财富行业板块",
   "market_strength": 0.41,
-  "universe_size": 4993,
+  "universe_size": 4990,
   "history_window_requirement": 251,
-  "history_eligible_stocks": 4906,
-  "history_eligible_ratio": 98.26,
+  "history_eligible_stocks": 4907,
+  "history_eligible_ratio": 98.34,
   "history_window_complete": true,
   "raw_new_high_count": 20,
   "candidate_stocks": 19,
@@ -25,17 +25,17 @@
     "avg_5d_change_pct": -75.4,
     "trend_days": 0,
     "positive_days_5d": 4,
-    "total_universe": 4906,
+    "total_universe": 4907,
     "pulse_signal": false,
     "market_breadth_state": "趋势谨慎",
     "market_observation_state": "趋势谨慎",
-    "market_evidence_summary": "广度状态：趋势谨慎；新高 20 / 新低 80；净新高 -60；连续扩散 0 天；深度状态：深度可做；指数确认：弱确认。",
-    "market_observation_summary": "广度状态：趋势谨慎；新高 20 / 新低 80；净新高 -60；连续扩散 0 天；深度状态：深度可做；指数确认：弱确认。",
+    "market_evidence_summary": "广度状态：趋势谨慎；新高 20 / 新低 80；净新高 -60；连续扩散 0 天；深度状态：深度可做；指数确认：确认。",
+    "market_observation_summary": "广度状态：趋势谨慎；新高 20 / 新低 80；净新高 -60；连续扩散 0 天；深度状态：深度可做；指数确认：确认。",
     "market_status": "趋势谨慎",
     "market_phase": "趋势谨慎",
-    "market_phase_desc": "广度状态：趋势谨慎；新高 20 / 新低 80；净新高 -60；连续扩散 0 天；深度状态：深度可做；指数确认：弱确认。",
+    "market_phase_desc": "广度状态：趋势谨慎；新高 20 / 新低 80；净新高 -60；连续扩散 0 天；深度状态：深度可做；指数确认：确认。",
     "market_signal": "趋势谨慎",
-    "market_status_desc": "广度状态：趋势谨慎；新高 20 / 新低 80；净新高 -60；连续扩散 0 天；深度状态：深度可做；指数确认：弱确认。",
+    "market_status_desc": "广度状态：趋势谨慎；新高 20 / 新低 80；净新高 -60；连续扩散 0 天；深度状态：深度可做；指数确认：确认。",
     "strength_score": 24,
     "breadth_strength_score": 15,
     "breadth_status": "趋势谨慎",
@@ -46,10 +46,10 @@
     "overall_trend_score": 24,
     "overall_evidence_state": "趋势谨慎",
     "overall_trend_status": "趋势谨慎",
-    "index_confirmation_score": 56.7,
-    "index_confirmation_state": "弱确认",
-    "index_confirmation_status": "弱确认",
-    "index_confirmation_summary": "指数有修复但还不够顺，广度信号需要谨慎对待。",
+    "index_confirmation_score": 67.5,
+    "index_confirmation_state": "确认",
+    "index_confirmation_status": "确认",
+    "index_confirmation_summary": "指数整体站位偏正，能对广度改善提供一定确认。",
     "index_confirmation_details": [
       {
         "code": "sh.000001",
@@ -95,13 +95,225 @@
         "above_ma60": true,
         "ma20_above_ma60": true,
         "ma20_rising": true
+      },
+      {
+        "code": "sh.000688",
+        "name": "科创50",
+        "close": 1996.1,
+        "daily_change_pct": 1.04,
+        "return_20d": 19.65,
+        "ma20": 1894.79,
+        "ma60": 1706.79,
+        "score": 100,
+        "status": "强确认",
+        "above_ma20": true,
+        "above_ma60": true,
+        "ma20_above_ma60": true,
+        "ma20_rising": true
       }
     ],
     "status_color_class": "text-gray-500"
   },
+  "market_overview": {
+    "trade_date": "20260706",
+    "market_status": "震荡",
+    "operation_tone": "谨慎观察",
+    "price_volume_status": "量能平稳震荡",
+    "style_status": "风格均衡",
+    "headline": "量能平稳震荡，主板与成长指数差异不大",
+    "headline_summary": "上证指数-0.06%，两市成交额较昨日-3.05%；上涨 1750 家，下跌 3143 家。",
+    "analysis_summary": "上证指数-0.06%，沪深两市成交额较昨日-3.05%，成交量较昨日-2.65%，属于量能平稳震荡。主板与成长指数差异不大，暂未形成明显风格偏向。 当前动量最强方向是半导体。指数与个股方向基本一致。全市场上涨 1750 家、下跌 3143 家；250日新高 20 家、新低 80 家。",
+    "watch_text": "关注三大指数能否形成同向、成交额是否放大，以及新高新低能否转强。",
+    "total_market": {
+      "amount": 3053040833218.0,
+      "volume": 130761900588.0,
+      "amount_change_pct": -3.05,
+      "volume_change_pct": -2.65,
+      "amount_vs_5d_pct": -9.76,
+      "volume_vs_5d_pct": -7.52,
+      "advance_count": 1750,
+      "decline_count": 3143,
+      "flat_count": 91,
+      "history": [
+        {
+          "trade_date": "20260630",
+          "amount": 3246814654397.0,
+          "volume": 131052902935.0,
+          "stock_count": 4977
+        },
+        {
+          "trade_date": "20260701",
+          "amount": 3627659726935.0,
+          "volume": 151047052450.0,
+          "stock_count": 4979
+        },
+        {
+          "trade_date": "20260702",
+          "amount": 3401160238805.0,
+          "volume": 147079427874.0,
+          "stock_count": 4983
+        },
+        {
+          "trade_date": "20260703",
+          "amount": 3148990141292.0,
+          "volume": 134325497836.0,
+          "stock_count": 4983
+        },
+        {
+          "trade_date": "20260706",
+          "amount": 3053040833218.0,
+          "volume": 130761900588.0,
+          "stock_count": 4984
+        }
+      ]
+    },
+    "indices": [
+      {
+        "code": "sh.000001",
+        "name": "上证指数",
+        "turnover_label": "沪市成交",
+        "data_available": true,
+        "data_date": "20260706",
+        "close": 4041.24,
+        "daily_change_pct": -0.06,
+        "amount": 1417978897285.0,
+        "volume": 57459913356.0,
+        "amount_change_pct": -2.29,
+        "volume_change_pct": -2.53,
+        "amount_vs_5d_pct": -9.89,
+        "volume_vs_5d_pct": -8.27,
+        "history": [
+          {
+            "trade_date": "20260630",
+            "amount": 1516265574885.0,
+            "volume": 58782588053.0,
+            "stock_count": 2216
+          },
+          {
+            "trade_date": "20260701",
+            "amount": 1683612194500.0,
+            "volume": 66110954197.0,
+            "stock_count": 2220
+          },
+          {
+            "trade_date": "20260702",
+            "amount": 1564460001000.0,
+            "volume": 64654953708.0,
+            "stock_count": 2222
+          },
+          {
+            "trade_date": "20260703",
+            "amount": 1451144873265.0,
+            "volume": 58949478121.0,
+            "stock_count": 2222
+          },
+          {
+            "trade_date": "20260706",
+            "amount": 1417978897285.0,
+            "volume": 57459913356.0,
+            "stock_count": 2222
+          }
+        ]
+      },
+      {
+        "code": "sz.399006",
+        "name": "创业板指",
+        "turnover_label": "创业板成交",
+        "data_available": true,
+        "data_date": "20260706",
+        "close": 3948.86,
+        "daily_change_pct": -1.77,
+        "amount": 764954313849.0,
+        "volume": 21814760868.0,
+        "amount_change_pct": -5.02,
+        "volume_change_pct": -5.56,
+        "amount_vs_5d_pct": -14.26,
+        "volume_vs_5d_pct": -10.8,
+        "history": [
+          {
+            "trade_date": "20260630",
+            "amount": 861037215216.0,
+            "volume": 22520896051.0,
+            "stock_count": 1350
+          },
+          {
+            "trade_date": "20260701",
+            "amount": 984110699584.0,
+            "volume": 26837461623.0,
+            "stock_count": 1350
+          },
+          {
+            "trade_date": "20260702",
+            "amount": 892286786753.0,
+            "volume": 25204924823.0,
+            "stock_count": 1350
+          },
+          {
+            "trade_date": "20260703",
+            "amount": 805356100604.0,
+            "volume": 23099695417.0,
+            "stock_count": 1350
+          },
+          {
+            "trade_date": "20260706",
+            "amount": 764954313849.0,
+            "volume": 21814760868.0,
+            "stock_count": 1350
+          }
+        ]
+      },
+      {
+        "code": "sh.000688",
+        "name": "科创50",
+        "turnover_label": "科创板成交",
+        "data_available": true,
+        "data_date": "20260706",
+        "close": 1996.1,
+        "daily_change_pct": 1.04,
+        "amount": 501346353499.0,
+        "volume": 6724681153.0,
+        "amount_change_pct": -0.59,
+        "volume_change_pct": -0.85,
+        "amount_vs_5d_pct": -12.82,
+        "volume_vs_5d_pct": -8.59,
+        "history": [
+          {
+            "trade_date": "20260630",
+            "amount": 579607633554.0,
+            "volume": 7163741116.0,
+            "stock_count": 594
+          },
+          {
+            "trade_date": "20260701",
+            "amount": 619694067211.0,
+            "volume": 7840460804.0,
+            "stock_count": 595
+          },
+          {
+            "trade_date": "20260702",
+            "amount": 574313503085.0,
+            "volume": 7383521756.0,
+            "stock_count": 595
+          },
+          {
+            "trade_date": "20260703",
+            "amount": 504320207478.0,
+            "volume": 6782006149.0,
+            "stock_count": 595
+          },
+          {
+            "trade_date": "20260706",
+            "amount": 501346353499.0,
+            "volume": 6724681153.0,
+            "stock_count": 595
+          }
+        ]
+      }
+    ]
+  },
   "sectors": [
     {
-      "sector_name": "电子化学品Ⅱ",
+      "sector_name": "电子化学品",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -113,6 +325,7 @@
       "momentum_rank": 2,
       "momentum_mainline": true,
       "momentum_warning": true,
+      "momentum_state_label": "高潮警惕",
       "stocks": [
         {
           "code": "300684",
@@ -131,13 +344,13 @@
           "amount": 335737.49,
           "turnover_ratio": 22.76,
           "capacity_proxy_score": 8.37,
-          "sector": "电子化学品Ⅱ",
-          "industry": "电子化学品Ⅱ"
+          "sector": "电子化学品",
+          "industry": "电子化学品"
         }
       ]
     },
     {
-      "sector_name": "其他电子Ⅱ",
+      "sector_name": "其他电子",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -146,9 +359,10 @@
       "avg_capacity_proxy_score": 7.68,
       "sector_confirmation_score": 40.84,
       "sector_score": 40.84,
-      "momentum_rank": 17,
-      "momentum_mainline": true,
+      "momentum_rank": 16,
+      "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "观察",
       "stocks": [
         {
           "code": "688103",
@@ -167,13 +381,13 @@
           "amount": 75100.38,
           "turnover_ratio": 9.51,
           "capacity_proxy_score": 7.68,
-          "sector": "其他电子Ⅱ",
-          "industry": "其他电子Ⅱ"
+          "sector": "其他电子",
+          "industry": "其他电子"
         }
       ]
     },
     {
-      "sector_name": "军工电子Ⅱ",
+      "sector_name": "军工电子",
       "new_high_count": 2,
       "stock_count": 2,
       "avg_consecutive_days": 1.0,
@@ -182,9 +396,10 @@
       "avg_capacity_proxy_score": 9.62,
       "sector_confirmation_score": 35.76,
       "sector_score": 35.76,
-      "momentum_rank": 14,
-      "momentum_mainline": true,
+      "momentum_rank": 12,
+      "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "主线退潮",
       "stocks": [
         {
           "code": "688629",
@@ -203,8 +418,8 @@
           "amount": 667879.31,
           "turnover_ratio": 7.34,
           "capacity_proxy_score": 9.81,
-          "sector": "军工电子Ⅱ",
-          "industry": "军工电子Ⅱ"
+          "sector": "军工电子",
+          "industry": "军工电子"
         },
         {
           "code": "002025",
@@ -223,12 +438,8 @@
           "amount": 252243.21,
           "turnover_ratio": 6.35,
           "capacity_proxy_score": 9.42,
-          "sector": "军工电子Ⅱ",
-          "industry": "军工电子Ⅱ",
-          "dfmc_industry": "国防军工-军工电子Ⅱ-军工电子Ⅲ",
-          "dfmc_industry_l2": "军工电子Ⅱ",
-          "fund_ratio": 0.0,
-          "is_250d_high": false
+          "sector": "军工电子",
+          "industry": "军工电子"
         }
       ]
     },
@@ -244,7 +455,8 @@
       "sector_score": 32.74,
       "momentum_rank": 8,
       "momentum_mainline": true,
-      "momentum_warning": true,
+      "momentum_warning": false,
+      "momentum_state_label": "主线确认",
       "stocks": [
         {
           "code": "603823",
@@ -289,7 +501,7 @@
       ]
     },
     {
-      "sector_name": "家电零部件Ⅱ",
+      "sector_name": "家电零部件",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -298,9 +510,10 @@
       "avg_capacity_proxy_score": 7.01,
       "sector_confirmation_score": 32.52,
       "sector_score": 32.52,
-      "momentum_rank": 26,
+      "momentum_rank": 28,
       "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "观察",
       "stocks": [
         {
           "code": "002860",
@@ -319,8 +532,8 @@
           "amount": 72418.86,
           "turnover_ratio": 12.37,
           "capacity_proxy_score": 7.01,
-          "sector": "家电零部件Ⅱ",
-          "industry": "家电零部件Ⅱ"
+          "sector": "家电零部件",
+          "industry": "家电零部件"
         }
       ]
     },
@@ -334,9 +547,10 @@
       "avg_capacity_proxy_score": 8.43,
       "sector_confirmation_score": 32.27,
       "sector_score": 32.27,
-      "momentum_rank": 35,
+      "momentum_rank": 34,
       "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "观察",
       "stocks": [
         {
           "code": "603211",
@@ -390,9 +604,10 @@
       "avg_capacity_proxy_score": 8.75,
       "sector_confirmation_score": 31.69,
       "sector_score": 31.69,
-      "momentum_rank": 21,
+      "momentum_rank": 20,
       "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "主线退潮",
       "stocks": [
         {
           "code": "002747",
@@ -449,6 +664,7 @@
       "momentum_rank": 1,
       "momentum_mainline": true,
       "momentum_warning": true,
+      "momentum_state_label": "高潮警惕",
       "stocks": [
         {
           "code": "688141",
@@ -502,9 +718,10 @@
       "avg_capacity_proxy_score": 7.47,
       "sector_confirmation_score": 29.38,
       "sector_score": 29.38,
-      "momentum_rank": 16,
-      "momentum_mainline": true,
+      "momentum_rank": 18,
+      "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "观察",
       "stocks": [
         {
           "code": "603032",
@@ -529,7 +746,7 @@
       ]
     },
     {
-      "sector_name": "中药Ⅱ",
+      "sector_name": "中药",
       "new_high_count": 1,
       "stock_count": 1,
       "avg_consecutive_days": 1.0,
@@ -538,9 +755,10 @@
       "avg_capacity_proxy_score": 9.07,
       "sector_confirmation_score": 27.91,
       "sector_score": 27.91,
-      "momentum_rank": 59,
+      "momentum_rank": 55,
       "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "观察",
       "stocks": [
         {
           "code": "002317",
@@ -559,8 +777,8 @@
           "amount": 197131.31,
           "turnover_ratio": 9.02,
           "capacity_proxy_score": 9.07,
-          "sector": "中药Ⅱ",
-          "industry": "中药Ⅱ"
+          "sector": "中药",
+          "industry": "中药"
         }
       ]
     },
@@ -574,9 +792,10 @@
       "avg_capacity_proxy_score": 7.61,
       "sector_confirmation_score": 27.43,
       "sector_score": 27.43,
-      "momentum_rank": 66,
+      "momentum_rank": 62,
       "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "观察",
       "stocks": [
         {
           "code": "002452",
@@ -610,9 +829,10 @@
       "avg_capacity_proxy_score": 6.49,
       "sector_confirmation_score": 26.71,
       "sector_score": 26.71,
-      "momentum_rank": 27,
+      "momentum_rank": 29,
       "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "观察",
       "stocks": [
         {
           "code": "603725",
@@ -643,12 +863,13 @@
       "avg_consecutive_days": 2.0,
       "avg_change_pct": 1.83,
       "avg_break_pct": 1.83,
-      "avg_capacity_proxy_score": 6.44,
-      "sector_confirmation_score": 20.72,
-      "sector_score": 20.72,
+      "avg_capacity_proxy_score": 6.43,
+      "sector_confirmation_score": 20.7,
+      "sector_score": 20.7,
       "momentum_rank": 10,
-      "momentum_mainline": true,
-      "momentum_warning": true,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "momentum_state_label": "主线退潮",
       "stocks": [
         {
           "code": "603580",
@@ -666,7 +887,7 @@
           "circ_mv": 42.41,
           "amount": 43617.62,
           "turnover_ratio": 10.29,
-          "capacity_proxy_score": 6.44,
+          "capacity_proxy_score": 6.43,
           "sector": "塑料",
           "industry": "塑料"
         }
@@ -679,12 +900,13 @@
       "avg_consecutive_days": 1.0,
       "avg_change_pct": 2.81,
       "avg_break_pct": 0.28,
-      "avg_capacity_proxy_score": 5.59,
-      "sector_confirmation_score": 16.42,
-      "sector_score": 16.42,
+      "avg_capacity_proxy_score": 5.58,
+      "sector_confirmation_score": 16.41,
+      "sector_score": 16.41,
       "momentum_rank": null,
       "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": null,
       "stocks": [
         {
           "code": "000429",
@@ -702,7 +924,7 @@
           "circ_mv": 184.93,
           "amount": 13242.14,
           "turnover_ratio": 0.72,
-          "capacity_proxy_score": 5.59,
+          "capacity_proxy_score": 5.58,
           "sector": "铁路公路",
           "industry": "铁路公路"
         }

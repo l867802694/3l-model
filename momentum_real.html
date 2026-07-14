@@ -219,7 +219,7 @@
                                 <th class="px-6 py-3 font-medium">动量分值</th>
                                 <th class="px-6 py-3 font-medium">较前一日</th>
                                 <th class="px-6 py-3 font-medium">强股覆盖</th>
-                                <th class="px-6 py-3 font-medium">平均涨幅</th>
+                                <th class="px-6 py-3 font-medium">强股20日均涨幅</th>
                                 <th class="px-6 py-3 font-medium">状态</th>
                             </tr>
                         </thead>
@@ -234,10 +234,11 @@
             <details class="data-note mt-6 py-4 text-sm">
                 <summary>查看计算口径与免责声明</summary>
                 <ul class="space-y-1 list-disc list-inside">
-                    <li><span class="font-medium text-stock-main">主线</span>：动量分值 ≥ 1.2 的板块</li>
-                    <li><span class="font-medium text-stock-alert">过热</span>：动量分值 ≥ 2.0 的板块，说明方向很热，不代表就有买点</li>
+                    <li><span class="font-medium text-stock-main">主线</span>：动量分值 ≥ 2.4 的板块</li>
+                    <li><span class="font-medium text-stock-alert">高潮警惕</span>：动量分值 ≥ 5.3，只提示拥挤风险，不代表买点</li>
                     <li><strong>强势股池</strong>：按全市场20日涨幅取前15%</li>
-                    <li><strong>动量分值</strong>：只回答方向强弱，不回答逻辑和买点</li>
+                    <li><strong>动量分值</strong>：板块强股数量 × 平滑强度系数，只回答方向强弱</li>
+                    <li><strong>容量过滤</strong>：只过滤板块内候选股票，不影响板块方向评分</li>
                     <li>分类来源：东方财富行业板块</li>
                     <li class="text-xs mt-2">更新时间: <span id="updateTime">-</span> | 仅供参考，不构成投资建议</li>
                 </ul>
@@ -276,7 +277,7 @@
                         <p id="modalListedRatio" class="text-2xl font-bold text-stock-up">-</p>
                     </div>
                     <div class="text-center">
-                        <p class="text-xs text-gray-500">平均涨幅</p>
+                        <p class="text-xs text-gray-500">强股20日均涨幅</p>
                         <p id="modalAvgReturn" class="text-2xl font-bold text-stock-up">-</p>
                     </div>
                 </div>
@@ -493,19 +494,22 @@
         }
 
         function getSectorRole(item) {
-            if (item.is_warning) return '过热';
+            if (item.momentum_state_label) return item.momentum_state_label;
+            if (item.is_warning) return '高潮警惕';
             if (item.is_main_line) return '主线';
             return '观察';
         }
 
         function getSectorHeatLabel(item) {
-            if (item.is_warning) return '过热';
+            if (item.momentum_state_label) return item.momentum_state_label;
+            if (item.is_warning) return '高潮警惕';
             if (item.is_main_line) return '主线';
             return '观察';
         }
 
         function getSectorToneClass(item) {
             if (item.is_warning) return 'bg-red-100 text-red-700';
+            if (item.is_fading) return 'bg-amber-50 text-amber-700';
             if (item.is_main_line) return 'bg-red-50 text-red-600';
             return 'bg-gray-100 text-gray-600';
         }
@@ -572,18 +576,18 @@
             document.getElementById('totalSectors').textContent = data.length;
             document.getElementById('top10Count').textContent = `前十板块 ${Math.min(10, data.length)} 个`;
             document.getElementById('mainLineCount').textContent = data.filter(i => i.is_main_line).length;
-            document.getElementById('warningCount').textContent = `过热 ${data.filter(i => i.is_warning).length} 个`;
+            document.getElementById('warningCount').textContent = `高潮警惕 ${data.filter(i => i.is_warning).length} 个`;
             document.getElementById('marketStatus').textContent = marketStats?.market_status || '未联动';
             document.getElementById('marketStatusDesc').textContent = marketStats?.market_status_desc || '一年新高环境不可用时，这页只展示方向强弱。';
             document.getElementById('topSectorName').textContent = focusSector?.sector_name || '-';
-            document.getElementById('topSectorMeta').textContent = focusSector ? `分值 ${focusSector.momentum_score.toFixed(2)} · 平均涨幅 ${focusSector.avg_return_20d}%` : '-';
+            document.getElementById('topSectorMeta').textContent = focusSector ? `分值 ${focusSector.momentum_score.toFixed(2)} · 强股20日均涨幅 ${focusSector.avg_return_20d}%` : '-';
             document.getElementById('heroTitle').textContent = focusSector ? `先看 ${focusSector.sector_name}` : '先看主线是否明确';
             document.getElementById('heroBody').textContent = focusSector
                 ? `${requestedSector ? '当前从总览带入的板块是' : '当前动量最强的是'} ${focusSector.sector_name}，上榜 ${focusSector.listed_count} 只，占板块 ${focusSector.listed_ratio}% ，状态为 ${getSectorRole(focusSector)}。这页只负责判断方向强弱，不负责买点。`
                 : '这页只负责找主线方向，不负责逻辑和买点判断。';
             document.getElementById('heroStatusPill').textContent = marketStats?.market_status || '趋势环境待确认';
             document.getElementById('heroSectorPill').textContent = focusSector ? `${requestedSector ? '当前定位' : '今日最强'} ${focusSector.sector_name}` : '暂无主线';
-            document.getElementById('heroActionPill').textContent = focusSector?.is_warning ? '过热' : focusSector?.is_main_line ? '主线' : '观察';
+            document.getElementById('heroActionPill').textContent = focusSector ? getSectorHeatLabel(focusSector) : '观察';
         }
 
         // 渲染表格

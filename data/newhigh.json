@@ -5,8 +5,8 @@
   "market_strength": 0.18,
   "universe_size": 4990,
   "history_window_requirement": 251,
-  "history_eligible_stocks": 4908,
-  "history_eligible_ratio": 98.36,
+  "history_eligible_stocks": 4910,
+  "history_eligible_ratio": 98.4,
   "history_window_complete": true,
   "raw_new_high_count": 9,
   "candidate_stocks": 9,
@@ -18,14 +18,14 @@
     "net_new_high": -524,
     "new_high_ratio": 0.18,
     "new_low_ratio": 10.86,
-    "net_new_high_ratio": -10.68,
+    "net_new_high_ratio": -10.67,
     "new_high_low_ratio": 0.02,
     "avg_5d": 17.8,
     "avg_5d_net": -193.8,
     "avg_5d_change_pct": -49.4,
     "trend_days": 0,
     "positive_days_5d": 1,
-    "total_universe": 4908,
+    "total_universe": 4910,
     "pulse_signal": false,
     "market_breadth_state": "趋势谨慎",
     "market_observation_state": "趋势谨慎",
@@ -322,9 +322,10 @@
       "avg_capacity_proxy_score": 3.91,
       "sector_confirmation_score": 47.07,
       "sector_score": 47.07,
-      "momentum_rank": 19,
+      "momentum_rank": 20,
       "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "观察",
       "stocks": [
         {
           "code": "300214",
@@ -358,9 +359,10 @@
       "avg_capacity_proxy_score": 7.11,
       "sector_confirmation_score": 44.87,
       "sector_score": 44.87,
-      "momentum_rank": 23,
+      "momentum_rank": 25,
       "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "观察",
       "stocks": [
         {
           "code": "603137",
@@ -397,6 +399,7 @@
       "momentum_rank": 3,
       "momentum_mainline": true,
       "momentum_warning": true,
+      "momentum_state_label": "高潮警惕",
       "stocks": [
         {
           "code": "688710",
@@ -451,8 +454,9 @@
       "sector_confirmation_score": 35.24,
       "sector_score": 35.24,
       "momentum_rank": 6,
-      "momentum_mainline": true,
+      "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "观察",
       "stocks": [
         {
           "code": "002317",
@@ -489,6 +493,7 @@
       "momentum_rank": 27,
       "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "观察",
       "stocks": [
         {
           "code": "301310",
@@ -522,9 +527,10 @@
       "avg_capacity_proxy_score": 8.14,
       "sector_confirmation_score": 28.05,
       "sector_score": 28.05,
-      "momentum_rank": 55,
+      "momentum_rank": 57,
       "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "观察",
       "stocks": [
         {
           "code": "002674",
@@ -558,9 +564,10 @@
       "avg_capacity_proxy_score": 6.54,
       "sector_confirmation_score": 27.43,
       "sector_score": 27.43,
-      "momentum_rank": 24,
+      "momentum_rank": 28,
       "momentum_mainline": false,
       "momentum_warning": false,
+      "momentum_state_label": "观察",
       "stocks": [
         {
           "code": "603580",

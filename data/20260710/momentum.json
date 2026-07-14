@@ -2,8 +2,15 @@
   "trade_date": "20260710",
   "data_source": "AkShare (免费数据)",
   "classification": "东方财富行业板块",
-  "total_sectors": 90,
-  "total_stocks": 746,
+  "model_version": "3.0",
+  "score_formula": "N^0.55 * R^1.2 * continuous_20d_strength",
+  "mainline_score_min": 2.4,
+  "climax_warning_score_min": 5.3,
+  "capacity_filter_scope": "stock_candidates_only",
+  "capacity_min_score": 2.5,
+  "total_sectors": 91,
+  "total_stocks": 749,
+  "candidate_stocks": 746,
   "selection_pool_ratio": 0.15,
   "data": [
     {
@@ -14,6 +21,7 @@
       "total_count": 172,
       "listed_ratio": 71.5,
       "avg_return_20d": 30.1,
+      "tradable_count": 123,
       "rank_change": 0,
       "is_main_line": true,
       "is_warning": true,
@@ -159,7 +167,7 @@
           "rank_in_market": 42,
           "circ_mv": 694.76,
           "amount": 209334.02,
-          "capacity_proxy_score": 8.96
+          "capacity_proxy_score": 8.95
         },
         {
           "rank": 14,
@@ -951,7 +959,7 @@
           "rank_in_market": 421,
           "circ_mv": 77.93,
           "amount": 35911.49,
-          "capacity_proxy_score": 7.08
+          "capacity_proxy_score": 7.07
         },
         {
           "rank": 86,
@@ -1006,7 +1014,7 @@
           "rank_in_market": 440,
           "circ_mv": 41.06,
           "amount": 13560.45,
-          "capacity_proxy_score": 4.57
+          "capacity_proxy_score": 4.56
         },
         {
           "rank": 91,
@@ -1116,7 +1124,7 @@
           "rank_in_market": 549,
           "circ_mv": 244.04,
           "amount": 127121.31,
-          "capacity_proxy_score": 8.93
+          "capacity_proxy_score": 8.92
         },
         {
           "rank": 101,
@@ -1149,7 +1157,7 @@
           "rank_in_market": 572,
           "circ_mv": 440.54,
           "amount": 254395.84,
-          "capacity_proxy_score": 9.46
+          "capacity_proxy_score": 9.45
         },
         {
           "rank": 104,
@@ -1281,7 +1289,7 @@
           "rank_in_market": 700,
           "circ_mv": 221.52,
           "amount": 57833.6,
-          "capacity_proxy_score": 7.83
+          "capacity_proxy_score": 7.82
         },
         {
           "rank": 116,
@@ -1314,7 +1322,7 @@
           "rank_in_market": 723,
           "circ_mv": 94.5,
           "amount": 28596.84,
-          "capacity_proxy_score": 6.53
+          "capacity_proxy_score": 6.52
         },
         {
           "rank": 119,
@@ -1371,328 +1379,26 @@
           "amount": 120903.87,
           "capacity_proxy_score": 8.38
         }
-      ]
+      ],
+      "momentum_state": "climax_warning",
+      "momentum_state_label": "高潮警惕",
+      "mainline_days": 5,
+      "score_change_3d_pct": -9.3,
+      "rank_change_3d": 0,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": true,
+      "is_fading": false
     },
     {
       "rank": 2,
-      "sector_name": "医疗服务",
-      "momentum_score": 5.86,
-      "listed_count": 27,
-      "total_count": 52,
-      "listed_ratio": 51.9,
-      "avg_return_20d": 28.16,
-      "rank_change": 2,
-      "is_main_line": true,
-      "is_warning": true,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "688202",
-          "name": "美迪西",
-          "return_20d": 69.43,
-          "close_price": 87.0,
-          "rank_in_market": 19,
-          "circ_mv": 115.24,
-          "amount": 102212.3,
-          "capacity_proxy_score": 8.31
-        },
-        {
-          "rank": 2,
-          "code": "300759",
-          "name": "康龙化成",
-          "return_20d": 56.26,
-          "close_price": 33.94,
-          "rank_in_market": 39,
-          "circ_mv": 471.66,
-          "amount": 339461.1,
-          "capacity_proxy_score": 9.55
-        },
-        {
-          "rank": 3,
-          "code": "688710",
-          "name": "益诺思",
-          "return_20d": 49.46,
-          "close_price": 77.87,
-          "rank_in_market": 64,
-          "circ_mv": 66.58,
-          "amount": 50346.71,
-          "capacity_proxy_score": 7.21
-        },
-        {
-          "rank": 4,
-          "code": "688046",
-          "name": "药康生物",
-          "return_20d": 47.34,
-          "close_price": 25.46,
-          "rank_in_market": 72,
-          "circ_mv": 103.29,
-          "amount": 32807.81,
-          "capacity_proxy_score": 6.76
-        },
-        {
-          "rank": 5,
-          "code": "002821",
-          "name": "凯莱英",
-          "return_20d": 45.59,
-          "close_price": 165.41,
-          "rank_in_market": 77,
-          "circ_mv": 529.25,
-          "amount": 259357.22,
-          "capacity_proxy_score": 9.51
-        },
-        {
-          "rank": 6,
-          "code": "688222",
-          "name": "成都先导",
-          "return_20d": 43.77,
-          "close_price": 35.87,
-          "rank_in_market": 84,
-          "circ_mv": 141.44,
-          "amount": 119379.39,
-          "capacity_proxy_score": 8.54
-        },
-        {
-          "rank": 7,
-          "code": "603127",
-          "name": "昭衍新药",
-          "return_20d": 37.69,
-          "close_price": 43.22,
-          "rank_in_market": 123,
-          "circ_mv": 267.45,
-          "amount": 227310.52,
-          "capacity_proxy_score": 9.22
-        },
-        {
-          "rank": 8,
-          "code": "300363",
-          "name": "博腾股份",
-          "return_20d": 33.38,
-          "close_price": 18.42,
-          "rank_in_market": 153,
-          "circ_mv": 90.03,
-          "amount": 98055.07,
-          "capacity_proxy_score": 8.05
-        },
-        {
-          "rank": 9,
-          "code": "688796",
-          "name": "百奥赛图",
-          "return_20d": 28.6,
-          "close_price": 112.4,
-          "rank_in_market": 201,
-          "circ_mv": 43.97,
-          "amount": 31525.93,
-          "capacity_proxy_score": 6.23
-        },
-        {
-          "rank": 10,
-          "code": "301520",
-          "name": "万邦医药",
-          "return_20d": 28.1,
-          "close_price": 45.18,
-          "rank_in_market": 209,
-          "circ_mv": 14.0,
-          "amount": 64481.79,
-          "capacity_proxy_score": 4.66
-        },
-        {
-          "rank": 11,
-          "code": "688238",
-          "name": "和元生物",
-          "return_20d": 27.81,
-          "close_price": 6.71,
-          "rank_in_market": 214,
-          "circ_mv": 43.03,
-          "amount": 46646.26,
-          "capacity_proxy_score": 6.57
-        },
-        {
-          "rank": 12,
-          "code": "603259",
-          "name": "药明康德",
-          "return_20d": 27.02,
-          "close_price": 123.3,
-          "rank_in_market": 227,
-          "circ_mv": 3067.86,
-          "amount": 847288.91,
-          "capacity_proxy_score": 9.4
-        },
-        {
-          "rank": 13,
-          "code": "301230",
-          "name": "泓博医药",
-          "return_20d": 23.57,
-          "close_price": 40.16,
-          "rank_in_market": 268,
-          "circ_mv": 48.9,
-          "amount": 71039.78,
-          "capacity_proxy_score": 6.8
-        },
-        {
-          "rank": 14,
-          "code": "301257",
-          "name": "普蕊斯",
-          "return_20d": 23.5,
-          "close_price": 50.18,
-          "rank_in_market": 272,
-          "circ_mv": 37.09,
-          "amount": 40084.74,
-          "capacity_proxy_score": 6.23
-        },
-        {
-          "rank": 15,
-          "code": "300725",
-          "name": "药石科技",
-          "return_20d": 22.5,
-          "close_price": 38.28,
-          "rank_in_market": 290,
-          "circ_mv": 77.03,
-          "amount": 70735.28,
-          "capacity_proxy_score": 7.64
-        },
-        {
-          "rank": 16,
-          "code": "300244",
-          "name": "迪安诊断",
-          "return_20d": 22.0,
-          "close_price": 20.46,
-          "rank_in_market": 297,
-          "circ_mv": 101.4,
-          "amount": 145466.1,
-          "capacity_proxy_score": 8.06
-        },
-        {
-          "rank": 17,
-          "code": "603456",
-          "name": "九洲药业",
-          "return_20d": 21.26,
-          "close_price": 14.77,
-          "rank_in_market": 307,
-          "circ_mv": 127.88,
-          "amount": 53066.38,
-          "capacity_proxy_score": 7.89
-        },
-        {
-          "rank": 18,
-          "code": "300347",
-          "name": "泰格医药",
-          "return_20d": 19.07,
-          "close_price": 47.27,
-          "rank_in_market": 348,
-          "circ_mv": 261.72,
-          "amount": 157422.08,
-          "capacity_proxy_score": 9.06
-        },
-        {
-          "rank": 19,
-          "code": "688073",
-          "name": "毕得医药",
-          "return_20d": 17.63,
-          "close_price": 53.05,
-          "rank_in_market": 392,
-          "circ_mv": 47.93,
-          "amount": 23430.63,
-          "capacity_proxy_score": 6.02
-        },
-        {
-          "rank": 20,
-          "code": "301333",
-          "name": "诺思格",
-          "return_20d": 17.63,
-          "close_price": 52.44,
-          "rank_in_market": 393,
-          "circ_mv": 49.51,
-          "amount": 28891.83,
-          "capacity_proxy_score": 6.3
-        },
-        {
-          "rank": 21,
-          "code": "300149",
-          "name": "睿智医药",
-          "return_20d": 16.54,
-          "close_price": 8.95,
-          "rank_in_market": 425,
-          "circ_mv": 42.26,
-          "amount": 34112.63,
-          "capacity_proxy_score": 6.24
-        },
-        {
-          "rank": 22,
-          "code": "301509",
-          "name": "金凯生科",
-          "return_20d": 16.01,
-          "close_price": 30.65,
-          "rank_in_market": 452,
-          "circ_mv": 17.16,
-          "amount": 14457.76,
-          "capacity_proxy_score": 4.14
-        },
-        {
-          "rank": 23,
-          "code": "688131",
-          "name": "XD皓元医",
-          "return_20d": 15.9,
-          "close_price": 87.82,
-          "rank_in_market": 458,
-          "circ_mv": 186.83,
-          "amount": 66286.69,
-          "capacity_proxy_score": 7.81
-        },
-        {
-          "rank": 24,
-          "code": "688265",
-          "name": "XD南模生",
-          "return_20d": 15.02,
-          "close_price": 36.3,
-          "rank_in_market": 482,
-          "circ_mv": 28.22,
-          "amount": 4855.55,
-          "capacity_proxy_score": 2.57
-        },
-        {
-          "rank": 25,
-          "code": "300404",
-          "name": "博济医药",
-          "return_20d": 13.81,
-          "close_price": 9.48,
-          "rank_in_market": 531,
-          "circ_mv": 26.77,
-          "amount": 18625.44,
-          "capacity_proxy_score": 4.95
-        },
-        {
-          "rank": 26,
-          "code": "301201",
-          "name": "诚达药业",
-          "return_20d": 11.25,
-          "close_price": 36.88,
-          "rank_in_market": 649,
-          "circ_mv": 39.67,
-          "amount": 66479.0,
-          "capacity_proxy_score": 6.44
-        },
-        {
-          "rank": 27,
-          "code": "300676",
-          "name": "华大基因",
-          "return_20d": 10.13,
-          "close_price": 36.21,
-          "rank_in_market": 698,
-          "circ_mv": 150.57,
-          "amount": 38921.58,
-          "capacity_proxy_score": 7.23
-        }
-      ]
-    },
-    {
-      "rank": 3,
       "sector_name": "化学制药",
-      "momentum_score": 5.86,
+      "momentum_score": 6.11,
       "listed_count": 59,
       "total_count": 143,
       "listed_ratio": 41.3,
       "avg_return_20d": 21.9,
-      "rank_change": 0,
+      "tradable_count": 59,
+      "rank_change": 1,
       "is_main_line": true,
       "is_warning": true,
       "stocks": [
@@ -1705,7 +1411,7 @@
           "rank_in_market": 27,
           "circ_mv": 538.42,
           "amount": 108298.95,
-          "capacity_proxy_score": 8.61
+          "capacity_proxy_score": 8.6
         },
         {
           "rank": 2,
@@ -1903,7 +1609,7 @@
           "rank_in_market": 293,
           "circ_mv": 30.66,
           "amount": 32444.41,
-          "capacity_proxy_score": 5.77
+          "capacity_proxy_score": 5.76
         },
         {
           "rank": 20,
@@ -1914,7 +1620,7 @@
           "rank_in_market": 296,
           "circ_mv": 97.88,
           "amount": 28077.62,
-          "capacity_proxy_score": 6.54
+          "capacity_proxy_score": 6.53
         },
         {
           "rank": 21,
@@ -2057,7 +1763,7 @@
           "rank_in_market": 411,
           "circ_mv": 23.1,
           "amount": 26799.6,
-          "capacity_proxy_score": 5.21
+          "capacity_proxy_score": 5.2
         },
         {
           "rank": 34,
@@ -2156,7 +1862,7 @@
           "rank_in_market": 472,
           "circ_mv": 38.05,
           "amount": 7595.8,
-          "capacity_proxy_score": 3.63
+          "capacity_proxy_score": 3.62
         },
         {
           "rank": 43,
@@ -2211,7 +1917,7 @@
           "rank_in_market": 535,
           "circ_mv": 28.23,
           "amount": 16538.31,
-          "capacity_proxy_score": 4.87
+          "capacity_proxy_score": 4.86
         },
         {
           "rank": 48,
@@ -2326,7 +2032,7 @@
         {
           "rank": 58,
           "code": "600488",
-          "name": "津药药业",
+          "name": "XD津药药",
           "return_20d": 9.84,
           "close_price": 5.58,
           "rank_in_market": 721,
@@ -2345,19 +2051,348 @@
           "amount": 6555.87,
           "capacity_proxy_score": 3.39
         }
-      ]
+      ],
+      "momentum_state": "climax_warning",
+      "momentum_state_label": "高潮警惕",
+      "mainline_days": 5,
+      "score_change_3d_pct": 31.1,
+      "rank_change_3d": 1,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": true,
+      "is_fading": false
+    },
+    {
+      "rank": 3,
+      "sector_name": "医疗服务",
+      "momentum_score": 5.86,
+      "listed_count": 27,
+      "total_count": 52,
+      "listed_ratio": 51.9,
+      "avg_return_20d": 28.16,
+      "tradable_count": 27,
+      "rank_change": 1,
+      "is_main_line": true,
+      "is_warning": true,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "688202",
+          "name": "美迪西",
+          "return_20d": 69.43,
+          "close_price": 87.0,
+          "rank_in_market": 19,
+          "circ_mv": 115.24,
+          "amount": 102212.3,
+          "capacity_proxy_score": 8.31
+        },
+        {
+          "rank": 2,
+          "code": "300759",
+          "name": "康龙化成",
+          "return_20d": 56.26,
+          "close_price": 33.94,
+          "rank_in_market": 39,
+          "circ_mv": 471.66,
+          "amount": 339461.1,
+          "capacity_proxy_score": 9.55
+        },
+        {
+          "rank": 3,
+          "code": "688710",
+          "name": "益诺思",
+          "return_20d": 49.46,
+          "close_price": 77.87,
+          "rank_in_market": 64,
+          "circ_mv": 66.58,
+          "amount": 50346.71,
+          "capacity_proxy_score": 7.21
+        },
+        {
+          "rank": 4,
+          "code": "688046",
+          "name": "药康生物",
+          "return_20d": 47.34,
+          "close_price": 25.46,
+          "rank_in_market": 72,
+          "circ_mv": 103.29,
+          "amount": 32807.81,
+          "capacity_proxy_score": 6.76
+        },
+        {
+          "rank": 5,
+          "code": "002821",
+          "name": "凯莱英",
+          "return_20d": 45.59,
+          "close_price": 165.41,
+          "rank_in_market": 77,
+          "circ_mv": 529.25,
+          "amount": 259357.22,
+          "capacity_proxy_score": 9.51
+        },
+        {
+          "rank": 6,
+          "code": "688222",
+          "name": "成都先导",
+          "return_20d": 43.77,
+          "close_price": 35.87,
+          "rank_in_market": 84,
+          "circ_mv": 141.44,
+          "amount": 119379.39,
+          "capacity_proxy_score": 8.54
+        },
+        {
+          "rank": 7,
+          "code": "603127",
+          "name": "昭衍新药",
+          "return_20d": 37.69,
+          "close_price": 43.22,
+          "rank_in_market": 123,
+          "circ_mv": 267.45,
+          "amount": 227310.52,
+          "capacity_proxy_score": 9.22
+        },
+        {
+          "rank": 8,
+          "code": "300363",
+          "name": "博腾股份",
+          "return_20d": 33.38,
+          "close_price": 18.42,
+          "rank_in_market": 153,
+          "circ_mv": 90.03,
+          "amount": 98055.07,
+          "capacity_proxy_score": 8.05
+        },
+        {
+          "rank": 9,
+          "code": "688796",
+          "name": "百奥赛图",
+          "return_20d": 28.6,
+          "close_price": 112.4,
+          "rank_in_market": 201,
+          "circ_mv": 43.97,
+          "amount": 31525.93,
+          "capacity_proxy_score": 6.23
+        },
+        {
+          "rank": 10,
+          "code": "301520",
+          "name": "万邦医药",
+          "return_20d": 28.1,
+          "close_price": 45.18,
+          "rank_in_market": 209,
+          "circ_mv": 14.0,
+          "amount": 64481.79,
+          "capacity_proxy_score": 4.65
+        },
+        {
+          "rank": 11,
+          "code": "688238",
+          "name": "和元生物",
+          "return_20d": 27.81,
+          "close_price": 6.71,
+          "rank_in_market": 214,
+          "circ_mv": 43.03,
+          "amount": 46646.26,
+          "capacity_proxy_score": 6.57
+        },
+        {
+          "rank": 12,
+          "code": "603259",
+          "name": "药明康德",
+          "return_20d": 27.02,
+          "close_price": 123.3,
+          "rank_in_market": 227,
+          "circ_mv": 3067.86,
+          "amount": 847288.91,
+          "capacity_proxy_score": 9.4
+        },
+        {
+          "rank": 13,
+          "code": "301230",
+          "name": "泓博医药",
+          "return_20d": 23.57,
+          "close_price": 40.16,
+          "rank_in_market": 268,
+          "circ_mv": 48.9,
+          "amount": 71039.78,
+          "capacity_proxy_score": 6.8
+        },
+        {
+          "rank": 14,
+          "code": "301257",
+          "name": "普蕊斯",
+          "return_20d": 23.5,
+          "close_price": 50.18,
+          "rank_in_market": 272,
+          "circ_mv": 37.09,
+          "amount": 40084.74,
+          "capacity_proxy_score": 6.23
+        },
+        {
+          "rank": 15,
+          "code": "300725",
+          "name": "药石科技",
+          "return_20d": 22.5,
+          "close_price": 38.28,
+          "rank_in_market": 290,
+          "circ_mv": 77.03,
+          "amount": 70735.28,
+          "capacity_proxy_score": 7.64
+        },
+        {
+          "rank": 16,
+          "code": "300244",
+          "name": "迪安诊断",
+          "return_20d": 22.0,
+          "close_price": 20.46,
+          "rank_in_market": 297,
+          "circ_mv": 101.4,
+          "amount": 145466.1,
+          "capacity_proxy_score": 8.05
+        },
+        {
+          "rank": 17,
+          "code": "603456",
+          "name": "九洲药业",
+          "return_20d": 21.26,
+          "close_price": 14.77,
+          "rank_in_market": 307,
+          "circ_mv": 127.88,
+          "amount": 53066.38,
+          "capacity_proxy_score": 7.89
+        },
+        {
+          "rank": 18,
+          "code": "300347",
+          "name": "泰格医药",
+          "return_20d": 19.07,
+          "close_price": 47.27,
+          "rank_in_market": 348,
+          "circ_mv": 261.72,
+          "amount": 157422.08,
+          "capacity_proxy_score": 9.06
+        },
+        {
+          "rank": 19,
+          "code": "688073",
+          "name": "毕得医药",
+          "return_20d": 17.63,
+          "close_price": 53.05,
+          "rank_in_market": 392,
+          "circ_mv": 47.93,
+          "amount": 23430.63,
+          "capacity_proxy_score": 6.02
+        },
+        {
+          "rank": 20,
+          "code": "301333",
+          "name": "诺思格",
+          "return_20d": 17.63,
+          "close_price": 52.44,
+          "rank_in_market": 393,
+          "circ_mv": 49.51,
+          "amount": 28891.83,
+          "capacity_proxy_score": 6.3
+        },
+        {
+          "rank": 21,
+          "code": "300149",
+          "name": "睿智医药",
+          "return_20d": 16.54,
+          "close_price": 8.95,
+          "rank_in_market": 425,
+          "circ_mv": 42.26,
+          "amount": 34112.63,
+          "capacity_proxy_score": 6.24
+        },
+        {
+          "rank": 22,
+          "code": "301509",
+          "name": "金凯生科",
+          "return_20d": 16.01,
+          "close_price": 30.65,
+          "rank_in_market": 452,
+          "circ_mv": 17.16,
+          "amount": 14457.76,
+          "capacity_proxy_score": 4.14
+        },
+        {
+          "rank": 23,
+          "code": "688131",
+          "name": "皓元医药",
+          "return_20d": 15.9,
+          "close_price": 87.82,
+          "rank_in_market": 458,
+          "circ_mv": 186.83,
+          "amount": 66286.69,
+          "capacity_proxy_score": 7.81
+        },
+        {
+          "rank": 24,
+          "code": "688265",
+          "name": "南模生物",
+          "return_20d": 15.02,
+          "close_price": 36.3,
+          "rank_in_market": 482,
+          "circ_mv": 28.22,
+          "amount": 4855.55,
+          "capacity_proxy_score": 2.56
+        },
+        {
+          "rank": 25,
+          "code": "300404",
+          "name": "博济医药",
+          "return_20d": 13.81,
+          "close_price": 9.48,
+          "rank_in_market": 531,
+          "circ_mv": 26.77,
+          "amount": 18625.44,
+          "capacity_proxy_score": 4.94
+        },
+        {
+          "rank": 26,
+          "code": "301201",
+          "name": "诚达药业",
+          "return_20d": 11.25,
+          "close_price": 36.88,
+          "rank_in_market": 649,
+          "circ_mv": 39.67,
+          "amount": 66479.0,
+          "capacity_proxy_score": 6.44
+        },
+        {
+          "rank": 27,
+          "code": "300676",
+          "name": "华大基因",
+          "return_20d": 10.13,
+          "close_price": 36.21,
+          "rank_in_market": 698,
+          "circ_mv": 150.57,
+          "amount": 38921.58,
+          "capacity_proxy_score": 7.23
+        }
+      ],
+      "momentum_state": "climax_warning",
+      "momentum_state_label": "高潮警惕",
+      "mainline_days": 5,
+      "score_change_3d_pct": 99.3,
+      "rank_change_3d": 2,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": true,
+      "is_fading": false
     },
     {
       "rank": 4,
       "sector_name": "生物制品",
-      "momentum_score": 3.79,
+      "momentum_score": 4.01,
       "listed_count": 23,
       "total_count": 52,
       "listed_ratio": 44.2,
       "avg_return_20d": 22.24,
+      "tradable_count": 23,
       "rank_change": 6,
       "is_main_line": true,
-      "is_warning": true,
+      "is_warning": false,
       "stocks": [
         {
           "rank": 1,
@@ -2500,7 +2535,7 @@
           "rank_in_market": 382,
           "circ_mv": 201.9,
           "amount": 130252.74,
-          "capacity_proxy_score": 8.82
+          "capacity_proxy_score": 8.81
         },
         {
           "rank": 14,
@@ -2511,7 +2546,7 @@
           "rank_in_market": 443,
           "circ_mv": 26.56,
           "amount": 16758.44,
-          "capacity_proxy_score": 4.8
+          "capacity_proxy_score": 4.79
         },
         {
           "rank": 15,
@@ -2533,7 +2568,7 @@
           "rank_in_market": 566,
           "circ_mv": 60.37,
           "amount": 13006.51,
-          "capacity_proxy_score": 5.04
+          "capacity_proxy_score": 5.03
         },
         {
           "rank": 17,
@@ -2566,7 +2601,7 @@
           "rank_in_market": 616,
           "circ_mv": 153.83,
           "amount": 36233.77,
-          "capacity_proxy_score": 7.18
+          "capacity_proxy_score": 7.17
         },
         {
           "rank": 20,
@@ -2577,7 +2612,7 @@
           "rank_in_market": 651,
           "circ_mv": 30.8,
           "amount": 10763.2,
-          "capacity_proxy_score": 3.87
+          "capacity_proxy_score": 3.86
         },
         {
           "rank": 21,
@@ -2588,7 +2623,7 @@
           "rank_in_market": 684,
           "circ_mv": 76.16,
           "amount": 9018.4,
-          "capacity_proxy_score": 4.35
+          "capacity_proxy_score": 4.34
         },
         {
           "rank": 22,
@@ -2612,19 +2647,28 @@
           "amount": 25974.98,
           "capacity_proxy_score": 6.84
         }
-      ]
+      ],
+      "momentum_state": "new_mainline",
+      "momentum_state_label": "新晋主线",
+      "mainline_days": 1,
+      "score_change_3d_pct": 67.8,
+      "rank_change_3d": 2,
+      "is_new_mainline": true,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 5,
       "sector_name": "电子化学品",
-      "momentum_score": 2.33,
+      "momentum_score": 2.64,
       "listed_count": 15,
       "total_count": 35,
       "listed_ratio": 42.9,
       "avg_return_20d": 18.7,
-      "rank_change": 0,
+      "tradable_count": 15,
+      "rank_change": -3,
       "is_main_line": true,
-      "is_warning": true,
+      "is_warning": false,
       "stocks": [
         {
           "rank": 1,
@@ -2791,18 +2835,237 @@
           "amount": 237616.03,
           "capacity_proxy_score": 9.11
         }
-      ]
+      ],
+      "momentum_state": "confirmed",
+      "momentum_state_label": "主线确认",
+      "mainline_days": 5,
+      "score_change_3d_pct": -56.9,
+      "rank_change_3d": -3,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": true,
+      "is_fading": false
     },
     {
       "rank": 6,
+      "sector_name": "证券",
+      "momentum_score": 1.83,
+      "listed_count": 17,
+      "total_count": 49,
+      "listed_ratio": 34.7,
+      "avg_return_20d": 14.84,
+      "tradable_count": 17,
+      "rank_change": 1,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600909",
+          "name": "XD华安证",
+          "return_20d": 29.71,
+          "close_price": 9.43,
+          "rank_in_market": 182,
+          "circ_mv": 495.05,
+          "amount": 385487.18,
+          "capacity_proxy_score": 9.59
+        },
+        {
+          "rank": 2,
+          "code": "601162",
+          "name": "天风证券",
+          "return_20d": 21.57,
+          "close_price": 3.72,
+          "rank_in_market": 303,
+          "circ_mv": 318.76,
+          "amount": 111699.21,
+          "capacity_proxy_score": 8.46
+        },
+        {
+          "rank": 3,
+          "code": "600999",
+          "name": "招商证券",
+          "return_20d": 19.26,
+          "close_price": 20.56,
+          "rank_in_market": 342,
+          "circ_mv": 1560.62,
+          "amount": 305592.65,
+          "capacity_proxy_score": 9.2
+        },
+        {
+          "rank": 4,
+          "code": "000783",
+          "name": "长江证券",
+          "return_20d": 18.43,
+          "close_price": 8.74,
+          "rank_in_market": 363,
+          "circ_mv": 496.0,
+          "amount": 190684.07,
+          "capacity_proxy_score": 8.84
+        },
+        {
+          "rank": 5,
+          "code": "601108",
+          "name": "财通证券",
+          "return_20d": 16.37,
+          "close_price": 8.53,
+          "rank_in_market": 434,
+          "circ_mv": 404.47,
+          "amount": 73970.83,
+          "capacity_proxy_score": 8.28
+        },
+        {
+          "rank": 6,
+          "code": "300059",
+          "name": "东方财富",
+          "return_20d": 16.3,
+          "close_price": 20.19,
+          "rank_in_market": 436,
+          "circ_mv": 2705.72,
+          "amount": 665201.53,
+          "capacity_proxy_score": 9.37
+        },
+        {
+          "rank": 7,
+          "code": "601995",
+          "name": "中金公司",
+          "return_20d": 13.99,
+          "close_price": 36.17,
+          "rank_in_market": 524,
+          "circ_mv": 1071.96,
+          "amount": 135214.58,
+          "capacity_proxy_score": 8.39
+        },
+        {
+          "rank": 8,
+          "code": "000776",
+          "name": "广发证券",
+          "return_20d": 13.58,
+          "close_price": 21.75,
+          "rank_in_market": 542,
+          "circ_mv": 1299.71,
+          "amount": 179065.54,
+          "capacity_proxy_score": 8.54
+        },
+        {
+          "rank": 9,
+          "code": "601696",
+          "name": "中银证券",
+          "return_20d": 12.49,
+          "close_price": 11.8,
+          "rank_in_market": 597,
+          "circ_mv": 329.62,
+          "amount": 56837.25,
+          "capacity_proxy_score": 7.99
+        },
+        {
+          "rank": 10,
+          "code": "601059",
+          "name": "信达证券",
+          "return_20d": 12.32,
+          "close_price": 16.59,
+          "rank_in_market": 603,
+          "circ_mv": 538.42,
+          "amount": 11862.6,
+          "capacity_proxy_score": 5.57
+        },
+        {
+          "rank": 11,
+          "code": "600906",
+          "name": "财达证券",
+          "return_20d": 12.13,
+          "close_price": 7.12,
+          "rank_in_market": 614,
+          "circ_mv": 152.9,
+          "amount": 46445.77,
+          "capacity_proxy_score": 7.39
+        },
+        {
+          "rank": 12,
+          "code": "601198",
+          "name": "东兴证券",
+          "return_20d": 11.94,
+          "close_price": 13.78,
+          "rank_in_market": 619,
+          "circ_mv": 446.8,
+          "amount": 31068.2,
+          "capacity_proxy_score": 7.08
+        },
+        {
+          "rank": 13,
+          "code": "600621",
+          "name": "华鑫股份",
+          "return_20d": 11.93,
+          "close_price": 13.42,
+          "rank_in_market": 620,
+          "circ_mv": 141.8,
+          "amount": 27086.44,
+          "capacity_proxy_score": 6.81
+        },
+        {
+          "rank": 14,
+          "code": "600030",
+          "name": "中信证券",
+          "return_20d": 11.33,
+          "close_price": 28.4,
+          "rank_in_market": 645,
+          "circ_mv": 3462.72,
+          "amount": 476280.38,
+          "capacity_proxy_score": 8.89
+        },
+        {
+          "rank": 15,
+          "code": "601066",
+          "name": "中信建投",
+          "return_20d": 10.82,
+          "close_price": 27.25,
+          "rank_in_market": 672,
+          "circ_mv": 1832.08,
+          "amount": 204348.57,
+          "capacity_proxy_score": 8.63
+        },
+        {
+          "rank": 16,
+          "code": "000686",
+          "name": "东北证券",
+          "return_20d": 10.14,
+          "close_price": 8.15,
+          "rank_in_market": 697,
+          "circ_mv": 192.6,
+          "amount": 36722.29,
+          "capacity_proxy_score": 7.33
+        },
+        {
+          "rank": 17,
+          "code": "601901",
+          "name": "方正证券",
+          "return_20d": 10.02,
+          "close_price": 7.14,
+          "rank_in_market": 708,
+          "circ_mv": 587.97,
+          "amount": 42645.71,
+          "capacity_proxy_score": 7.48
+        }
+      ],
+      "momentum_state": "fading",
+      "momentum_state_label": "主线退潮",
+      "mainline_days": 0,
+      "score_change_3d_pct": -46.6,
+      "rank_change_3d": -2,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": true
+    },
+    {
+      "rank": 7,
       "sector_name": "通用设备",
       "momentum_score": 1.81,
       "listed_count": 36,
       "total_count": 211,
       "listed_ratio": 17.1,
       "avg_return_20d": 28.0,
-      "rank_change": 2,
-      "is_main_line": true,
+      "tradable_count": 36,
+      "rank_change": 1,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -2924,7 +3187,7 @@
           "rank_in_market": 131,
           "circ_mv": 199.69,
           "amount": 146342.76,
-          "capacity_proxy_score": 8.86
+          "capacity_proxy_score": 8.85
         },
         {
           "rank": 12,
@@ -3023,7 +3286,7 @@
           "rank_in_market": 350,
           "circ_mv": 37.9,
           "amount": 32204.59,
-          "capacity_proxy_score": 6.04
+          "capacity_proxy_score": 6.03
         },
         {
           "rank": 21,
@@ -3155,7 +3418,7 @@
           "rank_in_market": 538,
           "circ_mv": 54.2,
           "amount": 39665.19,
-          "capacity_proxy_score": 6.76
+          "capacity_proxy_score": 6.75
         },
         {
           "rank": 33,
@@ -3177,7 +3440,7 @@
           "rank_in_market": 605,
           "circ_mv": 29.75,
           "amount": 16001.42,
-          "capacity_proxy_score": 4.89
+          "capacity_proxy_score": 4.88
         },
         {
           "rank": 35,
@@ -3188,7 +3451,7 @@
           "rank_in_market": 670,
           "circ_mv": 102.89,
           "amount": 184846.5,
-          "capacity_proxy_score": 8.19
+          "capacity_proxy_score": 8.18
         },
         {
           "rank": 36,
@@ -3201,18 +3464,27 @@
           "amount": 44644.9,
           "capacity_proxy_score": 6.97
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 36.1,
+      "rank_change_3d": 2,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 7,
+      "rank": 8,
       "sector_name": "其他电子",
       "momentum_score": 1.78,
       "listed_count": 10,
       "total_count": 33,
       "listed_ratio": 30.3,
       "avg_return_20d": 28.87,
-      "rank_change": 0,
-      "is_main_line": true,
+      "tradable_count": 10,
+      "rank_change": 5,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -3312,7 +3584,7 @@
           "rank_in_market": 717,
           "circ_mv": 38.93,
           "amount": 19979.38,
-          "capacity_proxy_score": 5.54
+          "capacity_proxy_score": 5.53
         },
         {
           "rank": 10,
@@ -3325,18 +3597,27 @@
           "amount": 20798.49,
           "capacity_proxy_score": 6.11
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 48.3,
+      "rank_change_3d": 3,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 8,
+      "rank": 9,
       "sector_name": "军工电子",
-      "momentum_score": 1.61,
+      "momentum_score": 1.71,
       "listed_count": 15,
       "total_count": 57,
       "listed_ratio": 26.3,
       "avg_return_20d": 22.45,
-      "rank_change": 0,
-      "is_main_line": true,
+      "tradable_count": 15,
+      "rank_change": 2,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -3504,18 +3785,105 @@
           "amount": 16966.57,
           "capacity_proxy_score": 5.15
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 48.7,
+      "rank_change_3d": 3,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 9,
+      "rank": 10,
+      "sector_name": "航天装备",
+      "momentum_score": 1.63,
+      "listed_count": 5,
+      "total_count": 9,
+      "listed_ratio": 55.6,
+      "avg_return_20d": 14.69,
+      "tradable_count": 5,
+      "rank_change": 0,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "688818",
+          "name": "电科蓝天",
+          "return_20d": 17.46,
+          "close_price": 78.3,
+          "rank_in_market": 398,
+          "circ_mv": 103.27,
+          "amount": 270632.67,
+          "capacity_proxy_score": 8.04
+        },
+        {
+          "rank": 2,
+          "code": "600879",
+          "name": "航天电子",
+          "return_20d": 15.76,
+          "close_price": 23.29,
+          "rank_in_market": 462,
+          "circ_mv": 732.05,
+          "amount": 581746.54,
+          "capacity_proxy_score": 9.73
+        },
+        {
+          "rank": 3,
+          "code": "600118",
+          "name": "中国卫星",
+          "return_20d": 15.37,
+          "close_price": 90.02,
+          "rank_in_market": 477,
+          "circ_mv": 1003.71,
+          "amount": 531018.61,
+          "capacity_proxy_score": 9.78
+        },
+        {
+          "rank": 4,
+          "code": "688523",
+          "name": "航天环宇",
+          "return_20d": 14.85,
+          "close_price": 61.18,
+          "rank_in_market": 490,
+          "circ_mv": 233.11,
+          "amount": 92985.45,
+          "capacity_proxy_score": 8.21
+        },
+        {
+          "rank": 5,
+          "code": "003009",
+          "name": "中天火箭",
+          "return_20d": 10.03,
+          "close_price": 60.64,
+          "rank_in_market": 707,
+          "circ_mv": 95.25,
+          "amount": 56482.3,
+          "capacity_proxy_score": 7.69
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 1530.0,
+      "rank_change_3d": 58,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 11,
       "sector_name": "光学光电子",
-      "momentum_score": 1.51,
+      "momentum_score": 1.53,
       "listed_count": 18,
-      "total_count": 89,
-      "listed_ratio": 20.2,
+      "total_count": 88,
+      "listed_ratio": 20.5,
       "avg_return_20d": 27.32,
-      "rank_change": -2,
-      "is_main_line": true,
+      "tradable_count": 18,
+      "rank_change": -5,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -3527,7 +3895,7 @@
           "rank_in_market": 18,
           "circ_mv": 68.63,
           "amount": 76814.45,
-          "capacity_proxy_score": 7.6
+          "capacity_proxy_score": 7.59
         },
         {
           "rank": 2,
@@ -3549,7 +3917,7 @@
           "rank_in_market": 69,
           "circ_mv": 81.13,
           "amount": 197223.08,
-          "capacity_proxy_score": 7.65
+          "capacity_proxy_score": 7.64
         },
         {
           "rank": 4,
@@ -3637,7 +4005,7 @@
           "rank_in_market": 504,
           "circ_mv": 51.11,
           "amount": 119153.96,
-          "capacity_proxy_score": 6.88
+          "capacity_proxy_score": 6.87
         },
         {
           "rank": 12,
@@ -3716,18 +4084,27 @@
           "amount": 121398.82,
           "capacity_proxy_score": 8.62
         }
-      ]
+      ],
+      "momentum_state": "fading",
+      "momentum_state_label": "主线退潮",
+      "mainline_days": 0,
+      "score_change_3d_pct": 0.0,
+      "rank_change_3d": -3,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": true
     },
     {
-      "rank": 10,
+      "rank": 12,
       "sector_name": "游戏",
-      "momentum_score": 1.51,
+      "momentum_score": 1.48,
       "listed_count": 8,
       "total_count": 24,
       "listed_ratio": 33.3,
       "avg_return_20d": 20.39,
-      "rank_change": 0,
-      "is_main_line": true,
+      "tradable_count": 8,
+      "rank_change": 9,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -3818,219 +4195,27 @@
           "amount": 97680.93,
           "capacity_proxy_score": 8.3
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 159.6,
+      "rank_change_3d": 12,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 11,
-      "sector_name": "证券",
-      "momentum_score": 1.47,
-      "listed_count": 17,
-      "total_count": 49,
-      "listed_ratio": 34.7,
-      "avg_return_20d": 14.84,
-      "rank_change": 0,
-      "is_main_line": true,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "600909",
-          "name": "华安证券",
-          "return_20d": 29.71,
-          "close_price": 9.43,
-          "rank_in_market": 182,
-          "circ_mv": 495.05,
-          "amount": 385487.18,
-          "capacity_proxy_score": 9.59
-        },
-        {
-          "rank": 2,
-          "code": "601162",
-          "name": "天风证券",
-          "return_20d": 21.57,
-          "close_price": 3.72,
-          "rank_in_market": 303,
-          "circ_mv": 318.76,
-          "amount": 111699.21,
-          "capacity_proxy_score": 8.46
-        },
-        {
-          "rank": 3,
-          "code": "600999",
-          "name": "招商证券",
-          "return_20d": 19.26,
-          "close_price": 20.56,
-          "rank_in_market": 342,
-          "circ_mv": 1560.62,
-          "amount": 305592.65,
-          "capacity_proxy_score": 9.2
-        },
-        {
-          "rank": 4,
-          "code": "000783",
-          "name": "长江证券",
-          "return_20d": 18.43,
-          "close_price": 8.74,
-          "rank_in_market": 363,
-          "circ_mv": 496.0,
-          "amount": 190684.07,
-          "capacity_proxy_score": 8.84
-        },
-        {
-          "rank": 5,
-          "code": "601108",
-          "name": "财通证券",
-          "return_20d": 16.37,
-          "close_price": 8.53,
-          "rank_in_market": 434,
-          "circ_mv": 404.47,
-          "amount": 73970.83,
-          "capacity_proxy_score": 8.28
-        },
-        {
-          "rank": 6,
-          "code": "300059",
-          "name": "东方财富",
-          "return_20d": 16.3,
-          "close_price": 20.19,
-          "rank_in_market": 436,
-          "circ_mv": 2705.72,
-          "amount": 665201.53,
-          "capacity_proxy_score": 9.37
-        },
-        {
-          "rank": 7,
-          "code": "601995",
-          "name": "中金公司",
-          "return_20d": 13.99,
-          "close_price": 36.17,
-          "rank_in_market": 524,
-          "circ_mv": 1071.96,
-          "amount": 135214.58,
-          "capacity_proxy_score": 8.39
-        },
-        {
-          "rank": 8,
-          "code": "000776",
-          "name": "广发证券",
-          "return_20d": 13.58,
-          "close_price": 21.75,
-          "rank_in_market": 542,
-          "circ_mv": 1299.71,
-          "amount": 179065.54,
-          "capacity_proxy_score": 8.54
-        },
-        {
-          "rank": 9,
-          "code": "601696",
-          "name": "中银证券",
-          "return_20d": 12.49,
-          "close_price": 11.8,
-          "rank_in_market": 597,
-          "circ_mv": 329.62,
-          "amount": 56837.25,
-          "capacity_proxy_score": 7.99
-        },
-        {
-          "rank": 10,
-          "code": "601059",
-          "name": "信达证券",
-          "return_20d": 12.32,
-          "close_price": 16.59,
-          "rank_in_market": 603,
-          "circ_mv": 538.42,
-          "amount": 11862.6,
-          "capacity_proxy_score": 5.57
-        },
-        {
-          "rank": 11,
-          "code": "600906",
-          "name": "财达证券",
-          "return_20d": 12.13,
-          "close_price": 7.12,
-          "rank_in_market": 614,
-          "circ_mv": 152.9,
-          "amount": 46445.77,
-          "capacity_proxy_score": 7.39
-        },
-        {
-          "rank": 12,
-          "code": "601198",
-          "name": "东兴证券",
-          "return_20d": 11.94,
-          "close_price": 13.78,
-          "rank_in_market": 619,
-          "circ_mv": 446.8,
-          "amount": 31068.2,
-          "capacity_proxy_score": 7.08
-        },
-        {
-          "rank": 13,
-          "code": "600621",
-          "name": "华鑫股份",
-          "return_20d": 11.93,
-          "close_price": 13.42,
-          "rank_in_market": 620,
-          "circ_mv": 141.8,
-          "amount": 27086.44,
-          "capacity_proxy_score": 6.82
-        },
-        {
-          "rank": 14,
-          "code": "600030",
-          "name": "中信证券",
-          "return_20d": 11.33,
-          "close_price": 28.4,
-          "rank_in_market": 645,
-          "circ_mv": 3462.72,
-          "amount": 476280.38,
-          "capacity_proxy_score": 8.89
-        },
-        {
-          "rank": 15,
-          "code": "601066",
-          "name": "中信建投",
-          "return_20d": 10.82,
-          "close_price": 27.25,
-          "rank_in_market": 672,
-          "circ_mv": 1832.08,
-          "amount": 204348.57,
-          "capacity_proxy_score": 8.63
-        },
-        {
-          "rank": 16,
-          "code": "000686",
-          "name": "东北证券",
-          "return_20d": 10.14,
-          "close_price": 8.15,
-          "rank_in_market": 697,
-          "circ_mv": 192.6,
-          "amount": 36722.29,
-          "capacity_proxy_score": 7.34
-        },
-        {
-          "rank": 17,
-          "code": "601901",
-          "name": "方正证券",
-          "return_20d": 10.02,
-          "close_price": 7.14,
-          "rank_in_market": 708,
-          "circ_mv": 587.97,
-          "amount": 42645.71,
-          "capacity_proxy_score": 7.48
-        }
-      ]
-    },
-    {
-      "rank": 12,
+      "rank": 13,
       "sector_name": "消费电子",
       "momentum_score": 1.39,
       "listed_count": 17,
       "total_count": 88,
       "listed_ratio": 19.3,
       "avg_return_20d": 25.88,
-      "rank_change": -3,
-      "is_main_line": true,
+      "tradable_count": 17,
+      "rank_change": -4,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -4097,7 +4282,7 @@
           "rank_in_market": 211,
           "circ_mv": 47.05,
           "amount": 34594.91,
-          "capacity_proxy_score": 6.42
+          "capacity_proxy_score": 6.41
         },
         {
           "rank": 7,
@@ -4141,7 +4326,7 @@
           "rank_in_market": 337,
           "circ_mv": 77.53,
           "amount": 52148.24,
-          "capacity_proxy_score": 7.38
+          "capacity_proxy_score": 7.37
         },
         {
           "rank": 11,
@@ -4220,87 +4405,215 @@
           "amount": 132308.48,
           "capacity_proxy_score": 8.78
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 59.8,
+      "rank_change_3d": 5,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 13,
-      "sector_name": "航天装备",
-      "momentum_score": 1.32,
-      "listed_count": 5,
-      "total_count": 9,
-      "listed_ratio": 55.6,
-      "avg_return_20d": 14.69,
-      "rank_change": 0,
-      "is_main_line": true,
+      "rank": 14,
+      "sector_name": "元件",
+      "momentum_score": 1.29,
+      "listed_count": 15,
+      "total_count": 59,
+      "listed_ratio": 25.4,
+      "avg_return_20d": 16.66,
+      "tradable_count": 15,
+      "rank_change": -9,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
           "rank": 1,
-          "code": "688818",
-          "name": "电科蓝天",
-          "return_20d": 17.46,
-          "close_price": 78.3,
-          "rank_in_market": 398,
-          "circ_mv": 103.27,
-          "amount": 270632.67,
-          "capacity_proxy_score": 8.04
+          "code": "002141",
+          "name": "贤丰控股",
+          "return_20d": 51.47,
+          "close_price": 5.15,
+          "rank_in_market": 53,
+          "circ_mv": 54.39,
+          "amount": 67597.47,
+          "capacity_proxy_score": 6.91
         },
         {
           "rank": 2,
-          "code": "600879",
-          "name": "航天电子",
-          "return_20d": 15.76,
-          "close_price": 23.29,
-          "rank_in_market": 462,
-          "circ_mv": 732.05,
-          "amount": 581746.54,
-          "capacity_proxy_score": 9.73
+          "code": "603989",
+          "name": "艾华集团",
+          "return_20d": 25.2,
+          "close_price": 38.3,
+          "rank_in_market": 248,
+          "circ_mv": 160.95,
+          "amount": 98369.43,
+          "capacity_proxy_score": 8.54
         },
         {
           "rank": 3,
-          "code": "600118",
-          "name": "中国卫星",
-          "return_20d": 15.37,
-          "close_price": 90.02,
-          "rank_in_market": 477,
-          "circ_mv": 1003.71,
-          "amount": 531018.61,
-          "capacity_proxy_score": 9.78
+          "code": "002579",
+          "name": "中京电子",
+          "return_20d": 16.02,
+          "close_price": 17.74,
+          "rank_in_market": 449,
+          "circ_mv": 109.44,
+          "amount": 236922.96,
+          "capacity_proxy_score": 8.04
         },
         {
           "rank": 4,
-          "code": "688523",
-          "name": "航天环宇",
-          "return_20d": 14.85,
-          "close_price": 61.18,
-          "rank_in_market": 490,
-          "circ_mv": 233.11,
-          "amount": 92985.45,
-          "capacity_proxy_score": 8.21
+          "code": "603459",
+          "name": "红板科技",
+          "return_20d": 15.55,
+          "close_price": 91.05,
+          "rank_in_market": 471,
+          "circ_mv": 75.04,
+          "amount": 170198.51,
+          "capacity_proxy_score": 7.5
         },
         {
           "rank": 5,
-          "code": "003009",
-          "name": "中天火箭",
-          "return_20d": 10.03,
-          "close_price": 60.64,
-          "rank_in_market": 707,
-          "circ_mv": 95.25,
-          "amount": 56482.3,
-          "capacity_proxy_score": 7.7
+          "code": "002384",
+          "name": "东山精密",
+          "return_20d": 14.84,
+          "close_price": 242.3,
+          "rank_in_market": 492,
+          "circ_mv": 3625.95,
+          "amount": 3109742.65,
+          "capacity_proxy_score": 9.98
+        },
+        {
+          "rank": 6,
+          "code": "688539",
+          "name": "高华科技",
+          "return_20d": 14.0,
+          "close_price": 34.6,
+          "rank_in_market": 523,
+          "circ_mv": 64.48,
+          "amount": 35711.98,
+          "capacity_proxy_score": 6.88
+        },
+        {
+          "rank": 7,
+          "code": "002636",
+          "name": "金安国纪",
+          "return_20d": 13.96,
+          "close_price": 96.64,
+          "rank_in_market": 526,
+          "circ_mv": 742.73,
+          "amount": 438433.5,
+          "capacity_proxy_score": 9.7
+        },
+        {
+          "rank": 8,
+          "code": "300903",
+          "name": "科翔股份",
+          "return_20d": 13.57,
+          "close_price": 84.51,
+          "rank_in_market": 544,
+          "circ_mv": 293.8,
+          "amount": 183799.35,
+          "capacity_proxy_score": 9.17
+        },
+        {
+          "rank": 9,
+          "code": "002916",
+          "name": "深南电路",
+          "return_20d": 13.25,
+          "close_price": 426.0,
+          "rank_in_market": 562,
+          "circ_mv": 2963.48,
+          "amount": 582800.76,
+          "capacity_proxy_score": 9.35
+        },
+        {
+          "rank": 10,
+          "code": "301366",
+          "name": "一博科技",
+          "return_20d": 13.15,
+          "close_price": 51.63,
+          "rank_in_market": 565,
+          "circ_mv": 63.42,
+          "amount": 56064.23,
+          "capacity_proxy_score": 7.24
+        },
+        {
+          "rank": 11,
+          "code": "002552",
+          "name": "宝鼎科技",
+          "return_20d": 13.06,
+          "close_price": 60.34,
+          "rank_in_market": 570,
+          "circ_mv": 248.42,
+          "amount": 232719.19,
+          "capacity_proxy_score": 9.19
+        },
+        {
+          "rank": 12,
+          "code": "600601",
+          "name": "方正科技",
+          "return_20d": 12.46,
+          "close_price": 13.18,
+          "rank_in_market": 598,
+          "circ_mv": 580.11,
+          "amount": 337542.35,
+          "capacity_proxy_score": 9.6
+        },
+        {
+          "rank": 13,
+          "code": "002436",
+          "name": "兴森科技",
+          "return_20d": 11.92,
+          "close_price": 41.13,
+          "rank_in_market": 621,
+          "circ_mv": 665.94,
+          "amount": 603465.66,
+          "capacity_proxy_score": 9.72
+        },
+        {
+          "rank": 14,
+          "code": "301132",
+          "name": "满坤科技",
+          "return_20d": 11.92,
+          "close_price": 41.02,
+          "rank_in_market": 622,
+          "circ_mv": 40.6,
+          "amount": 35934.43,
+          "capacity_proxy_score": 6.25
+        },
+        {
+          "rank": 15,
+          "code": "301251",
+          "name": "威尔高",
+          "return_20d": 9.55,
+          "close_price": 51.95,
+          "rank_in_market": 737,
+          "circ_mv": 41.49,
+          "amount": 96774.73,
+          "capacity_proxy_score": 6.48
         }
-      ]
+      ],
+      "momentum_state": "fading",
+      "momentum_state_label": "主线退潮",
+      "mainline_days": 0,
+      "score_change_3d_pct": 4.0,
+      "rank_change_3d": -4,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": true
     },
     {
-      "rank": 14,
+      "rank": 15,
       "sector_name": "计算机设备",
       "momentum_score": 1.25,
       "listed_count": 15,
       "total_count": 80,
       "listed_ratio": 18.8,
       "avg_return_20d": 27.71,
+      "tradable_count": 15,
       "rank_change": 1,
-      "is_main_line": true,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -4334,7 +4647,7 @@
           "rank_in_market": 130,
           "circ_mv": 42.02,
           "amount": 35522.74,
-          "capacity_proxy_score": 6.29
+          "capacity_proxy_score": 6.28
         },
         {
           "rank": 4,
@@ -4400,7 +4713,7 @@
           "rank_in_market": 331,
           "circ_mv": 127.76,
           "amount": 39549.57,
-          "capacity_proxy_score": 7.13
+          "capacity_proxy_score": 7.12
         },
         {
           "rank": 10,
@@ -4444,7 +4757,7 @@
           "rank_in_market": 577,
           "circ_mv": 22.59,
           "amount": 6857.66,
-          "capacity_proxy_score": 2.79
+          "capacity_proxy_score": 2.78
         },
         {
           "rank": 14,
@@ -4468,18 +4781,27 @@
           "amount": 6965.75,
           "capacity_proxy_score": 3.63
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 33.0,
+      "rank_change_3d": 0,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 15,
+      "rank": 16,
       "sector_name": "专用设备",
       "momentum_score": 1.24,
       "listed_count": 25,
       "total_count": 170,
       "listed_ratio": 14.7,
       "avg_return_20d": 26.9,
-      "rank_change": -3,
-      "is_main_line": true,
+      "tradable_count": 25,
+      "rank_change": -4,
+      "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
@@ -4502,7 +4824,7 @@
           "rank_in_market": 15,
           "circ_mv": 115.06,
           "amount": 174594.86,
-          "capacity_proxy_score": 8.26,
+          "capacity_proxy_score": 8.25,
           "dfmc_industry": "机械设备-专用设备-其他专用设备",
           "dfmc_industry_l2": "专用设备",
           "fund_ratio": 0.0,
@@ -4762,196 +5084,26 @@
           "amount": 549535.98,
           "capacity_proxy_score": 9.76
         }
-      ]
-    },
-    {
-      "rank": 16,
-      "sector_name": "元件",
-      "momentum_score": 1.24,
-      "listed_count": 15,
-      "total_count": 59,
-      "listed_ratio": 25.4,
-      "avg_return_20d": 16.66,
-      "rank_change": -10,
-      "is_main_line": true,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "002141",
-          "name": "贤丰控股",
-          "return_20d": 51.47,
-          "close_price": 5.15,
-          "rank_in_market": 53,
-          "circ_mv": 54.39,
-          "amount": 67597.47,
-          "capacity_proxy_score": 6.91
-        },
-        {
-          "rank": 2,
-          "code": "603989",
-          "name": "艾华集团",
-          "return_20d": 25.2,
-          "close_price": 38.3,
-          "rank_in_market": 248,
-          "circ_mv": 160.95,
-          "amount": 98369.43,
-          "capacity_proxy_score": 8.54
-        },
-        {
-          "rank": 3,
-          "code": "002579",
-          "name": "中京电子",
-          "return_20d": 16.02,
-          "close_price": 17.74,
-          "rank_in_market": 449,
-          "circ_mv": 109.44,
-          "amount": 236922.96,
-          "capacity_proxy_score": 8.04
-        },
-        {
-          "rank": 4,
-          "code": "603459",
-          "name": "红板科技",
-          "return_20d": 15.55,
-          "close_price": 91.05,
-          "rank_in_market": 471,
-          "circ_mv": 75.04,
-          "amount": 170198.51,
-          "capacity_proxy_score": 7.51
-        },
-        {
-          "rank": 5,
-          "code": "002384",
-          "name": "东山精密",
-          "return_20d": 14.84,
-          "close_price": 242.3,
-          "rank_in_market": 492,
-          "circ_mv": 3625.95,
-          "amount": 3109742.65,
-          "capacity_proxy_score": 9.98
-        },
-        {
-          "rank": 6,
-          "code": "688539",
-          "name": "高华科技",
-          "return_20d": 14.0,
-          "close_price": 34.6,
-          "rank_in_market": 523,
-          "circ_mv": 64.48,
-          "amount": 35711.98,
-          "capacity_proxy_score": 6.88
-        },
-        {
-          "rank": 7,
-          "code": "002636",
-          "name": "金安国纪",
-          "return_20d": 13.96,
-          "close_price": 96.64,
-          "rank_in_market": 526,
-          "circ_mv": 742.73,
-          "amount": 438433.5,
-          "capacity_proxy_score": 9.7
-        },
-        {
-          "rank": 8,
-          "code": "300903",
-          "name": "科翔股份",
-          "return_20d": 13.57,
-          "close_price": 84.51,
-          "rank_in_market": 544,
-          "circ_mv": 293.8,
-          "amount": 183799.35,
-          "capacity_proxy_score": 9.17
-        },
-        {
-          "rank": 9,
-          "code": "002916",
-          "name": "深南电路",
-          "return_20d": 13.25,
-          "close_price": 426.0,
-          "rank_in_market": 562,
-          "circ_mv": 2963.48,
-          "amount": 582800.76,
-          "capacity_proxy_score": 9.35
-        },
-        {
-          "rank": 10,
-          "code": "301366",
-          "name": "一博科技",
-          "return_20d": 13.15,
-          "close_price": 51.63,
-          "rank_in_market": 565,
-          "circ_mv": 63.42,
-          "amount": 56064.23,
-          "capacity_proxy_score": 7.24
-        },
-        {
-          "rank": 11,
-          "code": "002552",
-          "name": "宝鼎科技",
-          "return_20d": 13.06,
-          "close_price": 60.34,
-          "rank_in_market": 570,
-          "circ_mv": 248.42,
-          "amount": 232719.19,
-          "capacity_proxy_score": 9.19
-        },
-        {
-          "rank": 12,
-          "code": "600601",
-          "name": "方正科技",
-          "return_20d": 12.46,
-          "close_price": 13.18,
-          "rank_in_market": 598,
-          "circ_mv": 580.11,
-          "amount": 337542.35,
-          "capacity_proxy_score": 9.6
-        },
-        {
-          "rank": 13,
-          "code": "002436",
-          "name": "兴森科技",
-          "return_20d": 11.92,
-          "close_price": 41.13,
-          "rank_in_market": 621,
-          "circ_mv": 665.94,
-          "amount": 603465.66,
-          "capacity_proxy_score": 9.72
-        },
-        {
-          "rank": 14,
-          "code": "301132",
-          "name": "满坤科技",
-          "return_20d": 11.92,
-          "close_price": 41.02,
-          "rank_in_market": 622,
-          "circ_mv": 40.6,
-          "amount": 35934.43,
-          "capacity_proxy_score": 6.25
-        },
-        {
-          "rank": 15,
-          "code": "301251",
-          "name": "威尔高",
-          "return_20d": 9.55,
-          "close_price": 51.95,
-          "rank_in_market": 737,
-          "circ_mv": 41.49,
-          "amount": 96774.73,
-          "capacity_proxy_score": 6.48
-        }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 96.8,
+      "rank_change_3d": 4,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 17,
       "sector_name": "自动化设备",
-      "momentum_score": 0.98,
+      "momentum_score": 1.07,
       "listed_count": 16,
       "total_count": 79,
       "listed_ratio": 20.3,
       "avg_return_20d": 17.73,
-      "rank_change": -1,
+      "tradable_count": 16,
+      "rank_change": -2,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -5131,7 +5283,15 @@
           "amount": 12290.13,
           "capacity_proxy_score": 5.2
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 409.5,
+      "rank_change_3d": 38,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 18,
@@ -5141,7 +5301,8 @@
       "total_count": 10,
       "listed_ratio": 30.0,
       "avg_return_20d": 27.65,
-      "rank_change": 0,
+      "tradable_count": 3,
+      "rank_change": 40,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -5178,17 +5339,126 @@
           "amount": 213767.1,
           "capacity_proxy_score": 9.34
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 175.8,
+      "rank_change_3d": 24,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 19,
+      "sector_name": "专业工程",
+      "momentum_score": 0.88,
+      "listed_count": 7,
+      "total_count": 34,
+      "listed_ratio": 20.6,
+      "avg_return_20d": 23.74,
+      "tradable_count": 7,
+      "rank_change": 1,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "605178",
+          "name": "时空科技",
+          "return_20d": 61.63,
+          "close_price": 101.55,
+          "rank_in_market": 26,
+          "circ_mv": 98.33,
+          "amount": 18508.37,
+          "capacity_proxy_score": 6.06
+        },
+        {
+          "rank": 2,
+          "code": "000032",
+          "name": "深桑达Ａ",
+          "return_20d": 26.05,
+          "close_price": 21.68,
+          "rank_in_market": 235,
+          "circ_mv": 257.43,
+          "amount": 157888.3,
+          "capacity_proxy_score": 9.06
+        },
+        {
+          "rank": 3,
+          "code": "605289",
+          "name": "罗曼股份",
+          "return_20d": 18.14,
+          "close_price": 125.07,
+          "rank_in_market": 369,
+          "circ_mv": 197.26,
+          "amount": 57431.46,
+          "capacity_proxy_score": 7.74
+        },
+        {
+          "rank": 4,
+          "code": "601133",
+          "name": "柏诚股份",
+          "return_20d": 16.77,
+          "close_price": 36.07,
+          "rank_in_market": 419,
+          "circ_mv": 193.85,
+          "amount": 156872.89,
+          "capacity_proxy_score": 8.88
+        },
+        {
+          "rank": 5,
+          "code": "002541",
+          "name": "鸿路钢构",
+          "return_20d": 16.61,
+          "close_price": 19.66,
+          "rank_in_market": 423,
+          "circ_mv": 96.04,
+          "amount": 23451.85,
+          "capacity_proxy_score": 6.31
+        },
+        {
+          "rank": 6,
+          "code": "605167",
+          "name": "利柏特",
+          "return_20d": 13.59,
+          "close_price": 16.05,
+          "rank_in_market": 541,
+          "circ_mv": 81.98,
+          "amount": 15439.91,
+          "capacity_proxy_score": 5.6
+        },
+        {
+          "rank": 7,
+          "code": "300712",
+          "name": "永福股份",
+          "return_20d": 13.38,
+          "close_price": 22.96,
+          "rank_in_market": 553,
+          "circ_mv": 42.37,
+          "amount": 5142.02,
+          "capacity_proxy_score": 2.75
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -6.4,
+      "rank_change_3d": -5,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 20,
       "sector_name": "装修装饰",
       "momentum_score": 0.85,
       "listed_count": 4,
       "total_count": 16,
       "listed_ratio": 25.0,
       "avg_return_20d": 45.66,
-      "rank_change": 0,
+      "tradable_count": 4,
+      "rank_change": 10,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -5228,7 +5498,7 @@
         {
           "rank": 4,
           "code": "605287",
-          "name": "XD德才股",
+          "name": "德才股份",
           "return_20d": 10.46,
           "close_price": 43.5,
           "rank_in_market": 685,
@@ -5236,17 +5506,269 @@
           "amount": 18309.6,
           "capacity_proxy_score": 5.51
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 63.5,
+      "rank_change_3d": 8,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 20,
+      "rank": 21,
+      "sector_name": "化学制品",
+      "momentum_score": 0.85,
+      "listed_count": 21,
+      "total_count": 165,
+      "listed_ratio": 12.7,
+      "avg_return_20d": 21.94,
+      "tradable_count": 20,
+      "rank_change": -7,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "603065",
+          "name": "宿迁联盛",
+          "return_20d": 57.36,
+          "close_price": 19.45,
+          "rank_in_market": 35,
+          "circ_mv": 83.75,
+          "amount": 96773.42,
+          "capacity_proxy_score": 7.95
+        },
+        {
+          "rank": 2,
+          "code": "603823",
+          "name": "百合花",
+          "return_20d": 55.2,
+          "close_price": 66.16,
+          "rank_in_market": 41,
+          "circ_mv": 283.14,
+          "amount": 173184.96,
+          "capacity_proxy_score": 9.13
+        },
+        {
+          "rank": 3,
+          "code": "300821",
+          "name": "东岳硅材",
+          "return_20d": 50.87,
+          "close_price": 26.96,
+          "rank_in_market": 60,
+          "circ_mv": 340.36,
+          "amount": 625976.12,
+          "capacity_proxy_score": 9.25
+        },
+        {
+          "rank": 4,
+          "code": "300522",
+          "name": "世名科技",
+          "return_20d": 44.98,
+          "close_price": 17.47,
+          "rank_in_market": 80,
+          "circ_mv": 47.51,
+          "amount": 74270.13,
+          "capacity_proxy_score": 6.79
+        },
+        {
+          "rank": 5,
+          "code": "688179",
+          "name": "阿拉丁",
+          "return_20d": 28.44,
+          "close_price": 25.92,
+          "rank_in_market": 203,
+          "circ_mv": 99.22,
+          "amount": 65567.7,
+          "capacity_proxy_score": 7.86
+        },
+        {
+          "rank": 6,
+          "code": "300214",
+          "name": "日科化学",
+          "return_20d": 25.15,
+          "close_price": 10.25,
+          "rank_in_market": 250,
+          "circ_mv": 47.83,
+          "amount": 30692.62,
+          "capacity_proxy_score": 6.31
+        },
+        {
+          "rank": 7,
+          "code": "300596",
+          "name": "利安隆",
+          "return_20d": 19.77,
+          "close_price": 45.31,
+          "rank_in_market": 333,
+          "circ_mv": 103.24,
+          "amount": 44033.76,
+          "capacity_proxy_score": 7.57
+        },
+        {
+          "rank": 8,
+          "code": "603020",
+          "name": "爱普股份",
+          "return_20d": 18.4,
+          "close_price": 14.03,
+          "rank_in_market": 364,
+          "circ_mv": 51.58,
+          "amount": 18894.89,
+          "capacity_proxy_score": 5.34
+        },
+        {
+          "rank": 9,
+          "code": "300019",
+          "name": "硅宝科技",
+          "return_20d": 16.99,
+          "close_price": 20.11,
+          "rank_in_market": 413,
+          "circ_mv": 75.37,
+          "amount": 78770.39,
+          "capacity_proxy_score": 7.71
+        },
+        {
+          "rank": 10,
+          "code": "300321",
+          "name": "同大股份",
+          "return_20d": 14.98,
+          "close_price": 47.12,
+          "rank_in_market": 483,
+          "circ_mv": 43.05,
+          "amount": 19462.34,
+          "capacity_proxy_score": 5.64
+        },
+        {
+          "rank": 11,
+          "code": "603004",
+          "name": "鼎龙科技",
+          "return_20d": 14.71,
+          "close_price": 22.69,
+          "rank_in_market": 501,
+          "circ_mv": 13.73,
+          "amount": 14488.16,
+          "capacity_proxy_score": 4.02
+        },
+        {
+          "rank": 12,
+          "code": "002440",
+          "name": "闰土股份",
+          "return_20d": 13.33,
+          "close_price": 9.78,
+          "rank_in_market": 557,
+          "circ_mv": 91.51,
+          "amount": 44463.88,
+          "capacity_proxy_score": 7.45
+        },
+        {
+          "rank": 13,
+          "code": "300041",
+          "name": "回天新材",
+          "return_20d": 12.89,
+          "close_price": 15.06,
+          "rank_in_market": 575,
+          "circ_mv": 87.4,
+          "amount": 171983.62,
+          "capacity_proxy_score": 7.97
+        },
+        {
+          "rank": 14,
+          "code": "301618",
+          "name": "长联科技",
+          "return_20d": 12.59,
+          "close_price": 42.57,
+          "rank_in_market": 591,
+          "circ_mv": 20.65,
+          "amount": 16665.11,
+          "capacity_proxy_score": 4.51
+        },
+        {
+          "rank": 15,
+          "code": "603155",
+          "name": "新亚强",
+          "return_20d": 12.58,
+          "close_price": 28.28,
+          "rank_in_market": 592,
+          "circ_mv": 87.9,
+          "amount": 29711.94,
+          "capacity_proxy_score": 6.48
+        },
+        {
+          "rank": 16,
+          "code": "603980",
+          "name": "吉华集团",
+          "return_20d": 11.87,
+          "close_price": 6.03,
+          "rank_in_market": 625,
+          "circ_mv": 41.65,
+          "amount": 13471.83,
+          "capacity_proxy_score": 4.58
+        },
+        {
+          "rank": 17,
+          "code": "600352",
+          "name": "浙江龙盛",
+          "return_20d": 11.09,
+          "close_price": 11.92,
+          "rank_in_market": 657,
+          "circ_mv": 381.38,
+          "amount": 72362.07,
+          "capacity_proxy_score": 8.25
+        },
+        {
+          "rank": 18,
+          "code": "603110",
+          "name": "东方材料",
+          "return_20d": 10.27,
+          "close_price": 23.19,
+          "rank_in_market": 695,
+          "circ_mv": 45.76,
+          "amount": 45514.98,
+          "capacity_proxy_score": 6.64
+        },
+        {
+          "rank": 19,
+          "code": "603051",
+          "name": "鹿山新材",
+          "return_20d": 9.74,
+          "close_price": 22.88,
+          "rank_in_market": 726,
+          "circ_mv": 37.33,
+          "amount": 24307.12,
+          "capacity_proxy_score": 5.72
+        },
+        {
+          "rank": 20,
+          "code": "603125",
+          "name": "常青科技",
+          "return_20d": 9.61,
+          "close_price": 26.8,
+          "rank_in_market": 736,
+          "circ_mv": 111.77,
+          "amount": 22615.31,
+          "capacity_proxy_score": 6.42
+        }
+      ],
+      "momentum_state": "fading",
+      "momentum_state_label": "主线退潮",
+      "mainline_days": 0,
+      "score_change_3d_pct": -48.8,
+      "rank_change_3d": -14,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": true
+    },
+    {
+      "rank": 22,
       "sector_name": "通信设备",
       "momentum_score": 0.81,
       "listed_count": 12,
       "total_count": 83,
       "listed_ratio": 14.5,
       "avg_return_20d": 33.61,
-      "rank_change": -3,
+      "tradable_count": 12,
+      "rank_change": -5,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -5382,342 +5904,26 @@
           "amount": 25732.23,
           "capacity_proxy_score": 5.49
         }
-      ]
-    },
-    {
-      "rank": 21,
-      "sector_name": "专业工程",
-      "momentum_score": 0.79,
-      "listed_count": 7,
-      "total_count": 34,
-      "listed_ratio": 20.6,
-      "avg_return_20d": 23.74,
-      "rank_change": -1,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "605178",
-          "name": "时空科技",
-          "return_20d": 61.63,
-          "close_price": 101.55,
-          "rank_in_market": 26,
-          "circ_mv": 98.33,
-          "amount": 18508.37,
-          "capacity_proxy_score": 6.06
-        },
-        {
-          "rank": 2,
-          "code": "000032",
-          "name": "深桑达Ａ",
-          "return_20d": 26.05,
-          "close_price": 21.68,
-          "rank_in_market": 235,
-          "circ_mv": 257.43,
-          "amount": 157888.3,
-          "capacity_proxy_score": 9.06
-        },
-        {
-          "rank": 3,
-          "code": "605289",
-          "name": "罗曼股份",
-          "return_20d": 18.14,
-          "close_price": 125.07,
-          "rank_in_market": 369,
-          "circ_mv": 197.26,
-          "amount": 57431.46,
-          "capacity_proxy_score": 7.74
-        },
-        {
-          "rank": 4,
-          "code": "601133",
-          "name": "柏诚股份",
-          "return_20d": 16.77,
-          "close_price": 36.07,
-          "rank_in_market": 419,
-          "circ_mv": 193.85,
-          "amount": 156872.89,
-          "capacity_proxy_score": 8.88
-        },
-        {
-          "rank": 5,
-          "code": "002541",
-          "name": "鸿路钢构",
-          "return_20d": 16.61,
-          "close_price": 19.66,
-          "rank_in_market": 423,
-          "circ_mv": 96.04,
-          "amount": 23451.85,
-          "capacity_proxy_score": 6.32
-        },
-        {
-          "rank": 6,
-          "code": "605167",
-          "name": "利柏特",
-          "return_20d": 13.59,
-          "close_price": 16.05,
-          "rank_in_market": 541,
-          "circ_mv": 81.98,
-          "amount": 15439.91,
-          "capacity_proxy_score": 5.6
-        },
-        {
-          "rank": 7,
-          "code": "300712",
-          "name": "永福股份",
-          "return_20d": 13.38,
-          "close_price": 22.96,
-          "rank_in_market": 553,
-          "circ_mv": 42.37,
-          "amount": 5142.02,
-          "capacity_proxy_score": 2.75
-        }
-      ]
-    },
-    {
-      "rank": 22,
-      "sector_name": "化学制品",
-      "momentum_score": 0.74,
-      "listed_count": 20,
-      "total_count": 165,
-      "listed_ratio": 12.1,
-      "avg_return_20d": 22.54,
-      "rank_change": -9,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "603065",
-          "name": "宿迁联盛",
-          "return_20d": 57.36,
-          "close_price": 19.45,
-          "rank_in_market": 35,
-          "circ_mv": 83.75,
-          "amount": 96773.42,
-          "capacity_proxy_score": 7.95
-        },
-        {
-          "rank": 2,
-          "code": "603823",
-          "name": "百合花",
-          "return_20d": 55.2,
-          "close_price": 66.16,
-          "rank_in_market": 41,
-          "circ_mv": 283.14,
-          "amount": 173184.96,
-          "capacity_proxy_score": 9.13
-        },
-        {
-          "rank": 3,
-          "code": "300821",
-          "name": "东岳硅材",
-          "return_20d": 50.87,
-          "close_price": 26.96,
-          "rank_in_market": 60,
-          "circ_mv": 340.36,
-          "amount": 625976.12,
-          "capacity_proxy_score": 9.25
-        },
-        {
-          "rank": 4,
-          "code": "300522",
-          "name": "世名科技",
-          "return_20d": 44.98,
-          "close_price": 17.47,
-          "rank_in_market": 80,
-          "circ_mv": 47.51,
-          "amount": 74270.13,
-          "capacity_proxy_score": 6.79
-        },
-        {
-          "rank": 5,
-          "code": "688179",
-          "name": "阿拉丁",
-          "return_20d": 28.44,
-          "close_price": 25.92,
-          "rank_in_market": 203,
-          "circ_mv": 99.22,
-          "amount": 65567.7,
-          "capacity_proxy_score": 7.86
-        },
-        {
-          "rank": 6,
-          "code": "300214",
-          "name": "日科化学",
-          "return_20d": 25.15,
-          "close_price": 10.25,
-          "rank_in_market": 250,
-          "circ_mv": 47.83,
-          "amount": 30692.62,
-          "capacity_proxy_score": 6.31
-        },
-        {
-          "rank": 7,
-          "code": "300596",
-          "name": "利安隆",
-          "return_20d": 19.77,
-          "close_price": 45.31,
-          "rank_in_market": 333,
-          "circ_mv": 103.24,
-          "amount": 44033.76,
-          "capacity_proxy_score": 7.57
-        },
-        {
-          "rank": 8,
-          "code": "603020",
-          "name": "爱普股份",
-          "return_20d": 18.4,
-          "close_price": 14.03,
-          "rank_in_market": 364,
-          "circ_mv": 51.58,
-          "amount": 18894.89,
-          "capacity_proxy_score": 5.34
-        },
-        {
-          "rank": 9,
-          "code": "300019",
-          "name": "硅宝科技",
-          "return_20d": 16.99,
-          "close_price": 20.11,
-          "rank_in_market": 413,
-          "circ_mv": 75.37,
-          "amount": 78770.39,
-          "capacity_proxy_score": 7.71
-        },
-        {
-          "rank": 10,
-          "code": "300321",
-          "name": "同大股份",
-          "return_20d": 14.98,
-          "close_price": 47.12,
-          "rank_in_market": 483,
-          "circ_mv": 43.05,
-          "amount": 19462.34,
-          "capacity_proxy_score": 5.64
-        },
-        {
-          "rank": 11,
-          "code": "603004",
-          "name": "鼎龙科技",
-          "return_20d": 14.71,
-          "close_price": 22.69,
-          "rank_in_market": 501,
-          "circ_mv": 13.73,
-          "amount": 14488.16,
-          "capacity_proxy_score": 4.03
-        },
-        {
-          "rank": 12,
-          "code": "002440",
-          "name": "闰土股份",
-          "return_20d": 13.33,
-          "close_price": 9.78,
-          "rank_in_market": 557,
-          "circ_mv": 91.51,
-          "amount": 44463.88,
-          "capacity_proxy_score": 7.45
-        },
-        {
-          "rank": 13,
-          "code": "300041",
-          "name": "回天新材",
-          "return_20d": 12.89,
-          "close_price": 15.06,
-          "rank_in_market": 575,
-          "circ_mv": 87.4,
-          "amount": 171983.62,
-          "capacity_proxy_score": 7.98
-        },
-        {
-          "rank": 14,
-          "code": "301618",
-          "name": "长联科技",
-          "return_20d": 12.59,
-          "close_price": 42.57,
-          "rank_in_market": 591,
-          "circ_mv": 20.65,
-          "amount": 16665.11,
-          "capacity_proxy_score": 4.51
-        },
-        {
-          "rank": 15,
-          "code": "603155",
-          "name": "新亚强",
-          "return_20d": 12.58,
-          "close_price": 28.28,
-          "rank_in_market": 592,
-          "circ_mv": 87.9,
-          "amount": 29711.94,
-          "capacity_proxy_score": 6.48
-        },
-        {
-          "rank": 16,
-          "code": "603980",
-          "name": "吉华集团",
-          "return_20d": 11.87,
-          "close_price": 6.03,
-          "rank_in_market": 625,
-          "circ_mv": 41.65,
-          "amount": 13471.83,
-          "capacity_proxy_score": 4.58
-        },
-        {
-          "rank": 17,
-          "code": "600352",
-          "name": "浙江龙盛",
-          "return_20d": 11.09,
-          "close_price": 11.92,
-          "rank_in_market": 657,
-          "circ_mv": 381.38,
-          "amount": 72362.07,
-          "capacity_proxy_score": 8.25
-        },
-        {
-          "rank": 18,
-          "code": "603110",
-          "name": "东方材料",
-          "return_20d": 10.27,
-          "close_price": 23.19,
-          "rank_in_market": 695,
-          "circ_mv": 45.76,
-          "amount": 45514.98,
-          "capacity_proxy_score": 6.64
-        },
-        {
-          "rank": 19,
-          "code": "603051",
-          "name": "鹿山新材",
-          "return_20d": 9.74,
-          "close_price": 22.88,
-          "rank_in_market": 726,
-          "circ_mv": 37.33,
-          "amount": 24307.12,
-          "capacity_proxy_score": 5.72
-        },
-        {
-          "rank": 20,
-          "code": "603125",
-          "name": "常青科技",
-          "return_20d": 9.61,
-          "close_price": 26.8,
-          "rank_in_market": 736,
-          "circ_mv": 111.77,
-          "amount": 22615.31,
-          "capacity_proxy_score": 6.42
-        }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 65.3,
+      "rank_change_3d": 9,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 23,
       "sector_name": "家电零部件",
-      "momentum_score": 0.7,
+      "momentum_score": 0.75,
       "listed_count": 6,
       "total_count": 30,
       "listed_ratio": 20.0,
       "avg_return_20d": 22.55,
-      "rank_change": 0,
+      "tradable_count": 6,
+      "rank_change": 1,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -5787,17 +5993,226 @@
           "amount": 184078.72,
           "capacity_proxy_score": 9.01
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 33.9,
+      "rank_change_3d": 3,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 24,
+      "sector_name": "家居用品",
+      "momentum_score": 0.72,
+      "listed_count": 10,
+      "total_count": 69,
+      "listed_ratio": 14.5,
+      "avg_return_20d": 24.57,
+      "tradable_count": 9,
+      "rank_change": -2,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "301588",
+          "name": "美新科技",
+          "return_20d": 60.02,
+          "close_price": 55.43,
+          "rank_in_market": 29,
+          "circ_mv": 38.97,
+          "amount": 62132.19,
+          "capacity_proxy_score": 6.36
+        },
+        {
+          "rank": 2,
+          "code": "603313",
+          "name": "梦百合",
+          "return_20d": 41.52,
+          "close_price": 7.26,
+          "rank_in_market": 96,
+          "circ_mv": 40.74,
+          "amount": 35472.84,
+          "capacity_proxy_score": 6.24
+        },
+        {
+          "rank": 3,
+          "code": "002631",
+          "name": "德尔未来",
+          "return_20d": 24.9,
+          "close_price": 9.68,
+          "rank_in_market": 252,
+          "circ_mv": 77.12,
+          "amount": 27684.91,
+          "capacity_proxy_score": 6.26
+        },
+        {
+          "rank": 4,
+          "code": "603725",
+          "name": "天安新材",
+          "return_20d": 22.77,
+          "close_price": 13.64,
+          "rank_in_market": 284,
+          "circ_mv": 41.33,
+          "amount": 31292.8,
+          "capacity_proxy_score": 6.12
+        },
+        {
+          "rank": 5,
+          "code": "603818",
+          "name": "曲美家居",
+          "return_20d": 18.56,
+          "close_price": 3.45,
+          "rank_in_market": 359,
+          "circ_mv": 23.98,
+          "amount": 15139.69,
+          "capacity_proxy_score": 4.53
+        },
+        {
+          "rank": 6,
+          "code": "301055",
+          "name": "张小泉",
+          "return_20d": 17.86,
+          "close_price": 37.09,
+          "rank_in_market": 381,
+          "circ_mv": 57.62,
+          "amount": 10867.4,
+          "capacity_proxy_score": 4.73
+        },
+        {
+          "rank": 7,
+          "code": "603898",
+          "name": "好莱客",
+          "return_20d": 16.74,
+          "close_price": 15.27,
+          "rank_in_market": 420,
+          "circ_mv": 45.26,
+          "amount": 8565.19,
+          "capacity_proxy_score": 4.06
+        },
+        {
+          "rank": 8,
+          "code": "002084",
+          "name": "海鸥住工",
+          "return_20d": 15.85,
+          "close_price": 3.8,
+          "rank_in_market": 459,
+          "circ_mv": 24.26,
+          "amount": 8465.91,
+          "capacity_proxy_score": 3.21
+        },
+        {
+          "rank": 9,
+          "code": "300749",
+          "name": "顶固集创",
+          "return_20d": 10.38,
+          "close_price": 23.5,
+          "rank_in_market": 689,
+          "circ_mv": 37.82,
+          "amount": 16471.99,
+          "capacity_proxy_score": 5.25
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -22.6,
+      "rank_change_3d": -7,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 25,
+      "sector_name": "环保设备",
+      "momentum_score": 0.68,
+      "listed_count": 5,
+      "total_count": 23,
+      "listed_ratio": 21.7,
+      "avg_return_20d": 19.98,
+      "tradable_count": 5,
+      "rank_change": 4,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "688376",
+          "name": "美埃科技",
+          "return_20d": 24.54,
+          "close_price": 96.57,
+          "rank_in_market": 257,
+          "circ_mv": 141.27,
+          "amount": 79880.65,
+          "capacity_proxy_score": 8.31
+        },
+        {
+          "rank": 2,
+          "code": "000551",
+          "name": "创元科技",
+          "return_20d": 24.42,
+          "close_price": 18.65,
+          "rank_in_market": 259,
+          "circ_mv": 92.22,
+          "amount": 75178.45,
+          "capacity_proxy_score": 7.89
+        },
+        {
+          "rank": 3,
+          "code": "603324",
+          "name": "盛剑科技",
+          "return_20d": 20.46,
+          "close_price": 40.75,
+          "rank_in_market": 319,
+          "circ_mv": 63.16,
+          "amount": 28501.56,
+          "capacity_proxy_score": 6.61
+        },
+        {
+          "rank": 4,
+          "code": "300786",
+          "name": "国林科技",
+          "return_20d": 17.39,
+          "close_price": 23.9,
+          "rank_in_market": 399,
+          "circ_mv": 33.66,
+          "amount": 23738.35,
+          "capacity_proxy_score": 5.55
+        },
+        {
+          "rank": 5,
+          "code": "688671",
+          "name": "碧兴物联",
+          "return_20d": 13.09,
+          "close_price": 26.52,
+          "rank_in_market": 569,
+          "circ_mv": 12.7,
+          "amount": 6072.87,
+          "capacity_proxy_score": 2.72
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 28.3,
+      "rank_change_3d": 2,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 26,
       "sector_name": "IT服务",
       "momentum_score": 0.64,
       "listed_count": 13,
       "total_count": 113,
       "listed_ratio": 11.5,
       "avg_return_20d": 26.11,
-      "rank_change": 0,
+      "tradable_count": 13,
+      "rank_change": 13,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -5944,130 +6359,93 @@
           "amount": 45137.51,
           "capacity_proxy_score": 7.48
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 146.2,
+      "rank_change_3d": 24,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 25,
-      "sector_name": "家居用品",
-      "momentum_score": 0.61,
-      "listed_count": 9,
-      "total_count": 69,
-      "listed_ratio": 13.0,
-      "avg_return_20d": 25.4,
-      "rank_change": -4,
+      "rank": 27,
+      "sector_name": "影视院线",
+      "momentum_score": 0.64,
+      "listed_count": 4,
+      "total_count": 17,
+      "listed_ratio": 23.5,
+      "avg_return_20d": 19.35,
+      "tradable_count": 4,
+      "rank_change": 54,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
           "rank": 1,
-          "code": "301588",
-          "name": "美新科技",
-          "return_20d": 60.02,
-          "close_price": 55.43,
-          "rank_in_market": 29,
-          "circ_mv": 38.97,
-          "amount": 62132.19,
-          "capacity_proxy_score": 6.37
+          "code": "002739",
+          "name": "儒意电影",
+          "return_20d": 27.35,
+          "close_price": 10.43,
+          "rank_in_market": 221,
+          "circ_mv": 215.98,
+          "amount": 193859.76,
+          "capacity_proxy_score": 9.04
         },
         {
           "rank": 2,
-          "code": "603313",
-          "name": "梦百合",
-          "return_20d": 41.52,
-          "close_price": 7.26,
-          "rank_in_market": 96,
-          "circ_mv": 40.74,
-          "amount": 35472.84,
-          "capacity_proxy_score": 6.24
+          "code": "000892",
+          "name": "欢瑞世纪",
+          "return_20d": 17.98,
+          "close_price": 4.2,
+          "rank_in_market": 379,
+          "circ_mv": 28.46,
+          "amount": 57539.68,
+          "capacity_proxy_score": 5.58
         },
         {
           "rank": 3,
-          "code": "002631",
-          "name": "德尔未来",
-          "return_20d": 24.9,
-          "close_price": 9.68,
-          "rank_in_market": 252,
-          "circ_mv": 77.12,
-          "amount": 27684.91,
-          "capacity_proxy_score": 6.26
+          "code": "300528",
+          "name": "幸福蓝海",
+          "return_20d": 16.06,
+          "close_price": 15.9,
+          "rank_in_market": 445,
+          "circ_mv": 57.4,
+          "amount": 42501.09,
+          "capacity_proxy_score": 6.89
         },
         {
           "rank": 4,
-          "code": "603725",
-          "name": "天安新材",
-          "return_20d": 22.77,
-          "close_price": 13.64,
-          "rank_in_market": 284,
-          "circ_mv": 41.33,
-          "amount": 31292.8,
-          "capacity_proxy_score": 6.12
-        },
-        {
-          "rank": 5,
-          "code": "603818",
-          "name": "曲美家居",
-          "return_20d": 18.56,
-          "close_price": 3.45,
-          "rank_in_market": 359,
-          "circ_mv": 23.98,
-          "amount": 15139.69,
-          "capacity_proxy_score": 4.53
-        },
-        {
-          "rank": 6,
-          "code": "301055",
-          "name": "张小泉",
-          "return_20d": 17.86,
-          "close_price": 37.09,
-          "rank_in_market": 381,
-          "circ_mv": 57.62,
-          "amount": 10867.4,
-          "capacity_proxy_score": 4.73
-        },
-        {
-          "rank": 7,
-          "code": "603898",
-          "name": "好莱客",
-          "return_20d": 16.74,
-          "close_price": 15.27,
-          "rank_in_market": 420,
-          "circ_mv": 45.26,
-          "amount": 8565.19,
-          "capacity_proxy_score": 4.06
-        },
-        {
-          "rank": 8,
-          "code": "002084",
-          "name": "海鸥住工",
-          "return_20d": 15.85,
-          "close_price": 3.8,
-          "rank_in_market": 459,
-          "circ_mv": 24.26,
-          "amount": 8465.91,
-          "capacity_proxy_score": 3.21
-        },
-        {
-          "rank": 9,
-          "code": "300749",
-          "name": "顶固集创",
-          "return_20d": 10.38,
-          "close_price": 23.5,
-          "rank_in_market": 689,
-          "circ_mv": 37.82,
-          "amount": 16471.99,
-          "capacity_proxy_score": 5.25
+          "code": "300251",
+          "name": "光线传媒",
+          "return_20d": 16.01,
+          "close_price": 12.75,
+          "rank_in_market": 451,
+          "circ_mv": 349.98,
+          "amount": 144603.87,
+          "capacity_proxy_score": 9.13
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 1180.0,
+      "rank_change_3d": 54,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 26,
+      "rank": 28,
       "sector_name": "塑料",
       "momentum_score": 0.6,
       "listed_count": 9,
       "total_count": 70,
       "listed_ratio": 12.9,
       "avg_return_20d": 32.83,
-      "rank_change": -7,
+      "tradable_count": 9,
+      "rank_change": -9,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -6157,7 +6535,7 @@
           "rank_in_market": 487,
           "circ_mv": 32.91,
           "amount": 77379.25,
-          "capacity_proxy_score": 6.04
+          "capacity_proxy_score": 6.03
         },
         {
           "rank": 9,
@@ -6170,180 +6548,26 @@
           "amount": 33333.79,
           "capacity_proxy_score": 4.94
         }
-      ]
-    },
-    {
-      "rank": 27,
-      "sector_name": "玻璃玻纤",
-      "momentum_score": 0.56,
-      "listed_count": 3,
-      "total_count": 15,
-      "listed_ratio": 20.0,
-      "avg_return_20d": 29.8,
-      "rank_change": -4,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "301526",
-          "name": "国际复材",
-          "return_20d": 42.8,
-          "close_price": 37.77,
-          "rank_in_market": 90,
-          "circ_mv": 565.26,
-          "amount": 796611.62,
-          "capacity_proxy_score": 9.42
-        },
-        {
-          "rank": 2,
-          "code": "600176",
-          "name": "中国巨石",
-          "return_20d": 35.62,
-          "close_price": 55.7,
-          "rank_in_market": 140,
-          "circ_mv": 2359.43,
-          "amount": 1456180.66,
-          "capacity_proxy_score": 9.94
-        },
-        {
-          "rank": 3,
-          "code": "002080",
-          "name": "中材科技",
-          "return_20d": 10.97,
-          "close_price": 70.89,
-          "rank_in_market": 665,
-          "circ_mv": 1256.92,
-          "amount": 391756.3,
-          "capacity_proxy_score": 9.24
-        }
-      ]
-    },
-    {
-      "rank": 28,
-      "sector_name": "摩托车及其他",
-      "momentum_score": 0.56,
-      "listed_count": 3,
-      "total_count": 15,
-      "listed_ratio": 20.0,
-      "avg_return_20d": 28.48,
-      "rank_change": -4,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "003033",
-          "name": "征和工业",
-          "return_20d": 39.06,
-          "close_price": 70.21,
-          "rank_in_market": 115,
-          "circ_mv": 56.49,
-          "amount": 20134.82,
-          "capacity_proxy_score": 5.55
-        },
-        {
-          "rank": 2,
-          "code": "301345",
-          "name": "涛涛车业",
-          "return_20d": 32.08,
-          "close_price": 258.0,
-          "rank_in_market": 163,
-          "circ_mv": 92.36,
-          "amount": 53659.35,
-          "capacity_proxy_score": 7.6
-        },
-        {
-          "rank": 3,
-          "code": "603129",
-          "name": "春风动力",
-          "return_20d": 14.3,
-          "close_price": 252.01,
-          "rank_in_market": 515,
-          "circ_mv": 391.58,
-          "amount": 27949.97,
-          "capacity_proxy_score": 6.94
-        }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -35.5,
+      "rank_change_3d": -12,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 29,
-      "sector_name": "环保设备",
-      "momentum_score": 0.56,
-      "listed_count": 5,
-      "total_count": 23,
-      "listed_ratio": 21.7,
-      "avg_return_20d": 19.98,
-      "rank_change": 0,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "688376",
-          "name": "美埃科技",
-          "return_20d": 24.54,
-          "close_price": 96.57,
-          "rank_in_market": 257,
-          "circ_mv": 141.27,
-          "amount": 79880.65,
-          "capacity_proxy_score": 8.31
-        },
-        {
-          "rank": 2,
-          "code": "000551",
-          "name": "创元科技",
-          "return_20d": 24.42,
-          "close_price": 18.65,
-          "rank_in_market": 259,
-          "circ_mv": 92.22,
-          "amount": 75178.45,
-          "capacity_proxy_score": 7.89
-        },
-        {
-          "rank": 3,
-          "code": "603324",
-          "name": "盛剑科技",
-          "return_20d": 20.46,
-          "close_price": 40.75,
-          "rank_in_market": 319,
-          "circ_mv": 63.16,
-          "amount": 28501.56,
-          "capacity_proxy_score": 6.61
-        },
-        {
-          "rank": 4,
-          "code": "300786",
-          "name": "国林科技",
-          "return_20d": 17.39,
-          "close_price": 23.9,
-          "rank_in_market": 399,
-          "circ_mv": 33.66,
-          "amount": 23738.35,
-          "capacity_proxy_score": 5.55
-        },
-        {
-          "rank": 5,
-          "code": "688671",
-          "name": "碧兴物联",
-          "return_20d": 13.09,
-          "close_price": 26.52,
-          "rank_in_market": 569,
-          "circ_mv": 12.7,
-          "amount": 6072.87,
-          "capacity_proxy_score": 2.72
-        }
-      ]
-    },
-    {
-      "rank": 30,
       "sector_name": "航空装备",
-      "momentum_score": 0.55,
+      "momentum_score": 0.6,
       "listed_count": 7,
       "total_count": 46,
       "listed_ratio": 15.2,
       "avg_return_20d": 22.98,
-      "rank_change": 0,
+      "tradable_count": 7,
+      "rank_change": -6,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -6424,320 +6648,26 @@
           "amount": 238196.92,
           "capacity_proxy_score": 8.55
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 36.4,
+      "rank_change_3d": 4,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 31,
-      "sector_name": "影视院线",
-      "momentum_score": 0.55,
-      "listed_count": 4,
-      "total_count": 17,
-      "listed_ratio": 23.5,
-      "avg_return_20d": 19.35,
-      "rank_change": 51,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "002739",
-          "name": "儒意电影",
-          "return_20d": 27.35,
-          "close_price": 10.43,
-          "rank_in_market": 221,
-          "circ_mv": 215.98,
-          "amount": 193859.76,
-          "capacity_proxy_score": 9.04
-        },
-        {
-          "rank": 2,
-          "code": "000892",
-          "name": "欢瑞世纪",
-          "return_20d": 17.98,
-          "close_price": 4.2,
-          "rank_in_market": 379,
-          "circ_mv": 28.46,
-          "amount": 57539.68,
-          "capacity_proxy_score": 5.59
-        },
-        {
-          "rank": 3,
-          "code": "300528",
-          "name": "幸福蓝海",
-          "return_20d": 16.06,
-          "close_price": 15.9,
-          "rank_in_market": 445,
-          "circ_mv": 57.4,
-          "amount": 42501.09,
-          "capacity_proxy_score": 6.89
-        },
-        {
-          "rank": 4,
-          "code": "300251",
-          "name": "光线传媒",
-          "return_20d": 16.01,
-          "close_price": 12.75,
-          "rank_in_market": 451,
-          "circ_mv": 349.98,
-          "amount": 144603.87,
-          "capacity_proxy_score": 9.13
-        }
-      ]
-    },
-    {
-      "rank": 32,
-      "sector_name": "汽车零部件",
-      "momentum_score": 0.52,
-      "listed_count": 21,
-      "total_count": 237,
-      "listed_ratio": 8.9,
-      "avg_return_20d": 22.7,
-      "rank_change": 2,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "301310",
-          "name": "鑫宏业",
-          "return_20d": 89.41,
-          "close_price": 58.64,
-          "rank_in_market": 5,
-          "circ_mv": 35.73,
-          "amount": 81851.16,
-          "capacity_proxy_score": 6.17
-        },
-        {
-          "rank": 2,
-          "code": "301607",
-          "name": "富特科技",
-          "return_20d": 38.55,
-          "close_price": 55.56,
-          "rank_in_market": 118,
-          "circ_mv": 89.64,
-          "amount": 133982.09,
-          "capacity_proxy_score": 7.89
-        },
-        {
-          "rank": 3,
-          "code": "002965",
-          "name": "祥鑫科技",
-          "return_20d": 33.39,
-          "close_price": 51.41,
-          "rank_in_market": 152,
-          "circ_mv": 100.51,
-          "amount": 83028.48,
-          "capacity_proxy_score": 8.06
-        },
-        {
-          "rank": 4,
-          "code": "002536",
-          "name": "飞龙股份",
-          "return_20d": 30.6,
-          "close_price": 52.84,
-          "rank_in_market": 171,
-          "circ_mv": 296.7,
-          "amount": 301527.28,
-          "capacity_proxy_score": 9.36
-        },
-        {
-          "rank": 5,
-          "code": "001365",
-          "name": "天海电子",
-          "return_20d": 29.8,
-          "close_price": 50.0,
-          "rank_in_market": 179,
-          "circ_mv": 27.64,
-          "amount": 108230.64,
-          "capacity_proxy_score": 5.62
-        },
-        {
-          "rank": 6,
-          "code": "603949",
-          "name": "雪龙集团",
-          "return_20d": 29.14,
-          "close_price": 18.88,
-          "rank_in_market": 191,
-          "circ_mv": 40.08,
-          "amount": 12370.04,
-          "capacity_proxy_score": 4.43
-        },
-        {
-          "rank": 7,
-          "code": "301397",
-          "name": "溯联股份",
-          "return_20d": 23.77,
-          "close_price": 37.28,
-          "rank_in_market": 265,
-          "circ_mv": 26.97,
-          "amount": 14875.27,
-          "capacity_proxy_score": 4.63
-        },
-        {
-          "rank": 8,
-          "code": "603950",
-          "name": "长源东谷",
-          "return_20d": 20.92,
-          "close_price": 71.5,
-          "rank_in_market": 311,
-          "circ_mv": 244.35,
-          "amount": 97303.97,
-          "capacity_proxy_score": 8.27
-        },
-        {
-          "rank": 9,
-          "code": "300745",
-          "name": "欣锐科技",
-          "return_20d": 18.53,
-          "close_price": 47.92,
-          "rank_in_market": 360,
-          "circ_mv": 70.59,
-          "amount": 58898.71,
-          "capacity_proxy_score": 7.4
-        },
-        {
-          "rank": 10,
-          "code": "301072",
-          "name": "中捷精工",
-          "return_20d": 18.23,
-          "close_price": 41.38,
-          "rank_in_market": 368,
-          "circ_mv": 28.88,
-          "amount": 18691.78,
-          "capacity_proxy_score": 5.07
-        },
-        {
-          "rank": 11,
-          "code": "002126",
-          "name": "银轮股份",
-          "return_20d": 16.43,
-          "close_price": 54.5,
-          "rank_in_market": 430,
-          "circ_mv": 441.44,
-          "amount": 160118.4,
-          "capacity_proxy_score": 8.73
-        },
-        {
-          "rank": 12,
-          "code": "002921",
-          "name": "联诚精密",
-          "return_20d": 16.02,
-          "close_price": 26.94,
-          "rank_in_market": 450,
-          "circ_mv": 35.27,
-          "amount": 19939.09,
-          "capacity_proxy_score": 5.4
-        },
-        {
-          "rank": 13,
-          "code": "301005",
-          "name": "超捷股份",
-          "return_20d": 14.88,
-          "close_price": 114.88,
-          "rank_in_market": 488,
-          "circ_mv": 211.85,
-          "amount": 334721.36,
-          "capacity_proxy_score": 8.92
-        },
-        {
-          "rank": 14,
-          "code": "603211",
-          "name": "XD晋拓股",
-          "return_20d": 14.48,
-          "close_price": 37.88,
-          "rank_in_market": 509,
-          "circ_mv": 98.87,
-          "amount": 43680.77,
-          "capacity_proxy_score": 7.52
-        },
-        {
-          "rank": 15,
-          "code": "300694",
-          "name": "蠡湖股份",
-          "return_20d": 14.01,
-          "close_price": 11.31,
-          "rank_in_market": 522,
-          "circ_mv": 24.86,
-          "amount": 9807.71,
-          "capacity_proxy_score": 3.45
-        },
-        {
-          "rank": 16,
-          "code": "301656",
-          "name": "联合动力",
-          "return_20d": 13.42,
-          "close_price": 18.26,
-          "rank_in_market": 552,
-          "circ_mv": 37.01,
-          "amount": 30601.88,
-          "capacity_proxy_score": 5.95
-        },
-        {
-          "rank": 17,
-          "code": "002937",
-          "name": "兴瑞科技",
-          "return_20d": 13.1,
-          "close_price": 41.8,
-          "rank_in_market": 568,
-          "circ_mv": 135.69,
-          "amount": 32317.54,
-          "capacity_proxy_score": 6.97
-        },
-        {
-          "rank": 18,
-          "code": "300547",
-          "name": "川环科技",
-          "return_20d": 11.63,
-          "close_price": 35.8,
-          "rank_in_market": 635,
-          "circ_mv": 65.1,
-          "amount": 49021.57,
-          "capacity_proxy_score": 7.17
-        },
-        {
-          "rank": 19,
-          "code": "603009",
-          "name": "北特科技",
-          "return_20d": 11.05,
-          "close_price": 48.15,
-          "rank_in_market": 659,
-          "circ_mv": 165.86,
-          "amount": 51542.03,
-          "capacity_proxy_score": 7.53
-        },
-        {
-          "rank": 20,
-          "code": "603358",
-          "name": "华达科技",
-          "return_20d": 9.94,
-          "close_price": 41.15,
-          "rank_in_market": 712,
-          "circ_mv": 194.22,
-          "amount": 37349.67,
-          "capacity_proxy_score": 7.37
-        },
-        {
-          "rank": 21,
-          "code": "301398",
-          "name": "星源卓镁",
-          "return_20d": 9.35,
-          "close_price": 39.64,
-          "rank_in_market": 748,
-          "circ_mv": 43.66,
-          "amount": 9536.55,
-          "capacity_proxy_score": 4.19
-        }
-      ]
-    },
-    {
-      "rank": 33,
+      "rank": 30,
       "sector_name": "软件开发",
-      "momentum_score": 0.5,
+      "momentum_score": 0.57,
       "listed_count": 15,
-      "total_count": 125,
-      "listed_ratio": 12.0,
+      "total_count": 123,
+      "listed_ratio": 12.2,
       "avg_return_20d": 18.12,
-      "rank_change": -2,
+      "tradable_count": 15,
+      "rank_change": 2,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -6906,17 +6836,26 @@
           "amount": 445439.84,
           "capacity_proxy_score": 9.23
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 46.2,
+      "rank_change_3d": 6,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 34,
+      "rank": 31,
       "sector_name": "养殖业",
-      "momentum_score": 0.48,
+      "momentum_score": 0.57,
       "listed_count": 5,
       "total_count": 21,
       "listed_ratio": 23.8,
       "avg_return_20d": 14.03,
-      "rank_change": 23,
+      "tradable_count": 5,
+      "rank_change": 25,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -6975,16 +6914,447 @@
           "amount": 66643.43,
           "capacity_proxy_score": 7.67
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -9.5,
+      "rank_change_3d": -9,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 32,
+      "sector_name": "汽车零部件",
+      "momentum_score": 0.56,
+      "listed_count": 21,
+      "total_count": 237,
+      "listed_ratio": 8.9,
+      "avg_return_20d": 22.7,
+      "tradable_count": 21,
+      "rank_change": 2,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "301310",
+          "name": "鑫宏业",
+          "return_20d": 89.41,
+          "close_price": 58.64,
+          "rank_in_market": 5,
+          "circ_mv": 35.73,
+          "amount": 81851.16,
+          "capacity_proxy_score": 6.17
+        },
+        {
+          "rank": 2,
+          "code": "301607",
+          "name": "富特科技",
+          "return_20d": 38.55,
+          "close_price": 55.56,
+          "rank_in_market": 118,
+          "circ_mv": 89.64,
+          "amount": 133982.09,
+          "capacity_proxy_score": 7.89
+        },
+        {
+          "rank": 3,
+          "code": "002965",
+          "name": "祥鑫科技",
+          "return_20d": 33.39,
+          "close_price": 51.41,
+          "rank_in_market": 152,
+          "circ_mv": 100.51,
+          "amount": 83028.48,
+          "capacity_proxy_score": 8.06
+        },
+        {
+          "rank": 4,
+          "code": "002536",
+          "name": "飞龙股份",
+          "return_20d": 30.6,
+          "close_price": 52.84,
+          "rank_in_market": 171,
+          "circ_mv": 296.7,
+          "amount": 301527.28,
+          "capacity_proxy_score": 9.36
+        },
+        {
+          "rank": 5,
+          "code": "001365",
+          "name": "天海电子",
+          "return_20d": 29.8,
+          "close_price": 50.0,
+          "rank_in_market": 179,
+          "circ_mv": 27.64,
+          "amount": 108230.64,
+          "capacity_proxy_score": 5.61
+        },
+        {
+          "rank": 6,
+          "code": "603949",
+          "name": "雪龙集团",
+          "return_20d": 29.14,
+          "close_price": 18.88,
+          "rank_in_market": 191,
+          "circ_mv": 40.08,
+          "amount": 12370.04,
+          "capacity_proxy_score": 4.42
+        },
+        {
+          "rank": 7,
+          "code": "301397",
+          "name": "溯联股份",
+          "return_20d": 23.77,
+          "close_price": 37.28,
+          "rank_in_market": 265,
+          "circ_mv": 26.97,
+          "amount": 14875.27,
+          "capacity_proxy_score": 4.63
+        },
+        {
+          "rank": 8,
+          "code": "603950",
+          "name": "长源东谷",
+          "return_20d": 20.92,
+          "close_price": 71.5,
+          "rank_in_market": 311,
+          "circ_mv": 244.35,
+          "amount": 97303.97,
+          "capacity_proxy_score": 8.27
+        },
+        {
+          "rank": 9,
+          "code": "300745",
+          "name": "欣锐科技",
+          "return_20d": 18.53,
+          "close_price": 47.92,
+          "rank_in_market": 360,
+          "circ_mv": 70.59,
+          "amount": 58898.71,
+          "capacity_proxy_score": 7.4
+        },
+        {
+          "rank": 10,
+          "code": "301072",
+          "name": "中捷精工",
+          "return_20d": 18.23,
+          "close_price": 41.38,
+          "rank_in_market": 368,
+          "circ_mv": 28.88,
+          "amount": 18691.78,
+          "capacity_proxy_score": 5.06
+        },
+        {
+          "rank": 11,
+          "code": "002126",
+          "name": "银轮股份",
+          "return_20d": 16.43,
+          "close_price": 54.5,
+          "rank_in_market": 430,
+          "circ_mv": 441.44,
+          "amount": 160118.4,
+          "capacity_proxy_score": 8.73
+        },
+        {
+          "rank": 12,
+          "code": "002921",
+          "name": "联诚精密",
+          "return_20d": 16.02,
+          "close_price": 26.94,
+          "rank_in_market": 450,
+          "circ_mv": 35.27,
+          "amount": 19939.09,
+          "capacity_proxy_score": 5.4
+        },
+        {
+          "rank": 13,
+          "code": "301005",
+          "name": "超捷股份",
+          "return_20d": 14.88,
+          "close_price": 114.88,
+          "rank_in_market": 488,
+          "circ_mv": 211.85,
+          "amount": 334721.36,
+          "capacity_proxy_score": 8.92
+        },
+        {
+          "rank": 14,
+          "code": "603211",
+          "name": "晋拓股份",
+          "return_20d": 14.48,
+          "close_price": 37.88,
+          "rank_in_market": 509,
+          "circ_mv": 98.87,
+          "amount": 43680.77,
+          "capacity_proxy_score": 7.52
+        },
+        {
+          "rank": 15,
+          "code": "300694",
+          "name": "蠡湖股份",
+          "return_20d": 14.01,
+          "close_price": 11.31,
+          "rank_in_market": 522,
+          "circ_mv": 24.86,
+          "amount": 9807.71,
+          "capacity_proxy_score": 3.45
+        },
+        {
+          "rank": 16,
+          "code": "301656",
+          "name": "联合动力",
+          "return_20d": 13.42,
+          "close_price": 18.26,
+          "rank_in_market": 552,
+          "circ_mv": 37.01,
+          "amount": 30601.88,
+          "capacity_proxy_score": 5.95
+        },
+        {
+          "rank": 17,
+          "code": "002937",
+          "name": "兴瑞科技",
+          "return_20d": 13.1,
+          "close_price": 41.8,
+          "rank_in_market": 568,
+          "circ_mv": 135.69,
+          "amount": 32317.54,
+          "capacity_proxy_score": 6.97
+        },
+        {
+          "rank": 18,
+          "code": "300547",
+          "name": "川环科技",
+          "return_20d": 11.63,
+          "close_price": 35.8,
+          "rank_in_market": 635,
+          "circ_mv": 65.1,
+          "amount": 49021.57,
+          "capacity_proxy_score": 7.17
+        },
+        {
+          "rank": 19,
+          "code": "603009",
+          "name": "北特科技",
+          "return_20d": 11.05,
+          "close_price": 48.15,
+          "rank_in_market": 659,
+          "circ_mv": 165.86,
+          "amount": 51542.03,
+          "capacity_proxy_score": 7.53
+        },
+        {
+          "rank": 20,
+          "code": "603358",
+          "name": "华达科技",
+          "return_20d": 9.94,
+          "close_price": 41.15,
+          "rank_in_market": 712,
+          "circ_mv": 194.22,
+          "amount": 37349.67,
+          "capacity_proxy_score": 7.36
+        },
+        {
+          "rank": 21,
+          "code": "301398",
+          "name": "星源卓镁",
+          "return_20d": 9.35,
+          "close_price": 39.64,
+          "rank_in_market": 748,
+          "circ_mv": 43.66,
+          "amount": 9536.55,
+          "capacity_proxy_score": 4.19
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 75.0,
+      "rank_change_3d": 12,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 33,
+      "sector_name": "玻璃玻纤",
+      "momentum_score": 0.56,
+      "listed_count": 3,
+      "total_count": 15,
+      "listed_ratio": 20.0,
+      "avg_return_20d": 29.8,
+      "tradable_count": 3,
+      "rank_change": -6,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "301526",
+          "name": "国际复材",
+          "return_20d": 42.8,
+          "close_price": 37.77,
+          "rank_in_market": 90,
+          "circ_mv": 565.26,
+          "amount": 796611.62,
+          "capacity_proxy_score": 9.41
+        },
+        {
+          "rank": 2,
+          "code": "600176",
+          "name": "中国巨石",
+          "return_20d": 35.62,
+          "close_price": 55.7,
+          "rank_in_market": 140,
+          "circ_mv": 2359.43,
+          "amount": 1456180.66,
+          "capacity_proxy_score": 9.94
+        },
+        {
+          "rank": 3,
+          "code": "002080",
+          "name": "中材科技",
+          "return_20d": 10.97,
+          "close_price": 70.89,
+          "rank_in_market": 665,
+          "circ_mv": 1256.92,
+          "amount": 391756.3,
+          "capacity_proxy_score": 9.24
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 0.0,
+      "rank_change_3d": -8,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 34,
+      "sector_name": "摩托车及其他",
+      "momentum_score": 0.56,
+      "listed_count": 3,
+      "total_count": 15,
+      "listed_ratio": 20.0,
+      "avg_return_20d": 28.48,
+      "tradable_count": 3,
+      "rank_change": -6,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "003033",
+          "name": "征和工业",
+          "return_20d": 39.06,
+          "close_price": 70.21,
+          "rank_in_market": 115,
+          "circ_mv": 56.49,
+          "amount": 20134.82,
+          "capacity_proxy_score": 5.54
+        },
+        {
+          "rank": 2,
+          "code": "301345",
+          "name": "涛涛车业",
+          "return_20d": 32.08,
+          "close_price": 258.0,
+          "rank_in_market": 163,
+          "circ_mv": 92.36,
+          "amount": 53659.35,
+          "capacity_proxy_score": 7.6
+        },
+        {
+          "rank": 3,
+          "code": "603129",
+          "name": "春风动力",
+          "return_20d": 14.3,
+          "close_price": 252.01,
+          "rank_in_market": 515,
+          "circ_mv": 391.58,
+          "amount": 27949.97,
+          "capacity_proxy_score": 6.94
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 19.1,
+      "rank_change_3d": -2,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 35,
+      "sector_name": "数字媒体",
+      "momentum_score": 0.49,
+      "listed_count": 3,
+      "total_count": 14,
+      "listed_ratio": 21.4,
+      "avg_return_20d": 19.46,
+      "tradable_count": 3,
+      "rank_change": 12,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300418",
+          "name": "昆仑万维",
+          "return_20d": 33.78,
+          "close_price": 49.42,
+          "rank_in_market": 150,
+          "circ_mv": 594.09,
+          "amount": 819597.94,
+          "capacity_proxy_score": 9.43
+        },
+        {
+          "rank": 2,
+          "code": "300364",
+          "name": "中文在线",
+          "return_20d": 13.32,
+          "close_price": 24.75,
+          "rank_in_market": 558,
+          "circ_mv": 165.0,
+          "amount": 183134.96,
+          "capacity_proxy_score": 8.84
+        },
+        {
+          "rank": 3,
+          "code": "600228",
+          "name": "返利科技",
+          "return_20d": 11.27,
+          "close_price": 6.81,
+          "rank_in_market": 647,
+          "circ_mv": 28.42,
+          "amount": 33673.77,
+          "capacity_proxy_score": 5.7
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 512.5,
+      "rank_change_3d": 40,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 36,
       "sector_name": "农业综合",
-      "momentum_score": 0.48,
+      "momentum_score": 0.47,
       "listed_count": 1,
       "total_count": 2,
       "listed_ratio": 50.0,
       "avg_return_20d": 10.96,
+      "tradable_count": 1,
       "rank_change": 0,
       "is_main_line": false,
       "is_warning": false,
@@ -7000,17 +7370,26 @@
           "amount": 12481.04,
           "capacity_proxy_score": 4.26
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -6.0,
+      "rank_change_3d": -6,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 36,
+      "rank": 37,
       "sector_name": "其他电源设备",
-      "momentum_score": 0.47,
+      "momentum_score": 0.46,
       "listed_count": 5,
       "total_count": 32,
       "listed_ratio": 15.6,
       "avg_return_20d": 20.33,
-      "rank_change": 0,
+      "tradable_count": 5,
+      "rank_change": 1,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7069,17 +7448,71 @@
           "amount": 37753.38,
           "capacity_proxy_score": 6.64
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 557.1,
+      "rank_change_3d": 40,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 37,
+      "rank": 38,
+      "sector_name": "非金属材料",
+      "momentum_score": 0.46,
+      "listed_count": 2,
+      "total_count": 8,
+      "listed_ratio": 25.0,
+      "avg_return_20d": 19.04,
+      "tradable_count": 2,
+      "rank_change": -13,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "688598",
+          "name": "金博股份",
+          "return_20d": 28.65,
+          "close_price": 44.5,
+          "rank_in_market": 199,
+          "circ_mv": 92.07,
+          "amount": 72066.63,
+          "capacity_proxy_score": 7.85
+        },
+        {
+          "rank": 2,
+          "code": "301071",
+          "name": "力量钻石",
+          "return_20d": 9.43,
+          "close_price": 77.37,
+          "rank_in_market": 746,
+          "circ_mv": 151.68,
+          "amount": 146074.0,
+          "capacity_proxy_score": 8.67
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -37.8,
+      "rank_change_3d": -19,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 39,
       "sector_name": "医疗器械",
-      "momentum_score": 0.43,
+      "momentum_score": 0.45,
       "listed_count": 12,
       "total_count": 123,
       "listed_ratio": 9.8,
       "avg_return_20d": 21.63,
-      "rank_change": 3,
+      "tradable_count": 12,
+      "rank_change": -4,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7180,7 +7613,7 @@
           "rank_in_market": 480,
           "circ_mv": 21.59,
           "amount": 6296.89,
-          "capacity_proxy_score": 2.61
+          "capacity_proxy_score": 2.6
         },
         {
           "rank": 10,
@@ -7202,7 +7635,7 @@
           "rank_in_market": 687,
           "circ_mv": 37.19,
           "amount": 7834.5,
-          "capacity_proxy_score": 3.65
+          "capacity_proxy_score": 3.64
         },
         {
           "rank": 12,
@@ -7213,66 +7646,28 @@
           "rank_in_market": 749,
           "circ_mv": 38.83,
           "amount": 5112.39,
-          "capacity_proxy_score": 2.63
+          "capacity_proxy_score": 2.62
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -13.5,
+      "rank_change_3d": -10,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 38,
-      "sector_name": "数字媒体",
-      "momentum_score": 0.42,
-      "listed_count": 3,
-      "total_count": 14,
-      "listed_ratio": 21.4,
-      "avg_return_20d": 19.46,
-      "rank_change": 8,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "300418",
-          "name": "昆仑万维",
-          "return_20d": 33.78,
-          "close_price": 49.42,
-          "rank_in_market": 150,
-          "circ_mv": 594.09,
-          "amount": 819597.94,
-          "capacity_proxy_score": 9.43
-        },
-        {
-          "rank": 2,
-          "code": "300364",
-          "name": "中文在线",
-          "return_20d": 13.32,
-          "close_price": 24.75,
-          "rank_in_market": 558,
-          "circ_mv": 165.0,
-          "amount": 183134.96,
-          "capacity_proxy_score": 8.84
-        },
-        {
-          "rank": 3,
-          "code": "600228",
-          "name": "返利科技",
-          "return_20d": 11.27,
-          "close_price": 6.81,
-          "rank_in_market": 647,
-          "circ_mv": 28.42,
-          "amount": 33673.77,
-          "capacity_proxy_score": 5.7
-        }
-      ]
-    },
-    {
-      "rank": 39,
+      "rank": 40,
       "sector_name": "环境治理",
-      "momentum_score": 0.4,
+      "momentum_score": 0.43,
       "listed_count": 10,
       "total_count": 100,
       "listed_ratio": 10.0,
       "avg_return_20d": 22.34,
-      "rank_change": -12,
+      "tradable_count": 10,
+      "rank_change": -14,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7307,7 +7702,7 @@
           "rank_in_market": 142,
           "circ_mv": 51.27,
           "amount": 25060.7,
-          "capacity_proxy_score": 6.2
+          "capacity_proxy_score": 6.19
         },
         {
           "rank": 4,
@@ -7340,7 +7735,7 @@
           "rank_in_market": 415,
           "circ_mv": 38.04,
           "amount": 21100.2,
-          "capacity_proxy_score": 5.59
+          "capacity_proxy_score": 5.58
         },
         {
           "rank": 7,
@@ -7362,7 +7757,7 @@
           "rank_in_market": 618,
           "circ_mv": 27.88,
           "amount": 7646.5,
-          "capacity_proxy_score": 3.22
+          "capacity_proxy_score": 3.21
         },
         {
           "rank": 9,
@@ -7386,53 +7781,26 @@
           "amount": 28536.25,
           "capacity_proxy_score": 6.86
         }
-      ]
-    },
-    {
-      "rank": 40,
-      "sector_name": "非金属材料",
-      "momentum_score": 0.4,
-      "listed_count": 2,
-      "total_count": 8,
-      "listed_ratio": 25.0,
-      "avg_return_20d": 19.04,
-      "rank_change": 0,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "688598",
-          "name": "金博股份",
-          "return_20d": 28.65,
-          "close_price": 44.5,
-          "rank_in_market": 199,
-          "circ_mv": 92.07,
-          "amount": 72066.63,
-          "capacity_proxy_score": 7.85
-        },
-        {
-          "rank": 2,
-          "code": "301071",
-          "name": "力量钻石",
-          "return_20d": 9.43,
-          "close_price": 77.37,
-          "rank_in_market": 746,
-          "circ_mv": 151.68,
-          "amount": 146074.0,
-          "capacity_proxy_score": 8.67
-        }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -25.9,
+      "rank_change_3d": -17,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 41,
       "sector_name": "工程咨询服务",
-      "momentum_score": 0.37,
+      "momentum_score": 0.41,
       "listed_count": 5,
       "total_count": 39,
       "listed_ratio": 12.8,
       "avg_return_20d": 23.81,
-      "rank_change": 0,
+      "tradable_count": 5,
+      "rank_change": 11,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7491,17 +7859,26 @@
           "amount": 19237.12,
           "capacity_proxy_score": 4.56
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 41.4,
+      "rank_change_3d": 6,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 42,
       "sector_name": "通信服务",
-      "momentum_score": 0.37,
+      "momentum_score": 0.39,
       "listed_count": 6,
       "total_count": 34,
       "listed_ratio": 17.6,
       "avg_return_20d": 12.07,
-      "rank_change": 19,
+      "tradable_count": 6,
+      "rank_change": 15,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7514,7 +7891,7 @@
           "rank_in_market": 406,
           "circ_mv": 62.47,
           "amount": 36607.31,
-          "capacity_proxy_score": 6.86
+          "capacity_proxy_score": 6.85
         },
         {
           "rank": 2,
@@ -7525,7 +7902,7 @@
           "rank_in_market": 584,
           "circ_mv": 99.11,
           "amount": 68918.75,
-          "capacity_proxy_score": 7.9
+          "capacity_proxy_score": 7.89
         },
         {
           "rank": 3,
@@ -7569,55 +7946,28 @@
           "rank_in_market": 725,
           "circ_mv": 36.5,
           "amount": 27749.89,
-          "capacity_proxy_score": 5.83
+          "capacity_proxy_score": 5.82
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 680.0,
+      "rank_change_3d": 41,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 43,
-      "sector_name": "油服工程",
-      "momentum_score": 0.36,
-      "listed_count": 2,
-      "total_count": 12,
-      "listed_ratio": 16.7,
-      "avg_return_20d": 33.6,
-      "rank_change": -8,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "002828",
-          "name": "贝肯能源",
-          "return_20d": 50.11,
-          "close_price": 13.48,
-          "rank_in_market": 61,
-          "circ_mv": 26.07,
-          "amount": 59025.96,
-          "capacity_proxy_score": 5.48
-        },
-        {
-          "rank": 2,
-          "code": "603727",
-          "name": "博迈科",
-          "return_20d": 17.09,
-          "close_price": 16.31,
-          "rank_in_market": 407,
-          "circ_mv": 45.65,
-          "amount": 6721.7,
-          "capacity_proxy_score": 3.23
-        }
-      ]
-    },
-    {
-      "rank": 44,
       "sector_name": "化学原料",
-      "momentum_score": 0.34,
+      "momentum_score": 0.38,
       "listed_count": 7,
       "total_count": 57,
       "listed_ratio": 12.3,
       "avg_return_20d": 18.45,
-      "rank_change": -6,
+      "tradable_count": 7,
+      "rank_change": -7,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7652,7 +8002,7 @@
           "rank_in_market": 474,
           "circ_mv": 26.35,
           "amount": 21077.61,
-          "capacity_proxy_score": 5.08
+          "capacity_proxy_score": 5.07
         },
         {
           "rank": 4,
@@ -7698,7 +8048,60 @@
           "amount": 44158.1,
           "capacity_proxy_score": 6.8
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -39.7,
+      "rank_change_3d": -22,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 44,
+      "sector_name": "油服工程",
+      "momentum_score": 0.36,
+      "listed_count": 2,
+      "total_count": 12,
+      "listed_ratio": 16.7,
+      "avg_return_20d": 33.6,
+      "tradable_count": 2,
+      "rank_change": -7,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002828",
+          "name": "贝肯能源",
+          "return_20d": 50.11,
+          "close_price": 13.48,
+          "rank_in_market": 61,
+          "circ_mv": 26.07,
+          "amount": 59025.96,
+          "capacity_proxy_score": 5.47
+        },
+        {
+          "rank": 2,
+          "code": "603727",
+          "name": "博迈科",
+          "return_20d": 17.09,
+          "close_price": 16.31,
+          "rank_in_market": 407,
+          "circ_mv": 45.65,
+          "amount": 6721.7,
+          "capacity_proxy_score": 3.23
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 2.9,
+      "rank_change_3d": -5,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 45,
@@ -7708,7 +8111,8 @@
       "total_count": 13,
       "listed_ratio": 15.4,
       "avg_return_20d": 29.06,
-      "rank_change": -8,
+      "tradable_count": 2,
+      "rank_change": -3,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7721,7 +8125,7 @@
           "rank_in_market": 176,
           "circ_mv": 20.08,
           "amount": 13434.37,
-          "capacity_proxy_score": 4.19
+          "capacity_proxy_score": 4.18
         },
         {
           "rank": 2,
@@ -7734,7 +8138,15 @@
           "amount": 21327.2,
           "capacity_proxy_score": 4.86
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 0.0,
+      "rank_change_3d": -4,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 46,
@@ -7744,7 +8156,8 @@
       "total_count": 59,
       "listed_ratio": 10.2,
       "avg_return_20d": 20.91,
-      "rank_change": 0,
+      "tradable_count": 6,
+      "rank_change": 2,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7757,7 +8170,7 @@
           "rank_in_market": 180,
           "circ_mv": 220.06,
           "amount": 204213.89,
-          "capacity_proxy_score": 9.08
+          "capacity_proxy_score": 9.07
         },
         {
           "rank": 2,
@@ -7814,17 +8227,26 @@
           "amount": 11781.05,
           "capacity_proxy_score": 4.6
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 24.0,
+      "rank_change_3d": 6,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 47,
       "sector_name": "造纸",
-      "momentum_score": 0.3,
+      "momentum_score": 0.31,
       "listed_count": 3,
       "total_count": 22,
       "listed_ratio": 13.6,
       "avg_return_20d": 21.6,
-      "rank_change": 2,
+      "tradable_count": 3,
+      "rank_change": -1,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7861,17 +8283,26 @@
           "amount": 10147.52,
           "capacity_proxy_score": 4.45
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -6.1,
+      "rank_change_3d": -7,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 48,
       "sector_name": "专业服务",
-      "momentum_score": 0.29,
+      "momentum_score": 0.3,
       "listed_count": 4,
       "total_count": 29,
       "listed_ratio": 13.8,
       "avg_return_20d": 16.57,
-      "rank_change": -5,
+      "tradable_count": 4,
+      "rank_change": -7,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7895,7 +8326,7 @@
           "rank_in_market": 374,
           "circ_mv": 22.42,
           "amount": 37518.61,
-          "capacity_proxy_score": 5.23
+          "capacity_proxy_score": 5.22
         },
         {
           "rank": 3,
@@ -7919,16 +8350,25 @@
           "amount": 74261.62,
           "capacity_proxy_score": 7.92
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 172.7,
+      "rank_change_3d": 18,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 49,
       "sector_name": "小金属",
-      "momentum_score": 0.26,
+      "momentum_score": 0.28,
       "listed_count": 3,
       "total_count": 25,
       "listed_ratio": 12.0,
       "avg_return_20d": 22.59,
+      "tradable_count": 3,
       "rank_change": -31,
       "is_main_line": false,
       "is_warning": false,
@@ -7966,7 +8406,15 @@
           "amount": 251837.99,
           "capacity_proxy_score": 9.37
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -36.4,
+      "rank_change_3d": -15,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 50,
@@ -7976,7 +8424,8 @@
       "total_count": 16,
       "listed_ratio": 12.5,
       "avg_return_20d": 29.55,
-      "rank_change": -21,
+      "tradable_count": 2,
+      "rank_change": -19,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8002,7 +8451,15 @@
           "amount": 20724.67,
           "capacity_proxy_score": 5.63
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 0.0,
+      "rank_change_3d": 1,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 51,
@@ -8012,7 +8469,8 @@
       "total_count": 127,
       "listed_ratio": 7.1,
       "avg_return_20d": 20.76,
-      "rank_change": 5,
+      "tradable_count": 9,
+      "rank_change": 0,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8036,7 +8494,7 @@
           "rank_in_market": 155,
           "circ_mv": 29.08,
           "amount": 34257.23,
-          "capacity_proxy_score": 5.76
+          "capacity_proxy_score": 5.75
         },
         {
           "rank": 3,
@@ -8115,64 +8573,26 @@
           "amount": 77110.95,
           "capacity_proxy_score": 7.95
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 78.6,
+      "rank_change_3d": 10,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 52,
-      "sector_name": "炼化及贸易",
-      "momentum_score": 0.22,
-      "listed_count": 3,
-      "total_count": 29,
-      "listed_ratio": 10.3,
-      "avg_return_20d": 23.85,
-      "rank_change": 27,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "603223",
-          "name": "恒通股份",
-          "return_20d": 51.43,
-          "close_price": 13.72,
-          "rank_in_market": 54,
-          "circ_mv": 94.48,
-          "amount": 19977.13,
-          "capacity_proxy_score": 6.11
-        },
-        {
-          "rank": 2,
-          "code": "000703",
-          "name": "恒逸石化",
-          "return_20d": 10.46,
-          "close_price": 13.73,
-          "rank_in_market": 686,
-          "circ_mv": 520.66,
-          "amount": 97981.09,
-          "capacity_proxy_score": 8.54
-        },
-        {
-          "rank": 3,
-          "code": "002986",
-          "name": "宇新股份",
-          "return_20d": 9.65,
-          "close_price": 12.38,
-          "rank_in_market": 732,
-          "circ_mv": 36.76,
-          "amount": 7047.99,
-          "capacity_proxy_score": 3.45
-        }
-      ]
-    },
-    {
-      "rank": 53,
       "sector_name": "物流",
-      "momentum_score": 0.22,
+      "momentum_score": 0.25,
       "listed_count": 4,
       "total_count": 43,
       "listed_ratio": 9.3,
       "avg_return_20d": 23.86,
-      "rank_change": 1,
+      "tradable_count": 4,
+      "rank_change": 3,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8220,16 +8640,81 @@
           "amount": 6114.94,
           "capacity_proxy_score": 3.15
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 56.2,
+      "rank_change_3d": 8,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 53,
+      "sector_name": "炼化及贸易",
+      "momentum_score": 0.24,
+      "listed_count": 3,
+      "total_count": 29,
+      "listed_ratio": 10.3,
+      "avg_return_20d": 23.85,
+      "tradable_count": 3,
+      "rank_change": 26,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "603223",
+          "name": "恒通股份",
+          "return_20d": 51.43,
+          "close_price": 13.72,
+          "rank_in_market": 54,
+          "circ_mv": 94.48,
+          "amount": 19977.13,
+          "capacity_proxy_score": 6.11
+        },
+        {
+          "rank": 2,
+          "code": "000703",
+          "name": "恒逸石化",
+          "return_20d": 10.46,
+          "close_price": 13.73,
+          "rank_in_market": 686,
+          "circ_mv": 520.66,
+          "amount": 97981.09,
+          "capacity_proxy_score": 8.54
+        },
+        {
+          "rank": 3,
+          "code": "002986",
+          "name": "宇新股份",
+          "return_20d": 9.65,
+          "close_price": 12.38,
+          "rank_in_market": 732,
+          "circ_mv": 36.76,
+          "amount": 7047.99,
+          "capacity_proxy_score": 3.45
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -14.3,
+      "rank_change_3d": -5,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 54,
       "sector_name": "饰品",
-      "momentum_score": 0.22,
+      "momentum_score": 0.23,
       "listed_count": 2,
       "total_count": 13,
       "listed_ratio": 15.4,
       "avg_return_20d": 16.37,
+      "tradable_count": 2,
       "rank_change": -10,
       "is_main_line": false,
       "is_warning": false,
@@ -8256,7 +8741,15 @@
           "amount": 22326.37,
           "capacity_proxy_score": 6.14
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -4.2,
+      "rank_change_3d": -1,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 55,
@@ -8266,7 +8759,8 @@
       "total_count": 52,
       "listed_ratio": 7.7,
       "avg_return_20d": 27.29,
-      "rank_change": -13,
+      "tradable_count": 4,
+      "rank_change": -15,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8312,19 +8806,28 @@
           "rank_in_market": 722,
           "circ_mv": 18.37,
           "amount": 6767.58,
-          "capacity_proxy_score": 2.56
+          "capacity_proxy_score": 2.55
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -40.0,
+      "rank_change_3d": -17,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 56,
       "sector_name": "金属新材料",
-      "momentum_score": 0.19,
+      "momentum_score": 0.21,
       "listed_count": 4,
       "total_count": 33,
       "listed_ratio": 12.1,
       "avg_return_20d": 12.85,
-      "rank_change": 17,
+      "tradable_count": 4,
+      "rank_change": 16,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8372,53 +8875,26 @@
           "amount": 314546.85,
           "capacity_proxy_score": 9.57
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -34.4,
+      "rank_change_3d": -11,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 57,
-      "sector_name": "贵金属",
-      "momentum_score": 0.17,
-      "listed_count": 2,
-      "total_count": 13,
-      "listed_ratio": 15.4,
-      "avg_return_20d": 13.16,
-      "rank_change": 20,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "600988",
-          "name": "赤峰黄金",
-          "return_20d": 16.21,
-          "close_price": 32.84,
-          "rank_in_market": 437,
-          "circ_mv": 537.12,
-          "amount": 278197.68,
-          "capacity_proxy_score": 9.53
-        },
-        {
-          "rank": 2,
-          "code": "000506",
-          "name": "招金黄金",
-          "return_20d": 10.1,
-          "close_price": 13.74,
-          "rank_in_market": 701,
-          "circ_mv": 126.39,
-          "amount": 105424.75,
-          "capacity_proxy_score": 8.4
-        }
-      ]
-    },
-    {
-      "rank": 58,
       "sector_name": "橡胶",
-      "momentum_score": 0.16,
+      "momentum_score": 0.19,
       "listed_count": 2,
       "total_count": 17,
       "listed_ratio": 11.8,
       "avg_return_20d": 19.3,
-      "rank_change": -26,
+      "tradable_count": 2,
+      "rank_change": -24,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8444,17 +8920,71 @@
           "amount": 39089.88,
           "capacity_proxy_score": 7.22
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -55.8,
+      "rank_change_3d": -22,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 58,
+      "sector_name": "贵金属",
+      "momentum_score": 0.19,
+      "listed_count": 2,
+      "total_count": 13,
+      "listed_ratio": 15.4,
+      "avg_return_20d": 13.16,
+      "tradable_count": 2,
+      "rank_change": 19,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600988",
+          "name": "赤峰黄金",
+          "return_20d": 16.21,
+          "close_price": 32.84,
+          "rank_in_market": 437,
+          "circ_mv": 537.12,
+          "amount": 278197.68,
+          "capacity_proxy_score": 9.53
+        },
+        {
+          "rank": 2,
+          "code": "000506",
+          "name": "招金黄金",
+          "return_20d": 10.1,
+          "close_price": 13.74,
+          "rank_in_market": 701,
+          "circ_mv": 126.39,
+          "amount": 105424.75,
+          "capacity_proxy_score": 8.4
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 375.0,
+      "rank_change_3d": 29,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 59,
       "sector_name": "包装印刷",
-      "momentum_score": 0.15,
+      "momentum_score": 0.16,
       "listed_count": 3,
       "total_count": 39,
       "listed_ratio": 7.7,
       "avg_return_20d": 22.88,
-      "rank_change": -7,
+      "tradable_count": 3,
+      "rank_change": -6,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8491,7 +9021,15 @@
           "amount": 15589.2,
           "capacity_proxy_score": 4.84
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 23.1,
+      "rank_change_3d": 3,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 60,
@@ -8501,7 +9039,8 @@
       "total_count": 9,
       "listed_ratio": 11.1,
       "avg_return_20d": 27.89,
-      "rank_change": 10,
+      "tradable_count": 1,
+      "rank_change": 9,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8516,7 +9055,15 @@
           "amount": 49011.98,
           "capacity_proxy_score": 7.38
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -25.0,
+      "rank_change_3d": -2,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 61,
@@ -8526,7 +9073,8 @@
       "total_count": 56,
       "listed_ratio": 7.1,
       "avg_return_20d": 15.28,
-      "rank_change": -14,
+      "tradable_count": 4,
+      "rank_change": -18,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8574,100 +9122,26 @@
           "amount": 189426.42,
           "capacity_proxy_score": 8.84
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -60.6,
+      "rank_change_3d": -18,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 62,
-      "sector_name": "纺织制造",
-      "momentum_score": 0.11,
-      "listed_count": 2,
-      "total_count": 31,
-      "listed_ratio": 6.5,
-      "avg_return_20d": 52.91,
-      "rank_change": -12,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "002674",
-          "name": "兴业科技",
-          "return_20d": 94.81,
-          "close_price": 30.8,
-          "rank_in_market": 4,
-          "circ_mv": 88.01,
-          "amount": 96160.24,
-          "capacity_proxy_score": 8.0
-        },
-        {
-          "rank": 2,
-          "code": "300877",
-          "name": "金春股份",
-          "return_20d": 11.02,
-          "close_price": 30.01,
-          "rank_in_market": 661,
-          "circ_mv": 36.9,
-          "amount": 9367.33,
-          "capacity_proxy_score": 3.92
-        }
-      ]
-    },
-    {
-      "rank": 63,
-      "sector_name": "一般零售",
-      "momentum_score": 0.11,
-      "listed_count": 3,
-      "total_count": 57,
-      "listed_ratio": 5.3,
-      "avg_return_20d": 26.3,
-      "rank_change": 0,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "600857",
-          "name": "宁波中百",
-          "return_20d": 42.58,
-          "close_price": 20.19,
-          "rank_in_market": 92,
-          "circ_mv": 46.58,
-          "amount": 27044.26,
-          "capacity_proxy_score": 6.15
-        },
-        {
-          "rank": 2,
-          "code": "000759",
-          "name": "中百集团",
-          "return_20d": 25.66,
-          "close_price": 6.66,
-          "rank_in_market": 239,
-          "circ_mv": 43.39,
-          "amount": 68882.12,
-          "capacity_proxy_score": 6.61
-        },
-        {
-          "rank": 3,
-          "code": "000417",
-          "name": "合百集团",
-          "return_20d": 10.67,
-          "close_price": 7.78,
-          "rank_in_market": 675,
-          "circ_mv": 63.53,
-          "amount": 82749.88,
-          "capacity_proxy_score": 7.26
-        }
-      ]
-    },
-    {
-      "rank": 64,
       "sector_name": "综合",
-      "momentum_score": 0.11,
+      "momentum_score": 0.13,
       "listed_count": 2,
       "total_count": 19,
       "listed_ratio": 10.5,
       "avg_return_20d": 13.91,
-      "rank_change": 0,
+      "tradable_count": 2,
+      "rank_change": -3,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8693,42 +9167,127 @@
           "amount": 324034.67,
           "capacity_proxy_score": 9.19
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 225.0,
+      "rank_change_3d": 19,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 65,
-      "sector_name": "化妆品",
-      "momentum_score": 0.1,
-      "listed_count": 1,
-      "total_count": 13,
-      "listed_ratio": 7.7,
-      "avg_return_20d": 38.28,
+      "rank": 63,
+      "sector_name": "纺织制造",
+      "momentum_score": 0.11,
+      "listed_count": 2,
+      "total_count": 31,
+      "listed_ratio": 6.5,
+      "avg_return_20d": 52.91,
+      "tradable_count": 2,
+      "rank_change": -13,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002674",
+          "name": "兴业科技",
+          "return_20d": 94.81,
+          "close_price": 30.8,
+          "rank_in_market": 4,
+          "circ_mv": 88.01,
+          "amount": 96160.24,
+          "capacity_proxy_score": 8.0
+        },
+        {
+          "rank": 2,
+          "code": "300877",
+          "name": "金春股份",
+          "return_20d": 11.02,
+          "close_price": 30.01,
+          "rank_in_market": 661,
+          "circ_mv": 36.9,
+          "amount": 9367.33,
+          "capacity_proxy_score": 3.92
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 0.0,
+      "rank_change_3d": 2,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 64,
+      "sector_name": "一般零售",
+      "momentum_score": 0.11,
+      "listed_count": 3,
+      "total_count": 57,
+      "listed_ratio": 5.3,
+      "avg_return_20d": 26.3,
+      "tradable_count": 3,
       "rank_change": 0,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
           "rank": 1,
-          "code": "603983",
-          "name": "丸美生物",
-          "return_20d": 38.28,
-          "close_price": 29.55,
-          "rank_in_market": 120,
-          "circ_mv": 120.02,
-          "amount": 17536.58,
-          "capacity_proxy_score": 5.73
+          "code": "600857",
+          "name": "宁波中百",
+          "return_20d": 42.58,
+          "close_price": 20.19,
+          "rank_in_market": 92,
+          "circ_mv": 46.58,
+          "amount": 27044.26,
+          "capacity_proxy_score": 6.14
+        },
+        {
+          "rank": 2,
+          "code": "000759",
+          "name": "中百集团",
+          "return_20d": 25.66,
+          "close_price": 6.66,
+          "rank_in_market": 239,
+          "circ_mv": 43.39,
+          "amount": 68882.12,
+          "capacity_proxy_score": 6.6
+        },
+        {
+          "rank": 3,
+          "code": "000417",
+          "name": "合百集团",
+          "return_20d": 10.67,
+          "close_price": 7.78,
+          "rank_in_market": 675,
+          "circ_mv": 63.53,
+          "amount": 82749.88,
+          "capacity_proxy_score": 7.26
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 120.0,
+      "rank_change_3d": 15,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 66,
+      "rank": 65,
       "sector_name": "装修建材",
-      "momentum_score": 0.1,
+      "momentum_score": 0.11,
       "listed_count": 2,
       "total_count": 30,
       "listed_ratio": 6.7,
       "avg_return_20d": 22.13,
-      "rank_change": 1,
+      "tradable_count": 2,
+      "rank_change": 3,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8754,89 +9313,26 @@
           "amount": 6967.68,
           "capacity_proxy_score": 3.44
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -15.4,
+      "rank_change_3d": -2,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 67,
-      "sector_name": "电机",
-      "momentum_score": 0.1,
-      "listed_count": 2,
-      "total_count": 25,
-      "listed_ratio": 8.0,
-      "avg_return_20d": 16.77,
-      "rank_change": 0,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "603819",
-          "name": "神力股份",
-          "return_20d": 17.47,
-          "close_price": 13.58,
-          "rank_in_market": 396,
-          "circ_mv": 30.02,
-          "amount": 16648.6,
-          "capacity_proxy_score": 4.96
-        },
-        {
-          "rank": 2,
-          "code": "300907",
-          "name": "康平科技",
-          "return_20d": 16.07,
-          "close_price": 51.63,
-          "rank_in_market": 444,
-          "circ_mv": 50.33,
-          "amount": 17582.19,
-          "capacity_proxy_score": 5.22
-        }
-      ]
-    },
-    {
-      "rank": 68,
-      "sector_name": "文娱用品",
-      "momentum_score": 0.1,
-      "listed_count": 2,
-      "total_count": 21,
-      "listed_ratio": 9.5,
-      "avg_return_20d": 13.16,
-      "rank_change": 16,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "002292",
-          "name": "奥飞娱乐",
-          "return_20d": 14.84,
-          "close_price": 7.74,
-          "rank_in_market": 491,
-          "circ_mv": 77.98,
-          "amount": 70296.49,
-          "capacity_proxy_score": 7.64
-        },
-        {
-          "rank": 2,
-          "code": "002301",
-          "name": "齐心集团",
-          "return_20d": 11.49,
-          "close_price": 8.25,
-          "rank_in_market": 642,
-          "circ_mv": 59.83,
-          "amount": 12924.53,
-          "capacity_proxy_score": 5.02
-        }
-      ]
-    },
-    {
-      "rank": 69,
+      "rank": 66,
       "sector_name": "房地产开发",
-      "momentum_score": 0.09,
+      "momentum_score": 0.11,
       "listed_count": 4,
       "total_count": 74,
       "listed_ratio": 5.4,
       "avg_return_20d": 19.49,
-      "rank_change": 2,
+      "tradable_count": 4,
+      "rank_change": 5,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8884,53 +9380,217 @@
           "amount": 365331.24,
           "capacity_proxy_score": 9.51
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 10.0,
+      "rank_change_3d": 4,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 70,
-      "sector_name": "多元金融",
-      "momentum_score": 0.08,
+      "rank": 67,
+      "sector_name": "电机",
+      "momentum_score": 0.11,
       "listed_count": 2,
       "total_count": 25,
       "listed_ratio": 8.0,
-      "avg_return_20d": 11.2,
+      "avg_return_20d": 16.77,
+      "tradable_count": 2,
       "rank_change": 17,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
         {
           "rank": 1,
-          "code": "000987",
-          "name": "越秀资本",
-          "return_20d": 11.89,
-          "close_price": 8.09,
-          "rank_in_market": 624,
-          "circ_mv": 405.52,
-          "amount": 56283.4,
-          "capacity_proxy_score": 7.61
+          "code": "603819",
+          "name": "神力股份",
+          "return_20d": 17.47,
+          "close_price": 13.58,
+          "rank_in_market": 396,
+          "circ_mv": 30.02,
+          "amount": 16648.6,
+          "capacity_proxy_score": 4.95
         },
         {
           "rank": 2,
-          "code": "600120",
-          "name": "浙江东方",
-          "return_20d": 10.5,
-          "close_price": 4.84,
-          "rank_in_market": 682,
-          "circ_mv": 163.08,
-          "amount": 39627.16,
-          "capacity_proxy_score": 7.3
+          "code": "300907",
+          "name": "康平科技",
+          "return_20d": 16.07,
+          "close_price": 51.63,
+          "rank_in_market": 444,
+          "circ_mv": 50.33,
+          "amount": 17582.19,
+          "capacity_proxy_score": 5.22
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 450.0,
+      "rank_change_3d": 27,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 68,
+      "sector_name": "文娱用品",
+      "momentum_score": 0.11,
+      "listed_count": 2,
+      "total_count": 21,
+      "listed_ratio": 9.5,
+      "avg_return_20d": 13.16,
+      "tradable_count": 2,
+      "rank_change": 17,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002292",
+          "name": "奥飞娱乐",
+          "return_20d": 14.84,
+          "close_price": 7.74,
+          "rank_in_market": 491,
+          "circ_mv": 77.98,
+          "amount": 70296.49,
+          "capacity_proxy_score": 7.64
+        },
+        {
+          "rank": 2,
+          "code": "002301",
+          "name": "齐心集团",
+          "return_20d": 11.49,
+          "close_price": 8.25,
+          "rank_in_market": 642,
+          "circ_mv": 59.83,
+          "amount": 12924.53,
+          "capacity_proxy_score": 5.01
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 266.7,
+      "rank_change_3d": 22,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 69,
+      "sector_name": "化妆品",
+      "momentum_score": 0.1,
+      "listed_count": 1,
+      "total_count": 13,
+      "listed_ratio": 7.7,
+      "avg_return_20d": 38.28,
+      "tradable_count": 1,
+      "rank_change": -6,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "603983",
+          "name": "丸美生物",
+          "return_20d": 38.28,
+          "close_price": 29.55,
+          "rank_in_market": 120,
+          "circ_mv": 120.02,
+          "amount": 17536.58,
+          "capacity_proxy_score": 5.73
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 0.0,
+      "rank_change_3d": -2,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 70,
+      "sector_name": "动物保健",
+      "momentum_score": 0.09,
+      "listed_count": 1,
+      "total_count": 9,
+      "listed_ratio": 11.1,
+      "avg_return_20d": 13.24,
+      "tradable_count": 0,
+      "rank_change": -3,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -25.0,
+      "rank_change_3d": -6,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 71,
+      "sector_name": "基础建设",
+      "momentum_score": 0.08,
+      "listed_count": 2,
+      "total_count": 37,
+      "listed_ratio": 5.4,
+      "avg_return_20d": 19.48,
+      "tradable_count": 2,
+      "rank_change": -1,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "603815",
+          "name": "交建股份",
+          "return_20d": 23.01,
+          "close_price": 6.79,
+          "rank_in_market": 278,
+          "circ_mv": 41.81,
+          "amount": 12217.05,
+          "capacity_proxy_score": 4.45
+        },
+        {
+          "rank": 2,
+          "code": "300649",
+          "name": "杭州园林",
+          "return_20d": 15.95,
+          "close_price": 30.09,
+          "rank_in_market": 456,
+          "circ_mv": 32.73,
+          "amount": 20389.36,
+          "capacity_proxy_score": 5.34
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 300.0,
+      "rank_change_3d": 21,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 72,
       "sector_name": "工程机械",
-      "momentum_score": 0.07,
+      "momentum_score": 0.08,
       "listed_count": 2,
       "total_count": 28,
       "listed_ratio": 7.1,
       "avg_return_20d": 13.92,
-      "rank_change": -5,
+      "tradable_count": 2,
+      "rank_change": -6,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8956,17 +9616,71 @@
           "amount": 38117.16,
           "capacity_proxy_score": 5.68
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -20.0,
+      "rank_change_3d": -3,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 72,
+      "rank": 73,
+      "sector_name": "多元金融",
+      "momentum_score": 0.08,
+      "listed_count": 2,
+      "total_count": 25,
+      "listed_ratio": 8.0,
+      "avg_return_20d": 11.2,
+      "tradable_count": 2,
+      "rank_change": 14,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "000987",
+          "name": "越秀资本",
+          "return_20d": 11.89,
+          "close_price": 8.09,
+          "rank_in_market": 624,
+          "circ_mv": 405.52,
+          "amount": 56283.4,
+          "capacity_proxy_score": 7.61
+        },
+        {
+          "rank": 2,
+          "code": "600120",
+          "name": "浙江东方",
+          "return_20d": 10.5,
+          "close_price": 4.84,
+          "rank_in_market": 682,
+          "circ_mv": 163.08,
+          "amount": 39627.16,
+          "capacity_proxy_score": 7.3
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -77.8,
+      "rank_change_3d": -36,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 74,
       "sector_name": "特钢",
       "momentum_score": 0.07,
       "listed_count": 1,
       "total_count": 12,
       "listed_ratio": 8.3,
       "avg_return_20d": 15.03,
-      "rank_change": 0,
+      "tradable_count": 1,
+      "rank_change": -1,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8981,17 +9695,26 @@
           "amount": 15558.11,
           "capacity_proxy_score": 5.59
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -12.5,
+      "rank_change_3d": 2,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 73,
+      "rank": 75,
       "sector_name": "白色家电",
       "momentum_score": 0.07,
       "listed_count": 1,
       "total_count": 10,
       "listed_ratio": 10.0,
       "avg_return_20d": 10.67,
-      "rank_change": -9,
+      "tradable_count": 1,
+      "rank_change": -10,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9006,53 +9729,26 @@
           "amount": 20592.17,
           "capacity_proxy_score": 6.32
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -22.2,
+      "rank_change_3d": -4,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 74,
-      "sector_name": "基础建设",
-      "momentum_score": 0.06,
-      "listed_count": 2,
-      "total_count": 37,
-      "listed_ratio": 5.4,
-      "avg_return_20d": 19.48,
-      "rank_change": -2,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "603815",
-          "name": "交建股份",
-          "return_20d": 23.01,
-          "close_price": 6.79,
-          "rank_in_market": 278,
-          "circ_mv": 41.81,
-          "amount": 12217.05,
-          "capacity_proxy_score": 4.46
-        },
-        {
-          "rank": 2,
-          "code": "300649",
-          "name": "杭州园林",
-          "return_20d": 15.95,
-          "close_price": 30.09,
-          "rank_in_market": 456,
-          "circ_mv": 32.73,
-          "amount": 20389.36,
-          "capacity_proxy_score": 5.34
-        }
-      ]
-    },
-    {
-      "rank": 75,
+      "rank": 76,
       "sector_name": "贸易",
       "momentum_score": 0.06,
       "listed_count": 1,
       "total_count": 14,
       "listed_ratio": 7.1,
       "avg_return_20d": 16.0,
-      "rank_change": 0,
+      "tradable_count": 1,
+      "rank_change": 6,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9067,128 +9763,26 @@
           "amount": 20889.68,
           "capacity_proxy_score": 6.4
         }
-      ]
-    },
-    {
-      "rank": 76,
-      "sector_name": "光伏设备",
-      "momentum_score": 0.05,
-      "listed_count": 2,
-      "total_count": 59,
-      "listed_ratio": 3.4,
-      "avg_return_20d": 20.02,
-      "rank_change": -31,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "300751",
-          "name": "迈为股份",
-          "return_20d": 25.74,
-          "close_price": 267.0,
-          "rank_in_market": 238,
-          "circ_mv": 535.86,
-          "amount": 263669.4,
-          "capacity_proxy_score": 9.52
-        },
-        {
-          "rank": 2,
-          "code": "002079",
-          "name": "苏州固锝",
-          "return_20d": 14.29,
-          "close_price": 13.6,
-          "rank_in_market": 516,
-          "circ_mv": 115.4,
-          "amount": 87519.47,
-          "capacity_proxy_score": 8.22
-        }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 20.0,
+      "rank_change_3d": 6,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 77,
-      "sector_name": "风电设备",
-      "momentum_score": 0.04,
-      "listed_count": 1,
-      "total_count": 30,
-      "listed_ratio": 3.3,
-      "avg_return_20d": 53.41,
-      "rank_change": 1,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "301232",
-          "name": "飞沃科技",
-          "return_20d": 53.41,
-          "close_price": 179.2,
-          "rank_in_market": 49,
-          "circ_mv": 113.2,
-          "amount": 234660.01,
-          "capacity_proxy_score": 8.06
-        }
-      ]
-    },
-    {
-      "rank": 78,
-      "sector_name": "广告营销",
-      "momentum_score": 0.04,
-      "listed_count": 1,
-      "total_count": 28,
-      "listed_ratio": 3.6,
-      "avg_return_20d": 30.24,
-      "rank_change": 0,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "300071",
-          "name": "福石控股",
-          "return_20d": 30.24,
-          "close_price": 4.91,
-          "rank_in_market": 174,
-          "circ_mv": 44.1,
-          "amount": 149333.26,
-          "capacity_proxy_score": 6.4
-        }
-      ]
-    },
-    {
-      "rank": 79,
-      "sector_name": "轨交设备",
-      "momentum_score": 0.04,
-      "listed_count": 1,
-      "total_count": 27,
-      "listed_ratio": 3.7,
-      "avg_return_20d": 29.76,
-      "rank_change": 0,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "002972",
-          "name": "科安达",
-          "return_20d": 29.76,
-          "close_price": 16.96,
-          "rank_in_market": 181,
-          "circ_mv": 23.05,
-          "amount": 10959.37,
-          "capacity_proxy_score": 4.05
-        }
-      ]
-    },
-    {
-      "rank": 80,
       "sector_name": "电池",
-      "momentum_score": 0.04,
+      "momentum_score": 0.05,
       "listed_count": 3,
       "total_count": 90,
       "listed_ratio": 3.3,
       "avg_return_20d": 16.95,
-      "rank_change": -41,
+      "tradable_count": 3,
+      "rank_change": -32,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9225,17 +9819,26 @@
           "amount": 95902.02,
           "capacity_proxy_score": 8.67
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -81.5,
+      "rank_change_3d": -28,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 81,
+      "rank": 78,
       "sector_name": "水泥",
-      "momentum_score": 0.04,
+      "momentum_score": 0.05,
       "listed_count": 1,
       "total_count": 22,
       "listed_ratio": 4.5,
       "avg_return_20d": 21.75,
-      "rank_change": -7,
+      "tradable_count": 1,
+      "rank_change": -4,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9250,17 +9853,173 @@
           "amount": 106988.47,
           "capacity_proxy_score": 8.74
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 0.0,
+      "rank_change_3d": 2,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 79,
+      "sector_name": "风电设备",
+      "momentum_score": 0.04,
+      "listed_count": 1,
+      "total_count": 30,
+      "listed_ratio": 3.3,
+      "avg_return_20d": 53.41,
+      "tradable_count": 1,
+      "rank_change": -1,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "301232",
+          "name": "飞沃科技",
+          "return_20d": 53.41,
+          "close_price": 179.2,
+          "rank_in_market": 49,
+          "circ_mv": 113.2,
+          "amount": 234660.01,
+          "capacity_proxy_score": 8.06
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -60.0,
+      "rank_change_3d": -11,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 80,
+      "sector_name": "广告营销",
+      "momentum_score": 0.04,
+      "listed_count": 1,
+      "total_count": 28,
+      "listed_ratio": 3.6,
+      "avg_return_20d": 30.24,
+      "tradable_count": 1,
+      "rank_change": 0,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300071",
+          "name": "福石控股",
+          "return_20d": 30.24,
+          "close_price": 4.91,
+          "rank_in_market": 174,
+          "circ_mv": 44.1,
+          "amount": 149333.26,
+          "capacity_proxy_score": 6.4
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 0.0,
+      "rank_change_3d": -3,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 81,
+      "sector_name": "轨交设备",
+      "momentum_score": 0.04,
+      "listed_count": 1,
+      "total_count": 27,
+      "listed_ratio": 3.7,
+      "avg_return_20d": 29.76,
+      "tradable_count": 1,
+      "rank_change": -21,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "002972",
+          "name": "科安达",
+          "return_20d": 29.76,
+          "close_price": 16.96,
+          "rank_in_market": 181,
+          "circ_mv": 23.05,
+          "amount": 10959.37,
+          "capacity_proxy_score": 4.05
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -80.0,
+      "rank_change_3d": -25,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
       "rank": 82,
+      "sector_name": "光伏设备",
+      "momentum_score": 0.04,
+      "listed_count": 2,
+      "total_count": 59,
+      "listed_ratio": 3.4,
+      "avg_return_20d": 20.02,
+      "tradable_count": 2,
+      "rank_change": -33,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "300751",
+          "name": "迈为股份",
+          "return_20d": 25.74,
+          "close_price": 267.0,
+          "rank_in_market": 238,
+          "circ_mv": 535.86,
+          "amount": 263669.4,
+          "capacity_proxy_score": 9.52
+        },
+        {
+          "rank": 2,
+          "code": "002079",
+          "name": "苏州固锝",
+          "return_20d": 14.29,
+          "close_price": 13.6,
+          "rank_in_market": 516,
+          "circ_mv": 115.4,
+          "amount": 87519.47,
+          "capacity_proxy_score": 8.21
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -87.1,
+      "rank_change_3d": -36,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 83,
       "sector_name": "煤炭开采",
       "momentum_score": 0.03,
       "listed_count": 1,
       "total_count": 26,
       "listed_ratio": 3.8,
       "avg_return_20d": 19.85,
-      "rank_change": 1,
+      "tradable_count": 1,
+      "rank_change": 0,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9275,17 +10034,60 @@
           "amount": 19360.49,
           "capacity_proxy_score": 5.4
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 0.0,
+      "rank_change_3d": 6,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 83,
+      "rank": 84,
+      "sector_name": "燃气",
+      "momentum_score": 0.03,
+      "listed_count": 1,
+      "total_count": 27,
+      "listed_ratio": 3.7,
+      "avg_return_20d": 14.79,
+      "tradable_count": 1,
+      "rank_change": 2,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "001331",
+          "name": "胜通能源",
+          "return_20d": 14.79,
+          "close_price": 61.71,
+          "rank_in_market": 498,
+          "circ_mv": 182.01,
+          "amount": 87043.24,
+          "capacity_proxy_score": 8.53
+        }
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 50.0,
+      "rank_change_3d": 11,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
+    },
+    {
+      "rank": 85,
       "sector_name": "食品加工",
       "momentum_score": 0.03,
       "listed_count": 1,
       "total_count": 22,
       "listed_ratio": 4.5,
       "avg_return_20d": 11.42,
-      "rank_change": -3,
+      "tradable_count": 1,
+      "rank_change": -5,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9300,16 +10102,25 @@
           "amount": 55748.12,
           "capacity_proxy_score": 7.69
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -25.0,
+      "rank_change_3d": -1,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 84,
+      "rank": 86,
       "sector_name": "医药商业",
       "momentum_score": 0.02,
       "listed_count": 1,
       "total_count": 29,
       "listed_ratio": 3.4,
       "avg_return_20d": 14.83,
+      "tradable_count": 1,
       "rank_change": 0,
       "is_main_line": false,
       "is_warning": false,
@@ -9325,17 +10136,26 @@
           "amount": 29405.65,
           "capacity_proxy_score": 6.77
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 0.0,
+      "rank_change_3d": 7,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 85,
+      "rank": 87,
       "sector_name": "航运港口",
       "momentum_score": 0.02,
       "listed_count": 1,
       "total_count": 34,
       "listed_ratio": 2.9,
       "avg_return_20d": 14.81,
-      "rank_change": 3,
+      "tradable_count": 1,
+      "rank_change": 1,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9350,41 +10170,25 @@
           "amount": 36341.72,
           "capacity_proxy_score": 7.41
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -50.0,
+      "rank_change_3d": -1,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 86,
-      "sector_name": "燃气",
-      "momentum_score": 0.02,
-      "listed_count": 1,
-      "total_count": 27,
-      "listed_ratio": 3.7,
-      "avg_return_20d": 14.79,
-      "rank_change": 0,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "001331",
-          "name": "胜通能源",
-          "return_20d": 14.79,
-          "close_price": 61.71,
-          "rank_in_market": 498,
-          "circ_mv": 182.01,
-          "amount": 87043.24,
-          "capacity_proxy_score": 8.53
-        }
-      ]
-    },
-    {
-      "rank": 87,
+      "rank": 88,
       "sector_name": "出版",
       "momentum_score": 0.02,
       "listed_count": 1,
       "total_count": 27,
       "listed_ratio": 3.7,
       "avg_return_20d": 12.83,
+      "tradable_count": 1,
       "rank_change": 0,
       "is_main_line": false,
       "is_warning": false,
@@ -9400,17 +10204,26 @@
           "amount": 25169.99,
           "capacity_proxy_score": 5.74
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": 0.0,
+      "rank_change_3d": 0,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 88,
+      "rank": 89,
       "sector_name": "饮料乳品",
       "momentum_score": 0.02,
       "listed_count": 1,
       "total_count": 26,
       "listed_ratio": 3.8,
       "avg_return_20d": 12.25,
-      "rank_change": -29,
+      "tradable_count": 1,
+      "rank_change": -28,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9425,17 +10238,26 @@
           "amount": 82803.12,
           "capacity_proxy_score": 8.02
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -90.9,
+      "rank_change_3d": -35,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 89,
+      "rank": 90,
       "sector_name": "农化制品",
       "momentum_score": 0.01,
       "listed_count": 1,
       "total_count": 58,
       "listed_ratio": 1.7,
       "avg_return_20d": 22.75,
-      "rank_change": -14,
+      "tradable_count": 1,
+      "rank_change": -15,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9450,17 +10272,26 @@
           "amount": 54001.15,
           "capacity_proxy_score": 6.11
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -95.0,
+      "rank_change_3d": -33,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     },
     {
-      "rank": 90,
+      "rank": 91,
       "sector_name": "电力",
       "momentum_score": 0.0,
       "listed_count": 1,
       "total_count": 107,
       "listed_ratio": 0.9,
       "avg_return_20d": 9.47,
-      "rank_change": -1,
+      "tradable_count": 1,
+      "rank_change": -2,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9475,7 +10306,15 @@
           "amount": 157609.68,
           "capacity_proxy_score": 9.04
         }
-      ]
+      ],
+      "momentum_state": "observing",
+      "momentum_state_label": "观察",
+      "mainline_days": 0,
+      "score_change_3d_pct": -100.0,
+      "rank_change_3d": 7,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": false
     }
   ]
 }

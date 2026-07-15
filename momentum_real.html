@@ -210,7 +210,7 @@
                             <button onclick="clearRequestedSector()" class="rounded-full border border-red-200 bg-white px-3 py-1.5 text-xs font-semibold text-red-700 hover:bg-red-50">清除定位</button>
                         </div>
                     </div>
-                    <div class="overflow-x-auto">
+                    <div class="hidden md:block overflow-x-auto">
                         <table class="w-full text-sm text-left">
                         <thead class="bg-gray-50 text-gray-700">
                             <tr>
@@ -227,6 +227,7 @@
                         </tbody>
                     </table>
                 </div>
+                <div id="momentumMobileList" class="md:hidden divide-y divide-gray-100"></div>
             </div>
 
             <!-- 说明 -->
@@ -592,6 +593,7 @@
         // 渲染表格
         function renderTable(data) {
             const tbody = document.getElementById('momentumTable');
+            const mobileList = document.getElementById('momentumMobileList');
             const matched = requestedSectorName && data.some((item) => item.sector_name === requestedSectorName);
             updateSectorContextBar(matched);
             const rows = requestedSectorName
@@ -602,7 +604,7 @@
                 })
                 : data;
 
-            tbody.innerHTML = rows.map(item => {
+            const renderedRows = rows.map(item => {
                 const heatLabel = getSectorHeatLabel(item);
                 const roleClass = getSectorToneClass(item);
                 const isRequested = requestedSectorName && item.sector_name === requestedSectorName;
@@ -618,7 +620,7 @@
                 const scoreChangeText = `${scoreChange > 0 ? '+' : ''}${scoreChange.toFixed(2)}`;
                 const rankChangeHint = rankChange > 0 ? `排名升 ${rankChange}` : rankChange < 0 ? `排名降 ${Math.abs(rankChange)}` : '排名持平';
                 
-                return `
+                const desktop = `
                     <tr class="table-row ${isRequested ? 'bg-red-50/60' : ''}" onclick="openModal('${item.sector_name}')">
                         <td class="px-6 py-4 font-semibold">${item.rank || '-'}</td>
                         <td class="px-6 py-4">
@@ -638,7 +640,24 @@
                         </td>
                     </tr>
                 `;
-            }).join('');
+                const mobile = `
+                    <button type="button" class="momentum-mobile-row w-full px-4 py-3 text-left ${isRequested ? 'bg-red-50/60' : 'bg-white'}" onclick="openModal('${item.sector_name}')">
+                        <span class="flex min-w-0 items-center gap-3">
+                            <span class="w-5 shrink-0 text-xs font-semibold text-gray-500">${item.rank || '-'}</span>
+                            <span class="min-w-0 flex-1 truncate text-sm font-semibold text-gray-900">${item.sector_name}</span>
+                            <span class="shrink-0 text-sm font-bold text-stock-up">${item.momentum_score.toFixed(2)}</span>
+                            <span class="inline-flex min-w-[3.5rem] shrink-0 items-center justify-center whitespace-nowrap rounded-full px-2 py-1 text-xs font-medium ${roleClass}">${heatLabel}</span>
+                        </span>
+                        <span class="mt-2 flex items-center justify-between gap-3 pl-8 text-xs text-gray-500">
+                            <span><span class="font-medium ${scoreChangeClass}">${scoreChangeText}</span> · ${rankChangeHint}</span>
+                            <span class="shrink-0">强股 ${coverageText}</span>
+                        </span>
+                    </button>
+                `;
+                return { desktop, mobile };
+            });
+            tbody.innerHTML = renderedRows.map(item => item.desktop).join('');
+            mobileList.innerHTML = renderedRows.map(item => item.mobile).join('');
         }
 
         // 筛选数据

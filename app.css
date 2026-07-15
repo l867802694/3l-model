@@ -278,4 +278,19 @@ table tbody tr { transition: background-color 120ms ease; }
     .date-nav-icon { width: 2rem; padding: 0 !important; }
     .date-nav-popover { right: 0; width: min(19rem, calc(100vw - 2rem)); }
     th, td { padding-left: 0.8rem !important; padding-right: 0.8rem !important; }
+    .stock-results-table {
+        min-width: 0 !important;
+        table-layout: fixed;
+    }
+    .stock-results-table th,
+    .stock-results-table td {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+    .stock-results-table th:nth-child(n+5),
+    .stock-results-table td:nth-child(n+5) { display: none; }
+    .stock-results-table th:nth-child(1) { width: 30%; }
+    .stock-results-table th:nth-child(2) { width: 25%; }
+    .stock-results-table th:nth-child(3) { width: 23%; }
+    .stock-results-table th:nth-child(4) { width: 22%; }
 }

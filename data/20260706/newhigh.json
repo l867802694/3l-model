@@ -3,10 +3,10 @@
   "data_source": "AkShare (免费数据)",
   "classification": "东方财富行业板块",
   "market_strength": 0.41,
-  "universe_size": 4990,
+  "universe_size": 4989,
   "history_window_requirement": 251,
-  "history_eligible_stocks": 4907,
-  "history_eligible_ratio": 98.34,
+  "history_eligible_stocks": 4911,
+  "history_eligible_ratio": 98.44,
   "history_window_complete": true,
   "raw_new_high_count": 20,
   "candidate_stocks": 19,
@@ -21,11 +21,11 @@
     "net_new_high_ratio": -1.22,
     "new_high_low_ratio": 0.25,
     "avg_5d": 81.2,
-    "avg_5d_net": -62.8,
+    "avg_5d_net": -63.0,
     "avg_5d_change_pct": -75.4,
     "trend_days": 0,
     "positive_days_5d": 4,
-    "total_universe": 4907,
+    "total_universe": 4911,
     "pulse_signal": false,
     "market_breadth_state": "趋势谨慎",
     "market_observation_state": "趋势谨慎",
@@ -116,53 +116,54 @@
   },
   "market_overview": {
     "trade_date": "20260706",
-    "market_status": "震荡",
+    "market_status": "趋势谨慎",
+    "daily_market_status": "当日震荡",
     "operation_tone": "谨慎观察",
     "price_volume_status": "量能平稳震荡",
     "style_status": "风格均衡",
-    "headline": "量能平稳震荡，主板与成长指数差异不大",
-    "headline_summary": "上证指数-0.06%，两市成交额较昨日-3.05%；上涨 1750 家，下跌 3143 家。",
-    "analysis_summary": "上证指数-0.06%，沪深两市成交额较昨日-3.05%，成交量较昨日-2.65%，属于量能平稳震荡。主板与成长指数差异不大，暂未形成明显风格偏向。 当前动量最强方向是半导体。指数与个股方向基本一致。全市场上涨 1750 家、下跌 3143 家；250日新高 20 家、新低 80 家。",
+    "headline": "趋势谨慎，量能平稳震荡",
+    "headline_summary": "当日震荡；上证指数-0.06%，两市成交额较昨日-3.09%；上涨 1750 家，下跌 3143 家。",
+    "analysis_summary": "上证指数-0.06%，沪深两市成交额较昨日-3.09%，成交量较昨日-2.65%，属于量能平稳震荡。主板与成长指数差异不大，暂未形成明显风格偏向。 当前动量最强方向是半导体。指数与个股方向基本一致。全市场上涨 1750 家、下跌 3143 家；250日新高 20 家、新低 80 家。",
     "watch_text": "关注三大指数能否形成同向、成交额是否放大，以及新高新低能否转强。",
     "total_market": {
-      "amount": 3053040833218.0,
-      "volume": 130761900588.0,
-      "amount_change_pct": -3.05,
+      "amount": 3056812191072.0,
+      "volume": 130737111548.0,
+      "amount_change_pct": -3.09,
       "volume_change_pct": -2.65,
-      "amount_vs_5d_pct": -9.76,
-      "volume_vs_5d_pct": -7.52,
+      "amount_vs_5d_pct": -9.8,
+      "volume_vs_5d_pct": -7.51,
       "advance_count": 1750,
       "decline_count": 3143,
       "flat_count": 91,
       "history": [
         {
           "trade_date": "20260630",
-          "amount": 3246814654397.0,
-          "volume": 131052902935.0,
+          "amount": 3254040301506.0,
+          "volume": 131033981067.0,
           "stock_count": 4977
         },
         {
           "trade_date": "20260701",
-          "amount": 3627659726935.0,
-          "volume": 151047052450.0,
+          "amount": 3634628483422.0,
+          "volume": 151007230695.0,
           "stock_count": 4979
         },
         {
           "trade_date": "20260702",
-          "amount": 3401160238805.0,
-          "volume": 147079427874.0,
+          "amount": 3405828507137.0,
+          "volume": 147035820340.0,
           "stock_count": 4983
         },
         {
           "trade_date": "20260703",
-          "amount": 3148990141292.0,
-          "volume": 134325497836.0,
+          "amount": 3154278902626.0,
+          "volume": 134296618024.0,
           "stock_count": 4983
         },
         {
           "trade_date": "20260706",
-          "amount": 3053040833218.0,
-          "volume": 130761900588.0,
+          "amount": 3056812191072.0,
+          "volume": 130737111548.0,
           "stock_count": 4984
         }
       ]
@@ -176,42 +177,42 @@
         "data_date": "20260706",
         "close": 4041.24,
         "daily_change_pct": -0.06,
-        "amount": 1417978897285.0,
-        "volume": 57459913356.0,
-        "amount_change_pct": -2.29,
+        "amount": 1422573541135.0,
+        "volume": 57469049408.0,
+        "amount_change_pct": -2.39,
         "volume_change_pct": -2.53,
-        "amount_vs_5d_pct": -9.89,
+        "amount_vs_5d_pct": -10.0,
         "volume_vs_5d_pct": -8.27,
         "history": [
           {
             "trade_date": "20260630",
-            "amount": 1516265574885.0,
-            "volume": 58782588053.0,
-            "stock_count": 2216
+            "amount": 1524260937871.0,
+            "volume": 58795475645.0,
+            "stock_count": 2217
           },
           {
             "trade_date": "20260701",
-            "amount": 1683612194500.0,
-            "volume": 66110954197.0,
-            "stock_count": 2220
+            "amount": 1691892451735.0,
+            "volume": 66122189889.0,
+            "stock_count": 2221
           },
           {
             "trade_date": "20260702",
-            "amount": 1564460001000.0,
-            "volume": 64654953708.0,
-            "stock_count": 2222
+            "amount": 1570526206742.0,
+            "volume": 64663637968.0,
+            "stock_count": 2223
           },
           {
             "trade_date": "20260703",
-            "amount": 1451144873265.0,
-            "volume": 58949478121.0,
-            "stock_count": 2222
+            "amount": 1457434611456.0,
+            "volume": 58960330785.0,
+            "stock_count": 2223
           },
           {
             "trade_date": "20260706",
-            "amount": 1417978897285.0,
-            "volume": 57459913356.0,
-            "stock_count": 2222
+            "amount": 1422573541135.0,
+            "volume": 57469049408.0,
+            "stock_count": 2223
           }
         ]
       },
@@ -270,42 +271,42 @@
         "data_date": "20260706",
         "close": 1996.1,
         "daily_change_pct": 1.04,
-        "amount": 501346353499.0,
-        "volume": 6724681153.0,
-        "amount_change_pct": -0.59,
-        "volume_change_pct": -0.85,
-        "amount_vs_5d_pct": -12.82,
-        "volume_vs_5d_pct": -8.59,
+        "amount": 505940997349.0,
+        "volume": 6733817205.0,
+        "amount_change_pct": -0.91,
+        "volume_change_pct": -0.87,
+        "amount_vs_5d_pct": -13.09,
+        "volume_vs_5d_pct": -8.6,
         "history": [
           {
             "trade_date": "20260630",
-            "amount": 579607633554.0,
-            "volume": 7163741116.0,
-            "stock_count": 594
+            "amount": 587602996540.0,
+            "volume": 7176628708.0,
+            "stock_count": 595
           },
           {
             "trade_date": "20260701",
-            "amount": 619694067211.0,
-            "volume": 7840460804.0,
-            "stock_count": 595
+            "amount": 627974324446.0,
+            "volume": 7851696496.0,
+            "stock_count": 596
           },
           {
             "trade_date": "20260702",
-            "amount": 574313503085.0,
-            "volume": 7383521756.0,
-            "stock_count": 595
+            "amount": 580379708827.0,
+            "volume": 7392206016.0,
+            "stock_count": 596
           },
           {
             "trade_date": "20260703",
-            "amount": 504320207478.0,
-            "volume": 6782006149.0,
-            "stock_count": 595
+            "amount": 510609945669.0,
+            "volume": 6792858813.0,
+            "stock_count": 596
           },
           {
             "trade_date": "20260706",
-            "amount": 501346353499.0,
-            "volume": 6724681153.0,
-            "stock_count": 595
+            "amount": 505940997349.0,
+            "volume": 6733817205.0,
+            "stock_count": 596
           }
         ]
       }
@@ -359,7 +360,7 @@
       "avg_capacity_proxy_score": 7.68,
       "sector_confirmation_score": 40.84,
       "sector_score": 40.84,
-      "momentum_rank": 16,
+      "momentum_rank": 18,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -396,7 +397,7 @@
       "avg_capacity_proxy_score": 9.62,
       "sector_confirmation_score": 35.76,
       "sector_score": 35.76,
-      "momentum_rank": 12,
+      "momentum_rank": 13,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "主线退潮",
@@ -453,7 +454,7 @@
       "avg_capacity_proxy_score": 7.67,
       "sector_confirmation_score": 32.74,
       "sector_score": 32.74,
-      "momentum_rank": 8,
+      "momentum_rank": 7,
       "momentum_mainline": true,
       "momentum_warning": false,
       "momentum_state_label": "主线确认",
@@ -510,7 +511,7 @@
       "avg_capacity_proxy_score": 7.01,
       "sector_confirmation_score": 32.52,
       "sector_score": 32.52,
-      "momentum_rank": 28,
+      "momentum_rank": 27,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -547,7 +548,7 @@
       "avg_capacity_proxy_score": 8.43,
       "sector_confirmation_score": 32.27,
       "sector_score": 32.27,
-      "momentum_rank": 34,
+      "momentum_rank": 33,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -604,7 +605,7 @@
       "avg_capacity_proxy_score": 8.75,
       "sector_confirmation_score": 31.69,
       "sector_score": 31.69,
-      "momentum_rank": 20,
+      "momentum_rank": 21,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "主线退潮",
@@ -718,7 +719,7 @@
       "avg_capacity_proxy_score": 7.47,
       "sector_confirmation_score": 29.38,
       "sector_score": 29.38,
-      "momentum_rank": 18,
+      "momentum_rank": 17,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -755,7 +756,7 @@
       "avg_capacity_proxy_score": 9.07,
       "sector_confirmation_score": 27.91,
       "sector_score": 27.91,
-      "momentum_rank": 55,
+      "momentum_rank": 58,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -792,7 +793,7 @@
       "avg_capacity_proxy_score": 7.61,
       "sector_confirmation_score": 27.43,
       "sector_score": 27.43,
-      "momentum_rank": 62,
+      "momentum_rank": 68,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -829,7 +830,7 @@
       "avg_capacity_proxy_score": 6.49,
       "sector_confirmation_score": 26.71,
       "sector_score": 26.71,
-      "momentum_rank": 29,
+      "momentum_rank": 28,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",

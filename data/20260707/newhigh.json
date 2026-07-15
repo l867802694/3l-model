@@ -3,10 +3,10 @@
   "data_source": "AkShare (免费数据)",
   "classification": "东方财富行业板块",
   "market_strength": 0.22,
-  "universe_size": 4990,
+  "universe_size": 4989,
   "history_window_requirement": 251,
-  "history_eligible_stocks": 4908,
-  "history_eligible_ratio": 98.36,
+  "history_eligible_stocks": 4911,
+  "history_eligible_ratio": 98.44,
   "history_window_complete": true,
   "raw_new_high_count": 11,
   "candidate_stocks": 10,
@@ -14,28 +14,28 @@
   "total_sectors": 8,
   "market_stats": {
     "new_high_count": 11,
-    "new_low_count": 339,
-    "net_new_high": -328,
+    "new_low_count": 337,
+    "net_new_high": -326,
     "new_high_ratio": 0.22,
-    "new_low_ratio": 6.91,
-    "net_new_high_ratio": -6.68,
+    "new_low_ratio": 6.86,
+    "net_new_high_ratio": -6.64,
     "new_high_low_ratio": 0.03,
     "avg_5d": 64.8,
     "avg_5d_net": 29.0,
     "avg_5d_change_pct": -83.0,
     "trend_days": 0,
     "positive_days_5d": 3,
-    "total_universe": 4908,
+    "total_universe": 4911,
     "pulse_signal": false,
     "market_breadth_state": "趋势谨慎",
     "market_observation_state": "趋势谨慎",
-    "market_evidence_summary": "广度状态：趋势谨慎；新高 11 / 新低 339；净新高 -328；连续扩散 0 天；深度状态：深度可做；指数确认：弱确认。",
-    "market_observation_summary": "广度状态：趋势谨慎；新高 11 / 新低 339；净新高 -328；连续扩散 0 天；深度状态：深度可做；指数确认：弱确认。",
+    "market_evidence_summary": "广度状态：趋势谨慎；新高 11 / 新低 337；净新高 -326；连续扩散 0 天；深度状态：深度可做；指数确认：弱确认。",
+    "market_observation_summary": "广度状态：趋势谨慎；新高 11 / 新低 337；净新高 -326；连续扩散 0 天；深度状态：深度可做；指数确认：弱确认。",
     "market_status": "趋势谨慎",
     "market_phase": "趋势谨慎",
-    "market_phase_desc": "广度状态：趋势谨慎；新高 11 / 新低 339；净新高 -328；连续扩散 0 天；深度状态：深度可做；指数确认：弱确认。",
+    "market_phase_desc": "广度状态：趋势谨慎；新高 11 / 新低 337；净新高 -326；连续扩散 0 天；深度状态：深度可做；指数确认：弱确认。",
     "market_signal": "趋势谨慎",
-    "market_status_desc": "广度状态：趋势谨慎；新高 11 / 新低 339；净新高 -328；连续扩散 0 天；深度状态：深度可做；指数确认：弱确认。",
+    "market_status_desc": "广度状态：趋势谨慎；新高 11 / 新低 337；净新高 -326；连续扩散 0 天；深度状态：深度可做；指数确认：弱确认。",
     "strength_score": 24,
     "breadth_strength_score": 6,
     "breadth_status": "趋势谨慎",
@@ -116,53 +116,54 @@
   },
   "market_overview": {
     "trade_date": "20260707",
-    "market_status": "偏弱",
+    "market_status": "趋势谨慎",
+    "daily_market_status": "当日偏弱",
     "operation_tone": "谨慎观察",
     "price_volume_status": "缩量下跌",
     "style_status": "成长占优",
-    "headline": "缩量下跌，创业板和科创50明显强于上证",
-    "headline_summary": "上证指数-1.26%，两市成交额较昨日-16.40%；上涨 615 家，下跌 4349 家。",
-    "analysis_summary": "上证指数-1.26%，沪深两市成交额较昨日-16.40%，成交量较昨日-12.20%，属于缩量下跌。创业板和科创50明显强于上证，资金偏向成长方向。 当前动量最强方向是半导体。指数与个股方向基本一致。全市场上涨 615 家、下跌 4349 家；250日新高 11 家、新低 339 家。",
+    "headline": "趋势谨慎，缩量下跌",
+    "headline_summary": "当日偏弱；上证指数-1.26%，两市成交额较昨日-16.42%；上涨 616 家，下跌 4348 家。",
+    "analysis_summary": "上证指数-1.26%，沪深两市成交额较昨日-16.42%，成交量较昨日-12.19%，属于缩量下跌。创业板和科创50明显强于上证，资金偏向成长方向。 当前动量最强方向是半导体。指数与个股方向基本一致。全市场上涨 616 家、下跌 4348 家；250日新高 11 家、新低 337 家。",
     "watch_text": "关注量能能否收缩、成长指数能否止跌，以及新高家数能否重新扩散。",
     "total_market": {
-      "amount": 2552325235931.0,
-      "volume": 114814016230.0,
-      "amount_change_pct": -16.4,
-      "volume_change_pct": -12.2,
-      "amount_vs_5d_pct": -22.55,
+      "amount": 2554732353168.0,
+      "volume": 114794758331.0,
+      "amount_change_pct": -16.42,
+      "volume_change_pct": -12.19,
+      "amount_vs_5d_pct": -22.61,
       "volume_vs_5d_pct": -17.31,
-      "advance_count": 615,
-      "decline_count": 4349,
+      "advance_count": 616,
+      "decline_count": 4348,
       "flat_count": 18,
       "history": [
         {
           "trade_date": "20260701",
-          "amount": 3627659726935.0,
-          "volume": 151047052450.0,
+          "amount": 3634628483422.0,
+          "volume": 151007230695.0,
           "stock_count": 4979
         },
         {
           "trade_date": "20260702",
-          "amount": 3401160238805.0,
-          "volume": 147079427874.0,
+          "amount": 3405828507137.0,
+          "volume": 147035820340.0,
           "stock_count": 4983
         },
         {
           "trade_date": "20260703",
-          "amount": 3148990141292.0,
-          "volume": 134325497836.0,
+          "amount": 3154278902626.0,
+          "volume": 134296618024.0,
           "stock_count": 4983
         },
         {
           "trade_date": "20260706",
-          "amount": 3053040833218.0,
-          "volume": 130761900588.0,
+          "amount": 3056812191072.0,
+          "volume": 130737111548.0,
           "stock_count": 4984
         },
         {
           "trade_date": "20260707",
-          "amount": 2552325235931.0,
-          "volume": 114814016230.0,
+          "amount": 2554732353168.0,
+          "volume": 114794758331.0,
           "stock_count": 4982
         }
       ]
@@ -176,42 +177,42 @@
         "data_date": "20260707",
         "close": 3990.24,
         "daily_change_pct": -1.26,
-        "amount": 1186410583080.0,
-        "volume": 50228542747.0,
-        "amount_change_pct": -16.33,
+        "amount": 1189409188352.0,
+        "volume": 50234663166.0,
+        "amount_change_pct": -16.39,
         "volume_change_pct": -12.59,
-        "amount_vs_5d_pct": -22.29,
+        "amount_vs_5d_pct": -22.43,
         "volume_vs_5d_pct": -17.92,
         "history": [
           {
             "trade_date": "20260701",
-            "amount": 1683612194500.0,
-            "volume": 66110954197.0,
-            "stock_count": 2220
+            "amount": 1691892451735.0,
+            "volume": 66122189889.0,
+            "stock_count": 2221
           },
           {
             "trade_date": "20260702",
-            "amount": 1564460001000.0,
-            "volume": 64654953708.0,
-            "stock_count": 2222
+            "amount": 1570526206742.0,
+            "volume": 64663637968.0,
+            "stock_count": 2223
           },
           {
             "trade_date": "20260703",
-            "amount": 1451144873265.0,
-            "volume": 58949478121.0,
-            "stock_count": 2222
+            "amount": 1457434611456.0,
+            "volume": 58960330785.0,
+            "stock_count": 2223
           },
           {
             "trade_date": "20260706",
-            "amount": 1417978897285.0,
-            "volume": 57459913356.0,
-            "stock_count": 2222
+            "amount": 1422573541135.0,
+            "volume": 57469049408.0,
+            "stock_count": 2223
           },
           {
             "trade_date": "20260707",
-            "amount": 1186410583080.0,
-            "volume": 50228542747.0,
-            "stock_count": 2221
+            "amount": 1189409188352.0,
+            "volume": 50234663166.0,
+            "stock_count": 2222
           }
         ]
       },
@@ -270,42 +271,42 @@
         "data_date": "20260707",
         "close": 2001.59,
         "daily_change_pct": 0.27,
-        "amount": 426512067217.0,
-        "volume": 5517707647.0,
-        "amount_change_pct": -14.93,
-        "volume_change_pct": -17.95,
-        "amount_vs_5d_pct": -23.27,
-        "volume_vs_5d_pct": -23.14,
+        "amount": 429510672489.0,
+        "volume": 5523828066.0,
+        "amount_change_pct": -15.11,
+        "volume_change_pct": -17.97,
+        "amount_vs_5d_pct": -23.64,
+        "volume_vs_5d_pct": -23.17,
         "history": [
           {
             "trade_date": "20260701",
-            "amount": 619694067211.0,
-            "volume": 7840460804.0,
-            "stock_count": 595
+            "amount": 627974324446.0,
+            "volume": 7851696496.0,
+            "stock_count": 596
           },
           {
             "trade_date": "20260702",
-            "amount": 574313503085.0,
-            "volume": 7383521756.0,
-            "stock_count": 595
+            "amount": 580379708827.0,
+            "volume": 7392206016.0,
+            "stock_count": 596
           },
           {
             "trade_date": "20260703",
-            "amount": 504320207478.0,
-            "volume": 6782006149.0,
-            "stock_count": 595
+            "amount": 510609945669.0,
+            "volume": 6792858813.0,
+            "stock_count": 596
           },
           {
             "trade_date": "20260706",
-            "amount": 501346353499.0,
-            "volume": 6724681153.0,
-            "stock_count": 595
+            "amount": 505940997349.0,
+            "volume": 6733817205.0,
+            "stock_count": 596
           },
           {
             "trade_date": "20260707",
-            "amount": 426512067217.0,
-            "volume": 5517707647.0,
-            "stock_count": 595
+            "amount": 429510672489.0,
+            "volume": 5523828066.0,
+            "stock_count": 596
           }
         ]
       }
@@ -359,7 +360,7 @@
       "avg_capacity_proxy_score": 8.23,
       "sector_confirmation_score": 37.09,
       "sector_score": 37.09,
-      "momentum_rank": 11,
+      "momentum_rank": 10,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "主线退潮",
@@ -416,7 +417,7 @@
       "avg_capacity_proxy_score": 7.71,
       "sector_confirmation_score": 34.53,
       "sector_score": 34.53,
-      "momentum_rank": 36,
+      "momentum_rank": 37,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -490,7 +491,7 @@
       "avg_capacity_proxy_score": 9.03,
       "sector_confirmation_score": 30.54,
       "sector_score": 30.54,
-      "momentum_rank": 32,
+      "momentum_rank": 33,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "主线退潮",
@@ -584,7 +585,7 @@
       "avg_capacity_proxy_score": 7.97,
       "sector_confirmation_score": 24.94,
       "sector_score": 24.94,
-      "momentum_rank": 10,
+      "momentum_rank": 11,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",

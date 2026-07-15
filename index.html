@@ -786,7 +786,8 @@
             document.getElementById('headline').textContent = headline;
             document.getElementById('headlineSummary').textContent = summary;
             document.getElementById('marketStatus').textContent = marketOverview.market_status || marketPhase;
-            document.getElementById('marketStatus').className = `status-pill ${marketOverview.market_status === '偏强' ? 'bg-red-50 text-red-700' : marketOverview.market_status === '偏弱' ? 'bg-gray-100 text-gray-700' : 'bg-amber-50 text-amber-700'}`;
+            const primaryMarketStatus = marketOverview.market_status || marketPhase;
+            document.getElementById('marketStatus').className = `status-pill ${['趋势可做', '趋势活跃'].includes(primaryMarketStatus) ? 'bg-red-50 text-red-700' : primaryMarketStatus === '趋势谨慎' ? 'bg-gray-100 text-gray-700' : 'bg-amber-50 text-amber-700'}`;
             document.getElementById('operationTone').textContent = marketOverview.operation_tone || tone.action.split('，')[0];
             document.getElementById('marketStatusDesc').textContent = `${marketStats.market_phase_desc || marketStats.market_status_desc || '-'} | ${getIndexTone(indexStatus)}`;
             document.getElementById('strengthScore').textContent = marketStats.strength_score || 0;

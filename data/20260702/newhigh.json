@@ -3,10 +3,10 @@
   "data_source": "AkShare (免费数据)",
   "classification": "东方财富行业板块",
   "market_strength": 0.67,
-  "universe_size": 4990,
+  "universe_size": 4989,
   "history_window_requirement": 251,
-  "history_eligible_stocks": 4907,
-  "history_eligible_ratio": 98.34,
+  "history_eligible_stocks": 4911,
+  "history_eligible_ratio": 98.44,
   "history_window_complete": true,
   "raw_new_high_count": 33,
   "candidate_stocks": 33,
@@ -20,12 +20,12 @@
     "new_low_ratio": 0.24,
     "net_new_high_ratio": 0.43,
     "new_high_low_ratio": 2.75,
-    "avg_5d": 114.8,
+    "avg_5d": 115.2,
     "avg_5d_net": -520.2,
-    "avg_5d_change_pct": -71.3,
+    "avg_5d_change_pct": -71.4,
     "trend_days": 3,
     "positive_days_5d": 3,
-    "total_universe": 4907,
+    "total_universe": 4911,
     "pulse_signal": false,
     "market_breadth_state": "趋势观察",
     "market_observation_state": "趋势观察",
@@ -116,53 +116,54 @@
   },
   "market_overview": {
     "trade_date": "20260702",
-    "market_status": "偏弱",
+    "market_status": "趋势观察",
+    "daily_market_status": "当日偏弱",
     "operation_tone": "谨慎观察",
     "price_volume_status": "缩量下跌",
     "style_status": "主板占优",
-    "headline": "缩量下跌，创业板和科创50弱于上证",
-    "headline_summary": "上证指数-2.03%，两市成交额较昨日-6.24%；上涨 1946 家，下跌 2915 家。",
-    "analysis_summary": "上证指数-2.03%，沪深两市成交额较昨日-6.24%，成交量较昨日-2.63%，属于缩量下跌。创业板和科创50弱于上证，成长方向承压更重。 当前动量最强方向是半导体。指数与个股方向基本一致。全市场上涨 1946 家、下跌 2915 家；250日新高 33 家、新低 12 家。",
+    "headline": "趋势观察，缩量下跌",
+    "headline_summary": "当日偏弱；上证指数-2.03%，两市成交额较昨日-6.30%；上涨 1946 家，下跌 2915 家。",
+    "analysis_summary": "上证指数-2.03%，沪深两市成交额较昨日-6.30%，成交量较昨日-2.63%，属于缩量下跌。创业板和科创50弱于上证，成长方向承压更重。 当前动量最强方向是半导体。指数与个股方向基本一致。全市场上涨 1946 家、下跌 2915 家；250日新高 33 家、新低 12 家。",
     "watch_text": "关注量能能否收缩、成长指数能否止跌，以及新高家数能否重新扩散。",
     "total_market": {
-      "amount": 3401160238805.0,
-      "volume": 147079427874.0,
-      "amount_change_pct": -6.24,
+      "amount": 3405828507137.0,
+      "volume": 147035820340.0,
+      "amount_change_pct": -6.3,
       "volume_change_pct": -2.63,
-      "amount_vs_5d_pct": -2.56,
-      "volume_vs_5d_pct": 2.41,
+      "amount_vs_5d_pct": -2.61,
+      "volume_vs_5d_pct": 2.4,
       "advance_count": 1946,
       "decline_count": 2915,
       "flat_count": 122,
       "history": [
         {
           "trade_date": "20260626",
-          "amount": 3517134554332.0,
-          "volume": 145897931074.0,
+          "amount": 3522275518298.0,
+          "volume": 145869344191.0,
           "stock_count": 4982
         },
         {
           "trade_date": "20260629",
-          "amount": 3491055225149.0,
-          "volume": 143449088059.0,
+          "amount": 3496742891037.0,
+          "volume": 143425747588.0,
           "stock_count": 4980
         },
         {
           "trade_date": "20260630",
-          "amount": 3246814654397.0,
-          "volume": 131052902935.0,
+          "amount": 3254040301506.0,
+          "volume": 131033981067.0,
           "stock_count": 4977
         },
         {
           "trade_date": "20260701",
-          "amount": 3627659726935.0,
-          "volume": 151047052450.0,
+          "amount": 3634628483422.0,
+          "volume": 151007230695.0,
           "stock_count": 4979
         },
         {
           "trade_date": "20260702",
-          "amount": 3401160238805.0,
-          "volume": 147079427874.0,
+          "amount": 3405828507137.0,
+          "volume": 147035820340.0,
           "stock_count": 4983
         }
       ]
@@ -176,42 +177,42 @@
         "data_date": "20260702",
         "close": 4028.9,
         "daily_change_pct": -2.03,
-        "amount": 1564460001000.0,
-        "volume": 64654953708.0,
-        "amount_change_pct": -7.08,
-        "volume_change_pct": -2.2,
-        "amount_vs_5d_pct": -2.98,
-        "volume_vs_5d_pct": 1.0,
+        "amount": 1570526206742.0,
+        "volume": 64663637968.0,
+        "amount_change_pct": -7.17,
+        "volume_change_pct": -2.21,
+        "amount_vs_5d_pct": -3.07,
+        "volume_vs_5d_pct": 0.99,
         "history": [
           {
             "trade_date": "20260626",
-            "amount": 1607316970255.0,
-            "volume": 64694721719.0,
-            "stock_count": 2221
+            "amount": 1613461275295.0,
+            "volume": 64705746544.0,
+            "stock_count": 2222
           },
           {
             "trade_date": "20260629",
-            "amount": 1652728572717.0,
-            "volume": 64699660372.0,
-            "stock_count": 2219
-          },
-          {
-            "trade_date": "20260630",
-            "amount": 1516265574885.0,
-            "volume": 58782588053.0,
-            "stock_count": 2216
-          },
-          {
-            "trade_date": "20260701",
-            "amount": 1683612194500.0,
-            "volume": 66110954197.0,
+            "amount": 1659269062109.0,
+            "volume": 64711109776.0,
             "stock_count": 2220
           },
           {
+            "trade_date": "20260630",
+            "amount": 1524260937871.0,
+            "volume": 58795475645.0,
+            "stock_count": 2217
+          },
+          {
+            "trade_date": "20260701",
+            "amount": 1691892451735.0,
+            "volume": 66122189889.0,
+            "stock_count": 2221
+          },
+          {
             "trade_date": "20260702",
-            "amount": 1564460001000.0,
-            "volume": 64654953708.0,
-            "stock_count": 2222
+            "amount": 1570526206742.0,
+            "volume": 64663637968.0,
+            "stock_count": 2223
           }
         ]
       },
@@ -270,42 +271,42 @@
         "data_date": "20260702",
         "close": 1987.29,
         "daily_change_pct": -7.7,
-        "amount": 574313503085.0,
-        "volume": 7383521756.0,
-        "amount_change_pct": -7.32,
-        "volume_change_pct": -5.83,
-        "amount_vs_5d_pct": -0.03,
-        "volume_vs_5d_pct": 2.16,
+        "amount": 580379708827.0,
+        "volume": 7392206016.0,
+        "amount_change_pct": -7.58,
+        "volume_change_pct": -5.85,
+        "amount_vs_5d_pct": -0.3,
+        "volume_vs_5d_pct": 2.1,
         "history": [
           {
             "trade_date": "20260626",
-            "amount": 530441036314.0,
-            "volume": 6854983168.0,
-            "stock_count": 594
+            "amount": 536585341354.0,
+            "volume": 6866007993.0,
+            "stock_count": 595
           },
           {
             "trade_date": "20260629",
-            "amount": 597526508703.0,
-            "volume": 7612029746.0,
-            "stock_count": 594
+            "amount": 604066998095.0,
+            "volume": 7623479150.0,
+            "stock_count": 595
           },
           {
             "trade_date": "20260630",
-            "amount": 579607633554.0,
-            "volume": 7163741116.0,
-            "stock_count": 594
+            "amount": 587602996540.0,
+            "volume": 7176628708.0,
+            "stock_count": 595
           },
           {
             "trade_date": "20260701",
-            "amount": 619694067211.0,
-            "volume": 7840460804.0,
-            "stock_count": 595
+            "amount": 627974324446.0,
+            "volume": 7851696496.0,
+            "stock_count": 596
           },
           {
             "trade_date": "20260702",
-            "amount": 574313503085.0,
-            "volume": 7383521756.0,
-            "stock_count": 595
+            "amount": 580379708827.0,
+            "volume": 7392206016.0,
+            "stock_count": 596
           }
         ]
       }
@@ -577,7 +578,7 @@
           "circ_mv": 571.66,
           "amount": 296320.34,
           "turnover_ratio": 5.18,
-          "capacity_proxy_score": 9.54,
+          "capacity_proxy_score": 9.53,
           "sector": "化学制药",
           "industry": "化学制药"
         },
@@ -694,7 +695,7 @@
           "circ_mv": 100.11,
           "amount": 116418.05,
           "turnover_ratio": 11.63,
-          "capacity_proxy_score": 8.15,
+          "capacity_proxy_score": 8.16,
           "sector": "通用设备",
           "industry": "通用设备"
         },
@@ -754,7 +755,7 @@
           "circ_mv": 77.36,
           "amount": 24546.5,
           "turnover_ratio": 3.17,
-          "capacity_proxy_score": 5.98,
+          "capacity_proxy_score": 5.99,
           "sector": "通用设备",
           "industry": "通用设备"
         }
@@ -770,7 +771,7 @@
       "avg_capacity_proxy_score": 5.97,
       "sector_confirmation_score": 36.59,
       "sector_score": 36.59,
-      "momentum_rank": 9,
+      "momentum_rank": 8,
       "momentum_mainline": true,
       "momentum_warning": false,
       "momentum_state_label": "新晋主线",
@@ -807,7 +808,7 @@
       "avg_capacity_proxy_score": 8.69,
       "sector_confirmation_score": 36.27,
       "sector_score": 36.27,
-      "momentum_rank": 21,
+      "momentum_rank": 20,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -844,7 +845,7 @@
       "avg_capacity_proxy_score": 8.6,
       "sector_confirmation_score": 34.88,
       "sector_score": 34.88,
-      "momentum_rank": 7,
+      "momentum_rank": 6,
       "momentum_mainline": true,
       "momentum_warning": false,
       "momentum_state_label": "主线确认",
@@ -881,7 +882,7 @@
       "avg_capacity_proxy_score": 8.03,
       "sector_confirmation_score": 34.75,
       "sector_score": 34.75,
-      "momentum_rank": 22,
+      "momentum_rank": 23,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -1086,7 +1087,7 @@
       "avg_capacity_proxy_score": 5.84,
       "sector_confirmation_score": 26.95,
       "sector_score": 26.95,
-      "momentum_rank": 30,
+      "momentum_rank": 32,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -1123,7 +1124,7 @@
       "avg_capacity_proxy_score": 7.84,
       "sector_confirmation_score": 19.83,
       "sector_score": 19.83,
-      "momentum_rank": 29,
+      "momentum_rank": 31,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "主线退潮",
@@ -1160,7 +1161,7 @@
       "avg_capacity_proxy_score": 5.37,
       "sector_confirmation_score": 18.31,
       "sector_score": 18.31,
-      "momentum_rank": 23,
+      "momentum_rank": 26,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -1234,7 +1235,7 @@
       "avg_capacity_proxy_score": 4.66,
       "sector_confirmation_score": 17.41,
       "sector_score": 17.41,
-      "momentum_rank": 53,
+      "momentum_rank": 56,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",

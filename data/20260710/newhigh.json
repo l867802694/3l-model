@@ -3,10 +3,10 @@
   "data_source": "AkShare (免费数据)",
   "classification": "东方财富行业板块",
   "market_strength": 0.39,
-  "universe_size": 4990,
+  "universe_size": 4989,
   "history_window_requirement": 251,
-  "history_eligible_stocks": 4909,
-  "history_eligible_ratio": 98.38,
+  "history_eligible_stocks": 4911,
+  "history_eligible_ratio": 98.44,
   "history_window_complete": true,
   "raw_new_high_count": 19,
   "candidate_stocks": 19,
@@ -21,11 +21,11 @@
     "net_new_high_ratio": 0.1,
     "new_high_low_ratio": 1.36,
     "avg_5d": 19.2,
-    "avg_5d_net": -190.6,
+    "avg_5d_net": -189.6,
     "avg_5d_change_pct": -1.0,
     "trend_days": 1,
     "positive_days_5d": 1,
-    "total_universe": 4909,
+    "total_universe": 4911,
     "pulse_signal": false,
     "market_breadth_state": "趋势谨慎",
     "market_observation_state": "趋势谨慎",
@@ -116,53 +116,54 @@
   },
   "market_overview": {
     "trade_date": "20260710",
-    "market_status": "偏弱",
+    "market_status": "趋势谨慎",
+    "daily_market_status": "当日偏弱",
     "operation_tone": "谨慎观察",
     "price_volume_status": "放量下跌",
     "style_status": "主板占优",
-    "headline": "放量下跌，创业板和科创50弱于上证",
-    "headline_summary": "上证指数-1.00%，两市成交额较昨日+16.27%；上涨 3349 家，下跌 1575 家。",
-    "analysis_summary": "上证指数-1.00%，沪深两市成交额较昨日+16.27%，成交量较昨日+15.92%，属于放量下跌。创业板和科创50弱于上证，成长方向承压更重。 当前动量最强方向是半导体。指数偏弱但个股涨多跌少，市场呈现明显结构性分化。全市场上涨 3349 家、下跌 1575 家；250日新高 19 家、新低 14 家。",
+    "headline": "趋势谨慎，放量下跌",
+    "headline_summary": "当日偏弱；上证指数-1.00%，两市成交额较昨日+16.28%；上涨 3348 家，下跌 1576 家。",
+    "analysis_summary": "上证指数-1.00%，沪深两市成交额较昨日+16.28%，成交量较昨日+15.93%，属于放量下跌。创业板和科创50弱于上证，成长方向承压更重。 当前动量最强方向是半导体。指数偏弱但个股涨多跌少，市场呈现明显结构性分化。全市场上涨 3348 家、下跌 1576 家；250日新高 19 家、新低 14 家。",
     "watch_text": "关注量能能否收缩、成长指数能否止跌，以及新高家数能否重新扩散。",
     "total_market": {
-      "amount": 3351218432874.0,
-      "volume": 141317093489.0,
-      "amount_change_pct": 16.27,
-      "volume_change_pct": 15.92,
+      "amount": 3355232652148.0,
+      "volume": 141299319102.0,
+      "amount_change_pct": 16.28,
+      "volume_change_pct": 15.93,
       "amount_vs_5d_pct": 18.23,
-      "volume_vs_5d_pct": 15.29,
-      "advance_count": 3349,
-      "decline_count": 1575,
+      "volume_vs_5d_pct": 15.3,
+      "advance_count": 3348,
+      "decline_count": 1576,
       "flat_count": 57,
       "history": [
         {
           "trade_date": "20260706",
-          "amount": 3053040833218.0,
-          "volume": 130761900588.0,
+          "amount": 3056812191072.0,
+          "volume": 130737111548.0,
           "stock_count": 4984
         },
         {
           "trade_date": "20260707",
-          "amount": 2552325235931.0,
-          "volume": 114814016230.0,
+          "amount": 2554732353168.0,
+          "volume": 114794758331.0,
           "stock_count": 4982
         },
         {
           "trade_date": "20260708",
-          "amount": 2536121050253.0,
-          "volume": 111050675451.0,
+          "amount": 2538694453369.0,
+          "volume": 111027966174.0,
           "stock_count": 4982
         },
         {
           "trade_date": "20260709",
-          "amount": 2882381559740.0,
-          "volume": 121910487073.0,
+          "amount": 2885452104082.0,
+          "volume": 121880815803.0,
           "stock_count": 4982
         },
         {
           "trade_date": "20260710",
-          "amount": 3351218432874.0,
-          "volume": 141317093489.0,
+          "amount": 3355232652148.0,
+          "volume": 141299319102.0,
           "stock_count": 4981
         }
       ]
@@ -176,42 +177,42 @@
         "data_date": "20260710",
         "close": 3996.16,
         "daily_change_pct": -1.0,
-        "amount": 1548560754250.0,
-        "volume": 61423975459.0,
-        "amount_change_pct": 14.54,
+        "amount": 1553148552237.0,
+        "volume": 61433160599.0,
+        "amount_change_pct": 14.56,
         "volume_change_pct": 14.45,
-        "amount_vs_5d_pct": 17.5,
+        "amount_vs_5d_pct": 17.47,
         "volume_vs_5d_pct": 14.31,
         "history": [
           {
             "trade_date": "20260706",
-            "amount": 1417978897285.0,
-            "volume": 57459913356.0,
-            "stock_count": 2222
+            "amount": 1422573541135.0,
+            "volume": 57469049408.0,
+            "stock_count": 2223
           },
           {
             "trade_date": "20260707",
-            "amount": 1186410583080.0,
-            "volume": 50228542747.0,
-            "stock_count": 2221
+            "amount": 1189409188352.0,
+            "volume": 50234663166.0,
+            "stock_count": 2222
           },
           {
             "trade_date": "20260708",
-            "amount": 1182132101707.0,
-            "volume": 48355804722.0,
-            "stock_count": 2221
+            "amount": 1185347688463.0,
+            "volume": 48362695066.0,
+            "stock_count": 2222
           },
           {
             "trade_date": "20260709",
-            "amount": 1351962304230.0,
-            "volume": 53671091488.0,
-            "stock_count": 2221
+            "amount": 1355805262563.0,
+            "volume": 53678896641.0,
+            "stock_count": 2222
           },
           {
             "trade_date": "20260710",
-            "amount": 1548560754250.0,
-            "volume": 61423975459.0,
-            "stock_count": 2221
+            "amount": 1553148552237.0,
+            "volume": 61433160599.0,
+            "stock_count": 2222
           }
         ]
       },
@@ -270,42 +271,42 @@
         "data_date": "20260710",
         "close": 2064.98,
         "daily_change_pct": -5.53,
-        "amount": 594882043276.0,
-        "volume": 7833586047.0,
-        "amount_change_pct": 11.83,
+        "amount": 599469841263.0,
+        "volume": 7842771187.0,
+        "amount_change_pct": 11.89,
         "volume_change_pct": 21.11,
-        "amount_vs_5d_pct": 23.3,
-        "volume_vs_5d_pct": 25.05,
+        "amount_vs_5d_pct": 23.18,
+        "volume_vs_5d_pct": 25.03,
         "history": [
           {
             "trade_date": "20260706",
-            "amount": 501346353499.0,
-            "volume": 6724681153.0,
-            "stock_count": 595
+            "amount": 505940997349.0,
+            "volume": 6733817205.0,
+            "stock_count": 596
           },
           {
             "trade_date": "20260707",
-            "amount": 426512067217.0,
-            "volume": 5517707647.0,
-            "stock_count": 595
+            "amount": 429510672489.0,
+            "volume": 5523828066.0,
+            "stock_count": 596
           },
           {
             "trade_date": "20260708",
-            "amount": 448186788507.0,
-            "volume": 5830224318.0,
-            "stock_count": 595
+            "amount": 451402375263.0,
+            "volume": 5837114662.0,
+            "stock_count": 596
           },
           {
             "trade_date": "20260709",
-            "amount": 531931697608.0,
-            "volume": 6468101384.0,
-            "stock_count": 595
+            "amount": 535774655941.0,
+            "volume": 6475906537.0,
+            "stock_count": 596
           },
           {
             "trade_date": "20260710",
-            "amount": 594882043276.0,
-            "volume": 7833586047.0,
-            "stock_count": 595
+            "amount": 599469841263.0,
+            "volume": 7842771187.0,
+            "stock_count": 596
           }
         ]
       }
@@ -322,7 +323,7 @@
       "avg_capacity_proxy_score": 8.09,
       "sector_confirmation_score": 47.91,
       "sector_score": 47.91,
-      "momentum_rank": 16,
+      "momentum_rank": 14,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -567,7 +568,7 @@
       "avg_capacity_proxy_score": 7.84,
       "sector_confirmation_score": 30.62,
       "sector_score": 30.62,
-      "momentum_rank": 28,
+      "momentum_rank": 25,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -681,7 +682,7 @@
       "avg_capacity_proxy_score": 6.36,
       "sector_confirmation_score": 28.52,
       "sector_score": 28.52,
-      "momentum_rank": 24,
+      "momentum_rank": 23,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -755,7 +756,7 @@
       "avg_capacity_proxy_score": 7.18,
       "sector_confirmation_score": 26.18,
       "sector_score": 26.18,
-      "momentum_rank": 61,
+      "momentum_rank": 62,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",
@@ -903,7 +904,7 @@
       "avg_capacity_proxy_score": 5.34,
       "sector_confirmation_score": 16.46,
       "sector_score": 16.46,
-      "momentum_rank": 71,
+      "momentum_rank": 75,
       "momentum_mainline": false,
       "momentum_warning": false,
       "momentum_state_label": "观察",

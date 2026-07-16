@@ -593,7 +593,7 @@
             const marketPhase = marketStats?.market_status || marketStats?.market_phase || '趋势环境待确认';
             document.getElementById('totalSectors').textContent = data.length;
             document.getElementById('top10Count').textContent = `前十板块 ${Math.min(10, data.length)} 个`;
-            document.getElementById('mainLineCount').textContent = data.filter(i => i.is_main_line).length;
+            document.getElementById('mainLineCount').textContent = data.filter(i => i.is_main_line && !i.is_warning).length;
             document.getElementById('warningCount').textContent = `高潮警惕 ${data.filter(i => i.is_warning).length} 个`;
             document.getElementById('marketStatus').textContent = marketPhase;
             document.getElementById('marketStatusDesc').textContent = marketStats?.market_status_desc || '一年新高环境不可用时，这页只展示方向强弱。';
@@ -710,7 +710,7 @@
             // 筛选并渲染
             let filtered = momentumData;
             if (type === 'focus') filtered = momentumData.filter(i => Number(i.rank || 999) <= 20);
-            if (type === 'mainline') filtered = momentumData.filter(i => i.is_main_line);
+            if (type === 'mainline') filtered = momentumData.filter(i => i.is_main_line && !i.is_warning);
             
             renderTable(filtered);
         }

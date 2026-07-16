@@ -241,10 +241,10 @@
                 <div class="bg-white rounded-xl shadow-card border border-gray-100">
                     <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900">3L确认方向</h3>
-                            <p class="text-xs text-gray-500 mt-1">综合扩散、动量与持续性，默认展示前6个</p>
+                            <h3 class="text-lg font-semibold text-gray-900">3L方向分层</h3>
+                            <p class="text-xs text-gray-500 mt-1">默认只看确认、升温和过热警示，普通观察方向折叠</p>
                         </div>
-                        <button id="toggleSectors" onclick="toggleSectorList()" class="quiet-button px-3 py-1.5 text-xs">展开全部</button>
+                        <button id="toggleSectors" type="button" onclick="toggleSectorList()" class="quiet-button px-3 py-1.5 text-xs">查看观察方向</button>
                     </div>
                     <div class="p-6" id="sectorList">
                         <!-- 动态填充 -->
@@ -367,8 +367,7 @@
                 </div>
             </div>
             
-            <div class="px-6 py-4 border-t border-gray-200 bg-gray-50 flex justify-between items-center">
-                <p class="text-xs text-gray-500">点击股票行可查看详情（功能开发中）</p>
+            <div class="px-6 py-4 border-t border-gray-200 bg-gray-50 flex justify-end items-center">
                 <button onclick="closeModal()" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg text-sm font-medium">关闭</button>
             </div>
         </div>
@@ -840,6 +839,16 @@
             renderStocks(allStocks);
         }
 
+        function getSectorConfirmationTier(sector) {
+            if (sector.confirmation_tier) return sector.confirmation_tier;
+            const count = Number(sector.new_high_count || sector.stock_count || 0);
+            if (sector.momentum_warning) return 'climax_warning';
+            if (count < 2) return 'observation';
+            if (sector.momentum_mainline) return 'mainline_confirmed';
+            if (Number(sector.momentum_rank || 99) <= 12) return 'front_runner';
+            return 'observation';
+        }
+
         // 渲染板块列表
         function renderSectors(sectors, totalNewHigh) {
             const container = document.getElementById('sectorList');
@@ -851,7 +860,18 @@
             
             const sortedSectors = [...sectors].sort((a, b) => Number(b.sector_confirmation_score || b.sector_score || 0) - Number(a.sector_confirmation_score || a.sector_score || 0));
             const maxScore = sortedSectors[0]?.sector_confirmation_score || sortedSectors[0]?.sector_score || 1;
-            const visibleSectors = showAllSectors ? sortedSectors : sortedSectors.slice(0, 6);
+            const signalTiers = new Set(['mainline_confirmed', 'front_runner', 'climax_warning']);
+            const signalSectors = sortedSectors.filter((sector) => signalTiers.has(getSectorConfirmationTier(sector)));
+            const observationCount = sortedSectors.length - signalSectors.length;
+            const visibleSectors = showAllSectors ? sortedSectors : signalSectors.slice(0, 6);
+            const toggle = document.getElementById('toggleSectors');
+            toggle.textContent = showAllSectors ? '收起观察方向' : `查看观察方向 ${observationCount}`;
+            toggle.disabled = observationCount === 0;
+
+            if (!visibleSectors.length) {
+                container.innerHTML = '<p class="text-center text-gray-500 py-8">今天暂无确认或升温方向，可展开查看普通观察方向。</p>';
+                return;
+            }
             
             // 显示所有板块，不限于前8个
             container.innerHTML = visibleSectors.map((sector, index) => {
@@ -863,10 +883,14 @@
                 const breadth = Number(sector.sector_new_high_ratio || 0);
                 const reason = `3L确认分 ${score.toFixed(1)}${breadth ? ` · 板块新高覆盖 ${breadth.toFixed(1)}%` : ''}`;
                 const badges = [];
+                const tier = getSectorConfirmationTier(sector);
+                const confidence = Number(sector.sector_confirmation_confidence || Math.min(Math.sqrt(count / 3), 1) * 100);
                 const isSelected = selectedSectorName && (sector.sector_name || sector.name) === selectedSectorName;
-                if (sector.confirmation_tier === 'climax_warning' || sector.momentum_warning) badges.push('高潮警惕');
-                else if (sector.confirmation_tier === 'mainline_confirmed' || sector.momentum_mainline) badges.push('主线确认');
-                else if (sector.confirmation_tier === 'front_runner') badges.push('前排升温');
+                if (tier === 'climax_warning') badges.push('高潮警惕');
+                else if (tier === 'mainline_confirmed') badges.push('主线确认');
+                else if (tier === 'front_runner') badges.push('前排升温');
+                else badges.push('普通观察');
+                if (confidence < 80) badges.push('单股信号');
                 if ((sector.avg_consecutive_days || 0) >= 2) badges.push(`均值${sector.avg_consecutive_days}天`);
                 
                 return `
@@ -894,7 +918,6 @@
 
         function toggleSectorList() {
             showAllSectors = !showAllSectors;
-            document.getElementById('toggleSectors').textContent = showAllSectors ? '收起' : '展开全部';
             renderSectors(currentSectors, currentData?.market_stats?.new_high_count || allStocks.length || 0);
         }
 

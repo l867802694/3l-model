@@ -1,9 +1,9 @@
 {
   "trade_date": "20260710",
-  "generated_at": "2026-07-16T11:27:02+08:00",
+  "generated_at": "2026-07-16T12:55:49+08:00",
   "data_quality": {
     "version": 1,
-    "generated_at": "2026-07-16T11:27:02+08:00",
+    "generated_at": "2026-07-16T12:55:49+08:00",
     "market_close_complete": true,
     "snapshot_status": "complete_close",
     "intraday_requested": false,
@@ -1411,7 +1411,7 @@
       "score_change_3d_pct": -9.3,
       "rank_change_3d": 0,
       "is_new_mainline": false,
-      "is_confirmed_mainline": true,
+      "is_confirmed_mainline": false,
       "is_fading": false
     },
     {
@@ -2083,7 +2083,7 @@
       "score_change_3d_pct": 31.1,
       "rank_change_3d": 1,
       "is_new_mainline": false,
-      "is_confirmed_mainline": true,
+      "is_confirmed_mainline": false,
       "is_fading": false
     },
     {
@@ -2403,7 +2403,7 @@
       "score_change_3d_pct": 99.3,
       "rank_change_3d": 2,
       "is_new_mainline": false,
-      "is_confirmed_mainline": true,
+      "is_confirmed_mainline": false,
       "is_fading": false
     },
     {

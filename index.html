@@ -799,7 +799,8 @@
             document.getElementById('marketStatus').textContent = marketOverview.market_status || marketPhase;
             const primaryMarketStatus = marketOverview.market_status || marketPhase;
             document.getElementById('marketStatus').className = `status-pill ${['趋势可做', '趋势活跃'].includes(primaryMarketStatus) ? 'bg-red-50 text-red-700' : primaryMarketStatus === '趋势谨慎' ? 'bg-gray-100 text-gray-700' : 'bg-amber-50 text-amber-700'}`;
-            document.getElementById('operationTone').textContent = marketOverview.operation_tone || tone.action.split('，')[0];
+            const participationLevel = marketOverview.participation_level || marketOverview.operation_tone || tone.action.split('，')[0];
+            document.getElementById('operationTone').textContent = `参与档位：${participationLevel}`;
             document.getElementById('marketStatusDesc').textContent = `${marketStats.market_phase_desc || marketStats.market_status_desc || '-'} | ${getIndexTone(indexStatus)}`;
             document.getElementById('strengthScore').textContent = marketStats.strength_score || 0;
             document.getElementById('strengthBar').style.width = `${marketStats.strength_score || 0}%`;
@@ -822,7 +823,7 @@
             document.getElementById('newHighRatio').textContent = `可计算 ${effectiveUniverse} / 全市场 ${newhighPayload.universe_size || effectiveUniverse} | 占比 ${(marketStats.new_high_ratio || 0).toFixed(2)}%`;
             document.getElementById('netNewHigh').textContent = marketStats.net_new_high ?? 0;
             document.getElementById('trendDays').textContent = `连续 ${marketStats.trend_days || 0} 天净新高为正`;
-            document.getElementById('mainLineCount').textContent = (momentumPayload.data || []).filter((item) => item.is_main_line).length;
+            document.getElementById('mainLineCount').textContent = (momentumPayload.data || []).filter((item) => item.is_main_line && !item.is_warning).length;
             document.getElementById('warningCount').textContent = `高潮警惕 ${(momentumPayload.data || []).filter((item) => item.is_warning).length} 个`;
             document.getElementById('opportunityCount').textContent = opportunities.length;
             document.getElementById('opportunityHint').textContent = `主线确认 ${opportunityState.mainlineCount || 0} · 前排升温 ${opportunityState.frontRunnerCount || 0} · 高潮警惕 ${opportunityState.warningCount || 0}`;
@@ -927,7 +928,7 @@
 
         function renderOpportunityList(opportunityState) {
             const opportunities = opportunityState.list || [];
-            const opportunityLimit = window.matchMedia('(max-width: 640px)').matches ? 5 : 8;
+            const opportunityLimit = window.matchMedia('(max-width: 640px)').matches ? 3 : 5;
             const list = document.getElementById('opportunityList');
             if (!opportunities.length) {
                 list.innerHTML = '<p class="text-sm text-gray-500">暂无确认名单。</p>';

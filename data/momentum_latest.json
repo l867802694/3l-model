@@ -1,9 +1,9 @@
 {
   "trade_date": "20260715",
-  "generated_at": "2026-07-16T11:27:04+08:00",
+  "generated_at": "2026-07-16T13:00:25+08:00",
   "data_quality": {
     "version": 1,
-    "generated_at": "2026-07-16T11:27:04+08:00",
+    "generated_at": "2026-07-16T13:00:25+08:00",
     "market_close_complete": true,
     "snapshot_status": "complete_close",
     "intraday_requested": false,
@@ -1147,7 +1147,7 @@
       "score_change_3d_pct": 128.5,
       "rank_change_3d": 1,
       "is_new_mainline": false,
-      "is_confirmed_mainline": true,
+      "is_confirmed_mainline": false,
       "is_fading": false
     },
     {
@@ -1599,7 +1599,7 @@
       "score_change_3d_pct": 103.1,
       "rank_change_3d": 1,
       "is_new_mainline": false,
-      "is_confirmed_mainline": true,
+      "is_confirmed_mainline": false,
       "is_fading": false
     },
     {
@@ -2018,7 +2018,7 @@
       "score_change_3d_pct": 101.9,
       "rank_change_3d": 1,
       "is_new_mainline": false,
-      "is_confirmed_mainline": true,
+      "is_confirmed_mainline": false,
       "is_fading": false
     },
     {
@@ -2503,7 +2503,7 @@
       "score_change_3d_pct": 216.7,
       "rank_change_3d": 2,
       "is_new_mainline": false,
-      "is_confirmed_mainline": true,
+      "is_confirmed_mainline": false,
       "is_fading": false
     },
     {
@@ -5538,7 +5538,12 @@
           "rank_in_market": 61,
           "circ_mv": 100.36,
           "amount": 85309.07,
-          "capacity_proxy_score": 8.26
+          "capacity_proxy_score": 8.26,
+          "dfmc_industry": "机械设备-专用设备-其他专用设备",
+          "dfmc_industry_l2": "专用设备",
+          "fund_ratio": 0.0,
+          "turnover_ratio": 0.0,
+          "is_250d_high": false
         },
         {
           "rank": 3,

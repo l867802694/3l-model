@@ -297,7 +297,7 @@
                 </div>
             </section>
 
-            <section class="grid grid-cols-1 xl:grid-cols-[1.15fr_0.85fr] gap-6">
+            <section class="grid grid-cols-1 xl:grid-cols-[1.15fr_0.85fr] items-start gap-6">
                 <div class="shell rounded-[2rem] p-6 sm:p-7">
                     <div class="flex items-center justify-between gap-4 mb-6">
                         <div>
@@ -840,7 +840,8 @@
         }
 
         function renderSectorGrid(momentumPayload, sectorStabilityMap) {
-            const sectors = (momentumPayload.data || []).slice(0, 4);
+            const sectorLimit = window.matchMedia('(max-width: 640px)').matches ? 3 : 4;
+            const sectors = (momentumPayload.data || []).slice(0, sectorLimit);
             const grid = document.getElementById('sectorGrid');
             if (!sectors.length) {
                 grid.innerHTML = '<p class="text-sm text-gray-500">暂无板块数据</p>';
@@ -893,12 +894,13 @@
 
         function renderOpportunityList(opportunityState) {
             const opportunities = opportunityState.list || [];
+            const opportunityLimit = window.matchMedia('(max-width: 640px)').matches ? 5 : 8;
             const list = document.getElementById('opportunityList');
             if (!opportunities.length) {
                 list.innerHTML = '<p class="text-sm text-gray-500">暂无确认名单。</p>';
                 return;
             }
-            list.innerHTML = opportunities.slice(0, 8).map((stock, index) => {
+            list.innerHTML = opportunities.slice(0, opportunityLimit).map((stock, index) => {
                 const change = Number(stock.change_pct || stock.change || 0);
                 const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || 1);
                 const amountYi = getAmountYi(stock);

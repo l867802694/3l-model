@@ -1,298 +1,43 @@
----
-name: 3l-model
-description: |
-  A股3L模型分析系统 v1.0.6 - 现已切换到 BaoStock 免费数据源。
-  
-  版本: v1.0.6 (2026-03-10) - 稳定版本
-  
-  v1.0.6修复：
-  - 修复动量页面日期选择器路径问题
-  - 支持GitHub Pages子目录部署
-  
-  v1.0.5修复：
-  - 一年新高筛选逻辑：移除0.999容差，只有收盘价>=250日最高价才算新高
-  - 日期选择器：支持静态文件模式和API模式
-  
-  v1.0.4修复：
-  - 一年新高涨跌幅计算：使用 change/pre_close 正确计算 pct_change
-  - 突破幅度计算：修复突破幅度的计算逻辑
-  - GitHub Pages兼容性：前端自动检测环境，静态托管使用 JSON 文件
-  - 前端字段兼容性：支持 ts_code 和 code 字段
+# 3L 股海雷达
 
-  v1.0.3修复：
-  - 一年新高数据格式：修复为前端期望的 sectors 数组格式
-  - 前端API端口：修复为 8000 端口
-  - 依赖问题：添加 uvicorn、fastapi 到 requirements
+一个面向 A 股趋势交易的本地数据生成器和静态看盘站点。
 
-  v1.0.2优化：
-  - 排名变动颜色：上升=红色，下降=绿色
-  - 排名逻辑：使用真实交易日历
+页面只回答三件事：
 
-  使用场景：
-  - 分析A股板块动量排名和热点
-  - 查看突破250日新高的强势股
-  - 生成股票分析报告
-  - 获取一年新高个股和板块分布
+1. 当前市场环境是否适合趋势交易。
+2. 东方财富行业板块中，哪些方向动量最强。
+3. 哪些股票已经通过 250 日新高得到市场确认。
 
-  触发词：3L模型、3l模型、板块动量、一年新高、股票分析、动量排名、
-          新高个股、板块热点、A股分析、股票报告
-
-  支持自动运行：每天下午5点自动更新数据并推送到GitHub Pages
-
-  在线访问：https://l867802694.github.io/3l-model/
----
-
-# 3L 模型 v1.0.6 - A股股票分析系统
-
-## 版本信息
-
-- **版本**: v1.0.6
-- **发布日期**: 2026-03-10
-- **状态**: 稳定版本 ✅
-
-## 在线访问
-
-- **首页**: https://l867802694.github.io/3l-model/
-- **动量股池**: https://l867802694.github.io/3l-model/momentum.html
-- **一年新高**: https://l867802694.github.io/3l-model/newhigh.html
-
-## 概述
-
-3L模型是一个A股股票分析工具，包含两个核心模型：
-
-1. **动量模型**：基于20日涨幅筛选强势股，按申万2021二级行业统计板块动量
-2. **一年新高模型**：统计突破250日最高价的个股，分析板块分布
-
-## 更新日志
-
-### v1.0.3 (2026-03-09) - 封板版本
-
-- 🔧 修复一年新高数据格式（改为前端期望的 sectors 数组格式）
-- 🔧 修复前端 API 端口配置（8001 → 8000）
-- 🔧 添加缺失依赖（uvicorn、fastapi）
-- ✅ 封板：此版本功能已完善，如需修改请开 v1.0.4+
-
-### v1.0.2 (2026-03-08)
-
-- 🎨 优化排名变动颜色（上升=红色，下降=绿色）
-- 📅 优化排名逻辑（使用真实交易日历）
-
-### v1.0.1 (2026-03-08)
-
-- ✉️ 添加邮件通知功能
-
-### v1.0.0 (2026-03-08)
-
-- 🎉 初始版本发布
-
-## 快速开始
-
-### 查看网站
-
-直接访问：
-```
-https://l867802694.github.io/3l-model/
-```
-
-### 本地运行
+## 日常使用
 
 ```bash
-# 进入项目目录
-cd /Users/lulululu/Documents/3l-model-排查
+# 更新最近完整交易日并同步静态站点
+bash scripts/update-data.sh
 
-# 一键启动本地服务
-bash 3l-model.sh start
+# 启动本地页面
+bash scripts/start-server.sh
 ```
 
-访问：
-- 动量股池：http://localhost:8080/momentum_real.html
-- 一年新高：http://localhost:8080/newhigh_final.html
+本地页面：<http://localhost:8080/>
+线上页面：<https://l867802694.github.io/3l-model/>
 
-### 手动更新数据
+## 目录
+
+- `assets/backend/update_data.py`：行情和模型计算入口
+- `assets/backend/validate_data.py`：发布前数据校验
+- `assets/backend/build_date_indexes.py`：本机与云端共用的日期索引生成器
+- `.github/workflows/cloud-data-fallback.yml`：GitHub 云端数据兜底
+- `assets/`：本地静态页面
+- `scripts/`：更新、同步和自动发布脚本
+- `deploy/`：独立的 GitHub Pages 仓库
+
+数据源以 AkShare/BaoStock 行情为主，行业分类使用东方财富行业板块。本机在登录、17:00 和 20:00 检查数据；GitHub Actions 在交易日 18:37 进行独立兜底。发布前会同时检查收盘完整性、分类版本、行情覆盖率以及最近 5 日的股票池、板块范围和成交额异常。
+
+## 回测验证
 
 ```bash
-# 更新今天数据并同步 deploy/
-cd /Users/lulululu/Documents/3l-model-排查
-bash 3l-model.sh update-now
-
-# 或分步执行
-cd /Users/lulululu/Documents/3l-model-排查/assets/backend
-source .venv/bin/activate
-python update_data.py
+cd assets/backend
+.venv/bin/python backtest_momentum_strength.py
 ```
 
-### 设置定时任务
-
-```bash
-cd /Users/lulululu/Documents/3l-model-排查
-bash 3l-model.sh setup-cron
-```
-
-## 模型逻辑
-
-### 动量模型
-
-1. 获取全市场股票列表
-2. 剔除次新股（上市<20天）和ST股票
-3. 计算20日涨幅，取前15%强势股
-4. 机构资金过滤（市值+成交额代理指标）
-5. 按申万2021二级行业统计
-6. 综合上榜数量、上榜占比、平均20日涨幅计算动量分值
-
-### 一年新高模型
-
-1. 获取全市场股票
-2. 过滤ST股和次新股
-3. 计算250日最高价
-4. 筛选收盘价突破250日最高的个股
-5. 机构关注度过滤
-6. 按行业统计板块分布
-
-## 数据字段说明
-
-### 动量模型
-
-| 字段 | 说明 |
-|------|------|
-| momentum_score | 动量分值（综合数量、扩散度、涨幅强度） |
-| listed_count | 板块上榜股票数 |
-| listed_ratio | 上榜占比 |
-| avg_return_20d | 平均20日涨幅 |
-| rank_change | 排名变动（较前一天）|
-
-### 一年新高模型
-
-| 字段 | 说明 |
-|------|------|
-| high_250 | 250日最高价 |
-| close | 当日收盘价 |
-| change_pct | 当日涨跌幅 |
-| break_through | 突破幅度 |
-| consecutive_days | 连新高天数 |
-
-## 自动更新流程
-
-```
-每天 17:00 (下午5点)
-    ↓
-1. 从BaoStock获取最新A股数据
-    ↓
-2. 计算板块动量排名
-    ↓
-3. 计算一年新高个股
-    ↓
-4. 推送到GitHub
-    ↓
-5. GitHub Pages自动部署
-    ↓
-朋友们看到最新数据！
-```
-
-## 文件结构
-
-```
-3l-model/
-├── SKILL.md              # 本文件
-├── skill.json            # 版本信息
-├── 3l-model.sh           # 主入口脚本
-├── scripts/              # 实用脚本
-│   ├── setup-cron.sh
-│   ├── start-server.sh
-│   ├── update-data.sh
-│   ├── auto-update-and-push.sh
-│   └── deploy-to-github.sh
-└── assets/               # 项目代码
-    ├── backend/          # 后端代码
-    │   ├── api_server.py
-    │   ├── update_data.py
-    │   └── data/         # 数据文件
-    ├── momentum_real.html
-    ├── newhigh_final.html
-    └── index.html
-```
-
-## 依赖
-
-- Python 3.10+
-- FastAPI
-- BaoStock
-- Git
-- crontab (macOS/Linux)
-
-## 配置
-
-### BaoStock 并发配置
-
-在 `assets/backend/.env` 中配置：
-
-```env
-BAOSTOCK_MAX_WORKERS=6
-```
-
-## 注意事项
-
-1. **数据保留策略**：永久保存所有历史数据
-2. **自动跳过周末和法定节假日**
-3. **机构关注度使用市值+成交额作为代理指标**
-4. **所有数据均为真实行情数据，非模拟生成**
-5. **GitHub仓库只包含静态文件，核心更新代码只在本地**
-
-## 更新日志
-
-### v1.0.6 (2026-03-10)
-
-- 🔧 修复动量页面日期选择器路径问题
-- 🔧 支持 GitHub Pages 子目录部署
-- 🔧 统一前后端路径检测逻辑
-
-### v1.0.5 (2026-03-10)
-
-- 🔧 修复一年新高筛选逻辑：移除 `0.999` 容差，只有收盘价 >= 250日最高价才算新高
-- 🔧 修复日期选择器：支持静态文件模式（GitHub Pages）和 API 模式（本地开发）
-- 🔧 修复动量页面：支持 GitHub Pages 静态文件部署
-- ✅ 数据已重新生成，现在只包含真正的新高股票
-
-### v1.0.4 (2026-03-09) - 稳定版本
-
-- 🔧 修复一年新高涨跌幅计算（使用 change/pre_close 正确计算）
-- 🔧 修复突破幅度计算逻辑
-- 🔧 修复 GitHub Pages 兼容性（静态托管自动使用 JSON 文件）
-- 🔧 修复前端字段兼容性（支持 ts_code 和 code）
-- ✅ 系统已稳定，明天自动更新将正常工作
-
-### v1.0.3 (2026-03-09)
-
-- 🔧 修复一年新高数据格式（改为前端期望的 sectors 数组格式）
-- 🔧 修复前端 API 端口配置（8001 → 8000）
-- 🔧 添加缺失依赖（uvicorn、fastapi）
-
-### v1.0.2 (2026-03-08)
-
-- 🎨 优化排名变动颜色（上升=红色，下降=绿色）
-- 📅 优化排名逻辑（使用真实交易日历）
-
-### v1.0.1 (2026-03-08)
-
-- ✉️ 添加邮件通知功能
-
-### v1.0.0 (2026-03-08)
-
-- 🎉 初始版本发布
-- ✅ 板块动量模型
-- ✅ 一年新高模型
-- ✅ 自动更新和部署
-- ✅ GitHub Pages集成
-
-## 许可证
-
-MIT License
-
-## 作者
-
-ClawX
-
----
-
-**3L 模型 v1.0.6 - 让股票分析更简单！** 📈
-# Test SSH sync at Wed Mar 11 17:15:30 CST 2026
-# Cache bust Wed Mar 18 20:41:20 CST 2026
+报告同时保留单一起点的严格不重叠样本，以及覆盖全部持有起点的分组稳定性结果。不同起点之间可能共享持有期，因此稳健性结果用于识别起点敏感性，不直接触发模型参数调整。

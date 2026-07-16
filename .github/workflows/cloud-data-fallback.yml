@@ -1,0 +1,173 @@
+name: Cloud data fallback
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_update:
+        description: Rebuild the latest complete trading day even when data is current
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    - cron: "37 18 * * 1-5"
+      timezone: Asia/Shanghai
+
+concurrency:
+  group: cloud-data-fallback
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    env:
+      TZ: Asia/Shanghai
+      MARKET_DATA_SOURCE: baostock
+      BAOSTOCK_MAX_WORKERS: "6"
+      BAOSTOCK_PROGRESS_TIMEOUT: "180"
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - name: Check out site repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: automation/backend/requirements.txt
+
+      - name: Install updater dependencies
+        run: python -m pip install -r automation/backend/requirements.txt
+
+      - name: Seed updater data from published site
+        run: |
+          mkdir -p automation/backend/data
+          rsync -a data/ automation/backend/data/
+
+      - name: Resolve the target trading day
+        id: freshness
+        shell: bash
+        run: |
+          target_output=$(python automation/backend/update_data.py --target-date-only)
+          target_date=$(printf '%s\n' "$target_output" | sed -n '/^[0-9][0-9]*$/p' | tail -n 1)
+          current_date=$(python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("data/momentum_latest.json")
+          print(json.loads(path.read_text(encoding="utf-8")).get("trade_date", ""))
+          PY
+          )
+          if [ "${#target_date}" -ne 8 ]; then
+            echo "Invalid target trading day: $target_output" >&2
+            exit 1
+          fi
+          cache_epoch=$(date '+%G-%V')
+          echo "target_date=$target_date" >> "$GITHUB_OUTPUT"
+          echo "current_date=$current_date" >> "$GITHUB_OUTPUT"
+          echo "cache_epoch=$cache_epoch" >> "$GITHUB_OUTPUT"
+          echo "Target $target_date, current ${current_date:-none}, cache epoch $cache_epoch"
+
+      - name: Restore market history cache
+        id: history-cache
+        uses: actions/cache@v4
+        with:
+          path: automation/backend/raw_cache
+          key: market-history-${{ runner.os }}-${{ steps.freshness.outputs.cache_epoch }}
+          restore-keys: |
+            market-history-${{ runner.os }}-
+
+      - name: Decide whether a rebuild is required
+        id: rebuild
+        shell: bash
+        run: |
+          current_date="${{ steps.freshness.outputs.current_date }}"
+          target_date="${{ steps.freshness.outputs.target_date }}"
+          force_update="${{ inputs.force_update || false }}"
+          cache_hit="${{ steps.history-cache.outputs.cache-hit }}"
+          scheduled_run="${{ github.event_name == 'schedule' }}"
+          should_update=false
+          if [ "$current_date" != "$target_date" ] || [ "$force_update" = "true" ] || { [ "$scheduled_run" = "true" ] && [ "$cache_hit" != "true" ]; }; then
+            should_update=true
+          fi
+          echo "should_update=$should_update" >> "$GITHUB_OUTPUT"
+          echo "Target $target_date, current ${current_date:-none}, cache hit ${cache_hit:-false}, scheduled $scheduled_run, rebuild $should_update"
+
+      - name: Validate the current publication
+        if: steps.rebuild.outputs.should_update != 'true'
+        run: python automation/backend/validate_data.py data --all --recent-window 5
+
+      - name: Rebuild latest complete trading day
+        if: steps.rebuild.outputs.should_update == 'true'
+        run: python automation/backend/update_data.py --date "${{ steps.freshness.outputs.target_date }}"
+
+      - name: Validate generated data against recent history
+        if: steps.rebuild.outputs.should_update == 'true'
+        run: python automation/backend/validate_data.py automation/backend/data --recent-window 5
+
+      - name: Build date indexes
+        if: steps.rebuild.outputs.should_update == 'true'
+        run: python automation/backend/build_date_indexes.py automation/backend/data
+
+      - name: Check for a newer local-machine publication
+        if: steps.rebuild.outputs.should_update == 'true'
+        id: remote-state
+        shell: bash
+        run: |
+          git fetch origin main
+          remote_date=$(git show origin/main:data/momentum_latest.json | python -c 'import json,sys; print(json.load(sys.stdin).get("trade_date", ""))')
+          generated_date=$(python -c 'import json; print(json.load(open("automation/backend/data/momentum_latest.json", encoding="utf-8")).get("trade_date", ""))')
+          publish=true
+          if [ -n "$remote_date" ] && { [ "$remote_date" = "$generated_date" ] || [[ "$remote_date" > "$generated_date" ]]; }; then
+            publish=false
+          fi
+          echo "remote_date=$remote_date" >> "$GITHUB_OUTPUT"
+          echo "generated_date=$generated_date" >> "$GITHUB_OUTPUT"
+          echo "publish=$publish" >> "$GITHUB_OUTPUT"
+          echo "Remote $remote_date, generated $generated_date, publish $publish"
+
+      - name: Publish validated data to the branch
+        if: steps.rebuild.outputs.should_update == 'true' && steps.remote-state.outputs.publish == 'true'
+        shell: bash
+        run: |
+          git merge --ff-only origin/main
+          rsync -a --delete automation/backend/data/ data/
+          cp data/momentum_latest.json data/momentum.json
+          cp data/newhigh_latest.json data/newhigh.json
+          python automation/backend/validate_data.py data --all --recent-window 5
+          if git diff --quiet -- data; then
+            echo "No publishable data changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "云端兜底更新: ${{ steps.remote-state.outputs.generated_date }}"
+          git push origin HEAD:main
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Report a failed cloud fallback
+        if: failure()
+        continue-on-error: true
+        shell: bash
+        run: |
+          title="[数据异常] 云端兜底更新失败"
+          body="云端数据兜底任务失败。目标交易日：${{ steps.freshness.outputs.target_date || '未识别' }}。运行记录：${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          issue_number=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "$title in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$issue_number" ]; then
+            gh issue comment "$issue_number" --repo "$GITHUB_REPOSITORY" --body "$body"
+          else
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body"
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}

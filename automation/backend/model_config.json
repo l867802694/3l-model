@@ -1,0 +1,20 @@
+{
+  "model_version": "3.0",
+  "classification": {
+    "name": "东方财富行业板块",
+    "version": "eastmoney-industry-20260714-r1",
+    "as_of": "20260714",
+    "snapshot_file": "classification/eastmoney_industry_20260714_r1.json"
+  },
+  "momentum": {
+    "top_ratio": 0.15,
+    "mainline_score_min": 2.4,
+    "climax_warning_score_min": 5.3,
+    "score_formula": "N^0.55 * R^1.2 * continuous_20d_strength"
+  },
+  "backtest": {
+    "minimum_dates": 40,
+    "stability_periods": 3,
+    "minimum_positive_periods": 2
+  }
+}

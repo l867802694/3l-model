@@ -236,7 +236,7 @@
                     <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
                         <div class="max-w-3xl">
                             <p class="focus-label">今日结论</p>
-                            <h2 id="headline" class="mt-3 text-3xl font-semibold leading-tight text-gray-950">-</h2>
+                            <h2 id="headline" class="mt-3 text-2xl sm:text-3xl font-semibold leading-tight text-gray-950">-</h2>
                             <p id="headlineSummary" class="mt-3 text-sm sm:text-base leading-7 text-gray-600">-</p>
                         </div>
                         <div class="flex flex-wrap lg:justify-end gap-2">
@@ -257,7 +257,7 @@
                             <p id="totalMarketVolumeCompare" class="market-meta">-</p>
                         </div>
                         <div class="market-metric">
-                            <p class="focus-label">涨跌家数</p>
+                            <p class="focus-label">市场宽度</p>
                             <p id="breadthCount" class="focus-value">-</p>
                             <p id="breadthHint" class="market-meta">-</p>
                         </div>
@@ -269,37 +269,18 @@
                     </div>
                 </div>
 
-                <div class="shell overflow-hidden">
+                <div class="shell overflow-hidden market-board">
                     <div class="px-5 py-4 border-b border-gray-200">
-                        <h2 class="text-base font-semibold text-gray-950">指数与量能</h2>
-                        <p class="mt-1 text-xs text-gray-500">成交额、成交量同时对比上一交易日和此前5日均值</p>
+                        <h2 class="text-base font-semibold text-gray-950">大盘表现</h2>
+                        <p class="mt-1 text-xs text-gray-500">上证、创业板、科创50的涨跌与量能变化</p>
                     </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-sm market-index-table">
-                            <thead class="bg-gray-50 text-gray-500">
-                                <tr>
-                                    <th class="px-5 py-3 text-left font-medium">指数</th>
-                                    <th class="px-5 py-3 text-right font-medium">收盘</th>
-                                    <th class="px-5 py-3 text-right font-medium">涨跌</th>
-                                    <th class="px-5 py-3 text-right font-medium">成交额</th>
-                                    <th class="px-5 py-3 text-right font-medium">成交量</th>
-                                    <th class="px-5 py-3 text-left font-medium">较昨日</th>
-                                    <th class="px-5 py-3 text-left font-medium">较5日均值</th>
-                                    <th class="px-5 py-3 text-left font-medium">近5日量能</th>
-                                </tr>
-                            </thead>
-                            <tbody id="marketIndexRows" class="divide-y divide-gray-100"></tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="shell p-5 sm:p-6 market-analysis">
-                    <div class="grid lg:grid-cols-[1fr_0.38fr] gap-6">
+                    <div id="marketIndexRows" class="divide-y divide-gray-100"></div>
+                    <div class="market-analysis-grid border-t border-gray-200 p-5 sm:p-6">
                         <div>
                             <p class="focus-label">大盘解读</p>
                             <p id="marketAnalysis" class="mt-3 text-sm leading-7 text-gray-700">-</p>
                         </div>
-                        <div class="lg:border-l lg:border-gray-200 lg:pl-6">
+                        <div class="market-watch">
                             <p class="focus-label">接下来观察</p>
                             <p id="marketWatch" class="mt-3 text-sm leading-7 text-gray-700">-</p>
                         </div>
@@ -821,26 +802,32 @@
             const indexRows = document.getElementById('marketIndexRows');
             const indices = marketOverview.indices || [];
             indexRows.innerHTML = indices.length ? indices.map((item) => `
-                <tr>
-                    <td class="px-5 py-4">
+                <div class="market-index-row">
+                    <div class="market-index-identity">
                         <p class="font-semibold text-gray-900">${escapeHtml(item.name)}</p>
                         <p class="mt-1 text-xs text-gray-400">${escapeHtml(item.turnover_label || '')}</p>
-                    </td>
-                    <td class="px-5 py-4 text-right font-medium text-gray-900">${Number(item.close || 0).toFixed(2)}</td>
-                    <td class="px-5 py-4 text-right font-semibold ${changeClass(item.daily_change_pct)}">${formatPercent(item.daily_change_pct, 2)}</td>
-                    <td class="px-5 py-4 text-right text-gray-700">${formatMarketAmount(item.amount)}</td>
-                    <td class="px-5 py-4 text-right text-gray-700">${formatMarketVolume(item.volume)}</td>
-                    <td class="px-5 py-4 text-xs leading-5 text-gray-600">
-                        <span class="${changeClass(item.amount_change_pct)}">额 ${formatPercent(item.amount_change_pct, 1)}</span><br>
-                        <span class="${changeClass(item.volume_change_pct)}">量 ${formatPercent(item.volume_change_pct, 1)}</span>
-                    </td>
-                    <td class="px-5 py-4 text-xs leading-5 text-gray-600">
-                        <span class="${changeClass(item.amount_vs_5d_pct)}">额 ${formatPercent(item.amount_vs_5d_pct, 1)}</span><br>
-                        <span class="${changeClass(item.volume_vs_5d_pct)}">量 ${formatPercent(item.volume_vs_5d_pct, 1)}</span>
-                    </td>
-                    <td class="px-5 py-4">${renderVolumeSpark(item.history || [])}</td>
-                </tr>
-            `).join('') : '<tr><td colspan="8" class="px-5 py-8 text-center text-gray-400">该日期暂未生成完整量价数据</td></tr>';
+                    </div>
+                    <div class="market-index-quote">
+                        <p class="font-medium text-gray-900">${Number(item.close || 0).toFixed(2)}</p>
+                        <p class="mt-1 font-semibold ${changeClass(item.daily_change_pct)}">${formatPercent(item.daily_change_pct, 2)}</p>
+                    </div>
+                    <div class="market-index-stats">
+                        <div class="market-index-stat">
+                            <span>成交额 / 量</span>
+                            <strong>${formatMarketAmount(item.amount)} / ${formatMarketVolume(item.volume)}</strong>
+                        </div>
+                        <div class="market-index-stat">
+                            <span>较昨日</span>
+                            <strong><i class="${changeClass(item.amount_change_pct)}">额 ${formatPercent(item.amount_change_pct, 1)}</i> · <i class="${changeClass(item.volume_change_pct)}">量 ${formatPercent(item.volume_change_pct, 1)}</i></strong>
+                        </div>
+                        <div class="market-index-stat">
+                            <span>较5日均值</span>
+                            <strong><i class="${changeClass(item.amount_vs_5d_pct)}">额 ${formatPercent(item.amount_vs_5d_pct, 1)}</i> · <i class="${changeClass(item.volume_vs_5d_pct)}">量 ${formatPercent(item.volume_vs_5d_pct, 1)}</i></strong>
+                        </div>
+                    </div>
+                    <div class="market-index-spark">${renderVolumeSpark(item.history || [])}</div>
+                </div>
+            `).join('') : '<div class="px-5 py-8 text-center text-gray-400">该日期暂未生成完整量价数据</div>';
             document.getElementById('pageMeta').textContent = `数据日期 ${formatDate(newhighPayload.trade_date || currentDate)} | 东方财富行业板块 | 更新 ${formatPageUpdatedAt()}`;
             currentSignalSnapshot = {
                 headline,

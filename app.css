@@ -55,8 +55,52 @@ main { padding-top: 1.5rem !important; }
     line-height: 1.5;
 }
 
-.market-index-table { min-width: 940px !important; }
-.market-index-table td { vertical-align: middle; }
+.market-index-row {
+    display: grid;
+    grid-template-columns: minmax(9rem, 1fr) minmax(5rem, 0.55fr) minmax(28rem, 2.8fr) 5rem;
+    gap: 1.25rem;
+    align-items: center;
+    padding: 1rem 1.25rem;
+}
+
+.market-index-quote { text-align: right; }
+
+.market-index-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.market-index-stat {
+    min-width: 0;
+    color: var(--muted);
+    font-size: 0.72rem;
+}
+
+.market-index-stat span,
+.market-index-stat strong { display: block; }
+.market-index-stat strong {
+    margin-top: 0.25rem;
+    color: #3f3f46;
+    font-size: 0.78rem;
+    font-style: normal;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.market-index-stat i { font-style: normal; }
+.market-index-spark { justify-self: end; }
+
+.market-analysis-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.38fr);
+    gap: 1.5rem;
+    border-left: 4px solid #27272a;
+}
+
+.market-watch {
+    border-left: 1px solid var(--line);
+    padding-left: 1.5rem;
+}
 
 .volume-spark {
     display: flex;
@@ -74,8 +118,6 @@ main { padding-top: 1.5rem !important; }
 }
 
 .volume-spark span:last-child { background: var(--accent); }
-
-.market-analysis { border-left: 4px solid #27272a; }
 
 .change-up { color: #c81e1e; }
 .change-down { color: #15803d; }
@@ -259,6 +301,30 @@ table tbody tr { transition: background-color 120ms ease; }
     nav .gap-3 { gap: 0.4rem !important; }
     nav .h-10.w-10 { width: 2rem !important; height: 2rem !important; }
     .focus-value { font-size: 1.1rem; }
+    .market-index-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 0.8rem 1rem;
+        padding: 1rem;
+    }
+    .market-index-stats {
+        grid-column: 1 / -1;
+        gap: 0.6rem;
+    }
+    .market-index-stat strong {
+        font-size: 0.7rem;
+        white-space: normal;
+    }
+    .market-index-spark { display: none; }
+    .market-analysis-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .market-watch {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding-top: 1rem;
+        padding-left: 0;
+    }
     .market-metric {
         padding: 1rem 0.75rem;
         border-bottom: 1px solid var(--line);

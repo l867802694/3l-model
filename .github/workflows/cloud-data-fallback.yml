@@ -1,6 +1,11 @@
 name: Cloud data fallback
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/cloud-data-fallback.yml
   workflow_dispatch:
     inputs:
       force_update:

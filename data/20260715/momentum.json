@@ -1,11 +1,32 @@
 {
   "trade_date": "20260715",
+  "generated_at": "2026-07-16T11:27:04+08:00",
+  "data_quality": {
+    "version": 1,
+    "generated_at": "2026-07-16T11:27:04+08:00",
+    "market_close_complete": true,
+    "snapshot_status": "complete_close",
+    "intraday_requested": false,
+    "stock_coverage": 0.9994,
+    "stock_coverage_pct": 99.94,
+    "stock_match_count": 4987,
+    "stock_total": 4990,
+    "matching_index_count": 4,
+    "required_index_count": 4,
+    "minimum_stock_coverage_pct": 98.0
+  },
   "data_source": "AkShare (免费数据)",
   "classification": "东方财富行业板块",
   "classification_version": "eastmoney-industry-20260714-r1",
   "classification_as_of": "20260714",
   "classification_mapping_hash": "8888f16cd2c4ec0e9ccf349f4ce5e10e10a7d625d978e1ba30cd97d19246a1e5",
   "classification_fallback_count": 0,
+  "classification_fallback_breakdown": {
+    "eastmoney_board": 0,
+    "eastmoney_quote": 0,
+    "unmapped": 0
+  },
+  "classification_effective_mapping_hash": "0ce01a8bd10b3ba5612b5152bb0c8d581964b381f3ce8400b762b7810377df0e",
   "model_version": "3.0",
   "score_formula": "N^0.55 * R^1.2 * continuous_20d_strength",
   "mainline_score_min": 2.4,
@@ -1994,7 +2015,7 @@
       "momentum_state": "climax_warning",
       "momentum_state_label": "高潮警惕",
       "mainline_days": 4,
-      "score_change_3d_pct": 106.4,
+      "score_change_3d_pct": 101.9,
       "rank_change_3d": 1,
       "is_new_mainline": false,
       "is_confirmed_mainline": true,
@@ -3162,7 +3183,7 @@
       "momentum_state": "confirmed",
       "momentum_state_label": "主线确认",
       "mainline_days": 5,
-      "score_change_3d_pct": -74.3,
+      "score_change_3d_pct": -74.4,
       "rank_change_3d": -4,
       "is_new_mainline": false,
       "is_confirmed_mainline": true,
@@ -3626,7 +3647,7 @@
       "momentum_state_label": "新晋主线",
       "mainline_days": 1,
       "score_change_3d_pct": 664.7,
-      "rank_change_3d": 33,
+      "rank_change_3d": 31,
       "is_new_mainline": true,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -3780,7 +3801,7 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": 75.6,
+      "score_change_3d_pct": 80.0,
       "rank_change_3d": 3,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
@@ -3958,7 +3979,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 1563.6,
-      "rank_change_3d": 51,
+      "rank_change_3d": 52,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -4025,7 +4046,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 118.9,
-      "rank_change_3d": 16,
+      "rank_change_3d": 15,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -4101,7 +4122,7 @@
         {
           "rank": 6,
           "code": "600999",
-          "name": "招商证券",
+          "name": "XD招商证",
           "return_20d": 10.41,
           "close_price": 20.9,
           "rank_in_market": 384,
@@ -4238,7 +4259,7 @@
       "listed_ratio": 37.5,
       "avg_return_20d": 11.01,
       "tradable_count": 9,
-      "rank_change": 8,
+      "rank_change": 7,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -4360,7 +4381,7 @@
       "listed_ratio": 38.5,
       "avg_return_20d": 11.89,
       "tradable_count": 5,
-      "rank_change": 26,
+      "rank_change": 24,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -4424,7 +4445,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 229.6,
-      "rank_change_3d": 29,
+      "rank_change_3d": 30,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -4438,7 +4459,7 @@
       "listed_ratio": 60.0,
       "avg_return_20d": 8.16,
       "tradable_count": 3,
-      "rank_change": 44,
+      "rank_change": 45,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -4480,7 +4501,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 780.0,
-      "rank_change_3d": 48,
+      "rank_change_3d": 49,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -4494,7 +4515,7 @@
       "listed_ratio": 55.6,
       "avg_return_20d": 5.37,
       "tradable_count": 4,
-      "rank_change": 0,
+      "rank_change": 36,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -4546,8 +4567,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": 82.2,
-      "rank_change_3d": 17,
+      "score_change_3d_pct": 1071.4,
+      "rank_change_3d": 55,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -4561,7 +4582,7 @@
       "listed_ratio": 37.5,
       "avg_return_20d": 7.83,
       "tradable_count": 5,
-      "rank_change": 48,
+      "rank_change": 47,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -4624,8 +4645,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": 343.7,
-      "rank_change_3d": 38,
+      "score_change_3d_pct": 294.4,
+      "rank_change_3d": 35,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -4724,7 +4745,7 @@
       "momentum_state": "fading",
       "momentum_state_label": "主线退潮",
       "mainline_days": 0,
-      "score_change_3d_pct": -80.2,
+      "score_change_3d_pct": -79.5,
       "rank_change_3d": -11,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
@@ -4803,7 +4824,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 509.1,
-      "rank_change_3d": 39,
+      "rank_change_3d": 40,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -4935,8 +4956,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": 26.7,
-      "rank_change_3d": 12,
+      "score_change_3d_pct": 29.5,
+      "rank_change_3d": 13,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -4950,7 +4971,7 @@
       "listed_ratio": 10.9,
       "avg_return_20d": 15.46,
       "tradable_count": 18,
-      "rank_change": -2,
+      "rank_change": -3,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -5089,7 +5110,7 @@
         {
           "rank": 13,
           "code": "603155",
-          "name": "新亚强",
+          "name": "DR新亚强",
           "return_20d": 6.63,
           "close_price": 24.76,
           "rank_in_market": 537,
@@ -5157,7 +5178,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -18.3,
-      "rank_change_3d": 2,
+      "rank_change_3d": 1,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -5171,7 +5192,7 @@
       "listed_ratio": 18.8,
       "avg_return_20d": 21.58,
       "tradable_count": 3,
-      "rank_change": 9,
+      "rank_change": 8,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -5213,7 +5234,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 475.0,
-      "rank_change_3d": 43,
+      "rank_change_3d": 44,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -5227,7 +5248,7 @@
       "listed_ratio": 14.7,
       "avg_return_20d": 21.34,
       "tradable_count": 5,
-      "rank_change": 2,
+      "rank_change": 1,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -5305,7 +5326,7 @@
       "listed_ratio": 7.6,
       "avg_return_20d": 22.74,
       "tradable_count": 15,
-      "rank_change": -11,
+      "rank_change": -12,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -5478,7 +5499,7 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -67.5,
+      "score_change_3d_pct": -67.7,
       "rank_change_3d": -13,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
@@ -5517,12 +5538,7 @@
           "rank_in_market": 61,
           "circ_mv": 100.36,
           "amount": 85309.07,
-          "capacity_proxy_score": 8.26,
-          "dfmc_industry": "机械设备-专用设备-其他专用设备",
-          "dfmc_industry_l2": "专用设备",
-          "fund_ratio": 0.0,
-          "turnover_ratio": 0.0,
-          "is_250d_high": false
+          "capacity_proxy_score": 8.26
         },
         {
           "rank": 3,
@@ -5660,7 +5676,7 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -58.8,
+      "score_change_3d_pct": -56.0,
       "rank_change_3d": -10,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
@@ -5742,7 +5758,7 @@
       "listed_ratio": 10.8,
       "avg_return_20d": 17.85,
       "tradable_count": 9,
-      "rank_change": -5,
+      "rank_change": -6,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -5849,8 +5865,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -38.3,
-      "rank_change_3d": -5,
+      "score_change_3d_pct": -37.3,
+      "rank_change_3d": -4,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -5864,7 +5880,7 @@
       "listed_ratio": 21.4,
       "avg_return_20d": 13.72,
       "tradable_count": 3,
-      "rank_change": 24,
+      "rank_change": 25,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -5906,7 +5922,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -2.6,
-      "rank_change_3d": 9,
+      "rank_change_3d": 7,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -5920,7 +5936,7 @@
       "listed_ratio": 16.7,
       "avg_return_20d": 28.27,
       "tradable_count": 2,
-      "rank_change": -11,
+      "rank_change": -13,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -5951,7 +5967,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 0.0,
-      "rank_change_3d": 10,
+      "rank_change_3d": 8,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -5965,7 +5981,7 @@
       "listed_ratio": 10.6,
       "avg_return_20d": 13.8,
       "tradable_count": 13,
-      "rank_change": 8,
+      "rank_change": 6,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -5994,7 +6010,7 @@
         {
           "rank": 3,
           "code": "688206",
-          "name": "XD概伦电",
+          "name": "概伦电子",
           "return_20d": 23.0,
           "close_price": 46.15,
           "rank_in_market": 156,
@@ -6117,7 +6133,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -36.8,
-      "rank_change_3d": -4,
+      "rank_change_3d": -5,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -6131,7 +6147,7 @@
       "listed_ratio": 12.8,
       "avg_return_20d": 19.71,
       "tradable_count": 5,
-      "rank_change": -1,
+      "rank_change": -2,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -6194,8 +6210,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": 0.0,
-      "rank_change_3d": 9,
+      "score_change_3d_pct": -2.8,
+      "rank_change_3d": 7,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -6262,7 +6278,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 61.9,
-      "rank_change_3d": 15,
+      "rank_change_3d": 16,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -6276,7 +6292,7 @@
       "listed_ratio": 30.0,
       "avg_return_20d": 6.56,
       "tradable_count": 3,
-      "rank_change": 23,
+      "rank_change": 24,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -6317,8 +6333,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": 312.5,
-      "rank_change_3d": 35,
+      "score_change_3d_pct": 371.4,
+      "rank_change_3d": 37,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -6421,7 +6437,7 @@
       "listed_ratio": 8.6,
       "avg_return_20d": 32.9,
       "tradable_count": 5,
-      "rank_change": -3,
+      "rank_change": 0,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -6484,8 +6500,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -48.3,
-      "rank_change_3d": -11,
+      "score_change_3d_pct": -38.8,
+      "rank_change_3d": -5,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -6499,7 +6515,7 @@
       "listed_ratio": 9.0,
       "avg_return_20d": 18.4,
       "tradable_count": 9,
-      "rank_change": 1,
+      "rank_change": -2,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -6621,7 +6637,7 @@
       "listed_ratio": 12.1,
       "avg_return_20d": 19.63,
       "tradable_count": 4,
-      "rank_change": -14,
+      "rank_change": -15,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -6688,7 +6704,7 @@
       "listed_ratio": 9.1,
       "avg_return_20d": 18.89,
       "tradable_count": 8,
-      "rank_change": -26,
+      "rank_change": -25,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -6799,7 +6815,7 @@
       "listed_ratio": 11.4,
       "avg_return_20d": 11.39,
       "tradable_count": 10,
-      "rank_change": -19,
+      "rank_change": -20,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -6917,7 +6933,7 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -60.8,
+      "score_change_3d_pct": -60.3,
       "rank_change_3d": -20,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
@@ -7010,7 +7026,7 @@
       "listed_ratio": 7.2,
       "avg_return_20d": 14.32,
       "tradable_count": 17,
-      "rank_change": -6,
+      "rank_change": -8,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7206,7 +7222,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -44.9,
-      "rank_change_3d": -10,
+      "rank_change_3d": -12,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -7220,7 +7236,7 @@
       "listed_ratio": 13.5,
       "avg_return_20d": 10.35,
       "tradable_count": 7,
-      "rank_change": -1,
+      "rank_change": -3,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7320,7 +7336,7 @@
       "listed_ratio": 8.8,
       "avg_return_20d": 19.21,
       "tradable_count": 7,
-      "rank_change": -15,
+      "rank_change": -18,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7405,7 +7421,7 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -77.2,
+      "score_change_3d_pct": -78.0,
       "rank_change_3d": -30,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
@@ -7420,7 +7436,7 @@
       "listed_ratio": 10.6,
       "avg_return_20d": 9.42,
       "tradable_count": 12,
-      "rank_change": -15,
+      "rank_change": -16,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7560,7 +7576,7 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -65.8,
+      "score_change_3d_pct": -64.4,
       "rank_change_3d": -26,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
@@ -7575,7 +7591,7 @@
       "listed_ratio": 12.5,
       "avg_return_20d": 103.01,
       "tradable_count": 2,
-      "rank_change": -21,
+      "rank_change": -22,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7606,7 +7622,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -51.9,
-      "rank_change_3d": -17,
+      "rank_change_3d": -18,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -7627,7 +7643,7 @@
         {
           "rank": 1,
           "code": "603983",
-          "name": "丸美生物",
+          "name": "XD丸美生",
           "return_20d": 30.71,
           "close_price": 28.86,
           "rank_in_market": 100,
@@ -7650,8 +7666,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": 177.8,
-      "rank_change_3d": 18,
+      "score_change_3d_pct": 150.0,
+      "rank_change_3d": 17,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -7665,7 +7681,7 @@
       "listed_ratio": 17.6,
       "avg_return_20d": 10.75,
       "tradable_count": 3,
-      "rank_change": 49,
+      "rank_change": 50,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7707,7 +7723,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 19.0,
-      "rank_change_3d": 1,
+      "rank_change_3d": 2,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -7774,7 +7790,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 700.0,
-      "rank_change_3d": 38,
+      "rank_change_3d": 36,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -7788,7 +7804,7 @@
       "listed_ratio": 11.8,
       "avg_return_20d": 14.53,
       "tradable_count": 4,
-      "rank_change": 0,
+      "rank_change": 2,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -7841,7 +7857,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 266.7,
-      "rank_change_3d": 24,
+      "rank_change_3d": 25,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -7989,7 +8005,7 @@
       "listed_ratio": 10.3,
       "avg_return_20d": 15.85,
       "tradable_count": 4,
-      "rank_change": -4,
+      "rank_change": -2,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8041,8 +8057,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": 66.7,
-      "rank_change_3d": 5,
+      "score_change_3d_pct": 53.8,
+      "rank_change_3d": 4,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -8056,7 +8072,7 @@
       "listed_ratio": 10.3,
       "avg_return_20d": 16.1,
       "tradable_count": 3,
-      "rank_change": -11,
+      "rank_change": -12,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8097,8 +8113,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": 80.0,
-      "rank_change_3d": 9,
+      "score_change_3d_pct": 63.6,
+      "rank_change_3d": 7,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -8112,7 +8128,7 @@
       "listed_ratio": 18.2,
       "avg_return_20d": 4.43,
       "tradable_count": 3,
-      "rank_change": 4,
+      "rank_change": 5,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8153,8 +8169,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": 41.7,
-      "rank_change_3d": 4,
+      "score_change_3d_pct": 54.5,
+      "rank_change_3d": 5,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -8168,7 +8184,7 @@
       "listed_ratio": 12.1,
       "avg_return_20d": 7.42,
       "tradable_count": 4,
-      "rank_change": 7,
+      "rank_change": 8,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8221,7 +8237,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 55.6,
-      "rank_change_3d": 7,
+      "rank_change_3d": 8,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -8275,7 +8291,7 @@
         {
           "rank": 4,
           "code": "603067",
-          "name": "XD振华股",
+          "name": "振华股份",
           "return_20d": 6.38,
           "close_price": 38.03,
           "rank_in_market": 555,
@@ -8310,7 +8326,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -36.4,
-      "rank_change_3d": -10,
+      "rank_change_3d": -9,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -8369,7 +8385,7 @@
       "listed_ratio": 7.0,
       "avg_return_20d": 14.82,
       "tradable_count": 4,
-      "rank_change": 9,
+      "rank_change": 11,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8422,7 +8438,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 100.0,
-      "rank_change_3d": 14,
+      "rank_change_3d": 15,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -8436,7 +8452,7 @@
       "listed_ratio": 6.2,
       "avg_return_20d": 26.2,
       "tradable_count": 2,
-      "rank_change": -20,
+      "rank_change": -19,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8466,8 +8482,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -78.8,
-      "rank_change_3d": -30,
+      "score_change_3d_pct": -77.1,
+      "rank_change_3d": -28,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -8481,7 +8497,7 @@
       "listed_ratio": 12.0,
       "avg_return_20d": 6.04,
       "tradable_count": 3,
-      "rank_change": 32,
+      "rank_change": 33,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8523,7 +8539,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 450.0,
-      "rank_change_3d": 28,
+      "rank_change_3d": 27,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -8537,7 +8553,7 @@
       "listed_ratio": 6.7,
       "avg_return_20d": 19.62,
       "tradable_count": 2,
-      "rank_change": -28,
+      "rank_change": -30,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8567,8 +8583,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -80.0,
-      "rank_change_3d": -31,
+      "score_change_3d_pct": -80.8,
+      "rank_change_3d": -33,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -8582,7 +8598,7 @@
       "listed_ratio": 12.5,
       "avg_return_20d": 12.68,
       "tradable_count": 1,
-      "rank_change": 7,
+      "rank_change": 4,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8601,8 +8617,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": 66.7,
-      "rank_change_3d": 14,
+      "score_change_3d_pct": 42.9,
+      "rank_change_3d": 10,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -8616,7 +8632,7 @@
       "listed_ratio": 16.7,
       "avg_return_20d": 4.31,
       "tradable_count": 2,
-      "rank_change": 34,
+      "rank_change": 26,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8646,8 +8662,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": 150.0,
-      "rank_change_3d": 18,
+      "score_change_3d_pct": 100.0,
+      "rank_change_3d": 16,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -8661,7 +8677,7 @@
       "listed_ratio": 6.8,
       "avg_return_20d": 8.98,
       "tradable_count": 5,
-      "rank_change": -9,
+      "rank_change": -8,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8725,7 +8741,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -18.2,
-      "rank_change_3d": -5,
+      "rank_change_3d": -3,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -8739,7 +8755,7 @@
       "listed_ratio": 9.5,
       "avg_return_20d": 9.5,
       "tradable_count": 2,
-      "rank_change": 29,
+      "rank_change": 30,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8770,7 +8786,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 350.0,
-      "rank_change_3d": 29,
+      "rank_change_3d": 30,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -8784,7 +8800,7 @@
       "listed_ratio": 4.7,
       "avg_return_20d": 11.99,
       "tradable_count": 6,
-      "rank_change": -16,
+      "rank_change": -19,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8858,7 +8874,7 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -63.6,
+      "score_change_3d_pct": -68.0,
       "rank_change_3d": -21,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
@@ -8904,7 +8920,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 300.0,
-      "rank_change_3d": 25,
+      "rank_change_3d": 24,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -8918,7 +8934,7 @@
       "listed_ratio": 12.5,
       "avg_return_20d": 8.72,
       "tradable_count": 1,
-      "rank_change": -5,
+      "rank_change": -1,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -8938,7 +8954,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 0.0,
-      "rank_change_3d": 1,
+      "rank_change_3d": 0,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -9143,7 +9159,7 @@
       "listed_ratio": 5.3,
       "avg_return_20d": 10.38,
       "tradable_count": 3,
-      "rank_change": -19,
+      "rank_change": -18,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9184,7 +9200,7 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -90.6,
+      "score_change_3d_pct": -90.9,
       "rank_change_3d": -52,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
@@ -9230,7 +9246,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -25.0,
-      "rank_change_3d": -8,
+      "rank_change_3d": -7,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -9289,7 +9305,7 @@
       "listed_ratio": 8.0,
       "avg_return_20d": 8.52,
       "tradable_count": 2,
-      "rank_change": 13,
+      "rank_change": 15,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9320,7 +9336,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 0.0,
-      "rank_change_3d": -1,
+      "rank_change_3d": 0,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -9334,7 +9350,7 @@
       "listed_ratio": 3.4,
       "avg_return_20d": 24.8,
       "tradable_count": 2,
-      "rank_change": -26,
+      "rank_change": -40,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9364,8 +9380,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -75.0,
-      "rank_change_3d": -27,
+      "score_change_3d_pct": -84.4,
+      "rank_change_3d": -36,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -9421,7 +9437,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -91.4,
-      "rank_change_3d": -53,
+      "rank_change_3d": -54,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -9435,7 +9451,7 @@
       "listed_ratio": 5.9,
       "avg_return_20d": 16.35,
       "tradable_count": 1,
-      "rank_change": -13,
+      "rank_change": -11,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9455,7 +9471,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -28.6,
-      "rank_change_3d": -8,
+      "rank_change_3d": -10,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -9469,7 +9485,7 @@
       "listed_ratio": 5.4,
       "avg_return_20d": 11.63,
       "tradable_count": 2,
-      "rank_change": -2,
+      "rank_change": -5,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9500,7 +9516,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 0.0,
-      "rank_change_3d": -2,
+      "rank_change_3d": -3,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -9534,7 +9550,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 0.0,
-      "rank_change_3d": -2,
+      "rank_change_3d": -3,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -9548,7 +9564,7 @@
       "listed_ratio": 7.1,
       "avg_return_20d": 6.34,
       "tradable_count": 2,
-      "rank_change": 0,
+      "rank_change": 6,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9593,7 +9609,7 @@
       "listed_ratio": 7.4,
       "avg_return_20d": 6.64,
       "tradable_count": 1,
-      "rank_change": -15,
+      "rank_change": -18,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9612,8 +9628,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -54.5,
-      "rank_change_3d": -23,
+      "score_change_3d_pct": -58.3,
+      "rank_change_3d": -26,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -9627,7 +9643,7 @@
       "listed_ratio": 10.0,
       "avg_return_20d": 6.43,
       "tradable_count": 1,
-      "rank_change": -31,
+      "rank_change": -30,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9680,8 +9696,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -88.1,
-      "rank_change_3d": -50,
+      "score_change_3d_pct": -89.6,
+      "rank_change_3d": -53,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -9695,7 +9711,7 @@
       "listed_ratio": 4.8,
       "avg_return_20d": 18.48,
       "tradable_count": 1,
-      "rank_change": 5,
+      "rank_change": 0,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9714,8 +9730,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -50.0,
-      "rank_change_3d": -19,
+      "score_change_3d_pct": -55.6,
+      "rank_change_3d": -21,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -9729,7 +9745,7 @@
       "listed_ratio": 5.3,
       "avg_return_20d": 15.26,
       "tradable_count": 1,
-      "rank_change": -30,
+      "rank_change": -29,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9748,8 +9764,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -77.8,
-      "rank_change_3d": -35,
+      "score_change_3d_pct": -73.3,
+      "rank_change_3d": -32,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -9763,7 +9779,7 @@
       "listed_ratio": 4.7,
       "avg_return_20d": 5.87,
       "tradable_count": 5,
-      "rank_change": 7,
+      "rank_change": 8,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9875,7 +9891,7 @@
       "listed_ratio": 3.7,
       "avg_return_20d": 20.93,
       "tradable_count": 1,
-      "rank_change": -4,
+      "rank_change": -5,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9895,7 +9911,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": 50.0,
-      "rank_change_3d": 0,
+      "rank_change_3d": -1,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -9909,7 +9925,7 @@
       "listed_ratio": 3.7,
       "avg_return_20d": 20.06,
       "tradable_count": 1,
-      "rank_change": -1,
+      "rank_change": 1,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9929,7 +9945,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -50.0,
-      "rank_change_3d": -17,
+      "rank_change_3d": -16,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -9943,7 +9959,7 @@
       "listed_ratio": 3.3,
       "avg_return_20d": 19.42,
       "tradable_count": 1,
-      "rank_change": -7,
+      "rank_change": -8,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9977,7 +9993,7 @@
       "listed_ratio": 4.0,
       "avg_return_20d": 14.58,
       "tradable_count": 1,
-      "rank_change": -33,
+      "rank_change": -31,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -9996,8 +10012,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -40.0,
-      "rank_change_3d": -16,
+      "score_change_3d_pct": -25.0,
+      "rank_change_3d": -12,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -10011,7 +10027,7 @@
       "listed_ratio": 6.7,
       "avg_return_20d": 6.77,
       "tradable_count": 1,
-      "rank_change": -58,
+      "rank_change": -62,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -10031,7 +10047,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -92.1,
-      "rank_change_3d": -56,
+      "rank_change_3d": -58,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -10079,7 +10095,7 @@
       "listed_ratio": 2.2,
       "avg_return_20d": 42.51,
       "tradable_count": 1,
-      "rank_change": -49,
+      "rank_change": -47,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -10099,7 +10115,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -90.0,
-      "rank_change_3d": -47,
+      "rank_change_3d": -46,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -10113,7 +10129,7 @@
       "listed_ratio": 3.4,
       "avg_return_20d": 5.51,
       "tradable_count": 2,
-      "rank_change": -23,
+      "rank_change": -19,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -10143,8 +10159,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -84.6,
-      "rank_change_3d": -41,
+      "score_change_3d_pct": -83.3,
+      "rank_change_3d": -39,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -10192,7 +10208,7 @@
       "listed_ratio": 1.1,
       "avg_return_20d": 12.42,
       "tradable_count": 1,
-      "rank_change": -15,
+      "rank_change": -16,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -10211,8 +10227,8 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": -66.7,
-      "rank_change_3d": -14,
+      "score_change_3d_pct": 0.0,
+      "rank_change_3d": -7,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -10226,7 +10242,7 @@
       "listed_ratio": 2.9,
       "avg_return_20d": 8.11,
       "tradable_count": 1,
-      "rank_change": -17,
+      "rank_change": -18,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -10246,7 +10262,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -95.8,
-      "rank_change_3d": -56,
+      "rank_change_3d": -54,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
@@ -10328,7 +10344,7 @@
       "listed_ratio": 4.5,
       "avg_return_20d": 3.99,
       "tradable_count": 1,
-      "rank_change": -10,
+      "rank_change": -9,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -10348,7 +10364,7 @@
       "momentum_state_label": "观察",
       "mainline_days": 0,
       "score_change_3d_pct": -66.7,
-      "rank_change_3d": -16,
+      "rank_change_3d": -18,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false

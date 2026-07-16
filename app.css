@@ -94,7 +94,6 @@ main { padding-top: 1.5rem !important; }
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.38fr);
     gap: 1.5rem;
-    border-left: 4px solid #27272a;
 }
 
 .market-watch {
@@ -257,6 +256,33 @@ main { padding-top: 1.5rem !important; }
     color: var(--accent);
 }
 
+.opportunity-tab {
+    min-width: 0;
+    padding: 0.55rem 0.45rem;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: #71717a;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.opportunity-tab span {
+    margin-left: 0.2rem;
+    color: #a1a1aa;
+}
+
+.opportunity-tab[aria-pressed="true"] {
+    background: #fff;
+    color: var(--ink);
+    box-shadow: 0 1px 2px rgba(24, 24, 27, 0.08);
+}
+
+.opportunity-tab[aria-pressed="true"] span { color: var(--accent); }
+
+.stock-mobile-meta { display: none; }
+
 .data-note {
     border-top: 1px solid var(--line);
     color: var(--muted);
@@ -359,4 +385,5 @@ table tbody tr { transition: background-color 120ms ease; }
     .stock-results-table th:nth-child(2) { width: 25%; }
     .stock-results-table th:nth-child(3) { width: 23%; }
     .stock-results-table th:nth-child(4) { width: 22%; }
+    .stock-mobile-meta { display: block; }
 }

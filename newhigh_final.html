@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>股海雷达 - 一年新高</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="data:,">
+    <script src="tailwind-runtime.js"></script>
     <style>
         .text-stock-up { color: #DC2626; }
         .text-stock-down { color: #16A34A; }
@@ -163,7 +164,7 @@
                 </div>
                 <div>
                     <h1 class="text-2xl font-bold text-gray-900">一年新高</h1>
-                    <p class="text-sm text-gray-500">突破250日新高的强势股追踪 | 数据日期: <span id="tradeDate">-</span></p>
+                    <p class="text-sm text-gray-500">突破250日新高的强势股追踪 | 数据日期: <span id="tradeDate">-</span> · <span id="dataStatus">-</span></p>
                 </div>
             </div>
             
@@ -240,8 +241,8 @@
                 <div class="bg-white rounded-xl shadow-card border border-gray-100">
                     <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900">新高集中方向</h3>
-                            <p class="text-xs text-gray-500 mt-1">默认展示前6个，点击查看个股</p>
+                            <h3 class="text-lg font-semibold text-gray-900">3L确认方向</h3>
+                            <p class="text-xs text-gray-500 mt-1">综合扩散、动量与持续性，默认展示前6个</p>
                         </div>
                         <button id="toggleSectors" onclick="toggleSectorList()" class="quiet-button px-3 py-1.5 text-xs">展开全部</button>
                     </div>
@@ -286,7 +287,6 @@
                                 <th class="px-6 py-3 font-medium">涨跌幅</th>
                                 <th class="px-6 py-3 font-medium">连新高</th>
                                 <th class="px-6 py-3 font-medium">成交额</th>
-                                <th class="px-6 py-3 font-medium">机构参与代理分</th>
                             </tr>
                         </thead>
                         <tbody id="stockTable" class="divide-y divide-gray-100">
@@ -379,10 +379,11 @@
         const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
         const isFileProtocol = window.location.protocol === 'file:';
         const isGitHubPages = window.location.hostname.includes('github.io');
+        const isBackendApi = isLocalhost && !isFileProtocol && window.location.port === '8000';
         
         // 计算数据基础路径
         let DATA_BASE;
-        if (isLocalhost && !isFileProtocol) {
+        if (isBackendApi) {
             DATA_BASE = 'http://localhost:8000';
         } else if (isGitHubPages) {
             // GitHub Pages: 使用基于当前路径的绝对路径
@@ -439,6 +440,21 @@
             return dateStr;
         }
 
+        function formatGeneratedAt(value) {
+            if (!value) return '-';
+            const date = new Date(value);
+            if (Number.isNaN(date.getTime())) return value;
+            return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')} ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
+        }
+
+        function getDataStatus(result) {
+            const quality = result?.data_quality || {};
+            const status = quality.market_close_complete === false ? '盘中快照' : '完整收盘';
+            const coverage = Number(quality.stock_coverage_pct || 0);
+            const generatedAt = formatGeneratedAt(result?.generated_at || quality.generated_at);
+            return `${status} · 生成 ${generatedAt}${coverage ? ` · 覆盖 ${coverage.toFixed(1)}%` : ''}`;
+        }
+
         function syncPageQuery() {
             const params = new URLSearchParams(window.location.search);
             if (currentDate) params.set('date', currentDate);
@@ -472,7 +488,7 @@
         // 从API或静态文件获取可用日期列表
         async function fetchAvailableDates() {
             try {
-                if (isLocalhost && !isFileProtocol) {
+                if (isBackendApi) {
                     // 本地使用 API
                     const response = await fetch(`${DATA_BASE}/api/newhigh/dates`);
                     if (response.ok) {
@@ -597,7 +613,7 @@
             
             try {
                 let url;
-                if (isLocalhost && !isFileProtocol) {
+                if (isBackendApi) {
                     // 本地使用 API
                     url = targetDate 
                         ? `${DATA_BASE}/api/newhigh/${targetDate}`
@@ -666,7 +682,9 @@
                                 sector_is_main_line: Boolean(momentum?.is_main_line),
                                 sector_is_warning: Boolean(momentum?.is_warning),
                                 sector_momentum_state_label: momentum?.momentum_state_label || null,
-                                sector_momentum_score: momentum?.momentum_score || null
+                                sector_momentum_score: momentum?.momentum_score || null,
+                                sector_confirmation_score: Number(sector.sector_confirmation_score || sector.sector_score || 0),
+                                sector_confirmation_tier: sector.confirmation_tier || null
                             });
                         });
                     }
@@ -677,7 +695,7 @@
         async function loadMomentumContext(date) {
             try {
                 let url;
-                if (isLocalhost && !isFileProtocol) {
+                if (isBackendApi) {
                     url = date ? `${DATA_BASE}/api/momentum/${date}` : `${DATA_BASE}/api/momentum/latest`;
                 } else if (isGitHubPages) {
                     url = date ? `${DATA_BASE}/${date}/momentum.json` : `${DATA_BASE}/momentum_latest.json`;
@@ -751,6 +769,8 @@
         function sortStockList(stocks) {
             const list = [...stocks];
             return list.sort((a, b) => {
+                const confirmationGap = Number(b.sector_confirmation_score || 0) - Number(a.sector_confirmation_score || 0);
+                if (Math.abs(confirmationGap) > 0.01) return confirmationGap;
                 const sectorRankGap = Number(a.sector_rank || 99) - Number(b.sector_rank || 99);
                 if (sectorRankGap !== 0) return sectorRankGap;
                 const consecutiveGap = Number(b.consecutive_new_high_days || b.consecutive_days || 1) - Number(a.consecutive_new_high_days || a.consecutive_days || 1);
@@ -762,13 +782,14 @@
         function updateStockListSummary(filteredCount, totalCount) {
             const boardTextMap = { all: '全市场', main: '主板', cyb: '创业板', kcb: '科创板' };
             const sectorText = selectedSectorName ? `板块 ${selectedSectorName}` : '全板块';
-            document.getElementById('stockListSummary').textContent = `当前显示 ${filteredCount} / ${totalCount} 只 | ${sectorText} | ${boardTextMap[currentStockFilter]} | 默认按主线共振、连新高、成交额排序`;
+            document.getElementById('stockListSummary').textContent = `当前显示 ${filteredCount} / ${totalCount} 只 | ${sectorText} | ${boardTextMap[currentStockFilter]} | 按3L确认分、连新高、成交额排序`;
         }
 
         // 渲染页面
         function renderPage(data) {
             const tradeDate = data.trade_date || currentDate;
             document.getElementById('tradeDate').textContent = formatDate(tradeDate);
+            document.getElementById('dataStatus').textContent = getDataStatus(data);
             
             // 统计数据 - 优先使用market_stats
             const marketStats = data.market_stats || {};
@@ -794,7 +815,7 @@
             document.getElementById('todayNewHigh').textContent = newHighCount;
             document.getElementById('netNewHigh').textContent = `${netNewHigh >= 0 ? '+' : ''}${netNewHigh}`;
             document.getElementById('netNewHigh').className = `focus-value ${netNewHigh >= 0 ? 'text-stock-up' : 'text-stock-down'}`;
-            document.getElementById('newHighRatio').textContent = `市场口径 ${newHighCount} 只，容量候选 ${data.candidate_stocks || 0} 只 | 可计算 ${totalUniverse} / 全市场 ${allUniverse} | 新低 ${newLowCount} | 占比 ${ratio}%`;
+            document.getElementById('newHighRatio').textContent = `市场新高 ${newHighCount} 只 | 可计算 ${totalUniverse} / 全市场 ${allUniverse} | 新低 ${newLowCount} | 占比 ${ratio}%`;
             document.getElementById('indexStatus').textContent = indexStatus;
             document.getElementById('indexStatus').className = `text-lg font-bold mt-1 ${getIndexStatusColor(indexStatus)}`;
             document.getElementById('indexStatusDesc').textContent = indexSummary;
@@ -828,22 +849,24 @@
                 return;
             }
             
-            const sortedSectors = [...sectors].sort((a, b) => (b.new_high_count || b.stock_count || 0) - (a.new_high_count || a.stock_count || 0));
-            const maxScore = sortedSectors[0]?.new_high_count || sortedSectors[0]?.stock_count || 1;
+            const sortedSectors = [...sectors].sort((a, b) => Number(b.sector_confirmation_score || b.sector_score || 0) - Number(a.sector_confirmation_score || a.sector_score || 0));
+            const maxScore = sortedSectors[0]?.sector_confirmation_score || sortedSectors[0]?.sector_score || 1;
             const visibleSectors = showAllSectors ? sortedSectors : sortedSectors.slice(0, 6);
             
             // 显示所有板块，不限于前8个
             container.innerHTML = visibleSectors.map((sector, index) => {
                 const count = sector.new_high_count || sector.stock_count || 0;
-                const score = sector.sector_confirmation_score || sector.sector_score || sector.strength_score || Math.round((count / maxScore) * 100);
+                const score = Number(sector.sector_confirmation_score || sector.sector_score || sector.strength_score || Math.round((count / maxScore) * 100));
                 const color = index === 0
                     ? colors[0]
                     : { bg: 'bg-gray-400', light: 'bg-gray-100', text: 'text-gray-600' };
-                const reason = `按新高数量排序 · 确认分 ${score}`;
+                const breadth = Number(sector.sector_new_high_ratio || 0);
+                const reason = `3L确认分 ${score.toFixed(1)}${breadth ? ` · 板块新高覆盖 ${breadth.toFixed(1)}%` : ''}`;
                 const badges = [];
                 const isSelected = selectedSectorName && (sector.sector_name || sector.name) === selectedSectorName;
-                if (sector.momentum_warning) badges.push('高潮警惕');
-                else if (sector.momentum_mainline) badges.push(sector.momentum_state_label || '动量主线');
+                if (sector.confirmation_tier === 'climax_warning' || sector.momentum_warning) badges.push('高潮警惕');
+                else if (sector.confirmation_tier === 'mainline_confirmed' || sector.momentum_mainline) badges.push('主线确认');
+                else if (sector.confirmation_tier === 'front_runner') badges.push('前排升温');
                 if ((sector.avg_consecutive_days || 0) >= 2) badges.push(`均值${sector.avg_consecutive_days}天`);
                 
                 return `
@@ -881,7 +904,7 @@
             
             if (!stocks || stocks.length === 0) {
                 updateStockListSummary(0, 0);
-                tbody.innerHTML = '<tr><td colspan="7" class="px-6 py-8 text-center text-gray-500">暂无个股数据</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="6" class="px-6 py-8 text-center text-gray-500">暂无个股数据</td></tr>';
                 return;
             }
 
@@ -898,12 +921,12 @@
                 const turnoverYi = getAmountYi(stock);
                 const turnoverRatio = getTurnoverRatio(stock);
                 const sector = stock.sector || stock.industry || '-';
-                const institution = Number(stock.capacity_proxy_score || stock.capacity_score || stock.institution_score || 0).toFixed(1);
                 return `
                     <tr class="hover:bg-gray-50">
                         <td class="px-6 py-4">
                             <div class="font-medium text-gray-900">${stock.name}</div>
                             <div class="font-mono text-xs text-gray-500 mt-1">${stock.ts_code || stock.code || '-'}</div>
+                            <div class="stock-mobile-meta text-xs text-gray-400 mt-1">${consecutive}天连新高 · ${turnoverYi.toFixed(1)}亿</div>
                         </td>
                         <td class="px-6 py-4">
                             <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs bg-gray-100 text-gray-700">${sector}</span>
@@ -914,10 +937,6 @@
                             <div class="inline-flex items-center px-2 py-1 bg-red-50 text-red-600 rounded text-xs">${consecutive}天</div>
                         </td>
                         <td class="px-6 py-4 text-gray-600">${turnoverYi.toFixed(2)}亿${turnoverRatio > 0 ? `<div class="text-xs text-gray-400 mt-1">换手 ${turnoverRatio.toFixed(2)}%</div>` : ''}</td>
-                        <td class="px-6 py-4">
-                            <div class="font-medium text-gray-800">${institution}</div>
-                            <div class="text-xs text-gray-400 mt-1">容量代理分</div>
-                        </td>
                     </tr>
                 `;
             }).join('');

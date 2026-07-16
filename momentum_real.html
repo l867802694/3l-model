@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>股海雷达 - 动量股池（真实数据）</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="data:,">
+    <script src="tailwind-runtime.js"></script>
     <style>
         .text-stock-up { color: #DC2626; }
         .text-stock-down { color: #16A34A; }
@@ -148,7 +149,7 @@
                     </div>
                     <div>
                         <h1 class="text-2xl font-bold text-gray-900">动量股池</h1>
-                        <p class="text-sm text-gray-500">板块动量排名与强势板块追踪 | 数据日期: <span id="tradeDate">-</span></p>
+                        <p class="text-sm text-gray-500">板块动量排名与强势板块追踪 | 数据日期: <span id="tradeDate">-</span> · <span id="dataStatus">-</span></p>
                     </div>
                 </div>
                 <!-- 统一日期选择器 -->
@@ -315,10 +316,11 @@
         const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
         const isFileProtocol = window.location.protocol === 'file:';
         const isGitHubPages = window.location.hostname.includes('github.io');
+        const isBackendApi = isLocalhost && !isFileProtocol && window.location.port === '8000';
         
         // 计算数据基础路径
         let DATA_BASE;
-        if (isLocalhost && !isFileProtocol) {
+        if (isBackendApi) {
             DATA_BASE = 'http://localhost:8000';
         } else if (isGitHubPages) {
             // GitHub Pages: 使用基于当前路径的绝对路径
@@ -393,7 +395,7 @@
             try {
                 // 添加时间戳防止缓存
                 const cacheBuster = `?_=${Date.now()}`;
-                if (isLocalhost && !isFileProtocol) {
+                if (isBackendApi) {
                     // 本地使用 API
                     const response = await fetch(`${DATA_BASE}/api/momentum/dates${cacheBuster}`);
                     if (response.ok) {
@@ -470,7 +472,7 @@
 
         function getDataUrl(kind, date, latest = false) {
             const cacheBuster = `?_=${Date.now()}`;
-            if (isLocalhost && !isFileProtocol) {
+            if (isBackendApi) {
                 return latest
                     ? `${DATA_BASE}/api/${kind}/latest${cacheBuster}`
                     : `${DATA_BASE}/api/${kind}/${date}${cacheBuster}`;
@@ -514,6 +516,20 @@
             return 'bg-gray-100 text-gray-600';
         }
 
+        function formatGeneratedAt(value) {
+            if (!value) return '-';
+            const date = new Date(value);
+            if (Number.isNaN(date.getTime())) return value;
+            return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')} ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
+        }
+
+        function getDataStatus(result) {
+            const quality = result?.data_quality || {};
+            const status = quality.market_close_complete === false ? '盘中快照' : '完整收盘';
+            const coverage = Number(quality.stock_coverage_pct || 0);
+            return `${status}${coverage ? ` · 覆盖 ${coverage.toFixed(1)}%` : ''}`;
+        }
+
         /**
          * ============================================
          * 统一日期选择器组件 - 结束
@@ -537,7 +553,8 @@
                 }
 
                 document.getElementById('tradeDate').textContent = formatDate(result.trade_date);
-                document.getElementById('updateTime').textContent = formatDate(result.trade_date) + ' 15:00';
+                document.getElementById('dataStatus').textContent = getDataStatus(result);
+                document.getElementById('updateTime').textContent = formatGeneratedAt(result.generated_at || result.data_quality?.generated_at);
                 updateSummary(result, momentumData);
                 filterData(currentFilter);
                 showContent();
@@ -573,21 +590,39 @@
             const requestedSector = requestedSectorName ? data.find((item) => item.sector_name === requestedSectorName) : null;
             const focusSector = requestedSector || topSector;
             const marketStats = marketContext?.market_stats || null;
+            const marketPhase = marketStats?.market_status || marketStats?.market_phase || '趋势环境待确认';
             document.getElementById('totalSectors').textContent = data.length;
             document.getElementById('top10Count').textContent = `前十板块 ${Math.min(10, data.length)} 个`;
             document.getElementById('mainLineCount').textContent = data.filter(i => i.is_main_line).length;
             document.getElementById('warningCount').textContent = `高潮警惕 ${data.filter(i => i.is_warning).length} 个`;
-            document.getElementById('marketStatus').textContent = marketStats?.market_status || '未联动';
+            document.getElementById('marketStatus').textContent = marketPhase;
             document.getElementById('marketStatusDesc').textContent = marketStats?.market_status_desc || '一年新高环境不可用时，这页只展示方向强弱。';
             document.getElementById('topSectorName').textContent = focusSector?.sector_name || '-';
             document.getElementById('topSectorMeta').textContent = focusSector ? `分值 ${focusSector.momentum_score.toFixed(2)} · 强股20日均涨幅 ${focusSector.avg_return_20d}%` : '-';
-            document.getElementById('heroTitle').textContent = focusSector ? `先看 ${focusSector.sector_name}` : '先看主线是否明确';
+            let heroTitle = '先看主线是否明确';
+            let actionLabel = '观察';
+            if (focusSector) {
+                if (focusSector.is_warning) {
+                    heroTitle = `最强但过热：${focusSector.sector_name}`;
+                    actionLabel = '不追涨';
+                } else if (marketPhase === '趋势谨慎') {
+                    heroTitle = `环境谨慎，观察 ${focusSector.sector_name}`;
+                    actionLabel = '只观察';
+                } else if (focusSector.is_main_line) {
+                    heroTitle = `主线可跟踪：${focusSector.sector_name}`;
+                    actionLabel = '等待确认';
+                } else if (Number(focusSector.rank || 99) <= 12) {
+                    heroTitle = `升温确认中：${focusSector.sector_name}`;
+                    actionLabel = '前排升温';
+                }
+            }
+            document.getElementById('heroTitle').textContent = heroTitle;
             document.getElementById('heroBody').textContent = focusSector
-                ? `${requestedSector ? '当前从总览带入的板块是' : '当前动量最强的是'} ${focusSector.sector_name}，上榜 ${focusSector.listed_count} 只，占板块 ${focusSector.listed_ratio}% ，状态为 ${getSectorRole(focusSector)}。这页只负责判断方向强弱，不负责买点。`
+                ? `${requestedSector ? '当前定位' : '当前相对最强方向'} ${focusSector.sector_name}，强股覆盖 ${focusSector.listed_count}/${focusSector.total_count}（${focusSector.listed_ratio}%），状态为 ${getSectorRole(focusSector)}。这里只判断方向，不提供买点。`
                 : '这页只负责找主线方向，不负责逻辑和买点判断。';
-            document.getElementById('heroStatusPill').textContent = marketStats?.market_status || '趋势环境待确认';
+            document.getElementById('heroStatusPill').textContent = marketPhase;
             document.getElementById('heroSectorPill').textContent = focusSector ? `${requestedSector ? '当前定位' : '今日最强'} ${focusSector.sector_name}` : '暂无主线';
-            document.getElementById('heroActionPill').textContent = focusSector ? getSectorHeatLabel(focusSector) : '观察';
+            document.getElementById('heroActionPill').textContent = actionLabel;
         }
 
         // 渲染表格
@@ -709,7 +744,7 @@
             // 加载个股数据
             try {
                 let stocks = [];
-                if (isLocalhost && !isFileProtocol) {
+                if (isBackendApi) {
                     // API 模式：从后端获取
                     const response = await fetch(`${DATA_BASE}/api/momentum/sectors/${encodeURIComponent(sectorName)}`);
                     if (response.ok) {

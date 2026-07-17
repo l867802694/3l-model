@@ -1,16 +1,16 @@
 {
   "trade_date": "20260710",
-  "generated_at": "2026-07-16T12:55:49+08:00",
+  "generated_at": "2026-07-17T16:35:04+08:00",
   "data_quality": {
     "version": 1,
-    "generated_at": "2026-07-16T12:55:49+08:00",
+    "generated_at": "2026-07-17T16:35:04+08:00",
     "market_close_complete": true,
     "snapshot_status": "complete_close",
     "intraday_requested": false,
     "stock_coverage": 0.9982,
     "stock_coverage_pct": 99.82,
-    "stock_match_count": 4980,
-    "stock_total": 4989,
+    "stock_match_count": 4979,
+    "stock_total": 4988,
     "matching_index_count": 4,
     "required_index_count": 4,
     "minimum_stock_coverage_pct": 98.0
@@ -26,14 +26,19 @@
     "eastmoney_quote": 0,
     "unmapped": 0
   },
-  "classification_effective_mapping_hash": "0ce01a8bd10b3ba5612b5152bb0c8d581964b381f3ce8400b762b7810377df0e",
+  "classification_effective_mapping_hash": "f7cd77188f9ac49b5098b7ea64695b2eb7929897a11a74d442b33c6a33a39232",
   "market_strength": 0.39,
-  "universe_size": 4989,
+  "universe_size": 4988,
   "history_window_requirement": 251,
   "history_eligible_stocks": 4905,
-  "history_eligible_ratio": 98.32,
+  "history_eligible_ratio": 98.34,
   "history_window_complete": true,
+  "stock_scope": "all_250d_new_highs",
+  "capacity_filter_scope": "capacity_proxy_only",
+  "candidate_filter_scope": "capacity_proxy_only",
+  "candidate_min_score": 2.5,
   "raw_new_high_count": 19,
+  "capacity_candidate_stocks": 19,
   "candidate_stocks": 19,
   "total_stocks": 19,
   "total_sectors": 14,
@@ -149,54 +154,54 @@
     "price_volume_status": "放量下跌",
     "style_status": "主板占优",
     "headline": "指数走弱，个股修复，观望",
-    "headline_summary": "当日偏弱；上证指数-1.00%，两市成交额较昨日+16.28%；上涨 3348 家，下跌 1575 家。",
-    "analysis_summary": "上证指数-1.00%，沪深两市成交额较昨日+16.28%，成交量较昨日+15.93%，属于放量下跌。创业板和科创50弱于上证，成长方向承压更重。 当前动量最强方向是半导体。指数偏弱但个股涨多跌少，市场呈现明显结构性分化。全市场上涨 3348 家、下跌 1575 家；250日新高 19 家、新低 14 家。",
+    "headline_summary": "当日偏弱；上证指数-1.00%，两市成交额较昨日+16.28%；上涨 3347 家，下跌 1575 家。",
+    "analysis_summary": "上证指数-1.00%，沪深两市成交额较昨日+16.28%，成交量较昨日+15.93%，属于放量下跌。创业板和科创50弱于上证，成长方向承压更重。 当前动量最强方向是半导体。指数偏弱但个股涨多跌少，市场呈现明显结构性分化。全市场上涨 3347 家、下跌 1575 家；250日新高 19 家、新低 14 家。",
     "watch_text": "关注量能能否收缩、成长指数能否止跌，以及新高家数能否重新扩散。",
     "total_market": {
-      "amount": 3350644854161.0,
-      "volume": 141290133962.0,
+      "amount": 3350643001172.0,
+      "volume": 141284783122.0,
       "amount_change_pct": 16.28,
       "volume_change_pct": 15.93,
       "amount_vs_5d_pct": 18.24,
       "volume_vs_5d_pct": 15.3,
-      "advance_count": 3348,
+      "advance_count": 3347,
       "decline_count": 1575,
       "flat_count": 57,
-      "stock_count": 4980,
-      "expected_stock_count": 4989,
+      "stock_count": 4979,
+      "expected_stock_count": 4988,
       "stock_coverage_pct": 99.82,
       "previous_stock_coverage_pct": 99.84,
       "comparison_coverage_valid": true,
       "history": [
         {
           "trade_date": "20260706",
-          "amount": 3052217547222.0,
-          "volume": 130727975496.0,
-          "stock_count": 4983
+          "amount": 3052215138850.0,
+          "volume": 130720996886.0,
+          "stock_count": 4982
         },
         {
           "trade_date": "20260707",
-          "amount": 2551733747896.0,
-          "volume": 114788637912.0,
-          "stock_count": 4981
+          "amount": 2551731949196.0,
+          "volume": 114783172905.0,
+          "stock_count": 4980
         },
         {
           "trade_date": "20260708",
-          "amount": 2535478866613.0,
-          "volume": 111021075830.0,
-          "stock_count": 4981
+          "amount": 2535477725214.0,
+          "volume": 111017622879.0,
+          "stock_count": 4980
         },
         {
           "trade_date": "20260709",
-          "amount": 2881609145749.0,
-          "volume": 121873010650.0,
-          "stock_count": 4981
+          "amount": 2881607597925.0,
+          "volume": 121868514100.0,
+          "stock_count": 4980
         },
         {
           "trade_date": "20260710",
-          "amount": 3350644854161.0,
-          "volume": 141290133962.0,
-          "stock_count": 4980
+          "amount": 3350643001172.0,
+          "volume": 141284783122.0,
+          "stock_count": 4979
         }
       ]
     },
@@ -349,6 +354,7 @@
       "sector_name": "半导体",
       "new_high_count": 4,
       "stock_count": 4,
+      "capacity_candidate_count": 4,
       "candidate_count": 4,
       "sector_total_count": 172,
       "sector_new_high_ratio": 2.33,
@@ -382,6 +388,7 @@
           "amount": 479100.28,
           "turnover_ratio": 29.05,
           "capacity_proxy_score": 8.52,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "半导体",
           "industry": "半导体"
@@ -403,6 +410,7 @@
           "amount": 470561.42,
           "turnover_ratio": 6.68,
           "capacity_proxy_score": 9.7,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "半导体",
           "industry": "半导体"
@@ -424,6 +432,7 @@
           "amount": 251733.25,
           "turnover_ratio": 16.07,
           "capacity_proxy_score": 8.64,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "半导体",
           "industry": "半导体"
@@ -445,6 +454,7 @@
           "amount": 1276427.32,
           "turnover_ratio": 14.89,
           "capacity_proxy_score": 9.53,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "半导体",
           "industry": "半导体"
@@ -455,6 +465,7 @@
       "sector_name": "其他电子",
       "new_high_count": 1,
       "stock_count": 1,
+      "capacity_candidate_count": 1,
       "candidate_count": 1,
       "sector_total_count": 33,
       "sector_new_high_ratio": 3.03,
@@ -488,6 +499,7 @@
           "amount": 123457.49,
           "turnover_ratio": 12.27,
           "capacity_proxy_score": 7.98,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "其他电子",
           "industry": "其他电子"
@@ -498,6 +510,7 @@
       "sector_name": "塑料",
       "new_high_count": 2,
       "stock_count": 2,
+      "capacity_candidate_count": 2,
       "candidate_count": 2,
       "sector_total_count": 70,
       "sector_new_high_ratio": 2.86,
@@ -531,6 +544,7 @@
           "amount": 43617.62,
           "turnover_ratio": 10.29,
           "capacity_proxy_score": 6.49,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "塑料",
           "industry": "塑料"
@@ -552,6 +566,7 @@
           "amount": 235458.97,
           "turnover_ratio": 9.42,
           "capacity_proxy_score": 9.2,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "塑料",
           "industry": "塑料"
@@ -562,6 +577,7 @@
       "sector_name": "计算机设备",
       "new_high_count": 2,
       "stock_count": 2,
+      "capacity_candidate_count": 2,
       "candidate_count": 2,
       "sector_total_count": 80,
       "sector_new_high_ratio": 2.5,
@@ -595,6 +611,7 @@
           "amount": 2608277.13,
           "turnover_ratio": 19.37,
           "capacity_proxy_score": 9.62,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "计算机设备",
           "industry": "计算机设备"
@@ -616,6 +633,7 @@
           "amount": 58189.36,
           "turnover_ratio": 16.67,
           "capacity_proxy_score": 6.16,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "计算机设备",
           "industry": "计算机设备"
@@ -626,6 +644,7 @@
       "sector_name": "装修装饰",
       "new_high_count": 1,
       "stock_count": 1,
+      "capacity_candidate_count": 1,
       "candidate_count": 1,
       "sector_total_count": 16,
       "sector_new_high_ratio": 6.25,
@@ -659,6 +678,7 @@
           "amount": 106700.66,
           "turnover_ratio": 21.16,
           "capacity_proxy_score": 6.8,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "装修装饰",
           "industry": "装修装饰"
@@ -669,6 +689,7 @@
       "sector_name": "IT服务",
       "new_high_count": 1,
       "stock_count": 1,
+      "capacity_candidate_count": 1,
       "candidate_count": 1,
       "sector_total_count": 113,
       "sector_new_high_ratio": 0.88,
@@ -702,6 +723,7 @@
           "amount": 1857342.14,
           "turnover_ratio": 16.88,
           "capacity_proxy_score": 9.58,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "IT服务",
           "industry": "IT服务"
@@ -712,6 +734,7 @@
       "sector_name": "工业金属",
       "new_high_count": 1,
       "stock_count": 1,
+      "capacity_candidate_count": 1,
       "candidate_count": 1,
       "sector_total_count": 56,
       "sector_new_high_ratio": 1.79,
@@ -745,6 +768,7 @@
           "amount": 54556.36,
           "turnover_ratio": 8.82,
           "capacity_proxy_score": 7.18,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "工业金属",
           "industry": "工业金属"
@@ -755,6 +779,7 @@
       "sector_name": "专用设备",
       "new_high_count": 1,
       "stock_count": 1,
+      "capacity_candidate_count": 1,
       "candidate_count": 1,
       "sector_total_count": 170,
       "sector_new_high_ratio": 0.59,
@@ -788,6 +813,7 @@
           "amount": 245197.24,
           "turnover_ratio": 21.56,
           "capacity_proxy_score": 8.09,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "专用设备",
           "industry": "专用设备"
@@ -798,6 +824,7 @@
       "sector_name": "中药",
       "new_high_count": 1,
       "stock_count": 1,
+      "capacity_candidate_count": 1,
       "candidate_count": 1,
       "sector_total_count": 59,
       "sector_new_high_ratio": 1.69,
@@ -831,6 +858,7 @@
           "amount": 204213.89,
           "turnover_ratio": 9.28,
           "capacity_proxy_score": 9.07,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "中药",
           "industry": "中药"
@@ -841,6 +869,7 @@
       "sector_name": "消费电子",
       "new_high_count": 1,
       "stock_count": 1,
+      "capacity_candidate_count": 1,
       "candidate_count": 1,
       "sector_total_count": 88,
       "sector_new_high_ratio": 1.14,
@@ -874,6 +903,7 @@
           "amount": 242501.84,
           "turnover_ratio": 8.57,
           "capacity_proxy_score": 9.27,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "消费电子",
           "industry": "消费电子"
@@ -884,6 +914,7 @@
       "sector_name": "家居用品",
       "new_high_count": 1,
       "stock_count": 1,
+      "capacity_candidate_count": 1,
       "candidate_count": 1,
       "sector_total_count": 69,
       "sector_new_high_ratio": 1.45,
@@ -917,6 +948,7 @@
           "amount": 62132.19,
           "turnover_ratio": 15.94,
           "capacity_proxy_score": 6.36,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "家居用品",
           "industry": "家居用品"
@@ -927,6 +959,7 @@
       "sector_name": "通信设备",
       "new_high_count": 1,
       "stock_count": 1,
+      "capacity_candidate_count": 1,
       "candidate_count": 1,
       "sector_total_count": 83,
       "sector_new_high_ratio": 1.2,
@@ -960,6 +993,7 @@
           "amount": 68310.58,
           "turnover_ratio": 8.97,
           "capacity_proxy_score": 7.59,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "通信设备",
           "industry": "通信设备"
@@ -970,6 +1004,7 @@
       "sector_name": "基础建设",
       "new_high_count": 1,
       "stock_count": 1,
+      "capacity_candidate_count": 1,
       "candidate_count": 1,
       "sector_total_count": 37,
       "sector_new_high_ratio": 2.7,
@@ -1003,6 +1038,7 @@
           "amount": 20389.36,
           "turnover_ratio": 6.23,
           "capacity_proxy_score": 5.33,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "基础建设",
           "industry": "基础建设"
@@ -1013,6 +1049,7 @@
       "sector_name": "医疗服务",
       "new_high_count": 1,
       "stock_count": 1,
+      "capacity_candidate_count": 1,
       "candidate_count": 1,
       "sector_total_count": 52,
       "sector_new_high_ratio": 1.92,
@@ -1046,14 +1083,12 @@
           "amount": 50346.71,
           "turnover_ratio": 7.56,
           "capacity_proxy_score": 7.21,
+          "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "医疗服务",
           "industry": "医疗服务"
         }
       ]
     }
-  ],
-  "stock_scope": "all_250d_new_highs",
-  "candidate_filter_scope": "capacity_proxy_only",
-  "candidate_min_score": 2.5
+  ]
 }

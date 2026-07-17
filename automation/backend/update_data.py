@@ -112,6 +112,7 @@ MOMENTUM_CLIMAX_WARNING_SCORE_MIN = float(
     )
 )
 MOMENTUM_MODEL_VERSION = str(MODEL_CONFIG["model_version"])
+STOCK_DETAIL_METRICS_VERSION = 1
 CLASSIFICATION_NAME = str(CLASSIFICATION_CONFIG["name"])
 CLASSIFICATION_VERSION = str(CLASSIFICATION_CONFIG["version"])
 CLASSIFICATION_AS_OF = str(CLASSIFICATION_CONFIG["as_of"])
@@ -2150,6 +2151,50 @@ def compute_momentum_score(listed_count: int, listed_ratio: float, avg_return_20
     )
 
 
+def compute_stock_detail_metrics(rows: list[dict]) -> dict:
+    """Return close-based daily performance and position versus the prior 250-day high."""
+    if not rows:
+        return {
+            "daily_change_pct": None,
+            "distance_to_250d_high_pct": None,
+            "is_250d_high": None,
+        }
+
+    current_close = safe_float(rows[-1].get("close"))
+    previous_close = safe_float(rows[-2].get("close")) if len(rows) >= 2 else 0
+    daily_change_pct = (
+        round((current_close / previous_close - 1) * 100, 2)
+        if current_close > 0 and previous_close > 0
+        else None
+    )
+
+    if current_close <= 0 or len(rows) < 251:
+        return {
+            "daily_change_pct": daily_change_pct,
+            "distance_to_250d_high_pct": None,
+            "is_250d_high": None,
+        }
+
+    reference_high = max(
+        safe_float(row.get("high")) for row in rows[-251:-1]
+    )
+    if reference_high <= 0:
+        return {
+            "daily_change_pct": daily_change_pct,
+            "distance_to_250d_high_pct": None,
+            "is_250d_high": None,
+        }
+
+    return {
+        "daily_change_pct": daily_change_pct,
+        "distance_to_250d_high_pct": round(
+            (current_close / reference_high - 1) * 100,
+            2,
+        ),
+        "is_250d_high": current_close >= reference_high,
+    }
+
+
 MOMENTUM_STATE_LABELS = {
     "observing": "观察",
     "new_mainline": "新晋主线",
@@ -3552,6 +3597,7 @@ def update_momentum_data(
             stock_copy = stock.copy()
             stock_copy["return_20d"] = round((close_today / close_20d_ago - 1) * 100, 2)
             stock_copy["close_price"] = close_today
+            stock_copy.update(compute_stock_detail_metrics(rows))
             stocks_with_return.append(stock_copy)
 
         stocks_with_return.sort(key=lambda x: x["return_20d"], reverse=True)
@@ -3623,6 +3669,11 @@ def update_momentum_data(
                             "code": stock["code"].split(".")[1],
                             "name": stock["name"],
                             "return_20d": stock["return_20d"],
+                            "daily_change_pct": stock["daily_change_pct"],
+                            "distance_to_250d_high_pct": stock[
+                                "distance_to_250d_high_pct"
+                            ],
+                            "is_250d_high": stock["is_250d_high"],
                             "close_price": round(stock["close_price"], 2),
                             "rank_in_market": stock["rank_in_market"],
                             "circ_mv": round(stock["circ_mv"] / 100000000, 2),
@@ -3673,6 +3724,7 @@ def update_momentum_data(
             "classification": classification,
             **classification_metadata,
             "model_version": MOMENTUM_MODEL_VERSION,
+            "stock_detail_metrics_version": STOCK_DETAIL_METRICS_VERSION,
             "score_formula": MOMENTUM_SCORE_FORMULA,
             "mainline_score_min": MOMENTUM_MAINLINE_SCORE_MIN,
             "climax_warning_score_min": MOMENTUM_CLIMAX_WARNING_SCORE_MIN,

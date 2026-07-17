@@ -23,6 +23,7 @@ EXPECTED_CLASSIFICATION_VERSION = str(CLASSIFICATION_CONFIG["version"])
 EXPECTED_CLASSIFICATION_AS_OF = str(CLASSIFICATION_CONFIG["as_of"])
 EXPECTED_CLASSIFICATION_HASH = str(CLASSIFICATION_SNAPSHOT["mapping_sha256"])
 EXPECTED_MOMENTUM_MODEL_VERSION = str(MODEL_CONFIG["model_version"])
+EXPECTED_STOCK_DETAIL_METRICS_VERSION = 1
 EXPECTED_MAINLINE_SCORE_MIN = float(MOMENTUM_CONFIG["mainline_score_min"])
 EXPECTED_CLIMAX_WARNING_SCORE_MIN = float(
     MOMENTUM_CONFIG["climax_warning_score_min"]
@@ -100,6 +101,21 @@ def validate_payloads(
         raise ValueError("动量板块列表为空")
     if any(not item.get("momentum_state") for item in momentum["data"]):
         raise ValueError("动量板块缺少持续状态")
+    stock_metrics_version = int(momentum.get("stock_detail_metrics_version") or 0)
+    if stock_metrics_version >= EXPECTED_STOCK_DETAIL_METRICS_VERSION:
+        for sector in momentum["data"]:
+            for stock in sector.get("stocks") or []:
+                daily_change_pct = stock.get("daily_change_pct")
+                distance_to_high = stock.get("distance_to_250d_high_pct")
+                is_250d_high = stock.get("is_250d_high")
+                if not isinstance(daily_change_pct, (int, float)):
+                    raise ValueError("动量个股缺少今日涨跌幅")
+                if distance_to_high is not None and not isinstance(
+                    distance_to_high, (int, float)
+                ):
+                    raise ValueError("动量个股距250日新高格式无效")
+                if is_250d_high is not None and not isinstance(is_250d_high, bool):
+                    raise ValueError("动量个股250日新高状态格式无效")
     capacity_candidate_stocks = newhigh.get(
         "capacity_candidate_stocks",
         newhigh.get("candidate_stocks"),

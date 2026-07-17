@@ -270,18 +270,19 @@
             <div id="modalContent" class="hidden overflow-y-auto max-h-[70vh]">
                 <div class="grid grid-cols-3 gap-2 p-4 sm:gap-4 sm:p-6 border-b border-gray-100">
                     <div class="text-center">
-                        <p class="text-xs text-gray-500">强股 / 板块</p>
+                        <p class="text-xs text-gray-500">强股覆盖</p>
                         <p id="modalListedCount" class="text-xl font-bold text-stock-up sm:text-2xl">-</p>
                     </div>
                     <div class="text-center">
-                        <p class="text-xs text-gray-500">可跟踪</p>
-                        <p id="modalListedRatio" class="text-xl font-bold text-stock-up sm:text-2xl">-</p>
+                        <p class="text-xs text-gray-500">新高确认</p>
+                        <p id="modalConfirmedCount" class="text-xl font-bold text-stock-up sm:text-2xl">-</p>
                     </div>
                     <div class="text-center">
                         <p class="text-xs text-gray-500">20日均涨幅</p>
                         <p id="modalAvgReturn" class="text-xl font-bold text-stock-up sm:text-2xl">-</p>
                     </div>
                 </div>
+                <p id="modalConclusion" class="momentum-modal-conclusion mx-4 mt-4 sm:mx-6" aria-live="polite">-</p>
                 
                 <div class="p-6">
                     <div class="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -300,10 +301,10 @@
                             <thead class="bg-gray-50 text-gray-600">
                                 <tr id="modalStockTableHeader">
                                     <th class="px-4 py-3 text-left font-medium">股票</th>
-                                    <th class="px-4 py-3 text-left font-medium">强度位置</th>
-                                    <th class="px-4 py-3 text-right font-medium">20日涨幅</th>
-                                    <th class="px-4 py-3 text-left font-medium">一年新高</th>
-                                    <th class="px-4 py-3 text-right font-medium">成交容量</th>
+                                    <th class="px-4 py-3 text-left font-medium">强度</th>
+                                    <th class="px-4 py-3 text-right font-medium">今日表现</th>
+                                    <th class="px-4 py-3 text-left font-medium">新高位置</th>
+                                    <th class="px-4 py-3 text-right font-medium">成交额 / 流通市值</th>
                                 </tr>
                             </thead>
                             <tbody id="modalStockList" class="divide-y divide-gray-100"></tbody>
@@ -352,6 +353,7 @@
         let newHighStockMap = new Map();
         let currentModalStocks = [];
         let currentModalStockScope = 'top';
+        let currentModalSector = null;
         const pageParams = new URLSearchParams(window.location.search);
         let requestedSectorName = pageParams.get('sector') || '';
         let requestedDate = pageParams.get('date') || '';
@@ -755,13 +757,15 @@
             const sector = momentumData.find(s => s.sector_name === sectorName);
             
             if (!sector) return;
+            currentModalSector = sector;
             
             document.getElementById('modalTitle').textContent = sectorName;
             document.getElementById('modalSubtitle').textContent = `动量 ${Number(sector.momentum_score || 0).toFixed(2)} · 行业第${sector.rank} · ${getSectorRole(sector)}`;
             
             document.getElementById('modalListedCount').textContent = `${sector.listed_count} / ${sector.total_count}`;
-            document.getElementById('modalListedRatio').textContent = `${sector.tradable_count || sector.listed_count} 只`;
-            document.getElementById('modalAvgReturn').textContent = '+' + sector.avg_return_20d + '%';
+            const avgReturn = document.getElementById('modalAvgReturn');
+            avgReturn.textContent = formatSignedPct(sector.avg_return_20d);
+            avgReturn.className = `text-xl font-bold sm:text-2xl ${getPctColorClass(sector.avg_return_20d)}`;
             
             modal.classList.remove('hidden');
             document.getElementById('modalLoading').classList.remove('hidden');
@@ -798,6 +802,7 @@
                 return Number(b.return_20d || b.return || 0) - Number(a.return_20d || a.return || 0);
             });
             currentModalStockScope = 'top';
+            updateModalConclusion();
             renderModalStocks();
         }
 
@@ -808,14 +813,14 @@
 
         function getScopedModalStocks() {
             if (currentModalStockScope === 'confirmed') {
-                return currentModalStocks.filter((stock) => newHighStockMap.has(normalizeStockCode(stock.code)));
+                return currentModalStocks.filter(isStockAtNewHigh);
             }
             if (currentModalStockScope === 'all') return currentModalStocks;
             return currentModalStocks.slice(0, 20);
         }
 
         function updateModalScopeControls(visibleCount) {
-            const confirmedCount = currentModalStocks.filter((stock) => newHighStockMap.has(normalizeStockCode(stock.code))).length;
+            const confirmedCount = currentModalStocks.filter(isStockAtNewHigh).length;
             const buttons = {
                 top: document.getElementById('modalScopeTop'),
                 confirmed: document.getElementById('modalScopeConfirmed'),
@@ -832,16 +837,80 @@
             document.getElementById('modalListSummary').textContent = `显示 ${visibleCount} / ${currentModalStocks.length} 只可跟踪强股 · 按20日涨幅排序`;
         }
 
+        function hasNumericValue(value) {
+            return value !== null && value !== undefined && value !== '' && Number.isFinite(Number(value));
+        }
+
+        function isStockAtNewHigh(stock) {
+            if (typeof stock.is_250d_high === 'boolean') return stock.is_250d_high;
+            if (hasNumericValue(stock.distance_to_250d_high_pct)) {
+                return Number(stock.distance_to_250d_high_pct) >= 0;
+            }
+            return newHighStockMap.has(normalizeStockCode(stock.code));
+        }
+
+        function updateModalConclusion() {
+            const sector = currentModalSector;
+            if (!sector) return;
+            const confirmedCount = currentModalStocks.filter(isStockAtNewHigh).length;
+            const listedCount = Number(sector.listed_count || 0);
+            const totalCount = Number(sector.total_count || 0);
+            const role = getSectorRole(sector);
+            const stateText = role === '高潮警惕' ? '处于高潮警惕' : `处于${role}`;
+            const actionText = role === '高潮警惕' ? '，当前重点是观察，不追涨' : '';
+            document.getElementById('modalConfirmedCount').textContent = `${confirmedCount}只`;
+            document.getElementById('modalConclusion').textContent = `${sector.sector_name}强度第${sector.rank}，${stateText}；强股覆盖 ${listedCount}/${totalCount}，其中 ${confirmedCount} 只完成一年新高确认${actionText}。`;
+        }
+
+        function formatSignedPct(value, digits = 1) {
+            if (!hasNumericValue(value)) return '-';
+            const number = Number(value);
+            return `${number >= 0 ? '+' : ''}${number.toFixed(digits)}%`;
+        }
+
+        function getPctColorClass(value) {
+            if (!hasNumericValue(value)) return 'text-gray-400';
+            return Number(value) >= 0 ? 'text-stock-up' : 'text-stock-down';
+        }
+
+        function formatAmountYi(value) {
+            const amountYi = Number(value || 0) / 10000;
+            return amountYi > 0 ? `${amountYi.toFixed(1)}亿` : '-';
+        }
+
+        function formatCircMv(value) {
+            const circMv = Number(value || 0);
+            if (circMv <= 0) return '-';
+            return `${circMv >= 100 ? circMv.toFixed(0) : circMv.toFixed(1)}亿`;
+        }
+
         function renderNewHighStatus(stock) {
+            const hasBackendStatus = Object.prototype.hasOwnProperty.call(stock, 'is_250d_high');
+            const hasDistance = hasNumericValue(stock.distance_to_250d_high_pct);
+            if (hasBackendStatus && stock.is_250d_high === null) {
+                return '<span class="momentum-confirmation-badge">数据不足</span><span class="mt-1 block text-xs text-gray-500">未满250个交易日</span>';
+            }
+            if (hasDistance) {
+                const distance = Number(stock.distance_to_250d_high_pct);
+                if (isStockAtNewHigh(stock)) {
+                    return `
+                        <span class="momentum-confirmation-badge is-confirmed">已创新高</span>
+                        <span class="mt-1 block text-xs text-gray-500">突破 ${formatSignedPct(distance)}</span>
+                    `;
+                }
+                return `
+                    <span class="momentum-confirmation-badge">尚未创新高</span>
+                    <span class="mt-1 block text-xs text-gray-500">距新高 ${Math.abs(distance).toFixed(1)}%</span>
+                `;
+            }
             const info = newHighStockMap.get(normalizeStockCode(stock.code));
             if (!info) {
-                return '<span class="momentum-confirmation-badge">未确认</span>';
+                return '<span class="momentum-confirmation-badge">尚未创新高</span>';
             }
-            const consecutive = Number(info.consecutive_new_high_days || info.consecutive_days || 1);
-            const breakPct = Number(info.break_pct ?? info.break_through ?? 0);
+            const breakPct = Number(info.break_through_pct ?? info.break_pct ?? info.break_through ?? 0);
             return `
-                <span class="momentum-confirmation-badge is-confirmed">已确认 · ${consecutive}天</span>
-                <span class="mt-1 block text-xs text-gray-500">突破 ${breakPct >= 0 ? '+' : ''}${breakPct.toFixed(2)}%</span>
+                <span class="momentum-confirmation-badge is-confirmed">已创新高</span>
+                <span class="mt-1 block text-xs text-gray-500">突破 ${formatSignedPct(breakPct)}</span>
             `;
         }
 
@@ -864,8 +933,7 @@
                 const code = normalizeStockCode(s.code) || '-';
                 const name = s.name || '-';
                 const return20d = Number(s.return_20d || s.return || 0);
-                const circMv = Number(s.circ_mv || 0);
-                const amountYi = (Number(s.amount || 0) / 10000).toFixed(2);
+                const dailyChange = s.daily_change_pct;
                 return `
                 <tr class="hover:bg-red-50">
                     <td class="px-4 py-3">
@@ -873,14 +941,14 @@
                         <div class="mt-1 font-mono text-xs text-gray-500">${code}</div>
                     </td>
                     <td class="px-4 py-3">
-                        <div class="font-semibold text-gray-900">板块 #${sectorRank || '-'}</div>
-                        <div class="mt-1 text-xs text-gray-500">全市场 #${marketRank || '-'}</div>
+                        <div class="font-semibold ${return20d >= 0 ? 'text-stock-up' : 'text-stock-down'}">20日 ${formatSignedPct(return20d)}</div>
+                        <div class="mt-1 text-xs text-gray-500">板块 #${sectorRank || '-'} · 全市场 #${marketRank || '-'}</div>
                     </td>
-                    <td class="px-4 py-3 text-right font-bold ${return20d >= 0 ? 'text-stock-up' : 'text-stock-down'}">${return20d >= 0 ? '+' : ''}${return20d.toFixed(2)}%</td>
+                    <td class="px-4 py-3 text-right font-bold ${getPctColorClass(dailyChange)}">${formatSignedPct(dailyChange)}</td>
                     <td class="px-4 py-3">${renderNewHighStatus(s)}</td>
                     <td class="px-4 py-3 text-right">
-                        <div class="font-medium text-gray-700">${amountYi}亿</div>
-                        <div class="mt-1 text-xs text-gray-500">流通 ${circMv ? circMv.toFixed(2) + '亿' : '-'}</div>
+                        <div class="font-medium text-gray-700">${formatAmountYi(s.amount)}</div>
+                        <div class="mt-1 text-xs text-gray-500">流通 ${formatCircMv(s.circ_mv)}</div>
                     </td>
                 </tr>
             `}).join('');
@@ -890,8 +958,7 @@
                 const marketRank = Number(s.rank_in_market || 0);
                 const code = normalizeStockCode(s.code) || '-';
                 const return20d = Number(s.return_20d || s.return || 0);
-                const amountYi = (Number(s.amount || 0) / 10000).toFixed(2);
-                const circMv = Number(s.circ_mv || 0);
+                const dailyChange = s.daily_change_pct;
                 return `
                     <div class="momentum-modal-stock-row px-1 py-4">
                         <div class="flex items-start justify-between gap-3">
@@ -899,11 +966,17 @@
                                 <div class="font-semibold text-gray-900">${s.name || '-'}</div>
                                 <div class="mt-1 font-mono text-xs text-gray-500">${code}</div>
                             </div>
-                            <div class="shrink-0 text-right font-bold ${return20d >= 0 ? 'text-stock-up' : 'text-stock-down'}">${return20d >= 0 ? '+' : ''}${return20d.toFixed(2)}%</div>
+                            <div class="shrink-0 text-right">
+                                <div class="text-xs text-gray-500">今日</div>
+                                <div class="mt-1 font-bold ${getPctColorClass(dailyChange)}">${formatSignedPct(dailyChange)}</div>
+                            </div>
                         </div>
                         <div class="mt-3 flex items-start justify-between gap-3 text-xs">
-                            <div class="text-gray-500">板块 #${sectorRank || '-'} · 全市场 #${marketRank || '-'}</div>
-                            <div class="text-right text-gray-500">成交 ${amountYi}亿 · 流通 ${circMv ? circMv.toFixed(0) + '亿' : '-'}</div>
+                            <div>
+                                <div class="font-semibold ${return20d >= 0 ? 'text-stock-up' : 'text-stock-down'}">20日 ${formatSignedPct(return20d)}</div>
+                                <div class="mt-1 text-gray-500">板块 #${sectorRank || '-'} · 全市场 #${marketRank || '-'}</div>
+                            </div>
+                            <div class="text-right text-gray-500">成交 ${formatAmountYi(s.amount)}<br>流通 ${formatCircMv(s.circ_mv)}</div>
                         </div>
                         <div class="mt-2">${renderNewHighStatus(s)}</div>
                     </div>

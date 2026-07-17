@@ -262,7 +262,7 @@
                         </div>
                         <div class="flex gap-2" aria-label="新高范围">
                             <button onclick="filterNewHighScope('all')" id="signalFilterAll" class="px-3 py-1.5 text-xs bg-red-50 text-red-600 rounded-full font-medium">全部新高 <span id="allNewHighCount">-</span></button>
-                            <button onclick="filterNewHighScope('candidate')" id="signalFilterCandidate" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">3L优选 <span id="candidateNewHighCount">-</span></button>
+                            <button onclick="filterNewHighScope('candidate')" id="signalFilterCandidate" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">容量优选 <span id="candidateNewHighCount">-</span></button>
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-2">
@@ -305,6 +305,7 @@
                 <summary>查看计算口径与免责声明</summary>
                 <ul class="space-y-1 list-disc list-inside">
                     <li><strong>一年新高</strong>：个股收盘价突破过去250个交易日的最高价</li>
+                    <li><strong>容量优选</strong>：只表示成交额、市值与换手质量通过门槛，不代表公司逻辑或买点成立</li>
                     <li><strong>新高占比</strong>：分母使用“可计算250日窗口”的股票数，不直接拿全市场总数做除数</li>
                     <li><strong>涨跌幅</strong>：当日股价涨跌百分比，反映突破强度</li>
                     <li><strong>连新高天数</strong>：连续创出新高的交易日数</li>
@@ -689,7 +690,7 @@
                                 sector_momentum_score: momentum?.momentum_score || null,
                                 sector_confirmation_score: Number(sector.sector_confirmation_score || sector.sector_score || 0),
                                 sector_confirmation_tier: sector.confirmation_tier || null,
-                                is_3l_candidate: stock.is_3l_candidate !== false
+                                is_capacity_candidate: stock.is_capacity_candidate ?? stock.is_3l_candidate !== false
                             });
                         });
                     }
@@ -773,7 +774,7 @@
 
         function applyNewHighScope(stocks) {
             if (currentNewHighScope !== 'candidate') return stocks;
-            return stocks.filter((stock) => stock.is_3l_candidate);
+            return stocks.filter((stock) => stock.is_capacity_candidate);
         }
 
         function sortStockList(stocks) {
@@ -792,7 +793,7 @@
         function updateStockListSummary(filteredCount, totalCount) {
             const boardTextMap = { all: '全市场', main: '主板', cyb: '创业板', kcb: '科创板' };
             const sectorText = selectedSectorName ? `板块 ${selectedSectorName}` : '全板块';
-            const scopeText = currentNewHighScope === 'candidate' ? '3L优选' : '全部新高';
+            const scopeText = currentNewHighScope === 'candidate' ? '容量优选' : '全部新高';
             document.getElementById('stockListSummary').textContent = `当前显示 ${filteredCount} / ${totalCount} 只 | ${scopeText} | ${sectorText} | ${boardTextMap[currentStockFilter]}`;
         }
 
@@ -825,7 +826,7 @@
             
             document.getElementById('todayNewHigh').textContent = newHighCount;
             document.getElementById('allNewHighCount').textContent = newHighCount;
-            document.getElementById('candidateNewHighCount').textContent = Number(data.candidate_stocks || 0);
+            document.getElementById('candidateNewHighCount').textContent = Number(data.capacity_candidate_stocks ?? data.candidate_stocks ?? 0);
             document.getElementById('netNewHigh').textContent = `${netNewHigh >= 0 ? '+' : ''}${netNewHigh}`;
             document.getElementById('netNewHigh').className = `focus-value ${netNewHigh >= 0 ? 'text-stock-up' : 'text-stock-down'}`;
             document.getElementById('newHighRatio').textContent = `市场新高 ${newHighCount} 只 | 可计算 ${totalUniverse} / 全市场 ${allUniverse} | 新低 ${newLowCount} | 占比 ${ratio}%`;
@@ -893,7 +894,7 @@
                     ? colors[0]
                     : { bg: 'bg-gray-400', light: 'bg-gray-100', text: 'text-gray-600' };
                 const breadth = Number(sector.sector_new_high_ratio || 0);
-                const reason = `3L确认分 ${score.toFixed(1)}${breadth ? ` · 板块新高覆盖 ${breadth.toFixed(1)}%` : ''}`;
+                const reason = `方向确认分 ${score.toFixed(1)}${breadth ? ` · 板块新高覆盖 ${breadth.toFixed(1)}%` : ''}`;
                 const badges = [];
                 const tier = getSectorConfirmationTier(sector);
                 const confidence = Number(sector.sector_confirmation_confidence || Math.min(Math.sqrt(count / 3), 1) * 100);

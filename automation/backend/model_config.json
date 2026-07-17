@@ -15,6 +15,7 @@
   "backtest": {
     "minimum_dates": 40,
     "stability_periods": 3,
-    "minimum_positive_periods": 2
+    "minimum_positive_periods": 2,
+    "signal_minimum_out_of_sample_dates": 12
   }
 }

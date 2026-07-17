@@ -1,0 +1,78 @@
+name: Eastmoney classification audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 9 * * 6"
+      timezone: Asia/Shanghai
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out site repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install audit dependency
+        run: python -m pip install requests
+
+      - name: Compare frozen snapshot with current Eastmoney boards
+        run: python automation/backend/audit_eastmoney_classification.py --output classification-audit.json
+
+      - name: Read audit result
+        id: result
+        shell: bash
+        run: |
+          echo "needs_review=$(jq -r '.needs_review' classification-audit.json)" >> "$GITHUB_OUTPUT"
+          echo "review_count=$(jq -r '.review_count' classification-audit.json)" >> "$GITHUB_OUTPUT"
+          echo "new_stock_count=$(jq -r '.new_stock_count' classification-audit.json)" >> "$GITHUB_OUTPUT"
+          echo "changed_industry_count=$(jq -r '.changed_industry_count' classification-audit.json)" >> "$GITHUB_OUTPUT"
+          echo "unresolved_stock_count=$(jq -r '.unresolved_stock_count' classification-audit.json)" >> "$GITHUB_OUTPUT"
+          echo "snapshot_version=$(jq -r '.snapshot_version' classification-audit.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Upload full difference report
+        uses: actions/upload-artifact@v4
+        with:
+          name: eastmoney-classification-audit-${{ github.run_id }}
+          path: classification-audit.json
+          retention-days: 30
+
+      - name: Report differences for manual confirmation
+        if: steps.result.outputs.needs_review == 'true'
+        shell: bash
+        run: |
+          title="[分类维护] 东方财富行业分类存在差异"
+          body="冻结版本：${{ steps.result.outputs.snapshot_version }}。待人工确认 ${{ steps.result.outputs.review_count }} 只，其中新增 ${{ steps.result.outputs.new_stock_count }} 只、行业归属变化 ${{ steps.result.outputs.changed_industry_count }} 只、待归并 ${{ steps.result.outputs.unresolved_stock_count }} 只。完整报告见本次运行附件：${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}。系统未自动修改分类快照。"
+          issue_number=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "$title in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$issue_number" ]; then
+            gh issue comment "$issue_number" --repo "$GITHUB_REPOSITORY" --body "$body"
+          else
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body"
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Report audit failure
+        if: failure()
+        shell: bash
+        run: |
+          title="[分类维护] 东方财富分类检查失败"
+          body="分类检查未完成，请查看运行记录：${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}。"
+          issue_number=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "$title in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$issue_number" ]; then
+            gh issue comment "$issue_number" --repo "$GITHUB_REPOSITORY" --body "$body"
+          else
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body "$body"
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}

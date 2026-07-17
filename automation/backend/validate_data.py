@@ -100,9 +100,12 @@ def validate_payloads(
         raise ValueError("动量板块列表为空")
     if any(not item.get("momentum_state") for item in momentum["data"]):
         raise ValueError("动量板块缺少持续状态")
-    candidate_stocks = newhigh.get("candidate_stocks")
-    if not isinstance(candidate_stocks, int) or candidate_stocks < 0:
-        raise ValueError("一年新高候选数量格式无效")
+    capacity_candidate_stocks = newhigh.get(
+        "capacity_candidate_stocks",
+        newhigh.get("candidate_stocks"),
+    )
+    if not isinstance(capacity_candidate_stocks, int) or capacity_candidate_stocks < 0:
+        raise ValueError("一年新高容量候选数量格式无效")
     if not isinstance(newhigh.get("sectors"), list):
         raise ValueError("一年新高板块列表格式无效")
     market_overview = newhigh.get("market_overview")
@@ -131,7 +134,7 @@ def validate_payloads(
     sectors = newhigh.get("sectors") or []
     scores = [float(item.get("sector_confirmation_score") or 0) for item in sectors]
     if scores != sorted(scores, reverse=True):
-        raise ValueError("一年新高板块未按3L确认分排序")
+        raise ValueError("一年新高板块未按方向确认分排序")
     if newhigh.get("stock_scope") == "all_250d_new_highs":
         all_new_high_count = int(newhigh.get("total_stocks") or 0)
         market_new_high_count = int(
@@ -140,11 +143,14 @@ def validate_payloads(
         sector_new_high_count = sum(
             len(item.get("stocks") or []) for item in sectors
         )
-        flagged_candidate_count = sum(
+        flagged_capacity_count = sum(
             1
             for item in sectors
             for stock in (item.get("stocks") or [])
-            if stock.get("is_3l_candidate") is True
+            if stock.get(
+                "is_capacity_candidate",
+                stock.get("is_3l_candidate"),
+            ) is True
         )
         if not (
             all_new_high_count
@@ -155,10 +161,10 @@ def validate_payloads(
                 "一年新高数量口径不一致: "
                 f"总数{all_new_high_count}/市场{market_new_high_count}/行业{sector_new_high_count}"
             )
-        if candidate_stocks != flagged_candidate_count:
+        if capacity_candidate_stocks != flagged_capacity_count:
             raise ValueError(
-                "一年新高3L优选数量不一致: "
-                f"汇总{candidate_stocks}/明细{flagged_candidate_count}"
+                "一年新高容量优选数量不一致: "
+                f"汇总{capacity_candidate_stocks}/明细{flagged_capacity_count}"
             )
 
     return {

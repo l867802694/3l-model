@@ -3725,7 +3725,7 @@ def update_newhigh_data(
         institution_data = context["institution_data"]
 
         all_new_high_stocks = []
-        new_high_candidates = []
+        capacity_candidates = []
         raw_new_high_count = 0
         new_low_count = 0
         history_eligible_stocks = 0
@@ -3780,14 +3780,16 @@ def update_newhigh_data(
             stock_copy["amount"] = inst_data.get("amount", 0)
             stock_copy["turnover_ratio"] = inst_data.get("turnover", 0)
             stock_copy["capacity_proxy_score"] = inst_data.get("capacity_proxy_score", 0)
-            stock_copy["is_3l_candidate"] = (
+            stock_copy["is_capacity_candidate"] = (
                 stock_copy["capacity_proxy_score"] >= INSTITUTION_MIN_SCORE
             )
+            # Keep the legacy field while historical files transition to the clearer name.
+            stock_copy["is_3l_candidate"] = stock_copy["is_capacity_candidate"]
             raw_new_high_count += 1
             all_new_high_stocks.append(stock_copy)
 
-            if stock_copy["is_3l_candidate"]:
-                new_high_candidates.append(stock_copy)
+            if stock_copy["is_capacity_candidate"]:
+                capacity_candidates.append(stock_copy)
 
         industry_map = {}
         for stock in all_new_high_stocks:
@@ -3821,6 +3823,7 @@ def update_newhigh_data(
                         "amount": round(stock["amount"] / 10000, 2),
                         "turnover_ratio": round(stock["turnover_ratio"], 2),
                         "capacity_proxy_score": stock["capacity_proxy_score"],
+                        "is_capacity_candidate": stock["is_capacity_candidate"],
                         "is_3l_candidate": stock["is_3l_candidate"],
                         "sector": industry_name,
                         "industry": industry_name,
@@ -3880,8 +3883,11 @@ def update_newhigh_data(
                     "sector_name": industry_name,
                     "new_high_count": len(stocks_list),
                     "stock_count": len(stocks_list),
+                    "capacity_candidate_count": sum(
+                        1 for stock in stocks_list if stock["is_capacity_candidate"]
+                    ),
                     "candidate_count": sum(
-                        1 for stock in stocks_list if stock["is_3l_candidate"]
+                        1 for stock in stocks_list if stock["is_capacity_candidate"]
                     ),
                     "sector_total_count": sector_total_count,
                     "sector_new_high_ratio": sector_new_high_ratio,
@@ -3939,10 +3945,12 @@ def update_newhigh_data(
             "history_eligible_ratio": history_eligible_ratio,
             "history_window_complete": history_eligible_ratio >= 95,
             "stock_scope": "all_250d_new_highs",
+            "capacity_filter_scope": "capacity_proxy_only",
             "candidate_filter_scope": "capacity_proxy_only",
             "candidate_min_score": INSTITUTION_MIN_SCORE,
             "raw_new_high_count": raw_new_high_count,
-            "candidate_stocks": len(new_high_candidates),
+            "capacity_candidate_stocks": len(capacity_candidates),
+            "candidate_stocks": len(capacity_candidates),
             "total_stocks": len(all_new_high_stocks),
             "total_sectors": len(sectors),
             "market_stats": market_stats,
@@ -3961,7 +3969,7 @@ def update_newhigh_data(
         print(
             f"✅ 新高数据更新完成: {len(sectors)}个板块, "
             f"{len(all_new_high_stocks)}只全部新高, "
-            f"{len(new_high_candidates)}只3L优选"
+            f"{len(capacity_candidates)}只容量优选"
         )
         return True
     except Exception as exc:

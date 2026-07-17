@@ -457,6 +457,26 @@ main { padding-top: 1.5rem !important; }
 
 .stock-detail-primary-action:hover { background: #b91c1c; }
 
+.momentum-modal-mobile-list { display: none; }
+
+.momentum-confirmation-badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    background: #f4f4f5;
+    color: #71717a;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1rem;
+    white-space: nowrap;
+}
+
+.momentum-confirmation-badge.is-confirmed {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
 .data-note {
     border-top: 1px solid var(--line);
     color: var(--muted);
@@ -577,4 +597,6 @@ table tbody tr { transition: background-color 120ms ease; }
     .stock-detail-drawer footer { padding-left: 1rem !important; padding-right: 1rem !important; }
     .stock-detail-actions { grid-template-columns: 1fr 1fr; }
     .stock-detail-actions > :first-child { grid-column: 1 / -1; }
+    .momentum-modal-table-wrap { display: none; }
+    .momentum-modal-mobile-list { display: block; }
 }

@@ -35,8 +35,8 @@
   "history_window_complete": true,
   "raw_new_high_count": 26,
   "candidate_stocks": 25,
-  "total_stocks": 25,
-  "total_sectors": 16,
+  "total_stocks": 26,
+  "total_sectors": 17,
   "market_stats": {
     "new_high_count": 26,
     "new_low_count": 5,
@@ -349,6 +349,7 @@
       "sector_name": "通用设备",
       "new_high_count": 5,
       "stock_count": 5,
+      "candidate_count": 5,
       "sector_total_count": 211,
       "sector_new_high_ratio": 2.37,
       "avg_consecutive_days": 1.6,
@@ -381,6 +382,7 @@
           "amount": 56884.8,
           "turnover_ratio": 4.25,
           "capacity_proxy_score": 7.94,
+          "is_3l_candidate": true,
           "sector": "通用设备",
           "industry": "通用设备"
         },
@@ -401,6 +403,7 @@
           "amount": 51092.39,
           "turnover_ratio": 9.35,
           "capacity_proxy_score": 6.91,
+          "is_3l_candidate": true,
           "sector": "通用设备",
           "industry": "通用设备"
         },
@@ -421,6 +424,7 @@
           "amount": 552630.45,
           "turnover_ratio": 22.0,
           "capacity_proxy_score": 8.8,
+          "is_3l_candidate": true,
           "sector": "通用设备",
           "industry": "通用设备"
         },
@@ -441,6 +445,7 @@
           "amount": 36956.18,
           "turnover_ratio": 4.31,
           "capacity_proxy_score": 7.12,
+          "is_3l_candidate": true,
           "sector": "通用设备",
           "industry": "通用设备"
         },
@@ -461,6 +466,7 @@
           "amount": 119722.52,
           "turnover_ratio": 20.53,
           "capacity_proxy_score": 7.01,
+          "is_3l_candidate": true,
           "sector": "通用设备",
           "industry": "通用设备"
         }
@@ -470,6 +476,7 @@
       "sector_name": "自动化设备",
       "new_high_count": 4,
       "stock_count": 4,
+      "candidate_count": 4,
       "sector_total_count": 79,
       "sector_new_high_ratio": 5.06,
       "avg_consecutive_days": 1.0,
@@ -502,6 +509,7 @@
           "amount": 1252936.65,
           "turnover_ratio": 14.7,
           "capacity_proxy_score": 9.54,
+          "is_3l_candidate": true,
           "sector": "自动化设备",
           "industry": "自动化设备"
         },
@@ -522,6 +530,7 @@
           "amount": 550806.86,
           "turnover_ratio": 16.2,
           "capacity_proxy_score": 9.23,
+          "is_3l_candidate": true,
           "sector": "自动化设备",
           "industry": "自动化设备"
         },
@@ -542,6 +551,7 @@
           "amount": 38395.81,
           "turnover_ratio": 2.48,
           "capacity_proxy_score": 7.17,
+          "is_3l_candidate": true,
           "sector": "自动化设备",
           "industry": "自动化设备"
         },
@@ -562,6 +572,7 @@
           "amount": 459458.39,
           "turnover_ratio": 26.52,
           "capacity_proxy_score": 8.54,
+          "is_3l_candidate": true,
           "sector": "自动化设备",
           "industry": "自动化设备"
         }
@@ -571,6 +582,7 @@
       "sector_name": "化学制药",
       "new_high_count": 2,
       "stock_count": 2,
+      "candidate_count": 2,
       "sector_total_count": 143,
       "sector_new_high_ratio": 1.4,
       "avg_consecutive_days": 2.5,
@@ -603,6 +615,7 @@
           "amount": 193474.19,
           "turnover_ratio": 5.45,
           "capacity_proxy_score": 9.28,
+          "is_3l_candidate": true,
           "sector": "化学制药",
           "industry": "化学制药"
         },
@@ -623,6 +636,7 @@
           "amount": 241718.15,
           "turnover_ratio": 4.13,
           "capacity_proxy_score": 9.5,
+          "is_3l_candidate": true,
           "sector": "化学制药",
           "industry": "化学制药"
         }
@@ -632,6 +646,7 @@
       "sector_name": "化学制品",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 165,
       "sector_new_high_ratio": 0.61,
       "avg_consecutive_days": 1.0,
@@ -664,6 +679,7 @@
           "amount": 91676.81,
           "turnover_ratio": 26.25,
           "capacity_proxy_score": 6.16,
+          "is_3l_candidate": true,
           "sector": "化学制品",
           "industry": "化学制品"
         }
@@ -673,6 +689,7 @@
       "sector_name": "塑料",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 70,
       "sector_new_high_ratio": 1.43,
       "avg_consecutive_days": 1.0,
@@ -705,6 +722,7 @@
           "amount": 20423.02,
           "turnover_ratio": 5.35,
           "capacity_proxy_score": 5.48,
+          "is_3l_candidate": true,
           "sector": "塑料",
           "industry": "塑料"
         }
@@ -714,6 +732,7 @@
       "sector_name": "家居用品",
       "new_high_count": 2,
       "stock_count": 2,
+      "candidate_count": 2,
       "sector_total_count": 69,
       "sector_new_high_ratio": 2.9,
       "avg_consecutive_days": 2.0,
@@ -746,6 +765,7 @@
           "amount": 63771.44,
           "turnover_ratio": 15.57,
           "capacity_proxy_score": 6.38,
+          "is_3l_candidate": true,
           "sector": "家居用品",
           "industry": "家居用品"
         },
@@ -766,6 +786,7 @@
           "amount": 51749.08,
           "turnover_ratio": 13.84,
           "capacity_proxy_score": 6.09,
+          "is_3l_candidate": true,
           "sector": "家居用品",
           "industry": "家居用品"
         }
@@ -775,6 +796,7 @@
       "sector_name": "专业工程",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 34,
       "sector_new_high_ratio": 2.94,
       "avg_consecutive_days": 3.0,
@@ -807,8 +829,52 @@
           "amount": 113083.64,
           "turnover_ratio": 10.05,
           "capacity_proxy_score": 8.3,
+          "is_3l_candidate": true,
           "sector": "专业工程",
           "industry": "专业工程"
+        }
+      ]
+    },
+    {
+      "sector_name": "装修装饰",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "candidate_count": 0,
+      "sector_total_count": 16,
+      "sector_new_high_ratio": 6.25,
+      "avg_consecutive_days": 1.0,
+      "avg_change_pct": 10.03,
+      "avg_break_pct": 2.74,
+      "avg_capacity_proxy_score": 1.0,
+      "sector_confirmation_score": 18.89,
+      "sector_confirmation_confidence": 57.7,
+      "sector_score": 18.89,
+      "momentum_rank": 34,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "momentum_state_label": "观察",
+      "confirmation_tier": "observation",
+      "stocks": [
+        {
+          "code": "603137",
+          "name": "恒尚节能",
+          "close": 17.22,
+          "price": 17.22,
+          "high_250": 16.76,
+          "high_250d": 16.76,
+          "consecutive_new_high_days": 1,
+          "consecutive_days": 1,
+          "change_pct": 10.03,
+          "change": 10.03,
+          "break_through": 2.74,
+          "break_pct": 2.74,
+          "circ_mv": 31.5,
+          "amount": 1042.64,
+          "turnover_ratio": 0.33,
+          "capacity_proxy_score": 1.0,
+          "is_3l_candidate": false,
+          "sector": "装修装饰",
+          "industry": "装修装饰"
         }
       ]
     },
@@ -816,6 +882,7 @@
       "sector_name": "工程机械",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 28,
       "sector_new_high_ratio": 3.57,
       "avg_consecutive_days": 1.0,
@@ -848,6 +915,7 @@
           "amount": 159626.3,
           "turnover_ratio": 6.8,
           "capacity_proxy_score": 9.01,
+          "is_3l_candidate": true,
           "sector": "工程机械",
           "industry": "工程机械"
         }
@@ -857,6 +925,7 @@
       "sector_name": "中药",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 59,
       "sector_new_high_ratio": 1.69,
       "avg_consecutive_days": 1.0,
@@ -889,6 +958,7 @@
           "amount": 39085.78,
           "turnover_ratio": 7.14,
           "capacity_proxy_score": 6.65,
+          "is_3l_candidate": true,
           "sector": "中药",
           "industry": "中药"
         }
@@ -898,6 +968,7 @@
       "sector_name": "电池",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 89,
       "sector_new_high_ratio": 1.12,
       "avg_consecutive_days": 1.0,
@@ -930,6 +1001,7 @@
           "amount": 195351.91,
           "turnover_ratio": 4.27,
           "capacity_proxy_score": 9.36,
+          "is_3l_candidate": true,
           "sector": "电池",
           "industry": "电池"
         }
@@ -939,6 +1011,7 @@
       "sector_name": "物流",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 43,
       "sector_new_high_ratio": 2.33,
       "avg_consecutive_days": 1.0,
@@ -971,6 +1044,7 @@
           "amount": 28233.29,
           "turnover_ratio": 2.29,
           "capacity_proxy_score": 6.68,
+          "is_3l_candidate": true,
           "sector": "物流",
           "industry": "物流"
         }
@@ -980,6 +1054,7 @@
       "sector_name": "炼化及贸易",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 29,
       "sector_new_high_ratio": 3.45,
       "avg_consecutive_days": 1.0,
@@ -1012,6 +1087,7 @@
           "amount": 48415.7,
           "turnover_ratio": 4.86,
           "capacity_proxy_score": 7.55,
+          "is_3l_candidate": true,
           "sector": "炼化及贸易",
           "industry": "炼化及贸易"
         }
@@ -1021,6 +1097,7 @@
       "sector_name": "光伏设备",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 59,
       "sector_new_high_ratio": 1.69,
       "avg_consecutive_days": 1.0,
@@ -1053,6 +1130,7 @@
           "amount": 406551.15,
           "turnover_ratio": 7.74,
           "capacity_proxy_score": 9.61,
+          "is_3l_candidate": true,
           "sector": "光伏设备",
           "industry": "光伏设备"
         }
@@ -1062,6 +1140,7 @@
       "sector_name": "专用设备",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 170,
       "sector_new_high_ratio": 0.59,
       "avg_consecutive_days": 1.0,
@@ -1094,6 +1173,7 @@
           "amount": 132380.68,
           "turnover_ratio": 13.46,
           "capacity_proxy_score": 7.95,
+          "is_3l_candidate": true,
           "sector": "专用设备",
           "industry": "专用设备"
         }
@@ -1103,6 +1183,7 @@
       "sector_name": "电网设备",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 127,
       "sector_new_high_ratio": 0.79,
       "avg_consecutive_days": 1.0,
@@ -1135,6 +1216,7 @@
           "amount": 132775.05,
           "turnover_ratio": 2.26,
           "capacity_proxy_score": 8.73,
+          "is_3l_candidate": true,
           "sector": "电网设备",
           "industry": "电网设备"
         }
@@ -1144,6 +1226,7 @@
       "sector_name": "半导体",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 172,
       "sector_new_high_ratio": 0.58,
       "avg_consecutive_days": 1.0,
@@ -1176,10 +1259,14 @@
           "amount": 120445.09,
           "turnover_ratio": 4.79,
           "capacity_proxy_score": 8.91,
+          "is_3l_candidate": true,
           "sector": "半导体",
           "industry": "半导体"
         }
       ]
     }
-  ]
+  ],
+  "stock_scope": "all_250d_new_highs",
+  "candidate_filter_scope": "capacity_proxy_only",
+  "candidate_min_score": 2.5
 }

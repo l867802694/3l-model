@@ -132,6 +132,34 @@ def validate_payloads(
     scores = [float(item.get("sector_confirmation_score") or 0) for item in sectors]
     if scores != sorted(scores, reverse=True):
         raise ValueError("一年新高板块未按3L确认分排序")
+    if newhigh.get("stock_scope") == "all_250d_new_highs":
+        all_new_high_count = int(newhigh.get("total_stocks") or 0)
+        market_new_high_count = int(
+            (newhigh.get("market_stats") or {}).get("new_high_count") or 0
+        )
+        sector_new_high_count = sum(
+            len(item.get("stocks") or []) for item in sectors
+        )
+        flagged_candidate_count = sum(
+            1
+            for item in sectors
+            for stock in (item.get("stocks") or [])
+            if stock.get("is_3l_candidate") is True
+        )
+        if not (
+            all_new_high_count
+            == market_new_high_count
+            == sector_new_high_count
+        ):
+            raise ValueError(
+                "一年新高数量口径不一致: "
+                f"总数{all_new_high_count}/市场{market_new_high_count}/行业{sector_new_high_count}"
+            )
+        if candidate_stocks != flagged_candidate_count:
+            raise ValueError(
+                "一年新高3L优选数量不一致: "
+                f"汇总{candidate_stocks}/明细{flagged_candidate_count}"
+            )
 
     return {
         "trade_date": trade_date,

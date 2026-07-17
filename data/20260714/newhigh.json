@@ -35,8 +35,8 @@
   "history_window_complete": true,
   "raw_new_high_count": 7,
   "candidate_stocks": 6,
-  "total_stocks": 6,
-  "total_sectors": 5,
+  "total_stocks": 7,
+  "total_sectors": 6,
   "market_stats": {
     "new_high_count": 7,
     "new_low_count": 132,
@@ -349,6 +349,7 @@
       "sector_name": "通用设备",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 211,
       "sector_new_high_ratio": 0.47,
       "avg_consecutive_days": 1.0,
@@ -381,6 +382,7 @@
           "amount": 181886.08,
           "turnover_ratio": 18.57,
           "capacity_proxy_score": 8.28,
+          "is_3l_candidate": true,
           "sector": "通用设备",
           "industry": "通用设备"
         }
@@ -390,6 +392,7 @@
       "sector_name": "化学制品",
       "new_high_count": 2,
       "stock_count": 2,
+      "candidate_count": 2,
       "sector_total_count": 165,
       "sector_new_high_ratio": 1.21,
       "avg_consecutive_days": 1.5,
@@ -422,6 +425,7 @@
           "amount": 122826.76,
           "turnover_ratio": 12.98,
           "capacity_proxy_score": 8.1,
+          "is_3l_candidate": true,
           "sector": "化学制品",
           "industry": "化学制品"
         },
@@ -442,6 +446,7 @@
           "amount": 118671.46,
           "turnover_ratio": 20.12,
           "capacity_proxy_score": 7.26,
+          "is_3l_candidate": true,
           "sector": "化学制品",
           "industry": "化学制品"
         }
@@ -451,6 +456,7 @@
       "sector_name": "装修装饰",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 16,
       "sector_new_high_ratio": 6.25,
       "avg_consecutive_days": 8.0,
@@ -483,6 +489,7 @@
           "amount": 113143.17,
           "turnover_ratio": 20.18,
           "capacity_proxy_score": 7.18,
+          "is_3l_candidate": true,
           "sector": "装修装饰",
           "industry": "装修装饰"
         }
@@ -492,6 +499,7 @@
       "sector_name": "航运港口",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 34,
       "sector_new_high_ratio": 2.94,
       "avg_consecutive_days": 1.0,
@@ -524,8 +532,52 @@
           "amount": 187491.43,
           "turnover_ratio": 7.53,
           "capacity_proxy_score": 9.24,
+          "is_3l_candidate": true,
           "sector": "航运港口",
           "industry": "航运港口"
+        }
+      ]
+    },
+    {
+      "sector_name": "塑料",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "candidate_count": 0,
+      "sector_total_count": 70,
+      "sector_new_high_ratio": 1.43,
+      "avg_consecutive_days": 3.0,
+      "avg_change_pct": 10.01,
+      "avg_break_pct": 1.84,
+      "avg_capacity_proxy_score": 1.71,
+      "sector_confirmation_score": 17.99,
+      "sector_confirmation_confidence": 57.7,
+      "sector_score": 17.99,
+      "momentum_rank": 33,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "momentum_state_label": "观察",
+      "confirmation_tier": "observation",
+      "stocks": [
+        {
+          "code": "603580",
+          "name": "艾艾精工",
+          "close": 33.75,
+          "price": 33.75,
+          "high_250": 33.14,
+          "high_250d": 33.14,
+          "consecutive_new_high_days": 3,
+          "consecutive_days": 3,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 1.84,
+          "break_pct": 1.84,
+          "circ_mv": 44.1,
+          "amount": 2075.35,
+          "turnover_ratio": 0.47,
+          "capacity_proxy_score": 1.71,
+          "is_3l_candidate": false,
+          "sector": "塑料",
+          "industry": "塑料"
         }
       ]
     },
@@ -533,12 +585,13 @@
       "sector_name": "化学制药",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 143,
       "sector_new_high_ratio": 0.7,
       "avg_consecutive_days": 1.0,
       "avg_change_pct": 8.82,
       "avg_break_pct": 4.96,
-      "avg_capacity_proxy_score": 7.12,
+      "avg_capacity_proxy_score": 7.11,
       "sector_confirmation_score": 11.91,
       "sector_confirmation_confidence": 57.7,
       "sector_score": 11.91,
@@ -564,11 +617,15 @@
           "circ_mv": 51.0,
           "amount": 72783.63,
           "turnover_ratio": 14.27,
-          "capacity_proxy_score": 7.12,
+          "capacity_proxy_score": 7.11,
+          "is_3l_candidate": true,
           "sector": "化学制药",
           "industry": "化学制药"
         }
       ]
     }
-  ]
+  ],
+  "stock_scope": "all_250d_new_highs",
+  "candidate_filter_scope": "capacity_proxy_only",
+  "candidate_min_score": 2.5
 }

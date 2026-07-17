@@ -3724,7 +3724,8 @@ def update_newhigh_data(
         index_rows = context["index_rows"]
         institution_data = context["institution_data"]
 
-        new_high_stocks = []
+        all_new_high_stocks = []
+        new_high_candidates = []
         raw_new_high_count = 0
         new_low_count = 0
         history_eligible_stocks = 0
@@ -3779,13 +3780,17 @@ def update_newhigh_data(
             stock_copy["amount"] = inst_data.get("amount", 0)
             stock_copy["turnover_ratio"] = inst_data.get("turnover", 0)
             stock_copy["capacity_proxy_score"] = inst_data.get("capacity_proxy_score", 0)
+            stock_copy["is_3l_candidate"] = (
+                stock_copy["capacity_proxy_score"] >= INSTITUTION_MIN_SCORE
+            )
             raw_new_high_count += 1
+            all_new_high_stocks.append(stock_copy)
 
-            if stock_copy["capacity_proxy_score"] >= INSTITUTION_MIN_SCORE:
-                new_high_stocks.append(stock_copy)
+            if stock_copy["is_3l_candidate"]:
+                new_high_candidates.append(stock_copy)
 
         industry_map = {}
-        for stock in new_high_stocks:
+        for stock in all_new_high_stocks:
             industry_map.setdefault(stock["industry"] or "其他", []).append(stock)
 
         momentum_lookup = {}
@@ -3816,6 +3821,7 @@ def update_newhigh_data(
                         "amount": round(stock["amount"] / 10000, 2),
                         "turnover_ratio": round(stock["turnover_ratio"], 2),
                         "capacity_proxy_score": stock["capacity_proxy_score"],
+                        "is_3l_candidate": stock["is_3l_candidate"],
                         "sector": industry_name,
                         "industry": industry_name,
                     }
@@ -3874,6 +3880,9 @@ def update_newhigh_data(
                     "sector_name": industry_name,
                     "new_high_count": len(stocks_list),
                     "stock_count": len(stocks_list),
+                    "candidate_count": sum(
+                        1 for stock in stocks_list if stock["is_3l_candidate"]
+                    ),
                     "sector_total_count": sector_total_count,
                     "sector_new_high_ratio": sector_new_high_ratio,
                     "avg_consecutive_days": avg_consecutive_days,
@@ -3892,7 +3901,7 @@ def update_newhigh_data(
                 }
             )
 
-        depth_trend = build_depth_trend_stats(sectors, len(new_high_stocks))
+        depth_trend = build_depth_trend_stats(sectors, len(all_new_high_stocks))
         history_eligible_ratio = round(
             history_eligible_stocks / len(stocks) * 100, 2
         ) if stocks else 0
@@ -3929,9 +3938,12 @@ def update_newhigh_data(
             "history_eligible_stocks": history_eligible_stocks,
             "history_eligible_ratio": history_eligible_ratio,
             "history_window_complete": history_eligible_ratio >= 95,
+            "stock_scope": "all_250d_new_highs",
+            "candidate_filter_scope": "capacity_proxy_only",
+            "candidate_min_score": INSTITUTION_MIN_SCORE,
             "raw_new_high_count": raw_new_high_count,
-            "candidate_stocks": len(new_high_stocks),
-            "total_stocks": len(new_high_stocks),
+            "candidate_stocks": len(new_high_candidates),
+            "total_stocks": len(all_new_high_stocks),
             "total_sectors": len(sectors),
             "market_stats": market_stats,
             "market_overview": market_overview,
@@ -3946,7 +3958,11 @@ def update_newhigh_data(
         else:
             print("  ℹ️ 调试模式：未写入一年新高数据文件")
         save_stock_industry_mapping()
-        print(f"✅ 新高数据更新完成: {len(sectors)}个板块, {len(new_high_stocks)}只股票")
+        print(
+            f"✅ 新高数据更新完成: {len(sectors)}个板块, "
+            f"{len(all_new_high_stocks)}只全部新高, "
+            f"{len(new_high_candidates)}只3L优选"
+        )
         return True
     except Exception as exc:
         print(f"❌ 更新新高数据失败: {exc}")

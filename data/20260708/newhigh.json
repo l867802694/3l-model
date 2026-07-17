@@ -349,6 +349,7 @@
       "sector_name": "光学光电子",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 88,
       "sector_new_high_ratio": 1.14,
       "avg_consecutive_days": 1.0,
@@ -381,6 +382,7 @@
           "amount": 63137.85,
           "turnover_ratio": 9.59,
           "capacity_proxy_score": 7.56,
+          "is_3l_candidate": true,
           "sector": "光学光电子",
           "industry": "光学光电子"
         }
@@ -390,6 +392,7 @@
       "sector_name": "化学制品",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 165,
       "sector_new_high_ratio": 0.61,
       "avg_consecutive_days": 1.0,
@@ -422,6 +425,7 @@
           "amount": 479456.51,
           "turnover_ratio": 15.88,
           "capacity_proxy_score": 9.21,
+          "is_3l_candidate": true,
           "sector": "化学制品",
           "industry": "化学制品"
         }
@@ -431,6 +435,7 @@
       "sector_name": "铁路公路",
       "new_high_count": 2,
       "stock_count": 2,
+      "candidate_count": 2,
       "sector_total_count": 33,
       "sector_new_high_ratio": 6.06,
       "avg_consecutive_days": 2.0,
@@ -463,6 +468,7 @@
           "amount": 15209.22,
           "turnover_ratio": 0.25,
           "capacity_proxy_score": 6.23,
+          "is_3l_candidate": true,
           "sector": "铁路公路",
           "industry": "铁路公路"
         },
@@ -483,6 +489,7 @@
           "amount": 12875.65,
           "turnover_ratio": 0.68,
           "capacity_proxy_score": 5.92,
+          "is_3l_candidate": true,
           "sector": "铁路公路",
           "industry": "铁路公路"
         }
@@ -492,6 +499,7 @@
       "sector_name": "装修装饰",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 16,
       "sector_new_high_ratio": 6.25,
       "avg_consecutive_days": 4.0,
@@ -524,6 +532,7 @@
           "amount": 107020.38,
           "turnover_ratio": 25.54,
           "capacity_proxy_score": 6.69,
+          "is_3l_candidate": true,
           "sector": "装修装饰",
           "industry": "装修装饰"
         }
@@ -533,6 +542,7 @@
       "sector_name": "半导体",
       "new_high_count": 2,
       "stock_count": 2,
+      "candidate_count": 2,
       "sector_total_count": 172,
       "sector_new_high_ratio": 1.16,
       "avg_consecutive_days": 1.0,
@@ -565,6 +575,7 @@
           "amount": 340272.54,
           "turnover_ratio": 4.32,
           "capacity_proxy_score": 9.72,
+          "is_3l_candidate": true,
           "sector": "半导体",
           "industry": "半导体"
         },
@@ -585,6 +596,7 @@
           "amount": 1000215.39,
           "turnover_ratio": 7.07,
           "capacity_proxy_score": 9.91,
+          "is_3l_candidate": true,
           "sector": "半导体",
           "industry": "半导体"
         }
@@ -594,6 +606,7 @@
       "sector_name": "消费电子",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 88,
       "sector_new_high_ratio": 1.14,
       "avg_consecutive_days": 1.0,
@@ -626,6 +639,7 @@
           "amount": 134819.47,
           "turnover_ratio": 5.53,
           "capacity_proxy_score": 9.08,
+          "is_3l_candidate": true,
           "sector": "消费电子",
           "industry": "消费电子"
         }
@@ -635,6 +649,7 @@
       "sector_name": "装修建材",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 30,
       "sector_new_high_ratio": 3.33,
       "avg_consecutive_days": 1.0,
@@ -667,6 +682,7 @@
           "amount": 131359.41,
           "turnover_ratio": 26.13,
           "capacity_proxy_score": 7.05,
+          "is_3l_candidate": true,
           "sector": "装修建材",
           "industry": "装修建材"
         }
@@ -676,6 +692,7 @@
       "sector_name": "塑料",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 70,
       "sector_new_high_ratio": 1.43,
       "avg_consecutive_days": 2.0,
@@ -708,6 +725,7 @@
           "amount": 43617.62,
           "turnover_ratio": 10.29,
           "capacity_proxy_score": 6.69,
+          "is_3l_candidate": true,
           "sector": "塑料",
           "industry": "塑料"
         }
@@ -717,6 +735,7 @@
       "sector_name": "工业金属",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 56,
       "sector_new_high_ratio": 1.79,
       "avg_consecutive_days": 1.0,
@@ -749,6 +768,7 @@
           "amount": 66563.47,
           "turnover_ratio": 11.61,
           "capacity_proxy_score": 7.44,
+          "is_3l_candidate": true,
           "sector": "工业金属",
           "industry": "工业金属"
         }
@@ -758,12 +778,13 @@
       "sector_name": "环境治理",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 100,
       "sector_new_high_ratio": 1.0,
       "avg_consecutive_days": 1.0,
       "avg_change_pct": 7.13,
       "avg_break_pct": 0.23,
-      "avg_capacity_proxy_score": 5.14,
+      "avg_capacity_proxy_score": 5.13,
       "sector_confirmation_score": 13.79,
       "sector_confirmation_confidence": 57.7,
       "sector_score": 13.79,
@@ -789,11 +810,15 @@
           "circ_mv": 47.26,
           "amount": 13999.39,
           "turnover_ratio": 2.96,
-          "capacity_proxy_score": 5.14,
+          "capacity_proxy_score": 5.13,
+          "is_3l_candidate": true,
           "sector": "环境治理",
           "industry": "环境治理"
         }
       ]
     }
-  ]
+  ],
+  "stock_scope": "all_250d_new_highs",
+  "candidate_filter_scope": "capacity_proxy_only",
+  "candidate_min_score": 2.5
 }

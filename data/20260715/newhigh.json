@@ -35,8 +35,8 @@
   "history_window_complete": true,
   "raw_new_high_count": 15,
   "candidate_stocks": 14,
-  "total_stocks": 14,
-  "total_sectors": 8,
+  "total_stocks": 15,
+  "total_sectors": 9,
   "market_stats": {
     "new_high_count": 15,
     "new_low_count": 29,
@@ -349,6 +349,7 @@
       "sector_name": "医疗服务",
       "new_high_count": 6,
       "stock_count": 6,
+      "candidate_count": 6,
       "sector_total_count": 52,
       "sector_new_high_ratio": 11.54,
       "avg_consecutive_days": 1.0,
@@ -381,6 +382,7 @@
           "amount": 219057.76,
           "turnover_ratio": 6.93,
           "capacity_proxy_score": 9.39,
+          "is_3l_candidate": true,
           "sector": "医疗服务",
           "industry": "医疗服务"
         },
@@ -401,6 +403,7 @@
           "amount": 1518099.84,
           "turnover_ratio": 4.65,
           "capacity_proxy_score": 9.97,
+          "is_3l_candidate": true,
           "sector": "医疗服务",
           "industry": "医疗服务"
         },
@@ -421,6 +424,7 @@
           "amount": 67874.58,
           "turnover_ratio": 5.87,
           "capacity_proxy_score": 8.24,
+          "is_3l_candidate": true,
           "sector": "医疗服务",
           "industry": "医疗服务"
         },
@@ -441,6 +445,7 @@
           "amount": 424028.78,
           "turnover_ratio": 7.09,
           "capacity_proxy_score": 9.71,
+          "is_3l_candidate": true,
           "sector": "医疗服务",
           "industry": "医疗服务"
         },
@@ -461,6 +466,7 @@
           "amount": 642092.64,
           "turnover_ratio": 11.4,
           "capacity_proxy_score": 9.73,
+          "is_3l_candidate": true,
           "sector": "医疗服务",
           "industry": "医疗服务"
         },
@@ -481,6 +487,7 @@
           "amount": 96469.84,
           "turnover_ratio": 54.06,
           "capacity_proxy_score": 5.25,
+          "is_3l_candidate": true,
           "sector": "医疗服务",
           "industry": "医疗服务"
         }
@@ -490,6 +497,7 @@
       "sector_name": "化学制药",
       "new_high_count": 2,
       "stock_count": 2,
+      "candidate_count": 2,
       "sector_total_count": 143,
       "sector_new_high_ratio": 1.4,
       "avg_consecutive_days": 1.5,
@@ -522,6 +530,7 @@
           "amount": 78541.28,
           "turnover_ratio": 14.65,
           "capacity_proxy_score": 7.21,
+          "is_3l_candidate": true,
           "sector": "化学制药",
           "industry": "化学制药"
         },
@@ -542,6 +551,7 @@
           "amount": 99758.59,
           "turnover_ratio": 4.23,
           "capacity_proxy_score": 8.96,
+          "is_3l_candidate": true,
           "sector": "化学制药",
           "industry": "化学制药"
         }
@@ -551,9 +561,10 @@
       "sector_name": "装修装饰",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 16,
       "sector_new_high_ratio": 6.25,
-      "avg_consecutive_days": 8.0,
+      "avg_consecutive_days": 9.0,
       "avg_change_pct": 10.01,
       "avg_break_pct": 10.01,
       "avg_capacity_proxy_score": 7.55,
@@ -573,8 +584,8 @@
           "price": 35.61,
           "high_250": 32.37,
           "high_250d": 32.37,
-          "consecutive_new_high_days": 8,
-          "consecutive_days": 8,
+          "consecutive_new_high_days": 9,
+          "consecutive_days": 9,
           "change_pct": 10.01,
           "change": 10.01,
           "break_through": 10.01,
@@ -583,8 +594,52 @@
           "amount": 104292.83,
           "turnover_ratio": 16.8,
           "capacity_proxy_score": 7.55,
+          "is_3l_candidate": true,
           "sector": "装修装饰",
           "industry": "装修装饰"
+        }
+      ]
+    },
+    {
+      "sector_name": "塑料",
+      "new_high_count": 1,
+      "stock_count": 1,
+      "candidate_count": 0,
+      "sector_total_count": 70,
+      "sector_new_high_ratio": 1.43,
+      "avg_consecutive_days": 4.0,
+      "avg_change_pct": 10.01,
+      "avg_break_pct": 10.01,
+      "avg_capacity_proxy_score": 1.68,
+      "sector_confirmation_score": 19.08,
+      "sector_confirmation_confidence": 57.7,
+      "sector_score": 19.08,
+      "momentum_rank": 33,
+      "momentum_mainline": false,
+      "momentum_warning": false,
+      "momentum_state_label": "观察",
+      "confirmation_tier": "observation",
+      "stocks": [
+        {
+          "code": "603580",
+          "name": "艾艾精工",
+          "close": 37.13,
+          "price": 37.13,
+          "high_250": 33.75,
+          "high_250d": 33.75,
+          "consecutive_new_high_days": 4,
+          "consecutive_days": 4,
+          "change_pct": 10.01,
+          "change": 10.01,
+          "break_through": 10.01,
+          "break_pct": 10.01,
+          "circ_mv": 48.52,
+          "amount": 386.51,
+          "turnover_ratio": 0.08,
+          "capacity_proxy_score": 1.68,
+          "is_3l_candidate": false,
+          "sector": "塑料",
+          "industry": "塑料"
         }
       ]
     },
@@ -592,6 +647,7 @@
       "sector_name": "其他电源设备",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 32,
       "sector_new_high_ratio": 3.12,
       "avg_consecutive_days": 1.0,
@@ -624,6 +680,7 @@
           "amount": 52038.39,
           "turnover_ratio": 12.14,
           "capacity_proxy_score": 6.57,
+          "is_3l_candidate": true,
           "sector": "其他电源设备",
           "industry": "其他电源设备"
         }
@@ -633,12 +690,13 @@
       "sector_name": "包装印刷",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 39,
       "sector_new_high_ratio": 2.56,
       "avg_consecutive_days": 1.0,
       "avg_change_pct": 10.11,
       "avg_break_pct": 1.42,
-      "avg_capacity_proxy_score": 7.02,
+      "avg_capacity_proxy_score": 7.01,
       "sector_confirmation_score": 16.28,
       "sector_confirmation_confidence": 57.7,
       "sector_score": 16.28,
@@ -664,7 +722,8 @@
           "circ_mv": 48.03,
           "amount": 75665.39,
           "turnover_ratio": 15.75,
-          "capacity_proxy_score": 7.02,
+          "capacity_proxy_score": 7.01,
+          "is_3l_candidate": true,
           "sector": "包装印刷",
           "industry": "包装印刷"
         }
@@ -674,6 +733,7 @@
       "sector_name": "工程咨询服务",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 39,
       "sector_new_high_ratio": 2.56,
       "avg_consecutive_days": 1.0,
@@ -706,6 +766,7 @@
           "amount": 81304.14,
           "turnover_ratio": 15.85,
           "capacity_proxy_score": 7.16,
+          "is_3l_candidate": true,
           "sector": "工程咨询服务",
           "industry": "工程咨询服务"
         }
@@ -715,6 +776,7 @@
       "sector_name": "环境治理",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 100,
       "sector_new_high_ratio": 1.0,
       "avg_consecutive_days": 1.0,
@@ -747,6 +809,7 @@
           "amount": 18236.04,
           "turnover_ratio": 9.66,
           "capacity_proxy_score": 4.7,
+          "is_3l_candidate": true,
           "sector": "环境治理",
           "industry": "环境治理"
         }
@@ -756,6 +819,7 @@
       "sector_name": "中药",
       "new_high_count": 1,
       "stock_count": 1,
+      "candidate_count": 1,
       "sector_total_count": 59,
       "sector_new_high_ratio": 1.69,
       "avg_consecutive_days": 1.0,
@@ -788,10 +852,14 @@
           "amount": 320291.3,
           "turnover_ratio": 12.74,
           "capacity_proxy_score": 9.08,
+          "is_3l_candidate": true,
           "sector": "中药",
           "industry": "中药"
         }
       ]
     }
-  ]
+  ],
+  "stock_scope": "all_250d_new_highs",
+  "candidate_filter_scope": "capacity_proxy_only",
+  "candidate_min_score": 2.5
 }

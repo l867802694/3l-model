@@ -241,10 +241,10 @@
                 <div class="bg-white rounded-xl shadow-card border border-gray-100">
                     <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900">3L方向分层</h3>
-                            <p class="text-xs text-gray-500 mt-1">默认只看确认、升温和过热警示，普通观察方向折叠</p>
+                            <h3 class="text-lg font-semibold text-gray-900">新高行业分布</h3>
+                            <p class="text-xs text-gray-500 mt-1">统计全部新高所属行业，按确认分排序，默认展示前6个</p>
                         </div>
-                        <button id="toggleSectors" type="button" onclick="toggleSectorList()" class="quiet-button px-3 py-1.5 text-xs">查看观察方向</button>
+                        <button id="toggleSectors" type="button" onclick="toggleSectorList()" class="quiet-button px-3 py-1.5 text-xs">查看全部行业</button>
                     </div>
                     <div class="p-6" id="sectorList">
                         <!-- 动态填充 -->
@@ -255,17 +255,21 @@
             <!-- 新高个股列表 -->
             <div class="bg-white rounded-xl shadow-card border border-gray-100 overflow-hidden">
                 <div class="px-6 py-4 border-b border-gray-200 flex flex-col gap-4">
-                    <div class="flex items-center justify-between gap-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900">新高个股列表</h3>
                             <p id="stockListSummary" class="text-xs text-gray-500 mt-1">-</p>
                         </div>
-                        <div class="flex gap-2">
-                            <button onclick="filterStocks('all')" id="stockFilterAll" class="px-3 py-1.5 text-xs bg-red-50 text-red-600 rounded-full font-medium">全部</button>
+                        <div class="flex gap-2" aria-label="新高范围">
+                            <button onclick="filterNewHighScope('all')" id="signalFilterAll" class="px-3 py-1.5 text-xs bg-red-50 text-red-600 rounded-full font-medium">全部新高 <span id="allNewHighCount">-</span></button>
+                            <button onclick="filterNewHighScope('candidate')" id="signalFilterCandidate" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">3L优选 <span id="candidateNewHighCount">-</span></button>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                            <button onclick="filterStocks('all')" id="stockFilterAll" class="px-3 py-1.5 text-xs bg-red-50 text-red-600 rounded-full font-medium">全市场</button>
                             <button onclick="filterStocks('main')" id="stockFilterMain" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">主板</button>
                             <button onclick="filterStocks('cyb')" id="stockFilterCyb" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">创业板</button>
                             <button onclick="filterStocks('kcb')" id="stockFilterKcb" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">科创板</button>
-                        </div>
                     </div>
                     <div id="selectedSectorBar" class="hidden rounded-lg border border-red-100 bg-red-50 px-4 py-3">
                         <div class="flex flex-wrap items-center justify-between gap-3">
@@ -401,6 +405,7 @@
         let currentData = null;
         let currentDate = null;
         let currentStockFilter = 'all';
+        let currentNewHighScope = 'all';
         let allStocks = []; // 展平后的所有股票列表
         let availableDates = []; // 可用日期列表（有数据的日期）
         let momentumSectorMap = new Map();
@@ -683,7 +688,8 @@
                                 sector_momentum_state_label: momentum?.momentum_state_label || null,
                                 sector_momentum_score: momentum?.momentum_score || null,
                                 sector_confirmation_score: Number(sector.sector_confirmation_score || sector.sector_score || 0),
-                                sector_confirmation_tier: sector.confirmation_tier || null
+                                sector_confirmation_tier: sector.confirmation_tier || null,
+                                is_3l_candidate: stock.is_3l_candidate !== false
                             });
                         });
                     }
@@ -765,6 +771,11 @@
             return stocks;
         }
 
+        function applyNewHighScope(stocks) {
+            if (currentNewHighScope !== 'candidate') return stocks;
+            return stocks.filter((stock) => stock.is_3l_candidate);
+        }
+
         function sortStockList(stocks) {
             const list = [...stocks];
             return list.sort((a, b) => {
@@ -781,7 +792,8 @@
         function updateStockListSummary(filteredCount, totalCount) {
             const boardTextMap = { all: '全市场', main: '主板', cyb: '创业板', kcb: '科创板' };
             const sectorText = selectedSectorName ? `板块 ${selectedSectorName}` : '全板块';
-            document.getElementById('stockListSummary').textContent = `当前显示 ${filteredCount} / ${totalCount} 只 | ${sectorText} | ${boardTextMap[currentStockFilter]} | 按3L确认分、连新高、成交额排序`;
+            const scopeText = currentNewHighScope === 'candidate' ? '3L优选' : '全部新高';
+            document.getElementById('stockListSummary').textContent = `当前显示 ${filteredCount} / ${totalCount} 只 | ${scopeText} | ${sectorText} | ${boardTextMap[currentStockFilter]}`;
         }
 
         // 渲染页面
@@ -812,6 +824,8 @@
             const indexSummary = marketStats.index_confirmation_summary || '指数当前没有给出明确确认。';
             
             document.getElementById('todayNewHigh').textContent = newHighCount;
+            document.getElementById('allNewHighCount').textContent = newHighCount;
+            document.getElementById('candidateNewHighCount').textContent = Number(data.candidate_stocks || 0);
             document.getElementById('netNewHigh').textContent = `${netNewHigh >= 0 ? '+' : ''}${netNewHigh}`;
             document.getElementById('netNewHigh').className = `focus-value ${netNewHigh >= 0 ? 'text-stock-up' : 'text-stock-down'}`;
             document.getElementById('newHighRatio').textContent = `市场新高 ${newHighCount} 只 | 可计算 ${totalUniverse} / 全市场 ${allUniverse} | 新低 ${newLowCount} | 占比 ${ratio}%`;
@@ -860,16 +874,14 @@
             
             const sortedSectors = [...sectors].sort((a, b) => Number(b.sector_confirmation_score || b.sector_score || 0) - Number(a.sector_confirmation_score || a.sector_score || 0));
             const maxScore = sortedSectors[0]?.sector_confirmation_score || sortedSectors[0]?.sector_score || 1;
-            const signalTiers = new Set(['mainline_confirmed', 'front_runner', 'climax_warning']);
-            const signalSectors = sortedSectors.filter((sector) => signalTiers.has(getSectorConfirmationTier(sector)));
-            const observationCount = sortedSectors.length - signalSectors.length;
-            const visibleSectors = showAllSectors ? sortedSectors : signalSectors.slice(0, 6);
+            const remainingCount = Math.max(sortedSectors.length - 6, 0);
+            const visibleSectors = showAllSectors ? sortedSectors : sortedSectors.slice(0, 6);
             const toggle = document.getElementById('toggleSectors');
-            toggle.textContent = showAllSectors ? '收起观察方向' : `查看观察方向 ${observationCount}`;
-            toggle.disabled = observationCount === 0;
+            toggle.textContent = showAllSectors ? '收起行业' : `查看全部行业 ${sortedSectors.length}`;
+            toggle.classList.toggle('hidden', remainingCount === 0);
 
             if (!visibleSectors.length) {
-                container.innerHTML = '<p class="text-center text-gray-500 py-8">今天暂无确认或升温方向，可展开查看普通观察方向。</p>';
+                container.innerHTML = '<p class="text-center text-gray-500 py-8">今天暂无新高行业。</p>';
                 return;
             }
             
@@ -932,11 +944,12 @@
             }
 
             const sectorFiltered = getDisplayedStocksBase(stocks);
-            const boardFiltered = applyBoardFilter(sectorFiltered);
+            const scopeFiltered = applyNewHighScope(sectorFiltered);
+            const boardFiltered = applyBoardFilter(scopeFiltered);
             const filteredStocks = sortStockList(boardFiltered);
             updateStockListSummary(filteredStocks.length, sectorFiltered.length);
 
-            tbody.innerHTML = filteredStocks.slice(0, 50).map(stock => {
+            tbody.innerHTML = filteredStocks.map(stock => {
                 // 兼容多种可能的字段名
                 const change = stock.change_pct || stock.change || stock.pct_change || 0;
                 const consecutive = stock.consecutive_new_high_days || stock.consecutive_days || stock.days || 1;
@@ -986,6 +999,20 @@
                 }
             });
             
+            renderStocks(allStocks);
+        }
+
+        function filterNewHighScope(scope) {
+            currentNewHighScope = scope;
+            const buttons = {
+                all: document.getElementById('signalFilterAll'),
+                candidate: document.getElementById('signalFilterCandidate')
+            };
+            Object.entries(buttons).forEach(([key, button]) => {
+                button.className = key === scope
+                    ? 'px-3 py-1.5 text-xs bg-red-50 text-red-600 rounded-full font-medium'
+                    : 'px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200';
+            });
             renderStocks(allStocks);
         }
 

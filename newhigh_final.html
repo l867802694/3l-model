@@ -262,7 +262,7 @@
                         </div>
                         <div class="flex gap-2" aria-label="新高范围">
                             <button onclick="filterNewHighScope('all')" id="signalFilterAll" class="px-3 py-1.5 text-xs bg-red-50 text-red-600 rounded-full font-medium">全部新高 <span id="allNewHighCount">-</span></button>
-                            <button onclick="filterNewHighScope('candidate')" id="signalFilterCandidate" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">容量优选 <span id="candidateNewHighCount">-</span></button>
+                            <button onclick="filterNewHighScope('candidate')" id="signalFilterCandidate" class="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">容量通过 <span id="candidateNewHighCount">-</span></button>
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-2">
@@ -281,15 +281,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="overflow-x-auto">
+                <div class="newhigh-stock-table-wrap overflow-x-auto">
                     <table class="w-full text-sm text-left stock-results-table">
                         <thead class="bg-gray-50 text-gray-700">
                             <tr id="stockTableHeader">
                                 <th class="px-6 py-3 font-medium">股票</th>
-                                <th class="px-6 py-3 font-medium">所属方向</th>
-                                <th class="px-6 py-3 font-medium">新高确认</th>
+                                <th class="px-6 py-3 font-medium">方向</th>
+                                <th class="px-6 py-3 font-medium">新高状态</th>
                                 <th class="px-6 py-3 font-medium">今日表现</th>
-                                <th class="px-6 py-3 font-medium">容量</th>
+                                <th class="px-6 py-3 font-medium">成交额 / 流通市值</th>
                             </tr>
                         </thead>
                         <tbody id="stockTable" class="divide-y divide-gray-100">
@@ -297,6 +297,7 @@
                         </tbody>
                     </table>
                 </div>
+                <div id="stockMobileList" class="newhigh-stock-mobile-list divide-y divide-gray-100"></div>
             </div>
 
             <!-- 说明 -->
@@ -304,7 +305,7 @@
                 <summary>查看计算口径与免责声明</summary>
                 <ul class="space-y-1 list-disc list-inside">
                     <li><strong>一年新高</strong>：个股收盘价突破过去250个交易日的最高价</li>
-                    <li><strong>容量优选</strong>：只表示成交额、市值与换手质量通过门槛，不代表公司逻辑或买点成立</li>
+                    <li><strong>容量通过</strong>：只表示成交额、市值与换手质量通过门槛，不代表公司逻辑或买点成立</li>
                     <li><strong>新高占比</strong>：分母使用“可计算250日窗口”的股票数，不直接拿全市场总数做除数</li>
                     <li><strong>涨跌幅</strong>：当日股价涨跌百分比，反映突破强度</li>
                     <li><strong>连新高天数</strong>：连续创出新高的交易日数</li>
@@ -360,7 +361,7 @@
                                     <th class="px-4 py-3 text-left font-medium">股票</th>
                                     <th class="px-4 py-3 text-left font-medium">新高确认</th>
                                     <th class="px-4 py-3 text-right font-medium">今日表现</th>
-                                    <th class="px-4 py-3 text-left font-medium">容量</th>
+                                    <th class="px-4 py-3 text-left font-medium">成交额 / 流通市值</th>
                                 </tr>
                             </thead>
                             <tbody id="modalStockList" class="divide-y divide-gray-100"></tbody>
@@ -879,8 +880,8 @@
         function updateStockListSummary(filteredCount, totalCount) {
             const boardTextMap = { all: '全市场', main: '主板', cyb: '创业板', kcb: '科创板' };
             const sectorText = selectedSectorName ? `板块 ${selectedSectorName}` : '全板块';
-            const scopeText = currentNewHighScope === 'candidate' ? '容量优选' : '全部新高';
-            document.getElementById('stockListSummary').textContent = `当前显示 ${filteredCount} / ${totalCount} 只 | ${scopeText} | ${sectorText} | ${boardTextMap[currentStockFilter]}`;
+            const scopeText = currentNewHighScope === 'candidate' ? '容量通过' : '全部新高';
+            document.getElementById('stockListSummary').textContent = `显示 ${filteredCount} / ${totalCount} 只 · ${scopeText} · ${sectorText} · ${boardTextMap[currentStockFilter]} · 按方向确认排序`;
         }
 
         // 渲染页面
@@ -1023,10 +1024,12 @@
         // 渲染个股列表
         function renderStocks(stocks) {
             const tbody = document.getElementById('stockTable');
+            const mobileList = document.getElementById('stockMobileList');
             
             if (!stocks || stocks.length === 0) {
                 updateStockListSummary(0, 0);
                 tbody.innerHTML = '<tr><td colspan="5" class="px-6 py-8 text-center text-gray-500">暂无个股数据</td></tr>';
+                mobileList.innerHTML = '<div class="px-4 py-8 text-center text-sm text-gray-500">暂无个股数据</div>';
                 return;
             }
 
@@ -1043,29 +1046,34 @@
                 const sector = stock.sector || stock.industry || '-';
                 const code = getStockCode(stock);
                 const direction = getDirectionState(stock);
-                const capacityScore = Number(stock.capacity_proxy_score || 0);
-                const capacityLabel = stock.is_capacity_candidate ? '容量优选' : '容量未通过';
+                const directionRank = Number(stock.sector_rank || 0);
+                const amountYi = getAmountYi(stock);
+                const circMv = Number(stock.circ_mv || 0);
+                const capacityLabel = stock.is_capacity_candidate ? '容量通过' : '容量不足';
                 return `
                     <tr class="stock-result-row hover:bg-gray-50" role="button" tabindex="0" aria-label="查看 ${stock.name} 的判断详情" onclick="showStockDetail('${code}')" onkeydown="handleStockRowKey(event, '${code}')">
                         <td class="px-6 py-4">
                             <div class="font-medium text-gray-900">${stock.name}</div>
                             <div class="font-mono text-xs text-gray-500 mt-1">${code || '-'}</div>
-                            <div class="stock-mobile-meta mt-1"><span class="${stock.is_capacity_candidate ? 'text-red-600' : 'text-gray-400'}">${capacityLabel}</span></div>
                         </td>
                         <td class="px-6 py-4">
                             <div class="font-medium text-gray-800">${sector}</div>
-                            <span class="${getDirectionBadgeClass(direction.tier)} mt-1">${direction.label}</span>
+                            <div class="mt-1 flex flex-wrap items-center gap-2">
+                                <span class="text-xs text-gray-500">${directionRank ? `动量第${directionRank}` : '未进动量前排'}</span>
+                                <span class="${getDirectionBadgeClass(direction.tier)}">${direction.label}</span>
+                            </div>
                         </td>
                         <td class="px-6 py-4">
-                            <div class="font-semibold text-gray-900">${consecutive} 天</div>
+                            <div class="font-semibold text-gray-900">连续 ${consecutive} 天</div>
                             <div class="mt-1 text-xs text-gray-500">突破 ${breakPct >= 0 ? '+' : ''}${breakPct.toFixed(2)}%</div>
                         </td>
                         <td class="px-6 py-4 font-semibold ${change >= 0 ? 'text-stock-up' : 'text-stock-down'}">${change >= 0 ? '+' : ''}${change.toFixed(2)}%</td>
                         <td class="px-6 py-4">
                             <div class="flex items-center justify-between gap-3">
                                 <div>
-                                    <div class="font-medium ${stock.is_capacity_candidate ? 'text-red-600' : 'text-gray-500'}">${stock.is_capacity_candidate ? '通过' : '未通过'}</div>
-                                    <div class="mt-1 text-xs text-gray-400">评分 ${capacityScore.toFixed(1)}</div>
+                                    <div class="font-medium text-gray-800">${amountYi > 0 ? amountYi.toFixed(1) + '亿' : '-'}</div>
+                                    <div class="mt-1 text-xs text-gray-500">流通 ${circMv > 0 ? (circMv >= 100 ? circMv.toFixed(0) : circMv.toFixed(1)) + '亿' : '-'}</div>
+                                    <div class="mt-1 text-xs ${stock.is_capacity_candidate ? 'text-red-600' : 'text-gray-400'}">${capacityLabel}</div>
                                 </div>
                                 <svg class="h-4 w-4 shrink-0 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -1073,6 +1081,47 @@
                             </div>
                         </td>
                     </tr>
+                `;
+            }).join('');
+
+            mobileList.innerHTML = filteredStocks.map((stock) => {
+                const change = Number(stock.change_pct || stock.change || stock.pct_change || 0);
+                const consecutive = Number(stock.consecutive_new_high_days || stock.consecutive_days || stock.days || 1);
+                const breakPct = getBreakPct(stock);
+                const sector = stock.sector || stock.industry || '-';
+                const code = getStockCode(stock);
+                const direction = getDirectionState(stock);
+                const directionRank = Number(stock.sector_rank || 0);
+                const amountYi = getAmountYi(stock);
+                const circMv = Number(stock.circ_mv || 0);
+                const capacityLabel = stock.is_capacity_candidate ? '容量通过' : '容量不足';
+                return `
+                    <button type="button" class="newhigh-stock-mobile-row w-full px-4 py-4 text-left" aria-label="查看 ${stock.name} 的判断详情" onclick="showStockDetail('${code}')">
+                        <div class="flex items-start justify-between gap-3">
+                            <div class="min-w-0">
+                                <div class="font-semibold text-gray-900">${stock.name}</div>
+                                <div class="mt-1 font-mono text-xs text-gray-500">${code || '-'}</div>
+                            </div>
+                            <div class="shrink-0 text-right">
+                                <div class="text-xs text-gray-500">今日</div>
+                                <div class="mt-1 font-bold ${change >= 0 ? 'text-stock-up' : 'text-stock-down'}">${change >= 0 ? '+' : ''}${change.toFixed(2)}%</div>
+                            </div>
+                        </div>
+                        <div class="mt-3 grid grid-cols-2 gap-4 text-xs">
+                            <div class="min-w-0">
+                                <div class="font-medium text-gray-800">${sector}</div>
+                                <div class="mt-1 text-gray-500">${directionRank ? `动量第${directionRank}` : '未进动量前排'} · ${direction.label}</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-medium text-gray-800">连续 ${consecutive} 天</div>
+                                <div class="mt-1 text-gray-500">突破 ${breakPct >= 0 ? '+' : ''}${breakPct.toFixed(2)}%</div>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex items-center justify-between gap-3 border-t border-gray-100 pt-3 text-xs text-gray-500">
+                            <span>成交 ${amountYi > 0 ? amountYi.toFixed(1) + '亿' : '-'} · 流通 ${circMv > 0 ? (circMv >= 100 ? circMv.toFixed(0) : circMv.toFixed(1)) + '亿' : '-'}</span>
+                            <span class="shrink-0 font-medium ${stock.is_capacity_candidate ? 'text-red-600' : 'text-gray-400'}">${capacityLabel}</span>
+                        </div>
+                    </button>
                 `;
             }).join('');
         }
@@ -1192,8 +1241,9 @@
                         </td>
                         <td class="px-4 py-3 text-right font-bold ${change >= 0 ? 'text-stock-up' : 'text-stock-down'}">${change >= 0 ? '+' : ''}${change.toFixed(2)}%</td>
                         <td class="px-4 py-3">
-                            <span class="${s.is_capacity_candidate ? 'text-red-600' : 'text-gray-500'} font-medium">${s.is_capacity_candidate ? '通过' : '未通过'}</span>
-                            <div class="mt-1 text-xs text-gray-400">评分 ${Number(s.capacity_proxy_score || 0).toFixed(1)}</div>
+                            <div class="font-medium text-gray-800">${getAmountYi(s) > 0 ? getAmountYi(s).toFixed(1) + '亿' : '-'}</div>
+                            <div class="mt-1 text-xs text-gray-500">流通 ${Number(s.circ_mv || 0) > 0 ? Number(s.circ_mv).toFixed(1) + '亿' : '-'}</div>
+                            <div class="mt-1 text-xs ${s.is_capacity_candidate ? 'text-red-600' : 'text-gray-400'}">${s.is_capacity_candidate ? '容量通过' : '容量不足'}</div>
                         </td>
                     </tr>
                 `;
@@ -1253,7 +1303,7 @@
             } else {
                 conclusion = `${sector}共振仍弱，当前只确认个股创新高，暂留观察名单。`;
             }
-            if (!stock.is_capacity_candidate) conclusion += ' 容量未通过，不列为重点跟踪。';
+            if (!stock.is_capacity_candidate) conclusion += ' 容量不足，先不列入重点跟踪。';
             return `市场${market}。${conclusion}`;
         }
 
@@ -1286,7 +1336,6 @@
             const change = Number(stock.change_pct || stock.change || stock.pct_change || 0);
             const amountYi = getAmountYi(stock);
             const turnoverRatio = getTurnoverRatio(stock);
-            const capacityScore = Number(stock.capacity_proxy_score || 0);
             const marketPhase = getMarketPhase(currentData?.market_stats || {});
             const directionRank = Number(stock.sector_rank || 0);
             const l1Value = direction.tier === 'climax_warning'
@@ -1302,7 +1351,7 @@
             document.getElementById('stockDetailCode').textContent = normalizedCode || '-';
             document.getElementById('stockDetailSector').textContent = stock.sector || stock.industry || '-';
             const capacityBadge = document.getElementById('stockDetailCapacityBadge');
-            capacityBadge.textContent = stock.is_capacity_candidate ? '容量优选' : '容量未通过';
+            capacityBadge.textContent = stock.is_capacity_candidate ? '容量通过' : '容量不足';
             capacityBadge.className = stock.is_capacity_candidate ? 'stock-state-badge is-confirmed' : 'stock-state-badge';
             document.getElementById('stockDetailConclusion').textContent = getDetailConclusion(stock);
             document.getElementById('stockDetailReasons').innerHTML = [
@@ -1325,7 +1374,7 @@
                 renderDetailMetric('成交额', `${amountYi.toFixed(2)} 亿`),
                 renderDetailMetric('换手率', `${turnoverRatio.toFixed(2)}%`),
                 renderDetailMetric('流通市值', `${Number(stock.circ_mv || 0).toFixed(2)} 亿`),
-                renderDetailMetric('容量评分', capacityScore.toFixed(1), stock.is_capacity_candidate ? 'text-red-600' : 'text-gray-600')
+                renderDetailMetric('容量判断', stock.is_capacity_candidate ? '通过' : '不足', stock.is_capacity_candidate ? 'text-red-600' : 'text-gray-600')
             ].join('');
             document.getElementById('stockEastmoneyLink').href = getEastmoneyStockUrl(normalizedCode);
             document.getElementById('copyStockCodeLabel').textContent = '复制代码';

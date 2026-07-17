@@ -282,6 +282,7 @@ main { padding-top: 1.5rem !important; }
 .opportunity-tab[aria-pressed="true"] span { color: var(--accent); }
 
 .stock-mobile-meta { display: none; }
+.newhigh-stock-mobile-list { display: none; }
 
 .stock-result-row {
     cursor: pointer;
@@ -607,6 +608,14 @@ table tbody tr { transition: background-color 120ms ease; }
     .stock-results-table td { font-size: 0.75rem; }
     .stock-results-table .stock-state-badge { padding: 0; background: transparent; }
     .stock-mobile-meta { display: block; font-size: 0.6875rem; }
+    .newhigh-stock-table-wrap { display: none; }
+    .newhigh-stock-mobile-list { display: block; }
+    .newhigh-stock-mobile-row { background: #fff; }
+    .newhigh-stock-mobile-row:hover { background: #fafafa; }
+    .newhigh-stock-mobile-row:focus-visible {
+        outline: 2px solid #ef4444;
+        outline-offset: -2px;
+    }
     .stock-detail-drawer {
         max-width: none !important;
         border-left: 0;

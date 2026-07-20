@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-07-17T16:56:50",
-  "latest_trade_date": "20260717",
+  "generated_at": "2026-07-20T17:11:07",
+  "latest_trade_date": "20260720",
   "success": true,
-  "degraded": false,
-  "degraded_reasons": [],
+  "degraded": true,
+  "degraded_reasons": [
+    "总耗时 23.7 分钟"
+  ],
   "market_close_complete": true
 }

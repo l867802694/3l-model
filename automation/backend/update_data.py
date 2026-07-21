@@ -4299,5 +4299,15 @@ def main():
             logout_baostock()
 
 
+def exit_cli(exit_code: int | None) -> None:
+    """Exit without waiting on AkShare's embedded JavaScript runtime threads."""
+    normalized_exit_code = int(exit_code or 0)
+    _sys.stdout.flush()
+    _sys.stderr.flush()
+    if using_akshare():
+        os._exit(normalized_exit_code)
+    raise SystemExit(normalized_exit_code)
+
+
 if __name__ == "__main__":
-    raise SystemExit(main())
+    exit_cli(main())

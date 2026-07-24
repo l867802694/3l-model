@@ -1,9 +1,9 @@
 {
   "trade_date": "20260724",
-  "generated_at": "2026-07-24T17:20:23+08:00",
+  "generated_at": "2026-07-24T18:51:46+08:00",
   "data_quality": {
     "version": 1,
-    "generated_at": "2026-07-24T17:20:23+08:00",
+    "generated_at": "2026-07-24T18:51:46+08:00",
     "market_close_complete": true,
     "snapshot_status": "complete_close",
     "intraday_requested": false,
@@ -154,8 +154,8 @@
     "price_volume_status": "缩量下跌",
     "style_status": "风格均衡",
     "headline": "指数个股同步走弱，观望",
-    "headline_summary": "当日偏弱；上证指数-1.61%，两市成交额较昨日-12.05%；上涨 10 家，下跌 73 家。",
-    "analysis_summary": "上证指数-1.61%，沪深两市成交额较昨日-12.05%，成交量较昨日-9.42%，属于缩量下跌。主板与成长指数差异不大，暂未形成明显风格偏向。 当前动量最强方向是中药。指数与个股方向基本一致。全市场上涨 10 家、下跌 73 家；250日新高 6 家、新低 160 家。",
+    "headline_summary": "当日偏弱；上证指数-1.61%，两市成交额较昨日-12.05%；上涨 494 家，下跌 4476 家。",
+    "analysis_summary": "上证指数-1.61%，沪深两市成交额较昨日-12.05%，成交量较昨日-9.42%，属于缩量下跌。主板与成长指数差异不大，暂未形成明显风格偏向。 当前动量最强方向是中药。指数与个股方向基本一致。全市场上涨 494 家、下跌 4476 家；250日新高 6 家、新低 160 家。",
     "watch_text": "关注量能能否收缩、成长指数能否止跌，以及新高家数能否重新扩散。",
     "total_market": {
       "amount": 1917489466655.0,
@@ -164,9 +164,9 @@
       "volume_change_pct": -9.42,
       "amount_vs_5d_pct": -26.69,
       "volume_vs_5d_pct": -22.5,
-      "advance_count": 10,
-      "decline_count": 73,
-      "flat_count": 4907,
+      "advance_count": 494,
+      "decline_count": 4476,
+      "flat_count": 20,
       "stock_count": 4990,
       "expected_stock_count": 4994,
       "stock_coverage_pct": 99.92,
@@ -571,11 +571,7 @@
           "is_capacity_candidate": true,
           "is_3l_candidate": true,
           "sector": "服装家纺",
-          "industry": "服装家纺",
-          "dfmc_industry": "纺织服饰-服装家纺-非运动服装",
-          "dfmc_industry_l2": "服装家纺",
-          "fund_ratio": 0.0,
-          "is_250d_high": false
+          "industry": "服装家纺"
         }
       ]
     },

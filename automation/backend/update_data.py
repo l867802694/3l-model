@@ -64,6 +64,7 @@ EASTMONEY_BOARD_CACHE_FILE = RAW_CACHE_ROOT / "eastmoney_board_industry_cache.js
 SHENWAN_CACHE_FILE = RAW_CACHE_ROOT / "shenwan_second_level_cache.json"
 CLASSIFICATION_SNAPSHOT_FILE = BACKEND_DIR / CLASSIFICATION_CONFIG["snapshot_file"]
 UPDATE_RUN_STATUS_FILE = RAW_CACHE_ROOT / "update_run_status.json"
+STOCK_UNIVERSE_CACHE_FILE = RAW_CACHE_ROOT / "akshare_stock_universe.json"
 SITE_STATUS_FILE = DATA_DIR / "site_status.json"
 ENV_FILE = BACKEND_DIR / ".env"
 def load_env_file() -> None:
@@ -1455,10 +1456,93 @@ def append_akshare_stock_rows(stocks_by_code, rows, code_col, name_col, date_col
         }
 
 
+def load_akshare_stock_universe_cache(
+    cache_file: Path = STOCK_UNIVERSE_CACHE_FILE,
+) -> dict:
+    if not cache_file.exists():
+        return {}
+    try:
+        payload = json.loads(cache_file.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+    cached_stocks = {}
+    for stock in payload.get("stocks", []):
+        raw_code = str(stock.get("code", "")).strip()
+        code = (
+            raw_code
+            if re.fullmatch(r"(?:sh|sz|bj)\.\d{6}", raw_code)
+            else market_code_from_plain(raw_code)
+        )
+        list_date = normalize_akshare_listing_date(stock.get("list_date"))
+        name = str(stock.get("name", "")).strip()
+        if not code or not list_date or not name:
+            continue
+        cached_stocks[code] = {
+            "code": code,
+            "name": name,
+            "list_date": list_date,
+            "industry": "其他",
+        }
+    return cached_stocks
+
+
+def save_akshare_stock_universe_cache(
+    stocks_by_code: dict,
+    cache_file: Path = STOCK_UNIVERSE_CACHE_FILE,
+) -> None:
+    stocks = [
+        {
+            "code": stock["code"],
+            "name": stock["name"],
+            "list_date": stock["list_date"],
+        }
+        for stock in sorted(stocks_by_code.values(), key=lambda item: item["code"])
+    ]
+    write_json_atomic(
+        cache_file,
+        {
+            "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+            "stocks": stocks,
+        },
+    )
+
+
+def recover_akshare_stock_universe(
+    stocks_by_code: dict,
+    failed_sources: list[str],
+    cache_file: Path = STOCK_UNIVERSE_CACHE_FILE,
+) -> bool:
+    cached_stocks = load_akshare_stock_universe_cache(cache_file)
+    unexpectedly_incomplete = (
+        cached_stocks
+        and len(stocks_by_code) < len(cached_stocks) * 0.9
+    )
+    if not failed_sources and not unexpectedly_incomplete:
+        save_akshare_stock_universe_cache(stocks_by_code, cache_file)
+        return False
+
+    if not cached_stocks:
+        failed_text = "、".join(failed_sources) or "股票列表数量异常"
+        raise RuntimeError(
+            f"{failed_text}，且没有完整股票池缓存；拒绝生成残缺市场数据"
+        )
+
+    live_count = len(stocks_by_code)
+    for code, stock in cached_stocks.items():
+        stocks_by_code.setdefault(code, stock)
+    reason = "、".join(failed_sources) or "实时股票列表数量异常"
+    print(
+        f"  ⚠️ {reason}，已用完整股票池缓存补齐 "
+        f"{len(stocks_by_code) - live_count}只"
+    )
+    return True
+
+
 def load_akshare_stock_universe(trade_date: str, stock_limit: int | None = None):
     print("  📋 加载股票基础信息 (AkShare)...")
     current_date = datetime.strptime(trade_date, "%Y%m%d")
-    name_map = load_akshare_stock_name_map()
+    name_map = {}
     stocks_by_code = {}
 
     exchange_sources = (
@@ -1471,12 +1555,16 @@ def load_akshare_stock_universe(trade_date: str, stock_limit: int | None = None)
             ("北交所", ak.stock_info_bj_name_code, "证券代码", "证券简称", "上市日期"),
         )
 
+    failed_sources = []
     for label, loader, code_col, name_col, date_col in exchange_sources:
         try:
             rows = call_akshare(loader, context=f"{label}股票列表")
             append_akshare_stock_rows(stocks_by_code, rows, code_col, name_col, date_col, name_map)
         except Exception as exc:
-            print(f"  ⚠️ {label} 股票列表获取失败，跳过该交易所: {exc}")
+            failed_sources.append(label)
+            print(f"  ⚠️ {label} 股票列表获取失败: {exc}")
+
+    recover_akshare_stock_universe(stocks_by_code, failed_sources)
 
     stocks = []
     for stock in stocks_by_code.values():
@@ -2841,6 +2929,7 @@ def prepare_market_context(
     workers: int,
     stock_limit: int | None = None,
     prefer_bulk_latest: bool = False,
+    refresh_end_date: bool | None = None,
 ):
     stocks, classification, classification_metadata = load_stock_universe(
         trade_date, stock_limit
@@ -2848,20 +2937,25 @@ def prepare_market_context(
     full_start_date = (
         datetime.strptime(trade_date, "%Y%m%d") - timedelta(days=400)
     ).strftime("%Y%m%d")
+    should_refresh_end_date = (
+        trade_date == datetime.now().strftime("%Y%m%d")
+        if refresh_end_date is None
+        else refresh_end_date
+    )
     history_rows = get_stock_histories(
         stocks,
         full_start_date,
         trade_date,
         workers,
         prefer_bulk_latest=prefer_bulk_latest,
-        refresh_end_date=(trade_date == datetime.now().strftime("%Y%m%d")),
+        refresh_end_date=should_refresh_end_date,
     )
     index_rows = get_stock_histories(
         [{"code": code, "name": name} for code, name in INDEX_BENCHMARKS],
         full_start_date,
         trade_date,
         min(3, workers),
-        refresh_end_date=(trade_date == datetime.now().strftime("%Y%m%d")),
+        refresh_end_date=should_refresh_end_date,
     )
     institution_data = build_institution_proxy(history_rows, [stock["code"] for stock in stocks])
     return {
@@ -3229,16 +3323,20 @@ def build_market_overview(
     for code, rows in history_rows_by_code.items():
         if not stock_matches_market_scope(code, "all_market") or not rows:
             continue
-        current_row = next(
-            (
-                row for row in reversed(rows)
-                if normalize_date_str(str(row.get("date") or "")) == trade_date
-            ),
-            None,
+        current_row, previous_row = get_index_row(
+            history_rows_by_code,
+            code,
+            trade_date,
         )
         if not current_row or safe_float(current_row.get("close")) <= 0:
             continue
-        change = safe_float(current_row.get("pctChg"))
+        current_close = safe_float(current_row.get("close"))
+        previous_close = safe_float((previous_row or {}).get("close"))
+        change = (
+            percent_change(current_close, previous_close)
+            if previous_close > 0
+            else safe_float(current_row.get("pctChg"))
+        )
         if change > 0.001:
             advance_count += 1
         elif change < -0.001:
@@ -4206,6 +4304,10 @@ def main():
                         args.workers,
                         args.stock_limit,
                         prefer_bulk_latest=(
+                            automatic_latest_run
+                            and date == datetime.now().strftime("%Y%m%d")
+                        ),
+                        refresh_end_date=(
                             automatic_latest_run
                             and date == datetime.now().strftime("%Y%m%d")
                         ),

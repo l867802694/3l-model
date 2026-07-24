@@ -154,54 +154,54 @@
     "price_volume_status": "缩量上涨",
     "style_status": "主板占优",
     "headline": "指数个股震荡分化，观望",
-    "headline_summary": "当日震荡；上证指数+0.25%，两市成交额较昨日-17.32%；上涨 59 家，下跌 25 家。",
-    "analysis_summary": "上证指数+0.25%，沪深两市成交额较昨日-17.32%，成交量较昨日-8.47%，属于缩量上涨。创业板和科创50弱于上证，成长方向承压更重。 当前动量最强方向是中药。指数与个股方向基本一致。全市场上涨 59 家、下跌 25 家；250日新高 1 家、新低 16 家。",
+    "headline_summary": "当日震荡；上证指数+0.25%，两市成交额较昨日-17.32%；上涨 3812 家，下跌 1126 家。",
+    "analysis_summary": "上证指数+0.25%，沪深两市成交额较昨日-17.32%，成交量较昨日-8.47%，属于缩量上涨。创业板和科创50弱于上证，成长方向承压更重。 当前动量最强方向是中药。指数与个股方向基本一致。全市场上涨 3812 家、下跌 1126 家；250日新高 1 家、新低 16 家。",
     "watch_text": "关注三大指数能否形成同向、成交额是否放大，以及新高新低能否转强。",
     "total_market": {
-      "amount": 2180217239956.0,
-      "volume": 115786348058.0,
+      "amount": 2180209564555,
+      "volume": 115785333228,
       "amount_change_pct": -17.32,
       "volume_change_pct": -8.47,
       "amount_vs_5d_pct": -17.94,
       "volume_vs_5d_pct": -14.49,
-      "advance_count": 59,
-      "decline_count": 25,
-      "flat_count": 4908,
-      "stock_count": 4992,
-      "expected_stock_count": 4995,
+      "advance_count": 3812,
+      "decline_count": 1126,
+      "flat_count": 53,
+      "stock_count": 4991,
+      "expected_stock_count": 4994,
       "stock_coverage_pct": 99.94,
       "previous_stock_coverage_pct": 99.94,
       "comparison_coverage_valid": true,
       "history": [
         {
           "trade_date": "20260717",
-          "amount": 2636725559458.0,
-          "volume": 137156862749.0,
-          "stock_count": 4989
+          "amount": 2636717058681,
+          "volume": 137155838554,
+          "stock_count": 4988
         },
         {
           "trade_date": "20260720",
-          "amount": 2684935448927.0,
-          "volume": 144286816186.0,
-          "stock_count": 4992
+          "amount": 2684922135360,
+          "volume": 144285140851,
+          "stock_count": 4991
         },
         {
           "trade_date": "20260721",
-          "amount": 2938927274851.0,
-          "volume": 152902336831.0,
-          "stock_count": 4992
+          "amount": 2938916549446,
+          "volume": 152900926696,
+          "stock_count": 4991
         },
         {
           "trade_date": "20260722",
-          "amount": 2636868844679.0,
-          "volume": 126507213043.0,
-          "stock_count": 4992
+          "amount": 2636856970154,
+          "volume": 126505634493,
+          "stock_count": 4991
         },
         {
           "trade_date": "20260723",
-          "amount": 2180217239956.0,
-          "volume": 115786348058.0,
-          "stock_count": 4992
+          "amount": 2180209564555,
+          "volume": 115785333228,
+          "stock_count": 4991
         }
       ]
     },
@@ -214,8 +214,8 @@
         "data_date": "20260723",
         "close": 3876.78,
         "daily_change_pct": 0.25,
-        "amount": 1020028330876.0,
-        "volume": 55165474954.0,
+        "amount": 1020020655475,
+        "volume": 55164460124,
         "amount_change_pct": -18.47,
         "volume_change_pct": -8.62,
         "amount_vs_5d_pct": -18.81,
@@ -223,33 +223,33 @@
         "history": [
           {
             "trade_date": "20260717",
-            "amount": 1238725130616.0,
-            "volume": 63574049183.0,
-            "stock_count": 2224
+            "amount": 1238716629839,
+            "volume": 63573024988,
+            "stock_count": 2223
           },
           {
             "trade_date": "20260720",
-            "amount": 1287063415608.0,
-            "volume": 69515581395.0,
-            "stock_count": 2225
+            "amount": 1287050102041,
+            "volume": 69513906060,
+            "stock_count": 2224
           },
           {
             "trade_date": "20260721",
-            "amount": 1387589641550.0,
-            "volume": 71986101494.0,
-            "stock_count": 2225
+            "amount": 1387578916145,
+            "volume": 71984691359,
+            "stock_count": 2224
           },
           {
             "trade_date": "20260722",
-            "amount": 1251062599841.0,
-            "volume": 60371445431.0,
-            "stock_count": 2225
+            "amount": 1251050725316,
+            "volume": 60369866881,
+            "stock_count": 2224
           },
           {
             "trade_date": "20260723",
-            "amount": 1020028330876.0,
-            "volume": 55165474954.0,
-            "stock_count": 2226
+            "amount": 1020020655475,
+            "volume": 55164460124,
+            "stock_count": 2225
           }
         ]
       },
@@ -261,8 +261,8 @@
         "data_date": "20260723",
         "close": 3575.52,
         "daily_change_pct": 0.25,
-        "amount": 513693511415.0,
-        "volume": 18207656603.0,
+        "amount": 513693511415,
+        "volume": 18207656603,
         "amount_change_pct": -19.4,
         "volume_change_pct": -11.7,
         "amount_vs_5d_pct": -22.28,
@@ -270,32 +270,32 @@
         "history": [
           {
             "trade_date": "20260717",
-            "amount": 681184098175.0,
-            "volume": 23100812833.0,
+            "amount": 681184098175,
+            "volume": 23100812833,
             "stock_count": 1351
           },
           {
             "trade_date": "20260720",
-            "amount": 669559037844.0,
-            "volume": 23765187394.0,
+            "amount": 669559037844,
+            "volume": 23765187394,
             "stock_count": 1351
           },
           {
             "trade_date": "20260721",
-            "amount": 740674553998.0,
-            "volume": 25969070212.0,
+            "amount": 740674553998,
+            "volume": 25969070212,
             "stock_count": 1351
           },
           {
             "trade_date": "20260722",
-            "amount": 637331495751.0,
-            "volume": 20619859349.0,
+            "amount": 637331495751,
+            "volume": 20619859349,
             "stock_count": 1352
           },
           {
             "trade_date": "20260723",
-            "amount": 513693511415.0,
-            "volume": 18207656603.0,
+            "amount": 513693511415,
+            "volume": 18207656603,
             "stock_count": 1351
           }
         ]
@@ -308,41 +308,41 @@
         "data_date": "20260723",
         "close": 1789.69,
         "daily_change_pct": -3.78,
-        "amount": 315197106601.0,
-        "volume": 4574167067.0,
+        "amount": 315197106601,
+        "volume": 4574167067,
         "amount_change_pct": -27.87,
-        "volume_change_pct": -23.0,
+        "volume_change_pct": -23,
         "amount_vs_5d_pct": -29.17,
         "volume_vs_5d_pct": -29.21,
         "history": [
           {
             "trade_date": "20260717",
-            "amount": 453053986013.0,
-            "volume": 6558175179.0,
+            "amount": 453053986013,
+            "volume": 6558175179,
             "stock_count": 594
           },
           {
             "trade_date": "20260720",
-            "amount": 443185963720.0,
-            "volume": 6973843676.0,
+            "amount": 443185963720,
+            "volume": 6973843676,
             "stock_count": 595
           },
           {
             "trade_date": "20260721",
-            "amount": 484253632537.0,
-            "volume": 7294518113.0,
+            "amount": 484253632537,
+            "volume": 7294518113,
             "stock_count": 595
           },
           {
             "trade_date": "20260722",
-            "amount": 437006799692.0,
-            "volume": 5940407097.0,
+            "amount": 437006799692,
+            "volume": 5940407097,
             "stock_count": 595
           },
           {
             "trade_date": "20260723",
-            "amount": 315197106601.0,
-            "volume": 4574167067.0,
+            "amount": 315197106601,
+            "volume": 4574167067,
             "stock_count": 596
           }
         ]

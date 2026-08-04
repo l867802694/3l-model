@@ -1,11 +1,8 @@
 {
-  "generated_at": "2026-08-03T17:22:31",
-  "latest_trade_date": "20260803",
+  "generated_at": "2026-08-04T16:48:55",
+  "latest_trade_date": "20260804",
   "success": true,
-  "degraded": true,
-  "degraded_reasons": [
-    "批量行情回退 100.0%",
-    "总耗时 34.3 分钟"
-  ],
+  "degraded": false,
+  "degraded_reasons": [],
   "market_close_complete": true
 }

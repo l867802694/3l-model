@@ -18,10 +18,26 @@ CLASSIFICATION_SNAPSHOT = json.loads(
     (BACKEND_DIR / CLASSIFICATION_CONFIG["snapshot_file"]).read_text(encoding="utf-8")
 )
 
+
+def load_known_classification_snapshots() -> dict[str, dict[str, str]]:
+    snapshots = {}
+    for path in sorted((BACKEND_DIR / "classification").glob("*.json")):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        version = str(payload.get("classification_version") or "")
+        as_of = str(payload.get("classification_as_of") or "")
+        mapping_hash = str(payload.get("mapping_sha256") or "")
+        if version and as_of and mapping_hash:
+            snapshots[version] = {
+                "as_of": as_of,
+                "mapping_hash": mapping_hash,
+            }
+    return snapshots
+
 EXPECTED_CLASSIFICATION = str(CLASSIFICATION_CONFIG["name"])
 EXPECTED_CLASSIFICATION_VERSION = str(CLASSIFICATION_CONFIG["version"])
 EXPECTED_CLASSIFICATION_AS_OF = str(CLASSIFICATION_CONFIG["as_of"])
 EXPECTED_CLASSIFICATION_HASH = str(CLASSIFICATION_SNAPSHOT["mapping_sha256"])
+KNOWN_CLASSIFICATION_SNAPSHOTS = load_known_classification_snapshots()
 EXPECTED_MOMENTUM_MODEL_VERSION = str(MODEL_CONFIG["model_version"])
 EXPECTED_STOCK_DETAIL_METRICS_VERSION = 1
 EXPECTED_MAINLINE_SCORE_MIN = float(MOMENTUM_CONFIG["mainline_score_min"])
@@ -49,6 +65,7 @@ def validate_payloads(
     newhigh: dict,
     *,
     require_data_quality: bool = False,
+    require_current_classification: bool = True,
 ) -> dict:
     trade_date = str(momentum.get("trade_date") or "")
     if len(trade_date) != 8 or not trade_date.isdigit():
@@ -59,12 +76,44 @@ def validate_payloads(
         raise ValueError("动量数据不是东方财富行业板块分类")
     if newhigh.get("classification") != EXPECTED_CLASSIFICATION:
         raise ValueError("一年新高数据不是东方财富行业板块分类")
+
+    classification_fields = {
+        "classification_version": "分类版本",
+        "classification_as_of": "分类日期",
+        "classification_mapping_hash": "分类映射指纹",
+    }
+    for field, label in classification_fields.items():
+        if momentum.get(field) != newhigh.get(field):
+            raise ValueError(f"动量和一年新高的{label}不一致")
+
+    classification_version = str(momentum.get("classification_version") or "")
+    if require_current_classification:
+        expected_classification = {
+            "version": EXPECTED_CLASSIFICATION_VERSION,
+            "as_of": EXPECTED_CLASSIFICATION_AS_OF,
+            "mapping_hash": EXPECTED_CLASSIFICATION_HASH,
+        }
+    else:
+        known_snapshot = KNOWN_CLASSIFICATION_SNAPSHOTS.get(classification_version)
+        if known_snapshot is None:
+            raise ValueError(f"分类版本未登记: {classification_version or '空'}")
+        expected_classification = {
+            "version": classification_version,
+            **known_snapshot,
+        }
+
     for label, payload in (("动量", momentum), ("一年新高", newhigh)):
-        if payload.get("classification_version") != EXPECTED_CLASSIFICATION_VERSION:
+        if (
+            payload.get("classification_version")
+            != expected_classification["version"]
+        ):
             raise ValueError(f"{label}数据分类版本不一致")
-        if payload.get("classification_as_of") != EXPECTED_CLASSIFICATION_AS_OF:
+        if payload.get("classification_as_of") != expected_classification["as_of"]:
             raise ValueError(f"{label}数据分类日期不一致")
-        if payload.get("classification_mapping_hash") != EXPECTED_CLASSIFICATION_HASH:
+        if (
+            payload.get("classification_mapping_hash")
+            != expected_classification["mapping_hash"]
+        ):
             raise ValueError(f"{label}数据分类映射指纹不一致")
         if int(payload.get("classification_fallback_count") or 0) > 0:
             raise ValueError(f"{label}数据仍有东方财富分类回退")
@@ -342,6 +391,7 @@ def validate_all_data(data_dir: Path, recent_window: int = 0) -> dict:
                 load_json(data_dir / trade_date / "momentum.json"),
                 load_json(data_dir / trade_date / "newhigh.json"),
                 require_data_quality=(trade_date == latest_date),
+                require_current_classification=(trade_date == latest_date),
             )
         except (ValueError, json.JSONDecodeError) as exc:
             raise ValueError(f"{trade_date}: {exc}") from exc

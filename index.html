@@ -389,7 +389,6 @@
         let currentOpportunityBucket = 'mainline';
         let currentMarketIsCautious = false;
         const pageParams = new URLSearchParams(window.location.search);
-        let requestedDate = pageParams.get('date') || '';
         let requestedSectorName = pageParams.get('sector') || '';
 
         function formatDate(dateStr) {
@@ -562,7 +561,8 @@
                 select.appendChild(option);
             });
 
-            const initialDate = requestedDate && availableDates.includes(requestedDate) ? requestedDate : availableDates[0];
+            // 每次打开页面都从最新可用交易日开始，避免旧链接中的 date 参数锁定历史日期。
+            const initialDate = availableDates[0];
             currentDate = initialDate;
             select.value = currentDate;
             select.disabled = false;
@@ -572,7 +572,6 @@
         function onDateChange(date) {
             if (!date || date === currentDate) return;
             currentDate = date;
-            requestedDate = date;
             loadDashboard();
         }
 

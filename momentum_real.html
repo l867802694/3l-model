@@ -356,7 +356,6 @@
         let currentModalSector = null;
         const pageParams = new URLSearchParams(window.location.search);
         let requestedSectorName = pageParams.get('sector') || '';
-        let requestedDate = pageParams.get('date') || '';
 
         /**
          * ============================================
@@ -461,7 +460,8 @@
             });
             
             // 默认选中最新有数据的日期
-            const initialDate = requestedDate && availableDates.includes(requestedDate) ? requestedDate : availableDates[0];
+            // 每次打开页面都从最新可用交易日开始，避免旧链接中的 date 参数锁定历史日期。
+            const initialDate = availableDates[0];
             select.value = initialDate;
             currentDate = initialDate;
             

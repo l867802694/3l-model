@@ -16,6 +16,7 @@ import bisect
 import hashlib
 import json
 import math
+import multiprocessing
 import os
 import re
 import signal
@@ -117,6 +118,13 @@ STOCK_DETAIL_METRICS_VERSION = 1
 CLASSIFICATION_NAME = str(CLASSIFICATION_CONFIG["name"])
 CLASSIFICATION_VERSION = str(CLASSIFICATION_CONFIG["version"])
 CLASSIFICATION_AS_OF = str(CLASSIFICATION_CONFIG["as_of"])
+AUTO_EXTEND_NEW_STOCK_CLASSIFICATION = os.environ.get(
+    "AUTO_EXTEND_NEW_STOCK_CLASSIFICATION",
+    "1",
+).strip().lower() not in {"0", "false", "no", "off"}
+AUTO_CLASSIFICATION_MAX_LIST_DAYS = int(
+    os.environ.get("AUTO_CLASSIFICATION_MAX_LIST_DAYS", "30")
+)
 MOMENTUM_SCORE_FORMULA = str(MOMENTUM_CONFIG["score_formula"])
 INSTITUTION_MIN_SCORE = float(os.environ.get("INSTITUTION_MIN_SCORE", "2.5"))
 HISTORY_FIELDS = (
@@ -177,6 +185,12 @@ AKSHARE_MAX_RETRIES = max(1, int(os.environ.get("AKSHARE_MAX_RETRIES", "3")))
 AKSHARE_RETRY_SECONDS = max(1, int(os.environ.get("AKSHARE_RETRY_SECONDS", "5")))
 AKSHARE_CALL_TIMEOUT_SECONDS = max(
     0, int(os.environ.get("AKSHARE_CALL_TIMEOUT_SECONDS", "60"))
+)
+AKSHARE_BULK_HTTP_TIMEOUT_SECONDS = max(
+    1, int(os.environ.get("AKSHARE_BULK_HTTP_TIMEOUT_SECONDS", "15"))
+)
+AKSHARE_BULK_SOURCE_TIMEOUT_SECONDS = max(
+    30, int(os.environ.get("AKSHARE_BULK_SOURCE_TIMEOUT_SECONDS", "90"))
 )
 AKSHARE_INCLUDE_BJ = os.environ.get("AKSHARE_INCLUDE_BJ", "0").strip().lower() in {
     "1",
@@ -347,6 +361,106 @@ def write_json_atomic(path: Path, data) -> None:
     finally:
         if temp_path and temp_path.exists():
             temp_path.unlink()
+
+
+def build_extended_classification_snapshot(
+    snapshot: dict,
+    additions: dict[str, dict],
+    trade_date: str,
+    revision_number: int,
+) -> dict:
+    mapping = dict(snapshot["mapping"])
+    for code, item in additions.items():
+        mapping[str(code).zfill(6)] = normalize_industry_name(item["industry"])
+
+    version = f"eastmoney-industry-{trade_date}-r{revision_number}"
+    addition_summary = "、".join(
+        f"{code} {item.get('name') or ''}（{normalize_industry_name(item['industry'])}）"
+        for code, item in sorted(additions.items())
+    )
+    source = str(snapshot.get("source") or "eastmoney_push2_industry_boards")
+    if "auto_new_stock_extension" not in source:
+        source = f"{source}+auto_new_stock_extension"
+
+    return {
+        **snapshot,
+        "classification_version": version,
+        "classification_as_of": trade_date,
+        "source": source,
+        "revision": (
+            "自动补入已满足模型20日纳入窗口、且由东方财富分类确认的新股："
+            f"{addition_summary}"
+        ),
+        "stock_count": len(mapping),
+        "mapping_sha256": calculate_classification_mapping_hash(mapping),
+        "mapping": mapping,
+    }
+
+
+def activate_classification_snapshot(payload: dict, snapshot_path: Path) -> None:
+    global CLASSIFICATION_CONFIG
+    global CLASSIFICATION_SNAPSHOT_FILE
+    global CLASSIFICATION_VERSION
+    global CLASSIFICATION_AS_OF
+
+    relative_path = snapshot_path.relative_to(BACKEND_DIR).as_posix()
+    config = json.loads(MODEL_CONFIG_PATH.read_text(encoding="utf-8"))
+    config["classification"] = {
+        **config["classification"],
+        "version": payload["classification_version"],
+        "as_of": payload["classification_as_of"],
+        "snapshot_file": relative_path,
+    }
+    write_json_atomic(MODEL_CONFIG_PATH, config)
+
+    MODEL_CONFIG["classification"] = config["classification"]
+    CLASSIFICATION_CONFIG = MODEL_CONFIG["classification"]
+    CLASSIFICATION_SNAPSHOT_FILE = snapshot_path
+    CLASSIFICATION_VERSION = str(payload["classification_version"])
+    CLASSIFICATION_AS_OF = str(payload["classification_as_of"])
+    load_frozen_classification_snapshot.cache_clear()
+
+
+def persist_new_stock_classification_snapshot(
+    snapshot: dict,
+    additions: dict[str, dict],
+    trade_date: str,
+) -> dict:
+    classification_dir = BACKEND_DIR / "classification"
+    existing_revisions = []
+    for path in classification_dir.glob(f"eastmoney_industry_{trade_date}_r*.json"):
+        match = re.search(r"_r(\d+)\.json$", path.name)
+        if not match:
+            continue
+        revision_number = int(match.group(1))
+        existing_revisions.append(revision_number)
+        try:
+            existing_payload = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        candidate = build_extended_classification_snapshot(
+            snapshot,
+            additions,
+            trade_date,
+            revision_number,
+        )
+        if existing_payload.get("mapping_sha256") == candidate["mapping_sha256"]:
+            activate_classification_snapshot(existing_payload, path)
+            return existing_payload
+
+    revision_number = max(existing_revisions, default=0) + 1
+    payload = build_extended_classification_snapshot(
+        snapshot,
+        additions,
+        trade_date,
+        revision_number,
+    )
+    snapshot_path = (
+        classification_dir / f"eastmoney_industry_{trade_date}_r{revision_number}.json"
+    )
+    write_json_atomic(snapshot_path, payload)
+    activate_classification_snapshot(payload, snapshot_path)
+    return payload
 
 
 def save_data(date_str: str, data_type: str, data):
@@ -668,6 +782,78 @@ def call_akshare(func, *args, context: str = "", **kwargs):
             )
             time.sleep(AKSHARE_RETRY_SECONDS)
     raise last_exc
+
+
+@contextmanager
+def enforce_requests_timeout(timeout_seconds: int):
+    original_request = requests.sessions.Session.request
+
+    def request_with_timeout(session, method, url, **kwargs):
+        if kwargs.get("timeout") is None:
+            kwargs["timeout"] = timeout_seconds
+        return original_request(session, method, url, **kwargs)
+
+    requests.sessions.Session.request = request_with_timeout
+    try:
+        yield
+    finally:
+        requests.sessions.Session.request = original_request
+
+
+def fetch_akshare_bulk_records_worker(source_name: str, sender) -> None:
+    try:
+        source = getattr(ak, source_name)
+        with enforce_requests_timeout(AKSHARE_BULK_HTTP_TIMEOUT_SECONDS):
+            frame = source()
+        sender.send(("ok", frame.to_dict("records")))
+    except BaseException as exc:
+        sender.send(("error", f"{type(exc).__name__}: {exc}"))
+    finally:
+        sender.close()
+
+
+def fetch_akshare_bulk_records_isolated(
+    source_name: str,
+    label: str,
+) -> list[dict]:
+    last_error = None
+    for attempt in range(1, AKSHARE_MAX_RETRIES + 1):
+        context = multiprocessing.get_context("spawn")
+        receiver, sender = context.Pipe(duplex=False)
+        process = context.Process(
+            target=fetch_akshare_bulk_records_worker,
+            args=(source_name, sender),
+        )
+        process.start()
+        sender.close()
+        try:
+            if not receiver.poll(AKSHARE_BULK_SOURCE_TIMEOUT_SECONDS):
+                raise TimeoutError(
+                    f"AkShare {label} 超过 "
+                    f"{AKSHARE_BULK_SOURCE_TIMEOUT_SECONDS} 秒未返回"
+                )
+            status, payload = receiver.recv()
+            if status != "ok":
+                raise RuntimeError(payload)
+            return payload
+        except (EOFError, OSError, RuntimeError, TimeoutError) as exc:
+            last_error = exc
+            if attempt < AKSHARE_MAX_RETRIES:
+                print(
+                    f"  ⚠️ AkShare {label} 失败，第 "
+                    f"{attempt}/{AKSHARE_MAX_RETRIES} 次重试前等待 "
+                    f"{AKSHARE_RETRY_SECONDS} 秒: {exc}"
+                )
+                time.sleep(AKSHARE_RETRY_SECONDS)
+        finally:
+            receiver.close()
+            if process.is_alive():
+                process.terminate()
+            process.join(timeout=5)
+            if process.is_alive():
+                process.kill()
+                process.join(timeout=5)
+    raise RuntimeError(f"AkShare {label} 获取失败: {last_error}")
 
 
 def login_baostock(max_retries: int = BAOSTOCK_LOGIN_MAX_RETRIES, context: str = ""):
@@ -1290,6 +1476,7 @@ def fetch_eastmoney_industry(task):
 def resolve_live_eastmoney_industry_map(stocks):
     cache = load_industry_cache()
     industry_map = {}
+    source_map = {}
     fallback_stats = {
         "eastmoney_board": 0,
         "eastmoney_quote": 0,
@@ -1305,25 +1492,27 @@ def resolve_live_eastmoney_industry_map(stocks):
             info = board_mapping.get(stock_code)
             if info and info.get("industry"):
                 industry_map[stock["code"]] = info["industry"]
+                source_map[stock["code"]] = "eastmoney_board"
                 fallback_stats["eastmoney_board"] += 1
                 continue
 
             cached = cache.get(stock["code"])
             if cached and cached.get("industry"):
                 industry_map[stock["code"]] = normalize_industry_name(cached["industry"])
-                fallback_stats[cached.get("source", "eastmoney_quote")] = (
-                    fallback_stats.get(cached.get("source", "eastmoney_quote"), 0) + 1
-                )
+                source = cached.get("source", "eastmoney_quote")
+                source_map[stock["code"]] = source
+                fallback_stats[source] = fallback_stats.get(source, 0) + 1
                 continue
 
             fallback_stats["unmapped"] += 1
 
         if fallback_stats["eastmoney_board"]:
-            return industry_map, fallback_stats
+            return industry_map, fallback_stats, source_map
     except Exception as exc:
         print(f"  ⚠️ 东财行业板块映射失败，回退到个股页面分类: {exc}")
 
     industry_map = {}
+    source_map = {}
     fallback_stats = {"eastmoney_quote": 0, "legacy_data": 0, "unmapped": 0}
     tasks = []
 
@@ -1331,9 +1520,9 @@ def resolve_live_eastmoney_industry_map(stocks):
         cached = cache.get(stock["code"])
         if cached and cached.get("industry"):
             industry_map[stock["code"]] = normalize_industry_name(cached["industry"])
-            fallback_stats[cached.get("source", "eastmoney_quote")] = (
-                fallback_stats.get(cached.get("source", "eastmoney_quote"), 0) + 1
-            )
+            source = cached.get("source", "eastmoney_quote")
+            source_map[stock["code"]] = source
+            fallback_stats[source] = fallback_stats.get(source, 0) + 1
             continue
         tasks.append((stock["code"], stock["name"]))
 
@@ -1349,20 +1538,25 @@ def resolve_live_eastmoney_industry_map(stocks):
                 cache[code] = info
                 if info.get("industry"):
                     industry_map[code] = normalize_industry_name(info["industry"])
-                fallback_stats[info.get("source", "unmapped")] = (
-                    fallback_stats.get(info.get("source", "unmapped"), 0) + 1
-                )
+                    source_map[code] = info.get("source", "unmapped")
+                source = info.get("source", "unmapped")
+                fallback_stats[source] = fallback_stats.get(source, 0) + 1
                 if idx % 200 == 0 or idx == len(tasks):
                     print(f"    已完成分类 {idx}/{len(tasks)}")
         save_industry_cache(cache)
 
-    return industry_map, fallback_stats
+    return industry_map, fallback_stats, source_map
 
 
-def resolve_eastmoney_industry_map(stocks):
+def resolve_eastmoney_industry_map(
+    stocks,
+    trade_date: str | None = None,
+    allow_snapshot_extension: bool = False,
+):
     snapshot = load_frozen_classification_snapshot()
     if not snapshot:
-        return resolve_live_eastmoney_industry_map(stocks)
+        industry_map, fallback_stats, _ = resolve_live_eastmoney_industry_map(stocks)
+        return industry_map, fallback_stats
 
     frozen_mapping = snapshot["mapping"]
     industry_map = {}
@@ -1381,6 +1575,7 @@ def resolve_eastmoney_industry_map(stocks):
         "legacy_data": 0,
         "unmapped": 0,
     }
+    fallback_sources = {}
     if missing_stocks:
         quote_cache = load_industry_cache()
         unresolved = []
@@ -1389,16 +1584,71 @@ def resolve_eastmoney_industry_map(stocks):
             industry = normalize_industry_name((cached or {}).get("industry"))
             if cached and industry != "其他":
                 industry_map[stock["code"]] = industry
-                fallback_stats["eastmoney_quote"] += 1
+                source = cached.get("source", "eastmoney_quote")
+                fallback_sources[stock["code"]] = source
+                fallback_stats[source] = fallback_stats.get(source, 0) + 1
             else:
                 unresolved.append(stock)
         missing_stocks = unresolved
 
     if missing_stocks:
-        live_map, live_stats = resolve_live_eastmoney_industry_map(missing_stocks)
+        live_map, live_stats, live_sources = resolve_live_eastmoney_industry_map(
+            missing_stocks
+        )
         industry_map.update(live_map)
+        fallback_sources.update(live_sources)
         for key, value in live_stats.items():
             fallback_stats[key] = fallback_stats.get(key, 0) + int(value or 0)
+
+    if (
+        AUTO_EXTEND_NEW_STOCK_CLASSIFICATION
+        and allow_snapshot_extension
+        and trade_date
+        and trade_date >= str(snapshot.get("classification_as_of") or "")
+        and missing_stocks
+    ):
+        trusted_sources = {"eastmoney_board", "eastmoney_quote"}
+        additions = {}
+        for stock in missing_stocks:
+            code = stock["code"]
+            industry = industry_map.get(code)
+            source = fallback_sources.get(code)
+            list_days = int(stock.get("list_days") or 0)
+            if (
+                not industry
+                or industry == "其他"
+                or source not in trusted_sources
+                or not 20 <= list_days <= AUTO_CLASSIFICATION_MAX_LIST_DAYS
+            ):
+                additions = {}
+                break
+            additions[plain_code(code)] = {
+                "name": stock.get("name", ""),
+                "industry": industry,
+                "source": source,
+            }
+
+        if additions and len(additions) == len(missing_stocks):
+            new_snapshot = persist_new_stock_classification_snapshot(
+                snapshot,
+                additions,
+                trade_date,
+            )
+            for item in additions.values():
+                source = item["source"]
+                fallback_stats[source] = max(
+                    0,
+                    int(fallback_stats.get(source, 0)) - 1,
+                )
+            fallback_stats["frozen_snapshot"] += len(additions)
+            print(
+                "  ✅ 已自动创建新股分类快照 "
+                f"{new_snapshot['classification_version']}："
+                + "、".join(
+                    f"{code} {item['name']}（{item['industry']}）"
+                    for code, item in sorted(additions.items())
+                )
+            )
 
     return industry_map, fallback_stats
 
@@ -1583,7 +1833,11 @@ def load_akshare_stock_universe(trade_date: str, stock_limit: int | None = None)
     if stock_limit:
         stocks = stocks[:stock_limit]
 
-    industry_map, fallback_stats = resolve_eastmoney_industry_map(stocks)
+    industry_map, fallback_stats = resolve_eastmoney_industry_map(
+        stocks,
+        trade_date=trade_date,
+        allow_snapshot_extension=stock_limit is None,
+    )
 
     for stock in stocks:
         stock["industry"] = industry_map.get(stock["code"], "其他")
@@ -1645,7 +1899,11 @@ def load_stock_universe(trade_date: str, stock_limit: int | None = None):
     if stock_limit:
         stocks = stocks[:stock_limit]
 
-    industry_map, fallback_stats = resolve_eastmoney_industry_map(stocks)
+    industry_map, fallback_stats = resolve_eastmoney_industry_map(
+        stocks,
+        trade_date=trade_date,
+        allow_snapshot_extension=stock_limit is None,
+    )
 
     for stock in stocks:
         stock["industry"] = industry_map.get(stock["code"], "其他")
@@ -1685,6 +1943,23 @@ def load_cached_history(code: str):
 def save_cached_history(code: str, rows):
     cache_file = history_cache_path(code)
     write_json_atomic(cache_file, rows)
+
+
+def can_reuse_post_close_history_cache(
+    code: str,
+    end_date: str,
+    now: datetime | None = None,
+) -> bool:
+    if not is_market_close_complete(end_date, now=now):
+        return False
+    cache_file = history_cache_path(code)
+    if not cache_file.exists():
+        return False
+    close_cutoff = datetime.strptime(end_date, "%Y%m%d").replace(
+        hour=MARKET_CLOSE_COMPLETE_HOUR,
+        minute=MARKET_CLOSE_COMPLETE_MINUTE,
+    )
+    return datetime.fromtimestamp(cache_file.stat().st_mtime) >= close_cutoff
 
 
 def subset_history(rows, start_date: str, end_date: str):
@@ -1788,19 +2063,19 @@ def convert_akshare_spot_records(records: list[dict], trade_date: str) -> dict[s
 
 def fetch_bulk_latest_stock_rows_akshare(trade_date: str) -> dict[str, dict]:
     try:
-        frame = call_akshare(
-            ak.stock_zh_a_spot,
-            context=f"{trade_date}新浪全市场快照",
-        )
-        BULK_RUN_METRICS["source"] = "sina"
-    except Exception as sina_exc:
-        print(f"  ⚠️ 新浪全市场快照失败，尝试东财快照: {sina_exc}")
-        frame = call_akshare(
-            ak.stock_zh_a_spot_em,
-            context=f"{trade_date}东财全市场快照",
+        records = fetch_akshare_bulk_records_isolated(
+            "stock_zh_a_spot_em",
+            f"{trade_date}东财全市场快照",
         )
         BULK_RUN_METRICS["source"] = "eastmoney"
-    return convert_akshare_spot_records(frame.to_dict("records"), trade_date)
+    except Exception as eastmoney_exc:
+        print(f"  ⚠️ 东财全市场快照失败，尝试新浪快照: {eastmoney_exc}")
+        records = fetch_akshare_bulk_records_isolated(
+            "stock_zh_a_spot",
+            f"{trade_date}新浪全市场快照",
+        )
+        BULK_RUN_METRICS["source"] = "sina"
+    return convert_akshare_spot_records(records, trade_date)
 
 
 def select_bulk_increment_tasks(tasks, previous_trade_date: str):
@@ -1957,6 +2232,11 @@ def fetch_history_akshare(task):
     return fetch_stock_history_akshare(task)
 
 
+def fetch_history_akshare_guarded(task):
+    with enforce_requests_timeout(AKSHARE_BULK_HTTP_TIMEOUT_SECONDS):
+        return fetch_history_akshare(task)
+
+
 def init_baostock_worker():
     login_baostock(context="worker")
     atexit.register(logout_baostock)
@@ -2042,7 +2322,7 @@ def run_history_tasks_akshare(tasks, histories, start_date: str, end_date: str, 
     for completed, task in enumerate(tasks, start=1):
         cached_rows = task[3] if len(task) > 3 else None
         try:
-            code, rows = fetch_history_akshare(task)
+            code, rows = fetch_history_akshare_guarded(task)
             process_history_result(
                 histories,
                 code,
@@ -2079,7 +2359,10 @@ def get_stock_histories(
                 and min(cached_dates) <= start_date
                 and max(cached_dates) >= end_date
             )
-            if cache_covers_range and not refresh_end_date:
+            if cache_covers_range and (
+                not refresh_end_date
+                or can_reuse_post_close_history_cache(code, end_date)
+            ):
                 histories[code] = subset_history(cached_rows, start_date, end_date)
                 continue
             if cached_dates and min(cached_dates) <= start_date:

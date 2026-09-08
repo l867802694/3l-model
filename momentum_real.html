@@ -172,18 +172,38 @@
                             <span id="heroActionPill" class="tag-chip bg-red-50 text-red-700">-</span>
                         </div>
                     </div>
-                    <div class="grid grid-cols-3 divide-x divide-gray-200 border-t lg:border-t-0 pt-4 lg:pt-0">
-                        <div class="px-3 first:pl-0">
-                            <p class="focus-label">环境</p>
-                            <p id="marketStatus" class="focus-value">-</p>
+                    <div class="border-t lg:border-t-0 pt-4 lg:pt-0">
+                        <div class="grid grid-cols-3 divide-x divide-gray-200">
+                            <div class="px-3 first:pl-0">
+                                <p class="focus-label">环境</p>
+                                <p id="marketStatus" class="focus-value">-</p>
+                            </div>
+                            <div class="px-3">
+                                <p class="focus-label">最强方向</p>
+                                <p id="topSectorName" class="focus-value">-</p>
+                            </div>
+                            <div class="px-3">
+                                <p class="focus-label">主线</p>
+                                <p id="mainLineCount" class="focus-value">-</p>
+                            </div>
                         </div>
-                        <div class="px-3">
-                            <p class="focus-label">最强方向</p>
-                            <p id="topSectorName" class="focus-value">-</p>
-                        </div>
-                        <div class="px-3">
-                            <p class="focus-label">主线</p>
-                            <p id="mainLineCount" class="focus-value">-</p>
+                        <div class="mt-4 grid grid-cols-2 divide-x divide-gray-200 border-t border-gray-200 pt-4">
+                            <div class="pr-3">
+                                <p class="focus-label">排名上升最多</p>
+                                <p class="mt-2 flex flex-wrap items-baseline gap-x-2 gap-y-1 text-base font-bold text-gray-950">
+                                    <span id="rankTopRiseName">-</span>
+                                    <span id="rankTopRiseValue">-</span>
+                                </p>
+                                <p id="rankTopRiseMeta" class="mt-1 text-xs text-gray-500">-</p>
+                            </div>
+                            <div class="pl-3">
+                                <p class="focus-label">排名下降最多</p>
+                                <p class="mt-2 flex flex-wrap items-baseline gap-x-2 gap-y-1 text-base font-bold text-gray-950">
+                                    <span id="rankTopFallName">-</span>
+                                    <span id="rankTopFallValue">-</span>
+                                </p>
+                                <p id="rankTopFallMeta" class="mt-1 text-xs text-gray-500">-</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -637,6 +657,41 @@
             document.getElementById('heroStatusPill').textContent = marketPhase;
             document.getElementById('heroSectorPill').textContent = focusSector ? `${requestedSector ? '当前定位' : '今日最强'} ${focusSector.sector_name}` : '暂无主线';
             document.getElementById('heroActionPill').textContent = actionLabel;
+            renderRankExtremes(data);
+        }
+
+        function getRankExtremes(data) {
+            const sectors = (data || []).filter((sector) => hasNumericValue(sector.rank_change));
+            return {
+                rise: sectors.filter((sector) => Number(sector.rank_change) > 0)
+                    .reduce((best, sector) => !best || Number(sector.rank_change) > Number(best.rank_change) ? sector : best, null),
+                fall: sectors.filter((sector) => Number(sector.rank_change) < 0)
+                    .reduce((best, sector) => !best || Number(sector.rank_change) < Number(best.rank_change) ? sector : best, null),
+            };
+        }
+
+        function renderRankExtreme(prefix, sector) {
+            const name = document.getElementById(`rankTop${prefix}Name`);
+            const value = document.getElementById(`rankTop${prefix}Value`);
+            const meta = document.getElementById(`rankTop${prefix}Meta`);
+            if (!sector) {
+                name.textContent = '-';
+                value.textContent = '-';
+                value.className = 'text-gray-400';
+                meta.textContent = '暂无排名变动数据';
+                return;
+            }
+            const change = Number(sector.rank_change);
+            name.textContent = sector.sector_name || '-';
+            value.textContent = `${change > 0 ? '+' : ''}${change}名`;
+            value.className = change > 0 ? 'text-stock-up' : 'text-stock-down';
+            meta.textContent = `当前排名 第${sector.rank || '-'}名 · 动量 ${Number(sector.momentum_score || 0).toFixed(2)}`;
+        }
+
+        function renderRankExtremes(data) {
+            const { rise, fall } = getRankExtremes(data);
+            renderRankExtreme('Rise', rise);
+            renderRankExtreme('Fall', fall);
         }
 
         // 渲染表格

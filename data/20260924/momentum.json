@@ -1,15 +1,15 @@
 {
   "trade_date": "20260924",
-  "generated_at": "2026-09-24T16:47:47+08:00",
+  "generated_at": "2026-09-27T17:02:01+08:00",
   "data_quality": {
     "version": 1,
-    "generated_at": "2026-09-24T16:47:47+08:00",
+    "generated_at": "2026-09-27T17:02:01+08:00",
     "market_close_complete": true,
     "snapshot_status": "complete_close",
     "intraday_requested": false,
-    "stock_coverage": 0.9938,
-    "stock_coverage_pct": 99.38,
-    "stock_match_count": 4983,
+    "stock_coverage": 0.9986,
+    "stock_coverage_pct": 99.86,
+    "stock_match_count": 5007,
     "stock_total": 5014,
     "matching_index_count": 4,
     "required_index_count": 4,
@@ -162,7 +162,7 @@
           "rank_in_market": 40,
           "circ_mv": 264.78,
           "amount": 93415.61,
-          "capacity_proxy_score": 8.64
+          "capacity_proxy_score": 8.63
         },
         {
           "rank": 9,
@@ -376,7 +376,7 @@
           "rank_in_market": 169,
           "circ_mv": 33.42,
           "amount": 35458.19,
-          "capacity_proxy_score": 6.33
+          "capacity_proxy_score": 6.32
         },
         {
           "rank": 24,
@@ -598,7 +598,7 @@
           "rank_in_market": 582,
           "circ_mv": 58.63,
           "amount": 41272.43,
-          "capacity_proxy_score": 7.33
+          "capacity_proxy_score": 7.32
         }
       ],
       "momentum_state": "climax_warning",
@@ -915,7 +915,7 @@
           "rank_in_market": 242,
           "circ_mv": 253.26,
           "amount": 127990.02,
-          "capacity_proxy_score": 9.29,
+          "capacity_proxy_score": 9.28,
           "dfmc_industry": "电子-半导体-数字芯片设计",
           "dfmc_industry_l2": "半导体",
           "fund_ratio": 0.0,
@@ -947,7 +947,7 @@
           "rank_in_market": 277,
           "circ_mv": 84.22,
           "amount": 102026.21,
-          "capacity_proxy_score": 8.06
+          "capacity_proxy_score": 8.05
         },
         {
           "rank": 24,
@@ -1031,7 +1031,7 @@
           "rank_in_market": 336,
           "circ_mv": 74.87,
           "amount": 23906.08,
-          "capacity_proxy_score": 6.57
+          "capacity_proxy_score": 6.56
         },
         {
           "rank": 30,
@@ -1133,7 +1133,7 @@
           "rank_in_market": 432,
           "circ_mv": 126.85,
           "amount": 33161.25,
-          "capacity_proxy_score": 7.43
+          "capacity_proxy_score": 7.42
         },
         {
           "rank": 37,
@@ -1337,7 +1337,7 @@
           "rank_in_market": 613,
           "circ_mv": 381.77,
           "amount": 154923.05,
-          "capacity_proxy_score": 9.52,
+          "capacity_proxy_score": 9.51,
           "dfmc_industry": "电子-半导体-分立器件",
           "dfmc_industry_l2": "半导体",
           "fund_ratio": 0.0,
@@ -1355,7 +1355,7 @@
           "rank_in_market": 617,
           "circ_mv": 93.42,
           "amount": 33650.25,
-          "capacity_proxy_score": 7.15
+          "capacity_proxy_score": 7.14
         },
         {
           "rank": 52,
@@ -1387,7 +1387,7 @@
           "rank_in_market": 627,
           "circ_mv": 70.59,
           "amount": 36340.79,
-          "capacity_proxy_score": 7.45
+          "capacity_proxy_score": 7.44
         },
         {
           "rank": 54,
@@ -1398,7 +1398,7 @@
           "distance_to_250d_high_pct": -30.76,
           "is_250d_high": false,
           "close_price": 26.09,
-          "rank_in_market": 658,
+          "rank_in_market": 657,
           "circ_mv": 88.16,
           "amount": 43641.56,
           "capacity_proxy_score": 7.87
@@ -1412,7 +1412,7 @@
           "distance_to_250d_high_pct": -43.03,
           "is_250d_high": false,
           "close_price": 60.15,
-          "rank_in_market": 660,
+          "rank_in_market": 659,
           "circ_mv": 132.33,
           "amount": 74392.91,
           "capacity_proxy_score": 8.63
@@ -1426,10 +1426,10 @@
           "distance_to_250d_high_pct": -38.65,
           "is_250d_high": false,
           "close_price": 29.24,
-          "rank_in_market": 689,
+          "rank_in_market": 688,
           "circ_mv": 98.23,
           "amount": 35257.3,
-          "capacity_proxy_score": 7.25
+          "capacity_proxy_score": 7.24
         },
         {
           "rank": 57,
@@ -1440,7 +1440,7 @@
           "distance_to_250d_high_pct": -45.58,
           "is_250d_high": false,
           "close_price": 108.84,
-          "rank_in_market": 715,
+          "rank_in_market": 714,
           "circ_mv": 144.28,
           "amount": 91607.12,
           "capacity_proxy_score": 8.8
@@ -1454,7 +1454,7 @@
           "distance_to_250d_high_pct": -33.45,
           "is_250d_high": false,
           "close_price": 22.3,
-          "rank_in_market": 720,
+          "rank_in_market": 719,
           "circ_mv": 126.08,
           "amount": 55733.73,
           "capacity_proxy_score": 8.41
@@ -1468,7 +1468,7 @@
           "distance_to_250d_high_pct": -13.62,
           "is_250d_high": false,
           "close_price": 1700.03,
-          "rank_in_market": 732,
+          "rank_in_market": 731,
           "circ_mv": 2092.85,
           "amount": 367954.04,
           "capacity_proxy_score": 9.39,
@@ -1486,7 +1486,7 @@
           "distance_to_250d_high_pct": -42.73,
           "is_250d_high": false,
           "close_price": 24.8,
-          "rank_in_market": 752,
+          "rank_in_market": 751,
           "circ_mv": 246.6,
           "amount": 88777.65,
           "capacity_proxy_score": 8.58
@@ -1638,7 +1638,7 @@
           "rank_in_market": 618,
           "circ_mv": 19.59,
           "amount": 13234.75,
-          "capacity_proxy_score": 4.54
+          "capacity_proxy_score": 4.53
         },
         {
           "rank": 10,
@@ -1717,7 +1717,7 @@
           "rank_in_market": 60,
           "circ_mv": 110.31,
           "amount": 34996.47,
-          "capacity_proxy_score": 7.36
+          "capacity_proxy_score": 7.35
         },
         {
           "rank": 4,
@@ -1927,7 +1927,7 @@
           "rank_in_market": 176,
           "circ_mv": 35.58,
           "amount": 7832.79,
-          "capacity_proxy_score": 3.96
+          "capacity_proxy_score": 3.97
         },
         {
           "rank": 19,
@@ -1941,7 +1941,7 @@
           "rank_in_market": 204,
           "circ_mv": 19.05,
           "amount": 34584.44,
-          "capacity_proxy_score": 5.33
+          "capacity_proxy_score": 5.32
         },
         {
           "rank": 20,
@@ -2081,7 +2081,7 @@
           "rank_in_market": 377,
           "circ_mv": 62.12,
           "amount": 92165.73,
-          "capacity_proxy_score": 7.64
+          "capacity_proxy_score": 7.63
         },
         {
           "rank": 30,
@@ -2123,7 +2123,7 @@
           "rank_in_market": 450,
           "circ_mv": 36.74,
           "amount": 11986.43,
-          "capacity_proxy_score": 4.67
+          "capacity_proxy_score": 4.66
         },
         {
           "rank": 33,
@@ -2190,7 +2190,7 @@
           "distance_to_250d_high_pct": -26.48,
           "is_250d_high": false,
           "close_price": 7.94,
-          "rank_in_market": 702,
+          "rank_in_market": 701,
           "circ_mv": 34.36,
           "amount": 15621.37,
           "capacity_proxy_score": 5.48
@@ -2204,7 +2204,7 @@
           "distance_to_250d_high_pct": -23.4,
           "is_250d_high": false,
           "close_price": 18.2,
-          "rank_in_market": 725,
+          "rank_in_market": 724,
           "circ_mv": 27.12,
           "amount": 5437.88,
           "capacity_proxy_score": 3.03
@@ -2218,7 +2218,7 @@
           "distance_to_250d_high_pct": -25.93,
           "is_250d_high": false,
           "close_price": 34.08,
-          "rank_in_market": 734,
+          "rank_in_market": 733,
           "circ_mv": 44.55,
           "amount": 4591.23,
           "capacity_proxy_score": 3.02
@@ -2232,7 +2232,7 @@
           "distance_to_250d_high_pct": -50.57,
           "is_250d_high": false,
           "close_price": 58.21,
-          "rank_in_market": 739,
+          "rank_in_market": 738,
           "circ_mv": 202.71,
           "amount": 59616.23,
           "capacity_proxy_score": 8.24
@@ -2342,7 +2342,7 @@
           "rank_in_market": 320,
           "circ_mv": 55.15,
           "amount": 55051.36,
-          "capacity_proxy_score": 7.47
+          "capacity_proxy_score": 7.46
         },
         {
           "rank": 7,
@@ -2455,10 +2455,10 @@
           "distance_to_250d_high_pct": -30.58,
           "is_250d_high": false,
           "close_price": 45.12,
-          "rank_in_market": 714,
+          "rank_in_market": 713,
           "circ_mv": 186.57,
           "amount": 118905.1,
-          "capacity_proxy_score": 9.1
+          "capacity_proxy_score": 9.09
         },
         {
           "rank": 15,
@@ -2469,7 +2469,7 @@
           "distance_to_250d_high_pct": -15.36,
           "is_250d_high": false,
           "close_price": 72.75,
-          "rank_in_market": 742,
+          "rank_in_market": 741,
           "circ_mv": 80.68,
           "amount": 13081.82,
           "capacity_proxy_score": 5.89
@@ -2602,7 +2602,7 @@
           "rank_in_market": 360,
           "circ_mv": 324.5,
           "amount": 50053.2,
-          "capacity_proxy_score": 8.35,
+          "capacity_proxy_score": 8.34,
           "dfmc_industry": "国防军工-军工电子Ⅱ-军工电子Ⅲ",
           "dfmc_industry_l2": "军工电子Ⅱ",
           "fund_ratio": 0.0,
@@ -2620,7 +2620,7 @@
           "rank_in_market": 406,
           "circ_mv": 61.45,
           "amount": 28303.8,
-          "capacity_proxy_score": 7.03
+          "capacity_proxy_score": 7.02
         },
         {
           "rank": 6,
@@ -2676,7 +2676,7 @@
           "rank_in_market": 511,
           "circ_mv": 828.64,
           "amount": 130176.87,
-          "capacity_proxy_score": 9.11,
+          "capacity_proxy_score": 9.1,
           "dfmc_industry": "国防军工-军工电子Ⅱ-军工电子Ⅲ",
           "dfmc_industry_l2": "军工电子Ⅱ",
           "fund_ratio": 0.0,
@@ -2779,7 +2779,7 @@
           "distance_to_250d_high_pct": -44.5,
           "is_250d_high": false,
           "close_price": 19.08,
-          "rank_in_market": 686,
+          "rank_in_market": 685,
           "circ_mv": 41.48,
           "amount": 30336.71,
           "capacity_proxy_score": 6.49
@@ -2946,7 +2946,7 @@
           "distance_to_250d_high_pct": -47.91,
           "is_250d_high": false,
           "close_price": 23.29,
-          "rank_in_market": 673,
+          "rank_in_market": 672,
           "circ_mv": 65.12,
           "amount": 4563.42,
           "capacity_proxy_score": 3.57
@@ -3084,7 +3084,7 @@
           "rank_in_market": 308,
           "circ_mv": 40.95,
           "amount": 13372.5,
-          "capacity_proxy_score": 5.0
+          "capacity_proxy_score": 4.99
         },
         {
           "rank": 9,
@@ -3130,7 +3130,7 @@
           "rank_in_market": 484,
           "circ_mv": 52.21,
           "amount": 45221.26,
-          "capacity_proxy_score": 7.24
+          "capacity_proxy_score": 7.23
         },
         {
           "rank": 12,
@@ -3201,10 +3201,10 @@
           "distance_to_250d_high_pct": -15.62,
           "is_250d_high": false,
           "close_price": 45.53,
-          "rank_in_market": 674,
+          "rank_in_market": 673,
           "circ_mv": 82.69,
           "amount": 29023.11,
-          "capacity_proxy_score": 6.88
+          "capacity_proxy_score": 6.87
         },
         {
           "rank": 17,
@@ -3215,7 +3215,7 @@
           "distance_to_250d_high_pct": -30.32,
           "is_250d_high": false,
           "close_price": 12.34,
-          "rank_in_market": 683,
+          "rank_in_market": 682,
           "circ_mv": 52.18,
           "amount": 95424.93,
           "capacity_proxy_score": 7.4
@@ -3229,10 +3229,10 @@
           "distance_to_250d_high_pct": -40.53,
           "is_250d_high": false,
           "close_price": 39.51,
-          "rank_in_market": 685,
+          "rank_in_market": 684,
           "circ_mv": 113.18,
           "amount": 41301.96,
-          "capacity_proxy_score": 7.55
+          "capacity_proxy_score": 7.54
         },
         {
           "rank": 19,
@@ -3243,7 +3243,7 @@
           "distance_to_250d_high_pct": -23.35,
           "is_250d_high": false,
           "close_price": 219.11,
-          "rank_in_market": 690,
+          "rank_in_market": 689,
           "circ_mv": 426.29,
           "amount": 255080.78,
           "capacity_proxy_score": 9.64,
@@ -3261,7 +3261,7 @@
           "distance_to_250d_high_pct": -42.75,
           "is_250d_high": false,
           "close_price": 58.11,
-          "rank_in_market": 693,
+          "rank_in_market": 692,
           "circ_mv": 62.54,
           "amount": 27816.25,
           "capacity_proxy_score": 7.02
@@ -3371,7 +3371,7 @@
           "rank_in_market": 83,
           "circ_mv": 95.02,
           "amount": 150610.32,
-          "capacity_proxy_score": 8.33
+          "capacity_proxy_score": 8.32
         },
         {
           "rank": 7,
@@ -3413,7 +3413,7 @@
           "rank_in_market": 133,
           "circ_mv": 22.46,
           "amount": 25170.79,
-          "capacity_proxy_score": 5.47
+          "capacity_proxy_score": 5.46
         },
         {
           "rank": 10,
@@ -3441,7 +3441,7 @@
           "rank_in_market": 147,
           "circ_mv": 43.65,
           "amount": 26957.83,
-          "capacity_proxy_score": 6.46
+          "capacity_proxy_score": 6.45
         },
         {
           "rank": 12,
@@ -3483,7 +3483,7 @@
           "rank_in_market": 221,
           "circ_mv": 40.0,
           "amount": 11154.72,
-          "capacity_proxy_score": 4.69
+          "capacity_proxy_score": 4.68
         },
         {
           "rank": 15,
@@ -3595,7 +3595,7 @@
           "rank_in_market": 509,
           "circ_mv": 13.67,
           "amount": 6882.29,
-          "capacity_proxy_score": 3.35
+          "capacity_proxy_score": 3.36
         },
         {
           "rank": 23,
@@ -3620,10 +3620,10 @@
           "distance_to_250d_high_pct": -37.56,
           "is_250d_high": false,
           "close_price": 8.38,
-          "rank_in_market": 666,
+          "rank_in_market": 665,
           "circ_mv": 33.7,
           "amount": 14224.32,
-          "capacity_proxy_score": 5.31
+          "capacity_proxy_score": 5.3
         },
         {
           "rank": 25,
@@ -3634,7 +3634,7 @@
           "distance_to_250d_high_pct": -48.57,
           "is_250d_high": false,
           "close_price": 5.02,
-          "rank_in_market": 676,
+          "rank_in_market": 675,
           "circ_mv": 31.26,
           "amount": 38391.83,
           "capacity_proxy_score": 6.01
@@ -3648,7 +3648,7 @@
           "distance_to_250d_high_pct": -32.57,
           "is_250d_high": false,
           "close_price": 12.63,
-          "rank_in_market": 688,
+          "rank_in_market": 687,
           "circ_mv": 72.0,
           "amount": 12474.73,
           "capacity_proxy_score": 5.7
@@ -3662,7 +3662,7 @@
           "distance_to_250d_high_pct": -29.43,
           "is_250d_high": false,
           "close_price": 25.51,
-          "rank_in_market": 729,
+          "rank_in_market": 728,
           "circ_mv": 41.26,
           "amount": 13196.67,
           "capacity_proxy_score": 4.98
@@ -3679,14 +3679,228 @@
     },
     {
       "rank": 11,
+      "sector_name": "种植业",
+      "momentum_score": 1.51,
+      "listed_count": 6,
+      "total_count": 18,
+      "listed_ratio": 33.3,
+      "avg_return_20d": 29.48,
+      "tradable_count": 6,
+      "rank_change": 0,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600371",
+          "name": "万向德农",
+          "return_20d": 66.14,
+          "daily_change_pct": -8.28,
+          "distance_to_250d_high_pct": -8.28,
+          "is_250d_high": false,
+          "close_price": 15.85,
+          "rank_in_market": 25,
+          "circ_mv": 46.59,
+          "amount": 154995.75,
+          "capacity_proxy_score": 6.75
+        },
+        {
+          "rank": 2,
+          "code": "600354",
+          "name": "敦煌种业",
+          "return_20d": 35.56,
+          "daily_change_pct": -5.46,
+          "distance_to_250d_high_pct": -22.65,
+          "is_250d_high": false,
+          "close_price": 9.53,
+          "rank_in_market": 96,
+          "circ_mv": 49.48,
+          "amount": 86485.51,
+          "capacity_proxy_score": 7.27
+        },
+        {
+          "rank": 3,
+          "code": "600540",
+          "name": "新赛股份",
+          "return_20d": 30.22,
+          "daily_change_pct": -6.38,
+          "distance_to_250d_high_pct": -27.41,
+          "is_250d_high": false,
+          "close_price": 5.43,
+          "rank_in_market": 137,
+          "circ_mv": 31.13,
+          "amount": 41996.19,
+          "capacity_proxy_score": 6.09
+        },
+        {
+          "rank": 4,
+          "code": "600108",
+          "name": "亚盛集团",
+          "return_20d": 20.06,
+          "daily_change_pct": -3.28,
+          "distance_to_250d_high_pct": -42.4,
+          "is_250d_high": false,
+          "close_price": 4.13,
+          "rank_in_market": 296,
+          "circ_mv": 79.75,
+          "amount": 62278.69,
+          "capacity_proxy_score": 8.01
+        },
+        {
+          "rank": 5,
+          "code": "603336",
+          "name": "宏辉果蔬",
+          "return_20d": 12.69,
+          "daily_change_pct": -2.92,
+          "distance_to_250d_high_pct": -22.32,
+          "is_250d_high": false,
+          "close_price": 10.3,
+          "rank_in_market": 584,
+          "circ_mv": 61.85,
+          "amount": 17528.78,
+          "capacity_proxy_score": 5.98
+        },
+        {
+          "rank": 6,
+          "code": "600359",
+          "name": "新农开发",
+          "return_20d": 12.22,
+          "daily_change_pct": -2.81,
+          "distance_to_250d_high_pct": -28.11,
+          "is_250d_high": false,
+          "close_price": 7.62,
+          "rank_in_market": 609,
+          "circ_mv": 28.66,
+          "amount": 14475.3,
+          "capacity_proxy_score": 5.11
+        }
+      ],
+      "momentum_state": "fading",
+      "momentum_state_label": "主线退潮",
+      "mainline_days": 0,
+      "score_change_3d_pct": -23.4,
+      "rank_change_3d": 0,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": true
+    },
+    {
+      "rank": 12,
+      "sector_name": "玻璃玻纤",
+      "momentum_score": 1.44,
+      "listed_count": 6,
+      "total_count": 15,
+      "listed_ratio": 40.0,
+      "avg_return_20d": 18.2,
+      "tradable_count": 6,
+      "rank_change": -6,
+      "is_main_line": false,
+      "is_warning": false,
+      "stocks": [
+        {
+          "rank": 1,
+          "code": "600293",
+          "name": "三峡新材",
+          "return_20d": 31.25,
+          "daily_change_pct": 2.16,
+          "distance_to_250d_high_pct": -13.3,
+          "is_250d_high": false,
+          "close_price": 3.78,
+          "rank_in_market": 129,
+          "circ_mv": 44.02,
+          "amount": 100229.74,
+          "capacity_proxy_score": 6.87
+        },
+        {
+          "rank": 2,
+          "code": "002201",
+          "name": "九鼎新材",
+          "return_20d": 20.81,
+          "daily_change_pct": -1.69,
+          "distance_to_250d_high_pct": -41.42,
+          "is_250d_high": false,
+          "close_price": 9.87,
+          "rank_in_market": 285,
+          "circ_mv": 58.76,
+          "amount": 35802.62,
+          "capacity_proxy_score": 7.18
+        },
+        {
+          "rank": 3,
+          "code": "605006",
+          "name": "山东玻纤",
+          "return_20d": 15.69,
+          "daily_change_pct": -5.6,
+          "distance_to_250d_high_pct": -39.92,
+          "is_250d_high": false,
+          "close_price": 15.85,
+          "rank_in_market": 436,
+          "circ_mv": 104.54,
+          "amount": 59109.68,
+          "capacity_proxy_score": 8.26
+        },
+        {
+          "rank": 4,
+          "code": "002080",
+          "name": "中材科技",
+          "return_20d": 14.54,
+          "daily_change_pct": -5.77,
+          "distance_to_250d_high_pct": -44.04,
+          "is_250d_high": false,
+          "close_price": 57.2,
+          "rank_in_market": 496,
+          "circ_mv": 973.58,
+          "amount": 393904.14,
+          "capacity_proxy_score": 9.86
+        },
+        {
+          "rank": 5,
+          "code": "603256",
+          "name": "宏和科技",
+          "return_20d": 13.5,
+          "daily_change_pct": -3.06,
+          "distance_to_250d_high_pct": -50.0,
+          "is_250d_high": false,
+          "close_price": 152.0,
+          "rank_in_market": 538,
+          "circ_mv": 1357.19,
+          "amount": 409743.44,
+          "capacity_proxy_score": 9.38
+        },
+        {
+          "rank": 6,
+          "code": "300196",
+          "name": "长海股份",
+          "return_20d": 13.43,
+          "daily_change_pct": -2.53,
+          "distance_to_250d_high_pct": -45.01,
+          "is_250d_high": false,
+          "close_price": 18.84,
+          "rank_in_market": 545,
+          "circ_mv": 45.65,
+          "amount": 25551.92,
+          "capacity_proxy_score": 6.47
+        }
+      ],
+      "momentum_state": "fading",
+      "momentum_state_label": "主线退潮",
+      "mainline_days": 0,
+      "score_change_3d_pct": -47.6,
+      "rank_change_3d": -5,
+      "is_new_mainline": false,
+      "is_confirmed_mainline": false,
+      "is_fading": true
+    },
+    {
+      "rank": 13,
       "sector_name": "塑料",
-      "momentum_score": 1.54,
-      "listed_count": 16,
+      "momentum_score": 1.41,
+      "listed_count": 15,
       "total_count": 70,
-      "listed_ratio": 22.9,
-      "avg_return_20d": 23.15,
-      "tradable_count": 16,
-      "rank_change": 7,
+      "listed_ratio": 21.4,
+      "avg_return_20d": 23.91,
+      "tradable_count": 15,
+      "rank_change": 5,
       "is_main_line": false,
       "is_warning": false,
       "stocks": [
@@ -3786,7 +4000,7 @@
           "rank_in_market": 385,
           "circ_mv": 53.41,
           "amount": 81215.2,
-          "capacity_proxy_score": 7.36
+          "capacity_proxy_score": 7.35
         },
         {
           "rank": 8,
@@ -3856,24 +4070,10 @@
           "rank_in_market": 578,
           "circ_mv": 54.83,
           "amount": 12566.11,
-          "capacity_proxy_score": 5.35
+          "capacity_proxy_score": 5.34
         },
         {
           "rank": 13,
-          "code": "301687",
-          "name": "新广益",
-          "return_20d": 11.67,
-          "daily_change_pct": 1.52,
-          "distance_to_250d_high_pct": null,
-          "is_250d_high": null,
-          "close_price": 54.94,
-          "rank_in_market": 650,
-          "circ_mv": 17.02,
-          "amount": 21987.97,
-          "capacity_proxy_score": 4.81
-        },
-        {
-          "rank": 14,
           "code": "605488",
           "name": "福莱新材",
           "return_20d": 11.53,
@@ -3881,13 +4081,13 @@
           "distance_to_250d_high_pct": -33.81,
           "is_250d_high": false,
           "close_price": 32.22,
-          "rank_in_market": 659,
+          "rank_in_market": 658,
           "circ_mv": 95.84,
           "amount": 54315.29,
           "capacity_proxy_score": 8.12
         },
         {
-          "rank": 15,
+          "rank": 14,
           "code": "000920",
           "name": "沃顿科技",
           "return_20d": 11.0,
@@ -3895,13 +4095,13 @@
           "distance_to_250d_high_pct": -23.43,
           "is_250d_high": false,
           "close_price": 12.71,
-          "rank_in_market": 695,
+          "rank_in_market": 694,
           "circ_mv": 61.24,
           "amount": 40117.83,
           "capacity_proxy_score": 7.36
         },
         {
-          "rank": 16,
+          "rank": 15,
           "code": "300487",
           "name": "蓝晓科技",
           "return_20d": 10.15,
@@ -3909,7 +4109,7 @@
           "distance_to_250d_high_pct": -19.33,
           "is_250d_high": false,
           "close_price": 68.71,
-          "rank_in_market": 749,
+          "rank_in_market": 748,
           "circ_mv": 210.45,
           "amount": 21323.39,
           "capacity_proxy_score": 6.88
@@ -3918,225 +4118,11 @@
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": 55.6,
-      "rank_change_3d": 15,
+      "score_change_3d_pct": 42.4,
+      "rank_change_3d": 13,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
       "is_fading": false
-    },
-    {
-      "rank": 12,
-      "sector_name": "种植业",
-      "momentum_score": 1.51,
-      "listed_count": 6,
-      "total_count": 18,
-      "listed_ratio": 33.3,
-      "avg_return_20d": 29.48,
-      "tradable_count": 6,
-      "rank_change": -1,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "600371",
-          "name": "万向德农",
-          "return_20d": 66.14,
-          "daily_change_pct": -8.28,
-          "distance_to_250d_high_pct": -8.28,
-          "is_250d_high": false,
-          "close_price": 15.85,
-          "rank_in_market": 25,
-          "circ_mv": 46.59,
-          "amount": 154995.75,
-          "capacity_proxy_score": 6.75
-        },
-        {
-          "rank": 2,
-          "code": "600354",
-          "name": "敦煌种业",
-          "return_20d": 35.56,
-          "daily_change_pct": -5.46,
-          "distance_to_250d_high_pct": -22.65,
-          "is_250d_high": false,
-          "close_price": 9.53,
-          "rank_in_market": 96,
-          "circ_mv": 49.48,
-          "amount": 86485.51,
-          "capacity_proxy_score": 7.27
-        },
-        {
-          "rank": 3,
-          "code": "600540",
-          "name": "新赛股份",
-          "return_20d": 30.22,
-          "daily_change_pct": -6.38,
-          "distance_to_250d_high_pct": -27.41,
-          "is_250d_high": false,
-          "close_price": 5.43,
-          "rank_in_market": 137,
-          "circ_mv": 31.13,
-          "amount": 41996.19,
-          "capacity_proxy_score": 6.09
-        },
-        {
-          "rank": 4,
-          "code": "600108",
-          "name": "亚盛集团",
-          "return_20d": 20.06,
-          "daily_change_pct": -3.28,
-          "distance_to_250d_high_pct": -42.4,
-          "is_250d_high": false,
-          "close_price": 4.13,
-          "rank_in_market": 296,
-          "circ_mv": 79.75,
-          "amount": 62278.69,
-          "capacity_proxy_score": 8.01
-        },
-        {
-          "rank": 5,
-          "code": "603336",
-          "name": "宏辉果蔬",
-          "return_20d": 12.69,
-          "daily_change_pct": -2.92,
-          "distance_to_250d_high_pct": -22.32,
-          "is_250d_high": false,
-          "close_price": 10.3,
-          "rank_in_market": 584,
-          "circ_mv": 61.85,
-          "amount": 17528.78,
-          "capacity_proxy_score": 5.98
-        },
-        {
-          "rank": 6,
-          "code": "600359",
-          "name": "新农开发",
-          "return_20d": 12.22,
-          "daily_change_pct": -2.81,
-          "distance_to_250d_high_pct": -28.11,
-          "is_250d_high": false,
-          "close_price": 7.62,
-          "rank_in_market": 609,
-          "circ_mv": 28.66,
-          "amount": 14475.3,
-          "capacity_proxy_score": 5.11
-        }
-      ],
-      "momentum_state": "fading",
-      "momentum_state_label": "主线退潮",
-      "mainline_days": 0,
-      "score_change_3d_pct": -23.4,
-      "rank_change_3d": -1,
-      "is_new_mainline": false,
-      "is_confirmed_mainline": false,
-      "is_fading": true
-    },
-    {
-      "rank": 13,
-      "sector_name": "玻璃玻纤",
-      "momentum_score": 1.44,
-      "listed_count": 6,
-      "total_count": 15,
-      "listed_ratio": 40.0,
-      "avg_return_20d": 18.2,
-      "tradable_count": 6,
-      "rank_change": -7,
-      "is_main_line": false,
-      "is_warning": false,
-      "stocks": [
-        {
-          "rank": 1,
-          "code": "600293",
-          "name": "三峡新材",
-          "return_20d": 31.25,
-          "daily_change_pct": 2.16,
-          "distance_to_250d_high_pct": -13.3,
-          "is_250d_high": false,
-          "close_price": 3.78,
-          "rank_in_market": 129,
-          "circ_mv": 44.02,
-          "amount": 100229.74,
-          "capacity_proxy_score": 6.87
-        },
-        {
-          "rank": 2,
-          "code": "002201",
-          "name": "九鼎新材",
-          "return_20d": 20.81,
-          "daily_change_pct": -1.69,
-          "distance_to_250d_high_pct": -41.42,
-          "is_250d_high": false,
-          "close_price": 9.87,
-          "rank_in_market": 285,
-          "circ_mv": 58.76,
-          "amount": 35802.62,
-          "capacity_proxy_score": 7.19
-        },
-        {
-          "rank": 3,
-          "code": "605006",
-          "name": "山东玻纤",
-          "return_20d": 15.69,
-          "daily_change_pct": -5.6,
-          "distance_to_250d_high_pct": -39.92,
-          "is_250d_high": false,
-          "close_price": 15.85,
-          "rank_in_market": 436,
-          "circ_mv": 104.54,
-          "amount": 59109.68,
-          "capacity_proxy_score": 8.26
-        },
-        {
-          "rank": 4,
-          "code": "002080",
-          "name": "中材科技",
-          "return_20d": 14.54,
-          "daily_change_pct": -5.77,
-          "distance_to_250d_high_pct": -44.04,
-          "is_250d_high": false,
-          "close_price": 57.2,
-          "rank_in_market": 496,
-          "circ_mv": 973.58,
-          "amount": 393904.14,
-          "capacity_proxy_score": 9.86
-        },
-        {
-          "rank": 5,
-          "code": "603256",
-          "name": "宏和科技",
-          "return_20d": 13.5,
-          "daily_change_pct": -3.06,
-          "distance_to_250d_high_pct": -50.0,
-          "is_250d_high": false,
-          "close_price": 152.0,
-          "rank_in_market": 538,
-          "circ_mv": 1357.19,
-          "amount": 409743.44,
-          "capacity_proxy_score": 9.38
-        },
-        {
-          "rank": 6,
-          "code": "300196",
-          "name": "长海股份",
-          "return_20d": 13.43,
-          "daily_change_pct": -2.53,
-          "distance_to_250d_high_pct": -45.01,
-          "is_250d_high": false,
-          "close_price": 18.84,
-          "rank_in_market": 545,
-          "circ_mv": 45.65,
-          "amount": 25551.92,
-          "capacity_proxy_score": 6.47
-        }
-      ],
-      "momentum_state": "fading",
-      "momentum_state_label": "主线退潮",
-      "mainline_days": 0,
-      "score_change_3d_pct": -47.6,
-      "rank_change_3d": -6,
-      "is_new_mainline": false,
-      "is_confirmed_mainline": false,
-      "is_fading": true
     },
     {
       "rank": 14,
@@ -4251,7 +4237,7 @@
           "rank_in_market": 269,
           "circ_mv": 31.91,
           "amount": 14341.51,
-          "capacity_proxy_score": 5.24
+          "capacity_proxy_score": 5.23
         },
         {
           "rank": 8,
@@ -4363,7 +4349,7 @@
           "rank_in_market": 371,
           "circ_mv": 44.98,
           "amount": 41256.84,
-          "capacity_proxy_score": 6.92
+          "capacity_proxy_score": 6.91
         },
         {
           "rank": 16,
@@ -4419,7 +4405,7 @@
           "rank_in_market": 499,
           "circ_mv": 60.97,
           "amount": 14967.78,
-          "capacity_proxy_score": 5.77
+          "capacity_proxy_score": 5.76
         },
         {
           "rank": 20,
@@ -4447,7 +4433,7 @@
           "rank_in_market": 569,
           "circ_mv": 24.56,
           "amount": 7630.03,
-          "capacity_proxy_score": 3.41
+          "capacity_proxy_score": 3.42
         },
         {
           "rank": 22,
@@ -4472,7 +4458,7 @@
           "distance_to_250d_high_pct": -32.18,
           "is_250d_high": false,
           "close_price": 9.04,
-          "rank_in_market": 653,
+          "rank_in_market": 652,
           "circ_mv": 28.37,
           "amount": 8817.82,
           "capacity_proxy_score": 3.83
@@ -4486,7 +4472,7 @@
           "distance_to_250d_high_pct": -47.75,
           "is_250d_high": false,
           "close_price": 16.36,
-          "rank_in_market": 661,
+          "rank_in_market": 660,
           "circ_mv": 26.41,
           "amount": 5481.89,
           "capacity_proxy_score": 3.01
@@ -4500,7 +4486,7 @@
           "distance_to_250d_high_pct": -22.72,
           "is_250d_high": false,
           "close_price": 23.03,
-          "rank_in_market": 675,
+          "rank_in_market": 674,
           "circ_mv": 32.42,
           "amount": 9832.62,
           "capacity_proxy_score": 4.18
@@ -4514,7 +4500,7 @@
           "distance_to_250d_high_pct": -20.51,
           "is_250d_high": false,
           "close_price": 7.13,
-          "rank_in_market": 682,
+          "rank_in_market": 681,
           "circ_mv": 28.6,
           "amount": 5182.88,
           "capacity_proxy_score": 3.02
@@ -4528,7 +4514,7 @@
           "distance_to_250d_high_pct": -46.03,
           "is_250d_high": false,
           "close_price": 56.56,
-          "rank_in_market": 740,
+          "rank_in_market": 739,
           "circ_mv": 123.8,
           "amount": 86794.41,
           "capacity_proxy_score": 8.66
@@ -4542,7 +4528,7 @@
           "distance_to_250d_high_pct": -36.12,
           "is_250d_high": false,
           "close_price": 19.79,
-          "rank_in_market": 744,
+          "rank_in_market": 743,
           "circ_mv": 24.79,
           "amount": 9283.35,
           "capacity_proxy_score": 3.72
@@ -4556,7 +4542,7 @@
           "distance_to_250d_high_pct": -4.07,
           "is_250d_high": false,
           "close_price": 17.46,
-          "rank_in_market": 748,
+          "rank_in_market": 747,
           "circ_mv": 48.57,
           "amount": 23928.4,
           "capacity_proxy_score": 6.5
@@ -4652,7 +4638,7 @@
           "rank_in_market": 200,
           "circ_mv": 62.33,
           "amount": 38649.99,
-          "capacity_proxy_score": 7.35
+          "capacity_proxy_score": 7.34
         },
         {
           "rank": 6,
@@ -4666,7 +4652,7 @@
           "rank_in_market": 213,
           "circ_mv": 128.77,
           "amount": 55472.23,
-          "capacity_proxy_score": 8.43
+          "capacity_proxy_score": 8.42
         },
         {
           "rank": 7,
@@ -4694,7 +4680,7 @@
           "rank_in_market": 265,
           "circ_mv": 67.13,
           "amount": 48151.15,
-          "capacity_proxy_score": 7.64
+          "capacity_proxy_score": 7.63
         },
         {
           "rank": 9,
@@ -4736,7 +4722,7 @@
           "rank_in_market": 402,
           "circ_mv": 19.31,
           "amount": 39164.5,
-          "capacity_proxy_score": 5.16
+          "capacity_proxy_score": 5.15
         },
         {
           "rank": 12,
@@ -4803,7 +4789,7 @@
           "distance_to_250d_high_pct": -30.54,
           "is_250d_high": false,
           "close_price": 32.3,
-          "rank_in_market": 664,
+          "rank_in_market": 663,
           "circ_mv": 13.4,
           "amount": 11795.08,
           "capacity_proxy_score": 4.18
@@ -4817,7 +4803,7 @@
           "distance_to_250d_high_pct": -9.97,
           "is_250d_high": false,
           "close_price": 37.46,
-          "rank_in_market": 691,
+          "rank_in_market": 690,
           "circ_mv": 76.47,
           "amount": 18889.27,
           "capacity_proxy_score": 6.33
@@ -4896,7 +4882,7 @@
           "distance_to_250d_high_pct": -27.48,
           "is_250d_high": false,
           "close_price": 2.56,
-          "rank_in_market": 677,
+          "rank_in_market": 676,
           "circ_mv": 59.59,
           "amount": 79669.37,
           "capacity_proxy_score": 7.51
@@ -4978,7 +4964,7 @@
           "rank_in_market": 478,
           "circ_mv": 53.8,
           "amount": 43097.79,
-          "capacity_proxy_score": 7.25
+          "capacity_proxy_score": 7.24
         },
         {
           "rank": 5,
@@ -5003,7 +4989,7 @@
           "distance_to_250d_high_pct": -35.48,
           "is_250d_high": false,
           "close_price": 12.91,
-          "rank_in_market": 654,
+          "rank_in_market": 653,
           "circ_mv": 50.4,
           "amount": 28805.98,
           "capacity_proxy_score": 6.75
@@ -5152,7 +5138,7 @@
           "distance_to_250d_high_pct": -22.34,
           "is_250d_high": false,
           "close_price": 14.91,
-          "rank_in_market": 679,
+          "rank_in_market": 678,
           "circ_mv": 19.61,
           "amount": 12979.11,
           "capacity_proxy_score": 4.51
@@ -5166,7 +5152,7 @@
           "distance_to_250d_high_pct": -45.14,
           "is_250d_high": false,
           "close_price": 22.37,
-          "rank_in_market": 706,
+          "rank_in_market": 705,
           "circ_mv": 36.0,
           "amount": 8741.17,
           "capacity_proxy_score": 4.16
@@ -5180,10 +5166,10 @@
           "distance_to_250d_high_pct": -15.96,
           "is_250d_high": false,
           "close_price": 7.16,
-          "rank_in_market": 707,
+          "rank_in_market": 706,
           "circ_mv": 40.6,
           "amount": 12854.74,
-          "capacity_proxy_score": 4.92
+          "capacity_proxy_score": 4.91
         },
         {
           "rank": 12,
@@ -5194,7 +5180,7 @@
           "distance_to_250d_high_pct": -9.61,
           "is_250d_high": false,
           "close_price": 10.25,
-          "rank_in_market": 717,
+          "rank_in_market": 716,
           "circ_mv": 36.3,
           "amount": 5346.36,
           "capacity_proxy_score": 2.98
@@ -5234,7 +5220,7 @@
           "rank_in_market": 117,
           "circ_mv": 70.6,
           "amount": 29679.94,
-          "capacity_proxy_score": 7.25
+          "capacity_proxy_score": 7.24
         },
         {
           "rank": 2,
@@ -5360,7 +5346,7 @@
           "rank_in_market": 443,
           "circ_mv": 129.58,
           "amount": 81766.7,
-          "capacity_proxy_score": 8.67
+          "capacity_proxy_score": 8.66
         },
         {
           "rank": 11,
@@ -5388,7 +5374,7 @@
           "rank_in_market": 506,
           "circ_mv": 48.91,
           "amount": 33015.07,
-          "capacity_proxy_score": 6.83
+          "capacity_proxy_score": 6.82
         },
         {
           "rank": 13,
@@ -5448,7 +5434,7 @@
           "rank_in_market": 633,
           "circ_mv": 18.94,
           "amount": 32889.66,
-          "capacity_proxy_score": 5.27
+          "capacity_proxy_score": 5.26
         },
         {
           "rank": 17,
@@ -5473,10 +5459,10 @@
           "distance_to_250d_high_pct": -43.23,
           "is_250d_high": false,
           "close_price": 47.1,
-          "rank_in_market": 721,
+          "rank_in_market": 720,
           "circ_mv": 152.7,
           "amount": 35310.8,
-          "capacity_proxy_score": 7.63
+          "capacity_proxy_score": 7.62
         },
         {
           "rank": 19,
@@ -5487,7 +5473,7 @@
           "distance_to_250d_high_pct": -43.77,
           "is_250d_high": false,
           "close_price": 64.67,
-          "rank_in_market": 724,
+          "rank_in_market": 723,
           "circ_mv": 23.04,
           "amount": 9063.66,
           "capacity_proxy_score": 3.59
@@ -5597,7 +5583,7 @@
           "rank_in_market": 430,
           "circ_mv": 63.05,
           "amount": 44354.64,
-          "capacity_proxy_score": 7.49
+          "capacity_proxy_score": 7.48
         },
         {
           "rank": 7,
@@ -5639,7 +5625,7 @@
           "rank_in_market": 634,
           "circ_mv": 53.65,
           "amount": 39941.26,
-          "capacity_proxy_score": 7.17
+          "capacity_proxy_score": 7.16
         }
       ],
       "momentum_state": "observing",
@@ -5690,7 +5676,7 @@
           "rank_in_market": 188,
           "circ_mv": 43.6,
           "amount": 43524.51,
-          "capacity_proxy_score": 6.93
+          "capacity_proxy_score": 6.92
         },
         {
           "rank": 3,
@@ -5701,10 +5687,10 @@
           "distance_to_250d_high_pct": -25.92,
           "is_250d_high": false,
           "close_price": 16.03,
-          "rank_in_market": 684,
+          "rank_in_market": 683,
           "circ_mv": 40.69,
           "amount": 21716.18,
-          "capacity_proxy_score": 6.14
+          "capacity_proxy_score": 6.13
         },
         {
           "rank": 4,
@@ -5715,7 +5701,7 @@
           "distance_to_250d_high_pct": -14.72,
           "is_250d_high": false,
           "close_price": 12.11,
-          "rank_in_market": 694,
+          "rank_in_market": 693,
           "circ_mv": 72.46,
           "amount": 65401.78,
           "capacity_proxy_score": 7.94
@@ -5729,10 +5715,10 @@
           "distance_to_250d_high_pct": -44.11,
           "is_250d_high": false,
           "close_price": 24.48,
-          "rank_in_market": 697,
+          "rank_in_market": 696,
           "circ_mv": 161.48,
           "amount": 149773.93,
-          "capacity_proxy_score": 9.08
+          "capacity_proxy_score": 9.07
         }
       ],
       "momentum_state": "fading",
@@ -5808,7 +5794,7 @@
           "distance_to_250d_high_pct": -16.07,
           "is_250d_high": false,
           "close_price": 9.56,
-          "rank_in_market": 656,
+          "rank_in_market": 655,
           "circ_mv": 27.65,
           "amount": 22458.36,
           "capacity_proxy_score": 5.6
@@ -5826,12 +5812,12 @@
     {
       "rank": 23,
       "sector_name": "汽车零部件",
-      "momentum_score": 1.04,
-      "listed_count": 34,
+      "momentum_score": 1.09,
+      "listed_count": 35,
       "total_count": 238,
-      "listed_ratio": 14.3,
-      "avg_return_20d": 17.39,
-      "tradable_count": 33,
+      "listed_ratio": 14.7,
+      "avg_return_20d": 17.18,
+      "tradable_count": 34,
       "rank_change": 2,
       "is_main_line": false,
       "is_warning": false,
@@ -5876,7 +5862,7 @@
           "rank_in_market": 157,
           "circ_mv": 16.99,
           "amount": 41358.02,
-          "capacity_proxy_score": 5.14
+          "capacity_proxy_score": 5.13
         },
         {
           "rank": 4,
@@ -5950,7 +5936,7 @@
           "rank_in_market": 280,
           "circ_mv": 35.64,
           "amount": 7545.81,
-          "capacity_proxy_score": 3.9
+          "capacity_proxy_score": 3.91
         },
         {
           "rank": 9,
@@ -6168,7 +6154,7 @@
           "rank_in_market": 588,
           "circ_mv": 32.06,
           "amount": 27556.1,
-          "capacity_proxy_score": 6.02
+          "capacity_proxy_score": 6.01
         },
         {
           "rank": 24,
@@ -6207,7 +6193,7 @@
           "distance_to_250d_high_pct": -35.58,
           "is_250d_high": false,
           "close_price": 32.27,
-          "rank_in_market": 662,
+          "rank_in_market": 661,
           "circ_mv": 48.32,
           "amount": 4821.96,
           "capacity_proxy_score": 3.24
@@ -6221,7 +6207,7 @@
           "distance_to_250d_high_pct": -51.94,
           "is_250d_high": false,
           "close_price": 28.55,
-          "rank_in_market": 680,
+          "rank_in_market": 679,
           "circ_mv": 255.67,
           "amount": 25810.88,
           "capacity_proxy_score": 7.17
@@ -6235,7 +6221,7 @@
           "distance_to_250d_high_pct": -37.53,
           "is_250d_high": false,
           "close_price": 64.28,
-          "rank_in_market": 726,
+          "rank_in_market": 725,
           "circ_mv": 36.97,
           "amount": 14521.91,
           "capacity_proxy_score": 4.97
@@ -6249,7 +6235,7 @@
           "distance_to_250d_high_pct": -54.78,
           "is_250d_high": false,
           "close_price": 36.63,
-          "rank_in_market": 727,
+          "rank_in_market": 726,
           "circ_mv": 39.44,
           "amount": 6400.22,
           "capacity_proxy_score": 3.81
@@ -6263,7 +6249,7 @@
           "distance_to_250d_high_pct": -42.17,
           "is_250d_high": false,
           "close_price": 9.68,
-          "rank_in_market": 733,
+          "rank_in_market": 732,
           "circ_mv": 44.53,
           "amount": 25664.35,
           "capacity_proxy_score": 6.44
@@ -6277,7 +6263,7 @@
           "distance_to_250d_high_pct": -38.11,
           "is_250d_high": false,
           "close_price": 19.13,
-          "rank_in_market": 737,
+          "rank_in_market": 736,
           "circ_mv": 44.4,
           "amount": 7893.94,
           "capacity_proxy_score": 4.31
@@ -6291,7 +6277,7 @@
           "distance_to_250d_high_pct": -30.78,
           "is_250d_high": false,
           "close_price": 23.1,
-          "rank_in_market": 738,
+          "rank_in_market": 737,
           "circ_mv": 27.75,
           "amount": 5226.9,
           "capacity_proxy_score": 3.0
@@ -6305,7 +6291,7 @@
           "distance_to_250d_high_pct": -56.44,
           "is_250d_high": false,
           "close_price": 92.71,
-          "rank_in_market": 743,
+          "rank_in_market": 742,
           "circ_mv": 192.73,
           "amount": 106733.16,
           "capacity_proxy_score": 9.07,
@@ -6313,12 +6299,26 @@
           "dfmc_industry_l2": "汽车零部件",
           "fund_ratio": 0.0,
           "turnover_ratio": 0.0
+        },
+        {
+          "rank": 34,
+          "code": "603179",
+          "name": "新泉股份",
+          "return_20d": 10.05,
+          "daily_change_pct": 0.93,
+          "distance_to_250d_high_pct": -61.91,
+          "is_250d_high": false,
+          "close_price": 41.29,
+          "rank_in_market": 752,
+          "circ_mv": 294.34,
+          "amount": 83691.24,
+          "capacity_proxy_score": 8.63
         }
       ],
       "momentum_state": "observing",
       "momentum_state_label": "观察",
       "mainline_days": 0,
-      "score_change_3d_pct": 33.3,
+      "score_change_3d_pct": 39.7,
       "rank_change_3d": 8,
       "is_new_mainline": false,
       "is_confirmed_mainline": false,
@@ -6399,7 +6399,7 @@
           "rank_in_market": 229,
           "circ_mv": 83.96,
           "amount": 27513.57,
-          "capacity_proxy_score": 6.84
+          "capacity_proxy_score": 6.83
         },
         {
           "rank": 5,
@@ -6562,7 +6562,7 @@
           "rank_in_market": 388,
           "circ_mv": 48.43,
           "amount": 32334.93,
-          "capacity_proxy_score": 6.8
+          "capacity_proxy_score": 6.79
         },
         {
           "rank": 8,
@@ -6590,7 +6590,7 @@
           "rank_in_market": 490,
           "circ_mv": 54.61,
           "amount": 9371.8,
-          "capacity_proxy_score": 4.9
+          "capacity_proxy_score": 4.89
         },
         {
           "rank": 10,
@@ -6604,7 +6604,7 @@
           "rank_in_market": 497,
           "circ_mv": 60.68,
           "amount": 11693.54,
-          "capacity_proxy_score": 5.38
+          "capacity_proxy_score": 5.37
         },
         {
           "rank": 11,
@@ -6643,10 +6643,10 @@
           "distance_to_250d_high_pct": -51.58,
           "is_250d_high": false,
           "close_price": 3.84,
-          "rank_in_market": 652,
+          "rank_in_market": 651,
           "circ_mv": 65.83,
           "amount": 39493.5,
-          "capacity_proxy_score": 7.44
+          "capacity_proxy_score": 7.43
         },
         {
           "rank": 14,
@@ -6657,7 +6657,7 @@
           "distance_to_250d_high_pct": -44.21,
           "is_250d_high": false,
           "close_price": 11.71,
-          "rank_in_market": 710,
+          "rank_in_market": 709,
           "circ_mv": 38.25,
           "amount": 8998.68,
           "capacity_proxy_score": 4.3
@@ -6725,7 +6725,7 @@
           "rank_in_market": 63,
           "circ_mv": 114.05,
           "amount": 52923.15,
-          "capacity_proxy_score": 8.28
+          "capacity_proxy_score": 8.27
         },
         {
           "rank": 4,
@@ -6837,7 +6837,7 @@
           "rank_in_market": 487,
           "circ_mv": 123.5,
           "amount": 123770.96,
-          "capacity_proxy_score": 8.83
+          "capacity_proxy_score": 8.82
         },
         {
           "rank": 12,
@@ -6862,7 +6862,7 @@
           "distance_to_250d_high_pct": -37.55,
           "is_250d_high": false,
           "close_price": 62.43,
-          "rank_in_market": 655,
+          "rank_in_market": 654,
           "circ_mv": 74.85,
           "amount": 24140.67,
           "capacity_proxy_score": 6.58
@@ -6991,7 +6991,7 @@
           "distance_to_250d_high_pct": -29.8,
           "is_250d_high": false,
           "close_price": 31.52,
-          "rank_in_market": 681,
+          "rank_in_market": 680,
           "circ_mv": 127.03,
           "amount": 34471.71,
           "capacity_proxy_score": 7.47
@@ -7005,7 +7005,7 @@
           "distance_to_250d_high_pct": -9.34,
           "is_250d_high": false,
           "close_price": 33.02,
-          "rank_in_market": 730,
+          "rank_in_market": 729,
           "circ_mv": 18.79,
           "amount": 11456.69,
           "capacity_proxy_score": 4.29
@@ -7045,7 +7045,7 @@
           "rank_in_market": 380,
           "circ_mv": 220.38,
           "amount": 56687.14,
-          "capacity_proxy_score": 8.27
+          "capacity_proxy_score": 8.26
         },
         {
           "rank": 2,
@@ -7059,7 +7059,7 @@
           "rank_in_market": 529,
           "circ_mv": 36.07,
           "amount": 5256.51,
-          "capacity_proxy_score": 2.93
+          "capacity_proxy_score": 2.94
         },
         {
           "rank": 3,
@@ -7084,7 +7084,7 @@
           "distance_to_250d_high_pct": -42.03,
           "is_250d_high": false,
           "close_price": 19.45,
-          "rank_in_market": 672,
+          "rank_in_market": 671,
           "circ_mv": 112.64,
           "amount": 42538.26,
           "capacity_proxy_score": 7.57
@@ -7138,7 +7138,7 @@
           "rank_in_market": 43,
           "circ_mv": 47.84,
           "amount": 16718.34,
-          "capacity_proxy_score": 5.54
+          "capacity_proxy_score": 5.53
         },
         {
           "rank": 3,
@@ -7152,7 +7152,7 @@
           "rank_in_market": 76,
           "circ_mv": 149.19,
           "amount": 53165.86,
-          "capacity_proxy_score": 7.97
+          "capacity_proxy_score": 7.96
         },
         {
           "rank": 4,
@@ -7194,7 +7194,7 @@
           "rank_in_market": 635,
           "circ_mv": 93.78,
           "amount": 14651.85,
-          "capacity_proxy_score": 6.23
+          "capacity_proxy_score": 6.22
         }
       ],
       "momentum_state": "observing",
@@ -7319,7 +7319,7 @@
           "rank_in_market": 256,
           "circ_mv": 59.31,
           "amount": 13311.46,
-          "capacity_proxy_score": 5.55
+          "capacity_proxy_score": 5.54
         },
         {
           "rank": 8,
@@ -7414,7 +7414,7 @@
           "distance_to_250d_high_pct": -38.4,
           "is_250d_high": false,
           "close_price": 6.93,
-          "rank_in_market": 668,
+          "rank_in_market": 667,
           "circ_mv": 81.5,
           "amount": 56609.71,
           "capacity_proxy_score": 7.98
@@ -7428,7 +7428,7 @@
           "distance_to_250d_high_pct": -41.74,
           "is_250d_high": false,
           "close_price": 16.5,
-          "rank_in_market": 718,
+          "rank_in_market": 717,
           "circ_mv": 25.02,
           "amount": 10729.28,
           "capacity_proxy_score": 4.48
@@ -7663,7 +7663,7 @@
           "rank_in_market": 194,
           "circ_mv": 80.19,
           "amount": 20195.34,
-          "capacity_proxy_score": 6.46
+          "capacity_proxy_score": 6.45
         },
         {
           "rank": 7,
@@ -7677,7 +7677,7 @@
           "rank_in_market": 196,
           "circ_mv": 42.53,
           "amount": 28651.47,
-          "capacity_proxy_score": 6.49
+          "capacity_proxy_score": 6.48
         },
         {
           "rank": 8,
@@ -7691,7 +7691,7 @@
           "rank_in_market": 367,
           "circ_mv": 74.41,
           "amount": 48773.94,
-          "capacity_proxy_score": 7.77
+          "capacity_proxy_score": 7.76
         },
         {
           "rank": 9,
@@ -7716,7 +7716,7 @@
           "distance_to_250d_high_pct": -9.38,
           "is_250d_high": false,
           "close_price": 2.9,
-          "rank_in_market": 657,
+          "rank_in_market": 656,
           "circ_mv": 32.1,
           "amount": 5382.58,
           "capacity_proxy_score": 3.25
@@ -7860,7 +7860,7 @@
           "distance_to_250d_high_pct": -32.85,
           "is_250d_high": false,
           "close_price": 68.68,
-          "rank_in_market": 709,
+          "rank_in_market": 708,
           "circ_mv": 415.57,
           "amount": 91606.41,
           "capacity_proxy_score": 8.8
@@ -7900,7 +7900,7 @@
           "rank_in_market": 38,
           "circ_mv": 27.36,
           "amount": 33283.97,
-          "capacity_proxy_score": 5.68
+          "capacity_proxy_score": 5.67
         },
         {
           "rank": 2,
@@ -7998,7 +7998,7 @@
           "rank_in_market": 457,
           "circ_mv": 68.68,
           "amount": 33791.41,
-          "capacity_proxy_score": 7.35
+          "capacity_proxy_score": 7.34
         },
         {
           "rank": 9,
@@ -8040,7 +8040,7 @@
           "rank_in_market": 564,
           "circ_mv": 84.63,
           "amount": 24833.07,
-          "capacity_proxy_score": 6.75
+          "capacity_proxy_score": 6.74
         },
         {
           "rank": 12,
@@ -8212,7 +8212,7 @@
           "rank_in_market": 21,
           "circ_mv": 36.66,
           "amount": 25164.04,
-          "capacity_proxy_score": 6.14
+          "capacity_proxy_score": 6.13
         },
         {
           "rank": 2,
@@ -8226,7 +8226,7 @@
           "rank_in_market": 29,
           "circ_mv": 46.85,
           "amount": 55700.63,
-          "capacity_proxy_score": 7.23
+          "capacity_proxy_score": 7.22
         },
         {
           "rank": 3,
@@ -8296,7 +8296,7 @@
           "rank_in_market": 448,
           "circ_mv": 49.06,
           "amount": 31814.07,
-          "capacity_proxy_score": 6.8
+          "capacity_proxy_score": 6.79
         },
         {
           "rank": 8,
@@ -8324,7 +8324,7 @@
           "rank_in_market": 486,
           "circ_mv": 80.23,
           "amount": 42866.11,
-          "capacity_proxy_score": 7.75
+          "capacity_proxy_score": 7.74
         },
         {
           "rank": 10,
@@ -8377,7 +8377,7 @@
           "distance_to_250d_high_pct": -25.43,
           "is_250d_high": false,
           "close_price": 57.77,
-          "rank_in_market": 699,
+          "rank_in_market": 698,
           "circ_mv": 23.89,
           "amount": 11194.74,
           "capacity_proxy_score": 4.48
@@ -8496,7 +8496,7 @@
           "rank_in_market": 566,
           "circ_mv": 83.55,
           "amount": 9166.81,
-          "capacity_proxy_score": 4.94
+          "capacity_proxy_score": 4.93
         }
       ],
       "momentum_state": "observing",
@@ -8533,7 +8533,7 @@
           "rank_in_market": 53,
           "circ_mv": 38.48,
           "amount": 40809.98,
-          "capacity_proxy_score": 6.69
+          "capacity_proxy_score": 6.68
         },
         {
           "rank": 2,
@@ -8558,7 +8558,7 @@
           "distance_to_250d_high_pct": -36.08,
           "is_250d_high": false,
           "close_price": 25.57,
-          "rank_in_market": 708,
+          "rank_in_market": 707,
           "circ_mv": 51.27,
           "amount": 13555.36,
           "capacity_proxy_score": 5.36
@@ -8627,7 +8627,7 @@
           "distance_to_250d_high_pct": -25.73,
           "is_250d_high": false,
           "close_price": 28.63,
-          "rank_in_market": 716,
+          "rank_in_market": 715,
           "circ_mv": 234.9,
           "amount": 26089.05,
           "capacity_proxy_score": 7.15
@@ -8709,7 +8709,7 @@
           "rank_in_market": 425,
           "circ_mv": 36.5,
           "amount": 32591.01,
-          "capacity_proxy_score": 6.38
+          "capacity_proxy_score": 6.37
         },
         {
           "rank": 5,
@@ -8720,10 +8720,10 @@
           "distance_to_250d_high_pct": -4.03,
           "is_250d_high": false,
           "close_price": 15.0,
-          "rank_in_market": 750,
+          "rank_in_market": 749,
           "circ_mv": 33.18,
           "amount": 5362.61,
-          "capacity_proxy_score": 3.3
+          "capacity_proxy_score": 3.31
         }
       ],
       "momentum_state": "observing",
@@ -8871,7 +8871,7 @@
           "rank_in_market": 288,
           "circ_mv": 61.21,
           "amount": 6855.71,
-          "capacity_proxy_score": 4.11
+          "capacity_proxy_score": 4.12
         }
       ],
       "momentum_state": "observing",
@@ -8936,7 +8936,7 @@
           "rank_in_market": 203,
           "circ_mv": 84.15,
           "amount": 29993.68,
-          "capacity_proxy_score": 6.92
+          "capacity_proxy_score": 6.91
         },
         {
           "rank": 4,
@@ -8950,7 +8950,7 @@
           "rank_in_market": 246,
           "circ_mv": 294.08,
           "amount": 39958.45,
-          "capacity_proxy_score": 7.67
+          "capacity_proxy_score": 7.66
         },
         {
           "rank": 5,
@@ -8964,7 +8964,7 @@
           "rank_in_market": 313,
           "circ_mv": 95.59,
           "amount": 34027.16,
-          "capacity_proxy_score": 7.18
+          "capacity_proxy_score": 7.17
         },
         {
           "rank": 6,
@@ -9006,7 +9006,7 @@
           "rank_in_market": 364,
           "circ_mv": 140.06,
           "amount": 14873.79,
-          "capacity_proxy_score": 6.18
+          "capacity_proxy_score": 6.17
         },
         {
           "rank": 9,
@@ -9077,7 +9077,7 @@
           "distance_to_250d_high_pct": -23.16,
           "is_250d_high": false,
           "close_price": 18.58,
-          "rank_in_market": 731,
+          "rank_in_market": 730,
           "circ_mv": 84.96,
           "amount": 84799.33,
           "capacity_proxy_score": 8.27
@@ -9091,7 +9091,7 @@
           "distance_to_250d_high_pct": -16.75,
           "is_250d_high": false,
           "close_price": 49.32,
-          "rank_in_market": 751,
+          "rank_in_market": 750,
           "circ_mv": 34.85,
           "amount": 12927.63,
           "capacity_proxy_score": 4.69
@@ -9145,7 +9145,7 @@
           "rank_in_market": 383,
           "circ_mv": 43.3,
           "amount": 34193.15,
-          "capacity_proxy_score": 6.68
+          "capacity_proxy_score": 6.67
         },
         {
           "rank": 3,
@@ -9184,7 +9184,7 @@
           "distance_to_250d_high_pct": -32.35,
           "is_250d_high": false,
           "close_price": 4.58,
-          "rank_in_market": 700,
+          "rank_in_market": 699,
           "circ_mv": 23.47,
           "amount": 6848.5,
           "capacity_proxy_score": 3.17
@@ -9249,7 +9249,7 @@
           "distance_to_250d_high_pct": -6.47,
           "is_250d_high": false,
           "close_price": 20.67,
-          "rank_in_market": 667,
+          "rank_in_market": 666,
           "circ_mv": 28.47,
           "amount": 6825.84,
           "capacity_proxy_score": 3.42
@@ -9263,7 +9263,7 @@
           "distance_to_250d_high_pct": -27.89,
           "is_250d_high": false,
           "close_price": 10.42,
-          "rank_in_market": 705,
+          "rank_in_market": 704,
           "circ_mv": 34.85,
           "amount": 14360.8,
           "capacity_proxy_score": 5.38
@@ -9433,7 +9433,7 @@
           "rank_in_market": 26,
           "circ_mv": 41.24,
           "amount": 36873.14,
-          "capacity_proxy_score": 6.69
+          "capacity_proxy_score": 6.68
         },
         {
           "rank": 2,
@@ -9447,7 +9447,7 @@
           "rank_in_market": 434,
           "circ_mv": 63.8,
           "amount": 41313.27,
-          "capacity_proxy_score": 7.44
+          "capacity_proxy_score": 7.43
         },
         {
           "rank": 3,
@@ -9658,7 +9658,7 @@
           "distance_to_250d_high_pct": -45.47,
           "is_250d_high": false,
           "close_price": 14.45,
-          "rank_in_market": 669,
+          "rank_in_market": 668,
           "circ_mv": 54.27,
           "amount": 58980.31,
           "capacity_proxy_score": 7.49
@@ -9672,7 +9672,7 @@
           "distance_to_250d_high_pct": -23.45,
           "is_250d_high": false,
           "close_price": 7.41,
-          "rank_in_market": 687,
+          "rank_in_market": 686,
           "circ_mv": 16.58,
           "amount": 9279.31,
           "capacity_proxy_score": 3.9
@@ -9686,10 +9686,10 @@
           "distance_to_250d_high_pct": -58.79,
           "is_250d_high": false,
           "close_price": 6.8,
-          "rank_in_market": 713,
+          "rank_in_market": 712,
           "circ_mv": 43.43,
           "amount": 28373.05,
-          "capacity_proxy_score": 6.51
+          "capacity_proxy_score": 6.5
         },
         {
           "rank": 12,
@@ -9700,10 +9700,10 @@
           "distance_to_250d_high_pct": -36.6,
           "is_250d_high": false,
           "close_price": 37.88,
-          "rank_in_market": 719,
+          "rank_in_market": 718,
           "circ_mv": 52.98,
           "amount": 5717.31,
-          "capacity_proxy_score": 3.63
+          "capacity_proxy_score": 3.64
         },
         {
           "rank": 13,
@@ -9714,7 +9714,7 @@
           "distance_to_250d_high_pct": -32.33,
           "is_250d_high": false,
           "close_price": 13.44,
-          "rank_in_market": 728,
+          "rank_in_market": 727,
           "circ_mv": 101.51,
           "amount": 30338.2,
           "capacity_proxy_score": 7.12
@@ -9844,7 +9844,7 @@
           "distance_to_250d_high_pct": -19.44,
           "is_250d_high": false,
           "close_price": 5.72,
-          "rank_in_market": 663,
+          "rank_in_market": 662,
           "circ_mv": 28.94,
           "amount": 19463.65,
           "capacity_proxy_score": 5.51
@@ -9944,7 +9944,7 @@
           "rank_in_market": 601,
           "circ_mv": 72.69,
           "amount": 38999.94,
-          "capacity_proxy_score": 7.56
+          "capacity_proxy_score": 7.55
         }
       ],
       "momentum_state": "observing",
@@ -10046,7 +10046,7 @@
           "rank_in_market": 325,
           "circ_mv": 35.77,
           "amount": 30710.35,
-          "capacity_proxy_score": 6.28
+          "capacity_proxy_score": 6.27
         },
         {
           "rank": 3,
@@ -10106,7 +10106,7 @@
           "rank_in_market": 435,
           "circ_mv": 56.12,
           "amount": 41099.87,
-          "capacity_proxy_score": 7.26
+          "capacity_proxy_score": 7.25
         }
       ],
       "momentum_state": "observing",
@@ -10375,7 +10375,7 @@
           "rank_in_market": 505,
           "circ_mv": 50.42,
           "amount": 44702.51,
-          "capacity_proxy_score": 7.18
+          "capacity_proxy_score": 7.17
         }
       ],
       "momentum_state": "observing",
@@ -10412,7 +10412,7 @@
           "rank_in_market": 56,
           "circ_mv": 73.71,
           "amount": 46062.55,
-          "capacity_proxy_score": 7.73
+          "capacity_proxy_score": 7.72
         },
         {
           "rank": 2,
@@ -10477,7 +10477,7 @@
           "rank_in_market": 112,
           "circ_mv": 56.61,
           "amount": 33204.09,
-          "capacity_proxy_score": 7.06
+          "capacity_proxy_score": 7.05
         },
         {
           "rank": 2,
@@ -10505,7 +10505,7 @@
           "rank_in_market": 382,
           "circ_mv": 92.33,
           "amount": 39881.21,
-          "capacity_proxy_score": 7.83
+          "capacity_proxy_score": 7.82
         }
       ],
       "momentum_state": "observing",
@@ -10542,7 +10542,7 @@
           "rank_in_market": 247,
           "circ_mv": 268.69,
           "amount": 146296.3,
-          "capacity_proxy_score": 9.36
+          "capacity_proxy_score": 9.35
         },
         {
           "rank": 2,
@@ -10584,7 +10584,7 @@
           "rank_in_market": 491,
           "circ_mv": 86.07,
           "amount": 17623.51,
-          "capacity_proxy_score": 6.39
+          "capacity_proxy_score": 6.38
         },
         {
           "rank": 5,
@@ -10623,7 +10623,7 @@
           "distance_to_250d_high_pct": -30.92,
           "is_250d_high": false,
           "close_price": 1.43,
-          "rank_in_market": 704,
+          "rank_in_market": 703,
           "circ_mv": 194.13,
           "amount": 59080.87,
           "capacity_proxy_score": 8.21
@@ -10767,7 +10767,7 @@
           "distance_to_250d_high_pct": -18.82,
           "is_250d_high": false,
           "close_price": 14.28,
-          "rank_in_market": 711,
+          "rank_in_market": 710,
           "circ_mv": 24.18,
           "amount": 11719.78,
           "capacity_proxy_score": 4.56
@@ -10900,7 +10900,7 @@
           "distance_to_250d_high_pct": -46.99,
           "is_250d_high": false,
           "close_price": 20.09,
-          "rank_in_market": 722,
+          "rank_in_market": 721,
           "circ_mv": 344.08,
           "amount": 239467.58,
           "capacity_proxy_score": 9.57
@@ -11062,7 +11062,7 @@
           "distance_to_250d_high_pct": -32.52,
           "is_250d_high": false,
           "close_price": 23.68,
-          "rank_in_market": 723,
+          "rank_in_market": 722,
           "circ_mv": 37.93,
           "amount": 5969.53,
           "capacity_proxy_score": 3.65
@@ -11178,7 +11178,7 @@
           "distance_to_250d_high_pct": -49.54,
           "is_250d_high": false,
           "close_price": 4.37,
-          "rank_in_market": 735,
+          "rank_in_market": 734,
           "circ_mv": 75.56,
           "amount": 9200.52,
           "capacity_proxy_score": 4.83
@@ -11280,10 +11280,10 @@
           "distance_to_250d_high_pct": -34.94,
           "is_250d_high": false,
           "close_price": 25.83,
-          "rank_in_market": 703,
+          "rank_in_market": 702,
           "circ_mv": 49.9,
           "amount": 39234.29,
-          "capacity_proxy_score": 7.04
+          "capacity_proxy_score": 7.03
         }
       ],
       "momentum_state": "observing",
@@ -11408,7 +11408,7 @@
           "rank_in_market": 30,
           "circ_mv": 56.84,
           "amount": 43123.11,
-          "capacity_proxy_score": 7.33
+          "capacity_proxy_score": 7.32
         }
       ],
       "momentum_state": "observing",
@@ -11445,7 +11445,7 @@
           "rank_in_market": 72,
           "circ_mv": 30.56,
           "amount": 41889.24,
-          "capacity_proxy_score": 6.07
+          "capacity_proxy_score": 6.06
         },
         {
           "rank": 2,
@@ -11524,7 +11524,7 @@
           "rank_in_market": 592,
           "circ_mv": 51.88,
           "amount": 83349.39,
-          "capacity_proxy_score": 7.33
+          "capacity_proxy_score": 7.32
         },
         {
           "rank": 4,
@@ -11586,7 +11586,7 @@
           "distance_to_250d_high_pct": -20.73,
           "is_250d_high": false,
           "close_price": 8.07,
-          "rank_in_market": 665,
+          "rank_in_market": 664,
           "circ_mv": 2865.1,
           "amount": 51530.03,
           "capacity_proxy_score": 7.87
@@ -11688,10 +11688,10 @@
           "distance_to_250d_high_pct": -52.74,
           "is_250d_high": false,
           "close_price": 5.35,
-          "rank_in_market": 712,
+          "rank_in_market": 711,
           "circ_mv": 52.74,
           "amount": 44587.28,
-          "capacity_proxy_score": 7.24
+          "capacity_proxy_score": 7.23
         }
       ],
       "momentum_state": "observing",
@@ -11793,7 +11793,7 @@
           "rank_in_market": 209,
           "circ_mv": 28.08,
           "amount": 55538.16,
-          "capacity_proxy_score": 6.17
+          "capacity_proxy_score": 6.16
         },
         {
           "rank": 4,
@@ -11818,7 +11818,7 @@
           "distance_to_250d_high_pct": -37.3,
           "is_250d_high": false,
           "close_price": 5.53,
-          "rank_in_market": 747,
+          "rank_in_market": 746,
           "circ_mv": 106.78,
           "amount": 39809.75,
           "capacity_proxy_score": 7.44
@@ -11920,10 +11920,10 @@
           "distance_to_250d_high_pct": -41.19,
           "is_250d_high": false,
           "close_price": 2.27,
-          "rank_in_market": 745,
+          "rank_in_market": 744,
           "circ_mv": 48.25,
           "amount": 25537.08,
-          "capacity_proxy_score": 6.57
+          "capacity_proxy_score": 6.56
         }
       ],
       "momentum_state": "observing",
@@ -12034,7 +12034,7 @@
           "rank_in_market": 163,
           "circ_mv": 43.43,
           "amount": 11859.81,
-          "capacity_proxy_score": 4.89
+          "capacity_proxy_score": 4.88
         },
         {
           "rank": 2,
@@ -12059,7 +12059,7 @@
           "distance_to_250d_high_pct": -18.32,
           "is_250d_high": false,
           "close_price": 12.17,
-          "rank_in_market": 671,
+          "rank_in_market": 670,
           "circ_mv": 33.03,
           "amount": 9025.47,
           "capacity_proxy_score": 4.08
@@ -12099,7 +12099,7 @@
           "rank_in_market": 270,
           "circ_mv": 64.4,
           "amount": 34147.74,
-          "capacity_proxy_score": 7.26
+          "capacity_proxy_score": 7.25
         }
       ],
       "momentum_state": "observing",
@@ -12198,10 +12198,10 @@
           "distance_to_250d_high_pct": -13.12,
           "is_250d_high": false,
           "close_price": 6.82,
-          "rank_in_market": 701,
+          "rank_in_market": 700,
           "circ_mv": 438.15,
           "amount": 55462.13,
-          "capacity_proxy_score": 8.07
+          "capacity_proxy_score": 8.06
         }
       ],
       "momentum_state": "observing",
@@ -12252,7 +12252,7 @@
           "rank_in_market": 514,
           "circ_mv": 28.25,
           "amount": 36485.63,
-          "capacity_proxy_score": 5.82
+          "capacity_proxy_score": 5.81
         },
         {
           "rank": 3,
@@ -12314,7 +12314,7 @@
           "distance_to_250d_high_pct": -36.74,
           "is_250d_high": false,
           "close_price": 6.32,
-          "rank_in_market": 651,
+          "rank_in_market": 650,
           "circ_mv": 25.48,
           "amount": 6166.02,
           "capacity_proxy_score": 3.12
@@ -12391,7 +12391,7 @@
           "rank_in_market": 427,
           "circ_mv": 45.72,
           "amount": 36477.62,
-          "capacity_proxy_score": 6.83
+          "capacity_proxy_score": 6.82
         },
         {
           "rank": 2,
@@ -12402,10 +12402,10 @@
           "distance_to_250d_high_pct": -24.52,
           "is_250d_high": false,
           "close_price": 34.5,
-          "rank_in_market": 678,
+          "rank_in_market": 677,
           "circ_mv": 28.09,
           "amount": 10130.76,
-          "capacity_proxy_score": 4.03
+          "capacity_proxy_score": 4.02
         }
       ],
       "momentum_state": "observing",
@@ -12513,7 +12513,7 @@
           "distance_to_250d_high_pct": -27.58,
           "is_250d_high": false,
           "close_price": 16.25,
-          "rank_in_market": 746,
+          "rank_in_market": 745,
           "circ_mv": 67.77,
           "amount": 17330.31,
           "capacity_proxy_score": 6.09
@@ -12553,7 +12553,7 @@
           "rank_in_market": 190,
           "circ_mv": 54.63,
           "amount": 79314.11,
-          "capacity_proxy_score": 7.38
+          "capacity_proxy_score": 7.37
         }
       ],
       "momentum_state": "observing",
@@ -12738,7 +12738,7 @@
           "rank_in_market": 603,
           "circ_mv": 42.97,
           "amount": 49433.54,
-          "capacity_proxy_score": 7.01
+          "capacity_proxy_score": 7.0
         }
       ],
       "momentum_state": "observing",
